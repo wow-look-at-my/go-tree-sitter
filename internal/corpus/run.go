@@ -105,7 +105,6 @@ func report(t *testing.T, result Result, byFile map[string]*Result) {
 			fmt.Fprintf(&b, "  %s\n", name)
 		}
 	}
-	// The report goes to stderr so it survives however the harness treats a
-	// passing package's captured output.
+	// stderr, so a passing package still shows the counts.
 	fmt.Fprint(os.Stderr, "\n"+b.String())
 }
