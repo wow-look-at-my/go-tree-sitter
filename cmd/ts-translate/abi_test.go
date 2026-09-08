@@ -9,15 +9,15 @@ import (
 )
 
 // language builds the emitter state a TSLanguage initializer produces, with a
-// single field set.
+// named field set.
 func language(field string, value int64) *emitter {
 	return &emitter{file: &cFile{lang: map[string]langValue{
 		field: {isNum: true, num: value},
 	}}}
 }
 
-// ABI fifteen renamed this field. An older grammar spells it "version", and the
-// reader that knew only the new name left such a grammar at zero.
+// The newest ABI renamed this field. An older grammar spells it "version", and
+// the reader that knew only the new name left such a grammar unversioned.
 func TestBothSpellingsOfTheABIFieldAreRead(t *testing.T) {
 	assert.Equal(t, uint32(ts.MaxABIVersion), language("abi_version", ts.MaxABIVersion).abiVersion())
 	assert.Equal(t, uint32(ts.MaxABIVersion-1), language("version", ts.MaxABIVersion-1).abiVersion())
@@ -42,8 +42,8 @@ func TestAnABIThisRuntimeCannotParseWithIsRefused(t *testing.T) {
 	}
 }
 
-// The runtime and the translator must agree on the range, or one accepts what
-// the other refuses.
+// The runtime and the translator must agree on the range, or a table lands that
+// the runtime then refuses.
 func TestTheTranslatorAcceptsExactlyWhatTheRuntimeDoes(t *testing.T) {
 	parser := ts.NewParser()
 	for v := uint32(0); v <= ts.MaxABIVersion+2; v++ {

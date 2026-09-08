@@ -125,11 +125,6 @@ func (e *emitter) buildTables() *ts.Tables {
 }
 
 // abiVersion reads the grammar's ABI, under either name the field has had.
-//
-// ABI 15 renamed "version" to "abi_version". A translator that reads only the
-// new name leaves an older grammar at 0, and 0 is an ABI the runtime rejects.
-// The package still compiles, links and decodes, so the grammar parses nothing
-// and says nothing.
 func (e *emitter) abiVersion() uint32 {
 	for _, name := range []string{"abi_version", "version"} {
 		if v, ok := e.file.lang[name]; ok && v.isNum {
@@ -141,9 +136,9 @@ func (e *emitter) abiVersion() uint32 {
 
 // checkABI reports an ABI this runtime cannot parse with.
 //
-// The translator writes a table for one ABI. Writing one the runtime refuses
-// produces a package that builds and then reports nothing, which is the failure
-// a generator must never ship. So the build stops here instead.
+// A table the runtime refuses still becomes a package that builds, links and
+// decodes, and then reports nothing. That is the failure a generator must never
+// ship, so the build stops here instead.
 func checkABI(version uint32) error {
 	if version >= ts.MinABIVersion && version <= ts.MaxABIVersion {
 		return nil

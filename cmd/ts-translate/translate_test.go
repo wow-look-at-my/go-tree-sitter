@@ -54,7 +54,7 @@ func TestARealGrammarTranslatesAndDecodes(t *testing.T) {
 }
 
 // A grammar with an external scanner has to reach it. A package that omits the
-// line parses without the tokens only the scanner produces.
+// wiring parses without the tokens the scanner alone produces.
 func TestAGrammarWithAScannerWiresOneUp(t *testing.T) {
 	src, err := os.ReadFile(pinnedGrammars["bash"])
 	require.NoError(t, err)
