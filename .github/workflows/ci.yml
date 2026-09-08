@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: ['**']
+
+permissions:
+  id-token: write
+  contents: write
+  actions: read
+  checks: read
+  deployments: write
+  artifact-metadata: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: wow-look-at-my/go-toolchain@master
+        with:
+          # Approves the //go:generate directives; editing one fails the build with the new value.
+          generate: 30984773ec2a

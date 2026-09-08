@@ -1,0 +1,59 @@
+(translation_unit
+  (type_definition
+    type: (primitive_type)
+    declarator: (type_identifier))
+  (declaration
+    type: (type_identifier)
+    declarator: (pointer_declarator
+      declarator: (identifier)))
+  (function_definition
+    type: (primitive_type)
+    declarator: (function_declarator
+      declarator: (identifier)
+      parameters: (parameter_list
+        (parameter_declaration
+          type: (primitive_type))))
+    body: (compound_statement
+      (declaration
+        type: (primitive_type)
+        declarator: (init_declarator
+          declarator: (identifier)
+          value: (number_literal)))
+      (declaration
+        type: (primitive_type)
+        declarator: (init_declarator
+          declarator: (identifier)
+          value: (number_literal)))
+      (declaration
+        type: (type_identifier)
+        declarator: (pointer_declarator
+          declarator: (identifier)))
+      (expression_statement
+        (cast_expression
+          type: (type_descriptor
+            type: (primitive_type))
+          value: (sizeof_expression
+            type: (type_descriptor
+              type: (primitive_type)))))
+      (expression_statement
+        (cast_expression
+          type: (type_descriptor
+            type: (primitive_type))
+          value: (sizeof_expression
+            value: (identifier))))
+      (declaration
+        type: (sized_type_specifier)
+        declarator: (init_declarator
+          declarator: (pointer_declarator
+            declarator: (identifier))
+          value: (cast_expression
+            type: (type_descriptor
+              type: (sized_type_specifier)
+              declarator: (abstract_pointer_declarator))
+            value: (pointer_expression
+              argument: (identifier)))))
+      (expression_statement
+        (assignment_expression
+          left: (pointer_expression
+            argument: (identifier))
+          right: (number_literal))))))
