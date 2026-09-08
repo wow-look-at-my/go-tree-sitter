@@ -44633,13 +44633,13 @@ var lexModes = []ts.LexerMode{
 	{LexState: 17, ExternalLexState: 0, ReservedWordSetID: 0},
 	{LexState: 71, ExternalLexState: 0, ReservedWordSetID: 0},
 	{LexState: 71, ExternalLexState: 0, ReservedWordSetID: 0},
-	{LexState: 0, ExternalLexState: 0, ReservedWordSetID: 0},
-	{LexState: 0, ExternalLexState: 0, ReservedWordSetID: 0},
-	{LexState: 0, ExternalLexState: 0, ReservedWordSetID: 0},
-	{LexState: 0, ExternalLexState: 0, ReservedWordSetID: 0},
-	{LexState: 0, ExternalLexState: 0, ReservedWordSetID: 0},
-	{LexState: 0, ExternalLexState: 0, ReservedWordSetID: 0},
-	{LexState: 0, ExternalLexState: 0, ReservedWordSetID: 0},
+	{LexState: 65535, ExternalLexState: 0, ReservedWordSetID: 0},
+	{LexState: 65535, ExternalLexState: 0, ReservedWordSetID: 0},
+	{LexState: 65535, ExternalLexState: 0, ReservedWordSetID: 0},
+	{LexState: 65535, ExternalLexState: 0, ReservedWordSetID: 0},
+	{LexState: 65535, ExternalLexState: 0, ReservedWordSetID: 0},
+	{LexState: 65535, ExternalLexState: 0, ReservedWordSetID: 0},
+	{LexState: 65535, ExternalLexState: 0, ReservedWordSetID: 0},
 }
 
 var primaryStateIDs = []ts.StateID{
