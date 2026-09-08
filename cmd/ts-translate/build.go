@@ -297,10 +297,10 @@ func buildLexModes(d *arrayDecl) []ts.LexerMode {
 		if index >= len(out) {
 			return
 		}
-		var m ts.LexerMode
 		// A state with no lexer is written positionally, as a cast of a negative
 		// value, while every other state names its fields. That sentinel is how
 		// the runtime finds the end of a non-terminal extra, so it must survive.
+		var m ts.LexerMode
 		positional := 0
 
 		for _, f := range el.elems {
