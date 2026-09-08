@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+/* A block comment
+   over several lines. */
+
+// A line comment.
+
+#define SQUARE(x) ((x) * (x))
+
+struct point {
+	int x;
+	int y;
+};
+
+static const char *greeting = "hello\tworld\n";
+
+int add(int a, int b) {
+	return a + b;
+}
+
+int main(void) {
+	struct point p = {1, 2};
+	int total = add(p.x, p.y);
+	for (int i = 0; i < total; i++) {
+		if (i % 2 == 0) {
+			printf("%s %d\n", greeting, SQUARE(i));
+		} else {
+			continue;
+		}
+	}
+	switch (total) {
+	case 3:
+		return 0;
+	default:
+		break;
+	}
+	return total;
+}

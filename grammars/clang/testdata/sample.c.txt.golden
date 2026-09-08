@@ -1,0 +1,123 @@
+(translation_unit
+  (preproc_include
+    path: (system_lib_string))
+  (comment)
+  (comment)
+  (preproc_function_def
+    name: (identifier)
+    parameters: (preproc_params
+      (identifier))
+    value: (preproc_arg))
+  (struct_specifier
+    name: (type_identifier)
+    body: (field_declaration_list
+      (field_declaration
+        type: (primitive_type)
+        declarator: (field_identifier))
+      (field_declaration
+        type: (primitive_type)
+        declarator: (field_identifier))))
+  (declaration
+    (storage_class_specifier)
+    (type_qualifier)
+    type: (primitive_type)
+    declarator: (init_declarator
+      declarator: (pointer_declarator
+        declarator: (identifier))
+      value: (string_literal
+        (string_content)
+        (escape_sequence)
+        (string_content)
+        (escape_sequence))))
+  (function_definition
+    type: (primitive_type)
+    declarator: (function_declarator
+      declarator: (identifier)
+      parameters: (parameter_list
+        (parameter_declaration
+          type: (primitive_type)
+          declarator: (identifier))
+        (parameter_declaration
+          type: (primitive_type)
+          declarator: (identifier))))
+    body: (compound_statement
+      (return_statement
+        (binary_expression
+          left: (identifier)
+          right: (identifier)))))
+  (function_definition
+    type: (primitive_type)
+    declarator: (function_declarator
+      declarator: (identifier)
+      parameters: (parameter_list
+        (parameter_declaration
+          type: (primitive_type))))
+    body: (compound_statement
+      (declaration
+        type: (struct_specifier
+          name: (type_identifier))
+        declarator: (init_declarator
+          declarator: (identifier)
+          value: (initializer_list
+            (number_literal)
+            (number_literal))))
+      (declaration
+        type: (primitive_type)
+        declarator: (init_declarator
+          declarator: (identifier)
+          value: (call_expression
+            function: (identifier)
+            arguments: (argument_list
+              (field_expression
+                argument: (identifier)
+                field: (field_identifier))
+              (field_expression
+                argument: (identifier)
+                field: (field_identifier))))))
+      (for_statement
+        initializer: (declaration
+          type: (primitive_type)
+          declarator: (init_declarator
+            declarator: (identifier)
+            value: (number_literal)))
+        condition: (binary_expression
+          left: (identifier)
+          right: (identifier))
+        update: (update_expression
+          argument: (identifier))
+        body: (compound_statement
+          (if_statement
+            condition: (parenthesized_expression
+              (binary_expression
+                left: (binary_expression
+                  left: (identifier)
+                  right: (number_literal))
+                right: (number_literal)))
+            consequence: (compound_statement
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (string_literal
+                      (string_content)
+                      (escape_sequence))
+                    (identifier)
+                    (call_expression
+                      function: (identifier)
+                      arguments: (argument_list
+                        (identifier)))))))
+            alternative: (else_clause
+              (compound_statement
+                (continue_statement))))))
+      (switch_statement
+        condition: (parenthesized_expression
+          (identifier))
+        body: (compound_statement
+          (case_statement
+            value: (number_literal)
+            (return_statement
+              (number_literal)))
+          (case_statement
+            (break_statement))))
+      (return_statement
+        (identifier)))))
