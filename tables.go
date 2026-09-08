@@ -31,9 +31,12 @@ type Tables struct {
 	CharacterSets [][]CharacterRange
 }
 
-// The blob is zstd rather than gzip. Measured on the C++ tables, zstd is both
-// smaller and faster to decode, and the package is pure Go, so a consumer that
-// builds with CGO_ENABLED=0 still links.
+// The blob is zstd, and the codec is chosen on DECODE speed. That cost recurs:
+// every cold start pays it, per grammar parsed, behind the sync.Once. Size is
+// paid once at link time. brotli at quality 11 is 22% smaller across the five
+// grammars and decodes 2.8x to 3.6x slower, so it loses the trade a hook makes
+// on every tool call. codec_test.go carries the measurement. The package is
+// pure Go, so a consumer that builds with CGO_ENABLED=0 still links.
 var (
 	encoderOnce sync.Once
 	encoder     *zstd.Encoder

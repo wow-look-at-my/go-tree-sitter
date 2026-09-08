@@ -5,6 +5,7 @@ go 1.26
 require github.com/wow-look-at-my/go-containers v0.0.0-20260826161058-40a3d1ef3d41 // go-toolchain:auto-branch
 
 require (
+	github.com/andybalholm/brotli v1.2.3
 	github.com/klauspost/compress v1.20.0
 	github.com/stretchr/testify v1.11.1
 )

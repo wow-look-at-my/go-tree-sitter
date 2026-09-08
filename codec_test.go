@@ -9,6 +9,7 @@ import (
 
 	"github.com/andybalholm/brotli"
 	"github.com/klauspost/compress/zstd"
+	"github.com/stretchr/testify/require"
 )
 
 // The codec was chosen on decompression speed alone, which is half the question.
@@ -25,15 +26,13 @@ func TestCodecComparisonOnTheRealBlobs(t *testing.T) {
 	}
 
 	dec, err := zstd.NewReader(nil, zstd.WithDecoderConcurrency(1))
-	if err != nil {
-		t.Fatalf("zstd reader: %v", err)
-	}
+	require.Nil(t, err)
+
 	defer dec.Close()
 
 	zenc, err := zstd.NewWriter(nil, zstd.WithEncoderLevel(zstd.SpeedBestCompression))
-	if err != nil {
-		t.Fatalf("zstd writer: %v", err)
-	}
+	require.Nil(t, err)
+
 	defer zenc.Close()
 
 	t.Logf("%-8s %10s %10s %10s %10s %9s %9s %9s",
@@ -41,13 +40,10 @@ func TestCodecComparisonOnTheRealBlobs(t *testing.T) {
 
 	for _, path := range blobs {
 		blob, err := os.ReadFile(path)
-		if err != nil {
-			t.Fatalf("%s: %v", path, err)
-		}
+		require.Nil(t, err)
+
 		raw, err := dec.DecodeAll(blob, nil)
-		if err != nil {
-			t.Fatalf("%s: %v", path, err)
-		}
+		require.Nil(t, err)
 
 		zs := zenc.EncodeAll(raw, nil)
 		b9 := brotliEncode(t, raw, 9)
@@ -66,12 +62,11 @@ func brotliEncode(t *testing.T, raw []byte, quality int) []byte {
 	t.Helper()
 	var out bytes.Buffer
 	w := brotli.NewWriterLevel(&out, quality)
-	if _, err := w.Write(raw); err != nil {
-		t.Fatalf("brotli write: %v", err)
-	}
-	if err := w.Close(); err != nil {
-		t.Fatalf("brotli close: %v", err)
-	}
+	_, err := w.Write(raw)
+	require.Nil(t, err)
+
+	require.NoError(t, w.Close())
+
 	return out.Bytes()
 }
 
@@ -79,9 +74,9 @@ func brotliDecode(t *testing.T, blob []byte, want int) {
 	t.Helper()
 	out := make([]byte, 0, want)
 	buf := bytes.NewBuffer(out)
-	if _, err := buf.ReadFrom(brotli.NewReader(bytes.NewReader(blob))); err != nil {
-		t.Fatalf("brotli read: %v", err)
-	}
+	_, err := buf.ReadFrom(brotli.NewReader(bytes.NewReader(blob)))
+	require.Nil(t, err)
+
 }
 
 // ms times one call, averaged over enough runs that the clock is not the story.
