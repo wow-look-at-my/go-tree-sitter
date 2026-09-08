@@ -1,6 +1,6 @@
 (source_file
   (package_clause
-    (package_identifier))
+    (package_identifier_wrong))
   (comment)
   (comment)
   (import_declaration
