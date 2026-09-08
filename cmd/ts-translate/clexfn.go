@@ -218,6 +218,8 @@ func (p *cParser) parseLexPrimary() expr {
 			set := p.advance().text
 			p.expect(",")
 			n := p.parseConstExpr()
+			p.expect(",")
+			p.expect("lookahead")
 			p.expect(")")
 			return exprSetContains{set: set, n: n}
 		}
