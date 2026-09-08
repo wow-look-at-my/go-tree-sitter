@@ -152,7 +152,14 @@ func parseFile(toks []token) *cFile {
 	p := &cParser{
 		toks: toks,
 		file: &cFile{
-			consts: map[string]int64{},
+			consts: map[string]int64{
+				"ts_builtin_sym_end":                    0,
+				"ts_builtin_sym_error":                  0xFFFF,
+				"TREE_SITTER_SERIALIZATION_BUFFER_SIZE": 1024,
+				"true":                                  1,
+				"false":                                 0,
+				"NULL":                                  0,
+			},
 			arrays: map[string]*arrayDecl{},
 			lexFns: map[string]*lexFunc{},
 			lang:   map[string]langValue{},

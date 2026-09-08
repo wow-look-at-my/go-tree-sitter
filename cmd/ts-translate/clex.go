@@ -173,7 +173,7 @@ var twoCharOps = []string{
 	"+=", "-=", "*=", "/=", "%=", "&=", "|=", "^=", "->", "++", "--",
 }
 
-// scanCharBody reads one character of a literal, resolving escapes.
+// scanCharBody reads a single character of a literal, resolving escapes.
 func (s *cScanner) scanCharBody(quote byte) (int64, bool) {
 	if s.pos >= len(s.src) {
 		return 0, false
