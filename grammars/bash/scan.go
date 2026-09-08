@@ -2,9 +2,8 @@ package bash
 
 import ts "github.com/wow-look-at-my/go-tree-sitter"
 
-// The C scanner jumps forward with goto into labelled sections. Go cannot jump
-// over declarations, so each section is a function and an entry point says
-// where to resume.
+// The C scanner jumps forward with goto into labelled sections. Each section is
+// a function here, and an entry point says where to resume.
 const (
 	entryTop = iota
 	entryRegex
