@@ -5,8 +5,10 @@
 package corpus
 
 import (
+	"io/fs"
 	"os"
 	"path/filepath"
+	"sort"
 	"strings"
 )
 
@@ -41,19 +43,39 @@ type Case struct {
 	Platform bool
 }
 
-// ReadDir reads every .txt file in a directory as a corpus file.
+// ReadDir reads every .txt file under a directory as a corpus file. The walk
+// recurses, because a grammar can group its corpus into subdirectories and
+// upstream runs those too.
 func ReadDir(dir string) ([]Case, error) {
-	names, err := filepath.Glob(filepath.Join(dir, "*.txt"))
+	var names []string
+	err := filepath.WalkDir(dir, func(path string, entry fs.DirEntry, err error) error {
+		if err != nil {
+			if os.IsNotExist(err) {
+				return nil
+			}
+			return err
+		}
+		if !entry.IsDir() && strings.HasSuffix(path, ".txt") {
+			names = append(names, path)
+		}
+		return nil
+	})
 	if err != nil {
 		return nil, err
 	}
+	sort.Strings(names)
+
 	var cases []Case
 	for _, name := range names {
 		data, err := os.ReadFile(name)
 		if err != nil {
 			return nil, err
 		}
-		cases = append(cases, Parse(filepath.Base(name), string(data))...)
+		label, err := filepath.Rel(dir, name)
+		if err != nil {
+			label = filepath.Base(name)
+		}
+		cases = append(cases, Parse(filepath.ToSlash(label), string(data))...)
 	}
 	return cases, nil
 }

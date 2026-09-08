@@ -4,3 +4,6 @@
 [submodule "grammars/clang/testdata/tree-sitter-c"]
 	path = grammars/clang/testdata/tree-sitter-c
 	url = https://github.com/tree-sitter/tree-sitter-c.git
+[submodule "grammars/cpp/testdata/tree-sitter-cpp"]
+	path = grammars/cpp/testdata/tree-sitter-cpp
+	url = https://github.com/tree-sitter/tree-sitter-cpp.git
