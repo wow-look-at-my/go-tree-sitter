@@ -10,15 +10,19 @@ import (
 
 func TestProbe(t *testing.T) {
 	for _, src := range []string{
-		"// Comment\n",
-		"/// Outer\n",
-		"//! Inner\n",
-		"/* block */\n",
-		"fn f() { // c\n }\n",
+		"// c\n",
+		"// c\nuse x;\n",
+		"use x;\n// c\n",
+		"fn f() {}\n",
+		"fn f() {//c\n}\n",
+		"fn f() { //c\n}\n",
+		"fn f() {\n// c\n}\n",
+		"fn f() { /*c*/ }\n",
+		"fn f() { 1; //c\n}\n",
 	} {
 		parser := ts.NewParser()
 		parser.SetLanguage(rust.Language())
 		tree := parser.ParseString(nil, []byte(src))
-		fmt.Printf("PROBE %q -> %s\n", src, tree.RootNode().String())
+		fmt.Printf("PROBE %-24q -> %s\n", src, tree.RootNode().String())
 	}
 }
