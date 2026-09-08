@@ -64,16 +64,7 @@ type subtreeData struct {
 	children []subtree
 }
 
-// subtree is upstream's tagged union. Upstream keeps a small leaf token in the
-// parent's child array by value and reaches the heap only for the rest, telling
-// the arms apart by the low bit of the pointer. Go cannot overlay an integer on
-// a pointer, so the arms are separate fields and an empty heap arm is the null
-// subtree.
-//
-// The field is named rather than embedded on purpose. Embedding promotes every
-// heap field back onto the value, so a read that belongs on an accessor still
-// compiles and faults only when it meets a leaf that is not on the heap. A
-// named field makes the compiler list the work instead.
+// A tagged union. Named, not embedded: embedding hides missing accessors.
 type subtree struct {
 	heap   *subtreeData
 	inline subtreeInline
@@ -81,13 +72,10 @@ type subtree struct {
 
 func heapSubtree(data *subtreeData) subtree { return subtree{heap: data} }
 
-// isNil reports the null subtree, which callers used to spell as a nil pointer.
-// An inline leaf holds no pointer either, so the flag is what separates them.
+// An inline leaf holds no pointer either, so the flag separates the two.
 func (s subtree) isNil() bool { return s.heap == nil && !s.isInline() }
 
-// These write a field that exists only on the heap arm, so they take that arm:
-// an inline leaf has no fragility, no precedence and no state to set, and a
-// setter that quietly did nothing for one would be worse than a compile error.
+// Heap arm: these fields exist on no inline leaf.
 func subtreeSetFragileLeft(self *subtreeData, v bool)        { self.fragileLeft = v }
 func subtreeSetFragileRight(self *subtreeData, v bool)       { self.fragileRight = v }
 func subtreeSetParseState(self *subtreeData, s StateID)      { self.parseState = s }
@@ -194,14 +182,10 @@ func newLeafSubtree(
 	metadata := language.symbolMetadata(symbol)
 	extra := symbol == BuiltinSymEnd
 
-	// A leaf rides in the parent's child array when it fits, which is most of
-	// them. An external token never does: its scanner state lives on the heap
-	// and callers take a pointer into it.
-	//
-	// The column-dependence exclusion is this port's, not upstream's. The
-	// inline arm has nowhere to keep that flag, so upstream reads it back as
-	// false for any leaf it inlines. Keeping such a leaf on the heap costs a
-	// few tokens per parse and keeps the flag answerable.
+	// An external token is never inline: callers take a pointer into its
+	// scanner state. The column-dependence exclusion is this port's own, since
+	// the inline arm has nowhere to keep that flag and upstream therefore reads
+	// it back as false.
 	if symbol <= maxInlineLength && !hasExternalTokens && !dependsOnColumn &&
 		canInline(padding, size, lookaheadBytes) {
 		return inlineLeaf(

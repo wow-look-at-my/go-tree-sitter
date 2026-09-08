@@ -24,10 +24,7 @@ type stackNode struct {
 
 type stackIterator struct {
 	node *stackNode
-	// subtrees is the collected payload, and it fills only when the pop asks
-	// for it. subtreeCount is the symbols a reduction consumed, so it counts
-	// an unfilled link and skips an extra. Never substitute one for the other:
-	// len(subtrees) makes a reduction count comments as symbols.
+	// Never read len(subtrees) for subtreeCount: it counts extras as symbols.
 	subtrees     []subtree
 	subtreeCount uint32
 	isPending    bool

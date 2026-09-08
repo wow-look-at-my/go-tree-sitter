@@ -1,13 +1,7 @@
 package treesitter
 
-// The inline arm of a subtree, and every accessor that has to ask which arm it
-// is looking at.
-//
-// Upstream packs these fields into the same word as the heap pointer and tells
-// the arms apart by the pointer's low bit. Go cannot do that, so the fields sit
-// beside the pointer and flagInline is the discriminant. The field widths are
-// upstream's, because they decide which leaves qualify: a leaf that does not
-// fit any one of them goes to the heap instead.
+// The inline arm, and every accessor that asks which arm it reads. The field
+// widths are upstream's: they decide which leaves qualify.
 
 const (
 	flagInline uint8 = 1 << iota
@@ -19,8 +13,7 @@ const (
 	flagIsKeyword
 )
 
-// maxInlineLength bounds every byte-width field of an inline leaf. Upstream
-// compares strictly, so the largest value that fits is one below it.
+// Upstream compares strictly, so the largest value that fits is one below this.
 const maxInlineLength = 255
 
 type subtreeInline struct {
@@ -260,9 +253,8 @@ func subtreeDynamicPrecedence(self subtree) int32 {
 	return self.heap.dynamicPrecedence
 }
 
-// An inline leaf carries no fragility, no external token and no column
-// dependence: canInline and newLeafSubtree between them keep every subtree that
-// would need one on the heap.
+// canInline and newLeafSubtree keep every subtree needing one of these on the
+// heap, so the inline answer is always false.
 func subtreeFragileLeft(self subtree) bool {
 	return !self.isInline() && self.heap.fragileLeft
 }

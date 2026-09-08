@@ -7,20 +7,11 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// Upstream's Subtree is a tagged union: a small leaf token lives BY VALUE in the
-// parent's child array, and only the rest reach the heap. This port kept the
-// heap arm alone, so every leaf costs a pointer in the array plus a whole
-// subtreeData behind it, retained for the tree's lifetime and traced on every
-// GC cycle.
-//
-// These variants measure what an inline arm would cost. Go cannot overlay an
-// integer on a pointer the way the C union does -- the collector has to see a
-// real pointer slot -- so the pointer word is unavoidable and the question is
-// only what rides beside it.
+// What a leaf costs in each arm. The collector has to see a real pointer slot,
+// so the arms cannot overlay and one of them is always dead weight.
 
-// subtreePackedArm is the arm this port did not build: the same fields decoded
-// out of one word instead of named. It is measured beside the real one so the
-// choice stays checkable rather than remembered.
+// The arm this port did not build, measured beside the real one so the choice
+// stays checkable rather than remembered.
 type subtreePackedArm struct {
 	ptr    *subtreeData
 	packed uint64
@@ -35,16 +26,10 @@ func TestAnInlineLeafCostsFarLessThanAHeapOne(t *testing.T) {
 	t.Logf("heap leaf:   %d B slot + %d B object = %d B", slot, heap, slot+heap)
 	t.Logf("packed arm not built: %d B", packed)
 
-	// What justifies the arm at all. A future edit that grows subtreeData is
-	// free to do so, but an inline leaf that stops costing less than the object
-	// it replaces is a representation carrying accessors it no longer earns.
+	// An arm costing no less than the object it replaces has not earned itself.
 	assert.Less(t, slot, slot+heap)
 
-	// The named fields do not disappear into the pointer's own padding, so the
-	// dense arm really is smaller. It was still not worth building: beside what
-	// a heap leaf costs the two are within a rounding error, and the dense one
-	// pays that margin in hand-written decode on every accessor. This port's
-	// standing risk is a subtle decode bug, not a byte.
+	// Smaller, and still not worth the hand-written decode on every accessor.
 	assert.Less(t, packed, slot+heap)
 }
 

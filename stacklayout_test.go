@@ -6,10 +6,8 @@ import (
 	"unsafe"
 )
 
-// stackNode carries four 32-bit counters. Whether any of them is oversized is a
-// question about the STRUCT, not about the counter: Go lays fields out in
-// declaration order and pads to alignment, so a narrower field can buy nothing.
-// These variants measure that directly rather than reasoning about it.
+// Whether a counter is oversized is a question about the STRUCT: Go pads to
+// alignment, so a narrower field can buy nothing. Measured, not reasoned.
 
 type nodeNarrowCounters struct {
 	state             StateID
@@ -42,10 +40,7 @@ func TestStackNodeLayoutIsAlreadyTight(t *testing.T) {
 	t.Logf("  StateID %d, length %d, []stackLink %d",
 		unsafe.Sizeof(StateID(0)), unsafe.Sizeof(length{}), unsafe.Sizeof([]stackLink(nil)))
 
-	// The claim this pins: narrowing the counters WITHOUT reordering saves
-	// nothing, because the bytes freed fall into padding the struct already
-	// carries. A future edit that narrows a counter and reports a saving is
-	// reporting one it did not get.
+	// Narrowing without reordering saves nothing: the bytes fall into padding.
 	assert.Equal(t, got, narrow)
 
 }

@@ -212,8 +212,7 @@ func (p *Parser) condenseStack() uint32 {
 
 func (p *Parser) balanceSubtree() {
 	finishedTree := p.finishedTree
-	// Only a node that has children is ever balanced, and such a node is always
-	// on the heap, so the walk carries that arm rather than the union.
+	// Only a node with children is balanced, and one is always on the heap.
 	var treeStack []*subtreeData
 	if subtreeChildCount(finishedTree) > 0 && subtreeRefCount(finishedTree) == 1 {
 		treeStack = append(treeStack, finishedTree.heap)
