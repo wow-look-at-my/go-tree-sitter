@@ -2,6 +2,7 @@ package rust_test
 
 import (
 	"fmt"
+	"os"
 	"testing"
 
 	ts "github.com/wow-look-at-my/go-tree-sitter"
@@ -9,6 +10,7 @@ import (
 )
 
 func TestProbe(t *testing.T) {
+	out := ""
 	for _, src := range []string{
 		"// c\n",
 		"// c\nuse x;\n",
@@ -23,6 +25,7 @@ func TestProbe(t *testing.T) {
 		parser := ts.NewParser()
 		parser.SetLanguage(rust.Language())
 		tree := parser.ParseString(nil, []byte(src))
-		fmt.Printf("PROBE %-24q -> %s\n", src, tree.RootNode().String())
+		out += fmt.Sprintf("PROBE %-24q -> %s\n", src, tree.RootNode().String())
 	}
+	os.WriteFile("/tmp/probe.txt", []byte(out), 0o644)
 }
