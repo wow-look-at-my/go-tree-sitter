@@ -118,7 +118,7 @@ type cParser struct {
 	file *cFile
 }
 
-func (p *cParser) cur() token  { return p.toks[p.pos] }
+func (p *cParser) cur() token { return p.toks[p.pos] }
 func (p *cParser) at(s string) bool {
 	t := p.cur()
 	return (t.kind == tokPunct || t.kind == tokIdent) && t.text == s

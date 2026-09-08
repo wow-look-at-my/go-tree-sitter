@@ -86,7 +86,7 @@ func isIdentPart(c byte) bool {
 
 func isDigit(c byte) bool { return c >= '0' && c <= '9' }
 
-// next returns the next token in the stream.
+// next returns the following token in the stream.
 func (s *cScanner) next() token {
 	atLineStart := s.skipSpace()
 	if s.pos >= len(s.src) {

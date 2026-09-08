@@ -23,7 +23,7 @@ func (e *emitter) array(name string) *arrayDecl {
 	return e.file.arrays[name]
 }
 
-// dimension reports an array's declared size, or its highest index plus one.
+// dimension reports an array's declared size, or the extent of its designators.
 func dimension(d *arrayDecl, index int) int64 {
 	if index < len(d.dims) && d.dims[index] > 0 {
 		return d.dims[index]

@@ -193,7 +193,7 @@ func (p *cParser) parseLexPrimary() expr {
 	case p.at("("):
 		save := p.pos
 		p.advance()
-		if p.cur().kind == tokIdent && castTypes[p.cur().text] {
+		if p.cur().kind == tokIdent && castTypes.Contains(p.cur().text) {
 			p.advance()
 			for p.at("*") {
 				p.advance()

@@ -1,14 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"github.com/wow-look-at-my/go-containers/set"
+)
 
-var castTypes = map[string]bool{
-	"uint8_t": true, "uint16_t": true, "uint32_t": true, "uint64_t": true,
-	"int8_t": true, "int16_t": true, "int32_t": true, "int64_t": true,
-	"unsigned": true, "int": true, "short": true, "long": true, "char": true,
-	"TSSymbol": true, "TSStateId": true, "TSFieldId": true, "size_t": true,
-	"bool": true, "void": true,
-}
+var castTypes = set.Of[string]("uint8_t", "uint16_t", "uint32_t", "uint64_t",
+	"int8_t", "int16_t", "int32_t", "int64_t",
+	"unsigned", "int", "short", "long", "char",
+	"TSSymbol", "TSStateId", "TSFieldId", "size_t",
+	"bool", "void")
 
 var castWidth = map[string]uint{
 	"uint8_t": 8, "uint16_t": 16, "uint32_t": 32,
@@ -131,7 +132,7 @@ func (p *cParser) parsePrimary() int64 {
 	case p.at("("):
 		save := p.pos
 		p.advance()
-		if p.cur().kind == tokIdent && castTypes[p.cur().text] {
+		if p.cur().kind == tokIdent && castTypes.Contains(p.cur().text) {
 			typeName := p.cur().text
 			p.advance()
 			for p.at("*") {
