@@ -263,7 +263,8 @@ func (l *Language) aliasSequence(productionID uint32) []Symbol {
 	return l.AliasSequences[start : start+uint32(l.MaxAliasSequenceLen)]
 }
 
-func (l *Language) aliasAt(productionID uint32, childIndex uint32) Symbol {
+// AliasAt reports the alias applied to one child of a production.
+func (l *Language) AliasAt(productionID uint32, childIndex uint32) Symbol {
 	if productionID == 0 {
 		return 0
 	}
@@ -278,7 +279,8 @@ func (l *Language) fieldMap(productionID uint32) []FieldMapEntry {
 	return l.FieldMapEntries[slice.Index : uint32(slice.Index)+uint32(slice.Length)]
 }
 
-func (l *Language) aliasesForSymbol(originalSymbol Symbol) []Symbol {
+// AliasesForSymbol reports every public name a symbol can take.
+func (l *Language) AliasesForSymbol(originalSymbol Symbol) []Symbol {
 	result := l.PublicSymbolMap[originalSymbol : uint32(originalSymbol)+1]
 	idx := uint32(0)
 	for {
@@ -297,11 +299,39 @@ func (l *Language) aliasesForSymbol(originalSymbol Symbol) []Symbol {
 	return result
 }
 
-func (l *Language) stateIsPrimary(state StateID) bool {
+// StateIsPrimary reports whether a state is the canonical one of its class.
+func (l *Language) StateIsPrimary(state StateID) bool {
 	if l.ABIVersion >= languageVersionWithPrimaryStates {
 		return state == l.PrimaryStateIDs[state]
 	}
 	return true
+}
+
+// LanguageName reports the grammar's own name.
+func (l *Language) LanguageName() string {
+	if l.ABIVersion >= languageVersionWithReservedWords {
+		return l.Name
+	}
+	return ""
+}
+
+// Supertypes reports the grammar's supertype symbols.
+func (l *Language) Supertypes() []Symbol {
+	if l.ABIVersion >= languageVersionWithReservedWords {
+		return l.SupertypeSymbols
+	}
+	return nil
+}
+
+// Subtypes reports the symbols that a supertype covers.
+func (l *Language) Subtypes(supertype Symbol) []Symbol {
+	if l.ABIVersion < languageVersionWithReservedWords ||
+		uint32(supertype) >= l.SymbolCountTotal() ||
+		!l.symbolMetadata(supertype).Supertype {
+		return nil
+	}
+	slice := l.SupertypeMapSlices[supertype]
+	return l.SupertypeMapEntries[slice.Index : uint32(slice.Index)+uint32(slice.Length)]
 }
 
 // SymbolCountTotal reports the number of symbols including aliases.

@@ -35,10 +35,6 @@ func pointGt(a, b Point) bool {
 	return a.Row > b.Row || (a.Row == b.Row && a.Column > b.Column)
 }
 
-func pointGte(a, b Point) bool {
-	return a.Row > b.Row || (a.Row == b.Row && a.Column >= b.Column)
-}
-
 func pointEq(a, b Point) bool { return a.Row == b.Row && a.Column == b.Column }
 
 type length struct {
@@ -51,13 +47,6 @@ var lengthUndefined = length{Bytes: 0, Extent: Point{Row: 0, Column: 1}}
 var lengthMax = length{Bytes: ^uint32(0), Extent: Point{Row: ^uint32(0), Column: ^uint32(0)}}
 
 func lengthIsUndefined(l length) bool { return l.Bytes == 0 && l.Extent.Column != 0 }
-
-func lengthMin(a, b length) length {
-	if a.Bytes < b.Bytes {
-		return a
-	}
-	return b
-}
 
 func lengthAdd(a, b length) length {
 	return length{Bytes: a.Bytes + b.Bytes, Extent: pointAdd(a.Extent, b.Extent)}

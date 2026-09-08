@@ -77,14 +77,14 @@ func subtreeChildCount(self subtree) uint32 {
 	return uint32(len(self.children))
 }
 
-func subtreeSymbol(self subtree) Symbol       { return self.symbol }
-func subtreeVisible(self subtree) bool        { return self.visible }
-func subtreeNamed(self subtree) bool          { return self.named }
-func subtreeExtra(self subtree) bool          { return self.extra }
-func subtreeHasChanges(self subtree) bool     { return self.hasChanges }
-func subtreeMissing(self subtree) bool        { return self.isMissing }
-func subtreeIsKeyword(self subtree) bool      { return self.isKeyword }
-func subtreeParseState(self subtree) StateID  { return self.parseState }
+func subtreeSymbol(self subtree) Symbol         { return self.symbol }
+func subtreeVisible(self subtree) bool          { return self.visible }
+func subtreeNamed(self subtree) bool            { return self.named }
+func subtreeExtra(self subtree) bool            { return self.extra }
+func subtreeHasChanges(self subtree) bool       { return self.hasChanges }
+func subtreeMissing(self subtree) bool          { return self.isMissing }
+func subtreeIsKeyword(self subtree) bool        { return self.isKeyword }
+func subtreeParseState(self subtree) StateID    { return self.parseState }
 func subtreeLookaheadBytes(self subtree) uint32 { return self.lookaheadBytes }
 
 func subtreeLeafSymbol(self subtree) Symbol {
@@ -110,22 +110,11 @@ func subtreeTotalBytes(self subtree) uint32 {
 
 func subtreeRepeatDepth(self subtree) uint32 { return uint32(self.repeatDepth) }
 
-func subtreeIsRepetition(self subtree) bool {
-	return !self.named && !self.visible && len(self.children) != 0
-}
-
 func subtreeVisibleDescendantCount(self subtree) uint32 {
 	if len(self.children) == 0 {
 		return 0
 	}
 	return self.visibleDescendantCount
-}
-
-func subtreeVisibleChildCount(self subtree) uint32 {
-	if len(self.children) > 0 {
-		return self.visibleChildCount
-	}
-	return 0
 }
 
 func subtreeErrorCost(self subtree) uint32 {
@@ -140,13 +129,6 @@ func subtreeDynamicPrecedence(self subtree) int32 {
 		return 0
 	}
 	return self.dynamicPrecedence
-}
-
-func subtreeProductionID(self subtree) uint16 {
-	if len(self.children) > 0 {
-		return self.productionID
-	}
-	return 0
 }
 
 func subtreeFragileLeft(self subtree) bool  { return self.fragileLeft }
@@ -681,12 +663,12 @@ type writeFrame struct {
 	hasField     bool
 	isRoot       bool
 
-	preWritten            bool
-	isVisible             bool
-	childIndex            uint32
-	structuralChildIndex  uint32
-	aliasSequence         []Symbol
-	fieldMap              []FieldMapEntry
+	preWritten           bool
+	isVisible            bool
+	childIndex           uint32
+	structuralChildIndex uint32
+	aliasSequence        []Symbol
+	fieldMap             []FieldMapEntry
 }
 
 func subtreeString(
