@@ -111,8 +111,11 @@ func (n Node) EndPoint() Point {
 	return pointAdd(n.startPoint, subtreeSize(n.subtree()).Extent)
 }
 
-// Symbol reports the node's public grammar symbol.
+// Symbol reports the node's public grammar symbol. A null node has none.
 func (n Node) Symbol() Symbol {
+	if n.IsNull() {
+		return 0
+	}
 	symbol := n.alias
 	if symbol == 0 {
 		symbol = subtreeSymbol(n.subtree())
@@ -120,8 +123,11 @@ func (n Node) Symbol() Symbol {
 	return n.tree.language.publicSymbol(symbol)
 }
 
-// Type reports the node's grammar rule name.
+// Type reports the node's grammar rule name. A null node has none.
 func (n Node) Type() string {
+	if n.IsNull() {
+		return ""
+	}
 	symbol := n.alias
 	if symbol == 0 {
 		symbol = subtreeSymbol(n.subtree())

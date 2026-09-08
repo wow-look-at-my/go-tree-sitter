@@ -37,6 +37,7 @@ func TestFieldsAreReachable(t *testing.T) {
 	assert.Equal(t, "compound_statement", body.Type())
 
 	assert.Equal(t, "type", function.FieldNameForNamedChild(0))
+	assert.True(t, function.ChildByFieldName("nonexistent").IsNull())
 	assert.Equal(t, "", function.ChildByFieldName("nonexistent").Type())
 
 	statement := body.NamedChild(0)
