@@ -47,13 +47,19 @@ func main() {
 
 ## Status
 
-Each grammar runs the upstream grammar repository's own `test/corpus` suite. tree-sitter-go passes 67 of 67 cases and tree-sitter-c passes 85 of 85. The real `tree-sitter test` command reports the same case counts on the same commits. That is what proves the reader is not dropping cases.
+Each grammar runs the upstream grammar repository's own `test/corpus` suite, and every case in it passes. The real `tree-sitter test` command reports the same case counts on the same commits. That is what proves the reader is not dropping cases.
 
 The corpus reader is a port of the tree-sitter CLI's own reader. A case is therefore read and compared the way upstream reads and compares it.
 
+## Grammars
+
+Go, C, C++, Rust, Bash, JavaScript, TypeScript and TSX.
+
+A grammar that ships a hand-written `scanner.c` needs that scanner ported by hand. No machine translation reads C well enough to do it. `grammars/*/scanner.go` is that port. The upstream corpus says whether it is right. TSX shares TypeScript's scanner, the way upstream compiles both from one header.
+
 ## The limit worth knowing
 
-Only a grammar with no external scanner is covered. Grammars such as cpp, rust, bash and python ship a hand-written `scanner.c` that no machine translation can handle. None of them is built here yet. So nothing in this repository exercises the external-scanner path.
+A grammar reaches this runtime by way of `cmd/ts-translate`, which refuses an ABI outside the range `parser_core.go` accepts. A grammar outside that range fails the build rather than becoming a package that loads and parses nothing.
 
 ## Tests
 

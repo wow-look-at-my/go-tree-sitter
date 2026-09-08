@@ -40,7 +40,12 @@ func main() {
 		file: file, sb: &strings.Builder{}, pkg: *pkg,
 		standalone: *standalone, scannerPkg: *scanner,
 	}
-	blob, err := ts.EncodeTables(e.buildTables())
+	tables := e.buildTables()
+	if err := checkABI(tables.Language.ABIVersion); err != nil {
+		fmt.Fprintf(os.Stderr, "%s: %v\n", flag.Arg(0), err)
+		os.Exit(1)
+	}
+	blob, err := ts.EncodeTables(tables)
 	if err != nil {
 		fmt.Fprintln(os.Stderr, "encoding the tables:", err)
 		os.Exit(1)

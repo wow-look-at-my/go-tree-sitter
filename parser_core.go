@@ -83,7 +83,7 @@ func (p *Parser) SetLanguage(language *Language) bool {
 	p.Reset()
 	p.language = nil
 	if language != nil {
-		if language.ABIVersion > 15 || language.ABIVersion < 13 {
+		if language.ABIVersion > MaxABIVersion || language.ABIVersion < MinABIVersion {
 			return false
 		}
 		if language.LexFn == nil {

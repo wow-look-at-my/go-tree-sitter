@@ -41,6 +41,8 @@ type Case struct {
 	Expect Expectation
 	// Platform is false when a header restricts the case to another system.
 	Platform bool
+	// Language is the grammar a header names, and empty when it names none.
+	Language string
 }
 
 // ReadDir reads every .txt file under a directory as a corpus file. The walk
@@ -157,6 +159,7 @@ func suffixMatches(first string, firstFound bool, suffix string) bool {
 
 type header struct {
 	name      string
+	language  string
 	expect    Expectation
 	platform  bool
 	bodyStart int
@@ -171,6 +174,7 @@ func parseHeader(lines []string, first string, firstFound bool, start int) (*hea
 	}
 
 	var name strings.Builder
+	language := ""
 	seenMarker, seenSkip, seenError := false, false, false
 	platformSet, platformOK := false, false
 
@@ -193,8 +197,9 @@ func parseHeader(lines []string, first string, firstFound bool, start int) (*hea
 		case ":fail-fast", ":cst":
 			seenMarker = true
 		case ":language":
-			if _, ok := attributeArgument(trimmed, "language"); ok {
+			if inner, ok := attributeArgument(trimmed, "language"); ok {
 				seenMarker = true
+				language = strings.TrimSpace(inner)
 			}
 		case ":platform":
 			if inner, ok := attributeArgument(trimmed, "platform"); ok {
@@ -226,6 +231,7 @@ func parseHeader(lines []string, first string, firstFound bool, start int) (*hea
 	}
 	return &header{
 		name:      strings.TrimRight(name.String(), " \t\r\n"),
+		language:  language,
 		expect:    expect,
 		platform:  platform,
 		bodyStart: lineNum + 1,
@@ -272,6 +278,7 @@ func buildCase(body []string, first string, firstFound bool, h *header, file str
 		HasFields: hasFields,
 		Expect:    h.expect,
 		Platform:  h.platform,
+		Language:  h.language,
 	}, true
 }
 

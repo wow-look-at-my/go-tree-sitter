@@ -18,6 +18,8 @@ type Result struct {
 	Failed int
 	// Skipped is the number of cases upstream itself does not run.
 	Skipped int
+	// Elsewhere is the number of cases a header hands to another grammar.
+	Elsewhere int
 	// Failures names each failing case, in corpus order.
 	Failures []string
 	// Details compares the expected and actual tree of the earliest failures.
@@ -42,7 +44,12 @@ func (r Result) Total() int { return r.Passed + r.Failed }
 
 // Run parses every case in a corpus directory and compares the tree it produces
 // against the expected tree. It reports the counts and never repairs anything.
-func Run(t *testing.T, language *ts.Language, dir string) Result {
+//
+// grammar is the name this language answers to in a `:language(...)` header. A
+// repository that ships several grammars shares a corpus between them, so a
+// case naming another grammar belongs to that grammar's own run. An empty name
+// runs every case, which suits a corpus carrying no such header.
+func Run(t *testing.T, language *ts.Language, dir, grammar string) Result {
 	t.Helper()
 	cases, err := ReadDir(dir)
 	if err != nil {
@@ -62,6 +69,10 @@ func Run(t *testing.T, language *ts.Language, dir string) Result {
 	for _, c := range cases {
 		if c.Expect == ExpectSkip || !c.Platform {
 			result.Skipped++
+			continue
+		}
+		if grammar != "" && c.Language != "" && c.Language != grammar {
+			result.Elsewhere++
 			continue
 		}
 		file := byFile[c.File]
@@ -113,8 +124,8 @@ func report(t *testing.T, result Result, byFile map[string]*Result) {
 	sort.Strings(files)
 
 	var b strings.Builder
-	fmt.Fprintf(&b, "corpus: %d/%d cases pass, %d fail, %d skipped\n",
-		result.Passed, result.Total(), result.Failed, result.Skipped)
+	fmt.Fprintf(&b, "corpus: %d/%d cases pass, %d fail, %d skipped, %d for another grammar\n",
+		result.Passed, result.Total(), result.Failed, result.Skipped, result.Elsewhere)
 	for _, name := range files {
 		r := byFile[name]
 		fmt.Fprintf(&b, "  %-20s %d/%d\n", name, r.Passed, r.Passed+r.Failed)

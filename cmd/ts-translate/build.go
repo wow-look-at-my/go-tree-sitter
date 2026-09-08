@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"sort"
 
 	ts "github.com/wow-look-at-my/go-tree-sitter"
@@ -14,7 +15,6 @@ func (e *emitter) buildTables() *ts.Tables {
 	l := &t.Language
 
 	scalars := map[string]*uint32{
-		"abi_version":          &l.ABIVersion,
 		"symbol_count":         &l.SymbolCount,
 		"alias_count":          &l.AliasCount,
 		"token_count":          &l.TokenCount,
@@ -30,6 +30,7 @@ func (e *emitter) buildTables() *ts.Tables {
 			*into = uint32(v.num)
 		}
 	}
+	l.ABIVersion = e.abiVersion()
 	if v, ok := e.file.lang["max_alias_sequence_length"]; ok && v.isNum {
 		l.MaxAliasSequenceLen = uint16(v.num)
 	}
@@ -121,6 +122,33 @@ func (e *emitter) buildTables() *ts.Tables {
 
 	t.CharacterSets = e.buildCharacterSets()
 	return t
+}
+
+// abiVersion reads the grammar's ABI, under either name the field has had.
+func (e *emitter) abiVersion() uint32 {
+	for _, name := range []string{"abi_version", "version"} {
+		if v, ok := e.file.lang[name]; ok && v.isNum {
+			return uint32(v.num)
+		}
+	}
+	return 0
+}
+
+// checkABI reports an ABI this runtime cannot parse with.
+//
+// A table the runtime refuses still becomes a package that builds, links and
+// decodes, and then reports nothing. That is the failure a generator must never
+// ship, so the build stops here instead.
+func checkABI(version uint32) error {
+	if version >= ts.MinABIVersion && version <= ts.MaxABIVersion {
+		return nil
+	}
+	if version == 0 {
+		return fmt.Errorf("the grammar declares no ABI version: " +
+			"no .abi_version or .version field in its TSLanguage")
+	}
+	return fmt.Errorf("the grammar is ABI %d, and this runtime parses ABI %d to %d",
+		version, ts.MinABIVersion, ts.MaxABIVersion)
 }
 
 // linked resolves a language field to the array it points at.
