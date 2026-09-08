@@ -20,3 +20,8 @@ jobs:
         with:
           submodules: recursive
       - uses: wow-look-at-my/go-toolchain@master
+        with:
+          # Approves the //go:generate directives that translate each grammar's
+          # parser.c. Re-run go-toolchain locally after editing one: the failure
+          # prints the value to paste here.
+          generate: 22412af311a7

@@ -132,8 +132,8 @@ func (e *emitter) linked(field string) *arrayDecl {
 	return e.array(v.ref)
 }
 
-// buildCharacterSets collects every set the lexer searches, in sorted order, and
-// records where each one landed so the emitted lexer can index it.
+// buildCharacterSets collects every set the lexer searches, sorted, and records
+// each position so the emitted lexer can index it.
 func (e *emitter) buildCharacterSets() [][]ts.CharacterRange {
 	names := map[string]bool{}
 	for _, fn := range e.file.lexFns {
@@ -299,9 +299,10 @@ func buildLexModes(d *arrayDecl) []ts.LexerMode {
 		}
 		var m ts.LexerMode
 		// A state with no lexer is written positionally, as a cast of a negative
-		// value, while every other state names its fields. The runtime reads
-		// that sentinel to find the end of a non-terminal extra.
+		// value, while every other state names its fields. That sentinel is how
+		// the runtime finds the end of a non-terminal extra, so it must survive.
 		positional := 0
+
 		for _, f := range el.elems {
 			switch f.field {
 			case "lex_state":
