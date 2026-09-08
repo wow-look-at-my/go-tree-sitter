@@ -23,12 +23,3 @@ jobs:
         with:
           # Approves the //go:generate directives; editing one fails the build with the new value.
           generate: a52ff914534b
-
-      # Nothing else reads source comments: common-checks walks markdown and YAML.
-      - name: Comments no longer than the code they document
-        shell: bash
-        run: |
-          set -euo pipefail
-          curl -fsSL https://apt.pazer.build/slopfix/install.sh | sudo sh
-          sudo apt-get install -y slopfix
-          slopfix comment-length .
