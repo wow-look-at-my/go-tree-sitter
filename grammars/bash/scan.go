@@ -3,9 +3,8 @@ package bash
 import ts "github.com/wow-look-at-my/go-tree-sitter"
 
 // The C scanner jumps forward with goto into labelled sections. Go cannot jump
-// over declarations, so each section is a function, and an entry point says
-// where to resume. A section whose guard fails falls through to the next,
-// exactly as the C does.
+// over declarations, so each section is a function and an entry point says
+// where to resume.
 const (
 	entryTop = iota
 	entryRegex
@@ -74,10 +73,8 @@ func (s *bashScanner) scanHead(lexer *ts.Lexer, valid []bool) (bool, bool, int) 
 	} else if entry != entryTop {
 		return false, false, entry
 	}
-	// The variable name block comes first, and it returns or jumps whenever its
-	// guard holds. A bare dollar is therefore only reachable when that guard
-	// fails, which is what keeps $$ a special variable rather than a bare
-	// dollar that swallows the second character.
+	// A bare dollar is reachable only when the variable name guard fails, which
+	// is what keeps $$ a special variable rather than a swallowed pair.
 	if done, result, entry := s.scanVariableName(lexer, valid); done {
 		return true, result, entryTop
 	} else if entry != entryTop {

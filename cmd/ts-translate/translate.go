@@ -98,8 +98,7 @@ func (e *emitter) emitInit() {
 	e.printf("\treturn language\n")
 	e.printf("}\n\n")
 
-	// This assignment is all that runs at package start, which keeps a missing
-	// parser.go a named panic rather than a link error.
+	// This assignment is all that runs at package start.
 	e.printf("func init() { load = loadTables }\n")
 }
 
