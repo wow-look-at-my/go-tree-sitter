@@ -8,6 +8,10 @@ import (
 
 //go:generate go run github.com/wow-look-at-my/go-tree-sitter/cmd/ts-translate -package cpp -out parser.go testdata/tree-sitter-cpp/src/parser.c
 
+// Scanner returns the hand written external scanner. A package that carries its
+// own generated table, rather than this one, still needs this scanner.
+func Scanner() ts.ExternalScanner { return scanner{} }
+
 // load is set by the parser.go that the generate step writes.
 var (
 	load      func() *ts.Language
