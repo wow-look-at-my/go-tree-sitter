@@ -5,18 +5,18 @@ import (
 	"strings"
 )
 
-func goExpr(e expr) string {
-	switch v := e.(type) {
+func (e *emitter) goExpr(x expr) string {
+	switch v := x.(type) {
 	case exprLit:
 		return fmt.Sprintf("%d", v.v)
 	case exprIdent:
 		return v.name
 	case exprSetContains:
-		return fmt.Sprintf("ts.SetContains(%s, lookahead)", goIdent(v.set))
+		return fmt.Sprintf("ts.SetContains(characterSets[%d], lookahead)", e.setIndex[v.set])
 	case exprUnary:
-		return "(" + v.op + goExpr(v.x) + ")"
+		return "(" + v.op + e.goExpr(v.x) + ")"
 	case exprBinary:
-		return "(" + goExpr(v.l) + " " + v.op + " " + goExpr(v.r) + ")"
+		return "(" + e.goExpr(v.l) + " " + v.op + " " + e.goExpr(v.r) + ")"
 	}
 	panic("unsupported expression")
 }
@@ -81,7 +81,7 @@ func (e *emitter) emitLexStmt(st lexStmt, depth int) {
 			}
 			return
 		}
-		e.printf("%sif %s {\n", pad, goExpr(v.cond))
+		e.printf("%sif %s {\n", pad, e.goExpr(v.cond))
 		for _, inner := range v.then {
 			e.emitLexStmt(inner, depth+1)
 		}
