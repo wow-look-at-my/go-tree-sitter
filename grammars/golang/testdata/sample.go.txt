@@ -1,0 +1,44 @@
+package main
+
+// A line comment.
+
+/* A block comment
+   that spans several lines. */
+
+import (
+	"fmt"
+	"strings"
+)
+
+const raw = `a raw string
+that spans lines and keeps \n backslashes`
+
+const interpreted = "an escape \t and a quote \" and a rune é"
+
+type point struct {
+	x, y int
+}
+
+func (p point) String() string {
+	return fmt.Sprintf("%d,%d", p.x, p.y)
+}
+
+func main() {
+	values := []point{{1, 2}, {3, 4}}
+	var parts []string
+	for _, v := range values {
+		parts = append(parts, v.String())
+	}
+	switch n := len(parts); {
+	case n > 2:
+		fmt.Println(strings.Join(parts, ";"))
+	default:
+		fmt.Println(raw, interpreted, 'x', 0x1f, 1e9)
+	}
+	go func() { _ = raw }()
+	defer func() {
+		if r := recover(); r != nil {
+			panic(r)
+		}
+	}()
+}
