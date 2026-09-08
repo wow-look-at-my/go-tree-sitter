@@ -20,7 +20,24 @@ type Result struct {
 	Skipped int
 	// Failures names each failing case, in corpus order.
 	Failures []string
+	// Details holds the expected and the actual tree of the earliest failures,
+	// so a report says what went wrong and not only where.
+	Details []Detail
 }
+
+// Detail is the comparison one failing case produced.
+type Detail struct {
+	// Name is the case, prefixed by its corpus file.
+	Name string
+	// Want is the expected tree.
+	Want string
+	// Got is the tree the parse produced.
+	Got string
+}
+
+// detailLimit bounds how many comparisons a report carries, so a wide
+// regression does not bury its own first case.
+const detailLimit = 3
 
 // Total is the number of cases that actually ran.
 func (r Result) Total() int { return r.Passed + r.Failed }
@@ -54,34 +71,39 @@ func Run(t *testing.T, language *ts.Language, dir string) Result {
 			file = &Result{}
 			byFile[c.File] = file
 		}
-		if runCase(parser, c) {
+		got, ok := runCase(parser, c)
+		if ok {
 			result.Passed++
 			file.Passed++
 			continue
 		}
 		result.Failed++
 		file.Failed++
-		result.Failures = append(result.Failures, c.File+": "+c.Name)
+		name := c.File + ": " + c.Name
+		result.Failures = append(result.Failures, name)
+		if len(result.Details) < detailLimit {
+			result.Details = append(result.Details, Detail{Name: name, Want: c.Output, Got: got})
+		}
 	}
 
 	report(t, result, byFile)
 	return result
 }
 
-func runCase(parser *ts.Parser, c Case) bool {
+func runCase(parser *ts.Parser, c Case) (string, bool) {
 	tree := parser.ParseString(nil, c.Input)
 	if tree == nil {
-		return false
+		return "", false
 	}
 	root := tree.RootNode()
 	if c.Expect == ExpectError {
-		return root.HasError()
+		return "", root.HasError()
 	}
 	actual := root.String()
 	if !c.HasFields {
 		actual = StripFields(actual)
 	}
-	return actual == c.Output
+	return actual, actual == c.Output
 }
 
 func report(t *testing.T, result Result, byFile map[string]*Result) {
@@ -104,6 +126,9 @@ func report(t *testing.T, result Result, byFile map[string]*Result) {
 		for _, name := range result.Failures {
 			fmt.Fprintf(&b, "  %s\n", name)
 		}
+	}
+	for _, d := range result.Details {
+		fmt.Fprintf(&b, "\n%s\n  want: %s\n   got: %s\n", d.Name, d.Want, d.Got)
 	}
 	// stderr, so a passing package still shows the counts.
 	fmt.Fprint(os.Stderr, "\n"+b.String())
