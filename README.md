@@ -57,6 +57,8 @@ Go, C, C++, Rust, Bash, JavaScript, TypeScript and TSX.
 
 A grammar that ships a hand-written `scanner.c` needs that scanner ported by hand. No machine translation reads C well enough to do it. `grammars/*/scanner.go` is that port. The upstream corpus says whether it is right. TSX shares TypeScript's scanner, the way upstream compiles both from one header.
 
+`ts-translate` writes `parser.go` and `tables.zst` into each grammar, and both are COMMITTED. Derived output normally earns nothing by being committed. Here it is what makes the package work at all. A module carries no submodule and gets no generate step. So `go get` hands a consumer the C the tables come from, and no way to translate it. Ignoring them shipped a `Language()` that compiled and panicked. CI runs `go generate` and fails on a dirty tree. A committed table that no longer matches its submodule is therefore a red build, never a stale answer.
+
 ## The limit worth knowing
 
 A grammar reaches this runtime by way of `cmd/ts-translate`, which refuses an ABI outside the range `parser_core.go` accepts. A grammar outside that range fails the build rather than becoming a package that loads and parses nothing.
