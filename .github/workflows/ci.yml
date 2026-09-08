@@ -22,4 +22,4 @@ jobs:
       - uses: wow-look-at-my/go-toolchain@master
         with:
           # Approves the //go:generate directives; editing one fails the build with the new value.
-          generate: 30984773ec2a
+          generate: a52ff914534b

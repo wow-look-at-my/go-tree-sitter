@@ -11,6 +11,6 @@ import (
 // TestUpstreamCorpus runs tree-sitter-c's own test corpus. Every case is a
 // finding: none is deleted and none is skipped here.
 func TestUpstreamCorpus(t *testing.T) {
-	result := corpus.Run(t, clang.Language(), "testdata/tree-sitter-c/test/corpus")
+	result := corpus.Run(t, clang.Language(), "testdata/tree-sitter-c/test/corpus", "c")
 	assert.Zero(t, result.Failed, "corpus cases fail out of %d", result.Total())
 }
