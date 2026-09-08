@@ -1,0 +1,1287 @@
+{
+	"schema": 2,
+	"created": "2026-09-08T02:27:06.181949811Z",
+	"total_actions": 191,
+	"executed_actions": 191,
+	"wall_ms_total": 12131.205536999985,
+	"actions": [
+		{
+			"package": "github.com/wow-look-at-my/go-tree-sitter",
+			"mode": "test run",
+			"start": "2026-09-08T02:26:58.93209631Z",
+			"wall_ms": 6225.220149,
+			"cmd_real_ms": 6224.356761,
+			"cmd_user_ms": 2979.269,
+			"cmd_sys_ms": 963.643
+		},
+		{
+			"package": "runtime",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:56.607558637Z",
+			"wall_ms": 627.312746
+		},
+		{
+			"action_id": "OXPz1VKk2FRuLyAn2hCx",
+			"package": "github.com/wow-look-at-my/go-tree-sitter",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:58.262732299Z",
+			"wall_ms": 551.49989,
+			"cmd_real_ms": 498.413196,
+			"cmd_user_ms": 1036.446,
+			"cmd_sys_ms": 132.055
+		},
+		{
+			"package": "internal/unsafeheader",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:56.662472563Z",
+			"wall_ms": 413.218637
+		},
+		{
+			"package": "github.com/wow-look-at-my/go-tree-sitter",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:57.810700404Z",
+			"wall_ms": 413.132284
+		},
+		{
+			"package": "internal/goarch",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:56.661871461Z",
+			"wall_ms": 412.758122
+		},
+		{
+			"package": "math",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:56.66150816Z",
+			"wall_ms": 404.564842
+		},
+		{
+			"package": "internal/abi",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:56.255075611Z",
+			"wall_ms": 346.639582
+		},
+		{
+			"package": "internal/runtime/atomic",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:56.257499418Z",
+			"wall_ms": 343.905778
+		},
+		{
+			"package": "internal/runtime/syscall/linux",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:56.258387649Z",
+			"wall_ms": 342.902722
+		},
+		{
+			"package": "internal/bytealg",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:56.258487411Z",
+			"wall_ms": 342.815825
+		},
+		{
+			"package": "os",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:57.554454899Z",
+			"wall_ms": 207.932877
+		},
+		{
+			"package": "syscall",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:57.238417538Z",
+			"wall_ms": 165.884662
+		},
+		{
+			"package": "github.com/wow-look-at-my/go-tree-sitter",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:58.81443634Z",
+			"wall_ms": 117.649902,
+			"cmd_real_ms": 114.554618,
+			"cmd_user_ms": 142.084,
+			"cmd_sys_ms": 50.147
+		},
+		{
+			"package": "time",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:57.404339144Z",
+			"wall_ms": 89.238445
+		},
+		{
+			"package": "internal/syscall/unix",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:57.404365771Z",
+			"wall_ms": 89.100721
+		},
+		{
+			"package": "errors",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.289645644Z",
+			"wall_ms": 66.382857
+		},
+		{
+			"package": "strings",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:57.288965609Z",
+			"wall_ms": 66.038874
+		},
+		{
+			"package": "internal/fmtsort",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:57.289379228Z",
+			"wall_ms": 65.799301
+		},
+		{
+			"package": "internal/poll",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:57.493650534Z",
+			"wall_ms": 60.395106
+		},
+		{
+			"package": "internal/filepathlite",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:57.494993743Z",
+			"wall_ms": 59.422826
+		},
+		{
+			"package": "io/fs",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.495017391Z",
+			"wall_ms": 58.632657
+		},
+		{
+			"package": "unicode",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:56.606384064Z",
+			"wall_ms": 55.466217
+		},
+		{
+			"package": "cmp",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:56.607453045Z",
+			"wall_ms": 55.006505
+		},
+		{
+			"package": "unicode/utf8",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:56.606743457Z",
+			"wall_ms": 54.746263
+		},
+		{
+			"package": "path",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:57.23830256Z",
+			"wall_ms": 51.332924
+		},
+		{
+			"package": "reflect",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:57.238320524Z",
+			"wall_ms": 51.049072
+		},
+		{
+			"package": "bytes",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:57.238026043Z",
+			"wall_ms": 50.920337
+		},
+		{
+			"package": "fmt",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:57.762428531Z",
+			"wall_ms": 48.225218
+		},
+		{
+			"package": "strconv",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.356261905Z",
+			"wall_ms": 46.327059
+		},
+		{
+			"package": "slices",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.356308027Z",
+			"wall_ms": 46.268948
+		},
+		{
+			"package": "io",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.356031901Z",
+			"wall_ms": 45.578356
+		},
+		{
+			"package": "github.com/wow-look-at-my/go-tree-sitter",
+			"mode": "cover",
+			"start": "2026-09-08T02:26:58.223869522Z",
+			"wall_ms": 38.855263,
+			"cmd_real_ms": 37.32328,
+			"cmd_user_ms": 13.899,
+			"cmd_sys_ms": 32.432
+		},
+		{
+			"package": "internal/cpu",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:56.246519345Z",
+			"wall_ms": 11.961463
+		},
+		{
+			"package": "internal/cpu",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.066091798Z",
+			"wall_ms": 9.444045
+		},
+		{
+			"package": "internal/goarch",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:56.246432986Z",
+			"wall_ms": 8.62592
+		},
+		{
+			"package": "internal/byteorder",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:56.246532705Z",
+			"wall_ms": 8.551074
+		},
+		{
+			"package": "internal/unsafeheader",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:56.246486402Z",
+			"wall_ms": 8.459164
+		},
+		{
+			"package": "internal/runtime/exithook",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:56.601416564Z",
+			"wall_ms": 2.176497
+		},
+		{
+			"package": "internal/trace/tracev2",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:56.60542287Z",
+			"wall_ms": 2.128846
+		},
+		{
+			"package": "internal/runtime/gc",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:56.601728239Z",
+			"wall_ms": 1.954801
+		},
+		{
+			"package": "internal/strconv",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:56.602759986Z",
+			"wall_ms": 1.952215
+		},
+		{
+			"package": "iter",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:57.235004406Z",
+			"wall_ms": 1.818044
+		},
+		{
+			"package": "sync",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:57.234953246Z",
+			"wall_ms": 1.643814
+		},
+		{
+			"package": "slices",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:57.236829109Z",
+			"wall_ms": 1.582169
+		},
+		{
+			"package": "internal/runtime/maps",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:56.604938301Z",
+			"wall_ms": 1.440005
+		},
+		{
+			"package": "internal/runtime/gc/scan",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:56.603693004Z",
+			"wall_ms": 1.428552
+		},
+		{
+			"package": "runtime",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.235201924Z",
+			"wall_ms": 1.422224
+		},
+		{
+			"package": "math/bits",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:56.601321871Z",
+			"wall_ms": 1.416883
+		},
+		{
+			"package": "internal/reflectlite",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:57.234920913Z",
+			"wall_ms": 1.399732
+		},
+		{
+			"package": "bytes",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.401616331Z",
+			"wall_ms": 1.394009
+		},
+		{
+			"package": "io/fs",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:57.493632379Z",
+			"wall_ms": 1.302935
+		},
+		{
+			"package": "internal/coverage/rtcov",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:56.254957542Z",
+			"wall_ms": 1.299935
+		},
+		{
+			"package": "internal/goexperiment",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:56.256160475Z",
+			"wall_ms": 1.286567
+		},
+		{
+			"package": "internal/runtime/cgroup",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:56.604718246Z",
+			"wall_ms": 1.272997
+		},
+		{
+			"package": "internal/goos",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:56.256265387Z",
+			"wall_ms": 1.219341
+		},
+		{
+			"package": "internal/chacha8rand",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:56.601297019Z",
+			"wall_ms": 1.177672
+		},
+		{
+			"package": "internal/runtime/syscall/linux",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.076454262Z",
+			"wall_ms": 1.116453
+		},
+		{
+			"package": "strconv",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:57.23720994Z",
+			"wall_ms": 1.103797
+		},
+		{
+			"package": "internal/profilerecord",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.076077136Z",
+			"wall_ms": 1.096662
+		},
+		{
+			"package": "iter",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.355187536Z",
+			"wall_ms": 1.07267
+		},
+		{
+			"package": "internal/godebugs",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:56.255092462Z",
+			"wall_ms": 1.059103
+		},
+		{
+			"package": "internal/race",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:56.603600524Z",
+			"wall_ms": 1.014189
+		},
+		{
+			"package": "internal/testlog",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.355320737Z",
+			"wall_ms": 0.986239
+		},
+		{
+			"package": "internal/oserror",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:57.23725206Z",
+			"wall_ms": 0.979944
+		},
+		{
+			"package": "io",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:57.237051771Z",
+			"wall_ms": 0.962783
+		},
+		{
+			"package": "internal/sync",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:56.606544079Z",
+			"wall_ms": 0.902694
+		},
+		{
+			"package": "internal/profilerecord",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:56.257453854Z",
+			"wall_ms": 0.90072
+		},
+		{
+			"package": "sync/atomic",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:56.605675297Z",
+			"wall_ms": 0.862431
+		},
+		{
+			"package": "internal/msan",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.077874518Z",
+			"wall_ms": 0.843711
+		},
+		{
+			"package": "internal/msan",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:56.603541018Z",
+			"wall_ms": 0.813224
+		},
+		{
+			"package": "internal/runtime/pprof/label",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:56.604623939Z",
+			"wall_ms": 0.792146
+		},
+		{
+			"package": "sync/atomic",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.078990317Z",
+			"wall_ms": 0.75134
+		},
+		{
+			"package": "internal/runtime/gc/scan",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.077689124Z",
+			"wall_ms": 0.745082
+		},
+		{
+			"package": "internal/synctest",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:56.605998593Z",
+			"wall_ms": 0.738205
+		},
+		{
+			"package": "internal/filepathlite",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.554495636Z",
+			"wall_ms": 0.736167
+		},
+		{
+			"package": "time",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.493803176Z",
+			"wall_ms": 0.726828
+		},
+		{
+			"package": "unicode",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.079362331Z",
+			"wall_ms": 0.723217
+		},
+		{
+			"package": "errors",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:57.236331272Z",
+			"wall_ms": 0.712742
+		},
+		{
+			"package": "fmt",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.810729474Z",
+			"wall_ms": 0.693668
+		},
+		{
+			"package": "internal/syscall/execenv",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:57.404395397Z",
+			"wall_ms": 0.688999
+		},
+		{
+			"package": "internal/race",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.07801081Z",
+			"wall_ms": 0.677481
+		},
+		{
+			"package": "internal/runtime/pprof/label",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.078689414Z",
+			"wall_ms": 0.671754
+		},
+		{
+			"package": "math",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.080086886Z",
+			"wall_ms": 0.662762
+		},
+		{
+			"package": "internal/reflectlite",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.236626231Z",
+			"wall_ms": 0.623822
+		},
+		{
+			"package": "internal/testlog",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:57.236617926Z",
+			"wall_ms": 0.590527
+		},
+		{
+			"package": "internal/poll",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.554078688Z",
+			"wall_ms": 0.584923
+		},
+		{
+			"package": "internal/runtime/sys",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:56.602483374Z",
+			"wall_ms": 0.570493
+		},
+		{
+			"package": "os",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.762466295Z",
+			"wall_ms": 0.568906
+		},
+		{
+			"package": "internal/runtime/math",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:56.604361486Z",
+			"wall_ms": 0.566007
+		},
+		{
+			"package": "reflect",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.402741946Z",
+			"wall_ms": 0.551457
+		},
+		{
+			"package": "internal/stringslite",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:56.605128334Z",
+			"wall_ms": 0.53788
+		},
+		{
+			"package": "internal/oserror",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.402595317Z",
+			"wall_ms": 0.534678
+		},
+		{
+			"package": "path",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.403011726Z",
+			"wall_ms": 0.529796
+		},
+		{
+			"package": "internal/godebugs",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.075436705Z",
+			"wall_ms": 0.512942
+		},
+		{
+			"package": "internal/fmtsort",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.403295383Z",
+			"wall_ms": 0.499378
+		},
+		{
+			"package": "unicode/utf8",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.079593487Z",
+			"wall_ms": 0.482332
+		},
+		{
+			"package": "internal/asan",
+			"mode": "build check cache",
+			"start": "2026-09-08T02:26:56.60306455Z",
+			"wall_ms": 0.470497
+		},
+		{
+			"package": "syscall",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.404486885Z",
+			"wall_ms": 0.466502
+		},
+		{
+			"package": "internal/goos",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.075990935Z",
+			"wall_ms": 0.461342
+		},
+		{
+			"package": "internal/syscall/unix",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.493525248Z",
+			"wall_ms": 0.45969
+		},
+		{
+			"package": "internal/bytealg",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.075539149Z",
+			"wall_ms": 0.450254
+		},
+		{
+			"package": "internal/sync",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.079743129Z",
+			"wall_ms": 0.441099
+		},
+		{
+			"package": "internal/runtime/cgroup",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.077572272Z",
+			"wall_ms": 0.437363
+		},
+		{
+			"package": "internal/syscall/execenv",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.405113807Z",
+			"wall_ms": 0.430362
+		},
+		{
+			"package": "strings",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.403131392Z",
+			"wall_ms": 0.421366
+		},
+		{
+			"package": "internal/chacha8rand",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.075692484Z",
+			"wall_ms": 0.383728
+		},
+		{
+			"package": "internal/runtime/gc",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.077175183Z",
+			"wall_ms": 0.366213
+		},
+		{
+			"package": "internal/synctest",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.079241542Z",
+			"wall_ms": 0.351035
+		},
+		{
+			"package": "internal/runtime/exithook",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.077021096Z",
+			"wall_ms": 0.335962
+		},
+		{
+			"package": "internal/asan",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.077542572Z",
+			"wall_ms": 0.330947
+		},
+		{
+			"package": "internal/runtime/atomic",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.076229399Z",
+			"wall_ms": 0.330261
+		},
+		{
+			"package": "internal/runtime/sys",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.077358046Z",
+			"wall_ms": 0.329796
+		},
+		{
+			"package": "cmp",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.08007678Z",
+			"wall_ms": 0.322861
+		},
+		{
+			"package": "internal/abi",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.074636744Z",
+			"wall_ms": 0.30226
+		},
+		{
+			"package": "sync",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.3550172Z",
+			"wall_ms": 0.301807
+		},
+		{
+			"package": "internal/trace/tracev2",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.078949141Z",
+			"wall_ms": 0.291459
+		},
+		{
+			"package": "internal/coverage/rtcov",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.075157141Z",
+			"wall_ms": 0.278539
+		},
+		{
+			"package": "internal/runtime/math",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.078435395Z",
+			"wall_ms": 0.278282
+		},
+		{
+			"package": "internal/goexperiment",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.075950736Z",
+			"wall_ms": 0.27755
+		},
+		{
+			"package": "internal/runtime/maps",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.078719768Z",
+			"wall_ms": 0.269317
+		},
+		{
+			"mode": "write coverage meta-data file",
+			"start": "2026-09-08T02:26:58.814241065Z",
+			"wall_ms": 0.248853
+		},
+		{
+			"package": "internal/strconv",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.076774373Z",
+			"wall_ms": 0.245696
+		},
+		{
+			"package": "internal/stringslite",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.078715381Z",
+			"wall_ms": 0.232822
+		},
+		{
+			"package": "internal/byteorder",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.074941253Z",
+			"wall_ms": 0.214529
+		},
+		{
+			"package": "math/bits",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:57.076561138Z",
+			"wall_ms": 0.211606
+		},
+		{
+			"action_id": "xFxTSfRG8nrBXztDCJq9",
+			"package": "internal/profilerecord",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:56.258355963Z",
+			"wall_ms": 0.030694
+		},
+		{
+			"action_id": "lM6xXU-y0IkBj0JG-VD1",
+			"package": "internal/oserror",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:57.238275212Z",
+			"wall_ms": 0.026488
+		},
+		{
+			"action_id": "eBk6E8XLTPNCZfqbzklF",
+			"package": "math/bits",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:56.602740485Z",
+			"wall_ms": 0.017468
+		},
+		{
+			"action_id": "5cp49hSSDsuCwaA70BJ7",
+			"package": "sync",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:57.23659938Z",
+			"wall_ms": 0.017309
+		},
+		{
+			"action_id": "V_YW8xILGGc4x0s7BmQ7",
+			"package": "unicode",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:56.66185258Z",
+			"wall_ms": 0.016892
+		},
+		{
+			"action_id": "AFGSb7pioBrefD8UItA_",
+			"package": "io/fs",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:57.494960621Z",
+			"wall_ms": 0.015768
+		},
+		{
+			"action_id": "wXiPU28aQsTTSl5_ljOK",
+			"package": "fmt",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:57.810683615Z",
+			"wall_ms": 0.01373
+		},
+		{
+			"action_id": "Upk831umH3b13bqU4eeM",
+			"package": "syscall",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:57.404324856Z",
+			"wall_ms": 0.012124
+		},
+		{
+			"action_id": "XjvqIZgILiIGLfA0Vnjz",
+			"package": "internal/goos",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:56.257486451Z",
+			"wall_ms": 0.01187
+		},
+		{
+			"action_id": "HpitriQ6IBnfzRssjixn",
+			"package": "math",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:57.066079574Z",
+			"wall_ms": 0.011037
+		},
+		{
+			"action_id": "QY-dO2D6evvjUKUgr08-",
+			"package": "time",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:57.493605584Z",
+			"wall_ms": 0.010555
+		},
+		{
+			"action_id": "kQfEx0YURMOSTceLsaZh",
+			"package": "internal/syscall/unix",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:57.493496038Z",
+			"wall_ms": 0.009964
+		},
+		{
+			"action_id": "Z5meUtuNzaBo2NMq_auu",
+			"package": "unicode/utf8",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:56.661496607Z",
+			"wall_ms": 0.009957
+		},
+		{
+			"action_id": "SEMJ0-NC04nSF7bKtN2M",
+			"package": "internal/abi",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:56.601717237Z",
+			"wall_ms": 0.009658
+		},
+		{
+			"action_id": "HDbEXMM5rs148QtTkOza",
+			"package": "io",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:57.238015922Z",
+			"wall_ms": 0.008818
+		},
+		{
+			"action_id": "wAPKR-zf0ADa8kYf72A7",
+			"package": "internal/bytealg",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:56.60130645Z",
+			"wall_ms": 0.008803
+		},
+		{
+			"action_id": "9tJdCJhWz_vz8eI0dfIl",
+			"package": "internal/filepathlite",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:57.554443921Z",
+			"wall_ms": 0.008573
+		},
+		{
+			"action_id": "FLWaozL8GYobNZEoQfG3",
+			"package": "internal/runtime/math",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:56.604928972Z",
+			"wall_ms": 0.008487
+		},
+		{
+			"action_id": "XrPaOAUA7_iwCY65TQ2-",
+			"package": "internal/runtime/sys",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:56.603055481Z",
+			"wall_ms": 0.008278
+		},
+		{
+			"action_id": "NqI_lfXKoIvCrHbrOhGH",
+			"package": "runtime",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:57.234908655Z",
+			"wall_ms": 0.008146
+		},
+		{
+			"action_id": "br82r9kcwreOqf5F8IsO",
+			"package": "bytes",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:57.288950799Z",
+			"wall_ms": 0.00814
+		},
+		{
+			"action_id": "aNMLrX8AiSW5Ur60lrsn",
+			"package": "os",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:57.762417934Z",
+			"wall_ms": 0.007792
+		},
+		{
+			"action_id": "6Y8I1Zma1RUx03JQOQgI",
+			"package": "internal/runtime/atomic",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:56.601407498Z",
+			"wall_ms": 0.007784
+		},
+		{
+			"action_id": "84v9eXpl-3xmd3Rssu6o",
+			"package": "path",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:57.289637238Z",
+			"wall_ms": 0.007784
+		},
+		{
+			"action_id": "CZdqAZYdHs9ooPa1FLGO",
+			"package": "internal/reflectlite",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:57.236322768Z",
+			"wall_ms": 0.007709
+		},
+		{
+			"action_id": "rVXpQNywRPerd47UsP5-",
+			"package": "internal/unsafeheader",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:56.254949252Z",
+			"wall_ms": 0.007433
+		},
+		{
+			"action_id": "c_g0xXExmuX7lWJxaLoi",
+			"package": "internal/poll",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:57.554069962Z",
+			"wall_ms": 0.007409
+		},
+		{
+			"action_id": "dHf-21uBxvvoRoA0tJac",
+			"package": "internal/stringslite",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:56.605667711Z",
+			"wall_ms": 0.00699
+		},
+		{
+			"action_id": "KbFjNKRK4t-SmbTzScj4",
+			"package": "internal/race",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:56.60461638Z",
+			"wall_ms": 0.006916
+		},
+		{
+			"action_id": "7ZFiy9QkGok3im_f7a81",
+			"package": "reflect",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:57.289371611Z",
+			"wall_ms": 0.006677
+		},
+		{
+			"action_id": "O0-gHrj53T54pZoQLmZM",
+			"package": "internal/runtime/gc",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:56.603685229Z",
+			"wall_ms": 0.006592
+		},
+		{
+			"action_id": "RvC8FRuIxeR7OpKTe22P",
+			"package": "internal/coverage/rtcov",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:56.256258346Z",
+			"wall_ms": 0.006503
+		},
+		{
+			"action_id": "Pr40H6-EZZEmJY7t05rK",
+			"package": "internal/goarch",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:56.255061616Z",
+			"wall_ms": 0.006354
+		},
+		{
+			"action_id": "2FOWataNGT8RvZ53aS6W",
+			"package": "internal/godebugs",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:56.256153264Z",
+			"wall_ms": 0.006255
+		},
+		{
+			"action_id": "z9lZ6WZySO7kFxJMm7at",
+			"package": "strings",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:57.355010309Z",
+			"wall_ms": 0.006033
+		},
+		{
+			"action_id": "a6zj3q2q7136wUsxs_uR",
+			"package": "cmp",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:56.662461647Z",
+			"wall_ms": 0.005941
+		},
+		{
+			"action_id": "HmP-4m8U128tPfI2PumJ",
+			"package": "internal/fmtsort",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:57.355181159Z",
+			"wall_ms": 0.005632
+		},
+		{
+			"action_id": "GyO2hDvDyZFEnDOmd6w5",
+			"package": "internal/byteorder",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:56.255085869Z",
+			"wall_ms": 0.00549
+		},
+		{
+			"action_id": "cNQhrikDGJJZ7jAcqnnU",
+			"package": "internal/chacha8rand",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:56.60247727Z",
+			"wall_ms": 0.005361
+		},
+		{
+			"package": "github.com/wow-look-at-my/go-tree-sitter",
+			"mode": "test print",
+			"start": "2026-09-08T02:27:05.157344838Z",
+			"wall_ms": 0.005355
+		},
+		{
+			"action_id": "Wb91H1vBo60lqyyIJiiU",
+			"package": "internal/syscall/execenv",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:57.405107323Z",
+			"wall_ms": 0.005349
+		},
+		{
+			"action_id": "tHZ8Q4ChUyEk7DrO9t8J",
+			"package": "internal/runtime/cgroup",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:56.605992695Z",
+			"wall_ms": 0.005132
+		},
+		{
+			"action_id": "ZCEXrGrlIRh2HTFToeJe",
+			"package": "internal/runtime/exithook",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:56.603594749Z",
+			"wall_ms": 0.005003
+		},
+		{
+			"action_id": "wYq6F42qEy2IOhFavm1K",
+			"package": "internal/testlog",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:57.28896Z",
+			"wall_ms": 0.004876
+		},
+		{
+			"action_id": "f-tcfnTbPZl0Ahr74zgm",
+			"package": "internal/msan",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:56.60435589Z",
+			"wall_ms": 0.004857
+		},
+		{
+			"action_id": "e8FnoinWdUKGLCb_iWGZ",
+			"package": "internal/synctest",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:56.606738088Z",
+			"wall_ms": 0.004746
+		},
+		{
+			"action_id": "Z69GeYlp22q6r6ZvVTaI",
+			"package": "internal/trace/tracev2",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:56.607553112Z",
+			"wall_ms": 0.004601
+		},
+		{
+			"action_id": "3S0Yo0bqEg_INEPZz9JN",
+			"package": "internal/runtime/gc/scan",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:56.605123175Z",
+			"wall_ms": 0.004471
+		},
+		{
+			"action_id": "WzhKg4uRna3J4X6Fao6a",
+			"package": "strconv",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:57.238315342Z",
+			"wall_ms": 0.004464
+		},
+		{
+			"action_id": "hICwd7Or6intqhWgxEg-",
+			"package": "internal/strconv",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:56.604712953Z",
+			"wall_ms": 0.004441
+		},
+		{
+			"action_id": "W0CoIPfJINQI8FU1J9g4",
+			"package": "internal/goexperiment",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:56.257448571Z",
+			"wall_ms": 0.004418
+		},
+		{
+			"action_id": "0R5om8N-6j9IVnUs_jhV",
+			"package": "errors",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:57.237045458Z",
+			"wall_ms": 0.004338
+		},
+		{
+			"action_id": "bQl6Nmmq6h0rczUz789L",
+			"package": "internal/runtime/pprof/label",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:56.605417829Z",
+			"wall_ms": 0.004224
+		},
+		{
+			"action_id": "cBn0xRbEvRoIY-wm5VG5",
+			"package": "iter",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:57.23682358Z",
+			"wall_ms": 0.004217
+		},
+		{
+			"action_id": "M2qi4u6J3JuPb9G0iah8",
+			"package": "internal/sync",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:56.607448415Z",
+			"wall_ms": 0.004169
+		},
+		{
+			"action_id": "anXkrrQ0liVz7ThihbSN",
+			"package": "sync/atomic",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:56.606539237Z",
+			"wall_ms": 0.003962
+		},
+		{
+			"action_id": "7w1sUD-zQh-f5JDQqrCM",
+			"package": "slices",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:57.238412859Z",
+			"wall_ms": 0.003882
+		},
+		{
+			"action_id": "uX3-Oy90yPrtYQPV9PKl",
+			"package": "internal/cpu",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:56.258482353Z",
+			"wall_ms": 0.003723
+		},
+		{
+			"action_id": "Fy4dSARPF5xIj-NkRQIm",
+			"package": "internal/runtime/syscall/linux",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:56.601317036Z",
+			"wall_ms": 0.003603
+		},
+		{
+			"action_id": "amowh42b60zmXJvPOmI0",
+			"package": "internal/runtime/maps",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:56.606379815Z",
+			"wall_ms": 0.003567
+		},
+		{
+			"action_id": "olMEav1v_oj_XIZQ8uNb",
+			"package": "internal/asan",
+			"mode": "build",
+			"need_build": true,
+			"start": "2026-09-08T02:26:56.603536401Z",
+			"wall_ms": 0.00347
+		},
+		{
+			"mode": "go test",
+			"start": "2026-09-08T02:27:05.157351882Z",
+			"wall_ms": 0.000791
+		},
+		{
+			"package": "unsafe",
+			"mode": "built-in package",
+			"need_build": true,
+			"start": "2026-09-08T02:26:56.246481906Z",
+			"wall_ms": 0.000225
+		},
+		{
+			"mode": "test barrier",
+			"start": "2026-09-08T02:26:58.932094198Z",
+			"wall_ms": 0.000128
+		},
+		{
+			"package": "unsafe",
+			"mode": "vet",
+			"start": "2026-09-08T02:26:56.662469002Z",
+			"wall_ms": 0.00009
+		}
+	]
+}
