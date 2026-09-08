@@ -74,10 +74,19 @@ func (s *bashScanner) scanHead(lexer *ts.Lexer, valid []bool) (bool, bool, int) 
 	} else if entry != entryTop {
 		return false, false, entry
 	}
+	// The variable name block comes first, and it returns or jumps whenever its
+	// guard holds. A bare dollar is therefore only reachable when that guard
+	// fails, which is what keeps $$ a special variable rather than a bare
+	// dollar that swallows the second character.
+	if done, result, entry := s.scanVariableName(lexer, valid); done {
+		return true, result, entryTop
+	} else if entry != entryTop {
+		return false, false, entry
+	}
 	if valid[bareDollar] && !inErrorRecovery(valid) && scanBareDollar(lexer) {
 		return true, true, entryTop
 	}
-	return s.scanVariableName(lexer, valid)
+	return false, false, entryTop
 }
 
 func (s *bashScanner) scanConcat(lexer *ts.Lexer, valid []bool) (bool, bool) {
