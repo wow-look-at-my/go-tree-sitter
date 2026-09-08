@@ -59,9 +59,8 @@ func subtreeEdit(self subtree, inputEdit InputEdit) subtree {
 		}
 
 		result := subtreeMakeMut(*entry.tree)
-		subtreeSetPadding(result, padding)
-		subtreeSetSize(result, size)
-		subtreeSetHasChanges(result, true)
+		subtreeResize(&result, padding, size, lookaheadBytes)
+		subtreeSetHasChanges(&result, true)
 		*entry.tree = result
 
 		var childLeft, childRight length

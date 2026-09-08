@@ -75,120 +75,33 @@ type subtreeData struct {
 // compiles and faults only when it meets a leaf that is not on the heap. A
 // named field makes the compiler list the work instead.
 type subtree struct {
-	heap *subtreeData
+	heap   *subtreeData
+	inline subtreeInline
 }
 
 func heapSubtree(data *subtreeData) subtree { return subtree{heap: data} }
 
 // isNil reports the null subtree, which callers used to spell as a nil pointer.
-func (s subtree) isNil() bool { return s.heap == nil }
+// An inline leaf holds no pointer either, so the flag is what separates them.
+func (s subtree) isNil() bool { return s.heap == nil && !s.isInline() }
 
-func subtreeChildCount(self subtree) uint32 {
-	if self.isNil() {
-		return 0
-	}
-	return uint32(len(self.heap.children))
-}
-
-func subtreeChildren(self subtree) []subtree { return self.heap.children }
-
-func subtreeSymbol(self subtree) Symbol         { return self.heap.symbol }
-func subtreeVisible(self subtree) bool          { return self.heap.visible }
-func subtreeNamed(self subtree) bool            { return self.heap.named }
-func subtreeExtra(self subtree) bool            { return self.heap.extra }
-func subtreeHasChanges(self subtree) bool       { return self.heap.hasChanges }
-func subtreeMissing(self subtree) bool          { return self.heap.isMissing }
-func subtreeIsKeyword(self subtree) bool        { return self.heap.isKeyword }
-func subtreeParseState(self subtree) StateID    { return self.heap.parseState }
-func subtreeLookaheadBytes(self subtree) uint32 { return self.heap.lookaheadBytes }
-func subtreeLookaheadChar(self subtree) int32   { return self.heap.lookaheadChar }
-func subtreeRefCount(self subtree) uint32       { return self.heap.refCount }
-
-func subtreeVisibleChildCount(self subtree) uint32 { return self.heap.visibleChildCount }
-func subtreeNamedChildCount(self subtree) uint32   { return self.heap.namedChildCount }
-func subtreeProductionID(self subtree) uint16      { return self.heap.productionID }
-
-func subtreeSetHasChanges(self subtree, v bool)         { self.heap.hasChanges = v }
-func subtreeSetExtra(self subtree, v bool)              { self.heap.extra = v }
-func subtreeSetFragileLeft(self subtree, v bool)        { self.heap.fragileLeft = v }
-func subtreeSetFragileRight(self subtree, v bool)       { self.heap.fragileRight = v }
-func subtreeSetParseState(self subtree, s StateID)      { self.heap.parseState = s }
-func subtreeAddDynamicPrecedence(self subtree, d int32) { self.heap.dynamicPrecedence += d }
-func subtreeSetPadding(self subtree, l length)          { self.heap.padding = l }
-func subtreeSetSize(self subtree, l length)             { self.heap.size = l }
-
-func subtreeLeafSymbol(self subtree) Symbol {
-	if len(self.heap.children) == 0 {
-		return self.heap.symbol
-	}
-	return self.heap.firstLeafSymbol
-}
-
-func subtreeLeafParseState(self subtree) StateID {
-	if len(self.heap.children) == 0 {
-		return self.heap.parseState
-	}
-	return self.heap.firstLeafParseState
-}
-
-func subtreePadding(self subtree) length   { return self.heap.padding }
-func subtreeSize(self subtree) length      { return self.heap.size }
-func subtreeTotalSize(self subtree) length { return lengthAdd(self.heap.padding, self.heap.size) }
-func subtreeTotalBytes(self subtree) uint32 {
-	return subtreeTotalSize(self).Bytes
-}
-
-func subtreeRepeatDepth(self subtree) uint32 { return uint32(self.heap.repeatDepth) }
-
-func subtreeVisibleDescendantCount(self subtree) uint32 {
-	if len(self.heap.children) == 0 {
-		return 0
-	}
-	return self.heap.visibleDescendantCount
-}
-
-func subtreeErrorCost(self subtree) uint32 {
-	if self.heap.isMissing {
-		return errorCostPerMissingTree + errorCostPerRecovery
-	}
-	return self.heap.errorCost
-}
-
-func subtreeDynamicPrecedence(self subtree) int32 {
-	if len(self.heap.children) == 0 {
-		return 0
-	}
-	return self.heap.dynamicPrecedence
-}
-
-func subtreeFragileLeft(self subtree) bool  { return self.heap.fragileLeft }
-func subtreeFragileRight(self subtree) bool { return self.heap.fragileRight }
-func subtreeHasExternalTokens(self subtree) bool {
-	return self.heap.hasExternalTokens
-}
-
-func subtreeHasExternalScannerStateChange(self subtree) bool {
-	return self.heap.hasExternalScannerStateChange
-}
-
-func subtreeDependsOnColumn(self subtree) bool { return self.heap.dependsOnColumn }
-
-func subtreeIsFragile(self subtree) bool {
-	return self.heap.fragileLeft || self.heap.fragileRight
-}
-
-func subtreeIsError(self subtree) bool { return self.heap.symbol == BuiltinSymError }
-func subtreeIsEOF(self subtree) bool   { return self.heap.symbol == BuiltinSymEnd }
+// These write a field that exists only on the heap arm, so they take that arm:
+// an inline leaf has no fragility, no precedence and no state to set, and a
+// setter that quietly did nothing for one would be worse than a compile error.
+func subtreeSetFragileLeft(self *subtreeData, v bool)        { self.fragileLeft = v }
+func subtreeSetFragileRight(self *subtreeData, v bool)       { self.fragileRight = v }
+func subtreeSetParseState(self *subtreeData, s StateID)      { self.parseState = s }
+func subtreeAddDynamicPrecedence(self *subtreeData, d int32) { self.dynamicPrecedence += d }
 
 func subtreeRetain(self subtree) {
-	if self.isNil() {
+	if self.isNil() || self.isInline() {
 		return
 	}
 	self.heap.refCount++
 }
 
 func subtreeRelease(self subtree) {
-	if self.isNil() {
+	if self.isNil() || self.isInline() {
 		return
 	}
 	var stack []*subtreeData
@@ -200,6 +113,9 @@ func subtreeRelease(self subtree) {
 		tree := stack[len(stack)-1]
 		stack = stack[:len(stack)-1]
 		for _, child := range tree.children {
+			if child.isInline() {
+				continue
+			}
 			child.heap.refCount--
 			if child.heap.refCount == 0 {
 				stack = append(stack, child.heap)
@@ -223,8 +139,10 @@ func subtreeClone(self subtree) subtree {
 	return heapSubtree(result)
 }
 
+// subtreeMakeMut hands back a subtree the caller may write to. An inline leaf
+// is held by value, so the caller's copy already is one.
 func subtreeMakeMut(self subtree) subtree {
-	if self.heap.refCount == 1 {
+	if self.isInline() || self.heap.refCount == 1 {
 		return self
 	}
 	result := subtreeClone(self)
@@ -275,6 +193,23 @@ func newLeafSubtree(
 ) subtree {
 	metadata := language.symbolMetadata(symbol)
 	extra := symbol == BuiltinSymEnd
+
+	// A leaf rides in the parent's child array when it fits, which is most of
+	// them. An external token never does: its scanner state lives on the heap
+	// and callers take a pointer into it.
+	//
+	// The column-dependence exclusion is this port's, not upstream's. The
+	// inline arm has nowhere to keep that flag, so upstream reads it back as
+	// false for any leaf it inlines. Keeping such a leaf on the heap costs a
+	// few tokens per parse and keeps the flag answerable.
+	if symbol <= maxInlineLength && !hasExternalTokens && !dependsOnColumn &&
+		canInline(padding, size, lookaheadBytes) {
+		return inlineLeaf(
+			symbol, padding, size, lookaheadBytes, parseState,
+			metadata.Visible, metadata.Named, extra, isKeyword,
+		)
+	}
+
 	return heapSubtree(&subtreeData{
 		refCount:          1,
 		padding:           padding,
@@ -291,8 +226,29 @@ func newLeafSubtree(
 	})
 }
 
-func subtreeSetSymbol(self subtree, symbol Symbol, language *Language) {
+// subtreeSetSymbol rewrites a leaf's symbol. An inline leaf holds the symbol in
+// a byte, so a wider symbol moves it to the heap rather than truncating.
+func subtreeSetSymbol(self *subtree, symbol Symbol, language *Language) {
 	metadata := language.symbolMetadata(symbol)
+	if self.isInline() {
+		if symbol <= maxInlineLength {
+			self.inline.symbol = uint8(symbol)
+			self.inline.setFlag(flagNamed, metadata.Named)
+			self.inline.setFlag(flagVisible, metadata.Visible)
+			return
+		}
+		*self = heapSubtree(&subtreeData{
+			refCount:       1,
+			padding:        subtreePadding(*self),
+			size:           subtreeSize(*self),
+			lookaheadBytes: subtreeLookaheadBytes(*self),
+			parseState:     self.inline.parseState,
+			extra:          self.flag(flagExtra),
+			hasChanges:     self.flag(flagHasChanges),
+			isMissing:      self.flag(flagIsMissing),
+			isKeyword:      self.flag(flagIsKeyword),
+		})
+	}
 	self.heap.symbol = symbol
 	self.heap.named = metadata.Named
 	self.heap.visible = metadata.Visible
@@ -469,7 +425,11 @@ func newMissingLeafSubtree(
 		symbol, padding, lengthZero(), lookaheadBytes, state,
 		false, false, false, language,
 	)
-	result.heap.isMissing = true
+	if result.isInline() {
+		result.inline.setFlag(flagIsMissing, true)
+	} else {
+		result.heap.isMissing = true
+	}
 	return result
 }
 
@@ -560,7 +520,8 @@ func subtreeLastExternalToken(tree subtree) subtree {
 var emptyScannerState externalScannerState
 
 func subtreeExternalScannerState(self subtree) *externalScannerState {
-	if !self.isNil() && self.heap.hasExternalTokens && len(self.heap.children) == 0 {
+	if !self.isNil() && !self.isInline() &&
+		self.heap.hasExternalTokens && len(self.heap.children) == 0 {
 		return &self.heap.scannerState
 	}
 	return &emptyScannerState

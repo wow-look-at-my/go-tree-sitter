@@ -118,7 +118,7 @@ func (p *Parser) advance(version stackVersion, allowNodeReuse bool) bool {
 			p.language.tableEntry(state, p.language.KeywordCaptureToken, &entry)
 			if entry.actionCount > 0 {
 				mutableLookahead := subtreeMakeMut(lookahead)
-				subtreeSetSymbol(mutableLookahead, p.language.KeywordCaptureToken, p.language)
+				subtreeSetSymbol(&mutableLookahead, p.language.KeywordCaptureToken, p.language)
 				lookahead = mutableLookahead
 				continue
 			}

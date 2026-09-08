@@ -145,7 +145,7 @@ func (p *Parser) recover(version stackVersion, lookahead subtree) {
 	if n := len(actions); n > 0 && actions[n-1].Action.Type == ParseActionTypeShift &&
 		actions[n-1].Action.Extra {
 		mutableLookahead := subtreeMakeMut(lookahead)
-		subtreeSetExtra(mutableLookahead, true)
+		subtreeSetExtra(&mutableLookahead, true)
 		lookahead = mutableLookahead
 	}
 

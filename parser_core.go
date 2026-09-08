@@ -477,7 +477,7 @@ func (p *Parser) shift(version stackVersion, state StateID, lookahead subtree, e
 	subtreeToPush := lookahead
 	if extra != subtreeExtra(lookahead) && isLeaf {
 		result := subtreeMakeMut(lookahead)
-		subtreeSetExtra(result, extra)
+		subtreeSetExtra(&result, extra)
 		subtreeToPush = result
 	}
 

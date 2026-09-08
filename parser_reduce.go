@@ -58,16 +58,16 @@ func (p *Parser) reduce(
 		state := p.stack.state(sliceVersion)
 		nextState := p.language.nextState(state, symbol)
 		if endOfNonTerminalExtra && nextState == state {
-			subtreeSetExtra(parent, true)
+			subtreeSetExtra(&parent, true)
 		}
 		if isFragile || len(pop) > 1 || initialVersionCount > 1 {
-			subtreeSetFragileLeft(parent, true)
-			subtreeSetFragileRight(parent, true)
-			subtreeSetParseState(parent, treeStateNone)
+			subtreeSetFragileLeft(parent.heap, true)
+			subtreeSetFragileRight(parent.heap, true)
+			subtreeSetParseState(parent.heap, treeStateNone)
 		} else {
-			subtreeSetParseState(parent, state)
+			subtreeSetParseState(parent.heap, state)
 		}
-		subtreeAddDynamicPrecedence(parent, dynamicPrecedence)
+		subtreeAddDynamicPrecedence(parent.heap, dynamicPrecedence)
 
 		p.stack.push(sliceVersion, parent, false, nextState)
 		for _, extra := range p.trailingExtras {
