@@ -11604,6 +11604,7 @@ nextState:
 start:
 	skip = false
 	lookahead = lexer.Lookahead
+	eof = lexer.EOF()
 	switch state {
 	case 0:
 		if eof {
@@ -13913,6 +13914,7 @@ nextState:
 start:
 	skip = false
 	lookahead = lexer.Lookahead
+	eof = lexer.EOF()
 	switch state {
 	case 0:
 		switch lookahead {

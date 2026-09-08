@@ -47,11 +47,11 @@ func TestDecodeUTF8RejectsIllFormedSequences(t *testing.T) {
 
 func TestDecodeUTF16ReadsBothByteOrders(t *testing.T) {
 	value, size := DecodeUTF16LE([]byte{0x41, 0x00})
-	assert.Equal(t, int32('A'), value)
+	assert.Equal(t, 'A', value)
 	assert.Equal(t, uint32(2), size)
 
 	value, size = DecodeUTF16BE([]byte{0x00, 0x41})
-	assert.Equal(t, int32('A'), value)
+	assert.Equal(t, 'A', value)
 	assert.Equal(t, uint32(2), size)
 
 	value, size = DecodeUTF16LE([]byte{0x3D, 0xD8, 0x00, 0xDE})
