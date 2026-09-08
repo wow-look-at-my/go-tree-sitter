@@ -9,7 +9,7 @@ import (
 	ts "github.com/wow-look-at-my/go-tree-sitter"
 )
 
-// Result counts one corpus run.
+// Result counts the outcome of a corpus run.
 type Result struct {
 	// Passed is the number of cases whose tree matched.
 	Passed int

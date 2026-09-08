@@ -11,6 +11,7 @@ import (
 	"os/exec"
 	"path/filepath"
 	"strings"
+	"text/template"
 )
 
 func main() {
@@ -66,16 +67,30 @@ func headCommit(repo string) (string, error) {
 	return strings.TrimSpace(string(out)), nil
 }
 
+var noticeTemplate = template.Must(template.New("notice").Parse(
+	`# Vendored test corpus
+
+Source: {{.Remote}}
+Commit: {{.Commit}}
+
+These files are copied without modification from the upstream grammar's
+` + "`test/corpus/`" + ` directory. Do not edit them by hand. Regenerate them with
+` + "`ts-vendor`" + `.
+
+Files:
+
+{{range .Names}}- {{.}}
+{{end}}`))
+
 func writeNotice(dest, remote, commit string, names []string) error {
 	var b strings.Builder
-	b.WriteString("# Vendored test corpus\n\n")
-	fmt.Fprintf(&b, "Source: %s\n", remote)
-	fmt.Fprintf(&b, "Commit: %s\n\n", commit)
-	b.WriteString("These files are copied without modification from the upstream\n")
-	b.WriteString("grammar's `test/corpus/` directory. Do not edit them by hand.\n")
-	b.WriteString("Regenerate with `ts-vendor`.\n\nFiles:\n\n")
-	for _, name := range names {
-		fmt.Fprintf(&b, "- %s\n", name)
+	data := struct {
+		Remote string
+		Commit string
+		Names  []string
+	}{remote, commit, names}
+	if err := noticeTemplate.Execute(&b, data); err != nil {
+		return err
 	}
 	return os.WriteFile(filepath.Join(dest, "NOTICE.md"), []byte(b.String()), 0o644)
 }

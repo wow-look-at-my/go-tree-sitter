@@ -35,10 +35,10 @@ func TestLexerWalksToTheEndOfInput(t *testing.T) {
 	lexer := newTestLexer("ab")
 	lexer.start()
 	assert.False(t, lexer.EOF())
-	assert.Equal(t, int32('a'), lexer.Lookahead)
+	assert.Equal(t, 'a', lexer.Lookahead)
 
 	lexer.Advance(false)
-	assert.Equal(t, int32('b'), lexer.Lookahead)
+	assert.Equal(t, 'b', lexer.Lookahead)
 	lexer.MarkEnd()
 	assert.Equal(t, uint32(1), lexer.tokenEndPosition.Bytes)
 
@@ -63,7 +63,7 @@ func TestLexerDecodesMultipleByteCharacters(t *testing.T) {
 func TestLexerSkipsAByteOrderMark(t *testing.T) {
 	lexer := newTestLexer(string([]byte{0xEF, 0xBB, 0xBF}) + "hi")
 	lexer.start()
-	assert.Equal(t, int32('h'), lexer.Lookahead)
+	assert.Equal(t, 'h', lexer.Lookahead)
 	assert.Equal(t, uint32(0), lexer.GetColumn())
 }
 
@@ -80,7 +80,7 @@ func TestLexerHonoursIncludedRanges(t *testing.T) {
 	}
 	assert.Equal(t, uint32(11), lexer.currentPosition.Bytes)
 	assert.True(t, lexer.IsAtIncludedRangeStart())
-	assert.Equal(t, int32('g'), lexer.Lookahead)
+	assert.Equal(t, 'g', lexer.Lookahead)
 
 	lexer.MarkEnd()
 	assert.Equal(t, uint32(5), lexer.tokenEndPosition.Bytes)

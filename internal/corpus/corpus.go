@@ -13,7 +13,7 @@ import (
 // Expectation says what a case demands of the parse.
 type Expectation int
 
-// The three expectations a case header can declare.
+// The expectations a case header can declare.
 const (
 	// ExpectPass compares the rendered tree against the expected tree.
 	ExpectPass Expectation = iota
@@ -23,7 +23,7 @@ const (
 	ExpectError
 )
 
-// Case is one corpus entry: a source text and the tree it must produce.
+// Case is a corpus entry: a source text and the tree it must produce.
 type Case struct {
 	// Name is the header text.
 	Name string
@@ -31,7 +31,7 @@ type Case struct {
 	File string
 	// Input is the source text, with its trailing newline removed.
 	Input []byte
-	// Output is the expected tree, normalized to one line.
+	// Output is the expected tree, normalized onto a single line.
 	Output string
 	// HasFields is true when the expected tree names field names.
 	HasFields bool
@@ -58,7 +58,7 @@ func ReadDir(dir string) ([]Case, error) {
 	return cases, nil
 }
 
-// Parse reads one corpus file.
+// Parse reads a corpus file.
 func Parse(file, content string) []Case {
 	lines := splitInclusive(content)
 	first, found := firstSuffix(lines)
@@ -114,8 +114,8 @@ func firstSuffix(lines []string) (suffix string, found bool) {
 	return "", false
 }
 
-// parseDelimiterLine reports whether a line opens with three or more copies of
-// c, and returns the text after them.
+// parseDelimiterLine reports whether a line opens with a long enough run of c,
+// and returns the text after that run.
 func parseDelimiterLine(line string, c byte) (delimLen int, suffix string, ok bool) {
 	for delimLen < len(line) && line[delimLen] == c {
 		delimLen++
@@ -141,7 +141,7 @@ type header struct {
 }
 
 // parseHeader reads a header block that starts at lines[start], and returns the
-// index of the first body line.
+// index where the body begins.
 func parseHeader(lines []string, first string, firstFound bool, start int) (*header, int) {
 	_, suffix, ok := parseDelimiterLine(lines[start], '=')
 	if !ok || !suffixMatches(first, firstFound, suffix) {
@@ -219,7 +219,7 @@ func attributeArgument(trimmed, key string) (string, bool) {
 	return inner, ok
 }
 
-// buildCase splits one body on its longest --- divider.
+// buildCase splits a body on its longest --- divider.
 func buildCase(body []string, first string, firstFound bool, h *header, file string) (Case, bool) {
 	dividerLine, bestTotal, found := 0, 0, false
 	for j, line := range body {
@@ -253,8 +253,8 @@ func buildCase(body []string, first string, firstFound bool, h *header, file str
 	}, true
 }
 
-// NormalizeSexp collapses an expected tree onto one line and reports whether it
-// names any field.
+// NormalizeSexp collapses an expected tree onto a single line and reports
+// whether it names any field.
 func NormalizeSexp(raw string) (string, bool) {
 	var result []byte
 	prevWasSpace := false
