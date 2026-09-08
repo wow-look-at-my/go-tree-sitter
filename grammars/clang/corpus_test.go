@@ -3,6 +3,7 @@ package clang_test
 import (
 	"testing"
 
+	"github.com/stretchr/testify/assert"
 	"github.com/wow-look-at-my/go-tree-sitter/grammars/clang"
 	"github.com/wow-look-at-my/go-tree-sitter/internal/corpus"
 )
@@ -11,7 +12,6 @@ import (
 // finding: none is deleted and none is skipped here.
 func TestUpstreamCorpus(t *testing.T) {
 	result := corpus.Run(t, clang.Language(), "testdata/corpus")
-	if result.Failed > 0 {
-		t.Errorf("%d of %d upstream corpus cases fail", result.Failed, result.Total())
-	}
+	assert.LessOrEqual(t, result.Failed, 0)
+
 }
