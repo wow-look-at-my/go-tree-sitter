@@ -6,22 +6,16 @@ import (
 	ts "github.com/wow-look-at-my/go-tree-sitter"
 )
 
-// This file is a hand port of tree-sitter-cpp's src/scanner.c. It recognizes
-// the two tokens the parse table cannot: the delimiter and the content of a
-// raw string literal, R"delim(content)delim".
-
-// The C++ standard caps a raw string delimiter at this many characters.
+// maxDelimiterLength is the C++ standard's cap on a raw string delimiter.
 const maxDelimiterLength = 16
 
-// The external token indices, in the order src/scanner.c declares them.
+// External token indices, in the order src/scanner.c declares them.
 const (
 	rawStringDelimiter = iota
 	rawStringContent
 )
 
-// wcharSize is what the C scanner writes per delimiter character. It stores a
-// wchar_t, which is 4 bytes on every platform tree-sitter builds this scanner
-// for, so a serialized state is byte-identical to the C one.
+// wcharSize is the width of the wchar_t the C scanner serializes.
 const wcharSize = 4
 
 type cppScanner struct {
@@ -33,18 +27,18 @@ func (s *cppScanner) reset() { s.delimiter = s.delimiter[:0] }
 // scanner is the value the generated table installs on the language.
 type scanner struct{}
 
-// Create makes the state one parse carries.
+// Create makes the state a parse carries.
 func (scanner) Create() any { return &cppScanner{} }
 
 // Destroy releases the state. Go collects it, so nothing happens here.
 func (scanner) Destroy(any) {}
 
-// Scan reads one external token.
+// Scan reads an external token.
 func (scanner) Scan(payload any, lexer *ts.Lexer, validSymbols []bool) bool {
 	s := payload.(*cppScanner)
 
+	// Both tokens valid together means the parser is recovering from an error.
 	if validSymbols[rawStringDelimiter] && validSymbols[rawStringContent] {
-		// Both valid at once means the parser is recovering from an error.
 		return false
 	}
 
@@ -63,8 +57,8 @@ func (scanner) Scan(payload any, lexer *ts.Lexer, validSymbols []bool) bool {
 // scanDelimiter reads the delimiter of R"delim(content)delim".
 func (s *cppScanner) scanDelimiter(lexer *ts.Lexer) bool {
 	if len(s.delimiter) > 0 {
-		// The closing delimiter must match the opening one exactly. Stopping
-		// at a quote instead would break R"""hello""", which is valid.
+		// The closing delimiter must match the opening delimiter exactly.
+		// Stopping at a quote would break R"""hello""", which is valid.
 		for _, want := range s.delimiter {
 			if lexer.Lookahead != want {
 				return false
@@ -83,8 +77,7 @@ func (s *cppScanner) scanDelimiter(lexer *ts.Lexer) bool {
 			return false
 		}
 		if lexer.Lookahead == '(' {
-			// An empty delimiter gets no token. The grammar then falls back to
-			// its delimiter-less rule.
+			// An empty delimiter gets no token, so the grammar falls back.
 			return len(s.delimiter) > 0
 		}
 		s.delimiter = append(s.delimiter, lexer.Lookahead)
@@ -95,11 +88,11 @@ func (s *cppScanner) scanDelimiter(lexer *ts.Lexer) bool {
 // scanContent reads the content of R"delim(content)delim".
 func (s *cppScanner) scanContent(lexer *ts.Lexer) bool {
 	// How far the closing delimiter has matched since the last close paren. A
-	// delimiter cannot contain a close paren, so one counter is enough.
+	// delimiter cannot contain a close paren, so this counter is enough. It
+	// holds a negative value while no match is in progress.
 	delimiterIndex := -1
 	for {
-		// End of input terminates the content. That leaves an incomplete raw
-		// string literal, which models the code well.
+		// End of input terminates the content, leaving an incomplete literal.
 		if lexer.EOF() {
 			lexer.MarkEnd()
 			return true
@@ -120,8 +113,8 @@ func (s *cppScanner) scanContent(lexer *ts.Lexer) bool {
 		}
 
 		if delimiterIndex == -1 && lexer.Lookahead == ')' {
-			// The content stops before the closing )delim" run. The scanner
-			// still reads through that run, outside the token.
+			// The content stops before the closing run, which the scanner
+			// still reads through, outside the token.
 			lexer.MarkEnd()
 			delimiterIndex = 0
 		}
@@ -130,9 +123,8 @@ func (s *cppScanner) scanContent(lexer *ts.Lexer) bool {
 	}
 }
 
-// Serialize writes the delimiter so an incremental reparse can resume inside a
-// raw string. Each character takes four bytes, little endian, which is what the
-// C scanner writes.
+// Serialize writes the delimiter, little endian, so an incremental reparse can
+// resume inside a raw string.
 func (scanner) Serialize(payload any, buffer []byte) uint32 {
 	s := payload.(*cppScanner)
 	size := len(s.delimiter) * wcharSize
@@ -154,8 +146,7 @@ func (scanner) Deserialize(payload any, buffer []byte) {
 	}
 }
 
-// isSpace matches the C library's iswspace under the C locale, which is what
-// the scanner runs under. Only these characters count.
+// isSpace matches iswspace under the C locale, which the scanner runs under.
 func isSpace(ch int32) bool {
 	switch ch {
 	case ' ', '\t', '\n', '\v', '\f', '\r':
