@@ -18,7 +18,9 @@ func (p *cParser) parseLexFunc(name string) {
 	p.accept(";")
 
 	for !p.at("switch") {
-		p.parseLexStmt()
+		if st := p.parseLexStmt(); st != nil {
+			fn.prologue = append(fn.prologue, st)
+		}
 	}
 
 	p.expect("switch")

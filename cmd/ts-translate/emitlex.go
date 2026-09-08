@@ -34,6 +34,9 @@ func (e *emitter) emitLexFunc(goName string, fn *lexFunc) {
 	e.printf("start:\n")
 	e.printf("\tskip = false\n")
 	e.printf("\tlookahead = lexer.Lookahead\n")
+	for _, st := range fn.prologue {
+		e.emitLexStmt(st, 1)
+	}
 	e.printf("\tswitch state {\n")
 	for _, c := range fn.cases {
 		if c.isDefault {

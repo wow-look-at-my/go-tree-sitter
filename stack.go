@@ -1,9 +1,6 @@
 package treesitter
 
-const (
-	maxLinkCount     = 8
-	maxIteratorCount = 64
-)
+const maxIteratorCount = 64
 
 type stackVersion = uint32
 
@@ -18,8 +15,7 @@ type stackLink struct {
 type stackNode struct {
 	state             StateID
 	position          length
-	links             [maxLinkCount]stackLink
-	linkCount         uint16
+	links             []stackLink
 	refCount          uint32
 	errorCost         uint32
 	nodeCount         uint32
@@ -94,8 +90,8 @@ func stackNodeRelease(self *stackNode) {
 		}
 
 		var firstPredecessor *stackNode
-		if self.linkCount > 0 {
-			for i := int(self.linkCount) - 1; i > 0; i-- {
+		if len(self.links) > 0 {
+			for i := len(self.links) - 1; i > 0; i-- {
 				link := self.links[i]
 				if link.subtree != nil {
 					subtreeRelease(link.subtree)
@@ -131,8 +127,7 @@ func stackNodeNew(previousNode *stackNode, s subtree, isPending bool, state Stat
 	node := &stackNode{refCount: 1, state: state}
 
 	if previousNode != nil {
-		node.linkCount = 1
-		node.links[0] = stackLink{node: previousNode, subtree: s, isPending: isPending}
+		node.links = []stackLink{{node: previousNode, subtree: s, isPending: isPending}}
 
 		node.position = previousNode.position
 		node.errorCost = previousNode.errorCost
@@ -178,7 +173,7 @@ func stackNodeAddLink(self *stackNode, link stackLink) {
 		return
 	}
 
-	for i := 0; i < int(self.linkCount); i++ {
+	for i := range self.links {
 		existingLink := &self.links[i]
 		if stackSubtreeIsEquivalent(existingLink.subtree, link.subtree) {
 			if existingLink.node == link.node {
@@ -195,7 +190,7 @@ func stackNodeAddLink(self *stackNode, link stackLink) {
 			if existingLink.node.state == link.node.state &&
 				existingLink.node.position.Bytes == link.node.position.Bytes &&
 				existingLink.node.errorCost == link.node.errorCost {
-				for j := 0; j < int(link.node.linkCount); j++ {
+				for j := range link.node.links {
 					stackNodeAddLink(existingLink.node, link.node.links[j])
 				}
 				dynamicPrecedence := link.node.dynamicPrecedence
@@ -210,15 +205,10 @@ func stackNodeAddLink(self *stackNode, link stackLink) {
 		}
 	}
 
-	if self.linkCount == maxLinkCount {
-		return
-	}
-
 	stackNodeRetain(link.node)
 	nodeCount := link.node.nodeCount
 	dynamicPrecedence := link.node.dynamicPrecedence
-	self.links[self.linkCount] = link
-	self.linkCount++
+	self.links = append(self.links, link)
 
 	if link.subtree != nil {
 		subtreeRetain(link.subtree)
@@ -299,7 +289,7 @@ func (s *parseStack) iter(
 
 			action := callback(iterator)
 			shouldPop := action&stackActionPop != 0
-			shouldStop := action&stackActionStop != 0 || node.linkCount == 0
+			shouldStop := action&stackActionStop != 0 || len(node.links) == 0
 
 			if shouldPop {
 				subtrees := iterator.subtrees
@@ -320,10 +310,10 @@ func (s *parseStack) iter(
 				continue
 			}
 
-			for j := uint16(1); j <= node.linkCount; j++ {
+			for j := 1; j <= len(node.links); j++ {
 				var nextIterator *stackIterator
 				var link stackLink
-				if j == node.linkCount {
+				if j == len(node.links) {
 					link = node.links[0]
 					nextIterator = &s.iterators[i]
 				} else {
@@ -406,8 +396,9 @@ func (s *parseStack) setLastExternalToken(version stackVersion, token subtree) {
 func (s *parseStack) errorCost(version stackVersion) uint32 {
 	head := &s.heads[version]
 	result := head.node.errorCost
+	firstLinkIsEmpty := len(head.node.links) == 0 || head.node.links[0].subtree == nil
 	if head.status == stackStatusPaused ||
-		(head.node.state == errorState && head.node.links[0].subtree == nil) {
+		(head.node.state == errorState && firstLinkIsEmpty) {
 		result += errorCostPerRecovery
 	}
 	return result
@@ -458,7 +449,7 @@ func (s *parseStack) popPending(version stackVersion) []stackSlice {
 
 func (s *parseStack) popError(version stackVersion) []subtree {
 	node := s.heads[version].node
-	for i := uint16(0); i < node.linkCount; i++ {
+	for i := range node.links {
 		if node.links[i].subtree != nil && subtreeIsError(node.links[i].subtree) {
 			foundError := false
 			pop := s.iter(version, func(iterator *stackIterator) stackAction {
@@ -483,7 +474,7 @@ func (s *parseStack) popError(version stackVersion) []subtree {
 
 func (s *parseStack) popAll(version stackVersion) []stackSlice {
 	return s.iter(version, func(iterator *stackIterator) stackAction {
-		if iterator.node.linkCount == 0 {
+		if len(iterator.node.links) == 0 {
 			return stackActionPop
 		}
 		return stackActionNone
@@ -532,7 +523,7 @@ func (s *parseStack) hasAdvancedSinceError(version stackVersion) bool {
 		return true
 	}
 	for node != nil {
-		if node.linkCount > 0 {
+		if len(node.links) > 0 {
 			sub := node.links[0].subtree
 			if sub != nil {
 				if subtreeTotalBytes(sub) > 0 {
@@ -591,7 +582,7 @@ func (s *parseStack) merge(version1, version2 stackVersion) bool {
 	}
 	head1 := &s.heads[version1]
 	head2 := &s.heads[version2]
-	for i := uint16(0); i < head2.node.linkCount; i++ {
+	for i := range head2.node.links {
 		stackNodeAddLink(head1.node, head2.node.links[i])
 	}
 	if head1.node.state == errorState {

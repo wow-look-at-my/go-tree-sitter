@@ -90,8 +90,9 @@ type lexCase struct {
 }
 
 type lexFunc struct {
-	name  string
-	cases []lexCase
+	name     string
+	prologue []lexStmt
+	cases    []lexCase
 }
 
 type langValue struct {
