@@ -141,6 +141,14 @@ const languageVersionWithReservedWords = 15
 
 const languageVersionWithPrimaryStates = 14
 
+// MinABIVersion and MaxABIVersion bound the grammars this runtime parses with.
+// A generator writes tables for one ABI. It must refuse an ABI outside this
+// range, because a table the runtime rejects is a grammar that parses nothing.
+const (
+	MinABIVersion = 13
+	MaxABIVersion = 15
+)
+
 type tableEntry struct {
 	actions     []ParseActionEntry
 	actionCount uint32
