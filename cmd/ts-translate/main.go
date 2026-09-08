@@ -307,11 +307,10 @@ func (e *emitter) emitLanguage() {
 	}
 	e.printf("}\n\n")
 
-	e.printf("// Language returns the %s grammar.\n", e.file.languageName)
-	e.printf("func Language() *ts.Language {\n")
+	e.printf("func init() {\n")
 	if e.file.hasScanner {
 		e.printf("\tlanguage.Scanner = scanner{}\n")
 	}
-	e.printf("\treturn &language\n")
+	e.printf("\tgenerated = &language\n")
 	e.printf("}\n")
 }

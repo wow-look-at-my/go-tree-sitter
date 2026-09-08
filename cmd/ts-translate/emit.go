@@ -209,10 +209,9 @@ func (e *emitter) emitLexModes(name string, d *arrayDecl) {
 			return
 		}
 		var m mode
-		// A state with no lexer at all is written positionally, as
-		// {(TSStateId)(-1),}, while every other state names its fields. That
-		// sentinel is how the runtime knows a non-terminal extra has ended, so
-		// dropping it costs every such rule.
+		// A state with no lexer is written positionally, as {(TSStateId)(-1),},
+		// while every other state names its fields. The runtime reads that
+		// sentinel to find the end of a non-terminal extra.
 		positional := 0
 		for _, f := range el.elems {
 			switch f.field {

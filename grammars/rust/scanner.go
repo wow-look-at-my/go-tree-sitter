@@ -189,7 +189,7 @@ func processFloatLiteral(lexer *ts.Lexer) bool {
 	if lexer.Lookahead == '.' {
 		hasFraction = true
 		lexer.Advance(false)
-		// A letter after the dot makes this a method call, as in 1.max(2).
+		// A letter after the dot makes this a method call, not a float.
 		if isAlpha(lexer.Lookahead) {
 			return false
 		}
@@ -243,8 +243,7 @@ func processLineDocContent(lexer *ts.Lexer) bool {
 			return true
 		}
 		if lexer.Lookahead == '\n' {
-			// The newline belongs to the doc content, which markdown injection
-			// needs.
+			// Markdown injection needs the newline inside the doc content.
 			lexer.Advance(false)
 			return true
 		}
@@ -295,12 +294,11 @@ func (p *blockCommentProcessing) continuing(current int32) {
 }
 
 func processBlockComment(lexer *ts.Lexer, validSymbols []bool) bool {
-	// The C scanner keeps the character in a char, so a wide lookahead
-	// truncates. This reproduces that.
+	// The C scanner keeps this in a char, so a wide lookahead truncates.
 	first := narrow(lexer.Lookahead)
 
-	// Only the first character is kept, so the scanner may advance only once.
-	// It therefore advances on every branch, to leave one known state behind.
+	// Only the opening character is kept, so the scanner may advance a single
+	// time. It therefore advances on every branch, to leave a known state.
 	switch {
 	case validSymbols[blockInnerDocMarker] && first == '!':
 		lexer.ResultSymbol = blockInnerDocMarker
