@@ -2,6 +2,7 @@ package corpus
 
 import (
 	"fmt"
+	"os"
 	"sort"
 	"strings"
 	"testing"
@@ -104,5 +105,7 @@ func report(t *testing.T, result Result, byFile map[string]*Result) {
 			fmt.Fprintf(&b, "  %s\n", name)
 		}
 	}
-	fmt.Print("\n" + b.String())
+	// The report goes to stderr so it survives however the harness treats a
+	// passing package's captured output.
+	fmt.Fprint(os.Stderr, "\n"+b.String())
 }
