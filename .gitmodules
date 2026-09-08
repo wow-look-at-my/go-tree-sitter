@@ -1,0 +1,6 @@
+[submodule "grammars/golang/testdata/tree-sitter-go"]
+	path = grammars/golang/testdata/tree-sitter-go
+	url = https://github.com/tree-sitter/tree-sitter-go.git
+[submodule "grammars/clang/testdata/tree-sitter-c"]
+	path = grammars/clang/testdata/tree-sitter-c
+	url = https://github.com/tree-sitter/tree-sitter-c.git

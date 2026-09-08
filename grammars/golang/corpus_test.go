@@ -11,6 +11,6 @@ import (
 // TestUpstreamCorpus runs tree-sitter-go's own test corpus. Every case is a
 // finding: none is deleted and none is skipped here.
 func TestUpstreamCorpus(t *testing.T) {
-	result := corpus.Run(t, golang.Language(), "testdata/corpus")
+	result := corpus.Run(t, golang.Language(), "testdata/tree-sitter-go/test/corpus")
 	assert.Zero(t, result.Failed, "corpus cases fail out of %d", result.Total())
 }
