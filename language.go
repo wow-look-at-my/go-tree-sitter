@@ -148,6 +148,7 @@ const (
 	MinABIVersion = 13
 	MaxABIVersion = 15
 )
+
 type tableEntry struct {
 	actions     []ParseActionEntry
 	actionCount uint32
