@@ -13,14 +13,14 @@ type reusableNode struct {
 
 func (r *reusableNode) clear() {
 	r.stack = r.stack[:0]
-	r.lastExternalToken = nil
+	r.lastExternalToken = subtree{}
 }
 
 func (r *reusableNode) tree() subtree {
 	if len(r.stack) > 0 {
 		return r.stack[len(r.stack)-1].tree
 	}
-	return nil
+	return subtree{}
 }
 
 func (r *reusableNode) byteOffset() uint32 {
@@ -53,7 +53,7 @@ func (r *reusableNode) advance() {
 	}
 
 	r.stack = append(r.stack, reusableStackEntry{
-		tree:       tree.children[nextIndex],
+		tree:       subtreeChildren(tree)[nextIndex],
 		childIndex: nextIndex,
 		byteOffset: byteOffset,
 	})
@@ -63,7 +63,7 @@ func (r *reusableNode) descend() bool {
 	lastEntry := r.stack[len(r.stack)-1]
 	if subtreeChildCount(lastEntry.tree) > 0 {
 		r.stack = append(r.stack, reusableStackEntry{
-			tree:       lastEntry.tree.children[0],
+			tree:       subtreeChildren(lastEntry.tree)[0],
 			childIndex: 0,
 			byteOffset: lastEntry.byteOffset,
 		})

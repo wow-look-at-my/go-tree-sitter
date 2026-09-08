@@ -64,111 +64,145 @@ type subtreeData struct {
 	children []subtree
 }
 
-type subtree = *subtreeData
-
-func subtreeChildCount(self subtree) uint32 {
-	if self == nil {
-		return 0
-	}
-	return uint32(len(self.children))
+// subtree is upstream's tagged union. Upstream keeps a small leaf token in the
+// parent's child array by value and reaches the heap only for the rest, telling
+// the arms apart by the low bit of the pointer. Go cannot overlay an integer on
+// a pointer, so the arms are separate fields and an empty heap arm is the null
+// subtree.
+//
+// The field is named rather than embedded on purpose. Embedding promotes every
+// heap field back onto the value, so a read that belongs on an accessor still
+// compiles and faults only when it meets a leaf that is not on the heap. A
+// named field makes the compiler list the work instead.
+type subtree struct {
+	heap *subtreeData
 }
 
-func subtreeSymbol(self subtree) Symbol         { return self.symbol }
-func subtreeVisible(self subtree) bool          { return self.visible }
-func subtreeNamed(self subtree) bool            { return self.named }
-func subtreeExtra(self subtree) bool            { return self.extra }
-func subtreeHasChanges(self subtree) bool       { return self.hasChanges }
-func subtreeMissing(self subtree) bool          { return self.isMissing }
-func subtreeIsKeyword(self subtree) bool        { return self.isKeyword }
-func subtreeParseState(self subtree) StateID    { return self.parseState }
-func subtreeLookaheadBytes(self subtree) uint32 { return self.lookaheadBytes }
+func heapSubtree(data *subtreeData) subtree { return subtree{heap: data} }
+
+// isNil reports the null subtree, which callers used to spell as a nil pointer.
+func (s subtree) isNil() bool { return s.heap == nil }
+
+func subtreeChildCount(self subtree) uint32 {
+	if self.isNil() {
+		return 0
+	}
+	return uint32(len(self.heap.children))
+}
+
+func subtreeChildren(self subtree) []subtree { return self.heap.children }
+
+func subtreeSymbol(self subtree) Symbol         { return self.heap.symbol }
+func subtreeVisible(self subtree) bool          { return self.heap.visible }
+func subtreeNamed(self subtree) bool            { return self.heap.named }
+func subtreeExtra(self subtree) bool            { return self.heap.extra }
+func subtreeHasChanges(self subtree) bool       { return self.heap.hasChanges }
+func subtreeMissing(self subtree) bool          { return self.heap.isMissing }
+func subtreeIsKeyword(self subtree) bool        { return self.heap.isKeyword }
+func subtreeParseState(self subtree) StateID    { return self.heap.parseState }
+func subtreeLookaheadBytes(self subtree) uint32 { return self.heap.lookaheadBytes }
+func subtreeLookaheadChar(self subtree) int32   { return self.heap.lookaheadChar }
+func subtreeRefCount(self subtree) uint32       { return self.heap.refCount }
+
+func subtreeVisibleChildCount(self subtree) uint32 { return self.heap.visibleChildCount }
+func subtreeNamedChildCount(self subtree) uint32   { return self.heap.namedChildCount }
+func subtreeProductionID(self subtree) uint16      { return self.heap.productionID }
+
+func subtreeSetHasChanges(self subtree, v bool)         { self.heap.hasChanges = v }
+func subtreeSetExtra(self subtree, v bool)              { self.heap.extra = v }
+func subtreeSetFragileLeft(self subtree, v bool)        { self.heap.fragileLeft = v }
+func subtreeSetFragileRight(self subtree, v bool)       { self.heap.fragileRight = v }
+func subtreeSetParseState(self subtree, s StateID)      { self.heap.parseState = s }
+func subtreeAddDynamicPrecedence(self subtree, d int32) { self.heap.dynamicPrecedence += d }
+func subtreeSetPadding(self subtree, l length)          { self.heap.padding = l }
+func subtreeSetSize(self subtree, l length)             { self.heap.size = l }
 
 func subtreeLeafSymbol(self subtree) Symbol {
-	if len(self.children) == 0 {
-		return self.symbol
+	if len(self.heap.children) == 0 {
+		return self.heap.symbol
 	}
-	return self.firstLeafSymbol
+	return self.heap.firstLeafSymbol
 }
 
 func subtreeLeafParseState(self subtree) StateID {
-	if len(self.children) == 0 {
-		return self.parseState
+	if len(self.heap.children) == 0 {
+		return self.heap.parseState
 	}
-	return self.firstLeafParseState
+	return self.heap.firstLeafParseState
 }
 
-func subtreePadding(self subtree) length   { return self.padding }
-func subtreeSize(self subtree) length      { return self.size }
-func subtreeTotalSize(self subtree) length { return lengthAdd(self.padding, self.size) }
+func subtreePadding(self subtree) length   { return self.heap.padding }
+func subtreeSize(self subtree) length      { return self.heap.size }
+func subtreeTotalSize(self subtree) length { return lengthAdd(self.heap.padding, self.heap.size) }
 func subtreeTotalBytes(self subtree) uint32 {
 	return subtreeTotalSize(self).Bytes
 }
 
-func subtreeRepeatDepth(self subtree) uint32 { return uint32(self.repeatDepth) }
+func subtreeRepeatDepth(self subtree) uint32 { return uint32(self.heap.repeatDepth) }
 
 func subtreeVisibleDescendantCount(self subtree) uint32 {
-	if len(self.children) == 0 {
+	if len(self.heap.children) == 0 {
 		return 0
 	}
-	return self.visibleDescendantCount
+	return self.heap.visibleDescendantCount
 }
 
 func subtreeErrorCost(self subtree) uint32 {
-	if self.isMissing {
+	if self.heap.isMissing {
 		return errorCostPerMissingTree + errorCostPerRecovery
 	}
-	return self.errorCost
+	return self.heap.errorCost
 }
 
 func subtreeDynamicPrecedence(self subtree) int32 {
-	if len(self.children) == 0 {
+	if len(self.heap.children) == 0 {
 		return 0
 	}
-	return self.dynamicPrecedence
+	return self.heap.dynamicPrecedence
 }
 
-func subtreeFragileLeft(self subtree) bool  { return self.fragileLeft }
-func subtreeFragileRight(self subtree) bool { return self.fragileRight }
+func subtreeFragileLeft(self subtree) bool  { return self.heap.fragileLeft }
+func subtreeFragileRight(self subtree) bool { return self.heap.fragileRight }
 func subtreeHasExternalTokens(self subtree) bool {
-	return self.hasExternalTokens
+	return self.heap.hasExternalTokens
 }
 
 func subtreeHasExternalScannerStateChange(self subtree) bool {
-	return self.hasExternalScannerStateChange
+	return self.heap.hasExternalScannerStateChange
 }
 
-func subtreeDependsOnColumn(self subtree) bool { return self.dependsOnColumn }
+func subtreeDependsOnColumn(self subtree) bool { return self.heap.dependsOnColumn }
 
 func subtreeIsFragile(self subtree) bool {
-	return self.fragileLeft || self.fragileRight
+	return self.heap.fragileLeft || self.heap.fragileRight
 }
 
-func subtreeIsError(self subtree) bool { return self.symbol == BuiltinSymError }
-func subtreeIsEOF(self subtree) bool   { return self.symbol == BuiltinSymEnd }
+func subtreeIsError(self subtree) bool { return self.heap.symbol == BuiltinSymError }
+func subtreeIsEOF(self subtree) bool   { return self.heap.symbol == BuiltinSymEnd }
 
 func subtreeRetain(self subtree) {
-	if self == nil {
+	if self.isNil() {
 		return
 	}
-	self.refCount++
+	self.heap.refCount++
 }
 
 func subtreeRelease(self subtree) {
-	if self == nil {
+	if self.isNil() {
 		return
 	}
-	var stack []subtree
-	self.refCount--
-	if self.refCount == 0 {
-		stack = append(stack, self)
+	var stack []*subtreeData
+	self.heap.refCount--
+	if self.heap.refCount == 0 {
+		stack = append(stack, self.heap)
 	}
 	for len(stack) > 0 {
 		tree := stack[len(stack)-1]
 		stack = stack[:len(stack)-1]
 		for _, child := range tree.children {
-			child.refCount--
-			if child.refCount == 0 {
-				stack = append(stack, child)
+			child.heap.refCount--
+			if child.heap.refCount == 0 {
+				stack = append(stack, child.heap)
 			}
 		}
 	}
@@ -176,21 +210,21 @@ func subtreeRelease(self subtree) {
 
 func subtreeClone(self subtree) subtree {
 	result := new(subtreeData)
-	*result = *self
-	if len(self.children) > 0 {
-		result.children = append([]subtree(nil), self.children...)
+	*result = *self.heap
+	if len(self.heap.children) > 0 {
+		result.children = append([]subtree(nil), self.heap.children...)
 		for _, child := range result.children {
 			subtreeRetain(child)
 		}
-	} else if self.hasExternalTokens {
-		result.scannerState = self.scannerState.copy()
+	} else if self.heap.hasExternalTokens {
+		result.scannerState = self.heap.scannerState.copy()
 	}
 	result.refCount = 1
-	return result
+	return heapSubtree(result)
 }
 
 func subtreeMakeMut(self subtree) subtree {
-	if self.refCount == 1 {
+	if self.heap.refCount == 1 {
 		return self
 	}
 	result := subtreeClone(self)
@@ -241,7 +275,7 @@ func newLeafSubtree(
 ) subtree {
 	metadata := language.symbolMetadata(symbol)
 	extra := symbol == BuiltinSymEnd
-	return &subtreeData{
+	return heapSubtree(&subtreeData{
 		refCount:          1,
 		padding:           padding,
 		size:              size,
@@ -254,14 +288,14 @@ func newLeafSubtree(
 		hasExternalTokens: hasExternalTokens,
 		dependsOnColumn:   dependsOnColumn,
 		isKeyword:         isKeyword,
-	}
+	})
 }
 
 func subtreeSetSymbol(self subtree, symbol Symbol, language *Language) {
 	metadata := language.symbolMetadata(symbol)
-	self.symbol = symbol
-	self.named = metadata.Named
-	self.visible = metadata.Visible
+	self.heap.symbol = symbol
+	self.heap.named = metadata.Named
+	self.heap.visible = metadata.Visible
 }
 
 func newErrorSubtree(
@@ -272,9 +306,9 @@ func newErrorSubtree(
 		BuiltinSymError, padding, size, bytesScanned, parseState,
 		false, false, false, language,
 	)
-	result.fragileLeft = true
-	result.fragileRight = true
-	result.lookaheadChar = lookaheadChar
+	result.heap.fragileLeft = true
+	result.heap.fragileRight = true
+	result.heap.lookaheadChar = lookaheadChar
 	return result
 }
 
@@ -284,7 +318,9 @@ func subtreeErrorExtentCost(size length) uint32 {
 		errorCostPerSkippedLine*size.Extent.Row
 }
 
-func subtreeSummarizeChildren(self subtree, language *Language) {
+// subtreeSummarizeChildren runs only on a node that has children, which is
+// always on the heap, so it takes that arm rather than the union.
+func subtreeSummarizeChildren(self *subtreeData, language *Language) {
 	self.namedChildCount = 0
 	self.visibleChildCount = 0
 	self.errorCost = 0
@@ -330,7 +366,7 @@ func subtreeSummarizeChildren(self subtree, language *Language) {
 					if subtreeVisible(child) {
 						self.errorCost += errorCostPerSkippedTree
 					} else if grandchildCount > 0 {
-						self.errorCost += errorCostPerSkippedTree * child.visibleChildCount
+						self.errorCost += errorCostPerSkippedTree * subtreeVisibleChildCount(child)
 					}
 				}
 			}
@@ -353,8 +389,8 @@ func subtreeSummarizeChildren(self subtree, language *Language) {
 				self.namedChildCount++
 			}
 		} else if grandchildCount > 0 {
-			self.visibleChildCount += child.visibleChildCount
-			self.namedChildCount += child.namedChildCount
+			self.visibleChildCount += subtreeVisibleChildCount(child)
+			self.namedChildCount += subtreeNamedChildCount(child)
 		}
 
 		if subtreeHasExternalTokens(child) {
@@ -417,12 +453,12 @@ func newNodeSubtree(symbol Symbol, children []subtree, productionID uint16, lang
 		productionID: productionID,
 	}
 	subtreeSummarizeChildren(data, language)
-	return data
+	return heapSubtree(data)
 }
 
 func newErrorNodeSubtree(children []subtree, extra bool, language *Language) subtree {
 	result := newNodeSubtree(BuiltinSymError, children, 0, language)
-	result.extra = extra
+	result.heap.extra = extra
 	return result
 }
 
@@ -433,11 +469,13 @@ func newMissingLeafSubtree(
 		symbol, padding, lengthZero(), lookaheadBytes, state,
 		false, false, false, language,
 	)
-	result.isMissing = true
+	result.heap.isMissing = true
 	return result
 }
 
-func subtreeCompress(self subtree, count uint32, language *Language, stack *[]subtree) {
+// subtreeCompress walks a chain of nodes that all have children, so every link
+// in it is on the heap and the scratch stack carries that arm.
+func subtreeCompress(self *subtreeData, count uint32, language *Language, stack *[]*subtreeData) {
 	initialStackSize := len(*stack)
 
 	tree := self
@@ -446,18 +484,18 @@ func subtreeCompress(self subtree, count uint32, language *Language, stack *[]su
 		if tree.refCount > 1 || len(tree.children) < 2 {
 			break
 		}
-		child := tree.children[0]
+		child := tree.children[0].heap
 		if len(child.children) < 2 || child.refCount > 1 || child.symbol != symbol {
 			break
 		}
-		grandchild := child.children[0]
+		grandchild := child.children[0].heap
 		if len(grandchild.children) < 2 || grandchild.refCount > 1 || grandchild.symbol != symbol {
 			break
 		}
 
-		tree.children[0] = grandchild
+		tree.children[0] = heapSubtree(grandchild)
 		child.children[0] = grandchild.children[len(grandchild.children)-1]
-		grandchild.children[len(grandchild.children)-1] = child
+		grandchild.children[len(grandchild.children)-1] = heapSubtree(child)
 		*stack = append(*stack, tree)
 		tree = grandchild
 	}
@@ -465,8 +503,8 @@ func subtreeCompress(self subtree, count uint32, language *Language, stack *[]su
 	for len(*stack) > initialStackSize {
 		tree = (*stack)[len(*stack)-1]
 		*stack = (*stack)[:len(*stack)-1]
-		child := tree.children[0]
-		grandchild := child.children[len(child.children)-1]
+		child := tree.children[0].heap
+		grandchild := child.children[len(child.children)-1].heap
 		subtreeSummarizeChildren(grandchild, language)
 		subtreeSummarizeChildren(child, language)
 		subtreeSummarizeChildren(tree, language)
@@ -496,19 +534,20 @@ func subtreeCompare(left, right subtree) int {
 		}
 
 		for i := subtreeChildCount(left); i > 0; i-- {
-			stack = append(stack, left.children[i-1], right.children[i-1])
+			stack = append(stack, subtreeChildren(left)[i-1], subtreeChildren(right)[i-1])
 		}
 	}
 	return 0
 }
 
 func subtreeLastExternalToken(tree subtree) subtree {
-	if tree == nil || !subtreeHasExternalTokens(tree) {
-		return nil
+	if tree.isNil() || !subtreeHasExternalTokens(tree) {
+		return subtree{}
 	}
-	for len(tree.children) > 0 {
-		for i := len(tree.children) - 1; i >= 0; i-- {
-			child := tree.children[i]
+	for len(subtreeChildren(tree)) > 0 {
+		children := subtreeChildren(tree)
+		for i := len(children) - 1; i >= 0; i-- {
+			child := children[i]
 			if subtreeHasExternalTokens(child) {
 				tree = child
 				break
@@ -521,8 +560,8 @@ func subtreeLastExternalToken(tree subtree) subtree {
 var emptyScannerState externalScannerState
 
 func subtreeExternalScannerState(self subtree) *externalScannerState {
-	if self != nil && self.hasExternalTokens && len(self.children) == 0 {
-		return &self.scannerState
+	if !self.isNil() && self.heap.hasExternalTokens && len(self.heap.children) == 0 {
+		return &self.heap.scannerState
 	}
 	return &emptyScannerState
 }

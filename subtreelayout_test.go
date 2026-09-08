@@ -43,7 +43,7 @@ type subtreePackedArm struct {
 
 func TestInlineLeafArmIsWorthItsAccessors(t *testing.T) {
 	heap := unsafe.Sizeof(subtreeData{})
-	slot := unsafe.Sizeof(subtree(nil))
+	slot := unsafe.Sizeof(subtree{})
 	named := unsafe.Sizeof(subtreeNamedArm{})
 	packed := unsafe.Sizeof(subtreePackedArm{})
 
