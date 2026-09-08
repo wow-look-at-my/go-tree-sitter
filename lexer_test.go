@@ -61,7 +61,7 @@ func TestLexerDecodesMultipleByteCharacters(t *testing.T) {
 }
 
 func TestLexerSkipsAByteOrderMark(t *testing.T) {
-	lexer := newTestLexer("﻿hi")
+	lexer := newTestLexer(string([]byte{0xEF, 0xBB, 0xBF}) + "hi")
 	lexer.start()
 	assert.Equal(t, int32('h'), lexer.Lookahead)
 	assert.Equal(t, uint32(0), lexer.GetColumn())
