@@ -11,32 +11,24 @@ import (
 	"github.com/klauspost/compress/zstd"
 )
 
-// A grammar's data tables travel as a compressed binary rather than as Go
-// source. The parse table of a large grammar holds millions of integers, and a
-// compiler that type-checks every one of them costs far more than a decode.
+// Tables travel as a compressed blob: type-checking millions of integers as Go
+// source costs far more than a decode.
 
-// tablesMagic opens the blob, and tablesFormat changes whenever the section
-// order below changes.
+// tablesFormat changes whenever the section order below changes.
 const (
 	tablesMagic  = "TSGO"
 	tablesFormat = 1
 )
 
-// Tables is a grammar's data, as the blob carries it. The function fields and
-// the scanner of the embedded Language are not encoded: they are code, and the
-// generated package supplies them.
+// The embedded Language's function fields and scanner are not encoded: they
+// are code, and the generated package supplies them.
 type Tables struct {
 	Language
 	// CharacterSets holds the sets the generated lexer searches.
 	CharacterSets [][]CharacterRange
 }
 
-// The blob is zstd, and the codec is chosen on DECODE speed. That cost recurs:
-// every cold start pays it, per grammar parsed, behind the sync.Once. Size is
-// paid once at link time. brotli at quality 11 is 22% smaller across the five
-// grammars and decodes 2.8x to 3.6x slower, so it loses the trade a hook makes
-// on every tool call. codec_test.go carries the measurement. The package is
-// pure Go, so a consumer that builds with CGO_ENABLED=0 still links.
+// zstd, chosen on DECODE speed. codec_test.go measures it against brotli.
 var (
 	encoderOnce sync.Once
 	encoder     *zstd.Encoder

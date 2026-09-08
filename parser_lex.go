@@ -3,7 +3,7 @@ package treesitter
 func (p *Parser) lex(version stackVersion, parseState StateID) subtree {
 	lexMode := p.language.lexModeForState(parseState)
 	if lexMode.LexState == 0xFFFF {
-		return nil
+		return subtree{}
 	}
 
 	startPosition := p.stack.position(version)
@@ -31,7 +31,7 @@ func (p *Parser) lex(version stackVersion, parseState StateID) subtree {
 			p.externalScannerDeserialize(externalToken)
 			foundToken = p.externalScannerScan(uint32(lexMode.ExternalLexState))
 			if p.hasScannerError {
-				return nil
+				return subtree{}
 			}
 			p.lexer.finish(&lookaheadEndByte)
 
@@ -130,8 +130,8 @@ func (p *Parser) lex(version stackVersion, parseState StateID) subtree {
 		)
 
 		if foundExternalToken {
-			result.scannerState.init(p.serializationBuffer[:externalScannerStateLen])
-			result.hasExternalScannerStateChange = externalScannerStateChanged
+			result.heap.scannerState.init(p.serializationBuffer[:externalScannerStateLen])
+			result.heap.hasExternalScannerStateChange = externalScannerStateChanged
 		}
 	}
 

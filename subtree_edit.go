@@ -59,14 +59,14 @@ func subtreeEdit(self subtree, inputEdit InputEdit) subtree {
 		}
 
 		result := subtreeMakeMut(*entry.tree)
-		result.padding = padding
-		result.size = size
-		result.hasChanges = true
+		subtreeResize(&result, padding, size, lookaheadBytes)
+		subtreeSetHasChanges(&result, true)
 		*entry.tree = result
 
 		var childLeft, childRight length
-		for i := 0; i < len(result.children); i++ {
-			child := &result.children[i]
+		children := subtreeChildren(result)
+		for i := 0; i < len(children); i++ {
+			child := &children[i]
 			childSize := subtreeTotalSize(*child)
 			childLeft = childRight
 			childRight = lengthAdd(childLeft, childSize)
@@ -158,7 +158,7 @@ func subtreeString(
 		frame := &stack[len(stack)-1]
 		node := frame.subtree
 
-		if node == nil {
+		if node.isNil() {
 			if !frame.isRoot {
 				sb.WriteString(" ")
 				if frame.hasField {
@@ -190,9 +190,9 @@ func subtreeString(
 					}
 				}
 
-				if subtreeIsError(node) && subtreeChildCount(node) == 0 && node.size.Bytes > 0 {
+				if subtreeIsError(node) && subtreeChildCount(node) == 0 && subtreeSize(node).Bytes > 0 {
 					sb.WriteString("(UNEXPECTED ")
-					writeCharToString(&sb, node.lookaheadChar)
+					writeCharToString(&sb, subtreeLookaheadChar(node))
 				} else {
 					symbol := frame.aliasSymbol
 					if symbol == 0 {
@@ -235,8 +235,8 @@ func subtreeString(
 			}
 
 			if subtreeChildCount(node) > 0 {
-				frame.aliasSequence = language.aliasSequence(uint32(node.productionID))
-				frame.fieldMap = language.fieldMap(uint32(node.productionID))
+				frame.aliasSequence = language.aliasSequence(uint32(subtreeProductionID(node)))
+				frame.fieldMap = language.fieldMap(uint32(subtreeProductionID(node)))
 			}
 
 			frame.isVisible = isVisible
@@ -244,7 +244,7 @@ func subtreeString(
 		}
 
 		if frame.childIndex < subtreeChildCount(node) {
-			child := node.children[frame.childIndex]
+			child := subtreeChildren(node)[frame.childIndex]
 			childFrame := writeFrame{subtree: child}
 
 			if !subtreeExtra(child) {

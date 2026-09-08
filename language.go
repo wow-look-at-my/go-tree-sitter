@@ -141,9 +141,8 @@ const languageVersionWithReservedWords = 15
 
 const languageVersionWithPrimaryStates = 14
 
-// MinABIVersion and MaxABIVersion bound the grammars this runtime parses with.
-// A generator writes tables for one ABI. It must refuse an ABI outside this
-// range, because a table the runtime rejects is a grammar that parses nothing.
+// A generator must refuse an ABI outside this range: the tables would parse
+// nothing. See checkABI in cmd/ts-translate.
 const (
 	MinABIVersion = 13
 	MaxABIVersion = 15

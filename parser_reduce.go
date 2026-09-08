@@ -58,16 +58,16 @@ func (p *Parser) reduce(
 		state := p.stack.state(sliceVersion)
 		nextState := p.language.nextState(state, symbol)
 		if endOfNonTerminalExtra && nextState == state {
-			parent.extra = true
+			subtreeSetExtra(&parent, true)
 		}
 		if isFragile || len(pop) > 1 || initialVersionCount > 1 {
-			parent.fragileLeft = true
-			parent.fragileRight = true
-			parent.parseState = treeStateNone
+			subtreeSetFragileLeft(parent.heap, true)
+			subtreeSetFragileRight(parent.heap, true)
+			subtreeSetParseState(parent.heap, treeStateNone)
 		} else {
-			parent.parseState = state
+			subtreeSetParseState(parent.heap, state)
 		}
-		parent.dynamicPrecedence += dynamicPrecedence
+		subtreeAddDynamicPrecedence(parent.heap, dynamicPrecedence)
 
 		p.stack.push(sliceVersion, parent, false, nextState)
 		for _, extra := range p.trailingExtras {
@@ -103,7 +103,7 @@ func (p *Parser) accept(version stackVersion, lookahead subtree) {
 			tree := trees[j]
 			if !subtreeExtra(tree) {
 				childCount := subtreeChildCount(tree)
-				children := tree.children
+				children := subtreeChildren(tree)
 				for k := uint32(0); k < childCount; k++ {
 					subtreeRetain(children[k])
 				}
@@ -112,7 +112,7 @@ func (p *Parser) accept(version stackVersion, lookahead subtree) {
 				spliced = append(spliced, children...)
 				spliced = append(spliced, trees[j+1:]...)
 				root = newNodeSubtree(
-					subtreeSymbol(tree), spliced, tree.productionID, p.language,
+					subtreeSymbol(tree), spliced, subtreeProductionID(tree), p.language,
 				)
 				subtreeRelease(tree)
 				break
@@ -121,7 +121,7 @@ func (p *Parser) accept(version stackVersion, lookahead subtree) {
 
 		p.acceptCount++
 
-		if p.finishedTree != nil {
+		if !p.finishedTree.isNil() {
 			if p.selectTree(p.finishedTree, root) {
 				subtreeRelease(p.finishedTree)
 				p.finishedTree = root

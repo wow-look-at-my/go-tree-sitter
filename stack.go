@@ -24,10 +24,7 @@ type stackNode struct {
 
 type stackIterator struct {
 	node *stackNode
-	// subtrees is the collected payload, and it fills only when the pop asks
-	// for it. subtreeCount is the symbols a reduction consumed, so it counts
-	// an unfilled link and skips an extra. Never substitute one for the other:
-	// len(subtrees) makes a reduction count comments as symbols.
+	// Never read len(subtrees) for subtreeCount: it counts extras as symbols.
 	subtrees     []subtree
 	subtreeCount uint32
 	isPending    bool
@@ -97,13 +94,13 @@ func stackNodeRelease(self *stackNode) {
 		if len(self.links) > 0 {
 			for i := len(self.links) - 1; i > 0; i-- {
 				link := self.links[i]
-				if link.subtree != nil {
+				if !link.subtree.isNil() {
 					subtreeRelease(link.subtree)
 				}
 				stackNodeRelease(link.node)
 			}
 			link := self.links[0]
-			if link.subtree != nil {
+			if !link.subtree.isNil() {
 				subtreeRelease(link.subtree)
 			}
 			firstPredecessor = self.links[0].node
@@ -138,7 +135,7 @@ func stackNodeNew(previousNode *stackNode, s subtree, isPending bool, state Stat
 		node.dynamicPrecedence = previousNode.dynamicPrecedence
 		node.nodeCount = previousNode.nodeCount
 
-		if s != nil {
+		if !s.isNil() {
 			node.errorCost += subtreeErrorCost(s)
 			node.position = lengthAdd(node.position, subtreeTotalSize(s))
 			node.nodeCount += stackSubtreeNodeCount(s)
@@ -156,7 +153,7 @@ func stackSubtreeIsEquivalent(left, right subtree) bool {
 	if left == right {
 		return true
 	}
-	if left == nil || right == nil {
+	if left.isNil() || right.isNil() {
 		return false
 	}
 	if subtreeSymbol(left) != subtreeSymbol(right) {
@@ -198,7 +195,7 @@ func stackNodeAddLink(self *stackNode, link stackLink) {
 					stackNodeAddLink(existingLink.node, link.node.links[j])
 				}
 				dynamicPrecedence := link.node.dynamicPrecedence
-				if link.subtree != nil {
+				if !link.subtree.isNil() {
 					dynamicPrecedence += subtreeDynamicPrecedence(link.subtree)
 				}
 				if dynamicPrecedence > self.dynamicPrecedence {
@@ -214,7 +211,7 @@ func stackNodeAddLink(self *stackNode, link stackLink) {
 	dynamicPrecedence := link.node.dynamicPrecedence
 	self.links = append(self.links, link)
 
-	if link.subtree != nil {
+	if !link.subtree.isNil() {
 		subtreeRetain(link.subtree)
 		nodeCount += stackSubtreeNodeCount(link.subtree)
 		dynamicPrecedence += subtreeDynamicPrecedence(link.subtree)
@@ -230,10 +227,10 @@ func stackNodeAddLink(self *stackNode, link stackLink) {
 
 func stackHeadDelete(self *stackHead) {
 	if self.node != nil {
-		if self.lastExternalToken != nil {
+		if !self.lastExternalToken.isNil() {
 			subtreeRelease(self.lastExternalToken)
 		}
-		if self.lookaheadWhenPaused != nil {
+		if !self.lookaheadWhenPaused.isNil() {
 			subtreeRelease(self.lookaheadWhenPaused)
 		}
 		self.summary = nil
@@ -250,7 +247,7 @@ func (s *parseStack) addVersion(originalVersion stackVersion, node *stackNode) s
 	}
 	s.heads = append(s.heads, head)
 	stackNodeRetain(node)
-	if head.lastExternalToken != nil {
+	if !head.lastExternalToken.isNil() {
 		subtreeRetain(head.lastExternalToken)
 	}
 	return stackVersion(len(s.heads) - 1)
@@ -332,7 +329,7 @@ func (s *parseStack) iter(
 				}
 
 				nextIterator.node = link.node
-				if link.subtree != nil {
+				if !link.subtree.isNil() {
 					if includeSubtrees {
 						nextIterator.subtrees = append(nextIterator.subtrees, link.subtree)
 						subtreeRetain(link.subtree)
@@ -357,7 +354,7 @@ func (s *parseStack) iter(
 
 func newParseStack() *parseStack {
 	self := &parseStack{}
-	self.baseNode = stackNodeNew(nil, nil, false, 1)
+	self.baseNode = stackNodeNew(nil, subtree{}, false, 1)
 	self.clear()
 	return self
 }
@@ -388,10 +385,10 @@ func (s *parseStack) lastExternalToken(version stackVersion) subtree {
 
 func (s *parseStack) setLastExternalToken(version stackVersion, token subtree) {
 	head := &s.heads[version]
-	if token != nil {
+	if !token.isNil() {
 		subtreeRetain(token)
 	}
-	if head.lastExternalToken != nil {
+	if !head.lastExternalToken.isNil() {
 		subtreeRelease(head.lastExternalToken)
 	}
 	head.lastExternalToken = token
@@ -400,7 +397,7 @@ func (s *parseStack) setLastExternalToken(version stackVersion, token subtree) {
 func (s *parseStack) errorCost(version stackVersion) uint32 {
 	head := &s.heads[version]
 	result := head.node.errorCost
-	firstLinkIsEmpty := len(head.node.links) == 0 || head.node.links[0].subtree == nil
+	firstLinkIsEmpty := len(head.node.links) == 0 || head.node.links[0].subtree.isNil()
 	if head.status == stackStatusPaused ||
 		(head.node.state == errorState && firstLinkIsEmpty) {
 		result += errorCostPerRecovery
@@ -419,7 +416,7 @@ func (s *parseStack) nodeCountSinceError(version stackVersion) uint32 {
 func (s *parseStack) push(version stackVersion, sub subtree, pending bool, state StateID) {
 	head := &s.heads[version]
 	newNode := stackNodeNew(head.node, sub, pending, state)
-	if sub == nil {
+	if sub.isNil() {
 		head.nodeCountAtLastError = newNode.nodeCount
 	}
 	head.node = newNode
@@ -454,7 +451,7 @@ func (s *parseStack) popPending(version stackVersion) []stackSlice {
 func (s *parseStack) popError(version stackVersion) []subtree {
 	node := s.heads[version].node
 	for i := range node.links {
-		if node.links[i].subtree != nil && subtreeIsError(node.links[i].subtree) {
+		if !node.links[i].subtree.isNil() && subtreeIsError(node.links[i].subtree) {
 			foundError := false
 			pop := s.iter(version, func(iterator *stackIterator) stackAction {
 				if len(iterator.subtrees) > 0 {
@@ -529,7 +526,7 @@ func (s *parseStack) hasAdvancedSinceError(version stackVersion) bool {
 	for node != nil {
 		if len(node.links) > 0 {
 			sub := node.links[0].subtree
-			if sub != nil {
+			if !sub.isNil() {
 				if subtreeTotalBytes(sub) > 0 {
 					return true
 				} else if node.nodeCount > head.nodeCountAtLastError &&
@@ -573,7 +570,7 @@ func (s *parseStack) copyVersion(version stackVersion) stackVersion {
 	s.heads = append(s.heads, versionHead)
 	head := &s.heads[len(s.heads)-1]
 	stackNodeRetain(head.node)
-	if head.lastExternalToken != nil {
+	if !head.lastExternalToken.isNil() {
 		subtreeRetain(head.lastExternalToken)
 	}
 	head.summary = nil
@@ -637,7 +634,7 @@ func (s *parseStack) resume(version stackVersion) subtree {
 	head := &s.heads[version]
 	result := head.lookaheadWhenPaused
 	head.status = stackStatusActive
-	head.lookaheadWhenPaused = nil
+	head.lookaheadWhenPaused = subtree{}
 	return result
 }
 

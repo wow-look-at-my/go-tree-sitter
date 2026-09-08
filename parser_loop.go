@@ -13,12 +13,12 @@ func (p *Parser) advance(version stackVersion, allowNodeReuse bool) bool {
 		lookahead = p.reuseNode(version, &state, position, lastExternalToken, &entry)
 	}
 
-	if lookahead == nil {
+	if lookahead.isNil() {
 		didReuse = false
 		lookahead = p.getCachedToken(state, position, lastExternalToken, &entry)
 	}
 
-	needsLex := lookahead == nil
+	needsLex := lookahead.isNil()
 	for {
 		if needsLex {
 			needsLex = false
@@ -27,7 +27,7 @@ func (p *Parser) advance(version stackVersion, allowNodeReuse bool) bool {
 				return false
 			}
 
-			if lookahead != nil {
+			if !lookahead.isNil() {
 				p.setCachedToken(position, lastExternalToken, lookahead)
 				p.language.tableEntry(state, subtreeSymbol(lookahead), &entry)
 			} else {
@@ -65,7 +65,7 @@ func (p *Parser) advance(version stackVersion, allowNodeReuse bool) bool {
 
 			case ParseActionTypeReduce:
 				isFragile := entry.actionCount > 1
-				endOfNonTerminalExtra := lookahead == nil
+				endOfNonTerminalExtra := lookahead.isNil()
 				reductionVersion := p.reduce(
 					version, action.Symbol, uint32(action.ChildCount),
 					int32(action.DynamicPrecedence), action.ProductionID,
@@ -96,7 +96,7 @@ func (p *Parser) advance(version stackVersion, allowNodeReuse bool) bool {
 			p.stack.renumberVersion(lastReductionVersion, version)
 			state = p.stack.state(version)
 
-			if lookahead == nil {
+			if lookahead.isNil() {
 				needsLex = true
 			} else {
 				p.language.tableEntry(state, subtreeLeafSymbol(lookahead), &entry)
@@ -105,7 +105,7 @@ func (p *Parser) advance(version stackVersion, allowNodeReuse bool) bool {
 		}
 
 		if didReduce {
-			if lookahead != nil {
+			if !lookahead.isNil() {
 				subtreeRelease(lookahead)
 			}
 			p.stack.halt(version)
@@ -118,7 +118,7 @@ func (p *Parser) advance(version stackVersion, allowNodeReuse bool) bool {
 			p.language.tableEntry(state, p.language.KeywordCaptureToken, &entry)
 			if entry.actionCount > 0 {
 				mutableLookahead := subtreeMakeMut(lookahead)
-				subtreeSetSymbol(mutableLookahead, p.language.KeywordCaptureToken, p.language)
+				subtreeSetSymbol(&mutableLookahead, p.language.KeywordCaptureToken, p.language)
 				lookahead = mutableLookahead
 				continue
 			}
@@ -212,9 +212,10 @@ func (p *Parser) condenseStack() uint32 {
 
 func (p *Parser) balanceSubtree() {
 	finishedTree := p.finishedTree
-	var treeStack []subtree
-	if subtreeChildCount(finishedTree) > 0 && finishedTree.refCount == 1 {
-		treeStack = append(treeStack, finishedTree)
+	// Only a node with children is balanced, and one is always on the heap.
+	var treeStack []*subtreeData
+	if subtreeChildCount(finishedTree) > 0 && subtreeRefCount(finishedTree) == 1 {
+		treeStack = append(treeStack, finishedTree.heap)
 	}
 
 	for len(treeStack) > 0 {
@@ -236,8 +237,8 @@ func (p *Parser) balanceSubtree() {
 		treeStack = treeStack[:len(treeStack)-1]
 
 		for _, child := range tree.children {
-			if subtreeChildCount(child) > 0 && child.refCount == 1 {
-				treeStack = append(treeStack, child)
+			if subtreeChildCount(child) > 0 && subtreeRefCount(child) == 1 {
+				treeStack = append(treeStack, child.heap)
 			}
 		}
 	}
@@ -307,7 +308,7 @@ func (p *Parser) Parse(oldTree *Tree, input Input) *Tree {
 
 		minErrorCost := p.condenseStack()
 
-		if p.finishedTree != nil && subtreeErrorCost(p.finishedTree) < minErrorCost {
+		if !p.finishedTree.isNil() && subtreeErrorCost(p.finishedTree) < minErrorCost {
 			p.stack.clear()
 			break
 		}
@@ -326,7 +327,7 @@ func (p *Parser) Parse(oldTree *Tree, input Input) *Tree {
 		}
 	}
 
-	if p.finishedTree == nil {
+	if p.finishedTree.isNil() {
 		p.Reset()
 		return nil
 	}
@@ -334,7 +335,7 @@ func (p *Parser) Parse(oldTree *Tree, input Input) *Tree {
 	p.balanceSubtree()
 
 	result := newTree(p.finishedTree, p.language, p.lexer.includedRanges)
-	p.finishedTree = nil
+	p.finishedTree = subtree{}
 
 	p.Reset()
 	return result

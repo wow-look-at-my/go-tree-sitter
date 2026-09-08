@@ -29,7 +29,7 @@ func (p *Parser) recoverToState(version stackVersion, depth uint32, goalState St
 			if errorChildCount > 0 {
 				nested := make([]subtree, 0, errorChildCount)
 				for j := uint32(0); j < errorChildCount; j++ {
-					child := errorTree.children[j]
+					child := subtreeChildren(errorTree)[j]
 					subtreeRetain(child)
 					nested = append(nested, child)
 				}
@@ -145,7 +145,7 @@ func (p *Parser) recover(version stackVersion, lookahead subtree) {
 	if n := len(actions); n > 0 && actions[n-1].Action.Type == ParseActionTypeShift &&
 		actions[n-1].Action.Extra {
 		mutableLookahead := subtreeMakeMut(lookahead)
-		mutableLookahead.extra = true
+		subtreeSetExtra(&mutableLookahead, true)
 		lookahead = mutableLookahead
 	}
 
@@ -226,7 +226,7 @@ func (p *Parser) handleError(version stackVersion, lookahead subtree) {
 			}
 		}
 
-		p.stack.push(v, nil, false, errorState)
+		p.stack.push(v, subtree{}, false, errorState)
 		if v == version {
 			v = previousVersionCount
 		} else {

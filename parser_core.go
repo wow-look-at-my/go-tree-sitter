@@ -74,7 +74,7 @@ func NewParser() *Parser {
 	self := &Parser{}
 	self.lexer.init()
 	self.stack = newParseStack()
-	self.setCachedToken(0, nil, nil)
+	self.setCachedToken(0, subtree{}, subtree{})
 	return self
 }
 
@@ -108,17 +108,17 @@ func (p *Parser) IncludedRanges() []Range { return p.lexer.includedRanges }
 // Reset clears any parse state left over from a previous call.
 func (p *Parser) Reset() {
 	p.externalScannerDestroy()
-	if p.oldTree != nil {
+	if !p.oldTree.isNil() {
 		subtreeRelease(p.oldTree)
-		p.oldTree = nil
+		p.oldTree = subtree{}
 	}
 	p.reusableNode.clear()
 	p.lexer.reset(lengthZero())
 	p.stack.clear()
-	p.setCachedToken(0, nil, nil)
-	if p.finishedTree != nil {
+	p.setCachedToken(0, subtree{}, subtree{})
+	if !p.finishedTree.isNil() {
 		subtreeRelease(p.finishedTree)
-		p.finishedTree = nil
+		p.finishedTree = subtree{}
 	}
 	p.acceptCount = 0
 	p.hasScannerError = false
@@ -142,7 +142,7 @@ func (p *Parser) breakdownTopOfStack(version stackVersion) bool {
 			parent := slice.subtrees[0]
 
 			for j := uint32(0); j < subtreeChildCount(parent); j++ {
-				child := parent.children[j]
+				child := subtreeChildren(parent)[j]
 				pending = subtreeChildCount(child) > 0
 
 				if subtreeIsError(child) {
@@ -239,7 +239,7 @@ func (p *Parser) versionStatus(version stackVersion) errorStatus {
 }
 
 func (p *Parser) betterVersionExists(version stackVersion, isInError bool, cost uint32) bool {
-	if p.finishedTree != nil && subtreeErrorCost(p.finishedTree) <= cost {
+	if !p.finishedTree.isNil() && subtreeErrorCost(p.finishedTree) <= cost {
 		return true
 	}
 
@@ -293,7 +293,7 @@ func (p *Parser) externalScannerSerialize() uint32 {
 
 func (p *Parser) externalScannerDeserialize(externalToken subtree) {
 	var data []byte
-	if externalToken != nil {
+	if !externalToken.isNil() {
 		data = subtreeExternalScannerState(externalToken).data
 	}
 	p.language.Scanner.Deserialize(p.externalScannerPayload, data)
@@ -331,7 +331,7 @@ func (p *Parser) getCachedToken(
 	state StateID, position uint32, lastExternalToken subtree, entry *tableEntry,
 ) subtree {
 	cache := &p.tokenCache
-	if cache.token != nil && cache.byteIndex == position &&
+	if !cache.token.isNil() && cache.byteIndex == position &&
 		subtreeExternalScannerStateEq(cache.lastExternalToken, lastExternalToken) {
 		p.language.tableEntry(state, subtreeSymbol(cache.token), entry)
 		if p.canReuseFirstLeaf(state, cache.token, entry) {
@@ -339,21 +339,21 @@ func (p *Parser) getCachedToken(
 			return cache.token
 		}
 	}
-	return nil
+	return subtree{}
 }
 
 func (p *Parser) setCachedToken(byteIndex uint32, lastExternalToken, token subtree) {
 	cache := &p.tokenCache
-	if token != nil {
+	if !token.isNil() {
 		subtreeRetain(token)
 	}
-	if lastExternalToken != nil {
+	if !lastExternalToken.isNil() {
 		subtreeRetain(lastExternalToken)
 	}
-	if cache.token != nil {
+	if !cache.token.isNil() {
 		subtreeRelease(cache.token)
 	}
-	if cache.lastExternalToken != nil {
+	if !cache.lastExternalToken.isNil() {
 		subtreeRelease(cache.lastExternalToken)
 	}
 	cache.token = token
@@ -373,7 +373,7 @@ func (p *Parser) reuseNode(
 ) subtree {
 	for {
 		result := p.reusableNode.tree()
-		if result == nil {
+		if result.isNil() {
 			break
 		}
 		byteOffset := p.reusableNode.byteOffset()
@@ -429,14 +429,14 @@ func (p *Parser) reuseNode(
 		return result
 	}
 
-	return nil
+	return subtree{}
 }
 
 func (p *Parser) selectTree(left, right subtree) bool {
-	if left == nil {
+	if left.isNil() {
 		return true
 	}
-	if right == nil {
+	if right.isNil() {
 		return false
 	}
 
@@ -477,7 +477,7 @@ func (p *Parser) shift(version stackVersion, state StateID, lookahead subtree, e
 	subtreeToPush := lookahead
 	if extra != subtreeExtra(lookahead) && isLeaf {
 		result := subtreeMakeMut(lookahead)
-		result.extra = extra
+		subtreeSetExtra(&result, extra)
 		subtreeToPush = result
 	}
 

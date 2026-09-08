@@ -41,7 +41,7 @@ func (n *Node) iterateChildren() nodeChildIterator {
 		tree:          n.tree,
 		parent:        sub,
 		position:      length{Bytes: n.startByte, Extent: n.startPoint},
-		aliasSequence: n.tree.language.aliasSequence(uint32(sub.productionID)),
+		aliasSequence: n.tree.language.aliasSequence(uint32(subtreeProductionID(sub))),
 	}
 }
 
@@ -50,10 +50,10 @@ func (it *nodeChildIterator) done() bool {
 }
 
 func (it *nodeChildIterator) next(result *Node) bool {
-	if it.parent == nil || it.done() {
+	if it.parent.isNil() || it.done() {
 		return false
 	}
-	child := &it.parent.children[it.childIndex]
+	child := &subtreeChildren(it.parent)[it.childIndex]
 	var aliasSymbol Symbol
 	if !subtreeExtra(*child) {
 		if it.aliasSequence != nil {
@@ -85,9 +85,9 @@ func (n Node) relevantChildCount(includeAnonymous bool) uint32 {
 	tree := n.subtree()
 	if subtreeChildCount(tree) > 0 {
 		if includeAnonymous {
-			return tree.visibleChildCount
+			return subtreeVisibleChildCount(tree)
 		}
-		return tree.namedChildCount
+		return subtreeNamedChildCount(tree)
 	}
 	return 0
 }
@@ -207,7 +207,7 @@ func (n Node) NextParseState() StateID {
 func (n Node) ChildCount() uint32 {
 	tree := n.subtree()
 	if subtreeChildCount(tree) > 0 {
-		return tree.visibleChildCount
+		return subtreeVisibleChildCount(tree)
 	}
 	return 0
 }
@@ -216,7 +216,7 @@ func (n Node) ChildCount() uint32 {
 func (n Node) NamedChildCount() uint32 {
 	tree := n.subtree()
 	if subtreeChildCount(tree) > 0 {
-		return tree.namedChildCount
+		return subtreeNamedChildCount(tree)
 	}
 	return 0
 }
@@ -320,8 +320,9 @@ func (n Node) ChildWithDescendant(descendant Node) Node {
 }
 
 func subtreeHasTrailingEmptyDescendant(self, other subtree) bool {
-	for i := len(self.children) - 1; i >= 0; i-- {
-		child := self.children[i]
+	children := subtreeChildren(self)
+	for i := len(children) - 1; i >= 0; i-- {
+		child := children[i]
 		if subtreeTotalBytes(child) > 0 {
 			break
 		}

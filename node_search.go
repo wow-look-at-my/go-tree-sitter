@@ -118,7 +118,7 @@ func (n Node) ChildByFieldID(fieldID FieldID) Node {
 			return nullNode()
 		}
 
-		fieldMap := self.tree.language.fieldMap(uint32(self.subtree().productionID))
+		fieldMap := self.tree.language.fieldMap(uint32(subtreeProductionID(self.subtree())))
 		if len(fieldMap) == 0 {
 			return nullNode()
 		}
@@ -188,7 +188,7 @@ func (n Node) ChildByFieldName(name string) Node {
 }
 
 func (n Node) fieldNameFromLanguage(structuralChildIndex uint32) string {
-	for _, m := range n.tree.language.fieldMap(uint32(n.subtree().productionID)) {
+	for _, m := range n.tree.language.fieldMap(uint32(subtreeProductionID(n.subtree()))) {
 		if !m.Inherited && uint32(m.ChildIndex) == structuralChildIndex {
 			return n.tree.language.FieldNames[m.FieldID]
 		}

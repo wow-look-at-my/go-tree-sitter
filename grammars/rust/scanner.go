@@ -69,10 +69,9 @@ func (scanner) Scan(payload any, lexer *ts.Lexer, validSymbols []bool) bool {
 		if processString(lexer) {
 			return true
 		}
-		// A false here means the next character is a quote or a backslash, so
-		// there is no content. Fall through and let stringClose take the quote.
 	}
 
+	// Reached with no string content, so this takes the closing quote.
 	if validSymbols[stringClose] && lexer.Lookahead == '"' {
 		lexer.Advance(false)
 		lexer.ResultSymbol = stringClose
