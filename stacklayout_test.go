@@ -1,6 +1,7 @@
 package treesitter
 
 import (
+	"github.com/stretchr/testify/assert"
 	"testing"
 	"unsafe"
 )
@@ -45,7 +46,6 @@ func TestStackNodeLayoutIsAlreadyTight(t *testing.T) {
 	// nothing, because the bytes freed fall into padding the struct already
 	// carries. A future edit that narrows a counter and reports a saving is
 	// reporting one it did not get.
-	if narrow != got {
-		t.Errorf("narrowing alone changed the size: %d -> %d; the padding assumption no longer holds", got, narrow)
-	}
+	assert.Equal(t, got, narrow)
+
 }
