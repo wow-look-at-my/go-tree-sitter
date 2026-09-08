@@ -16,28 +16,6 @@ import (
 // tablesFile is the compressed table blob the generated package embeds.
 const tablesFile = "tables.zst"
 
-func goIdent(name string) string {
-	name = strings.TrimPrefix(name, "ts_")
-	parts := strings.Split(name, "_")
-	var sb strings.Builder
-	for i, part := range parts {
-		if part == "" {
-			continue
-		}
-		if i == 0 {
-			sb.WriteString(part)
-			continue
-		}
-		sb.WriteString(strings.ToUpper(part[:1]))
-		sb.WriteString(part[1:])
-	}
-	out := sb.String()
-	if out == "" {
-		out = "value"
-	}
-	return out
-}
-
 func main() {
 	pkg := flag.String("package", "", "name of the generated Go package")
 	out := flag.String("out", "", "path of the generated Go file")

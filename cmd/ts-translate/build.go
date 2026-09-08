@@ -123,8 +123,7 @@ func (e *emitter) buildTables() *ts.Tables {
 	return t
 }
 
-// linked resolves a field of the language struct to the array it points at, so
-// a grammar that omits a table leaves the field nil.
+// linked resolves a language field to the array it points at.
 func (e *emitter) linked(field string) *arrayDecl {
 	v, ok := e.file.lang[field]
 	if !ok || v.ref == "" {
@@ -299,9 +298,9 @@ func buildLexModes(d *arrayDecl) []ts.LexerMode {
 			return
 		}
 		var m ts.LexerMode
-		// A state with no lexer is written positionally, as {(TSStateId)(-1),},
-		// while every other state names its fields. The runtime reads that
-		// sentinel to find the end of a non-terminal extra.
+		// A state with no lexer is written positionally, as a cast of a negative
+		// value, while every other state names its fields. The runtime reads
+		// that sentinel to find the end of a non-terminal extra.
 		positional := 0
 		for _, f := range el.elems {
 			switch f.field {

@@ -20,12 +20,11 @@ type Result struct {
 	Skipped int
 	// Failures names each failing case, in corpus order.
 	Failures []string
-	// Details holds the expected and the actual tree of the earliest failures,
-	// so a report says what went wrong and not only where.
+	// Details compares the expected and actual tree of the earliest failures.
 	Details []Detail
 }
 
-// Detail is the comparison one failing case produced.
+// Detail is the comparison a failing case produced.
 type Detail struct {
 	// Name is the case, prefixed by its corpus file.
 	Name string
@@ -35,8 +34,7 @@ type Detail struct {
 	Got string
 }
 
-// detailLimit bounds how many comparisons a report carries, so a wide
-// regression does not bury its own first case.
+// detailLimit bounds the comparisons a report carries.
 const detailLimit = 3
 
 // Total is the number of cases that actually ran.

@@ -9,8 +9,7 @@ type emitter struct {
 	file *cFile
 	sb   *strings.Builder
 	pkg  string
-	// setIndex maps a character set's C name to its place in the encoded sets,
-	// which is how the emitted lexer reaches it.
+	// setIndex maps a character set's C name to its encoded position.
 	setIndex map[string]int
 }
 

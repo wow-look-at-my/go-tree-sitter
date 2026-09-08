@@ -87,9 +87,7 @@ func (s *cppScanner) scanDelimiter(lexer *ts.Lexer) bool {
 
 // scanContent reads the content of R"delim(content)delim".
 func (s *cppScanner) scanContent(lexer *ts.Lexer) bool {
-	// How far the closing delimiter has matched since the last close paren. A
-	// delimiter cannot contain a close paren, so this counter is enough. It
-	// holds a negative value while no match is in progress.
+	// How far the closing delimiter has matched since the last close paren.
 	delimiterIndex := -1
 	for {
 		// End of input terminates the content, leaving an incomplete literal.
@@ -113,8 +111,7 @@ func (s *cppScanner) scanContent(lexer *ts.Lexer) bool {
 		}
 
 		if delimiterIndex == -1 && lexer.Lookahead == ')' {
-			// The content stops before the closing run, which the scanner
-			// still reads through, outside the token.
+			// The token stops here, and the closing run is read outside it.
 			lexer.MarkEnd()
 			delimiterIndex = 0
 		}
