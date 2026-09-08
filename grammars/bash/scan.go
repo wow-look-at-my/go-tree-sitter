@@ -2,10 +2,10 @@ package bash
 
 import ts "github.com/wow-look-at-my/go-tree-sitter"
 
-// The C scanner jumps forward with goto into four labelled sections. Go cannot
-// jump over declarations, so each section is a function, and an entry point
-// says which one to try first. A section whose guard fails falls through to the
-// next, exactly as the C does.
+// The C scanner jumps forward with goto into labelled sections. Go cannot jump
+// over declarations, so each section is a function, and an entry point says
+// where to resume. A section whose guard fails falls through to the next,
+// exactly as the C does.
 const (
 	entryTop = iota
 	entryRegex
@@ -47,8 +47,8 @@ func (s *bashScanner) scanFrom(entry int, lexer *ts.Lexer, valid []bool) bool {
 	return false
 }
 
-// scanHead runs everything before the first label. It reports whether it
-// finished, its result, and where to resume when it did not.
+// scanHead runs everything above the labels. It reports whether it finished,
+// its result, and where to resume when it did not.
 func (s *bashScanner) scanHead(lexer *ts.Lexer, valid []bool) (bool, bool, int) {
 	if done, result := s.scanConcat(lexer, valid); done {
 		return true, result, entryTop

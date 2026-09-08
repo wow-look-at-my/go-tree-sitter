@@ -43,6 +43,9 @@ const (
 	errorRecovery
 )
 
+// esac has no branch in the scanner. The constant keeps the token order right.
+var _ = esac
+
 // serializationBufferSize is the runtime's cap on a serialized scanner state.
 const serializationBufferSize = 1024
 
@@ -160,8 +163,7 @@ func (h *heredoc) reset() {
 
 func (s *bashScanner) back() *heredoc { return &s.heredocs[len(s.heredocs)-1] }
 
-// cString compares two byte runs the way strcmp does, stopping at the first
-// zero byte in either.
+// cString compares byte runs the way strcmp does, stopping at a NUL in either.
 func cString(a, b []byte) bool {
 	for i := 0; ; i++ {
 		var x, y byte

@@ -38,7 +38,7 @@ func (s *bashScanner) scanVariableName(lexer *ts.Lexer, valid []bool) (bool, boo
 		break
 	}
 
-	// Not one of '*', '@', '?', '-', '$', '0' or '_'.
+	// Excluding '*', '@', '?', '-', '$', '0' and '_'.
 	if !valid[expansionWord] &&
 		(lexer.Lookahead == '*' || lexer.Lookahead == '@' || lexer.Lookahead == '?' ||
 			lexer.Lookahead == '-' || lexer.Lookahead == '0' || lexer.Lookahead == '_') {

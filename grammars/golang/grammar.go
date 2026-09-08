@@ -15,8 +15,8 @@ var (
 	generated *ts.Language
 )
 
-// Language returns the Go grammar, decoding its tables on the first call. It
-// panics when the table is missing, rather than hand back a language that
+// Language returns the Go grammar, decoding its tables when a parse needs them.
+// It panics when the table is missing, rather than hand back a language that
 // parses nothing.
 func Language() *ts.Language {
 	loadOnce.Do(func() {

@@ -165,7 +165,7 @@ func regexNoSpaceStep(lexer *ts.Lexer, st *regexState) (bool, bool) {
 		if lexer.Lookahead == '(' {
 			return true, false
 		}
-		// A trailing dollar always means a regex, as in 99999999$.
+		// A trailing dollar always means a regex.
 		if isSpace(lexer.Lookahead) {
 			lexer.ResultSymbol = regexNoSpace
 			lexer.MarkEnd()

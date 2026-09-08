@@ -74,10 +74,10 @@ func (e *emitter) emitPackage() {
 	e.emitInit()
 }
 
-// emitInit writes the decode step. Language runs it at most once, on the first
-// parse, so a program that never touches this grammar decodes nothing. A blob
-// that will not decode panics with the package name, rather than hand back a
-// language that parses nothing.
+// emitInit writes the decode step. Language runs it when a parse needs it, so a
+// program that never touches this grammar decodes nothing. A blob that will not
+// decode panics with the package name, rather than hand back a language that
+// parses nothing.
 func (e *emitter) emitInit() {
 	e.printf("func loadTables() *ts.Language {\n")
 	e.printf("\ttables, err := ts.DecodeTables(tablesBlob)\n")
@@ -98,8 +98,8 @@ func (e *emitter) emitInit() {
 	e.printf("\treturn language\n")
 	e.printf("}\n\n")
 
-	// The only work at package start is this assignment, which is how a missing
-	// parser.go stays a named panic rather than a link error.
+	// This assignment is all that runs at package start, which keeps a missing
+	// parser.go a named panic rather than a link error.
 	e.printf("func init() { load = loadTables }\n")
 }
 
