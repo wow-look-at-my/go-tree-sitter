@@ -1,4 +1,4 @@
-package clang
+package bash
 
 import (
 	"sync"
@@ -6,7 +6,7 @@ import (
 	ts "github.com/wow-look-at-my/go-tree-sitter"
 )
 
-//go:generate go run github.com/wow-look-at-my/go-tree-sitter/cmd/ts-translate -package clang -out parser.go testdata/tree-sitter-c/src/parser.c
+//go:generate go run github.com/wow-look-at-my/go-tree-sitter/cmd/ts-translate -package bash -out parser.go testdata/tree-sitter-bash/src/parser.c
 
 // load is set by the parser.go that the generate step writes.
 var (
@@ -15,7 +15,7 @@ var (
 	generated *ts.Language
 )
 
-// Language returns the C grammar, decoding its tables on the first call. It
+// Language returns the Bash grammar, decoding its tables on the first call. It
 // panics when the table is missing, rather than hand back a language that
 // parses nothing.
 func Language() *ts.Language {
@@ -25,7 +25,7 @@ func Language() *ts.Language {
 		}
 	})
 	if generated == nil {
-		panic("clang: parser.go is missing. Run: go generate ./grammars/clang")
+		panic("bash: parser.go is missing. Run: go generate ./grammars/bash")
 	}
 	return generated
 }

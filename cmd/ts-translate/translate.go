@@ -74,10 +74,12 @@ func (e *emitter) emitPackage() {
 	e.emitInit()
 }
 
-// emitInit writes the decode step. A blob that will not decode panics with the
-// package name, rather than register a language that parses nothing.
+// emitInit writes the decode step. Language runs it at most once, on the first
+// parse, so a program that never touches this grammar decodes nothing. A blob
+// that will not decode panics with the package name, rather than hand back a
+// language that parses nothing.
 func (e *emitter) emitInit() {
-	e.printf("func init() {\n")
+	e.printf("func loadTables() *ts.Language {\n")
 	e.printf("\ttables, err := ts.DecodeTables(tablesBlob)\n")
 	e.printf("\tif err != nil {\n")
 	e.printf("\t\tpanic(%q + err.Error())\n", e.pkg+": reading "+tablesFile+": ")
@@ -93,8 +95,12 @@ func (e *emitter) emitInit() {
 	if e.file.hasScanner {
 		e.printf("\tlanguage.Scanner = scanner{}\n")
 	}
-	e.printf("\tgenerated = language\n")
-	e.printf("}\n")
+	e.printf("\treturn language\n")
+	e.printf("}\n\n")
+
+	// The only work at package start is this assignment, which is how a missing
+	// parser.go stays a named panic rather than a link error.
+	e.printf("func init() { load = loadTables }\n")
 }
 
 func collectSets(st lexStmt, names map[string]bool) {

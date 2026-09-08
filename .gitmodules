@@ -10,3 +10,6 @@
 [submodule "grammars/rust/testdata/tree-sitter-rust"]
 	path = grammars/rust/testdata/tree-sitter-rust
 	url = https://github.com/tree-sitter/tree-sitter-rust.git
+[submodule "grammars/bash/testdata/tree-sitter-bash"]
+	path = grammars/bash/testdata/tree-sitter-bash
+	url = https://github.com/tree-sitter/tree-sitter-bash.git
