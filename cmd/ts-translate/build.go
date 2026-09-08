@@ -291,15 +291,14 @@ func buildMetadata(d *arrayDecl) []ts.SymbolMetadata {
 	return out
 }
 
+// buildLexModes keeps the positional entry a state with no lexer carries. That
+// sentinel is how the runtime finds the end of a non-terminal extra rule.
 func buildLexModes(d *arrayDecl) []ts.LexerMode {
 	out := make([]ts.LexerMode, dimension(d, 0))
 	walk(d.value, func(index int, el *initValue) {
 		if index >= len(out) {
 			return
 		}
-		// A state with no lexer is written positionally, as a cast of a negative
-		// value, while every other state names its fields. That sentinel is how
-		// the runtime finds the end of a non-terminal extra, so it must survive.
 		var m ts.LexerMode
 		positional := 0
 
