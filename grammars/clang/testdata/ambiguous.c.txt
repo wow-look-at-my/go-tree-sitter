@@ -1,0 +1,13 @@
+typedef int myint;
+
+myint *a;
+
+void f(void) {
+	int b = 1;
+	int c = 2;
+	b *c;
+	(void)sizeof(int);
+	(void)sizeof b;
+	long *d = (long *)&b;
+	*d = 3;
+}
