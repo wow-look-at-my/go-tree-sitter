@@ -12,7 +12,7 @@ func goExpr(e expr) string {
 	case exprIdent:
 		return v.name
 	case exprSetContains:
-		return fmt.Sprintf("ts.SetContains(%s, lookahead)", v.set)
+		return fmt.Sprintf("ts.SetContains(%s, lookahead)", goIdent(v.set))
 	case exprUnary:
 		return "(" + v.op + goExpr(v.x) + ")"
 	case exprBinary:
