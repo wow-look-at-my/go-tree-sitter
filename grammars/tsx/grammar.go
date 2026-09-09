@@ -6,24 +6,36 @@
 package tsx
 
 import (
-	_ "embed"
 	"sync"
 
 	ts "github.com/wow-look-at-my/go-tree-sitter"
 	"github.com/wow-look-at-my/go-tree-sitter/grammars/typescript"
 )
 
-//go:generate go run github.com/wow-look-at-my/go-tree-sitter/cmd/ts-translate -out tables.zst ../typescript/testdata/tree-sitter-typescript/tsx/src/parser.c
-
-//go:embed tables.zst
-var tables []byte
+//go:generate go run github.com/wow-look-at-my/go-tree-sitter/cmd/ts-translate -package tsx -scanner github.com/wow-look-at-my/go-tree-sitter/grammars/typescript -out parser.go ../typescript/testdata/tree-sitter-typescript/tsx/src/parser.c
 
 // Scanner returns the scanner this grammar shares with typescript.
 func Scanner() ts.ExternalScanner { return typescript.Scanner() }
 
-var language = sync.OnceValue(func() *ts.Language {
-	return ts.LoadGrammar("tsx", tables, typescript.Scanner())
-})
+// load is set by the parser.go that the generate step writes. The tables are
+// data and are generated at build time, so this half compiles without them.
+var (
+	load      func() *ts.Language
+	loadOnce  sync.Once
+	generated *ts.Language
+)
 
-// Language returns the TSX grammar, decoding its tables when a parse needs them.
-func Language() *ts.Language { return language() }
+// Language returns the TSX grammar, decoding its tables when a parse needs
+// them. It panics when the generate step has not run, rather than hand back a
+// language that parses nothing.
+func Language() *ts.Language {
+	loadOnce.Do(func() {
+		if load != nil {
+			generated = load()
+		}
+	})
+	if generated == nil {
+		panic("tsx: parser.go is missing. Run: go generate ./grammars/tsx")
+	}
+	return generated
+}

@@ -1,23 +1,35 @@
 package bash
 
 import (
-	_ "embed"
 	"sync"
 
 	ts "github.com/wow-look-at-my/go-tree-sitter"
 )
 
-//go:generate go run github.com/wow-look-at-my/go-tree-sitter/cmd/ts-translate -out tables.zst testdata/tree-sitter-bash/src/parser.c
-
-//go:embed tables.zst
-var tables []byte
+//go:generate go run github.com/wow-look-at-my/go-tree-sitter/cmd/ts-translate -package bash -out parser.go testdata/tree-sitter-bash/src/parser.c
 
 // Scanner returns the hand written external scanner.
 func Scanner() ts.ExternalScanner { return scanner{} }
 
-var language = sync.OnceValue(func() *ts.Language {
-	return ts.LoadGrammar("bash", tables, scanner{})
-})
+// load is set by the parser.go that the generate step writes. The tables are
+// data and are generated at build time, so this half compiles without them.
+var (
+	load      func() *ts.Language
+	loadOnce  sync.Once
+	generated *ts.Language
+)
 
-// Language returns the Bash grammar, decoding its tables when a parse needs them.
-func Language() *ts.Language { return language() }
+// Language returns the Bash grammar, decoding its tables when a parse needs
+// them. It panics when the generate step has not run, rather than hand back a
+// language that parses nothing.
+func Language() *ts.Language {
+	loadOnce.Do(func() {
+		if load != nil {
+			generated = load()
+		}
+	})
+	if generated == nil {
+		panic("bash: parser.go is missing. Run: go generate ./grammars/bash")
+	}
+	return generated
+}

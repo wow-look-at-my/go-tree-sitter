@@ -57,9 +57,9 @@ Go, C, C++, Rust, Bash, JavaScript, TypeScript and TSX.
 
 A grammar that ships a hand-written `scanner.c` needs that scanner ported by hand. No machine translation reads C well enough to do it. `grammars/*/scanner.go` is that port. The upstream corpus says whether it is right. TSX shares TypeScript's scanner, the way upstream compiles both from one header.
 
-`ts-translate` writes one file per grammar. That file is `tables.zst`. It is COMMITTED. A module carries no submodule and gets no generate step. So `go get` hands a consumer the C the tables come from, and no way to translate it. CI runs `go generate` and fails on a dirty tree. A committed blob that no longer matches its submodule is therefore a red build, never a stale answer.
+`ts-translate` writes `tables.zst` per grammar, and the `parser.go` that embeds it. Neither is committed. Both are derived. The repository keeps the input, and the generate step produces the rest at build time, into the binary. `grammar.go` beside them is hand written and compiles without them, which is what lets a consumer import a grammar for its `Scanner()`. `Language()` panics until the generate step has run.
 
-The blob holds the lexer too. A tree-sitter lexer arrives as a C function of a few thousand `goto`s. Translating that into Go source puts about a megabyte of generated code in the tree, per grammar. It is a state machine, so it travels as data instead. `lexprog.go` defines sixteen instructions and runs them. A whole parse costs about 12% more than the compiled form did, which `BenchmarkParse` measures. Everything checked in here is source somebody wrote.
+The blob holds the lexer too. A tree-sitter lexer arrives as a C function of a few thousand `goto`s. Translating that into Go source put about a megabyte of it in each grammar. It is a state machine, so it travels as data instead. The generated Go is down to the loader that embeds the blob. `lexprog.go` defines sixteen instructions and runs them. A whole parse costs about 12% more than the compiled form did, which `BenchmarkParse` measures.
 
 ## The limit worth knowing
 
