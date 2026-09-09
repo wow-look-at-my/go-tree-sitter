@@ -1,24 +1,9 @@
 package main
 
-import (
-	"fmt"
-	"strings"
-)
-
 type emitter struct {
 	file *cFile
-	sb   *strings.Builder
-	pkg  string
 	// setIndex maps a character set's C name to its encoded position.
 	setIndex map[string]int
-	// standalone emits Language here rather than in a hand written sibling.
-	standalone bool
-	// scannerPkg is the import path supplying the grammar's external scanner.
-	scannerPkg string
-}
-
-func (e *emitter) printf(format string, args ...any) {
-	fmt.Fprintf(e.sb, format, args...)
 }
 
 func (e *emitter) constant(name string) int64 {
