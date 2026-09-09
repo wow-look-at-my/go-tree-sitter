@@ -19,6 +19,8 @@ const tablesFile = "tables.zst"
 func main() {
 	pkg := flag.String("package", "", "name of the generated Go package")
 	out := flag.String("out", "", "path of the generated Go file")
+	standalone := flag.Bool("standalone", false,
+		"emit Language here, for a package with no hand written half")
 	scanner := flag.String("scanner", "",
 		"import path of the package whose Scanner the grammar needs")
 	flag.Parse()
@@ -44,7 +46,7 @@ func main() {
 		fmt.Fprintln(os.Stderr, "encoding the tables:", err)
 		os.Exit(1)
 	}
-	loader := emitLoader(*pkg, scannerExpr(e.file.hasScanner, *scanner), *scanner)
+	loader := emitLoader(*pkg, scannerExpr(e.file.hasScanner, *scanner), *scanner, *standalone)
 
 	dir := filepath.Dir(*out)
 	if err := os.MkdirAll(dir, 0o755); err != nil {
