@@ -1,7 +1,7 @@
 /build/
 
-# ts-translate writes each grammar's parse table from the parser.c its own
-# submodule carries. The output is derived and large, so the repository keeps
-# the input and generates the rest.
+# ts-translate writes each grammar's table blob and the loader that embeds it,
+# from the parser.c its own submodule carries. Both are derived, so the
+# repository keeps the input and generates the rest at build time.
 grammars/*/parser.go
 grammars/*/tables.zst

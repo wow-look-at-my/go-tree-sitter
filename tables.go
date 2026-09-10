@@ -17,15 +17,18 @@ import (
 // tablesFormat changes whenever the section order below changes.
 const (
 	tablesMagic  = "TSGO"
-	tablesFormat = 1
+	tablesFormat = 2
 )
 
-// The embedded Language's function fields and scanner are not encoded: they
-// are code, and the generated package supplies them.
+// The embedded Language's function fields and its scanner are not encoded. An
+// external scanner is hand written Go, and the grammar package installs it.
 type Tables struct {
 	Language
-	// CharacterSets holds the sets the generated lexer searches.
+	// CharacterSets holds the sets the lexer searches.
 	CharacterSets [][]CharacterRange
+	// Lex and KeywordLex are the grammar's lexer state machines.
+	Lex        *LexProgram
+	KeywordLex *LexProgram
 }
 
 // zstd, chosen on DECODE speed. codec_test.go measures it against brotli.
@@ -123,6 +126,8 @@ func (w *tableWriter) encode(t *Tables) {
 	w.bools(l.ExternalScannerStates)
 	w.symbols(l.ExternalScannerSymbol)
 	w.charSets(t.CharacterSets)
+	w.lexProgram(t.Lex)
+	w.lexProgram(t.KeywordLex)
 }
 
 // decode reads every section, in the order encode wrote them.
@@ -163,6 +168,8 @@ func (r *tableReader) decode(t *Tables) {
 	l.ExternalScannerStates = r.bools()
 	l.ExternalScannerSymbol = r.symbols()
 	t.CharacterSets = r.charSets()
+	t.Lex = r.lexProgram()
+	t.KeywordLex = r.lexProgram()
 }
 
 type tableWriter struct {
@@ -306,6 +313,31 @@ func (w *tableWriter) charSets(v [][]CharacterRange) {
 		for _, rng := range set {
 			w.u32(uint32(rng.Start))
 			w.u32(uint32(rng.End))
+		}
+	}
+}
+
+// lexProgram writes a lexer state machine. A grammar with no keyword lexer
+// writes a zero instruction count, which reads back as no program at all.
+func (w *tableWriter) lexProgram(p *LexProgram) {
+	if p == nil {
+		w.u32(0)
+		return
+	}
+	w.u32(uint32(len(p.Code)))
+	for _, ins := range p.Code {
+		w.u8(uint8(ins.Op))
+		w.u32(uint32(ins.Arg))
+	}
+	w.u32(uint32(len(p.States)))
+	for _, s := range p.States {
+		w.u32(uint32(s))
+	}
+	w.u32(uint32(len(p.Maps)))
+	for _, m := range p.Maps {
+		w.u32(uint32(len(m)))
+		for _, v := range m {
+			w.u32(uint32(v))
 		}
 	}
 }
@@ -551,4 +583,37 @@ func (r *tableReader) charSets() [][]CharacterRange {
 		out[i] = set
 	}
 	return out
+}
+
+func (r *tableReader) lexProgram() *LexProgram {
+	n := r.count(5)
+	if n == 0 {
+		return nil
+	}
+	p := &LexProgram{Code: make([]LexInstr, n)}
+	for i := range p.Code {
+		p.Code[i].Op = LexOp(r.u8())
+		p.Code[i].Arg = int32(r.u32())
+	}
+	if n := r.count(4); n > 0 {
+		p.States = make([]int32, n)
+		for i := range p.States {
+			p.States[i] = int32(r.u32())
+		}
+	}
+	if n := r.count(4); n > 0 {
+		p.Maps = make([][]int32, n)
+		for i := range p.Maps {
+			size := r.count(4)
+			if size == 0 {
+				continue
+			}
+			m := make([]int32, size)
+			for j := range m {
+				m[j] = int32(r.u32())
+			}
+			p.Maps[i] = m
+		}
+	}
+	return p
 }

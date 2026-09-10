@@ -10,7 +10,7 @@ A `grammar.js` file is data. It describes a language and it parses nothing.
 
 `tree-sitter generate` reads that data and emits a parse table, as C source. The table is the language.
 
-A runtime walks that table against real bytes and builds a tree. This repository is the runtime. `grammars/` holds tables translated from the generated C into Go by `cmd/ts-translate`.
+A runtime walks that table against real bytes and builds a tree. This repository is the runtime. `grammars/` holds tables `cmd/ts-translate` reads out of that C.
 
 ## Install
 
@@ -56,6 +56,10 @@ The corpus reader is a port of the tree-sitter CLI's own reader. A case is there
 Go, C, C++, Rust, Bash, JavaScript, TypeScript and TSX.
 
 A grammar that ships a hand-written `scanner.c` needs that scanner ported by hand. No machine translation reads C well enough to do it. `grammars/*/scanner.go` is that port. The upstream corpus says whether it is right. TSX shares TypeScript's scanner, the way upstream compiles both from one header.
+
+`ts-translate` writes `tables.zst` per grammar, and the `parser.go` that embeds it. Neither is committed. Both are derived. The repository keeps the input, and the generate step produces the rest at build time, into the binary. `grammar.go` beside them is hand written and compiles without them, which is what lets a consumer import a grammar for its `Scanner()`. `Language()` panics until the generate step has run.
+
+The blob holds the lexer too. A tree-sitter lexer arrives as a C function of a few thousand `goto`s. Translating that into Go source put about a megabyte of it in each grammar. It is a state machine, so it travels as data instead. The generated Go is down to the loader that embeds the blob. `lexprog.go` defines sixteen instructions and runs them. A whole parse costs about 12% more than the compiled form did, which `BenchmarkParse` measures.
 
 ## The limit worth knowing
 

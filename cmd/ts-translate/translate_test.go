@@ -2,7 +2,6 @@ package main
 
 import (
 	"os"
-	"strings"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -11,22 +10,22 @@ import (
 )
 
 // The pinned grammars this test translates. Bash carries an external scanner
-// and C carries none, so both halves of the emitted package are exercised.
+// and C carries none, so both shapes of grammar are exercised.
 var pinnedGrammars = map[string]string{
 	"bash":  "../../grammars/bash/testdata/tree-sitter-bash/src/parser.c",
 	"clang": "../../grammars/clang/testdata/tree-sitter-c/src/parser.c",
 }
 
 // The generator has to survive a real parser.c, not a fixture shaped to suit
-// it. This runs the whole path: tokenize, parse, build the tables, encode them,
-// decode them back, and emit the package.
+// it. This runs the whole path: tokenize, parse, build the tables and the lexer
+// program, encode them, and decode them back.
 func TestARealGrammarTranslatesAndDecodes(t *testing.T) {
 	for pkg, path := range pinnedGrammars {
 		t.Run(pkg, func(t *testing.T) {
 			src, err := os.ReadFile(path)
 			require.NoError(t, err, "the grammar submodule is not checked out")
 
-			e := &emitter{file: parseFile(tokenize(src)), sb: &strings.Builder{}, pkg: pkg}
+			e := &emitter{file: parseFile(tokenize(src))}
 			tables := e.buildTables()
 			require.NoError(t, checkABI(tables.Language.ABIVersion))
 
@@ -36,6 +35,10 @@ func TestARealGrammarTranslatesAndDecodes(t *testing.T) {
 			assert.NotEmpty(t, tables.Language.ParseActions)
 			assert.NotEmpty(t, tables.CharacterSets)
 
+			require.NotNil(t, tables.Lex)
+			assert.NotEmpty(t, tables.Lex.Code)
+			assert.NotEmpty(t, tables.Lex.States)
+
 			blob, err := ts.EncodeTables(tables)
 			require.NoError(t, err)
 			decoded, err := ts.DecodeTables(blob)
@@ -43,45 +46,37 @@ func TestARealGrammarTranslatesAndDecodes(t *testing.T) {
 			assert.Equal(t, tables.Language.SymbolCount, decoded.Language.SymbolCount)
 			assert.Equal(t, tables.Language.ABIVersion, decoded.Language.ABIVersion)
 			assert.Equal(t, tables.Language.SymbolNames, decoded.Language.SymbolNames)
-
-			e.emitPackage()
-			out := e.sb.String()
-			assert.Contains(t, out, "package "+pkg)
-			assert.Contains(t, out, "func tsLex(")
-			assert.Contains(t, out, "func loadTables()")
+			assert.Equal(t, tables.Lex, decoded.Lex)
+			assert.Equal(t, tables.KeywordLex, decoded.KeywordLex)
 		})
 	}
 }
 
-// A grammar with an external scanner has to reach it. A package that omits the
-// wiring parses without the tokens the scanner alone produces.
-func TestAGrammarWithAScannerWiresOneUp(t *testing.T) {
+// Every state the lexer can enter needs an entry point, and every jump has to
+// land inside the program. A dangling entry point or jump is a lexer that walks
+// off its own instruction stream at parse time.
+func TestTheLexProgramIsInternallyConsistent(t *testing.T) {
 	src, err := os.ReadFile(pinnedGrammars["bash"])
 	require.NoError(t, err)
 
-	e := &emitter{
-		file: parseFile(tokenize(src)), sb: &strings.Builder{}, pkg: "bash",
-		scannerPkg: "example.com/grammar",
-	}
-	require.True(t, e.file.hasScanner)
-	e.buildTables()
-	e.emitPackage()
-	assert.Contains(t, e.sb.String(), "language.Scanner = grammar.Scanner()")
-}
+	e := &emitter{file: parseFile(tokenize(src))}
+	p := e.buildTables().Lex
+	require.NotNil(t, p)
 
-// The standalone form supplies the accessor a package with no hand written half
-// would otherwise lack.
-func TestTheStandaloneFormEmitsItsOwnAccessor(t *testing.T) {
-	src, err := os.ReadFile(pinnedGrammars["clang"])
-	require.NoError(t, err)
-
-	e := &emitter{
-		file: parseFile(tokenize(src)), sb: &strings.Builder{},
-		pkg: "clang", standalone: true,
+	for state, pc := range p.States {
+		assert.Less(t, int(pc), len(p.Code), "state %d enters past the program", state)
 	}
-	e.buildTables()
-	e.emitPackage()
-	out := e.sb.String()
-	assert.Contains(t, out, "func Language() *ts.Language")
-	assert.NotContains(t, out, "func init() { load = loadTables }")
+	for pc, ins := range p.Code {
+		switch ins.Op {
+		case ts.OpJumpIfFalse:
+			assert.LessOrEqual(t, int(ins.Arg), len(p.Code),
+				"the jump at %d lands past the program", pc)
+		case ts.OpAdvanceMap:
+			assert.Less(t, int(ins.Arg), len(p.Maps),
+				"the advance map at %d names a map that is not there", pc)
+		case ts.OpPushSet:
+			assert.Less(t, int(ins.Arg), len(e.setIndex),
+				"the set test at %d names a set that is not there", pc)
+		}
+	}
 }

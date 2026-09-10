@@ -7,9 +7,9 @@ import (
 	ts "github.com/wow-look-at-my/go-tree-sitter"
 )
 
-// buildTables turns the parsed C tables into the value the runtime encodes. The
-// lexer functions and the scanner stay out of it: those are code, and the
-// generated package installs them.
+// buildTables turns the parsed C into the value the runtime encodes: the parse
+// tables and the lexer state machines. Only the external scanner stays out of
+// it, because a scanner is hand written Go the grammar package installs.
 func (e *emitter) buildTables() *ts.Tables {
 	t := &ts.Tables{}
 	l := &t.Language
@@ -121,6 +121,8 @@ func (e *emitter) buildTables() *ts.Tables {
 	}
 
 	t.CharacterSets = e.buildCharacterSets()
+	t.Lex = e.buildLexProgram(e.file.lexFns["ts_lex"])
+	t.KeywordLex = e.buildLexProgram(e.file.lexFns["ts_lex_keywords"])
 	return t
 }
 
