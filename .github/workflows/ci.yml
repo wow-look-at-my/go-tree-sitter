@@ -23,3 +23,6 @@ jobs:
         with:
           # Approves the //go:generate directives; editing one fails the build with the new value.
           generate: c2c134de5491
+        env:
+          # Pinned: v505's stdlib fails vet's export-data-retry parse in go-toolchain.
+          GO_TOOLCHAIN_COSMO_VERSION: v504
