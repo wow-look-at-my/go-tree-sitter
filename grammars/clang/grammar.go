@@ -6,6 +6,7 @@ import (
 	ts "github.com/wow-look-at-my/go-tree-sitter"
 )
 
+//go:generate go run github.com/wow-look-at-my/go-tree-sitter/cmd/ts-fetch -repo tree-sitter/tree-sitter-c -rev b780e47fc780ddc8da13afa35a3f4ed5c157823d -dir testdata/tree-sitter-c
 //go:generate go run github.com/wow-look-at-my/go-tree-sitter/cmd/ts-translate -package clang -out parser.go testdata/tree-sitter-c/src/parser.c
 
 // load is set by the parser.go that the generate step writes. The tables are
