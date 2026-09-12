@@ -6,6 +6,7 @@ import (
 	ts "github.com/wow-look-at-my/go-tree-sitter"
 )
 
+//go:generate go run github.com/wow-look-at-my/go-tree-sitter/cmd/ts-fetch -repo tree-sitter/tree-sitter-rust -rev 77a3747266f4d621d0757825e6b11edcbf991ca5 -dir testdata/tree-sitter-rust
 //go:generate go run github.com/wow-look-at-my/go-tree-sitter/cmd/ts-translate -package rust -out parser.go testdata/tree-sitter-rust/src/parser.c
 
 // Scanner returns the hand written external scanner.
