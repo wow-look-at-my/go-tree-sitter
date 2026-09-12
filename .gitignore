@@ -1,7 +1,7 @@
 /build/
 
 # ts-translate writes each grammar's table blob and the loader that embeds it,
-# from the parser.c its own submodule carries. Both are derived, so the
-# repository keeps the input and generates the rest at build time.
-grammars/*/parser.go
-grammars/*/tables.zst
+# from the parser.c its own submodule carries. Both are COMMITTED: a module
+# carries no submodule and gets no generate step, so a consumer that imports a
+# grammar has nothing to build the tables from. CI regenerates and fails on a
+# dirty tree, which is what keeps a committed table matching its grammar.

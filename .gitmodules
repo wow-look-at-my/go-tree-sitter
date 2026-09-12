@@ -19,3 +19,6 @@
 [submodule "grammars/typescript/testdata/tree-sitter-typescript"]
 	path = grammars/typescript/testdata/tree-sitter-typescript
 	url = https://github.com/tree-sitter/tree-sitter-typescript.git
+[submodule "grammars/tsx/testdata/tree-sitter-typescript"]
+	path = grammars/tsx/testdata/tree-sitter-typescript
+	url = https://github.com/tree-sitter/tree-sitter-typescript.git
