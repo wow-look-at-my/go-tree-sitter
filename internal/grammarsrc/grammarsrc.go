@@ -22,8 +22,14 @@ import (
 
 // Fetch makes dir hold the grammar at rev. It is a no-op once the sources are
 // there, so a build that already has them costs nothing.
+//
+// The sources are there when dir holds anything at all. A submodule directory
+// is empty until it is initialized, a module zip carries none of it, and a
+// download lands whole or not at all. A repository that keeps several grammars
+// has no parser.c at its top, so asking for one would fetch it again for every
+// grammar it holds.
 func Fetch(repo, rev, dir string) error {
-	if _, err := os.Stat(filepath.Join(dir, "src", "parser.c")); err == nil {
+	if entries, err := os.ReadDir(dir); err == nil && len(entries) > 0 {
 		return nil
 	}
 	if inGitWorkTree(dir) {
@@ -77,9 +83,16 @@ func inGitWorkTree(dir string) bool {
 	return err == nil && strings.TrimSpace(string(out)) == "true"
 }
 
+// codeload serves a repository's tree at any commit as a tarball.
+var codeload = "https://codeload.github.com"
+
 // download unpacks the repository's tree at rev into dir.
+//
+// The tree is unpacked beside dir and moved into place whole, so an interrupted
+// download leaves dir as it found it rather than holding a parser.c that the
+// next run would take for a complete one.
 func download(repo, rev, dir string) error {
-	url := fmt.Sprintf("https://codeload.github.com/%s/tar.gz/%s", repo, rev)
+	url := fmt.Sprintf("%s/%s/tar.gz/%s", codeload, repo, rev)
 	resp, err := http.Get(url)
 	if err != nil {
 		return fmt.Errorf("fetching %s: %w", url, err)
@@ -88,15 +101,39 @@ func download(repo, rev, dir string) error {
 	if resp.StatusCode != http.StatusOK {
 		return fmt.Errorf("fetching %s: %s", url, resp.Status)
 	}
-	unzip, err := gzip.NewReader(resp.Body)
+
+	parent := filepath.Dir(dir)
+	if err := os.MkdirAll(parent, 0o755); err != nil {
+		return err
+	}
+	staging, err := os.MkdirTemp(parent, "."+filepath.Base(dir)+"-")
 	if err != nil {
-		return fmt.Errorf("reading %s: %w", url, err)
+		return err
+	}
+	defer os.RemoveAll(staging)
+	if err := unpack(resp.Body, staging); err != nil {
+		return fmt.Errorf("unpacking %s: %w", url, err)
+	}
+	if err := os.Chmod(staging, 0o755); err != nil {
+		return err
+	}
+	// A submodule that was never initialized is an empty directory, which is
+	// what the move replaces. Anything else there is not ours to remove.
+	if err := os.Remove(dir); err != nil && !os.IsNotExist(err) {
+		return fmt.Errorf("making room for the sources: %w", err)
+	}
+	return os.Rename(staging, dir)
+}
+
+// unpack writes a gzipped tarball into dir, dropping the one top directory
+// codeload wraps everything in.
+func unpack(body io.Reader, dir string) error {
+	unzip, err := gzip.NewReader(body)
+	if err != nil {
+		return err
 	}
 	defer unzip.Close()
 
-	if err := os.MkdirAll(dir, 0o755); err != nil {
-		return err
-	}
 	archive := tar.NewReader(unzip)
 	for {
 		hdr, err := archive.Next()
@@ -106,7 +143,6 @@ func download(repo, rev, dir string) error {
 		if err != nil {
 			return err
 		}
-		// codeload wraps everything in one <name>-<rev>/ directory.
 		_, rel, split := strings.Cut(hdr.Name, "/")
 		if !split || rel == "" {
 			continue
@@ -133,9 +169,13 @@ func extract(archive *tar.Reader, hdr *tar.Header, dest string) error {
 		if err != nil {
 			return err
 		}
-		defer file.Close()
-		_, err = io.Copy(file, archive)
-		return err
+		if _, err := io.Copy(file, archive); err != nil {
+			file.Close()
+			return err
+		}
+		return file.Close()
 	}
-	return nil
+	// A link or a device would come out of a checkout as something this does
+	// not write, so the tree would differ from the submodule's without a word.
+	return fmt.Errorf("refusing entry %q of type %q", hdr.Name, hdr.Typeflag)
 }
