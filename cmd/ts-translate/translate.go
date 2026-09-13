@@ -29,7 +29,7 @@ func main() {
 		os.Exit(2)
 	}
 
-	src, err := os.ReadFile(flag.Arg(0))
+	src, err := readSource(flag.Arg(0))
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
