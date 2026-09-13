@@ -11,6 +11,7 @@ import (
 	"path/filepath"
 
 	ts "github.com/wow-look-at-my/go-tree-sitter"
+	"github.com/wow-look-at-my/go-tree-sitter/internal/grammarsrc"
 )
 
 // tablesFile is the compressed table blob the generated loader embeds.
@@ -23,10 +24,28 @@ func main() {
 		"emit Language here, for a package with no hand written half")
 	scanner := flag.String("scanner", "",
 		"import path of the package whose Scanner the grammar needs")
+	repo := flag.String("repo", "",
+		"upstream repository the grammar comes from, as owner/name")
+	rev := flag.String("rev", "", "commit of that repository to read")
 	flag.Parse()
 	if flag.NArg() != 1 || *pkg == "" || *out == "" {
 		fmt.Fprintln(os.Stderr, "usage: ts-translate -package NAME -out FILE parser.c")
 		os.Exit(2)
+	}
+	if (*repo == "") != (*rev == "") {
+		fmt.Fprintln(os.Stderr, "ts-translate: -repo and -rev go together")
+		os.Exit(2)
+	}
+
+	// A module zip carries the submodule's gitlink and none of its files, so a
+	// consumer's copy of this path is empty. Fetching here rather than in a
+	// second directive is what stops a caller from writing one and not the
+	// other, which reads as a working grammar until something asks it to parse.
+	if *repo != "" {
+		if err := fetchGrammar(flag.Arg(0), *repo, *rev); err != nil {
+			fmt.Fprintln(os.Stderr, "ts-translate:", err)
+			os.Exit(1)
+		}
 	}
 
 	src, err := os.ReadFile(flag.Arg(0))
@@ -63,6 +82,17 @@ func main() {
 	}
 	fmt.Printf("%s: %s is %d bytes, %d lexer instructions\n",
 		*pkg, tablesFile, len(blob), len(tables.Lex.Code))
+}
+
+// fetchGrammar puts the sources under parser where this command can read them.
+// The caller names its parser.c, which already says where the submodule sits,
+// so it does not have to name the directory a second time.
+func fetchGrammar(parser, repo, rev string) error {
+	dir, err := grammarsrc.DirFor(parser, repo)
+	if err != nil {
+		return err
+	}
+	return grammarsrc.Fetch(repo, rev, dir)
 }
 
 // scannerExpr names the external scanner the loader installs. A grammar with no
