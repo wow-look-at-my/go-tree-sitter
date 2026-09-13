@@ -49,8 +49,8 @@ func Fetch(repo, rev, dir string) error {
 // so testdata/tree-sitter-typescript/tsx/src/parser.c answers the same
 // testdata/tree-sitter-typescript.
 func DirFor(parser, repo string) (string, error) {
-	_, name, ok := strings.Cut(repo, "/")
-	if !ok || name == "" {
+	_, name, split := strings.Cut(repo, "/")
+	if !split || name == "" {
 		return "", fmt.Errorf("repository %q is not owner/name", repo)
 	}
 	dir := filepath.Dir(filepath.Clean(parser))
@@ -88,18 +88,18 @@ func download(repo, rev, dir string) error {
 	if resp.StatusCode != http.StatusOK {
 		return fmt.Errorf("fetching %s: %s", url, resp.Status)
 	}
-	gz, err := gzip.NewReader(resp.Body)
+	unzip, err := gzip.NewReader(resp.Body)
 	if err != nil {
 		return fmt.Errorf("reading %s: %w", url, err)
 	}
-	defer gz.Close()
+	defer unzip.Close()
 
 	if err := os.MkdirAll(dir, 0o755); err != nil {
 		return err
 	}
-	tr := tar.NewReader(gz)
+	archive := tar.NewReader(unzip)
 	for {
-		hdr, err := tr.Next()
+		hdr, err := archive.Next()
 		if err == io.EOF {
 			return nil
 		}
@@ -107,18 +107,18 @@ func download(repo, rev, dir string) error {
 			return err
 		}
 		// codeload wraps everything in one <name>-<rev>/ directory.
-		_, rel, ok := strings.Cut(hdr.Name, "/")
-		if !ok || rel == "" {
+		_, rel, split := strings.Cut(hdr.Name, "/")
+		if !split || rel == "" {
 			continue
 		}
-		if err := extract(tr, hdr, filepath.Join(dir, filepath.FromSlash(rel))); err != nil {
+		if err := extract(archive, hdr, filepath.Join(dir, filepath.FromSlash(rel))); err != nil {
 			return err
 		}
 	}
 }
 
 // extract writes one archive entry, refusing a path that escapes dir.
-func extract(tr *tar.Reader, hdr *tar.Header, dest string) error {
+func extract(archive *tar.Reader, hdr *tar.Header, dest string) error {
 	if strings.Contains(hdr.Name, "..") {
 		return fmt.Errorf("refusing entry %q", hdr.Name)
 	}
@@ -134,7 +134,7 @@ func extract(tr *tar.Reader, hdr *tar.Header, dest string) error {
 			return err
 		}
 		defer file.Close()
-		_, err = io.Copy(file, tr)
+		_, err = io.Copy(file, archive)
 		return err
 	}
 	return nil
