@@ -11,6 +11,7 @@ import (
 	"path/filepath"
 
 	ts "github.com/wow-look-at-my/go-tree-sitter"
+	"github.com/wow-look-at-my/go-tree-sitter/internal/grammarsrc"
 )
 
 // tablesFile is the compressed table blob the generated loader embeds.
@@ -23,15 +24,22 @@ func main() {
 		"emit Language here, for a package with no hand written half")
 	scanner := flag.String("scanner", "",
 		"import path of the package whose Scanner the grammar needs")
+	repo := flag.String("repo", "",
+		"upstream repository the grammar comes from, as owner/name")
+	rev := flag.String("rev", "", "commit of that repository to read")
 	flag.Parse()
 	if flag.NArg() != 1 || *pkg == "" || *out == "" {
 		fmt.Fprintln(os.Stderr, "usage: ts-translate -package NAME -out FILE parser.c")
 		os.Exit(2)
 	}
+	if (*repo == "") != (*rev == "") {
+		fmt.Fprintln(os.Stderr, "ts-translate: -repo and -rev go together")
+		os.Exit(2)
+	}
 
-	src, err := os.ReadFile(flag.Arg(0))
+	src, err := grammarsrc.Source(flag.Arg(0), *repo, *rev)
 	if err != nil {
-		fmt.Fprintln(os.Stderr, err)
+		fmt.Fprintln(os.Stderr, "ts-translate:", err)
 		os.Exit(1)
 	}
 

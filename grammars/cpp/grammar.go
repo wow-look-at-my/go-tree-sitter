@@ -6,14 +6,12 @@ import (
 	ts "github.com/wow-look-at-my/go-tree-sitter"
 )
 
-//go:generate go run github.com/wow-look-at-my/go-tree-sitter/cmd/ts-fetch -repo tree-sitter/tree-sitter-cpp -rev 8b5b49eb196bec7040441bee33b2c9a4838d6967 -dir testdata/tree-sitter-cpp
-//go:generate go run github.com/wow-look-at-my/go-tree-sitter/cmd/ts-translate -package cpp -out parser.go testdata/tree-sitter-cpp/src/parser.c
+//go:generate go run github.com/wow-look-at-my/go-tree-sitter/cmd/ts-translate -package cpp -repo tree-sitter/tree-sitter-cpp -rev 8b5b49eb196bec7040441bee33b2c9a4838d6967 -out parser.go testdata/tree-sitter-cpp/src/parser.c
 
 // Scanner returns the hand written external scanner.
 func Scanner() ts.ExternalScanner { return scanner{} }
 
-// load is set by the parser.go that the generate step writes. The tables are
-// data and are generated at build time, so this half compiles without them.
+// load is set by the parser.go that the generate step writes.
 var (
 	load      func() *ts.Language
 	loadOnce  sync.Once
