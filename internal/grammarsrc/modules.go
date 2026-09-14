@@ -19,15 +19,15 @@ import (
 // grammars themselves are not. The fetch takes the tip of the default branch,
 // since .gitmodules records a URL and no commit.
 func FetchFromModules(parser string) error {
-	abs, err := filepath.Abs(parser)
+	absolute, err := filepath.Abs(parser)
 	if err != nil {
 		return err
 	}
-	root, contents, err := FindModules(filepath.Dir(abs))
+	root, contents, err := FindModules(filepath.Dir(absolute))
 	if err != nil {
 		return err
 	}
-	dir, url, err := SubmoduleFor(root, ParseModules(contents), abs)
+	dir, url, err := SubmoduleFor(root, ParseModules(contents), absolute)
 	if err != nil {
 		return err
 	}
@@ -113,11 +113,11 @@ func SubmoduleFor(root string, urls map[string]string, target string) (dir, url 
 // serves. Both spellings git writes into .gitmodules are read: the https URL
 // and the scp-like ssh one.
 func RepoFor(url string) (string, error) {
-	rest, isHTTPS := strings.CutPrefix(url, "https://github.com/")
-	if !isHTTPS {
-		rest, isHTTPS = strings.CutPrefix(url, "git@github.com:")
+	rest, isGitHub := strings.CutPrefix(url, "https://github.com/")
+	if !isGitHub {
+		rest, isGitHub = strings.CutPrefix(url, "git@github.com:")
 	}
-	if !isHTTPS {
+	if !isGitHub {
 		return "", fmt.Errorf("%q is not a github.com repository", url)
 	}
 	rest = strings.TrimSuffix(strings.TrimSuffix(rest, "/"), ".git")
