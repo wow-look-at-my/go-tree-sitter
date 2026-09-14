@@ -41,16 +41,10 @@ func main() {
 	// consumer's copy of this path is empty. Fetching here rather than in a
 	// second directive is what stops a caller from writing one and not the
 	// other, which reads as a working grammar until something asks it to parse.
-	if *repo != "" {
-		if err := fetchGrammar(flag.Arg(0), *repo, *rev); err != nil {
-			fmt.Fprintln(os.Stderr, "ts-translate:", err)
-			os.Exit(1)
-		}
-	}
-
-	src, err := os.ReadFile(flag.Arg(0))
+	// A caller that names no repository has the one .gitmodules records.
+	src, err := grammarsrc.Source(flag.Arg(0), *repo, *rev)
 	if err != nil {
-		fmt.Fprintln(os.Stderr, err)
+		fmt.Fprintln(os.Stderr, "ts-translate:", err)
 		os.Exit(1)
 	}
 
@@ -82,17 +76,6 @@ func main() {
 	}
 	fmt.Printf("%s: %s is %d bytes, %d lexer instructions\n",
 		*pkg, tablesFile, len(blob), len(tables.Lex.Code))
-}
-
-// fetchGrammar puts the sources under parser where this command can read them.
-// The caller names its parser.c, which already says where the submodule sits,
-// so it does not have to name the directory a second time.
-func fetchGrammar(parser, repo, rev string) error {
-	dir, err := grammarsrc.DirFor(parser, repo)
-	if err != nil {
-		return err
-	}
-	return grammarsrc.Fetch(repo, rev, dir)
 }
 
 // scannerExpr names the external scanner the loader installs. A grammar with no

@@ -28,9 +28,14 @@ import (
 // download lands whole or not at all. A repository that keeps several grammars
 // has no parser.c at its top, so asking for one would fetch it again for every
 // grammar it holds.
+//
+// An empty rev takes the tip of the repository's default branch.
 func Fetch(repo, rev, dir string) error {
 	if entries, err := os.ReadDir(dir); err == nil && len(entries) > 0 {
 		return nil
+	}
+	if rev == "" {
+		rev = "HEAD"
 	}
 	if inGitWorkTree(dir) {
 		cmd := exec.Command("git", "submodule", "update", "--init", "--depth", "1", "--", dir)
@@ -42,6 +47,43 @@ func Fetch(repo, rev, dir string) error {
 		// through to the download rather than failing the generate.
 	}
 	return download(repo, rev, dir)
+}
+
+// Source answers the grammar source at parser, fetching the tree that holds it
+// when this one does not carry it.
+//
+// repo and rev pin what is fetched, and DirFor reads the directory out of
+// parser. With neither, the .gitmodules above parser names the repository and
+// the fetch takes the tip of its default branch.
+//
+// The read comes first, so a tree that already carries the file fetches
+// nothing, and a directory holding some other grammar's sources is still
+// reported rather than quietly read as this one's.
+func Source(parser, repo, rev string) ([]byte, error) {
+	src, err := os.ReadFile(parser)
+	if err == nil {
+		return src, nil
+	}
+	if !os.IsNotExist(err) {
+		return nil, err
+	}
+	if err := fetchFor(parser, repo, rev); err != nil {
+		return nil, err
+	}
+	return os.ReadFile(parser)
+}
+
+// fetchFor fetches the tree holding parser, by the repository the caller named
+// or by the one .gitmodules records.
+func fetchFor(parser, repo, rev string) error {
+	if repo == "" {
+		return FetchFromModules(parser)
+	}
+	dir, err := DirFor(parser, repo)
+	if err != nil {
+		return err
+	}
+	return Fetch(repo, rev, dir)
 }
 
 // DirFor answers the directory the submodule occupies, given a path inside it

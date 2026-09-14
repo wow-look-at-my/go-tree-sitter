@@ -115,19 +115,20 @@ func submoduleURLs(test *testing.T) map[string]string {
 	test.Helper()
 	body, err := os.ReadFile(filepath.Join(moduleRoot, ".gitmodules"))
 	require.NoError(test, err)
-	urls := map[string]string{}
-	var path string
-	for _, line := range strings.Split(string(body), "\n") {
-		key, value, isPair := strings.Cut(strings.TrimSpace(line), "=")
-		if !isPair {
-			continue
-		}
-		switch strings.TrimSpace(key) {
-		case "path":
-			path = strings.TrimSpace(value)
-		case "url":
-			urls[path] = strings.TrimSpace(value)
-		}
+	return ParseModules(body)
+}
+
+// A directive that names no repository reads the one .gitmodules records, so
+// the two have to agree on every grammar or the pinned build and the unpinned
+// one read different repositories.
+func TestEveryDeclaredURLNamesTheRepositoryItsDirectiveFetches(test *testing.T) {
+	urls := submoduleURLs(test)
+	require.NotEmpty(test, urls)
+	for _, dir := range grammarDirectives(test) {
+		test.Run(dir.pkg, func(test *testing.T) {
+			repo, err := RepoFor(urls[dir.submodule(test)])
+			require.NoError(test, err)
+			assert.Equal(test, dir.repo, repo)
+		})
 	}
-	return urls
 }
