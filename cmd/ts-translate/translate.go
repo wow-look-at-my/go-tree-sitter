@@ -37,11 +37,6 @@ func main() {
 		os.Exit(2)
 	}
 
-	// A module zip carries the submodule's gitlink and none of its files, so a
-	// consumer's copy of this path is empty. Fetching here rather than in a
-	// second directive is what stops a caller from writing one and not the
-	// other, which reads as a working grammar until something asks it to parse.
-	// A caller that names no repository has the one .gitmodules records.
 	src, err := grammarsrc.Source(flag.Arg(0), *repo, *rev)
 	if err != nil {
 		fmt.Fprintln(os.Stderr, "ts-translate:", err)

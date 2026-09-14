@@ -20,16 +20,6 @@ import (
 	"strings"
 )
 
-// Fetch makes dir hold the grammar at rev. It is a no-op once the sources are
-// there, so a build that already has them costs nothing.
-//
-// The sources are there when dir holds anything at all. A submodule directory
-// is empty until it is initialized, a module zip carries none of it, and a
-// download lands whole or not at all. A repository that keeps several grammars
-// has no parser.c at its top, so asking for one would fetch it again for every
-// grammar it holds.
-//
-// An empty rev takes the tip of the repository's default branch.
 func Fetch(repo, rev, dir string) error {
 	if entries, err := os.ReadDir(dir); err == nil && len(entries) > 0 {
 		return nil
@@ -43,22 +33,10 @@ func Fetch(repo, rev, dir string) error {
 		if err := cmd.Run(); err == nil {
 			return nil
 		}
-		// A shallow clone or a checkout with no submodule registered falls
-		// through to the download rather than failing the generate.
 	}
 	return download(repo, rev, dir)
 }
 
-// Source answers the grammar source at parser, fetching the tree that holds it
-// when this one does not carry it.
-//
-// repo and rev pin what is fetched, and DirFor reads the directory out of
-// parser. With neither, the .gitmodules above parser names the repository and
-// the fetch takes the tip of its default branch.
-//
-// The read comes first, so a tree that already carries the file fetches
-// nothing, and a directory holding some other grammar's sources is still
-// reported rather than quietly read as this one's.
 func Source(parser, repo, rev string) ([]byte, error) {
 	src, err := os.ReadFile(parser)
 	if err == nil {
@@ -73,8 +51,6 @@ func Source(parser, repo, rev string) ([]byte, error) {
 	return os.ReadFile(parser)
 }
 
-// fetchFor fetches the tree holding parser, by the repository the caller named
-// or by the one .gitmodules records.
 func fetchFor(parser, repo, rev string) error {
 	if repo == "" {
 		return FetchFromModules(parser)
@@ -88,14 +64,8 @@ func fetchFor(parser, repo, rev string) error {
 
 // DirFor answers the directory the submodule occupies, given a path inside it
 // and the repository it came from. A caller that names its parser.c already
-// names the directory, so it does not have to say it twice and the two cannot
+// names the directory, so it does not have to say it again and both cannot
 // disagree.
-//
-// The submodule's own directory is the ancestor named after the repository:
-// testdata/tree-sitter-bash/src/parser.c sits under testdata/tree-sitter-bash,
-// and a grammar that keeps several parsers in one repository is no different,
-// so testdata/tree-sitter-typescript/tsx/src/parser.c answers the same
-// testdata/tree-sitter-typescript.
 func DirFor(parser, repo string) (string, error) {
 	_, name, split := strings.Cut(repo, "/")
 	if !split || name == "" {
@@ -129,10 +99,6 @@ func inGitWorkTree(dir string) bool {
 var codeload = "https://codeload.github.com"
 
 // download unpacks the repository's tree at rev into dir.
-//
-// The tree is unpacked beside dir and moved into place whole, so an interrupted
-// download leaves dir as it found it rather than holding a parser.c that the
-// next run would take for a complete one.
 func download(repo, rev, dir string) error {
 	url := fmt.Sprintf("%s/%s/tar.gz/%s", codeload, repo, rev)
 	resp, err := http.Get(url)
@@ -167,8 +133,6 @@ func download(repo, rev, dir string) error {
 	return os.Rename(staging, dir)
 }
 
-// unpack writes a gzipped tarball into dir, dropping the one top directory
-// codeload wraps everything in.
 func unpack(body io.Reader, dir string) error {
 	unzip, err := gzip.NewReader(body)
 	if err != nil {
@@ -195,7 +159,7 @@ func unpack(body io.Reader, dir string) error {
 	}
 }
 
-// extract writes one archive entry, refusing a path that escapes dir.
+// extract writes a single archive entry, refusing a path that escapes dir.
 func extract(archive *tar.Reader, hdr *tar.Header, dest string) error {
 	if strings.Contains(hdr.Name, "..") {
 		return fmt.Errorf("refusing entry %q", hdr.Name)
@@ -217,7 +181,5 @@ func extract(archive *tar.Reader, hdr *tar.Header, dest string) error {
 		}
 		return file.Close()
 	}
-	// A link or a device would come out of a checkout as something this does
-	// not write, so the tree would differ from the submodule's without a word.
 	return fmt.Errorf("refusing entry %q of type %q", hdr.Name, hdr.Typeflag)
 }

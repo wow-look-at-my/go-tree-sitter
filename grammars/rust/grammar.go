@@ -11,8 +11,7 @@ import (
 // Scanner returns the hand written external scanner.
 func Scanner() ts.ExternalScanner { return scanner{} }
 
-// load is set by the parser.go that the generate step writes. The tables are
-// data and are generated at build time, so this half compiles without them.
+// load is set by the parser.go that the generate step writes.
 var (
 	load      func() *ts.Language
 	loadOnce  sync.Once

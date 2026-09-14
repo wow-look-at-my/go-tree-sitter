@@ -14,7 +14,7 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-// entry is one member of a tarball the fake codeload serves.
+// entry is a single member of a tarball the fake codeload serves.
 type entry struct {
 	name string
 	kind byte
@@ -48,8 +48,8 @@ func tarball(test *testing.T, entries []entry) []byte {
 	return buf.Bytes()
 }
 
-// serve stands in for codeload for the rest of the test, answering one
-// repository at one commit, and counts the requests it answers.
+// serve stands in for codeload for the rest of the test, answering a
+// single repository at a single commit, and counts the requests it answers.
 func serve(test *testing.T, repo, rev string, body []byte) *int {
 	test.Helper()
 	hits := new(int)
@@ -68,8 +68,6 @@ func serve(test *testing.T, repo, rev string, body []byte) *int {
 	return hits
 }
 
-// withoutGit leaves the test a PATH that finds no git, which is the module
-// cache's situation: nothing there is a work tree, and git may not exist.
 func withoutGit(test *testing.T) {
 	test.Setenv("PATH", test.TempDir())
 }
@@ -126,8 +124,6 @@ func TestFetchFillsAnEmptySubmoduleDirectory(test *testing.T) {
 	assert.FileExists(test, filepath.Join(dir, "src", "parser.c"))
 }
 
-// Two grammars that share one repository fetch it once: the second finds the
-// tree the first left, though the repository has no parser.c at its top.
 func TestFetchIsANoOpOnceTheTreeIsThere(test *testing.T) {
 	withoutGit(test)
 	hits := serve(test, "tree-sitter/tree-sitter-demo", "feed", nil)

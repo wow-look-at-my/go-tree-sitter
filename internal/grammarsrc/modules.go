@@ -10,14 +10,6 @@ import (
 	"strings"
 )
 
-// FetchFromModules puts the sources that hold parser where a translator can
-// read them, taking the repository from the .gitmodules above parser.
-//
-// This is the answer for a caller that names no repository of its own: a
-// module zip carries .gitmodules and none of the submodule contents, so the
-// file that records where each grammar comes from is present exactly when the
-// grammars themselves are not. The fetch takes the tip of the default branch,
-// since .gitmodules records a URL and no commit.
 func FetchFromModules(parser string) error {
 	absolute, err := filepath.Abs(parser)
 	if err != nil {
@@ -90,8 +82,8 @@ func ParseModules(contents []byte) map[string]string {
 }
 
 // SubmoduleFor answers the directory and URL of the submodule holding target.
-// The longest declared path wins, so a submodule nested inside another one is
-// the answer for a file it contains.
+// The longest declared path wins, so a submodule nested inside another is the
+// answer for a file it contains.
 func SubmoduleFor(root string, urls map[string]string, target string) (dir, url string, err error) {
 	for rel, declared := range urls {
 		held := filepath.Join(root, filepath.FromSlash(rel))
@@ -110,8 +102,7 @@ func SubmoduleFor(root string, urls map[string]string, target string) (dir, url 
 }
 
 // RepoFor answers the owner/name a git URL addresses, for the hosts codeload
-// serves. Both spellings git writes into .gitmodules are read: the https URL
-// and the scp-like ssh one.
+// serves.
 func RepoFor(url string) (string, error) {
 	rest, isGitHub := strings.CutPrefix(url, "https://github.com/")
 	if !isGitHub {
@@ -128,11 +119,6 @@ func RepoFor(url string) (string, error) {
 	return owner + "/" + name, nil
 }
 
-// fetchURL makes dir hold the repository at url, at the tip of its default
-// branch. It is a no-op once the sources are there, on the same terms as Fetch.
-//
-// A host codeload does not serve is cloned with git, which is the only way to
-// read it. That clone needs git on PATH, where the download does not.
 func fetchURL(url, dir string) error {
 	if entries, err := os.ReadDir(dir); err == nil && len(entries) > 0 {
 		return nil

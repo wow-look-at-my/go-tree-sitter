@@ -8,8 +8,7 @@ import (
 
 //go:generate go run github.com/wow-look-at-my/go-tree-sitter/cmd/ts-translate -package clang -repo tree-sitter/tree-sitter-c -rev b780e47fc780ddc8da13afa35a3f4ed5c157823d -out parser.go testdata/tree-sitter-c/src/parser.c
 
-// load is set by the parser.go that the generate step writes. The tables are
-// data and are generated at build time, so this half compiles without them.
+// load is set by the parser.go that the generate step writes.
 var (
 	load      func() *ts.Language
 	loadOnce  sync.Once

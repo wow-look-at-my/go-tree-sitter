@@ -10,6 +10,7 @@ import (
 	"sort"
 	"strings"
 	"testing"
+	"text/template"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -183,22 +184,62 @@ func writeConsumer(test *testing.T, app, moduleDir string, directives []directiv
 		names = append(names, filepath.Base(dir.pkg))
 	}
 	sort.Strings(names)
-	var src strings.Builder
-	src.WriteString("package main\n\nimport (\n\t\"fmt\"\n\n\tts \"" + modulePath + "\"\n")
-	for _, name := range names {
-		fmt.Fprintf(&src, "\t%q\n", modulePath+"/grammars/"+name)
-	}
-	src.WriteString(")\n\nfunc parse(name string, language *ts.Language, text string) {\n")
-	src.WriteString("\tparser := ts.NewParser()\n")
-	src.WriteString("\tif !parser.SetLanguage(language) {\n\t\tpanic(name + \": the parser rejected the language\")\n\t}\n")
-	src.WriteString("\troot := parser.ParseString(nil, []byte(text)).RootNode()\n")
-	src.WriteString("\tif root.HasError() {\n\t\tpanic(name + \": \" + root.String())\n\t}\n")
-	src.WriteString("\tfmt.Printf(\"%s: parsed without error\\n\", name)\n}\n\nfunc main() {\n")
+
+	grammars := make([]consumerGrammar, 0, len(names))
 	for _, name := range names {
 		snippet, known := snippets[name]
 		require.True(test, known, "grammars/%s has no snippet to parse", name)
-		fmt.Fprintf(&src, "\tparse(%q, %s.Language(), %q)\n", name, name, snippet)
+		grammars = append(grammars, consumerGrammar{Name: name, Snippet: snippet})
 	}
-	src.WriteString("}\n")
+
+	var src strings.Builder
+	require.NoError(test, consumerTemplate.Execute(&src, consumerSource{
+		Module:   modulePath,
+		Grammars: grammars,
+	}))
 	require.NoError(test, os.WriteFile(filepath.Join(app, "main.go"), []byte(src.String()), 0o644))
 }
+
+// consumerGrammar is a grammar package the generated consumer parses with.
+type consumerGrammar struct {
+	Name    string
+	Snippet string
+}
+
+// consumerSource is what consumerTemplate renders.
+type consumerSource struct {
+	Module   string
+	Grammars []consumerGrammar
+}
+
+// consumerTemplate renders the consumer's main.go.
+var consumerTemplate = template.Must(template.New("consumer").Parse(
+	`package main
+
+import (
+	"fmt"
+
+	ts "{{.Module}}"
+{{- range .Grammars}}
+	"{{$.Module}}/grammars/{{.Name}}"
+{{- end}}
+)
+
+func parse(name string, language *ts.Language, text string) {
+	parser := ts.NewParser()
+	if !parser.SetLanguage(language) {
+		panic(name + ": the parser rejected the language")
+	}
+	root := parser.ParseString(nil, []byte(text)).RootNode()
+	if root.HasError() {
+		panic(name + ": " + root.String())
+	}
+	fmt.Printf("%s: parsed without error\n", name)
+}
+
+func main() {
+{{- range .Grammars}}
+	parse({{printf "%q" .Name}}, {{.Name}}.Language(), {{printf "%q" .Snippet}})
+{{- end}}
+}
+`))
