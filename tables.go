@@ -318,7 +318,7 @@ func (w *tableWriter) charSets(v [][]CharacterRange) {
 }
 
 // lexProgram writes a lexer state machine. A grammar with no keyword lexer
-// writes a zero instruction count, which reads back as no program at all.
+// writes a empty instruction count, which reads back as no program at all.
 func (w *tableWriter) lexProgram(p *LexProgram) {
 	if p == nil {
 		w.u32(0)
@@ -355,8 +355,8 @@ type tableReader struct {
 	err error
 }
 
-// fail records the first error. Every later read then returns a zero value, so
-// a truncated blob cannot panic on the way to the report.
+// fail records the earliest error. Every later read then returns a unset
+// value, so a truncated blob cannot panic on the way to the report.
 func (r *tableReader) fail(format string, args ...any) {
 	if r.err == nil {
 		r.err = fmt.Errorf(format, args...)
@@ -382,8 +382,6 @@ func (r *tableReader) u16() uint16 { return binary.LittleEndian.Uint16(r.raw(2))
 
 func (r *tableReader) u32() uint32 { return binary.LittleEndian.Uint32(r.raw(4)) }
 
-// count reads a length and rejects one the remaining bytes cannot hold, so a
-// corrupt blob cannot ask for an enormous allocation.
 func (r *tableReader) count(width int) int {
 	n := int(r.u32())
 	if r.err != nil {

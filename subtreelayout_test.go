@@ -8,10 +8,8 @@ import (
 )
 
 // What a leaf costs in each arm. The collector has to see a real pointer slot,
-// so the arms cannot overlay and one of them is always dead weight.
+// so the arms cannot overlay and any of them is always dead weight.
 
-// The arm this port did not build, measured beside the real one so the choice
-// stays checkable rather than remembered.
 type subtreePackedArm struct {
 	ptr    *subtreeData
 	packed uint64

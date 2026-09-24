@@ -76,7 +76,7 @@ func DecodeUTF8(s []byte) (int32, uint32) {
 	return decodeError, i
 }
 
-// DecodeUTF16LE decodes one code point from little endian input.
+// DecodeUTF16LE decodes a single code point from little endian input.
 func DecodeUTF16LE(s []byte) (int32, uint32) {
 	if len(s) < 2 {
 		return decodeError, uint32(len(s))
@@ -91,7 +91,7 @@ func DecodeUTF16LE(s []byte) (int32, uint32) {
 	return c, 2
 }
 
-// DecodeUTF16BE decodes one code point from big endian input.
+// DecodeUTF16BE decodes a single code point from big endian input.
 func DecodeUTF16BE(s []byte) (int32, uint32) {
 	if len(s) < 2 {
 		return decodeError, uint32(len(s))

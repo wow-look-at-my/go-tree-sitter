@@ -95,10 +95,10 @@ func (n Node) relevantChildCount(includeAnonymous bool) uint32 {
 // IsNull reports whether the node refers to nothing.
 func (n Node) IsNull() bool { return n.id == nil }
 
-// StartByte reports the node's first byte offset.
+// StartByte reports the node's earliest byte offset.
 func (n Node) StartByte() uint32 { return n.startByte }
 
-// StartPoint reports the node's first row and column.
+// StartPoint reports the node's earliest row and column.
 func (n Node) StartPoint() Point { return n.startPoint }
 
 // EndByte reports the offset just past the node.
@@ -158,7 +158,7 @@ func (n Node) String() string {
 	)
 }
 
-// Equal reports whether two nodes refer to the same place in the same tree.
+// Equal reports whether nodes refer to the same place in the same tree.
 func (n Node) Equal(other Node) bool {
 	return n.tree == other.tree && n.id == other.id
 }
@@ -260,7 +260,7 @@ func (n Node) Child(index uint32) Node { return n.child(index, true) }
 // NamedChild returns the named child at the given index.
 func (n Node) NamedChild(index uint32) Node { return n.child(index, false) }
 
-// Parent returns the node that contains this one.
+// Parent returns the node that contains this.
 func (n Node) Parent() Node {
 	node := n.tree.RootNode()
 	if node.id == n.id {

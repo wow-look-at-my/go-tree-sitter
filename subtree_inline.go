@@ -13,7 +13,6 @@ const (
 	flagIsKeyword
 )
 
-// Upstream compares strictly, so the largest value that fits is one below this.
 const maxInlineLength = 255
 
 type subtreeInline struct {
@@ -253,7 +252,7 @@ func subtreeDynamicPrecedence(self subtree) int32 {
 	return self.heap.dynamicPrecedence
 }
 
-// canInline and newLeafSubtree keep every subtree needing one of these on the
+// canInline and newLeafSubtree keep every subtree needing any of these on the
 // heap, so the inline answer is always false.
 func subtreeFragileLeft(self subtree) bool {
 	return !self.isInline() && self.heap.fragileLeft
@@ -286,8 +285,6 @@ func subtreeLookaheadChar(self subtree) int32 {
 	return self.heap.lookaheadChar
 }
 
-// subtreeRefCount answers one for an inline leaf: it is held by value, so the
-// holder is its only owner and it is always safe to mutate in place.
 func subtreeRefCount(self subtree) uint32 {
 	if self.isInline() {
 		return 1

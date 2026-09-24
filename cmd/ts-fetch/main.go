@@ -1,6 +1,6 @@
 // Command ts-fetch puts a grammar's upstream sources where ts-translate can
 // read them. ts-translate fetches for itself when it is told which repository
-// to read, so this command is for a caller that wants the two steps apart.
+// to read, so this command is for a caller that wants both steps apart.
 package main
 
 import (

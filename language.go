@@ -47,7 +47,7 @@ type SymbolMetadata struct {
 	Supertype bool
 }
 
-// ParseAction is one entry of a parse table cell.
+// ParseAction is a single entry of a parse table cell.
 type ParseAction struct {
 	Type              uint8
 	State             StateID
@@ -270,7 +270,7 @@ func (l *Language) aliasSequence(productionID uint32) []Symbol {
 	return l.AliasSequences[start : start+uint32(l.MaxAliasSequenceLen)]
 }
 
-// AliasAt reports the alias applied to one child of a production.
+// AliasAt reports the alias applied to a single child of a production.
 func (l *Language) AliasAt(productionID uint32, childIndex uint32) Symbol {
 	if productionID == 0 {
 		return 0
@@ -306,7 +306,7 @@ func (l *Language) AliasesForSymbol(originalSymbol Symbol) []Symbol {
 	return result
 }
 
-// StateIsPrimary reports whether a state is the canonical one of its class.
+// StateIsPrimary reports whether a state is the canonical any of its class.
 func (l *Language) StateIsPrimary(state StateID) bool {
 	if l.ABIVersion >= languageVersionWithPrimaryStates {
 		return state == l.PrimaryStateIDs[state]
@@ -417,7 +417,7 @@ func (l *Language) nextState(state StateID, symbol Symbol) StateID {
 	return l.lookup(state, symbol)
 }
 
-// SetContains reports whether a code point falls in one of the sorted ranges.
+// SetContains reports whether a code point falls in any of the sorted ranges.
 func SetContains(ranges []CharacterRange, lookahead int32) bool {
 	index := 0
 	size := len(ranges) - index

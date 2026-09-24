@@ -31,7 +31,7 @@ func (c *TreeCursor) Copy() *TreeCursor {
 	return &TreeCursor{stack: append([]cursorEntry(nil), c.stack...)}
 }
 
-// GotoFirstChild moves to the first visible child, reporting whether one exists.
+// GotoFirstChild moves to the earliest visible child, reporting whether a single exists.
 func (c *TreeCursor) GotoFirstChild() bool {
 	current := c.Node()
 	child := current.Child(0)
@@ -42,7 +42,7 @@ func (c *TreeCursor) GotoFirstChild() bool {
 	return true
 }
 
-// GotoNextSibling moves to the next visible sibling, reporting whether one exists.
+// GotoNextSibling moves to the next visible sibling, reporting whether a single exists.
 func (c *TreeCursor) GotoNextSibling() bool {
 	if len(c.stack) < 2 {
 		return false
@@ -77,7 +77,7 @@ func (c *TreeCursor) GotoPreviousSibling() bool {
 	return true
 }
 
-// GotoParent moves to the parent node, reporting whether one exists.
+// GotoParent moves to the parent node, reporting whether a single exists.
 func (c *TreeCursor) GotoParent() bool {
 	if len(c.stack) < 2 {
 		return false
