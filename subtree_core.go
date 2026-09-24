@@ -72,7 +72,7 @@ type subtree struct {
 
 func heapSubtree(data *subtreeData) subtree { return subtree{heap: data} }
 
-// An inline leaf holds no pointer either, so the flag separates the two.
+// An inline leaf holds no pointer either, so the flag separates both.
 func (s subtree) isNil() bool { return s.heap == nil && !s.isInline() }
 
 // Heap arm: these fields exist on no inline leaf.
@@ -127,8 +127,7 @@ func subtreeClone(self subtree) subtree {
 	return heapSubtree(result)
 }
 
-// subtreeMakeMut hands back a subtree the caller may write to. An inline leaf
-// is held by value, so the caller's copy already is one.
+// subtreeMakeMut hands back a subtree the caller may write to.
 func subtreeMakeMut(self subtree) subtree {
 	if self.isInline() || self.heap.refCount == 1 {
 		return self
@@ -417,19 +416,18 @@ func newMissingLeafSubtree(
 	return result
 }
 
-// subtreeCompress walks a chain of nodes that all have children, so every link
-// in it is on the heap and the scratch stack carries that arm.
 func subtreeCompress(self *subtreeData, count uint32, language *Language, stack *[]*subtreeData) {
 	initialStackSize := len(*stack)
 
 	tree := self
 	symbol := tree.symbol
 	for i := uint32(0); i < count; i++ {
-		if tree.refCount > 1 || len(tree.children) < 2 {
+		if tree.refCount > 1 || len(tree.children) < 2 || tree.children[0].isInline() {
 			break
 		}
 		child := tree.children[0].heap
-		if len(child.children) < 2 || child.refCount > 1 || child.symbol != symbol {
+		if len(child.children) < 2 || child.refCount > 1 || child.symbol != symbol ||
+			child.children[0].isInline() {
 			break
 		}
 		grandchild := child.children[0].heap
