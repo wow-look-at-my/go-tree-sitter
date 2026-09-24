@@ -43,6 +43,8 @@ func TestAConsumerCopyGeneratesAndParses(test *testing.T) {
 	work := test.TempDir()
 	copyRoot := filepath.Join(work, "module")
 	copyModule(test, copyRoot)
+	replaces := resolvedOrgDeps(test, goCmd)
+	appendReplaces(test, copyRoot, replaces)
 	before := treeListing(test, copyRoot)
 
 	env := consumerEnv(goCmd)
@@ -70,6 +72,7 @@ func TestAConsumerCopyGeneratesAndParses(test *testing.T) {
 
 	app := filepath.Join(work, "consumer")
 	writeConsumer(test, app, copyRoot, directives)
+	appendReplaces(test, app, replaces)
 	run(test, app, env, goCmd, "mod", "tidy")
 	out := run(test, app, env, goCmd, "run", ".")
 	for _, dir := range directives {
@@ -95,6 +98,37 @@ func consumerEnv(goCmd string) []string {
 		"GOGENERATEDEPS=off",
 		"CGO_ENABLED=0",
 	)
+}
+
+// resolvedOrgDeps answers a replace line for each org dependency, to the
+// directory this checkout's build resolved. An org dependency follows a
+// branch, and git resolves it. The consumer build does that before any
+// directive runs, so the copy gets the resolved tree and no git.
+func resolvedOrgDeps(test *testing.T, goCmd string) []string {
+	test.Helper()
+	cmd := exec.Command(goCmd, "list", "-m", "-f", "{{.Path}}\t{{.Dir}}", "all")
+	cmd.Dir = moduleRoot
+	out, err := cmd.Output()
+	require.NoError(test, err, "go list -m all")
+	var replaces []string
+	for _, line := range strings.Split(strings.TrimSpace(string(out)), "\n") {
+		path, dir, found := strings.Cut(line, "\t")
+		if !found || path == modulePath || !strings.HasPrefix(path, "github.com/wow-look-at-my/") {
+			continue
+		}
+		require.NotEmpty(test, dir, "%s has no downloaded directory", path)
+		replaces = append(replaces, fmt.Sprintf("replace %s => %s", path, filepath.ToSlash(dir)))
+	}
+	return replaces
+}
+
+func appendReplaces(test *testing.T, moduleDir string, replaces []string) {
+	test.Helper()
+	goMod := filepath.Join(moduleDir, "go.mod")
+	body, err := os.ReadFile(goMod)
+	require.NoError(test, err)
+	body = append(body, []byte("\n"+strings.Join(replaces, "\n")+"\n")...)
+	require.NoError(test, os.WriteFile(goMod, body, 0o644))
 }
 
 func run(test *testing.T, dir string, env []string, argv ...string) string {
