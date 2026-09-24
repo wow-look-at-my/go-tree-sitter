@@ -156,8 +156,6 @@ func treeListing(test *testing.T, root string) map[string]bool {
 	return paths
 }
 
-// underAny reports whether path is one of dirs, lies under one, or is a parent
-// directory that had to be made to reach one.
 func underAny(path string, dirs map[string]bool) bool {
 	for dir := range dirs {
 		if path == dir || strings.HasPrefix(path, dir+"/") || strings.HasPrefix(dir, path+"/") {
@@ -167,7 +165,7 @@ func underAny(path string, dirs map[string]bool) bool {
 	return false
 }
 
-// writeConsumer writes a module that requires this one from moduleDir and
+// writeConsumer writes a module that requires this from moduleDir and
 // parses a snippet with each grammar.
 func writeConsumer(test *testing.T, app, moduleDir string, directives []directive) {
 	test.Helper()

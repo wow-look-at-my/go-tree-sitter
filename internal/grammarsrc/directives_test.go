@@ -16,8 +16,8 @@ import (
 // moduleRoot is this module's top directory, as seen from this package.
 const moduleRoot = "../.."
 
-// directive is one grammar package's generate line, reduced to what says where
-// its sources come from.
+// directive is a single grammar package's generate line, reduced to what says
+// where its sources come from.
 type directive struct {
 	// pkg is the grammar package's directory, relative to the module root.
 	pkg string
@@ -87,8 +87,7 @@ func flagValue(words []string, name string) string {
 }
 
 // The directive fetches the commit it names, and a checkout's submodule holds
-// the commit its gitlink records. Those have to be one commit, or a checkout
-// and a consumer build two different grammars from one version of this module.
+// the commit its gitlink records.
 func TestEachDirectiveFetchesTheCommitItsSubmoduleRecords(test *testing.T) {
 	urls := submoduleURLs(test)
 	for _, dir := range grammarDirectives(test) {
@@ -118,9 +117,9 @@ func submoduleURLs(test *testing.T) map[string]string {
 	return ParseModules(body)
 }
 
-// A directive that names no repository reads the one .gitmodules records, so
-// the two have to agree on every grammar or the pinned build and the unpinned
-// one read different repositories.
+// A directive that names no repository reads the single gitmodules records,
+// so both have to agree on every grammar or the pinned build and the unpinned
+// a single read different repositories.
 func TestEveryDeclaredURLNamesTheRepositoryItsDirectiveFetches(test *testing.T) {
 	urls := submoduleURLs(test)
 	require.NotEmpty(test, urls)

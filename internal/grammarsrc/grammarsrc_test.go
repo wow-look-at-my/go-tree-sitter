@@ -6,8 +6,8 @@ import (
 )
 
 // A caller names its parser.c, and that path already says which directory the
-// submodule occupies. Deriving it is what lets one directive fetch and
-// translate, so a caller cannot write the fetch and the translate against two
+// submodule occupies. Deriving it is what lets a single directive fetch and
+// translate, so a caller cannot write the fetch and the translate against
 // different directories.
 func TestDirForReadsTheSubmoduleOutOfTheParserPath(test *testing.T) {
 	for _, row := range []struct {
@@ -53,8 +53,8 @@ func TestDirForReadsTheSubmoduleOutOfTheParserPath(test *testing.T) {
 	}
 }
 
-// A wrong answer here fetches into the wrong directory and leaves the real one
-// empty, so the failure has to be loud rather than a guess.
+// A wrong answer here fetches into the wrong directory and leaves the real a
+// single empty, so the failure has to be loud rather than a guess.
 func TestDirForRefusesWhatItCannotDerive(test *testing.T) {
 	for _, row := range []struct {
 		name   string

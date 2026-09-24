@@ -9,8 +9,8 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-// modulesFile is a .gitmodules holding two grammars, one of which keeps
-// several parsers in one repository.
+// modulesFile is a .gitmodules holding grammars, any of which keeps
+// several parsers in a single repository.
 const modulesFile = `[submodule "grammars/golang/testdata/tree-sitter-go"]
 	path = grammars/golang/testdata/tree-sitter-go
 	url = https://github.com/tree-sitter/tree-sitter-go.git
@@ -26,8 +26,6 @@ func TestParseModulesReadsEveryDeclaration(test *testing.T) {
 	}, ParseModules([]byte(modulesFile)))
 }
 
-// A section with no url declares no submodule to fetch, and its path does not
-// carry over into the next one.
 func TestParseModulesSkipsAnIncompleteSection(test *testing.T) {
 	const contents = `[submodule "half"]
 	path = vendor/half
@@ -61,7 +59,7 @@ func TestSubmoduleForASiblingPackage(test *testing.T) {
 	assert.Equal(test, filepath.Join(root, "grammars", "typescript", "testdata", "tree-sitter-typescript"), dir)
 }
 
-// A submodule nested inside another one holds the files it contains.
+// A submodule nested inside another holds the files it contains.
 func TestSubmoduleForTheLongestDeclaredPath(test *testing.T) {
 	root := filepath.FromSlash("/repo")
 	urls := map[string]string{
@@ -148,8 +146,6 @@ func TestRepoForReadsBothSpellingsGitWrites(test *testing.T) {
 	}
 }
 
-// A host codeload does not serve has no owner/name to ask it for, and a URL
-// that names no repository is not turned into one.
 func TestRepoForRefusesWhatCodeloadCannotServe(test *testing.T) {
 	for _, url := range []string{
 		"https://gitlab.com/owner/name.git",
@@ -226,8 +222,6 @@ func TestSourceReportsAGrammarItCannotPlace(test *testing.T) {
 	assert.Contains(test, err.Error(), "no .gitmodules")
 }
 
-// Fetching over a populated directory would destroy whatever is there, so the
-// clone refuses it even though the callers above never reach it with one.
 func TestCloneRefusesAPopulatedDirectory(test *testing.T) {
 	dir := test.TempDir()
 	require.NoError(test, os.WriteFile(filepath.Join(dir, "keep"), nil, 0o644))
