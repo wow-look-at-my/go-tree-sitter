@@ -12,14 +12,12 @@ import (
 	"github.com/wow-look-at-my/go-tree-sitter/grammars/typescript"
 )
 
-//go:generate go run github.com/wow-look-at-my/go-tree-sitter/cmd/ts-fetch -repo tree-sitter/tree-sitter-typescript -rev 75b3874edb2dc714fb1fd77a32013d0f8699989f -dir testdata/tree-sitter-typescript
-//go:generate go run github.com/wow-look-at-my/go-tree-sitter/cmd/ts-translate -package tsx -scanner github.com/wow-look-at-my/go-tree-sitter/grammars/typescript -out parser.go ../typescript/testdata/tree-sitter-typescript/tsx/src/parser.c
+//go:generate go run github.com/wow-look-at-my/go-tree-sitter/cmd/ts-translate -package tsx -scanner github.com/wow-look-at-my/go-tree-sitter/grammars/typescript -repo tree-sitter/tree-sitter-typescript -rev 75b3874edb2dc714fb1fd77a32013d0f8699989f -out parser.go ../typescript/testdata/tree-sitter-typescript/tsx/src/parser.c
 
 // Scanner returns the scanner this grammar shares with typescript.
 func Scanner() ts.ExternalScanner { return typescript.Scanner() }
 
-// load is set by the parser.go that the generate step writes. The tables are
-// data and are generated at build time, so this half compiles without them.
+// load is set by the parser.go that the generate step writes.
 var (
 	load      func() *ts.Language
 	loadOnce  sync.Once

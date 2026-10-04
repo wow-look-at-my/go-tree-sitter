@@ -79,7 +79,7 @@ func brotliDecode(t *testing.T, blob []byte, want int) {
 
 }
 
-// ms times one call, averaged over enough runs that the clock is not the story.
+// ms times a single call, averaged over enough runs that the clock is not the story.
 func ms(fn func()) float64 {
 	const runs = 5
 	start := time.Now()

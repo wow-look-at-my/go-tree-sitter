@@ -212,7 +212,6 @@ func (p *Parser) condenseStack() uint32 {
 
 func (p *Parser) balanceSubtree() {
 	finishedTree := p.finishedTree
-	// Only a node with children is balanced, and one is always on the heap.
 	var treeStack []*subtreeData
 	if subtreeChildCount(finishedTree) > 0 && subtreeRefCount(finishedTree) == 1 {
 		treeStack = append(treeStack, finishedTree.heap)

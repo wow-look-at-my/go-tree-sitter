@@ -5,8 +5,8 @@ package treesitter
 // megabyte of generated code in the tree for every grammar, and the tree is for
 // source somebody wrote.
 
-// LexOp is one instruction of a lexer program. The condition ops push onto an
-// operand stack and the rest act on the lexer.
+// LexOp is a single instruction of a lexer program. The condition ops push
+// onto an operand stack and the rest act on the lexer.
 type LexOp uint8
 
 const (
@@ -21,9 +21,9 @@ const (
 	// OpNot and OpNeg replace the top of the stack.
 	OpNot
 	OpNeg
-	// OpBinary combines the top two values with binary operator Arg.
+	// OpBinary combines the top values with binary operator Arg.
 	OpBinary
-	// OpJumpIfFalse pops, and jumps to Arg when the value is zero.
+	// OpJumpIfFalse pops, and jumps to Arg when the value is empty.
 	OpJumpIfFalse
 	// OpDispatch jumps to the body of the case for the current state.
 	OpDispatch
@@ -63,23 +63,21 @@ const (
 	BinMod
 )
 
-// LexInstr is one instruction and its single argument.
+// LexInstr is a single instruction and its single argument.
 type LexInstr struct {
 	Op  LexOp
 	Arg int32
 }
 
 // LexProgram is a lexer state machine. Code opens with the prologue and an
-// OpDispatch, and the case bodies follow it. States gives the entry point of
-// each lexer state, and an entry of -1 answers with what the run accepted.
+// OpDispatch, and the case bodies follow it.
 type LexProgram struct {
 	Code   []LexInstr
 	States []int32
 	Maps   [][]int32
 }
 
-// Run walks the program for one token. It answers whether the run accepted one,
-// which is what a grammar's LexFn answers.
+// Run walks the program for a single token.
 func (p *LexProgram) Run(sets [][]CharacterRange, lexer *Lexer, state StateID) bool {
 	result := false
 	var stack [16]int64
