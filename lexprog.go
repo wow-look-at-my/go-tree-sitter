@@ -1,12 +1,8 @@
 package treesitter
 
-// A grammar's lexer is a state machine, and it travels as data in the same blob
-// as the parse tables. Translating it into Go source instead would put a
-// megabyte of generated code in the tree for every grammar, and the tree is for
-// source somebody wrote.
+// A grammar's lexer is a state machine, and it travels as data in the same blob as the parse tables.
 
-// LexOp is a single instruction of a lexer program. The condition ops push
-// onto an operand stack and the rest act on the lexer.
+// LexOp is a single instruction of a lexer program.
 type LexOp uint8
 
 const (

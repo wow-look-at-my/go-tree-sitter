@@ -227,8 +227,7 @@ func semicolonFitsBefore(lexer *ts.Lexer, valid []bool) bool {
 }
 
 // scanTernaryQmark separates the `?` of a conditional from the `?.` of an
-// optional chain, the `??` of a nullish coalesce, and the `?` of an optional
-// parameter or property.
+// coalesce, and the `?` of an optional parameter or property.
 func scanTernaryQmark(lexer *ts.Lexer) bool {
 	for isSpace(lexer.Lookahead) {
 		lexer.Advance(true)

@@ -54,7 +54,7 @@ func TestDirForReadsTheSubmoduleOutOfTheParserPath(test *testing.T) {
 }
 
 // A wrong answer here fetches into the wrong directory and leaves the real a
-// single empty, so the failure has to be loud rather than a guess.
+// single empty. The failure has to be loud rather than a guess.
 func TestDirForRefusesWhatItCannotDerive(test *testing.T) {
 	for _, row := range []struct {
 		name   string

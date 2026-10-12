@@ -13,11 +13,12 @@ import (
 )
 
 // The codec was chosen on decompression speed alone, which is half the question.
-// This measures the other half on the REAL blobs, in process: the bytes that
-// ship in the binary, and the decode every cold start pays behind sync.Once.
+// This measures the other half on the REAL blobs. That half is in process: the
+// bytes that ship in the binary, and the decode every cold start pays behind
+// sync.Once.
 //
-// It asserts nothing about which codec wins. It prints the table and leaves the
-// decision to a reader, because the answer depends on what is scarce -- binary
+// It asserts nothing about which codec wins. It prints the table. It leaves the
+// decision to a reader, because the answer depends on what is scarce. Binary
 // size, cold-start time, or the generate step's wall clock.
 func TestCodecComparisonOnTheRealBlobs(t *testing.T) {
 	blobs, _ := filepath.Glob("grammars/*/tables.zst")

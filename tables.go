@@ -20,8 +20,7 @@ const (
 	tablesFormat = 2
 )
 
-// The embedded Language's function fields and its scanner are not encoded. An
-// external scanner is hand written Go, and the grammar package installs it.
+// The embedded Language's function fields and its scanner are not encoded.
 type Tables struct {
 	Language
 	// CharacterSets holds the sets the lexer searches.

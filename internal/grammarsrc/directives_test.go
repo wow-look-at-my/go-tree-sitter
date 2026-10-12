@@ -117,9 +117,9 @@ func submoduleURLs(test *testing.T) map[string]string {
 	return ParseModules(body)
 }
 
-// A directive that names no repository reads the single gitmodules records,
-// so both have to agree on every grammar or the pinned build and the unpinned
-// a single read different repositories.
+// A directive that names no repository reads the single gitmodules records.
+// Both have to agree on every grammar or the pinned build and the unpinned a
+// single read different repositories.
 func TestEveryDeclaredURLNamesTheRepositoryItsDirectiveFetches(test *testing.T) {
 	urls := submoduleURLs(test)
 	require.NotEmpty(test, urls)

@@ -182,9 +182,9 @@ func newLeafSubtree(
 	extra := symbol == BuiltinSymEnd
 
 	// An external token is never inline: callers take a pointer into its
-	// scanner state. The column-dependence exclusion is this port's own, since
-	// the inline arm has nowhere to keep that flag and upstream therefore reads
-	// it back as false.
+	// scanner state. The column-dependence exclusion is this port's own. This
+	// holds since the inline arm has nowhere to keep that flag and upstream
+	// therefore reads it back as false.
 	if symbol <= maxInlineLength && !hasExternalTokens && !dependsOnColumn &&
 		canInline(padding, size, lookaheadBytes) {
 		return inlineLeaf(

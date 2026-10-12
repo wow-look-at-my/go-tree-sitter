@@ -8,8 +8,8 @@ import (
 )
 
 // BenchmarkParse times a whole parse of a source file. The lexer is the hot
-// half of that, and it runs as an interpreted program, so this is the number to
-// watch when the instruction set changes.
+// half of that. It runs as an interpreted program. This is the number to watch
+// when the instruction set changes.
 func BenchmarkParse(b *testing.B, language *ts.Language, path string) {
 	b.Helper()
 	src, err := os.ReadFile(path)

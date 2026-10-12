@@ -101,12 +101,12 @@ func (n Node) StartByte() uint32 { return n.startByte }
 // StartPoint reports the node's earliest row and column.
 func (n Node) StartPoint() Point { return n.startPoint }
 
-// EndByte reports the offset just past the node.
+// EndByte reports the offset past the node.
 func (n Node) EndByte() uint32 {
 	return n.startByte + subtreeSize(n.subtree()).Bytes
 }
 
-// EndPoint reports the row and column just past the node.
+// EndPoint reports the row and column past the node.
 func (n Node) EndPoint() Point {
 	return pointAdd(n.startPoint, subtreeSize(n.subtree()).Extent)
 }
@@ -467,8 +467,8 @@ func (n Node) NextSibling() Node { return n.nextSibling(true) }
 // NextNamedSibling returns the next named node with the same parent.
 func (n Node) NextNamedSibling() Node { return n.nextSibling(false) }
 
-// PrevSibling returns the previous visible node with the same parent.
+// PrevSibling returns the visible node with the same parent.
 func (n Node) PrevSibling() Node { return n.prevSibling(true) }
 
-// PrevNamedSibling returns the previous named node with the same parent.
+// PrevNamedSibling returns the named node with the same parent.
 func (n Node) PrevNamedSibling() Node { return n.prevSibling(false) }

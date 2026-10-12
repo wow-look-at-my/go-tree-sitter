@@ -3,7 +3,7 @@ package treesitter
 // LoadGrammar decodes a grammar's table blob and wires its lexer. Pass a nil
 // scanner for a grammar with no external tokens.
 //
-// It panics on a blob this runtime cannot read: a grammar that parses nothing
+// It panics on a blob this runtime cannot read. A grammar that parses nothing
 // is worse to hand back than a stop at the point the fault is visible.
 func LoadGrammar(name string, blob []byte, scanner ExternalScanner) *Language {
 	tables, err := DecodeTables(blob)

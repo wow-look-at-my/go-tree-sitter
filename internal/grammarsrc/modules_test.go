@@ -159,8 +159,8 @@ func TestRepoForRefusesWhatCodeloadCannotServe(test *testing.T) {
 	}
 }
 
-// The whole point of reading .gitmodules: a consumer's copy carries that file
-// and no submodule contents, and the directive that names no repository still
+// The whole point of reading .gitmodules: a consumer's copy carries that file.
+// No submodule contents, and the directive that names no repository still
 // finds the grammar. There is no commit to pin to, so the tip is what arrives.
 func TestSourceFetchesTheRepositoryGitmodulesNames(test *testing.T) {
 	withoutGit(test)
