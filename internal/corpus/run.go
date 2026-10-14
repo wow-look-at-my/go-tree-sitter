@@ -39,7 +39,7 @@ type Detail struct {
 // detailLimit bounds the comparisons a report carries.
 const detailLimit = 3
 
-// Total is the number of cases that actually ran.
+// Total is the number of cases that ran.
 func (r Result) Total() int { return r.Passed + r.Failed }
 
 // Run parses every case in a corpus directory and compares the tree it produces

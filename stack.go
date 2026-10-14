@@ -30,7 +30,6 @@ type stackIterator struct {
 	isPending    bool
 }
 
-// StackSlice is a single path revealed by a pop operation.
 type stackSlice struct {
 	subtrees []subtree
 	version  stackVersion

@@ -3,7 +3,7 @@
 //
 // The sources arrive as a git submodule, and a module zip carries the gitlink
 // and none of the files. So a consumer that resolves this module from the
-// proxy has an empty testdata directory, and the generate step that builds the
+// proxy has an empty testdata directory. The generate step that builds the
 // parse tables has nothing to read. This fetches the same tree over HTTP when
 // there is no git work tree to init.
 package grammarsrc

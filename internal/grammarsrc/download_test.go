@@ -83,7 +83,7 @@ func grammarTree(rev string) []entry {
 	}
 }
 
-// A consumer's copy has no git work tree and no submodule contents, so the
+// A consumer's copy has no git work tree and no submodule contents. The
 // sources come from codeload at the pinned commit and land where the directive
 // reads them.
 func TestFetchDownloadsTheTreeWhereThereIsNoGit(test *testing.T) {

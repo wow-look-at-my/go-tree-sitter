@@ -32,7 +32,7 @@ func TestAnInlineLeafCostsFarLessThanAHeapOne(t *testing.T) {
 }
 
 // The arm is reached by ordinary parsing. A representation nothing ever
-// constructs is dead code that still has to be read and maintained, and every
+// constructs is dead code that still has to be read and maintained. Every
 // accessor's inline branch would be a guard for a state the parser is never in.
 func TestOrdinaryParsingProducesInlineLeaves(t *testing.T) {
 	tree := parseToy(t, "hello world")

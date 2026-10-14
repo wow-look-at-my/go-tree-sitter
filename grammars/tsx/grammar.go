@@ -1,6 +1,6 @@
 // Package tsx is TypeScript with JSX. Upstream ships it as its own grammar
-// beside typescript, built from the same scanner, because JSX and a type
-// assertion both want the angle bracket and no file can have both.
+// beside typescript, built from the same scanner. This is because JSX and
+// a type assertion both want the angle bracket and no file can have both.
 //
 // The generate step reads the submodule the typescript package checks out.
 package tsx

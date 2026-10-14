@@ -58,7 +58,7 @@ func (c *TreeCursor) GotoNextSibling() bool {
 	return true
 }
 
-// GotoPreviousSibling moves to the previous visible sibling.
+// GotoPreviousSibling moves to the visible sibling.
 func (c *TreeCursor) GotoPreviousSibling() bool {
 	if len(c.stack) < 2 {
 		return false

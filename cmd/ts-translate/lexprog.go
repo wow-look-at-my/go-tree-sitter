@@ -6,8 +6,7 @@ import (
 	ts "github.com/wow-look-at-my/go-tree-sitter"
 )
 
-// A deeper condition than the runtime's operand stack stops the build here,
-// rather than overrun that stack at parse time.
+// A deeper condition than the runtime's operand stack stops the build here.
 const maxStackDepth = 16
 
 // progBuilder lays a lex function out as a single instruction stream: the

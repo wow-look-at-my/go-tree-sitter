@@ -31,9 +31,9 @@ func (s subtree) isInline() bool { return s.inline.flags&flagInline != 0 }
 func (s subtree) flag(bit uint8) bool { return s.inline.flags&bit != 0 }
 
 // canInline reports a leaf whose extent fits the inline field widths. A token
-// that spans a row cannot: the inline arm stores no size extent and rebuilds it
-// as a single row, so only a token that ends on the row it started can be
-// rebuilt exactly.
+// that spans a row cannot: the inline arm stores no size extent. The inline arm
+// rebuilds it as a single row, so only a token that ends on the row it started
+// can be rebuilt exactly.
 func canInline(padding, size length, lookaheadBytes uint32) bool {
 	return padding.Bytes < maxInlineLength &&
 		padding.Extent.Row < 16 &&
