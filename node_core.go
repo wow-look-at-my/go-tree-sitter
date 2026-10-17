@@ -260,9 +260,7 @@ func (n Node) Child(index uint32) Node { return n.child(index, true) }
 // NamedChild returns the named child at the given index.
 func (n Node) NamedChild(index uint32) Node { return n.child(index, false) }
 
-// Children returns every visible child, as Child returns each. It reads the
-// children once. A loop over Child reads them again for each index, so it
-// costs the square of the count.
+// Children returns every visible child, as Child returns each. It reads the children once.
 func (n Node) Children() []Node { return n.appendChildren(nil, true) }
 
 // NamedChildren returns every named child, as NamedChild returns each.
