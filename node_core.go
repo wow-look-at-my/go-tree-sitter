@@ -260,6 +260,27 @@ func (n Node) Child(index uint32) Node { return n.child(index, true) }
 // NamedChild returns the named child at the given index.
 func (n Node) NamedChild(index uint32) Node { return n.child(index, false) }
 
+// Children returns every visible child, as Child returns each. It reads the children once.
+func (n Node) Children() []Node { return n.appendChildren(nil, true) }
+
+// NamedChildren returns every named child, as NamedChild returns each.
+func (n Node) NamedChildren() []Node { return n.appendChildren(nil, false) }
+
+// appendChildren appends the relevant children of n in order. child reads the
+// relevant children of a hidden child in its place, and so does this.
+func (n Node) appendChildren(out []Node, includeAnonymous bool) []Node {
+	var child Node
+	iterator := n.iterateChildren()
+	for iterator.next(&child) {
+		if child.isRelevant(includeAnonymous) {
+			out = append(out, child)
+		} else if child.relevantChildCount(includeAnonymous) > 0 {
+			out = child.appendChildren(out, includeAnonymous)
+		}
+	}
+	return out
+}
+
 // Parent returns the node that contains this.
 func (n Node) Parent() Node {
 	node := n.tree.RootNode()

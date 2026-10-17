@@ -3,9 +3,12 @@ package treesitter
 type cursorEntry struct {
 	node       Node
 	childIndex uint32
+	// siblings are the visible children of the parent, read once on entry.
+	siblings []Node
 }
 
-// TreeCursor walks a syntax tree without allocating for each step.
+// TreeCursor walks a syntax tree. A step to a sibling costs the same at any
+// index, because each level reads its children once.
 type TreeCursor struct {
 	stack []cursorEntry
 }
@@ -33,12 +36,11 @@ func (c *TreeCursor) Copy() *TreeCursor {
 
 // GotoFirstChild moves to the earliest visible child, reporting whether a single exists.
 func (c *TreeCursor) GotoFirstChild() bool {
-	current := c.Node()
-	child := current.Child(0)
-	if child.IsNull() {
+	children := c.Node().Children()
+	if len(children) == 0 {
 		return false
 	}
-	c.stack = append(c.stack, cursorEntry{node: child})
+	c.stack = append(c.stack, cursorEntry{node: children[0], siblings: children})
 	return true
 }
 
@@ -48,13 +50,11 @@ func (c *TreeCursor) GotoNextSibling() bool {
 		return false
 	}
 	entry := &c.stack[len(c.stack)-1]
-	parent := c.stack[len(c.stack)-2].node
-	next := parent.Child(entry.childIndex + 1)
-	if next.IsNull() {
+	if int(entry.childIndex)+1 >= len(entry.siblings) {
 		return false
 	}
 	entry.childIndex++
-	entry.node = next
+	entry.node = entry.siblings[entry.childIndex]
 	return true
 }
 
@@ -67,13 +67,8 @@ func (c *TreeCursor) GotoPreviousSibling() bool {
 	if entry.childIndex == 0 {
 		return false
 	}
-	parent := c.stack[len(c.stack)-2].node
-	prev := parent.Child(entry.childIndex - 1)
-	if prev.IsNull() {
-		return false
-	}
 	entry.childIndex--
-	entry.node = prev
+	entry.node = entry.siblings[entry.childIndex]
 	return true
 }
 
