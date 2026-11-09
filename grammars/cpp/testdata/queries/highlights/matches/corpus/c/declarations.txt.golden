@@ -1,0 +1,18 @@
+corpus/c/declarations.txt/000
+corpus/c/declarations.txt/001
+corpus/c/declarations.txt/002
+corpus/c/declarations.txt/003
+corpus/c/declarations.txt/004
+corpus/c/declarations.txt/005
+corpus/c/declarations.txt/006
+corpus/c/declarations.txt/007
+corpus/c/declarations.txt/008
+corpus/c/declarations.txt/009
+corpus/c/declarations.txt/010
+corpus/c/declarations.txt/011
+corpus/c/declarations.txt/012
+corpus/c/declarations.txt/013
+  pattern: 11
+    capture: 5 - keyword, start: (4, 0), end: (4, 9), text: `constexpr`
+corpus/c/declarations.txt/014
+corpus/c/declarations.txt/015

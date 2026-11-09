@@ -1,0 +1,279 @@
+examples/rule.cc
+  pattern: 11
+    capture: 5 - keyword, start: (3, 0), end: (3, 9), text: `namespace`
+  pattern: 11
+    capture: 5 - keyword, start: (4, 0), end: (4, 9), text: `namespace`
+  pattern: 11
+    capture: 5 - keyword, start: (6, 0), end: (6, 5), text: `using`
+  pattern: 11
+    capture: 5 - keyword, start: (7, 0), end: (7, 5), text: `using`
+  pattern: 11
+    capture: 5 - keyword, start: (8, 0), end: (8, 5), text: `using`
+  pattern: 6
+    capture: 1 - type, start: (10, 0), end: (10, 4), text: `Rule`
+  pattern: 4
+    capture: 0 - function, start: (10, 6), end: (10, 10), text: `Rule`
+  pattern: 8
+    capture: 2 - variable.builtin, start: (11, 3), end: (11, 7), text: `this`
+  pattern: 6
+    capture: 1 - type, start: (14, 0), end: (14, 4), text: `Rule`
+  pattern: 4
+    capture: 0 - function, start: (14, 6), end: (14, 10), text: `Rule`
+  pattern: 11
+    capture: 5 - keyword, start: (14, 25), end: (14, 33), text: `noexcept`
+  pattern: 8
+    capture: 2 - variable.builtin, start: (15, 3), end: (15, 7), text: `this`
+  pattern: 6
+    capture: 1 - type, start: (20, 9), end: (20, 13), text: `Rule`
+  pattern: 6
+    capture: 1 - type, start: (21, 9), end: (21, 13), text: `Rule`
+  pattern: 6
+    capture: 1 - type, start: (22, 9), end: (22, 13), text: `Rule`
+  pattern: 6
+    capture: 1 - type, start: (23, 9), end: (23, 13), text: `Rule`
+  pattern: 6
+    capture: 1 - type, start: (24, 9), end: (24, 13), text: `Rule`
+  pattern: 6
+    capture: 1 - type, start: (25, 9), end: (25, 13), text: `Rule`
+  pattern: 6
+    capture: 1 - type, start: (26, 9), end: (26, 13), text: `Rule`
+  pattern: 6
+    capture: 1 - type, start: (27, 9), end: (27, 13), text: `Rule`
+  pattern: 6
+    capture: 1 - type, start: (28, 9), end: (28, 13), text: `Rule`
+  pattern: 6
+    capture: 1 - type, start: (29, 9), end: (29, 13), text: `Rule`
+  pattern: 6
+    capture: 1 - type, start: (33, 6), end: (33, 10), text: `Rule`
+  pattern: 8
+    capture: 2 - variable.builtin, start: (34, 16), end: (34, 20), text: `this`
+  pattern: 11
+    capture: 5 - keyword, start: (38, 6), end: (38, 9), text: `new`
+  pattern: 11
+    capture: 5 - keyword, start: (41, 6), end: (41, 9), text: `new`
+  pattern: 11
+    capture: 5 - keyword, start: (44, 6), end: (44, 9), text: `new`
+  pattern: 11
+    capture: 5 - keyword, start: (47, 6), end: (47, 9), text: `new`
+  pattern: 11
+    capture: 5 - keyword, start: (50, 6), end: (50, 9), text: `new`
+  pattern: 11
+    capture: 5 - keyword, start: (53, 6), end: (53, 9), text: `new`
+  pattern: 11
+    capture: 5 - keyword, start: (56, 6), end: (56, 9), text: `new`
+  pattern: 11
+    capture: 5 - keyword, start: (59, 6), end: (59, 9), text: `new`
+  pattern: 11
+    capture: 5 - keyword, start: (62, 6), end: (62, 9), text: `new`
+  pattern: 11
+    capture: 5 - keyword, start: (65, 6), end: (65, 9), text: `new`
+  pattern: 8
+    capture: 2 - variable.builtin, start: (68, 10), end: (68, 14), text: `this`
+  pattern: 6
+    capture: 1 - type, start: (71, 6), end: (71, 10), text: `Rule`
+  pattern: 11
+    capture: 5 - keyword, start: (71, 36), end: (71, 44), text: `noexcept`
+  pattern: 8
+    capture: 2 - variable.builtin, start: (72, 16), end: (72, 20), text: `this`
+  pattern: 11
+    capture: 5 - keyword, start: (76, 6), end: (76, 9), text: `new`
+  pattern: 11
+    capture: 5 - keyword, start: (79, 6), end: (79, 9), text: `new`
+  pattern: 11
+    capture: 5 - keyword, start: (82, 6), end: (82, 9), text: `new`
+  pattern: 11
+    capture: 5 - keyword, start: (85, 6), end: (85, 9), text: `new`
+  pattern: 11
+    capture: 5 - keyword, start: (88, 6), end: (88, 9), text: `new`
+  pattern: 11
+    capture: 5 - keyword, start: (91, 6), end: (91, 9), text: `new`
+  pattern: 11
+    capture: 5 - keyword, start: (94, 6), end: (94, 9), text: `new`
+  pattern: 11
+    capture: 5 - keyword, start: (97, 6), end: (97, 9), text: `new`
+  pattern: 11
+    capture: 5 - keyword, start: (100, 6), end: (100, 9), text: `new`
+  pattern: 11
+    capture: 5 - keyword, start: (103, 6), end: (103, 9), text: `new`
+  pattern: 8
+    capture: 2 - variable.builtin, start: (108, 10), end: (108, 14), text: `this`
+  pattern: 6
+    capture: 1 - type, start: (111, 0), end: (111, 4), text: `Rule`
+  pattern: 11
+    capture: 5 - keyword, start: (111, 14), end: (111, 22), text: `noexcept`
+  pattern: 8
+    capture: 2 - variable.builtin, start: (112, 16), end: (112, 20), text: `this`
+  pattern: 6
+    capture: 1 - type, start: (115, 5), end: (115, 9), text: `Rule`
+  pattern: 6
+    capture: 1 - type, start: (118, 9), end: (118, 13), text: `Rule`
+  pattern: 6
+    capture: 1 - type, start: (119, 9), end: (119, 13), text: `Rule`
+  pattern: 6
+    capture: 1 - type, start: (120, 9), end: (120, 13), text: `Rule`
+  pattern: 6
+    capture: 1 - type, start: (121, 9), end: (121, 13), text: `Rule`
+  pattern: 6
+    capture: 1 - type, start: (122, 9), end: (122, 13), text: `Rule`
+  pattern: 6
+    capture: 1 - type, start: (123, 9), end: (123, 13), text: `Rule`
+  pattern: 6
+    capture: 1 - type, start: (124, 9), end: (124, 13), text: `Rule`
+  pattern: 6
+    capture: 1 - type, start: (125, 9), end: (125, 13), text: `Rule`
+  pattern: 6
+    capture: 1 - type, start: (126, 9), end: (126, 13), text: `Rule`
+  pattern: 11
+    capture: 5 - keyword, start: (131, 0), end: (131, 8), text: `template`
+  pattern: 6
+    capture: 1 - type, start: (132, 5), end: (132, 9), text: `Rule`
+  pattern: 1
+    capture: 0 - function, start: (132, 11), end: (132, 13), text: `is`
+  pattern: 3
+    capture: 0 - function, start: (132, 11), end: (132, 13), text: `is`
+  pattern: 11
+    capture: 5 - keyword, start: (134, 0), end: (134, 8), text: `template`
+  pattern: 6
+    capture: 1 - type, start: (135, 5), end: (135, 9), text: `Rule`
+  pattern: 1
+    capture: 0 - function, start: (135, 11), end: (135, 13), text: `is`
+  pattern: 3
+    capture: 0 - function, start: (135, 11), end: (135, 13), text: `is`
+  pattern: 11
+    capture: 5 - keyword, start: (137, 0), end: (137, 8), text: `template`
+  pattern: 6
+    capture: 1 - type, start: (138, 5), end: (138, 9), text: `Rule`
+  pattern: 1
+    capture: 0 - function, start: (138, 11), end: (138, 13), text: `is`
+  pattern: 3
+    capture: 0 - function, start: (138, 11), end: (138, 13), text: `is`
+  pattern: 11
+    capture: 5 - keyword, start: (140, 0), end: (140, 8), text: `template`
+  pattern: 6
+    capture: 1 - type, start: (141, 15), end: (141, 19), text: `Rule`
+  pattern: 1
+    capture: 0 - function, start: (141, 21), end: (141, 34), text: `get_unchecked`
+  pattern: 3
+    capture: 0 - function, start: (141, 21), end: (141, 34), text: `get_unchecked`
+  pattern: 7
+    capture: 1 - type, start: (146, 11), end: (146, 15), text: `auto`
+  pattern: 7
+    capture: 1 - type, start: (151, 15), end: (151, 19), text: `auto`
+  pattern: 7
+    capture: 1 - type, start: (152, 11), end: (152, 15), text: `auto`
+  pattern: 6
+    capture: 1 - type, start: (160, 5), end: (160, 9), text: `Rule`
+  pattern: 4
+    capture: 0 - function, start: (160, 11), end: (160, 17), text: `choice`
+  pattern: 7
+    capture: 1 - type, start: (162, 7), end: (162, 11), text: `auto`
+  pattern: 6
+    capture: 1 - type, start: (168, 5), end: (168, 9), text: `Rule`
+  pattern: 4
+    capture: 0 - function, start: (168, 11), end: (168, 17), text: `repeat`
+  pattern: 2
+    capture: 0 - function, start: (169, 14), end: (169, 16), text: `is`
+  pattern: 6
+    capture: 1 - type, start: (172, 5), end: (172, 9), text: `Rule`
+  pattern: 4
+    capture: 0 - function, start: (172, 11), end: (172, 14), text: `seq`
+  pattern: 7
+    capture: 1 - type, start: (174, 13), end: (174, 17), text: `auto`
+  pattern: 2
+    capture: 0 - function, start: (178, 28), end: (178, 30), text: `is`
+  pattern: 7
+    capture: 1 - type, start: (182, 10), end: (182, 14), text: `auto`
+  pattern: 2
+    capture: 0 - function, start: (183, 19), end: (183, 21), text: `is`
+  pattern: 11
+    capture: 5 - keyword, start: (197, 0), end: (197, 9), text: `namespace`
+  pattern: 7
+    capture: 1 - type, start: (200, 2), end: (200, 6), text: `auto`
+  pattern: 1
+    capture: 0 - function, start: (200, 16), end: (200, 20), text: `hash`
+  pattern: 3
+    capture: 0 - function, start: (200, 16), end: (200, 20), text: `hash`
+  pattern: 1
+    capture: 0 - function, start: (201, 24), end: (201, 28), text: `hash`
+  pattern: 3
+    capture: 0 - function, start: (201, 24), end: (201, 28), text: `hash`
+  pattern: 1
+    capture: 0 - function, start: (206, 9), end: (206, 13), text: `hash`
+  pattern: 3
+    capture: 0 - function, start: (206, 9), end: (206, 13), text: `hash`
+  pattern: 1
+    capture: 0 - function, start: (210, 9), end: (210, 13), text: `hash`
+  pattern: 3
+    capture: 0 - function, start: (210, 9), end: (210, 13), text: `hash`
+  pattern: 1
+    capture: 0 - function, start: (214, 9), end: (214, 13), text: `hash`
+  pattern: 3
+    capture: 0 - function, start: (214, 9), end: (214, 13), text: `hash`
+  pattern: 7
+    capture: 1 - type, start: (237, 13), end: (237, 17), text: `auto`
+  pattern: 1
+    capture: 0 - function, start: (260, 2), end: (260, 14), text: `hash_combine`
+  pattern: 3
+    capture: 0 - function, start: (260, 2), end: (260, 14), text: `hash_combine`
+  pattern: 1
+    capture: 0 - function, start: (271, 18), end: (271, 22), text: `hash`
+  pattern: 3
+    capture: 0 - function, start: (271, 18), end: (271, 22), text: `hash`
+  pattern: 6
+    capture: 1 - type, start: (273, 9), end: (273, 13), text: `Rule`
+  pattern: 1
+    capture: 0 - function, start: (273, 49), end: (273, 53), text: `hash`
+  pattern: 3
+    capture: 0 - function, start: (273, 49), end: (273, 53), text: `hash`
+  pattern: 6
+    capture: 1 - type, start: (274, 9), end: (274, 13), text: `Rule`
+  pattern: 1
+    capture: 0 - function, start: (274, 43), end: (274, 47), text: `hash`
+  pattern: 3
+    capture: 0 - function, start: (274, 43), end: (274, 47), text: `hash`
+  pattern: 6
+    capture: 1 - type, start: (275, 9), end: (275, 13), text: `Rule`
+  pattern: 1
+    capture: 0 - function, start: (275, 44), end: (275, 48), text: `hash`
+  pattern: 3
+    capture: 0 - function, start: (275, 44), end: (275, 48), text: `hash`
+  pattern: 6
+    capture: 1 - type, start: (276, 9), end: (276, 13), text: `Rule`
+  pattern: 1
+    capture: 0 - function, start: (276, 48), end: (276, 52), text: `hash`
+  pattern: 3
+    capture: 0 - function, start: (276, 48), end: (276, 52), text: `hash`
+  pattern: 6
+    capture: 1 - type, start: (277, 9), end: (277, 13), text: `Rule`
+  pattern: 1
+    capture: 0 - function, start: (277, 43), end: (277, 47), text: `hash`
+  pattern: 3
+    capture: 0 - function, start: (277, 43), end: (277, 47), text: `hash`
+  pattern: 6
+    capture: 1 - type, start: (278, 9), end: (278, 13), text: `Rule`
+  pattern: 1
+    capture: 0 - function, start: (278, 43), end: (278, 47), text: `hash`
+  pattern: 3
+    capture: 0 - function, start: (278, 43), end: (278, 47), text: `hash`
+  pattern: 6
+    capture: 1 - type, start: (279, 9), end: (279, 13), text: `Rule`
+  pattern: 1
+    capture: 0 - function, start: (279, 45), end: (279, 49), text: `hash`
+  pattern: 3
+    capture: 0 - function, start: (279, 45), end: (279, 49), text: `hash`
+  pattern: 6
+    capture: 1 - type, start: (280, 9), end: (280, 13), text: `Rule`
+  pattern: 1
+    capture: 0 - function, start: (280, 43), end: (280, 47), text: `hash`
+  pattern: 3
+    capture: 0 - function, start: (280, 43), end: (280, 47), text: `hash`
+  pattern: 6
+    capture: 1 - type, start: (281, 9), end: (281, 13), text: `Rule`
+  pattern: 1
+    capture: 0 - function, start: (281, 40), end: (281, 44), text: `hash`
+  pattern: 3
+    capture: 0 - function, start: (281, 40), end: (281, 44), text: `hash`
+  pattern: 1
+    capture: 0 - function, start: (282, 29), end: (282, 33), text: `hash`
+  pattern: 3
+    capture: 0 - function, start: (282, 29), end: (282, 33), text: `hash`

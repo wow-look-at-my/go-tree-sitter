@@ -1,0 +1,15 @@
+corpus/ambiguities.txt/000
+  pattern: 1
+    capture: 0 - function, start: (2, 7), end: (2, 8), text: `f`
+  pattern: 3
+    capture: 0 - function, start: (2, 7), end: (2, 8), text: `f`
+  pattern: 1
+    capture: 0 - function, start: (3, 13), end: (3, 16), text: `get`
+  pattern: 3
+    capture: 0 - function, start: (3, 13), end: (3, 16), text: `get`
+  pattern: 6
+    capture: 1 - type, start: (7, 6), end: (7, 10), text: `Base`
+  pattern: 6
+    capture: 1 - type, start: (8, 13), end: (8, 17), text: `Base`
+corpus/ambiguities.txt/001
+corpus/ambiguities.txt/002

@@ -1,0 +1,123 @@
+examples/marker-index.h
+  pattern: 11
+    capture: 5 - keyword, start: (9, 0), end: (9, 5), text: `class`
+  pattern: 11
+    capture: 5 - keyword, start: (10, 0), end: (10, 6), text: `public`
+  pattern: 11
+    capture: 5 - keyword, start: (11, 2), end: (11, 7), text: `using`
+  pattern: 11
+    capture: 5 - keyword, start: (12, 2), end: (12, 7), text: `using`
+  pattern: 5
+    capture: 0 - function, start: (34, 6), end: (34, 28), text: `generate_random_number`
+  pattern: 5
+    capture: 0 - function, start: (35, 7), end: (35, 13), text: `insert`
+  pattern: 5
+    capture: 0 - function, start: (36, 7), end: (36, 20), text: `set_exclusive`
+  pattern: 5
+    capture: 0 - function, start: (37, 7), end: (37, 13), text: `remove`
+  pattern: 5
+    capture: 0 - function, start: (38, 7), end: (38, 10), text: `has`
+  pattern: 5
+    capture: 0 - function, start: (39, 15), end: (39, 21), text: `splice`
+  pattern: 5
+    capture: 0 - function, start: (40, 8), end: (40, 17), text: `get_start`
+  pattern: 5
+    capture: 0 - function, start: (41, 8), end: (41, 15), text: `get_end`
+  pattern: 5
+    capture: 0 - function, start: (42, 8), end: (42, 17), text: `get_range`
+  pattern: 5
+    capture: 0 - function, start: (44, 6), end: (44, 13), text: `compare`
+  pattern: 5
+    capture: 0 - function, start: (45, 21), end: (45, 38), text: `find_intersecting`
+  pattern: 5
+    capture: 0 - function, start: (46, 21), end: (46, 36), text: `find_containing`
+  pattern: 5
+    capture: 0 - function, start: (47, 21), end: (47, 38), text: `find_contained_in`
+  pattern: 5
+    capture: 0 - function, start: (48, 21), end: (48, 37), text: `find_starting_in`
+  pattern: 5
+    capture: 0 - function, start: (49, 21), end: (49, 37), text: `find_starting_at`
+  pattern: 5
+    capture: 0 - function, start: (50, 21), end: (50, 35), text: `find_ending_in`
+  pattern: 5
+    capture: 0 - function, start: (51, 21), end: (51, 35), text: `find_ending_at`
+  pattern: 5
+    capture: 0 - function, start: (52, 22), end: (52, 43), text: `find_boundaries_after`
+  pattern: 5
+    capture: 0 - function, start: (54, 38), end: (54, 42), text: `dump`
+  pattern: 11
+    capture: 5 - keyword, start: (56, 0), end: (56, 7), text: `private`
+  pattern: 11
+    capture: 5 - keyword, start: (57, 2), end: (57, 8), text: `friend`
+  pattern: 11
+    capture: 5 - keyword, start: (57, 9), end: (57, 14), text: `class`
+  pattern: 5
+    capture: 0 - function, start: (71, 9), end: (71, 27), text: `is_marker_endpoint`
+  pattern: 11
+    capture: 5 - keyword, start: (74, 2), end: (74, 7), text: `class`
+  pattern: 11
+    capture: 5 - keyword, start: (75, 2), end: (75, 8), text: `public`
+  pattern: 5
+    capture: 0 - function, start: (77, 9), end: (77, 14), text: `reset`
+  pattern: 5
+    capture: 0 - function, start: (78, 10), end: (78, 29), text: `insert_marker_start`
+  pattern: 5
+    capture: 0 - function, start: (79, 10), end: (79, 27), text: `insert_marker_end`
+  pattern: 5
+    capture: 0 - function, start: (80, 10), end: (80, 32), text: `insert_splice_boundary`
+  pattern: 5
+    capture: 0 - function, start: (81, 9), end: (81, 26), text: `find_intersecting`
+  pattern: 5
+    capture: 0 - function, start: (82, 9), end: (82, 26), text: `find_contained_in`
+  pattern: 5
+    capture: 0 - function, start: (83, 9), end: (83, 25), text: `find_starting_in`
+  pattern: 5
+    capture: 0 - function, start: (84, 9), end: (84, 23), text: `find_ending_in`
+  pattern: 5
+    capture: 0 - function, start: (85, 9), end: (85, 30), text: `find_boundaries_after`
+  pattern: 5
+    capture: 0 - function, start: (86, 40), end: (86, 44), text: `dump`
+  pattern: 11
+    capture: 5 - keyword, start: (88, 2), end: (88, 9), text: `private`
+  pattern: 5
+    capture: 0 - function, start: (89, 9), end: (89, 15), text: `ascend`
+  pattern: 5
+    capture: 0 - function, start: (90, 9), end: (90, 21), text: `descend_left`
+  pattern: 5
+    capture: 0 - function, start: (91, 9), end: (91, 22), text: `descend_right`
+  pattern: 5
+    capture: 0 - function, start: (92, 9), end: (92, 26), text: `move_to_successor`
+  pattern: 5
+    capture: 0 - function, start: (93, 9), end: (93, 52), text: `seek_to_first_node_greater_than_or_equal_to`
+  pattern: 5
+    capture: 0 - function, start: (94, 9), end: (94, 19), text: `mark_right`
+  pattern: 5
+    capture: 0 - function, start: (95, 9), end: (95, 18), text: `mark_left`
+  pattern: 5
+    capture: 0 - function, start: (96, 10), end: (96, 27), text: `insert_left_child`
+  pattern: 5
+    capture: 0 - function, start: (97, 10), end: (97, 28), text: `insert_right_child`
+  pattern: 5
+    capture: 0 - function, start: (98, 9), end: (98, 27), text: `check_intersection`
+  pattern: 5
+    capture: 0 - function, start: (99, 9), end: (99, 28), text: `cache_node_position`
+  pattern: 5
+    capture: 0 - function, start: (110, 8), end: (110, 25), text: `get_node_position`
+  pattern: 5
+    capture: 0 - function, start: (111, 7), end: (111, 18), text: `delete_node`
+  pattern: 5
+    capture: 0 - function, start: (112, 7), end: (112, 21), text: `delete_subtree`
+  pattern: 5
+    capture: 0 - function, start: (113, 7), end: (113, 21), text: `bubble_node_up`
+  pattern: 5
+    capture: 0 - function, start: (114, 7), end: (114, 23), text: `bubble_node_down`
+  pattern: 5
+    capture: 0 - function, start: (115, 7), end: (115, 23), text: `rotate_node_left`
+  pattern: 5
+    capture: 0 - function, start: (116, 7), end: (116, 24), text: `rotate_node_right`
+  pattern: 5
+    capture: 0 - function, start: (117, 7), end: (117, 53), text: `get_starting_and_ending_markers_within_subtree`
+  pattern: 5
+    capture: 0 - function, start: (118, 7), end: (118, 40), text: `populate_splice_invalidation_sets`
+  pattern: 11
+    capture: 5 - keyword, start: (127, 2), end: (127, 9), text: `mutable`
