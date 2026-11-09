@@ -1,0 +1,111 @@
+corpus/error.txt/000
+  pattern: 42
+    capture: 14 - keyword, start: (1, 0), end: (1, 5), text: `const`
+  pattern: 4
+    capture: 4 - constructor, start: (1, 6), end: (1, 7), text: `A`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (1, 7), end: (1, 8), text: `:`
+  pattern: 92
+    capture: 20 - operator, start: (1, 9), end: (1, 10), text: `&`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (1, 10), end: (1, 11), text: `[`
+  pattern: 92
+    capture: 20 - operator, start: (1, 11), end: (1, 12), text: `&`
+  pattern: 1
+    capture: 1 - type.builtin, start: (1, 12), end: (1, 15), text: `str`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (1, 15), end: (1, 16), text: `]`
+  pattern: 92
+    capture: 20 - operator, start: (1, 19), end: (1, 20), text: `&`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (1, 20), end: (1, 21), text: `[`
+  pattern: 83
+    capture: 16 - string, start: (2, 5), end: (2, 11), text: `"asdf"`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (2, 11), end: (2, 12), text: `,`
+  pattern: 83
+    capture: 16 - string, start: (3, 5), end: (3, 11), text: `"asdf"`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (3, 11), end: (3, 12), text: `,`
+  pattern: 83
+    capture: 16 - string, start: (4, 5), end: (4, 11), text: `"asdf"`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (4, 11), end: (4, 12), text: `,`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (5, 4), end: (5, 5), text: `:`
+  pattern: 83
+    capture: 16 - string, start: (5, 5), end: (5, 11), text: `"asdf"`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (6, 0), end: (6, 1), text: `]`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (6, 1), end: (6, 2), text: `;`
+corpus/error.txt/001
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (1, 0), end: (1, 1), text: `(`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 1), end: (1, 2), text: `{`
+  pattern: 83
+    capture: 16 - string, start: (1, 3), end: (1, 15), text: `"session_id"`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (1, 15), end: (1, 16), text: `:`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (1, 27), end: (1, 28), text: `,`
+  pattern: 83
+    capture: 16 - string, start: (1, 29), end: (1, 37), text: `"output"`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (1, 37), end: (1, 38), text: `:`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (1, 46), end: (1, 47), text: `}`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (1, 47), end: (1, 48), text: `)`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (1, 48), end: (1, 48), text: ``
+corpus/error.txt/002
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (1, 0), end: (1, 1), text: `(`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 1), end: (1, 2), text: `{`
+  pattern: 83
+    capture: 16 - string, start: (2, 4), end: (2, 9), text: `"src"`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (2, 9), end: (2, 10), text: `:`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (2, 11), end: (2, 12), text: `{`
+  pattern: 83
+    capture: 16 - string, start: (3, 8), end: (3, 18), text: `"file1.rs"`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (3, 18), end: (3, 19), text: `:`
+  pattern: 83
+    capture: 16 - string, start: (3, 20), end: (3, 33), text: `"fn foo() {}"`
+  pattern: 83
+    capture: 16 - string, start: (4, 8), end: (4, 18), text: `"file2.rs"`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (4, 18), end: (4, 19), text: `:`
+  pattern: 83
+    capture: 16 - string, start: (4, 20), end: (4, 33), text: `"fn bar() {}"`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (4, 33), end: (4, 34), text: `,`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (5, 4), end: (5, 5), text: `}`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (5, 5), end: (5, 6), text: `,`
+  pattern: 83
+    capture: 16 - string, start: (6, 4), end: (6, 10), text: `"test"`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (6, 10), end: (6, 11), text: `:`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (6, 12), end: (6, 13), text: `{`
+  pattern: 83
+    capture: 16 - string, start: (7, 8), end: (7, 13), text: `"foo"`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (7, 13), end: (7, 14), text: `:`
+  pattern: 83
+    capture: 16 - string, start: (7, 15), end: (7, 20), text: `"bar"`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (8, 4), end: (8, 5), text: `}`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (9, 0), end: (9, 1), text: `}`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (9, 1), end: (9, 2), text: `)`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (9, 2), end: (9, 2), text: ``

@@ -1,0 +1,3955 @@
+corpus/declarations.txt/000
+  pattern: 59
+    capture: 14 - keyword, start: (1, 0), end: (1, 3), text: `mod`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (1, 11), end: (1, 12), text: `;`
+  pattern: 59
+    capture: 14 - keyword, start: (3, 0), end: (3, 3), text: `mod`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (3, 12), end: (3, 13), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (3, 13), end: (3, 14), text: `}`
+  pattern: 59
+    capture: 14 - keyword, start: (5, 0), end: (5, 3), text: `mod`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (5, 12), end: (5, 13), text: `{`
+  pattern: 59
+    capture: 14 - keyword, start: (6, 4), end: (6, 7), text: `mod`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (6, 18), end: (6, 19), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (6, 19), end: (6, 20), text: `}`
+  pattern: 59
+    capture: 14 - keyword, start: (7, 4), end: (7, 7), text: `mod`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (7, 18), end: (7, 19), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (7, 19), end: (7, 20), text: `}`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (8, 0), end: (8, 1), text: `}`
+  pattern: 61
+    capture: 14 - keyword, start: (10, 0), end: (10, 3), text: `pub`
+  pattern: 59
+    capture: 14 - keyword, start: (10, 4), end: (10, 7), text: `mod`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (10, 15), end: (10, 16), text: `;`
+corpus/declarations.txt/001
+  pattern: 48
+    capture: 14 - keyword, start: (1, 0), end: (1, 6), text: `extern`
+  pattern: 75
+    capture: 14 - keyword, start: (1, 7), end: (1, 12), text: `crate`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (1, 16), end: (1, 17), text: `;`
+  pattern: 48
+    capture: 14 - keyword, start: (2, 0), end: (2, 6), text: `extern`
+  pattern: 75
+    capture: 14 - keyword, start: (2, 7), end: (2, 12), text: `crate`
+  pattern: 38
+    capture: 14 - keyword, start: (2, 17), end: (2, 19), text: `as`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (2, 27), end: (2, 28), text: `;`
+  pattern: 61
+    capture: 14 - keyword, start: (3, 0), end: (3, 3), text: `pub`
+  pattern: 48
+    capture: 14 - keyword, start: (3, 4), end: (3, 10), text: `extern`
+  pattern: 75
+    capture: 14 - keyword, start: (3, 11), end: (3, 16), text: `crate`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (3, 24), end: (3, 25), text: `;`
+corpus/declarations.txt/002
+  pattern: 49
+    capture: 14 - keyword, start: (1, 0), end: (1, 2), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (1, 3), end: (1, 7), text: `main`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (1, 7), end: (1, 8), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (1, 8), end: (1, 9), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 10), end: (1, 11), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (1, 11), end: (1, 12), text: `}`
+  pattern: 49
+    capture: 14 - keyword, start: (3, 0), end: (3, 2), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (3, 3), end: (3, 6), text: `add`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (3, 6), end: (3, 7), text: `(`
+  pattern: 36
+    capture: 12 - variable.parameter, start: (3, 7), end: (3, 8), text: `x`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (3, 8), end: (3, 9), text: `:`
+  pattern: 1
+    capture: 1 - type.builtin, start: (3, 10), end: (3, 13), text: `i32`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (3, 13), end: (3, 14), text: `,`
+  pattern: 36
+    capture: 12 - variable.parameter, start: (3, 15), end: (3, 16), text: `y`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (3, 16), end: (3, 17), text: `:`
+  pattern: 1
+    capture: 1 - type.builtin, start: (3, 18), end: (3, 21), text: `i32`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (3, 21), end: (3, 22), text: `)`
+  pattern: 1
+    capture: 1 - type.builtin, start: (3, 26), end: (3, 29), text: `i32`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (3, 30), end: (3, 31), text: `{`
+  pattern: 64
+    capture: 14 - keyword, start: (4, 4), end: (4, 10), text: `return`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (4, 16), end: (4, 17), text: `;`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (5, 0), end: (5, 1), text: `}`
+  pattern: 49
+    capture: 14 - keyword, start: (7, 0), end: (7, 2), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (7, 3), end: (7, 14), text: `takes_slice`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (7, 14), end: (7, 15), text: `(`
+  pattern: 36
+    capture: 12 - variable.parameter, start: (7, 15), end: (7, 20), text: `slice`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (7, 20), end: (7, 21), text: `:`
+  pattern: 92
+    capture: 20 - operator, start: (7, 22), end: (7, 23), text: `&`
+  pattern: 1
+    capture: 1 - type.builtin, start: (7, 23), end: (7, 26), text: `str`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (7, 26), end: (7, 27), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (7, 28), end: (7, 29), text: `{`
+  pattern: 16
+    capture: 7 - function.macro, start: (8, 4), end: (8, 11), text: `println`
+    capture: 7 - function.macro, start: (8, 11), end: (8, 12), text: `!`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (8, 12), end: (8, 13), text: `(`
+  pattern: 83
+    capture: 16 - string, start: (8, 13), end: (8, 22), text: `"Got: {}"`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (8, 22), end: (8, 23), text: `,`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (8, 29), end: (8, 30), text: `)`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (8, 30), end: (8, 31), text: `;`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (9, 0), end: (9, 1), text: `}`
+  pattern: 49
+    capture: 14 - keyword, start: (11, 0), end: (11, 2), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (11, 3), end: (11, 6), text: `foo`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (11, 6), end: (11, 7), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (11, 7), end: (11, 8), text: `)`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (11, 12), end: (11, 13), text: `[`
+  pattern: 1
+    capture: 1 - type.builtin, start: (11, 13), end: (11, 16), text: `u32`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (11, 16), end: (11, 17), text: `;`
+  pattern: 86
+    capture: 17 - constant.builtin, start: (11, 18), end: (11, 19), text: `2`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (11, 19), end: (11, 20), text: `]`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (11, 21), end: (11, 22), text: `{`
+  pattern: 64
+    capture: 14 - keyword, start: (12, 4), end: (12, 10), text: `return`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (12, 11), end: (12, 12), text: `[`
+  pattern: 86
+    capture: 17 - constant.builtin, start: (12, 12), end: (12, 13), text: `1`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (12, 13), end: (12, 14), text: `,`
+  pattern: 86
+    capture: 17 - constant.builtin, start: (12, 15), end: (12, 16), text: `2`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (12, 16), end: (12, 17), text: `]`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (12, 17), end: (12, 18), text: `;`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (13, 0), end: (13, 1), text: `}`
+  pattern: 49
+    capture: 14 - keyword, start: (15, 0), end: (15, 2), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (15, 3), end: (15, 6), text: `foo`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (15, 6), end: (15, 7), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (15, 7), end: (15, 8), text: `)`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (15, 12), end: (15, 13), text: `(`
+  pattern: 1
+    capture: 1 - type.builtin, start: (15, 13), end: (15, 16), text: `u32`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (15, 16), end: (15, 17), text: `,`
+  pattern: 1
+    capture: 1 - type.builtin, start: (15, 18), end: (15, 21), text: `u16`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (15, 21), end: (15, 22), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (15, 23), end: (15, 24), text: `{`
+  pattern: 64
+    capture: 14 - keyword, start: (16, 4), end: (16, 10), text: `return`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (16, 11), end: (16, 12), text: `(`
+  pattern: 86
+    capture: 17 - constant.builtin, start: (16, 12), end: (16, 13), text: `1`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (16, 13), end: (16, 14), text: `,`
+  pattern: 86
+    capture: 17 - constant.builtin, start: (16, 15), end: (16, 16), text: `2`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (16, 16), end: (16, 17), text: `)`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (16, 17), end: (16, 18), text: `;`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (17, 0), end: (17, 1), text: `}`
+  pattern: 49
+    capture: 14 - keyword, start: (19, 0), end: (19, 2), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (19, 3), end: (19, 6), text: `foo`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (19, 6), end: (19, 7), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (19, 7), end: (19, 8), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (19, 9), end: (19, 10), text: `{`
+  pattern: 64
+    capture: 14 - keyword, start: (20, 4), end: (20, 10), text: `return`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (21, 0), end: (21, 1), text: `}`
+  pattern: 49
+    capture: 14 - keyword, start: (23, 0), end: (23, 2), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (23, 3), end: (23, 6), text: `foo`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (23, 6), end: (23, 7), text: `(`
+  pattern: 36
+    capture: 12 - variable.parameter, start: (23, 7), end: (23, 8), text: `x`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (23, 8), end: (23, 9), text: `:`
+  pattern: 53
+    capture: 14 - keyword, start: (23, 10), end: (23, 14), text: `impl`
+  pattern: 0
+    capture: 0 - type, start: (23, 15), end: (23, 21), text: `FnOnce`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (23, 21), end: (23, 22), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (23, 22), end: (23, 23), text: `)`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (23, 33), end: (23, 35), text: `::`
+  pattern: 0
+    capture: 0 - type, start: (23, 35), end: (23, 41), text: `Result`
+  pattern: 0
+    capture: 0 - type, start: (23, 42), end: (23, 43), text: `T`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (23, 43), end: (23, 44), text: `,`
+  pattern: 0
+    capture: 0 - type, start: (23, 45), end: (23, 46), text: `E`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (23, 41), end: (23, 42), text: `<`
+    capture: 10 - punctuation.bracket, start: (23, 46), end: (23, 47), text: `>`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (23, 47), end: (23, 48), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (23, 49), end: (23, 50), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (23, 50), end: (23, 51), text: `}`
+  pattern: 49
+    capture: 14 - keyword, start: (25, 0), end: (25, 2), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (25, 3), end: (25, 6), text: `foo`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (25, 6), end: (25, 7), text: `(`
+  pattern: 89
+    capture: 19 - attribute, start: (25, 7), end: (25, 14), text: `#[attr]`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (25, 8), end: (25, 9), text: `[`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (25, 13), end: (25, 14), text: `]`
+  pattern: 36
+    capture: 12 - variable.parameter, start: (25, 15), end: (25, 16), text: `x`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (25, 16), end: (25, 17), text: `:`
+  pattern: 1
+    capture: 1 - type.builtin, start: (25, 18), end: (25, 21), text: `i32`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (25, 21), end: (25, 22), text: `,`
+  pattern: 89
+    capture: 19 - attribute, start: (25, 23), end: (25, 30), text: `#[attr]`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (25, 24), end: (25, 25), text: `[`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (25, 29), end: (25, 30), text: `]`
+  pattern: 36
+    capture: 12 - variable.parameter, start: (25, 31), end: (25, 32), text: `x`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (25, 32), end: (25, 33), text: `:`
+  pattern: 1
+    capture: 1 - type.builtin, start: (25, 34), end: (25, 37), text: `i64`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (25, 37), end: (25, 38), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (25, 39), end: (25, 40), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (25, 40), end: (25, 41), text: `}`
+  pattern: 49
+    capture: 14 - keyword, start: (27, 0), end: (27, 2), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (27, 3), end: (27, 13), text: `accumulate`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (27, 13), end: (27, 14), text: `(`
+  pattern: 81
+    capture: 15 - variable.builtin, start: (27, 14), end: (27, 18), text: `self`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (27, 18), end: (27, 19), text: `)`
+  pattern: 0
+    capture: 0 - type, start: (27, 23), end: (27, 30), text: `Machine`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (27, 31), end: (27, 32), text: `{`
+  pattern: 5
+    capture: 0 - type, start: (27, 32), end: (27, 37), text: `State`
+  pattern: 4
+    capture: 4 - constructor, start: (27, 32), end: (27, 37), text: `State`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (27, 37), end: (27, 39), text: `::`
+  pattern: 4
+    capture: 4 - constructor, start: (27, 39), end: (27, 49), text: `Accumulate`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (27, 49), end: (27, 50), text: `}`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (27, 30), end: (27, 31), text: `<`
+    capture: 10 - punctuation.bracket, start: (27, 50), end: (27, 51), text: `>`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (27, 52), end: (27, 53), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (27, 53), end: (27, 54), text: `}`
+  pattern: 49
+    capture: 14 - keyword, start: (29, 0), end: (29, 2), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (29, 3), end: (29, 6), text: `foo`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (29, 6), end: (29, 7), text: `(`
+  pattern: 36
+    capture: 12 - variable.parameter, start: (29, 7), end: (29, 10), text: `bar`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (29, 10), end: (29, 11), text: `:`
+  pattern: 53
+    capture: 14 - keyword, start: (29, 12), end: (29, 16), text: `impl`
+  pattern: 50
+    capture: 14 - keyword, start: (29, 17), end: (29, 20), text: `for`
+  pattern: 93
+    capture: 20 - operator, start: (29, 21), end: (29, 22), text: `'`
+  pattern: 37
+    capture: 13 - label, start: (29, 22), end: (29, 23), text: `a`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (29, 20), end: (29, 21), text: `<`
+    capture: 10 - punctuation.bracket, start: (29, 23), end: (29, 24), text: `>`
+  pattern: 0
+    capture: 0 - type, start: (29, 25), end: (29, 28), text: `Baz`
+  pattern: 0
+    capture: 0 - type, start: (29, 29), end: (29, 33), text: `Quux`
+  pattern: 93
+    capture: 20 - operator, start: (29, 34), end: (29, 35), text: `'`
+  pattern: 37
+    capture: 13 - label, start: (29, 35), end: (29, 36), text: `a`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (29, 33), end: (29, 34), text: `<`
+    capture: 10 - punctuation.bracket, start: (29, 36), end: (29, 37), text: `>`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (29, 28), end: (29, 29), text: `<`
+    capture: 10 - punctuation.bracket, start: (29, 37), end: (29, 38), text: `>`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (29, 38), end: (29, 39), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (29, 40), end: (29, 41), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (29, 41), end: (29, 42), text: `}`
+corpus/declarations.txt/003
+  pattern: 42
+    capture: 14 - keyword, start: (1, 0), end: (1, 5), text: `const`
+  pattern: 49
+    capture: 14 - keyword, start: (1, 6), end: (1, 8), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (1, 9), end: (1, 13), text: `main`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (1, 13), end: (1, 14), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (1, 14), end: (1, 15), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 16), end: (1, 17), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (1, 17), end: (1, 18), text: `}`
+corpus/declarations.txt/004
+  pattern: 49
+    capture: 14 - keyword, start: (1, 0), end: (1, 2), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (1, 3), end: (1, 10), text: `triples`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (1, 10), end: (1, 11), text: `(`
+  pattern: 36
+    capture: 12 - variable.parameter, start: (1, 11), end: (1, 12), text: `a`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (1, 12), end: (1, 13), text: `:`
+  pattern: 53
+    capture: 14 - keyword, start: (1, 14), end: (1, 18), text: `impl`
+  pattern: 0
+    capture: 0 - type, start: (1, 19), end: (1, 20), text: `B`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (1, 20), end: (1, 21), text: `)`
+  pattern: 53
+    capture: 14 - keyword, start: (1, 25), end: (1, 29), text: `impl`
+  pattern: 0
+    capture: 0 - type, start: (1, 30), end: (1, 38), text: `Iterator`
+  pattern: 0
+    capture: 0 - type, start: (1, 39), end: (1, 43), text: `Item`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (1, 44), end: (1, 45), text: `(`
+  pattern: 1
+    capture: 1 - type.builtin, start: (1, 45), end: (1, 50), text: `usize`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (1, 50), end: (1, 51), text: `)`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (1, 38), end: (1, 39), text: `<`
+    capture: 10 - punctuation.bracket, start: (1, 51), end: (1, 52), text: `>`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 53), end: (1, 54), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (2, 0), end: (2, 1), text: `}`
+corpus/declarations.txt/005
+  pattern: 49
+    capture: 14 - keyword, start: (1, 0), end: (1, 2), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (1, 3), end: (1, 6), text: `foo`
+  pattern: 93
+    capture: 20 - operator, start: (1, 7), end: (1, 8), text: `'`
+  pattern: 37
+    capture: 13 - label, start: (1, 8), end: (1, 9), text: `a`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (1, 6), end: (1, 7), text: `<`
+    capture: 10 - punctuation.bracket, start: (1, 9), end: (1, 10), text: `>`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (1, 10), end: (1, 11), text: `(`
+  pattern: 36
+    capture: 12 - variable.parameter, start: (1, 11), end: (1, 12), text: `x`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (1, 12), end: (1, 13), text: `:`
+  pattern: 53
+    capture: 14 - keyword, start: (1, 14), end: (1, 18), text: `impl`
+  pattern: 93
+    capture: 20 - operator, start: (1, 19), end: (1, 20), text: `'`
+  pattern: 37
+    capture: 13 - label, start: (1, 20), end: (1, 21), text: `a`
+  pattern: 0
+    capture: 0 - type, start: (1, 24), end: (1, 29), text: `Clone`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (1, 29), end: (1, 30), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 31), end: (1, 32), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (1, 32), end: (1, 33), text: `}`
+corpus/declarations.txt/006
+  pattern: 49
+    capture: 14 - keyword, start: (1, 0), end: (1, 2), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (1, 3), end: (1, 10), text: `capture`
+  pattern: 0
+    capture: 0 - type, start: (1, 11), end: (1, 12), text: `T`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (1, 10), end: (1, 11), text: `<`
+    capture: 10 - punctuation.bracket, start: (1, 12), end: (1, 13), text: `>`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (1, 13), end: (1, 14), text: `(`
+  pattern: 92
+    capture: 20 - operator, start: (1, 14), end: (1, 15), text: `&`
+  pattern: 81
+    capture: 15 - variable.builtin, start: (1, 15), end: (1, 19), text: `self`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (1, 19), end: (1, 20), text: `)`
+  pattern: 53
+    capture: 14 - keyword, start: (1, 24), end: (1, 28), text: `impl`
+  pattern: 0
+    capture: 0 - type, start: (1, 29), end: (1, 37), text: `Iterator`
+  pattern: 0
+    capture: 0 - type, start: (1, 38), end: (1, 42), text: `Item`
+  pattern: 1
+    capture: 1 - type.builtin, start: (1, 45), end: (1, 50), text: `usize`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (1, 37), end: (1, 38), text: `<`
+    capture: 10 - punctuation.bracket, start: (1, 50), end: (1, 51), text: `>`
+  pattern: 71
+    capture: 14 - keyword, start: (1, 54), end: (1, 57), text: `use`
+  pattern: 93
+    capture: 20 - operator, start: (1, 58), end: (1, 59), text: `'`
+  pattern: 37
+    capture: 13 - label, start: (1, 59), end: (1, 60), text: `_`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (1, 60), end: (1, 61), text: `,`
+  pattern: 0
+    capture: 0 - type, start: (1, 62), end: (1, 63), text: `T`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 65), end: (1, 66), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (2, 0), end: (2, 1), text: `}`
+corpus/declarations.txt/007
+  pattern: 49
+    capture: 14 - keyword, start: (1, 0), end: (1, 2), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (1, 3), end: (1, 10), text: `capture`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (1, 10), end: (1, 11), text: `(`
+  pattern: 92
+    capture: 20 - operator, start: (1, 11), end: (1, 12), text: `&`
+  pattern: 81
+    capture: 15 - variable.builtin, start: (1, 12), end: (1, 16), text: `self`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (1, 16), end: (1, 17), text: `)`
+  pattern: 53
+    capture: 14 - keyword, start: (1, 21), end: (1, 25), text: `impl`
+  pattern: 0
+    capture: 0 - type, start: (1, 26), end: (1, 34), text: `Iterator`
+  pattern: 0
+    capture: 0 - type, start: (1, 35), end: (1, 39), text: `Item`
+  pattern: 1
+    capture: 1 - type.builtin, start: (1, 42), end: (1, 47), text: `usize`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (1, 34), end: (1, 35), text: `<`
+    capture: 10 - punctuation.bracket, start: (1, 47), end: (1, 48), text: `>`
+  pattern: 71
+    capture: 14 - keyword, start: (1, 51), end: (1, 54), text: `use`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 57), end: (1, 58), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (2, 0), end: (2, 1), text: `}`
+corpus/declarations.txt/008
+  pattern: 49
+    capture: 14 - keyword, start: (1, 0), end: (1, 2), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (1, 3), end: (1, 9), text: `aborts`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (1, 9), end: (1, 10), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (1, 10), end: (1, 11), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 17), end: (1, 18), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (1, 18), end: (1, 19), text: `}`
+corpus/declarations.txt/009
+  pattern: 48
+    capture: 14 - keyword, start: (1, 0), end: (1, 6), text: `extern`
+  pattern: 83
+    capture: 16 - string, start: (1, 7), end: (1, 10), text: `"C"`
+  pattern: 49
+    capture: 14 - keyword, start: (1, 11), end: (1, 13), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (1, 14), end: (1, 17), text: `foo`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (1, 17), end: (1, 18), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (1, 18), end: (1, 19), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 20), end: (1, 21), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (1, 21), end: (1, 22), text: `}`
+  pattern: 48
+    capture: 14 - keyword, start: (2, 0), end: (2, 6), text: `extern`
+  pattern: 83
+    capture: 16 - string, start: (2, 7), end: (2, 10), text: `"C"`
+  pattern: 49
+    capture: 14 - keyword, start: (2, 11), end: (2, 13), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (2, 14), end: (2, 20), text: `printf`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (2, 20), end: (2, 21), text: `(`
+  pattern: 91
+    capture: 20 - operator, start: (3, 4), end: (3, 5), text: `*`
+  pattern: 42
+    capture: 14 - keyword, start: (3, 5), end: (3, 10), text: `const`
+  pattern: 0
+    capture: 0 - type, start: (3, 11), end: (3, 17), text: `c_char`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (3, 17), end: (3, 18), text: `,`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (4, 7), end: (4, 8), text: `,`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (5, 0), end: (5, 1), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (5, 2), end: (5, 3), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (5, 3), end: (5, 4), text: `}`
+  pattern: 61
+    capture: 14 - keyword, start: (7, 0), end: (7, 3), text: `pub`
+  pattern: 70
+    capture: 14 - keyword, start: (7, 4), end: (7, 10), text: `unsafe`
+  pattern: 48
+    capture: 14 - keyword, start: (7, 11), end: (7, 17), text: `extern`
+  pattern: 83
+    capture: 16 - string, start: (7, 18), end: (7, 21), text: `"C"`
+  pattern: 49
+    capture: 14 - keyword, start: (7, 22), end: (7, 24), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (7, 25), end: (7, 42), text: `c_variadic_no_use`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (7, 42), end: (7, 43), text: `(`
+  pattern: 36
+    capture: 12 - variable.parameter, start: (7, 43), end: (7, 46), text: `fmt`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (7, 46), end: (7, 47), text: `:`
+  pattern: 91
+    capture: 20 - operator, start: (7, 48), end: (7, 49), text: `*`
+  pattern: 42
+    capture: 14 - keyword, start: (7, 49), end: (7, 54), text: `const`
+  pattern: 1
+    capture: 1 - type.builtin, start: (7, 55), end: (7, 57), text: `i8`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (7, 57), end: (7, 58), text: `,`
+  pattern: 76
+    capture: 14 - keyword, start: (7, 59), end: (7, 62), text: `mut`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (7, 65), end: (7, 66), text: `:`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (7, 70), end: (7, 71), text: `)`
+  pattern: 1
+    capture: 1 - type.builtin, start: (7, 75), end: (7, 78), text: `i32`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (7, 79), end: (7, 80), text: `{`
+  pattern: 19
+    capture: 8 - comment, start: (8, 4), end: (8, 38), text: `// CHECK: call void @llvm.va_start`
+  pattern: 10
+    capture: 5 - function, start: (9, 4), end: (9, 11), text: `vprintf`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (9, 11), end: (9, 12), text: `(`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (9, 15), end: (9, 16), text: `,`
+  pattern: 33
+    capture: 11 - punctuation.delimiter, start: (9, 19), end: (9, 20), text: `.`
+  pattern: 11
+    capture: 6 - function.method, start: (9, 20), end: (9, 30), text: `as_va_list`
+  pattern: 2
+    capture: 2 - property, start: (9, 20), end: (9, 30), text: `as_va_list`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (9, 30), end: (9, 31), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (9, 31), end: (9, 32), text: `)`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (9, 32), end: (9, 33), text: `)`
+  pattern: 19
+    capture: 8 - comment, start: (10, 4), end: (10, 36), text: `// CHECK: call void @llvm.va_end`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (11, 0), end: (11, 1), text: `}`
+corpus/declarations.txt/010
+  pattern: 71
+    capture: 14 - keyword, start: (1, 0), end: (1, 3), text: `use`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (1, 7), end: (1, 8), text: `;`
+  pattern: 71
+    capture: 14 - keyword, start: (2, 0), end: (2, 3), text: `use`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (2, 11), end: (2, 13), text: `::`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (2, 21), end: (2, 22), text: `;`
+  pattern: 71
+    capture: 14 - keyword, start: (3, 0), end: (3, 3), text: `use`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (3, 11), end: (3, 13), text: `::`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (3, 20), end: (3, 22), text: `::`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (3, 31), end: (3, 32), text: `;`
+  pattern: 71
+    capture: 14 - keyword, start: (4, 0), end: (4, 3), text: `use`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (4, 11), end: (4, 13), text: `::`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (4, 20), end: (4, 22), text: `::`
+  pattern: 38
+    capture: 14 - keyword, start: (4, 32), end: (4, 34), text: `as`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (4, 48), end: (4, 49), text: `;`
+  pattern: 71
+    capture: 14 - keyword, start: (5, 0), end: (5, 3), text: `use`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (5, 11), end: (5, 13), text: `::`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (5, 20), end: (5, 22), text: `::`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (5, 22), end: (5, 23), text: `{`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (5, 32), end: (5, 33), text: `,`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (5, 42), end: (5, 43), text: `}`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (5, 43), end: (5, 44), text: `;`
+  pattern: 71
+    capture: 14 - keyword, start: (6, 0), end: (6, 3), text: `use`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (6, 11), end: (6, 13), text: `::`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (6, 21), end: (6, 23), text: `::`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (6, 32), end: (6, 34), text: `::`
+  pattern: 91
+    capture: 20 - operator, start: (6, 34), end: (6, 35), text: `*`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (6, 35), end: (6, 36), text: `;`
+  pattern: 61
+    capture: 14 - keyword, start: (7, 0), end: (7, 3), text: `pub`
+  pattern: 71
+    capture: 14 - keyword, start: (7, 4), end: (7, 7), text: `use`
+  pattern: 79
+    capture: 14 - keyword, start: (7, 8), end: (7, 12), text: `self`
+  pattern: 81
+    capture: 15 - variable.builtin, start: (7, 8), end: (7, 12), text: `self`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (7, 12), end: (7, 14), text: `::`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (7, 23), end: (7, 25), text: `::`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (7, 30), end: (7, 31), text: `;`
+  pattern: 71
+    capture: 14 - keyword, start: (8, 0), end: (8, 3), text: `use`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (8, 11), end: (8, 13), text: `::`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (8, 20), end: (8, 22), text: `::`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (8, 22), end: (8, 23), text: `{`
+  pattern: 77
+    capture: 14 - keyword, start: (8, 23), end: (8, 27), text: `self`
+  pattern: 81
+    capture: 15 - variable.builtin, start: (8, 23), end: (8, 27), text: `self`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (8, 27), end: (8, 28), text: `,`
+  pattern: 38
+    capture: 14 - keyword, start: (8, 39), end: (8, 41), text: `as`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (8, 54), end: (8, 55), text: `,`
+  pattern: 38
+    capture: 14 - keyword, start: (8, 66), end: (8, 68), text: `as`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (8, 81), end: (8, 82), text: `}`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (8, 82), end: (8, 83), text: `;`
+  pattern: 71
+    capture: 14 - keyword, start: (9, 0), end: (9, 3), text: `use`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (9, 9), end: (9, 11), text: `::`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (9, 11), end: (9, 12), text: `{`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (9, 16), end: (9, 18), text: `::`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (9, 18), end: (9, 19), text: `{`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (9, 22), end: (9, 23), text: `,`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (9, 28), end: (9, 29), text: `}`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (9, 30), end: (9, 31), text: `}`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (9, 31), end: (9, 32), text: `;`
+  pattern: 71
+    capture: 14 - keyword, start: (10, 0), end: (10, 3), text: `use`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (10, 6), end: (10, 8), text: `::`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (10, 8), end: (10, 9), text: `{`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (10, 14), end: (10, 16), text: `::`
+  pattern: 91
+    capture: 20 - operator, start: (10, 16), end: (10, 17), text: `*`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (10, 18), end: (10, 19), text: `}`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (10, 19), end: (10, 20), text: `;`
+  pattern: 71
+    capture: 14 - keyword, start: (11, 0), end: (11, 3), text: `use`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (11, 6), end: (11, 8), text: `::`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (11, 8), end: (11, 9), text: `{`
+  pattern: 91
+    capture: 20 - operator, start: (11, 9), end: (11, 10), text: `*`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (11, 10), end: (11, 11), text: `}`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (11, 11), end: (11, 12), text: `;`
+  pattern: 71
+    capture: 14 - keyword, start: (12, 0), end: (12, 3), text: `use`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (12, 4), end: (12, 6), text: `::`
+  pattern: 91
+    capture: 20 - operator, start: (12, 6), end: (12, 7), text: `*`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (12, 7), end: (12, 8), text: `;`
+corpus/declarations.txt/011
+  pattern: 55
+    capture: 14 - keyword, start: (1, 0), end: (1, 3), text: `let`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (1, 5), end: (1, 6), text: `;`
+  pattern: 55
+    capture: 14 - keyword, start: (2, 0), end: (2, 3), text: `let`
+  pattern: 86
+    capture: 17 - constant.builtin, start: (2, 8), end: (2, 10), text: `42`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (2, 10), end: (2, 11), text: `;`
+  pattern: 55
+    capture: 14 - keyword, start: (3, 0), end: (3, 3), text: `let`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (3, 5), end: (3, 6), text: `:`
+  pattern: 1
+    capture: 1 - type.builtin, start: (3, 7), end: (3, 10), text: `i32`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (3, 10), end: (3, 11), text: `;`
+  pattern: 55
+    capture: 14 - keyword, start: (4, 0), end: (4, 3), text: `let`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (4, 5), end: (4, 6), text: `:`
+  pattern: 1
+    capture: 1 - type.builtin, start: (4, 7), end: (4, 9), text: `i8`
+  pattern: 86
+    capture: 17 - constant.builtin, start: (4, 12), end: (4, 14), text: `42`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (4, 14), end: (4, 15), text: `;`
+  pattern: 55
+    capture: 14 - keyword, start: (5, 0), end: (5, 3), text: `let`
+  pattern: 76
+    capture: 14 - keyword, start: (5, 4), end: (5, 7), text: `mut`
+  pattern: 86
+    capture: 17 - constant.builtin, start: (5, 12), end: (5, 13), text: `5`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (5, 13), end: (5, 14), text: `;`
+  pattern: 55
+    capture: 14 - keyword, start: (6, 0), end: (6, 3), text: `let`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (6, 5), end: (6, 6), text: `:`
+  pattern: 1
+    capture: 1 - type.builtin, start: (6, 7), end: (6, 11), text: `bool`
+  pattern: 85
+    capture: 17 - constant.builtin, start: (6, 14), end: (6, 19), text: `false`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (6, 19), end: (6, 20), text: `;`
+  pattern: 55
+    capture: 14 - keyword, start: (7, 0), end: (7, 3), text: `let`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (7, 8), end: (7, 9), text: `:`
+  pattern: 1
+    capture: 1 - type.builtin, start: (7, 10), end: (7, 14), text: `bool`
+  pattern: 85
+    capture: 17 - constant.builtin, start: (7, 17), end: (7, 22), text: `false`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (7, 22), end: (7, 23), text: `;`
+  pattern: 55
+    capture: 14 - keyword, start: (8, 0), end: (8, 3), text: `let`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (8, 7), end: (8, 8), text: `:`
+  pattern: 1
+    capture: 1 - type.builtin, start: (8, 9), end: (8, 12), text: `str`
+  pattern: 83
+    capture: 16 - string, start: (8, 15), end: (8, 17), text: `""`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (8, 17), end: (8, 18), text: `;`
+corpus/declarations.txt/012
+  pattern: 55
+    capture: 14 - keyword, start: (1, 0), end: (1, 3), text: `let`
+  pattern: 7
+    capture: 0 - type, start: (1, 4), end: (1, 7), text: `Foo`
+  pattern: 4
+    capture: 4 - constructor, start: (1, 4), end: (1, 7), text: `Foo`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (1, 7), end: (1, 9), text: `::`
+  pattern: 9
+    capture: 4 - constructor, start: (1, 9), end: (1, 12), text: `Bar`
+  pattern: 0
+    capture: 0 - type, start: (1, 9), end: (1, 12), text: `Bar`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 13), end: (1, 14), text: `{`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (2, 9), end: (2, 10), text: `,`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (3, 10), end: (3, 11), text: `,`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (4, 0), end: (4, 1), text: `}`
+  pattern: 10
+    capture: 5 - function, start: (4, 4), end: (4, 7), text: `foo`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (4, 7), end: (4, 8), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (4, 8), end: (4, 9), text: `)`
+  pattern: 33
+    capture: 11 - punctuation.delimiter, start: (4, 9), end: (4, 10), text: `.`
+  pattern: 11
+    capture: 6 - function.method, start: (4, 10), end: (4, 13), text: `bar`
+  pattern: 2
+    capture: 2 - property, start: (4, 10), end: (4, 13), text: `bar`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (4, 13), end: (4, 14), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (4, 14), end: (4, 15), text: `)`
+  pattern: 33
+    capture: 11 - punctuation.delimiter, start: (4, 15), end: (4, 16), text: `.`
+  pattern: 40
+    capture: 14 - keyword, start: (4, 16), end: (4, 21), text: `await`
+  pattern: 46
+    capture: 14 - keyword, start: (4, 23), end: (4, 27), text: `else`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (4, 28), end: (4, 29), text: `{`
+  pattern: 64
+    capture: 14 - keyword, start: (5, 4), end: (5, 10), text: `return`
+  pattern: 10
+    capture: 5 - function, start: (5, 11), end: (5, 14), text: `Err`
+  pattern: 4
+    capture: 4 - constructor, start: (5, 11), end: (5, 14), text: `Err`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (5, 14), end: (5, 15), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (5, 20), end: (5, 21), text: `)`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (6, 0), end: (6, 1), text: `}`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (6, 1), end: (6, 2), text: `;`
+  pattern: 55
+    capture: 14 - keyword, start: (8, 0), end: (8, 3), text: `let`
+  pattern: 4
+    capture: 4 - constructor, start: (8, 4), end: (8, 8), text: `Some`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (8, 8), end: (8, 9), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (8, 10), end: (8, 11), text: `)`
+  pattern: 46
+    capture: 14 - keyword, start: (8, 16), end: (8, 20), text: `else`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (8, 21), end: (8, 22), text: `{`
+  pattern: 55
+    capture: 14 - keyword, start: (9, 4), end: (9, 7), text: `let`
+  pattern: 4
+    capture: 4 - constructor, start: (9, 8), end: (9, 12), text: `None`
+  pattern: 46
+    capture: 14 - keyword, start: (9, 17), end: (9, 21), text: `else`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (9, 22), end: (9, 23), text: `{`
+  pattern: 10
+    capture: 5 - function, start: (10, 8), end: (10, 11), text: `foo`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (10, 11), end: (10, 12), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (10, 12), end: (10, 13), text: `)`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (10, 13), end: (10, 14), text: `;`
+  pattern: 41
+    capture: 14 - keyword, start: (11, 8), end: (11, 13), text: `break`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (11, 13), end: (11, 14), text: `;`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (12, 4), end: (12, 5), text: `}`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (12, 5), end: (12, 6), text: `;`
+  pattern: 43
+    capture: 14 - keyword, start: (13, 4), end: (13, 12), text: `continue`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (13, 12), end: (13, 13), text: `;`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (14, 0), end: (14, 1), text: `}`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (14, 1), end: (14, 2), text: `;`
+corpus/declarations.txt/013
+  pattern: 55
+    capture: 14 - keyword, start: (1, 0), end: (1, 3), text: `let`
+  pattern: 52
+    capture: 14 - keyword, start: (1, 8), end: (1, 10), text: `if`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 13), end: (1, 14), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (3, 0), end: (3, 1), text: `}`
+  pattern: 46
+    capture: 14 - keyword, start: (3, 2), end: (3, 6), text: `else`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (3, 7), end: (3, 8), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (5, 0), end: (5, 1), text: `}`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (5, 1), end: (5, 2), text: `;`
+corpus/declarations.txt/014
+  pattern: 55
+    capture: 14 - keyword, start: (1, 0), end: (1, 3), text: `let`
+  pattern: 86
+    capture: 17 - constant.builtin, start: (1, 14), end: (1, 15), text: `1`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (1, 15), end: (1, 16), text: `;`
+  pattern: 55
+    capture: 14 - keyword, start: (2, 0), end: (2, 3), text: `let`
+  pattern: 86
+    capture: 17 - constant.builtin, start: (2, 12), end: (2, 13), text: `2`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (2, 13), end: (2, 14), text: `;`
+corpus/declarations.txt/015
+  pattern: 66
+    capture: 14 - keyword, start: (1, 0), end: (1, 6), text: `struct`
+  pattern: 0
+    capture: 0 - type, start: (1, 7), end: (1, 13), text: `Proton`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (1, 13), end: (1, 14), text: `;`
+  pattern: 66
+    capture: 14 - keyword, start: (2, 0), end: (2, 6), text: `struct`
+  pattern: 0
+    capture: 0 - type, start: (2, 7), end: (2, 15), text: `Electron`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (2, 16), end: (2, 17), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (2, 17), end: (2, 18), text: `}`
+  pattern: 66
+    capture: 14 - keyword, start: (3, 0), end: (3, 6), text: `struct`
+  pattern: 0
+    capture: 0 - type, start: (3, 7), end: (3, 13), text: `Person`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (3, 14), end: (3, 15), text: `{`
+  pattern: 61
+    capture: 14 - keyword, start: (3, 15), end: (3, 18), text: `pub`
+  pattern: 2
+    capture: 2 - property, start: (3, 19), end: (3, 23), text: `name`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (3, 23), end: (3, 24), text: `:`
+  pattern: 0
+    capture: 0 - type, start: (3, 25), end: (3, 31), text: `String`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (3, 31), end: (3, 32), text: `,`
+  pattern: 61
+    capture: 14 - keyword, start: (3, 33), end: (3, 36), text: `pub`
+  pattern: 2
+    capture: 2 - property, start: (3, 37), end: (3, 40), text: `age`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (3, 40), end: (3, 41), text: `:`
+  pattern: 1
+    capture: 1 - type.builtin, start: (3, 42), end: (3, 45), text: `u32`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (3, 45), end: (3, 46), text: `}`
+  pattern: 66
+    capture: 14 - keyword, start: (4, 0), end: (4, 6), text: `struct`
+  pattern: 0
+    capture: 0 - type, start: (4, 7), end: (4, 12), text: `Point`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (4, 13), end: (4, 14), text: `{`
+  pattern: 2
+    capture: 2 - property, start: (5, 2), end: (5, 3), text: `x`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (5, 3), end: (5, 4), text: `:`
+  pattern: 1
+    capture: 1 - type.builtin, start: (5, 5), end: (5, 8), text: `i32`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (5, 8), end: (5, 9), text: `,`
+  pattern: 89
+    capture: 19 - attribute, start: (7, 2), end: (7, 15), text: `#[attribute1]`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (7, 3), end: (7, 4), text: `[`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (7, 14), end: (7, 15), text: `]`
+  pattern: 2
+    capture: 2 - property, start: (8, 2), end: (8, 3), text: `y`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (8, 3), end: (8, 4), text: `:`
+  pattern: 1
+    capture: 1 - type.builtin, start: (8, 5), end: (8, 8), text: `i32`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (8, 8), end: (8, 9), text: `,`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (9, 0), end: (9, 1), text: `}`
+  pattern: 66
+    capture: 14 - keyword, start: (10, 0), end: (10, 6), text: `struct`
+  pattern: 0
+    capture: 0 - type, start: (10, 7), end: (10, 12), text: `Color`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (10, 12), end: (10, 13), text: `(`
+  pattern: 61
+    capture: 14 - keyword, start: (10, 13), end: (10, 16), text: `pub`
+  pattern: 1
+    capture: 1 - type.builtin, start: (10, 17), end: (10, 20), text: `i32`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (10, 20), end: (10, 21), text: `,`
+  pattern: 1
+    capture: 1 - type.builtin, start: (10, 22), end: (10, 25), text: `i32`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (10, 25), end: (10, 26), text: `,`
+  pattern: 1
+    capture: 1 - type.builtin, start: (10, 27), end: (10, 30), text: `i32`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (10, 30), end: (10, 31), text: `)`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (10, 31), end: (10, 32), text: `;`
+  pattern: 66
+    capture: 14 - keyword, start: (11, 0), end: (11, 6), text: `struct`
+  pattern: 0
+    capture: 0 - type, start: (11, 7), end: (11, 13), text: `Inches`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (11, 13), end: (11, 14), text: `(`
+  pattern: 1
+    capture: 1 - type.builtin, start: (11, 14), end: (11, 17), text: `i32`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (11, 17), end: (11, 18), text: `)`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (11, 18), end: (11, 19), text: `;`
+  pattern: 66
+    capture: 14 - keyword, start: (12, 0), end: (12, 6), text: `struct`
+  pattern: 0
+    capture: 0 - type, start: (12, 7), end: (12, 12), text: `Empty`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (12, 12), end: (12, 13), text: `(`
+  pattern: 61
+    capture: 14 - keyword, start: (12, 13), end: (12, 16), text: `pub`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (12, 17), end: (12, 18), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (12, 18), end: (12, 19), text: `)`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (12, 19), end: (12, 20), text: `)`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (12, 20), end: (12, 21), text: `;`
+corpus/declarations.txt/016
+  pattern: 61
+    capture: 14 - keyword, start: (1, 0), end: (1, 3), text: `pub`
+  pattern: 69
+    capture: 14 - keyword, start: (1, 4), end: (1, 9), text: `union`
+  pattern: 0
+    capture: 0 - type, start: (1, 10), end: (1, 32), text: `in6_addr__bindgen_ty_1`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 33), end: (1, 34), text: `{`
+  pattern: 61
+    capture: 14 - keyword, start: (2, 4), end: (2, 7), text: `pub`
+  pattern: 2
+    capture: 2 - property, start: (2, 8), end: (2, 18), text: `__u6_addr8`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (2, 18), end: (2, 19), text: `:`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (2, 20), end: (2, 21), text: `[`
+  pattern: 0
+    capture: 0 - type, start: (2, 21), end: (2, 30), text: `__uint8_t`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (2, 30), end: (2, 31), text: `;`
+  pattern: 86
+    capture: 17 - constant.builtin, start: (2, 32), end: (2, 39), text: `16usize`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (2, 39), end: (2, 40), text: `]`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (2, 40), end: (2, 41), text: `,`
+  pattern: 61
+    capture: 14 - keyword, start: (3, 4), end: (3, 7), text: `pub`
+  pattern: 2
+    capture: 2 - property, start: (3, 8), end: (3, 19), text: `__u6_addr16`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (3, 19), end: (3, 20), text: `:`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (3, 21), end: (3, 22), text: `[`
+  pattern: 0
+    capture: 0 - type, start: (3, 22), end: (3, 32), text: `__uint16_t`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (3, 32), end: (3, 33), text: `;`
+  pattern: 86
+    capture: 17 - constant.builtin, start: (3, 34), end: (3, 40), text: `8usize`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (3, 40), end: (3, 41), text: `]`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (3, 41), end: (3, 42), text: `,`
+  pattern: 61
+    capture: 14 - keyword, start: (4, 4), end: (4, 7), text: `pub`
+  pattern: 2
+    capture: 2 - property, start: (4, 8), end: (4, 19), text: `__u6_addr32`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (4, 19), end: (4, 20), text: `:`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (4, 21), end: (4, 22), text: `[`
+  pattern: 0
+    capture: 0 - type, start: (4, 22), end: (4, 32), text: `__uint32_t`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (4, 32), end: (4, 33), text: `;`
+  pattern: 86
+    capture: 17 - constant.builtin, start: (4, 34), end: (4, 40), text: `4usize`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (4, 40), end: (4, 41), text: `]`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (4, 41), end: (4, 42), text: `,`
+  pattern: 2
+    capture: 2 - property, start: (5, 4), end: (5, 24), text: `_bindgen_union_align`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (5, 24), end: (5, 25), text: `:`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (5, 26), end: (5, 27), text: `[`
+  pattern: 1
+    capture: 1 - type.builtin, start: (5, 27), end: (5, 30), text: `u32`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (5, 30), end: (5, 31), text: `;`
+  pattern: 86
+    capture: 17 - constant.builtin, start: (5, 32), end: (5, 38), text: `4usize`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (5, 38), end: (5, 39), text: `]`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (5, 39), end: (5, 40), text: `,`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (6, 0), end: (6, 1), text: `}`
+corpus/declarations.txt/017
+  pattern: 66
+    capture: 14 - keyword, start: (1, 0), end: (1, 6), text: `struct`
+  pattern: 0
+    capture: 0 - type, start: (1, 7), end: (1, 8), text: `A`
+  pattern: 0
+    capture: 0 - type, start: (1, 9), end: (1, 10), text: `B`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (1, 8), end: (1, 9), text: `<`
+    capture: 10 - punctuation.bracket, start: (1, 10), end: (1, 11), text: `>`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 12), end: (1, 13), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (1, 13), end: (1, 14), text: `}`
+  pattern: 66
+    capture: 14 - keyword, start: (2, 0), end: (2, 6), text: `struct`
+  pattern: 0
+    capture: 0 - type, start: (2, 7), end: (2, 8), text: `C`
+  pattern: 93
+    capture: 20 - operator, start: (2, 9), end: (2, 10), text: `'`
+  pattern: 37
+    capture: 13 - label, start: (2, 10), end: (2, 11), text: `a`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (2, 11), end: (2, 12), text: `,`
+  pattern: 93
+    capture: 20 - operator, start: (2, 13), end: (2, 14), text: `'`
+  pattern: 37
+    capture: 13 - label, start: (2, 14), end: (2, 15), text: `b`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (2, 8), end: (2, 9), text: `<`
+    capture: 10 - punctuation.bracket, start: (2, 15), end: (2, 16), text: `>`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (2, 17), end: (2, 18), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (2, 18), end: (2, 19), text: `}`
+  pattern: 66
+    capture: 14 - keyword, start: (3, 0), end: (3, 6), text: `struct`
+  pattern: 0
+    capture: 0 - type, start: (3, 7), end: (3, 8), text: `C`
+  pattern: 93
+    capture: 20 - operator, start: (3, 9), end: (3, 10), text: `'`
+  pattern: 37
+    capture: 13 - label, start: (3, 10), end: (3, 11), text: `a`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (3, 11), end: (3, 12), text: `,`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (3, 8), end: (3, 9), text: `<`
+    capture: 10 - punctuation.bracket, start: (3, 12), end: (3, 13), text: `>`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (3, 14), end: (3, 15), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (3, 15), end: (3, 16), text: `}`
+  pattern: 66
+    capture: 14 - keyword, start: (4, 0), end: (4, 6), text: `struct`
+  pattern: 0
+    capture: 0 - type, start: (4, 7), end: (4, 8), text: `D`
+  pattern: 42
+    capture: 14 - keyword, start: (4, 9), end: (4, 14), text: `const`
+  pattern: 4
+    capture: 4 - constructor, start: (4, 15), end: (4, 19), text: `SIZE`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (4, 19), end: (4, 20), text: `:`
+  pattern: 1
+    capture: 1 - type.builtin, start: (4, 21), end: (4, 26), text: `usize`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (4, 8), end: (4, 9), text: `<`
+    capture: 10 - punctuation.bracket, start: (4, 26), end: (4, 27), text: `>`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (4, 28), end: (4, 29), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (4, 29), end: (4, 30), text: `}`
+  pattern: 66
+    capture: 14 - keyword, start: (5, 0), end: (5, 6), text: `struct`
+  pattern: 0
+    capture: 0 - type, start: (5, 7), end: (5, 8), text: `E`
+  pattern: 89
+    capture: 19 - attribute, start: (5, 9), end: (5, 16), text: `#[attr]`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (5, 10), end: (5, 11), text: `[`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (5, 15), end: (5, 16), text: `]`
+  pattern: 0
+    capture: 0 - type, start: (5, 17), end: (5, 18), text: `T`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (5, 8), end: (5, 9), text: `<`
+    capture: 10 - punctuation.bracket, start: (5, 18), end: (5, 19), text: `>`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (5, 20), end: (5, 21), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (5, 21), end: (5, 22), text: `}`
+corpus/declarations.txt/018
+  pattern: 61
+    capture: 14 - keyword, start: (1, 0), end: (1, 3), text: `pub`
+  pattern: 47
+    capture: 14 - keyword, start: (1, 4), end: (1, 8), text: `enum`
+  pattern: 0
+    capture: 0 - type, start: (1, 9), end: (1, 15), text: `Option`
+  pattern: 0
+    capture: 0 - type, start: (1, 16), end: (1, 17), text: `T`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (1, 15), end: (1, 16), text: `<`
+    capture: 10 - punctuation.bracket, start: (1, 17), end: (1, 18), text: `>`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 19), end: (1, 20), text: `{`
+  pattern: 4
+    capture: 4 - constructor, start: (2, 4), end: (2, 8), text: `None`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (2, 8), end: (2, 9), text: `,`
+  pattern: 4
+    capture: 4 - constructor, start: (3, 4), end: (3, 8), text: `Some`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (3, 8), end: (3, 9), text: `(`
+  pattern: 0
+    capture: 0 - type, start: (3, 9), end: (3, 10), text: `T`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (3, 10), end: (3, 11), text: `)`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (3, 11), end: (3, 12), text: `,`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (4, 0), end: (4, 1), text: `}`
+  pattern: 61
+    capture: 14 - keyword, start: (6, 0), end: (6, 3), text: `pub`
+  pattern: 47
+    capture: 14 - keyword, start: (6, 4), end: (6, 8), text: `enum`
+  pattern: 0
+    capture: 0 - type, start: (6, 9), end: (6, 13), text: `Node`
+  pattern: 0
+    capture: 0 - type, start: (6, 14), end: (6, 15), text: `T`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (6, 15), end: (6, 16), text: `:`
+  pattern: 0
+    capture: 0 - type, start: (6, 17), end: (6, 21), text: `Item`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (6, 13), end: (6, 14), text: `<`
+    capture: 10 - punctuation.bracket, start: (6, 21), end: (6, 22), text: `>`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (6, 23), end: (6, 24), text: `{`
+  pattern: 4
+    capture: 4 - constructor, start: (7, 4), end: (7, 12), text: `Internal`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (7, 13), end: (7, 14), text: `{`
+  pattern: 2
+    capture: 2 - property, start: (8, 8), end: (8, 16), text: `children`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (8, 16), end: (8, 17), text: `:`
+  pattern: 0
+    capture: 0 - type, start: (8, 18), end: (8, 21), text: `Vec`
+  pattern: 0
+    capture: 0 - type, start: (8, 22), end: (8, 26), text: `Tree`
+  pattern: 0
+    capture: 0 - type, start: (8, 27), end: (8, 28), text: `T`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (8, 26), end: (8, 27), text: `<`
+    capture: 10 - punctuation.bracket, start: (8, 28), end: (8, 29), text: `>`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (8, 21), end: (8, 22), text: `<`
+    capture: 10 - punctuation.bracket, start: (8, 29), end: (8, 30), text: `>`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (8, 30), end: (8, 31), text: `,`
+  pattern: 2
+    capture: 2 - property, start: (9, 8), end: (9, 14), text: `height`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (9, 14), end: (9, 15), text: `:`
+  pattern: 1
+    capture: 1 - type.builtin, start: (9, 16), end: (9, 19), text: `u16`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (10, 4), end: (10, 5), text: `}`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (10, 5), end: (10, 6), text: `,`
+  pattern: 89
+    capture: 19 - attribute, start: (11, 4), end: (11, 17), text: `#[attribute1]`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (11, 5), end: (11, 6), text: `[`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (11, 16), end: (11, 17), text: `]`
+  pattern: 89
+    capture: 19 - attribute, start: (12, 4), end: (12, 17), text: `#[attribute2]`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (12, 5), end: (12, 6), text: `[`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (12, 16), end: (12, 17), text: `]`
+  pattern: 4
+    capture: 4 - constructor, start: (13, 4), end: (13, 8), text: `Leaf`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (13, 9), end: (13, 10), text: `{`
+  pattern: 2
+    capture: 2 - property, start: (14, 8), end: (14, 13), text: `value`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (14, 13), end: (14, 14), text: `:`
+  pattern: 0
+    capture: 0 - type, start: (14, 15), end: (14, 16), text: `T`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (15, 4), end: (15, 5), text: `}`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (16, 0), end: (16, 1), text: `}`
+corpus/declarations.txt/019
+  pattern: 61
+    capture: 14 - keyword, start: (1, 0), end: (1, 3), text: `pub`
+  pattern: 47
+    capture: 14 - keyword, start: (1, 4), end: (1, 8), text: `enum`
+  pattern: 0
+    capture: 0 - type, start: (1, 9), end: (1, 21), text: `c_style_enum`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 22), end: (1, 23), text: `{`
+  pattern: 86
+    capture: 17 - constant.builtin, start: (2, 11), end: (2, 12), text: `1`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (2, 12), end: (2, 13), text: `,`
+  pattern: 86
+    capture: 17 - constant.builtin, start: (3, 11), end: (3, 12), text: `2`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (4, 0), end: (4, 1), text: `}`
+corpus/declarations.txt/020
+  pattern: 61
+    capture: 14 - keyword, start: (1, 0), end: (1, 3), text: `pub`
+  pattern: 49
+    capture: 14 - keyword, start: (1, 4), end: (1, 6), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (1, 7), end: (1, 13), text: `splice`
+  pattern: 0
+    capture: 0 - type, start: (1, 14), end: (1, 15), text: `T`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (1, 15), end: (1, 16), text: `:`
+  pattern: 0
+    capture: 0 - type, start: (1, 17), end: (1, 21), text: `Into`
+  pattern: 0
+    capture: 0 - type, start: (1, 22), end: (1, 26), text: `Text`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (1, 21), end: (1, 22), text: `<`
+    capture: 10 - punctuation.bracket, start: (1, 26), end: (1, 27), text: `>`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (1, 13), end: (1, 14), text: `<`
+    capture: 10 - punctuation.bracket, start: (1, 27), end: (1, 28), text: `>`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (1, 28), end: (1, 29), text: `(`
+  pattern: 92
+    capture: 20 - operator, start: (1, 29), end: (1, 30), text: `&`
+  pattern: 76
+    capture: 14 - keyword, start: (1, 30), end: (1, 33), text: `mut`
+  pattern: 81
+    capture: 15 - variable.builtin, start: (1, 34), end: (1, 38), text: `self`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (1, 38), end: (1, 39), text: `,`
+  pattern: 36
+    capture: 12 - variable.parameter, start: (1, 40), end: (1, 49), text: `old_range`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (1, 49), end: (1, 50), text: `:`
+  pattern: 0
+    capture: 0 - type, start: (1, 51), end: (1, 56), text: `Range`
+  pattern: 1
+    capture: 1 - type.builtin, start: (1, 57), end: (1, 62), text: `usize`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (1, 56), end: (1, 57), text: `<`
+    capture: 10 - punctuation.bracket, start: (1, 62), end: (1, 63), text: `>`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (1, 63), end: (1, 64), text: `,`
+  pattern: 36
+    capture: 12 - variable.parameter, start: (1, 65), end: (1, 73), text: `new_text`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (1, 73), end: (1, 74), text: `:`
+  pattern: 0
+    capture: 0 - type, start: (1, 75), end: (1, 76), text: `T`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (1, 76), end: (1, 77), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 78), end: (1, 79), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (2, 0), end: (2, 1), text: `}`
+  pattern: 61
+    capture: 14 - keyword, start: (3, 0), end: (3, 3), text: `pub`
+  pattern: 49
+    capture: 14 - keyword, start: (3, 4), end: (3, 6), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (3, 7), end: (3, 19), text: `uninit_array`
+  pattern: 42
+    capture: 14 - keyword, start: (3, 20), end: (3, 25), text: `const`
+  pattern: 4
+    capture: 4 - constructor, start: (3, 26), end: (3, 29), text: `LEN`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (3, 29), end: (3, 30), text: `:`
+  pattern: 1
+    capture: 1 - type.builtin, start: (3, 31), end: (3, 36), text: `usize`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (3, 19), end: (3, 20), text: `<`
+    capture: 10 - punctuation.bracket, start: (3, 36), end: (3, 37), text: `>`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (3, 37), end: (3, 38), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (3, 38), end: (3, 39), text: `)`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (3, 43), end: (3, 44), text: `[`
+  pattern: 0
+    capture: 0 - type, start: (3, 44), end: (3, 48), text: `Self`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (3, 48), end: (3, 49), text: `;`
+  pattern: 4
+    capture: 4 - constructor, start: (3, 50), end: (3, 53), text: `LEN`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (3, 53), end: (3, 54), text: `]`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (3, 55), end: (3, 56), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (3, 56), end: (3, 57), text: `}`
+corpus/declarations.txt/021
+  pattern: 49
+    capture: 14 - keyword, start: (1, 0), end: (1, 2), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (1, 3), end: (1, 6), text: `foo`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (1, 6), end: (1, 7), text: `(`
+  pattern: 76
+    capture: 14 - keyword, start: (1, 7), end: (1, 10), text: `mut`
+  pattern: 36
+    capture: 12 - variable.parameter, start: (1, 11), end: (1, 12), text: `x`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (1, 13), end: (1, 14), text: `:`
+  pattern: 1
+    capture: 1 - type.builtin, start: (1, 15), end: (1, 18), text: `u32`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (1, 18), end: (1, 19), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 20), end: (1, 21), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (2, 0), end: (2, 1), text: `}`
+corpus/declarations.txt/022
+  pattern: 49
+    capture: 14 - keyword, start: (1, 0), end: (1, 2), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (1, 3), end: (1, 5), text: `f1`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (1, 5), end: (1, 6), text: `(`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (1, 6), end: (1, 7), text: `[`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (1, 8), end: (1, 9), text: `,`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (1, 11), end: (1, 12), text: `]`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (1, 12), end: (1, 13), text: `:`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (1, 14), end: (1, 15), text: `[`
+  pattern: 1
+    capture: 1 - type.builtin, start: (1, 15), end: (1, 18), text: `u32`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (1, 18), end: (1, 19), text: `;`
+  pattern: 86
+    capture: 17 - constant.builtin, start: (1, 20), end: (1, 21), text: `2`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (1, 21), end: (1, 22), text: `]`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (1, 22), end: (1, 23), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 24), end: (1, 25), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (1, 25), end: (1, 26), text: `}`
+  pattern: 49
+    capture: 14 - keyword, start: (2, 0), end: (2, 2), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (2, 3), end: (2, 5), text: `f2`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (2, 5), end: (2, 6), text: `(`
+  pattern: 92
+    capture: 20 - operator, start: (2, 6), end: (2, 7), text: `&`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (2, 8), end: (2, 9), text: `:`
+  pattern: 92
+    capture: 20 - operator, start: (2, 10), end: (2, 11), text: `&`
+  pattern: 0
+    capture: 0 - type, start: (2, 11), end: (2, 12), text: `Y`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (2, 12), end: (2, 13), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (2, 14), end: (2, 15), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (2, 15), end: (2, 16), text: `}`
+  pattern: 49
+    capture: 14 - keyword, start: (3, 0), end: (3, 2), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (3, 3), end: (3, 5), text: `f3`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (3, 5), end: (3, 6), text: `(`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (3, 6), end: (3, 7), text: `(`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (3, 8), end: (3, 9), text: `,`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (3, 11), end: (3, 12), text: `)`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (3, 12), end: (3, 13), text: `:`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (3, 14), end: (3, 15), text: `(`
+  pattern: 0
+    capture: 0 - type, start: (3, 15), end: (3, 16), text: `T`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (3, 16), end: (3, 17), text: `,`
+  pattern: 0
+    capture: 0 - type, start: (3, 18), end: (3, 19), text: `U`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (3, 19), end: (3, 20), text: `)`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (3, 20), end: (3, 21), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (3, 22), end: (3, 23), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (3, 23), end: (3, 24), text: `}`
+corpus/declarations.txt/023
+  pattern: 67
+    capture: 14 - keyword, start: (1, 0), end: (1, 5), text: `trait`
+  pattern: 0
+    capture: 0 - type, start: (1, 6), end: (1, 14), text: `Callback`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 15), end: (1, 16), text: `{`
+  pattern: 49
+    capture: 14 - keyword, start: (2, 4), end: (2, 6), text: `fn`
+  pattern: 18
+    capture: 5 - function, start: (2, 7), end: (2, 11), text: `call`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (2, 11), end: (2, 12), text: `(`
+  pattern: 81
+    capture: 15 - variable.builtin, start: (2, 12), end: (2, 16), text: `self`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (2, 16), end: (2, 17), text: `:`
+  pattern: 0
+    capture: 0 - type, start: (2, 18), end: (2, 21), text: `Box`
+  pattern: 0
+    capture: 0 - type, start: (2, 22), end: (2, 26), text: `Self`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (2, 21), end: (2, 22), text: `<`
+    capture: 10 - punctuation.bracket, start: (2, 26), end: (2, 27), text: `>`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (2, 27), end: (2, 28), text: `)`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (2, 28), end: (2, 29), text: `;`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (3, 0), end: (3, 1), text: `}`
+corpus/declarations.txt/024
+  pattern: 42
+    capture: 14 - keyword, start: (1, 0), end: (1, 5), text: `const`
+  pattern: 4
+    capture: 4 - constructor, start: (1, 6), end: (1, 7), text: `N`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (1, 7), end: (1, 8), text: `:`
+  pattern: 1
+    capture: 1 - type.builtin, start: (1, 9), end: (1, 12), text: `i32`
+  pattern: 86
+    capture: 17 - constant.builtin, start: (1, 15), end: (1, 16), text: `5`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (1, 16), end: (1, 17), text: `;`
+  pattern: 67
+    capture: 14 - keyword, start: (3, 0), end: (3, 5), text: `trait`
+  pattern: 0
+    capture: 0 - type, start: (3, 6), end: (3, 9), text: `Foo`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (3, 10), end: (3, 11), text: `{`
+  pattern: 42
+    capture: 14 - keyword, start: (4, 4), end: (4, 9), text: `const`
+  pattern: 4
+    capture: 4 - constructor, start: (4, 10), end: (4, 11), text: `X`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (4, 11), end: (4, 12), text: `:`
+  pattern: 1
+    capture: 1 - type.builtin, start: (4, 13), end: (4, 15), text: `u8`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (4, 15), end: (4, 16), text: `;`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (5, 0), end: (5, 1), text: `}`
+corpus/declarations.txt/025
+  pattern: 65
+    capture: 14 - keyword, start: (1, 0), end: (1, 6), text: `static`
+  pattern: 4
+    capture: 4 - constructor, start: (1, 7), end: (1, 8), text: `N`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (1, 8), end: (1, 9), text: `:`
+  pattern: 1
+    capture: 1 - type.builtin, start: (1, 10), end: (1, 13), text: `i32`
+  pattern: 86
+    capture: 17 - constant.builtin, start: (1, 16), end: (1, 17), text: `5`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (1, 17), end: (1, 18), text: `;`
+  pattern: 65
+    capture: 14 - keyword, start: (2, 0), end: (2, 6), text: `static`
+  pattern: 76
+    capture: 14 - keyword, start: (2, 7), end: (2, 10), text: `mut`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (2, 21), end: (2, 22), text: `:`
+  pattern: 91
+    capture: 20 - operator, start: (2, 23), end: (2, 24), text: `*`
+  pattern: 76
+    capture: 14 - keyword, start: (2, 24), end: (2, 27), text: `mut`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (2, 28), end: (2, 30), text: `::`
+  pattern: 0
+    capture: 0 - type, start: (2, 30), end: (2, 36), text: `c_char`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (2, 36), end: (2, 37), text: `;`
+corpus/declarations.txt/026
+  pattern: 65
+    capture: 14 - keyword, start: (1, 0), end: (1, 6), text: `static`
+  pattern: 63
+    capture: 14 - keyword, start: (1, 7), end: (1, 10), text: `ref`
+  pattern: 4
+    capture: 4 - constructor, start: (1, 11), end: (1, 14), text: `ONE`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (1, 14), end: (1, 15), text: `:`
+  pattern: 1
+    capture: 1 - type.builtin, start: (1, 16), end: (1, 21), text: `usize`
+  pattern: 86
+    capture: 17 - constant.builtin, start: (1, 24), end: (1, 25), text: `0`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (1, 25), end: (1, 26), text: `;`
+corpus/declarations.txt/027
+  pattern: 68
+    capture: 14 - keyword, start: (1, 0), end: (1, 4), text: `type`
+  pattern: 0
+    capture: 0 - type, start: (1, 5), end: (1, 9), text: `Inch`
+  pattern: 1
+    capture: 1 - type.builtin, start: (1, 12), end: (1, 15), text: `u64`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (1, 15), end: (1, 16), text: `;`
+  pattern: 68
+    capture: 14 - keyword, start: (2, 0), end: (2, 4), text: `type`
+  pattern: 0
+    capture: 0 - type, start: (2, 5), end: (2, 9), text: `Name`
+  pattern: 0
+    capture: 0 - type, start: (2, 10), end: (2, 11), text: `T`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (2, 9), end: (2, 10), text: `<`
+    capture: 10 - punctuation.bracket, start: (2, 11), end: (2, 12), text: `>`
+  pattern: 0
+    capture: 0 - type, start: (2, 15), end: (2, 18), text: `Vec`
+  pattern: 0
+    capture: 0 - type, start: (2, 19), end: (2, 20), text: `T`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (2, 18), end: (2, 19), text: `<`
+    capture: 10 - punctuation.bracket, start: (2, 20), end: (2, 21), text: `>`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (2, 21), end: (2, 22), text: `;`
+  pattern: 68
+    capture: 14 - keyword, start: (3, 0), end: (3, 4), text: `type`
+  pattern: 0
+    capture: 0 - type, start: (3, 5), end: (3, 16), text: `LazyResolve`
+  pattern: 53
+    capture: 14 - keyword, start: (3, 19), end: (3, 23), text: `impl`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (3, 24), end: (3, 25), text: `(`
+  pattern: 0
+    capture: 0 - type, start: (3, 25), end: (3, 31), text: `FnOnce`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (3, 31), end: (3, 32), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (3, 32), end: (3, 33), text: `)`
+  pattern: 0
+    capture: 0 - type, start: (3, 37), end: (3, 44), text: `Capture`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (3, 44), end: (3, 45), text: `)`
+  pattern: 0
+    capture: 0 - type, start: (3, 48), end: (3, 52), text: `Send`
+  pattern: 0
+    capture: 0 - type, start: (3, 55), end: (3, 59), text: `Sync`
+  pattern: 0
+    capture: 0 - type, start: (3, 62), end: (3, 72), text: `UnwindSafe`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (3, 72), end: (3, 73), text: `;`
+corpus/declarations.txt/028
+  pattern: 68
+    capture: 14 - keyword, start: (1, 0), end: (1, 4), text: `type`
+  pattern: 0
+    capture: 0 - type, start: (1, 5), end: (1, 8), text: `Foo`
+  pattern: 0
+    capture: 0 - type, start: (1, 9), end: (1, 10), text: `T`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (1, 8), end: (1, 9), text: `<`
+    capture: 10 - punctuation.bracket, start: (1, 10), end: (1, 11), text: `>`
+  pattern: 72
+    capture: 14 - keyword, start: (1, 12), end: (1, 17), text: `where`
+  pattern: 0
+    capture: 0 - type, start: (1, 18), end: (1, 19), text: `T`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (1, 19), end: (1, 20), text: `:`
+  pattern: 0
+    capture: 0 - type, start: (1, 21), end: (1, 25), text: `Copy`
+  pattern: 0
+    capture: 0 - type, start: (1, 28), end: (1, 31), text: `Box`
+  pattern: 0
+    capture: 0 - type, start: (1, 32), end: (1, 33), text: `T`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (1, 31), end: (1, 32), text: `<`
+    capture: 10 - punctuation.bracket, start: (1, 33), end: (1, 34), text: `>`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (1, 34), end: (1, 35), text: `;`
+  pattern: 68
+    capture: 14 - keyword, start: (2, 0), end: (2, 4), text: `type`
+  pattern: 0
+    capture: 0 - type, start: (2, 5), end: (2, 11), text: `Assoc3`
+  pattern: 72
+    capture: 14 - keyword, start: (2, 12), end: (2, 17), text: `where`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (2, 20), end: (2, 21), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (2, 21), end: (2, 22), text: `)`
+  pattern: 72
+    capture: 14 - keyword, start: (2, 23), end: (2, 28), text: `where`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (2, 28), end: (2, 29), text: `;`
+corpus/declarations.txt/029
+  pattern: 49
+    capture: 14 - keyword, start: (1, 0), end: (1, 2), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (1, 3), end: (1, 7), text: `main`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (1, 7), end: (1, 8), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (1, 8), end: (1, 9), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 10), end: (1, 11), text: `{`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (2, 4), end: (2, 5), text: `;`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (3, 0), end: (3, 1), text: `}`
+corpus/declarations.txt/030
+  pattern: 89
+    capture: 19 - attribute, start: (1, 0), end: (1, 7), text: `#[test]`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (1, 1), end: (1, 2), text: `[`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (1, 6), end: (1, 7), text: `]`
+  pattern: 49
+    capture: 14 - keyword, start: (2, 0), end: (2, 2), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (2, 3), end: (2, 11), text: `test_foo`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (2, 11), end: (2, 12), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (2, 12), end: (2, 13), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (2, 14), end: (2, 15), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (2, 15), end: (2, 16), text: `}`
+  pattern: 89
+    capture: 19 - attribute, start: (4, 0), end: (4, 16), text: `#[derive(Debug)]`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (4, 1), end: (4, 2), text: `[`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (4, 8), end: (4, 9), text: `(`
+  pattern: 4
+    capture: 4 - constructor, start: (4, 9), end: (4, 14), text: `Debug`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (4, 14), end: (4, 15), text: `)`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (4, 15), end: (4, 16), text: `]`
+  pattern: 66
+    capture: 14 - keyword, start: (5, 0), end: (5, 6), text: `struct`
+  pattern: 0
+    capture: 0 - type, start: (5, 7), end: (5, 10), text: `Baz`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (5, 10), end: (5, 11), text: `;`
+  pattern: 89
+    capture: 19 - attribute, start: (7, 0), end: (7, 21), text: `#[derive(Debug, Eq,)]`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (7, 1), end: (7, 2), text: `[`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (7, 8), end: (7, 9), text: `(`
+  pattern: 4
+    capture: 4 - constructor, start: (7, 9), end: (7, 14), text: `Debug`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (7, 14), end: (7, 15), text: `,`
+  pattern: 4
+    capture: 4 - constructor, start: (7, 16), end: (7, 18), text: `Eq`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (7, 18), end: (7, 19), text: `,`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (7, 19), end: (7, 20), text: `)`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (7, 20), end: (7, 21), text: `]`
+  pattern: 66
+    capture: 14 - keyword, start: (8, 0), end: (8, 6), text: `struct`
+  pattern: 0
+    capture: 0 - type, start: (8, 7), end: (8, 10), text: `Foo`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (8, 10), end: (8, 11), text: `;`
+  pattern: 89
+    capture: 19 - attribute, start: (10, 0), end: (10, 27), text: `#[cfg(target_os = "macos")]`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (10, 1), end: (10, 2), text: `[`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (10, 5), end: (10, 6), text: `(`
+  pattern: 83
+    capture: 16 - string, start: (10, 18), end: (10, 25), text: `"macos"`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (10, 25), end: (10, 26), text: `)`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (10, 26), end: (10, 27), text: `]`
+  pattern: 59
+    capture: 14 - keyword, start: (11, 0), end: (11, 3), text: `mod`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (11, 15), end: (11, 16), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (11, 16), end: (11, 17), text: `}`
+  pattern: 90
+    capture: 19 - attribute, start: (13, 0), end: (13, 36), text: `#![allow(clippy::useless_transmute)]`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (13, 2), end: (13, 3), text: `[`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (13, 8), end: (13, 9), text: `(`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (13, 15), end: (13, 17), text: `::`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (13, 34), end: (13, 35), text: `)`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (13, 35), end: (13, 36), text: `]`
+  pattern: 89
+    capture: 19 - attribute, start: (15, 0), end: (15, 40), text: `#[clippy::cyclomatic_complexity = "100"]`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (15, 1), end: (15, 2), text: `[`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (15, 8), end: (15, 10), text: `::`
+  pattern: 83
+    capture: 16 - string, start: (15, 34), end: (15, 39), text: `"100"`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (15, 39), end: (15, 40), text: `]`
+corpus/declarations.txt/031
+  pattern: 59
+    capture: 14 - keyword, start: (1, 0), end: (1, 3), text: `mod`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 15), end: (1, 16), text: `{`
+  pattern: 90
+    capture: 19 - attribute, start: (2, 2), end: (2, 30), text: `#![cfg(target_os = "macos")]`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (2, 4), end: (2, 5), text: `[`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (2, 8), end: (2, 9), text: `(`
+  pattern: 83
+    capture: 16 - string, start: (2, 21), end: (2, 28), text: `"macos"`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (2, 28), end: (2, 29), text: `)`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (2, 29), end: (2, 30), text: `]`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (3, 0), end: (3, 1), text: `}`
+  pattern: 58
+    capture: 14 - keyword, start: (5, 0), end: (5, 5), text: `match`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (5, 9), end: (5, 10), text: `{`
+  pattern: 90
+    capture: 19 - attribute, start: (6, 4), end: (6, 78), text: `#![cfg_attr(all(test, exhaustive), deny(non_exhaustive_omitted_patterns))]`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (6, 6), end: (6, 7), text: `[`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (6, 15), end: (6, 16), text: `(`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (6, 19), end: (6, 20), text: `(`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (6, 24), end: (6, 25), text: `,`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (6, 36), end: (6, 37), text: `)`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (6, 37), end: (6, 38), text: `,`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (6, 43), end: (6, 44), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (6, 75), end: (6, 76), text: `)`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (6, 76), end: (6, 77), text: `)`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (6, 77), end: (6, 78), text: `]`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (7, 7), end: (7, 9), text: `::`
+  pattern: 6
+    capture: 0 - type, start: (7, 9), end: (7, 13), text: `Type`
+  pattern: 4
+    capture: 4 - constructor, start: (7, 9), end: (7, 13), text: `Type`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (7, 13), end: (7, 15), text: `::`
+  pattern: 4
+    capture: 4 - constructor, start: (7, 15), end: (7, 20), text: `Array`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (7, 20), end: (7, 21), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (7, 23), end: (7, 24), text: `)`
+  pattern: 81
+    capture: 15 - variable.builtin, start: (7, 28), end: (7, 32), text: `self`
+  pattern: 33
+    capture: 11 - punctuation.delimiter, start: (7, 32), end: (7, 33), text: `.`
+  pattern: 11
+    capture: 6 - function.method, start: (7, 33), end: (7, 43), text: `visit_type`
+  pattern: 2
+    capture: 2 - property, start: (7, 33), end: (7, 43), text: `visit_type`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (7, 43), end: (7, 44), text: `(`
+  pattern: 92
+    capture: 20 - operator, start: (7, 44), end: (7, 45), text: `&`
+  pattern: 33
+    capture: 11 - punctuation.delimiter, start: (7, 47), end: (7, 48), text: `.`
+  pattern: 2
+    capture: 2 - property, start: (7, 48), end: (7, 52), text: `elem`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (7, 52), end: (7, 53), text: `)`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (7, 53), end: (7, 54), text: `,`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (8, 0), end: (8, 1), text: `}`
+corpus/declarations.txt/032
+  pattern: 89
+    capture: 19 - attribute, start: (1, 0), end: (1, 35), text: `#[doc = include_str!("foo-doc.md")]`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (1, 1), end: (1, 2), text: `[`
+  pattern: 16
+    capture: 7 - function.macro, start: (1, 8), end: (1, 19), text: `include_str`
+    capture: 7 - function.macro, start: (1, 19), end: (1, 20), text: `!`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (1, 20), end: (1, 21), text: `(`
+  pattern: 83
+    capture: 16 - string, start: (1, 21), end: (1, 33), text: `"foo-doc.md"`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (1, 33), end: (1, 34), text: `)`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (1, 34), end: (1, 35), text: `]`
+  pattern: 49
+    capture: 14 - keyword, start: (2, 0), end: (2, 2), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (2, 3), end: (2, 6), text: `foo`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (2, 6), end: (2, 7), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (2, 7), end: (2, 8), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (2, 9), end: (2, 10), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (2, 10), end: (2, 11), text: `}`
+  pattern: 89
+    capture: 19 - attribute, start: (4, 0), end: (4, 23), text: `#[namespace = foo::bar]`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (4, 1), end: (4, 2), text: `[`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (4, 17), end: (4, 19), text: `::`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (4, 22), end: (4, 23), text: `]`
+  pattern: 49
+    capture: 14 - keyword, start: (5, 0), end: (5, 2), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (5, 3), end: (5, 6), text: `baz`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (5, 6), end: (5, 7), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (5, 7), end: (5, 8), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (5, 9), end: (5, 10), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (5, 10), end: (5, 11), text: `}`
+corpus/declarations.txt/033
+  pattern: 10
+    capture: 5 - function, start: (1, 0), end: (1, 3), text: `foo`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (1, 3), end: (1, 4), text: `(`
+  pattern: 89
+    capture: 19 - attribute, start: (1, 4), end: (1, 35), text: `#[attr(=> arbitrary tokens <=)]`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (1, 5), end: (1, 6), text: `[`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (1, 10), end: (1, 11), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (1, 33), end: (1, 34), text: `)`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (1, 34), end: (1, 35), text: `]`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (1, 37), end: (1, 38), text: `,`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (1, 40), end: (1, 41), text: `)`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (1, 41), end: (1, 42), text: `;`
+  pattern: 10
+    capture: 5 - function, start: (3, 0), end: (3, 3), text: `foo`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (3, 3), end: (3, 4), text: `(`
+  pattern: 89
+    capture: 19 - attribute, start: (3, 4), end: (3, 66), text: `#[bar(some tokens are special in other contexts: $/';()*()+.)]`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (3, 5), end: (3, 6), text: `[`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (3, 9), end: (3, 10), text: `(`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (3, 51), end: (3, 52), text: `:`
+  pattern: 93
+    capture: 20 - operator, start: (3, 55), end: (3, 56), text: `'`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (3, 56), end: (3, 57), text: `;`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (3, 57), end: (3, 58), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (3, 58), end: (3, 59), text: `)`
+  pattern: 91
+    capture: 20 - operator, start: (3, 59), end: (3, 60), text: `*`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (3, 60), end: (3, 61), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (3, 61), end: (3, 62), text: `)`
+  pattern: 33
+    capture: 11 - punctuation.delimiter, start: (3, 63), end: (3, 64), text: `.`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (3, 64), end: (3, 65), text: `)`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (3, 65), end: (3, 66), text: `]`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (3, 68), end: (3, 69), text: `)`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (3, 69), end: (3, 70), text: `;`
+corpus/declarations.txt/034
+  pattern: 19
+    capture: 8 - comment, start: (1, 0), end: (1, 108), text: `// Example from https://github.com/dtolnay/thiserror/blob/21c26903e29cb92ba1a7ff11e82ae2001646b60d/README.md`
+  pattern: 71
+    capture: 14 - keyword, start: (3, 0), end: (3, 3), text: `use`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (3, 13), end: (3, 15), text: `::`
+  pattern: 4
+    capture: 4 - constructor, start: (3, 15), end: (3, 20), text: `Error`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (3, 20), end: (3, 21), text: `;`
+  pattern: 89
+    capture: 19 - attribute, start: (5, 0), end: (5, 23), text: `#[derive(Error, Debug)]`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (5, 1), end: (5, 2), text: `[`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (5, 8), end: (5, 9), text: `(`
+  pattern: 4
+    capture: 4 - constructor, start: (5, 9), end: (5, 14), text: `Error`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (5, 14), end: (5, 15), text: `,`
+  pattern: 4
+    capture: 4 - constructor, start: (5, 16), end: (5, 21), text: `Debug`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (5, 21), end: (5, 22), text: `)`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (5, 22), end: (5, 23), text: `]`
+  pattern: 61
+    capture: 14 - keyword, start: (6, 0), end: (6, 3), text: `pub`
+  pattern: 47
+    capture: 14 - keyword, start: (6, 4), end: (6, 8), text: `enum`
+  pattern: 0
+    capture: 0 - type, start: (6, 9), end: (6, 14), text: `Error`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (6, 15), end: (6, 16), text: `{`
+  pattern: 89
+    capture: 19 - attribute, start: (7, 4), end: (7, 75), text: `#[error("first letter must be lowercase but was {:?}", first_char(.0))]`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (7, 5), end: (7, 6), text: `[`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (7, 11), end: (7, 12), text: `(`
+  pattern: 83
+    capture: 16 - string, start: (7, 12), end: (7, 57), text: `"first letter must be lowercase but was {:?}"`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (7, 57), end: (7, 58), text: `,`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (7, 69), end: (7, 70), text: `(`
+  pattern: 33
+    capture: 11 - punctuation.delimiter, start: (7, 70), end: (7, 71), text: `.`
+  pattern: 86
+    capture: 17 - constant.builtin, start: (7, 71), end: (7, 72), text: `0`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (7, 72), end: (7, 73), text: `)`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (7, 73), end: (7, 74), text: `)`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (7, 74), end: (7, 75), text: `]`
+  pattern: 4
+    capture: 4 - constructor, start: (8, 4), end: (8, 13), text: `WrongCase`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (8, 13), end: (8, 14), text: `(`
+  pattern: 0
+    capture: 0 - type, start: (8, 14), end: (8, 20), text: `String`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (8, 20), end: (8, 21), text: `)`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (8, 21), end: (8, 22), text: `,`
+  pattern: 89
+    capture: 19 - attribute, start: (9, 4), end: (9, 96), text: `#[error("invalid index {idx}, expected at least {} and at most {}", .limits.lo, .limits.hi)]`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (9, 5), end: (9, 6), text: `[`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (9, 11), end: (9, 12), text: `(`
+  pattern: 83
+    capture: 16 - string, start: (9, 12), end: (9, 70), text: `"invalid index {idx}, expected at least {} and at most {}"`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (9, 70), end: (9, 71), text: `,`
+  pattern: 33
+    capture: 11 - punctuation.delimiter, start: (9, 72), end: (9, 73), text: `.`
+  pattern: 33
+    capture: 11 - punctuation.delimiter, start: (9, 79), end: (9, 80), text: `.`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (9, 82), end: (9, 83), text: `,`
+  pattern: 33
+    capture: 11 - punctuation.delimiter, start: (9, 84), end: (9, 85), text: `.`
+  pattern: 33
+    capture: 11 - punctuation.delimiter, start: (9, 91), end: (9, 92), text: `.`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (9, 94), end: (9, 95), text: `)`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (9, 95), end: (9, 96), text: `]`
+  pattern: 4
+    capture: 4 - constructor, start: (10, 4), end: (10, 15), text: `OutOfBounds`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (10, 16), end: (10, 17), text: `{`
+  pattern: 2
+    capture: 2 - property, start: (10, 18), end: (10, 21), text: `idx`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (10, 21), end: (10, 22), text: `:`
+  pattern: 1
+    capture: 1 - type.builtin, start: (10, 23), end: (10, 28), text: `usize`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (10, 28), end: (10, 29), text: `,`
+  pattern: 2
+    capture: 2 - property, start: (10, 30), end: (10, 36), text: `limits`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (10, 36), end: (10, 37), text: `:`
+  pattern: 0
+    capture: 0 - type, start: (10, 38), end: (10, 44), text: `Limits`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (10, 45), end: (10, 46), text: `}`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (10, 46), end: (10, 47), text: `,`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (11, 0), end: (11, 1), text: `}`
+corpus/declarations.txt/035
+  pattern: 49
+    capture: 14 - keyword, start: (1, 0), end: (1, 2), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (1, 3), end: (1, 6), text: `foo`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (1, 6), end: (1, 7), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (1, 7), end: (1, 8), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 9), end: (1, 10), text: `{`
+  pattern: 10
+    capture: 5 - function, start: (2, 3), end: (2, 6), text: `bar`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (2, 6), end: (2, 7), text: `(`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (2, 8), end: (2, 9), text: `,`
+  pattern: 89
+    capture: 19 - attribute, start: (3, 7), end: (3, 26), text: `#[cfg(foo = "bar")]`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (3, 8), end: (3, 9), text: `[`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (3, 12), end: (3, 13), text: `(`
+  pattern: 83
+    capture: 16 - string, start: (3, 19), end: (3, 24), text: `"bar"`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (3, 24), end: (3, 25), text: `)`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (3, 25), end: (3, 26), text: `]`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (4, 8), end: (4, 9), text: `)`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (4, 9), end: (4, 10), text: `;`
+  pattern: 55
+    capture: 14 - keyword, start: (5, 3), end: (5, 6), text: `let`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (5, 11), end: (5, 12), text: `[`
+  pattern: 89
+    capture: 19 - attribute, start: (5, 12), end: (5, 20), text: `#[hello]`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (5, 13), end: (5, 14), text: `[`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (5, 19), end: (5, 20), text: `]`
+  pattern: 86
+    capture: 17 - constant.builtin, start: (5, 21), end: (5, 22), text: `2`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (5, 22), end: (5, 23), text: `,`
+  pattern: 86
+    capture: 17 - constant.builtin, start: (5, 24), end: (5, 25), text: `7`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (5, 25), end: (5, 26), text: `,`
+  pattern: 86
+    capture: 17 - constant.builtin, start: (5, 27), end: (5, 28), text: `8`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (5, 28), end: (5, 29), text: `]`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (5, 29), end: (5, 30), text: `;`
+  pattern: 55
+    capture: 14 - keyword, start: (6, 3), end: (6, 6), text: `let`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (6, 11), end: (6, 12), text: `(`
+  pattern: 89
+    capture: 19 - attribute, start: (6, 12), end: (6, 20), text: `#[hello]`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (6, 13), end: (6, 14), text: `[`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (6, 19), end: (6, 20), text: `]`
+  pattern: 86
+    capture: 17 - constant.builtin, start: (6, 21), end: (6, 22), text: `2`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (6, 22), end: (6, 23), text: `,`
+  pattern: 86
+    capture: 17 - constant.builtin, start: (6, 24), end: (6, 25), text: `7`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (6, 25), end: (6, 26), text: `,`
+  pattern: 86
+    capture: 17 - constant.builtin, start: (6, 27), end: (6, 28), text: `8`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (6, 28), end: (6, 29), text: `)`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (6, 29), end: (6, 30), text: `;`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (7, 0), end: (7, 1), text: `}`
+corpus/declarations.txt/036
+  pattern: 53
+    capture: 14 - keyword, start: (1, 0), end: (1, 4), text: `impl`
+  pattern: 0
+    capture: 0 - type, start: (1, 5), end: (1, 11), text: `Person`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 12), end: (1, 13), text: `{`
+  pattern: 42
+    capture: 14 - keyword, start: (2, 2), end: (2, 7), text: `const`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (2, 18), end: (2, 19), text: `:`
+  pattern: 1
+    capture: 1 - type.builtin, start: (2, 20), end: (2, 23), text: `u32`
+  pattern: 86
+    capture: 17 - constant.builtin, start: (2, 26), end: (2, 27), text: `2`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (2, 27), end: (2, 28), text: `;`
+  pattern: 49
+    capture: 14 - keyword, start: (4, 2), end: (4, 4), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (4, 5), end: (4, 9), text: `walk`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (4, 9), end: (4, 10), text: `(`
+  pattern: 81
+    capture: 15 - variable.builtin, start: (4, 10), end: (4, 14), text: `self`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (4, 14), end: (4, 15), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (4, 16), end: (4, 17), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (4, 17), end: (4, 18), text: `}`
+  pattern: 49
+    capture: 14 - keyword, start: (5, 2), end: (5, 4), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (5, 5), end: (5, 13), text: `walk_mut`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (5, 13), end: (5, 14), text: `(`
+  pattern: 76
+    capture: 14 - keyword, start: (5, 14), end: (5, 17), text: `mut`
+  pattern: 81
+    capture: 15 - variable.builtin, start: (5, 18), end: (5, 22), text: `self`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (5, 22), end: (5, 23), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (5, 24), end: (5, 25), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (5, 25), end: (5, 26), text: `}`
+  pattern: 49
+    capture: 14 - keyword, start: (6, 2), end: (6, 4), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (6, 5), end: (6, 9), text: `talk`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (6, 9), end: (6, 10), text: `(`
+  pattern: 92
+    capture: 20 - operator, start: (6, 10), end: (6, 11), text: `&`
+  pattern: 81
+    capture: 15 - variable.builtin, start: (6, 12), end: (6, 16), text: `self`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (6, 16), end: (6, 17), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (6, 18), end: (6, 19), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (6, 19), end: (6, 20), text: `}`
+  pattern: 49
+    capture: 14 - keyword, start: (7, 2), end: (7, 4), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (7, 5), end: (7, 13), text: `talk_mut`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (7, 13), end: (7, 14), text: `(`
+  pattern: 92
+    capture: 20 - operator, start: (7, 14), end: (7, 15), text: `&`
+  pattern: 93
+    capture: 20 - operator, start: (7, 15), end: (7, 16), text: `'`
+  pattern: 37
+    capture: 13 - label, start: (7, 16), end: (7, 17), text: `a`
+  pattern: 76
+    capture: 14 - keyword, start: (7, 18), end: (7, 21), text: `mut`
+  pattern: 81
+    capture: 15 - variable.builtin, start: (7, 22), end: (7, 26), text: `self`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (7, 26), end: (7, 27), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (7, 28), end: (7, 29), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (7, 29), end: (7, 30), text: `}`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (8, 0), end: (8, 1), text: `}`
+  pattern: 53
+    capture: 14 - keyword, start: (10, 0), end: (10, 4), text: `impl`
+  pattern: 0
+    capture: 0 - type, start: (10, 5), end: (10, 12), text: `Machine`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (10, 13), end: (10, 14), text: `{`
+  pattern: 5
+    capture: 0 - type, start: (10, 14), end: (10, 19), text: `State`
+  pattern: 4
+    capture: 4 - constructor, start: (10, 14), end: (10, 19), text: `State`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (10, 19), end: (10, 21), text: `::`
+  pattern: 4
+    capture: 4 - constructor, start: (10, 21), end: (10, 25), text: `Init`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (10, 25), end: (10, 26), text: `}`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (10, 12), end: (10, 13), text: `<`
+    capture: 10 - punctuation.bracket, start: (10, 26), end: (10, 27), text: `>`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (10, 28), end: (10, 29), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (10, 29), end: (10, 30), text: `}`
+corpus/declarations.txt/037
+  pattern: 53
+    capture: 14 - keyword, start: (1, 0), end: (1, 4), text: `impl`
+  pattern: 93
+    capture: 20 - operator, start: (1, 5), end: (1, 6), text: `'`
+  pattern: 37
+    capture: 13 - label, start: (1, 6), end: (1, 7), text: `a`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (1, 4), end: (1, 5), text: `<`
+    capture: 10 - punctuation.bracket, start: (1, 7), end: (1, 8), text: `>`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (1, 13), end: (1, 15), text: `::`
+  pattern: 0
+    capture: 0 - type, start: (1, 15), end: (1, 23), text: `Iterator`
+  pattern: 50
+    capture: 14 - keyword, start: (1, 24), end: (1, 27), text: `for`
+  pattern: 7
+    capture: 0 - type, start: (1, 28), end: (1, 32), text: `Self`
+  pattern: 4
+    capture: 4 - constructor, start: (1, 28), end: (1, 32), text: `Self`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (1, 32), end: (1, 34), text: `::`
+  pattern: 0
+    capture: 0 - type, start: (1, 34), end: (1, 38), text: `Iter`
+  pattern: 93
+    capture: 20 - operator, start: (1, 39), end: (1, 40), text: `'`
+  pattern: 37
+    capture: 13 - label, start: (1, 40), end: (1, 41), text: `a`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (1, 38), end: (1, 39), text: `<`
+    capture: 10 - punctuation.bracket, start: (1, 41), end: (1, 42), text: `>`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 43), end: (1, 44), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (2, 0), end: (2, 1), text: `}`
+  pattern: 53
+    capture: 14 - keyword, start: (4, 0), end: (4, 4), text: `impl`
+  pattern: 0
+    capture: 0 - type, start: (4, 5), end: (4, 14), text: `ConvertTo`
+  pattern: 1
+    capture: 1 - type.builtin, start: (4, 15), end: (4, 18), text: `i64`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (4, 14), end: (4, 15), text: `<`
+    capture: 10 - punctuation.bracket, start: (4, 18), end: (4, 19), text: `>`
+  pattern: 50
+    capture: 14 - keyword, start: (4, 20), end: (4, 23), text: `for`
+  pattern: 1
+    capture: 1 - type.builtin, start: (4, 24), end: (4, 27), text: `i32`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (4, 28), end: (4, 29), text: `{`
+  pattern: 49
+    capture: 14 - keyword, start: (5, 4), end: (5, 6), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (5, 7), end: (5, 14), text: `convert`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (5, 14), end: (5, 15), text: `(`
+  pattern: 92
+    capture: 20 - operator, start: (5, 15), end: (5, 16), text: `&`
+  pattern: 81
+    capture: 15 - variable.builtin, start: (5, 16), end: (5, 20), text: `self`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (5, 20), end: (5, 21), text: `)`
+  pattern: 1
+    capture: 1 - type.builtin, start: (5, 25), end: (5, 28), text: `i64`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (5, 29), end: (5, 30), text: `{`
+  pattern: 91
+    capture: 20 - operator, start: (5, 31), end: (5, 32), text: `*`
+  pattern: 81
+    capture: 15 - variable.builtin, start: (5, 32), end: (5, 36), text: `self`
+  pattern: 38
+    capture: 14 - keyword, start: (5, 37), end: (5, 39), text: `as`
+  pattern: 1
+    capture: 1 - type.builtin, start: (5, 40), end: (5, 43), text: `i64`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (5, 44), end: (5, 45), text: `}`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (6, 0), end: (6, 1), text: `}`
+corpus/declarations.txt/038
+  pattern: 70
+    capture: 14 - keyword, start: (1, 0), end: (1, 6), text: `unsafe`
+  pattern: 53
+    capture: 14 - keyword, start: (1, 7), end: (1, 11), text: `impl`
+  pattern: 0
+    capture: 0 - type, start: (1, 12), end: (1, 15), text: `Foo`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 16), end: (1, 17), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (2, 0), end: (2, 1), text: `}`
+corpus/declarations.txt/039
+  pattern: 53
+    capture: 14 - keyword, start: (1, 0), end: (1, 4), text: `impl`
+  pattern: 0
+    capture: 0 - type, start: (1, 6), end: (1, 10), text: `Send`
+  pattern: 50
+    capture: 14 - keyword, start: (1, 11), end: (1, 14), text: `for`
+  pattern: 0
+    capture: 0 - type, start: (1, 15), end: (1, 18), text: `Foo`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 19), end: (1, 20), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (1, 20), end: (1, 21), text: `}`
+corpus/declarations.txt/040
+  pattern: 61
+    capture: 14 - keyword, start: (1, 0), end: (1, 3), text: `pub`
+  pattern: 70
+    capture: 14 - keyword, start: (1, 4), end: (1, 10), text: `unsafe`
+  pattern: 67
+    capture: 14 - keyword, start: (1, 11), end: (1, 16), text: `trait`
+  pattern: 0
+    capture: 0 - type, start: (1, 17), end: (1, 22), text: `Trait`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 23), end: (1, 24), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (1, 24), end: (1, 25), text: `}`
+  pattern: 70
+    capture: 14 - keyword, start: (3, 0), end: (3, 6), text: `unsafe`
+  pattern: 53
+    capture: 14 - keyword, start: (3, 7), end: (3, 11), text: `impl`
+  pattern: 0
+    capture: 0 - type, start: (3, 12), end: (3, 17), text: `Trait`
+  pattern: 50
+    capture: 14 - keyword, start: (3, 18), end: (3, 21), text: `for`
+  pattern: 45
+    capture: 14 - keyword, start: (3, 22), end: (3, 25), text: `dyn`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (3, 26), end: (3, 27), text: `(`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (3, 27), end: (3, 29), text: `::`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (3, 32), end: (3, 34), text: `::`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (3, 37), end: (3, 39), text: `::`
+  pattern: 0
+    capture: 0 - type, start: (3, 39), end: (3, 42), text: `Any`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (3, 42), end: (3, 43), text: `)`
+  pattern: 0
+    capture: 0 - type, start: (3, 46), end: (3, 50), text: `Send`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (3, 51), end: (3, 52), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (3, 53), end: (3, 54), text: `}`
+corpus/declarations.txt/041
+  pattern: 53
+    capture: 14 - keyword, start: (1, 0), end: (1, 4), text: `impl`
+  pattern: 0
+    capture: 0 - type, start: (1, 5), end: (1, 6), text: `K`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (1, 6), end: (1, 7), text: `:`
+  pattern: 0
+    capture: 0 - type, start: (1, 8), end: (1, 13), text: `Debug`
+  pattern: 0
+    capture: 0 - type, start: (1, 16), end: (1, 19), text: `Ord`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (1, 4), end: (1, 5), text: `<`
+    capture: 10 - punctuation.bracket, start: (1, 19), end: (1, 20), text: `>`
+  pattern: 0
+    capture: 0 - type, start: (1, 21), end: (1, 26), text: `Debug`
+  pattern: 50
+    capture: 14 - keyword, start: (1, 27), end: (1, 30), text: `for`
+  pattern: 0
+    capture: 0 - type, start: (1, 31), end: (1, 44), text: `OccupiedError`
+  pattern: 0
+    capture: 0 - type, start: (1, 45), end: (1, 46), text: `K`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (1, 44), end: (1, 45), text: `<`
+    capture: 10 - punctuation.bracket, start: (1, 46), end: (1, 47), text: `>`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (1, 47), end: (1, 48), text: `;`
+  pattern: 53
+    capture: 14 - keyword, start: (2, 0), end: (2, 4), text: `impl`
+  pattern: 0
+    capture: 0 - type, start: (2, 5), end: (2, 6), text: `K`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (2, 6), end: (2, 7), text: `:`
+  pattern: 0
+    capture: 0 - type, start: (2, 8), end: (2, 13), text: `Debug`
+  pattern: 0
+    capture: 0 - type, start: (2, 16), end: (2, 19), text: `Ord`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (2, 4), end: (2, 5), text: `<`
+    capture: 10 - punctuation.bracket, start: (2, 19), end: (2, 20), text: `>`
+  pattern: 0
+    capture: 0 - type, start: (2, 21), end: (2, 28), text: `Display`
+  pattern: 50
+    capture: 14 - keyword, start: (2, 29), end: (2, 32), text: `for`
+  pattern: 0
+    capture: 0 - type, start: (2, 33), end: (2, 46), text: `OccupiedError`
+  pattern: 0
+    capture: 0 - type, start: (2, 47), end: (2, 48), text: `K`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (2, 46), end: (2, 47), text: `<`
+    capture: 10 - punctuation.bracket, start: (2, 48), end: (2, 49), text: `>`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (2, 49), end: (2, 50), text: `;`
+corpus/declarations.txt/042
+  pattern: 53
+    capture: 14 - keyword, start: (1, 0), end: (1, 4), text: `impl`
+  pattern: 0
+    capture: 0 - type, start: (1, 5), end: (1, 8), text: `Foo`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 9), end: (1, 10), text: `{`
+  pattern: 42
+    capture: 14 - keyword, start: (2, 2), end: (2, 7), text: `const`
+  pattern: 44
+    capture: 14 - keyword, start: (2, 8), end: (2, 15), text: `default`
+  pattern: 49
+    capture: 14 - keyword, start: (2, 16), end: (2, 18), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (2, 19), end: (2, 22), text: `bar`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (2, 22), end: (2, 23), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (2, 23), end: (2, 24), text: `)`
+  pattern: 1
+    capture: 1 - type.builtin, start: (2, 28), end: (2, 31), text: `i32`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (2, 32), end: (2, 33), text: `{`
+  pattern: 19
+    capture: 8 - comment, start: (3, 4), end: (3, 50), text: `// Make 'default' still works as an identifier`
+  pattern: 33
+    capture: 11 - punctuation.delimiter, start: (4, 11), end: (4, 12), text: `.`
+  pattern: 11
+    capture: 6 - function.method, start: (4, 12), end: (4, 15), text: `bar`
+  pattern: 2
+    capture: 2 - property, start: (4, 12), end: (4, 15), text: `bar`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (4, 15), end: (4, 16), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (4, 16), end: (4, 17), text: `)`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (4, 17), end: (4, 18), text: `;`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (5, 2), end: (5, 3), text: `}`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (6, 0), end: (6, 1), text: `}`
+corpus/declarations.txt/043
+  pattern: 61
+    capture: 14 - keyword, start: (1, 0), end: (1, 3), text: `pub`
+  pattern: 67
+    capture: 14 - keyword, start: (1, 4), end: (1, 9), text: `trait`
+  pattern: 0
+    capture: 0 - type, start: (1, 10), end: (1, 14), text: `Item`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (1, 14), end: (1, 15), text: `:`
+  pattern: 0
+    capture: 0 - type, start: (1, 16), end: (1, 21), text: `Clone`
+  pattern: 0
+    capture: 0 - type, start: (1, 24), end: (1, 26), text: `Eq`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (1, 32), end: (1, 34), text: `::`
+  pattern: 0
+    capture: 0 - type, start: (1, 34), end: (1, 39), text: `Debug`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 40), end: (1, 41), text: `{`
+  pattern: 49
+    capture: 14 - keyword, start: (2, 4), end: (2, 6), text: `fn`
+  pattern: 18
+    capture: 5 - function, start: (2, 7), end: (2, 16), text: `summarize`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (2, 16), end: (2, 17), text: `(`
+  pattern: 92
+    capture: 20 - operator, start: (2, 17), end: (2, 18), text: `&`
+  pattern: 81
+    capture: 15 - variable.builtin, start: (2, 18), end: (2, 22), text: `self`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (2, 22), end: (2, 23), text: `)`
+  pattern: 7
+    capture: 0 - type, start: (2, 27), end: (2, 31), text: `Self`
+  pattern: 4
+    capture: 4 - constructor, start: (2, 27), end: (2, 31), text: `Self`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (2, 31), end: (2, 33), text: `::`
+  pattern: 0
+    capture: 0 - type, start: (2, 33), end: (2, 40), text: `Summary`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (2, 40), end: (2, 41), text: `;`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (3, 0), end: (3, 1), text: `}`
+  pattern: 70
+    capture: 14 - keyword, start: (5, 0), end: (5, 6), text: `unsafe`
+  pattern: 67
+    capture: 14 - keyword, start: (5, 7), end: (5, 12), text: `trait`
+  pattern: 0
+    capture: 0 - type, start: (5, 13), end: (5, 16), text: `Foo`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (5, 17), end: (5, 18), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (5, 19), end: (5, 20), text: `}`
+corpus/declarations.txt/044
+  pattern: 67
+    capture: 14 - keyword, start: (1, 0), end: (1, 5), text: `trait`
+  pattern: 0
+    capture: 0 - type, start: (1, 6), end: (1, 9), text: `Add`
+  pattern: 0
+    capture: 0 - type, start: (1, 10), end: (1, 13), text: `RHS`
+  pattern: 0
+    capture: 0 - type, start: (1, 14), end: (1, 18), text: `Self`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (1, 9), end: (1, 10), text: `<`
+    capture: 10 - punctuation.bracket, start: (1, 18), end: (1, 19), text: `>`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 20), end: (1, 21), text: `{`
+  pattern: 68
+    capture: 14 - keyword, start: (2, 4), end: (2, 8), text: `type`
+  pattern: 0
+    capture: 0 - type, start: (2, 9), end: (2, 15), text: `Output`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (2, 15), end: (2, 16), text: `;`
+  pattern: 49
+    capture: 14 - keyword, start: (3, 4), end: (3, 6), text: `fn`
+  pattern: 18
+    capture: 5 - function, start: (3, 7), end: (3, 10), text: `add`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (3, 10), end: (3, 11), text: `(`
+  pattern: 81
+    capture: 15 - variable.builtin, start: (3, 11), end: (3, 15), text: `self`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (3, 15), end: (3, 16), text: `,`
+  pattern: 36
+    capture: 12 - variable.parameter, start: (3, 17), end: (3, 20), text: `rhs`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (3, 20), end: (3, 21), text: `:`
+  pattern: 0
+    capture: 0 - type, start: (3, 22), end: (3, 25), text: `RHS`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (3, 25), end: (3, 26), text: `)`
+  pattern: 7
+    capture: 0 - type, start: (3, 30), end: (3, 34), text: `Self`
+  pattern: 4
+    capture: 4 - constructor, start: (3, 30), end: (3, 34), text: `Self`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (3, 34), end: (3, 36), text: `::`
+  pattern: 0
+    capture: 0 - type, start: (3, 36), end: (3, 42), text: `Output`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (3, 42), end: (3, 43), text: `;`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (4, 0), end: (4, 1), text: `}`
+corpus/declarations.txt/045
+  pattern: 67
+    capture: 14 - keyword, start: (1, 0), end: (1, 5), text: `trait`
+  pattern: 0
+    capture: 0 - type, start: (1, 6), end: (1, 9), text: `Foo`
+  pattern: 0
+    capture: 0 - type, start: (1, 10), end: (1, 11), text: `T`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (1, 11), end: (1, 12), text: `:`
+  pattern: 0
+    capture: 0 - type, start: (1, 14), end: (1, 19), text: `Sized`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (1, 9), end: (1, 10), text: `<`
+    capture: 10 - punctuation.bracket, start: (1, 19), end: (1, 20), text: `>`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 21), end: (1, 22), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (2, 0), end: (2, 1), text: `}`
+  pattern: 49
+    capture: 14 - keyword, start: (4, 0), end: (4, 2), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (4, 3), end: (4, 13), text: `univariant`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (4, 13), end: (4, 14), text: `(`
+  pattern: 36
+    capture: 12 - variable.parameter, start: (4, 14), end: (4, 18), text: `this`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (4, 18), end: (4, 19), text: `:`
+  pattern: 92
+    capture: 20 - operator, start: (4, 20), end: (4, 21), text: `&`
+  pattern: 53
+    capture: 14 - keyword, start: (4, 21), end: (4, 25), text: `impl`
+  pattern: 0
+    capture: 0 - type, start: (4, 27), end: (4, 32), text: `Sized`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (4, 32), end: (4, 33), text: `,`
+  pattern: 36
+    capture: 12 - variable.parameter, start: (4, 34), end: (4, 38), text: `that`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (4, 38), end: (4, 39), text: `:`
+  pattern: 92
+    capture: 20 - operator, start: (4, 40), end: (4, 41), text: `&`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (4, 41), end: (4, 42), text: `(`
+  pattern: 53
+    capture: 14 - keyword, start: (4, 42), end: (4, 46), text: `impl`
+  pattern: 0
+    capture: 0 - type, start: (4, 47), end: (4, 63), text: `LayoutCalculator`
+  pattern: 0
+    capture: 0 - type, start: (4, 67), end: (4, 72), text: `Sized`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (4, 72), end: (4, 73), text: `)`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (4, 73), end: (4, 74), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (4, 75), end: (4, 76), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (4, 76), end: (4, 77), text: `}`
+corpus/declarations.txt/046
+  pattern: 53
+    capture: 14 - keyword, start: (1, 0), end: (1, 4), text: `impl`
+  pattern: 0
+    capture: 0 - type, start: (1, 5), end: (1, 6), text: `T`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (1, 6), end: (1, 7), text: `:`
+  pattern: 0
+    capture: 0 - type, start: (1, 8), end: (1, 16), text: `AstDeref`
+  pattern: 0
+    capture: 0 - type, start: (1, 17), end: (1, 23), text: `Target`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (1, 23), end: (1, 24), text: `:`
+  pattern: 0
+    capture: 0 - type, start: (1, 25), end: (1, 34), text: `HasNodeId`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (1, 16), end: (1, 17), text: `<`
+    capture: 10 - punctuation.bracket, start: (1, 34), end: (1, 35), text: `>`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (1, 4), end: (1, 5), text: `<`
+    capture: 10 - punctuation.bracket, start: (1, 35), end: (1, 36), text: `>`
+  pattern: 0
+    capture: 0 - type, start: (1, 37), end: (1, 46), text: `HasNodeId`
+  pattern: 50
+    capture: 14 - keyword, start: (1, 47), end: (1, 50), text: `for`
+  pattern: 0
+    capture: 0 - type, start: (1, 51), end: (1, 52), text: `T`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 53), end: (1, 54), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (1, 54), end: (1, 55), text: `}`
+corpus/declarations.txt/047
+  pattern: 61
+    capture: 14 - keyword, start: (2, 0), end: (2, 3), text: `pub`
+  pattern: 67
+    capture: 14 - keyword, start: (2, 4), end: (2, 9), text: `trait`
+  pattern: 0
+    capture: 0 - type, start: (2, 10), end: (2, 11), text: `A`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (2, 11), end: (2, 12), text: `:`
+  pattern: 0
+    capture: 0 - type, start: (2, 13), end: (2, 14), text: `B`
+  pattern: 0
+    capture: 0 - type, start: (2, 17), end: (2, 18), text: `C`
+  pattern: 0
+    capture: 0 - type, start: (2, 21), end: (2, 22), text: `D`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (2, 23), end: (2, 24), text: `{`
+  pattern: 16
+    capture: 7 - function.macro, start: (3, 4), end: (3, 16), text: `private_decl`
+    capture: 7 - function.macro, start: (3, 16), end: (3, 17), text: `!`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (3, 17), end: (3, 18), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (3, 18), end: (3, 19), text: `}`
+  pattern: 49
+    capture: 14 - keyword, start: (4, 4), end: (4, 6), text: `fn`
+  pattern: 18
+    capture: 5 - function, start: (4, 7), end: (4, 8), text: `f`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (4, 8), end: (4, 9), text: `(`
+  pattern: 92
+    capture: 20 - operator, start: (4, 9), end: (4, 10), text: `&`
+  pattern: 81
+    capture: 15 - variable.builtin, start: (4, 10), end: (4, 14), text: `self`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (4, 14), end: (4, 15), text: `)`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (4, 15), end: (4, 16), text: `;`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (5, 0), end: (5, 1), text: `}`
+corpus/declarations.txt/048
+  pattern: 61
+    capture: 14 - keyword, start: (1, 0), end: (1, 3), text: `pub`
+  pattern: 67
+    capture: 14 - keyword, start: (1, 4), end: (1, 9), text: `trait`
+  pattern: 0
+    capture: 0 - type, start: (1, 10), end: (1, 15), text: `Graph`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 16), end: (1, 17), text: `{`
+  pattern: 68
+    capture: 14 - keyword, start: (2, 4), end: (2, 8), text: `type`
+  pattern: 0
+    capture: 0 - type, start: (2, 9), end: (2, 10), text: `N`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (2, 10), end: (2, 11), text: `:`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (2, 15), end: (2, 17), text: `::`
+  pattern: 0
+    capture: 0 - type, start: (2, 17), end: (2, 24), text: `Display`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (2, 24), end: (2, 25), text: `;`
+  pattern: 68
+    capture: 14 - keyword, start: (3, 4), end: (3, 8), text: `type`
+  pattern: 0
+    capture: 0 - type, start: (3, 9), end: (3, 10), text: `E`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (3, 10), end: (3, 11), text: `;`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (4, 0), end: (4, 1), text: `}`
+corpus/declarations.txt/049
+  pattern: 53
+    capture: 14 - keyword, start: (1, 0), end: (1, 4), text: `impl`
+  pattern: 0
+    capture: 0 - type, start: (1, 5), end: (1, 10), text: `Trait`
+  pattern: 50
+    capture: 14 - keyword, start: (1, 11), end: (1, 14), text: `for`
+  pattern: 0
+    capture: 0 - type, start: (1, 15), end: (1, 16), text: `T`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 17), end: (1, 18), text: `{`
+  pattern: 68
+    capture: 14 - keyword, start: (2, 4), end: (2, 8), text: `type`
+  pattern: 0
+    capture: 0 - type, start: (2, 9), end: (2, 19), text: `Associated`
+  pattern: 0
+    capture: 0 - type, start: (2, 22), end: (2, 23), text: `T`
+  pattern: 72
+    capture: 14 - keyword, start: (2, 24), end: (2, 29), text: `where`
+  pattern: 93
+    capture: 20 - operator, start: (2, 30), end: (2, 31), text: `'`
+  pattern: 37
+    capture: 13 - label, start: (2, 31), end: (2, 37), text: `static`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (2, 37), end: (2, 38), text: `:`
+  pattern: 93
+    capture: 20 - operator, start: (2, 39), end: (2, 40), text: `'`
+  pattern: 37
+    capture: 13 - label, start: (2, 40), end: (2, 46), text: `static`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (2, 46), end: (2, 47), text: `;`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (3, 0), end: (3, 1), text: `}`
+corpus/declarations.txt/050
+  pattern: 61
+    capture: 14 - keyword, start: (1, 0), end: (1, 3), text: `pub`
+  pattern: 67
+    capture: 14 - keyword, start: (1, 4), end: (1, 9), text: `trait`
+  pattern: 0
+    capture: 0 - type, start: (1, 10), end: (1, 18), text: `Database`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 19), end: (1, 20), text: `{`
+  pattern: 68
+    capture: 14 - keyword, start: (2, 4), end: (2, 8), text: `type`
+  pattern: 0
+    capture: 0 - type, start: (2, 9), end: (2, 10), text: `F`
+  pattern: 93
+    capture: 20 - operator, start: (2, 11), end: (2, 12), text: `'`
+  pattern: 37
+    capture: 13 - label, start: (2, 12), end: (2, 13), text: `a`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (2, 13), end: (2, 14), text: `,`
+  pattern: 0
+    capture: 0 - type, start: (2, 15), end: (2, 16), text: `D`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (2, 10), end: (2, 11), text: `<`
+    capture: 10 - punctuation.bracket, start: (2, 16), end: (2, 17), text: `>`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (2, 17), end: (2, 18), text: `:`
+  pattern: 0
+    capture: 0 - type, start: (2, 19), end: (2, 25), text: `Future`
+  pattern: 0
+    capture: 0 - type, start: (2, 26), end: (2, 32), text: `Output`
+  pattern: 0
+    capture: 0 - type, start: (2, 35), end: (2, 36), text: `D`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (2, 25), end: (2, 26), text: `<`
+    capture: 10 - punctuation.bracket, start: (2, 36), end: (2, 37), text: `>`
+  pattern: 93
+    capture: 20 - operator, start: (2, 40), end: (2, 41), text: `'`
+  pattern: 37
+    capture: 13 - label, start: (2, 41), end: (2, 42), text: `a`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (2, 42), end: (2, 43), text: `;`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (3, 0), end: (3, 1), text: `}`
+  pattern: 53
+    capture: 14 - keyword, start: (5, 0), end: (5, 4), text: `impl`
+  pattern: 0
+    capture: 0 - type, start: (5, 5), end: (5, 13), text: `Database`
+  pattern: 50
+    capture: 14 - keyword, start: (5, 14), end: (5, 17), text: `for`
+  pattern: 0
+    capture: 0 - type, start: (5, 18), end: (5, 21), text: `Foo`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (5, 22), end: (5, 23), text: `{`
+  pattern: 68
+    capture: 14 - keyword, start: (6, 4), end: (6, 8), text: `type`
+  pattern: 0
+    capture: 0 - type, start: (6, 9), end: (6, 10), text: `F`
+  pattern: 93
+    capture: 20 - operator, start: (6, 11), end: (6, 12), text: `'`
+  pattern: 37
+    capture: 13 - label, start: (6, 12), end: (6, 13), text: `a`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (6, 13), end: (6, 14), text: `,`
+  pattern: 0
+    capture: 0 - type, start: (6, 15), end: (6, 16), text: `D`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (6, 10), end: (6, 11), text: `<`
+    capture: 10 - punctuation.bracket, start: (6, 16), end: (6, 17), text: `>`
+  pattern: 0
+    capture: 0 - type, start: (6, 20), end: (6, 34), text: `DatabaseFuture`
+  pattern: 93
+    capture: 20 - operator, start: (6, 35), end: (6, 36), text: `'`
+  pattern: 37
+    capture: 13 - label, start: (6, 36), end: (6, 37), text: `a`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (6, 37), end: (6, 38), text: `,`
+  pattern: 0
+    capture: 0 - type, start: (6, 39), end: (6, 40), text: `D`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (6, 34), end: (6, 35), text: `<`
+    capture: 10 - punctuation.bracket, start: (6, 40), end: (6, 41), text: `>`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (6, 41), end: (6, 42), text: `;`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (7, 0), end: (7, 1), text: `}`
+  pattern: 49
+    capture: 14 - keyword, start: (9, 0), end: (9, 2), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (9, 3), end: (9, 16), text: `use_database1`
+  pattern: 0
+    capture: 0 - type, start: (9, 17), end: (9, 18), text: `D`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (9, 18), end: (9, 19), text: `:`
+  pattern: 0
+    capture: 0 - type, start: (9, 20), end: (9, 28), text: `Database`
+  pattern: 0
+    capture: 0 - type, start: (9, 29), end: (9, 30), text: `F`
+  pattern: 93
+    capture: 20 - operator, start: (9, 31), end: (9, 32), text: `'`
+  pattern: 37
+    capture: 13 - label, start: (9, 32), end: (9, 33), text: `a`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (9, 33), end: (9, 34), text: `,`
+  pattern: 0
+    capture: 0 - type, start: (9, 35), end: (9, 37), text: `TD`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (9, 30), end: (9, 31), text: `<`
+    capture: 10 - punctuation.bracket, start: (9, 37), end: (9, 38), text: `>`
+  pattern: 0
+    capture: 0 - type, start: (9, 41), end: (9, 42), text: `F`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (9, 28), end: (9, 29), text: `<`
+    capture: 10 - punctuation.bracket, start: (9, 42), end: (9, 43), text: `>`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (9, 16), end: (9, 17), text: `<`
+    capture: 10 - punctuation.bracket, start: (9, 43), end: (9, 44), text: `>`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (9, 44), end: (9, 45), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (9, 45), end: (9, 46), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (9, 47), end: (9, 48), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (9, 48), end: (9, 49), text: `}`
+  pattern: 49
+    capture: 14 - keyword, start: (11, 0), end: (11, 2), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (11, 3), end: (11, 16), text: `use_database2`
+  pattern: 0
+    capture: 0 - type, start: (11, 17), end: (11, 18), text: `D`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (11, 16), end: (11, 17), text: `<`
+    capture: 10 - punctuation.bracket, start: (11, 18), end: (11, 19), text: `>`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (11, 19), end: (11, 20), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (11, 20), end: (11, 21), text: `)`
+  pattern: 72
+    capture: 14 - keyword, start: (12, 0), end: (12, 5), text: `where`
+  pattern: 0
+    capture: 0 - type, start: (13, 4), end: (13, 5), text: `D`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (13, 5), end: (13, 6), text: `:`
+  pattern: 0
+    capture: 0 - type, start: (13, 7), end: (13, 15), text: `Database`
+  pattern: 0
+    capture: 0 - type, start: (13, 16), end: (13, 17), text: `F`
+  pattern: 93
+    capture: 20 - operator, start: (13, 18), end: (13, 19), text: `'`
+  pattern: 37
+    capture: 13 - label, start: (13, 19), end: (13, 20), text: `a`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (13, 20), end: (13, 21), text: `,`
+  pattern: 0
+    capture: 0 - type, start: (13, 22), end: (13, 24), text: `TD`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (13, 17), end: (13, 18), text: `<`
+    capture: 10 - punctuation.bracket, start: (13, 24), end: (13, 25), text: `>`
+  pattern: 0
+    capture: 0 - type, start: (13, 28), end: (13, 29), text: `F`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (13, 15), end: (13, 16), text: `<`
+    capture: 10 - punctuation.bracket, start: (13, 29), end: (13, 30), text: `>`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (13, 30), end: (13, 31), text: `,`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (14, 0), end: (14, 1), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (14, 1), end: (14, 2), text: `}`
+corpus/declarations.txt/051
+  pattern: 67
+    capture: 14 - keyword, start: (1, 0), end: (1, 5), text: `trait`
+  pattern: 0
+    capture: 0 - type, start: (1, 6), end: (1, 7), text: `T`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (1, 7), end: (1, 8), text: `:`
+  pattern: 50
+    capture: 14 - keyword, start: (1, 9), end: (1, 12), text: `for`
+  pattern: 93
+    capture: 20 - operator, start: (1, 13), end: (1, 14), text: `'`
+  pattern: 37
+    capture: 13 - label, start: (1, 14), end: (1, 15), text: `a`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (1, 12), end: (1, 13), text: `<`
+    capture: 10 - punctuation.bracket, start: (1, 15), end: (1, 16), text: `>`
+  pattern: 0
+    capture: 0 - type, start: (1, 17), end: (1, 26), text: `AddAssign`
+  pattern: 92
+    capture: 20 - operator, start: (1, 27), end: (1, 28), text: `&`
+  pattern: 93
+    capture: 20 - operator, start: (1, 28), end: (1, 29), text: `'`
+  pattern: 37
+    capture: 13 - label, start: (1, 29), end: (1, 30), text: `a`
+  pattern: 1
+    capture: 1 - type.builtin, start: (1, 31), end: (1, 36), text: `usize`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (1, 26), end: (1, 27), text: `<`
+    capture: 10 - punctuation.bracket, start: (1, 36), end: (1, 37), text: `>`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 38), end: (1, 39), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (2, 0), end: (2, 1), text: `}`
+  pattern: 68
+    capture: 14 - keyword, start: (4, 0), end: (4, 4), text: `type`
+  pattern: 0
+    capture: 0 - type, start: (4, 5), end: (4, 13), text: `FnObject`
+  pattern: 93
+    capture: 20 - operator, start: (4, 14), end: (4, 15), text: `'`
+  pattern: 37
+    capture: 13 - label, start: (4, 15), end: (4, 16), text: `b`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (4, 13), end: (4, 14), text: `<`
+    capture: 10 - punctuation.bracket, start: (4, 16), end: (4, 17), text: `>`
+  pattern: 45
+    capture: 14 - keyword, start: (4, 20), end: (4, 23), text: `dyn`
+  pattern: 50
+    capture: 14 - keyword, start: (4, 24), end: (4, 27), text: `for`
+  pattern: 93
+    capture: 20 - operator, start: (4, 28), end: (4, 29), text: `'`
+  pattern: 37
+    capture: 13 - label, start: (4, 29), end: (4, 30), text: `a`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (4, 27), end: (4, 28), text: `<`
+    capture: 10 - punctuation.bracket, start: (4, 30), end: (4, 31), text: `>`
+  pattern: 0
+    capture: 0 - type, start: (4, 32), end: (4, 38), text: `FnLike`
+  pattern: 92
+    capture: 20 - operator, start: (4, 39), end: (4, 40), text: `&`
+  pattern: 93
+    capture: 20 - operator, start: (4, 40), end: (4, 41), text: `'`
+  pattern: 37
+    capture: 13 - label, start: (4, 41), end: (4, 42), text: `a`
+  pattern: 1
+    capture: 1 - type.builtin, start: (4, 43), end: (4, 48), text: `isize`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (4, 48), end: (4, 49), text: `,`
+  pattern: 92
+    capture: 20 - operator, start: (4, 50), end: (4, 51), text: `&`
+  pattern: 93
+    capture: 20 - operator, start: (4, 51), end: (4, 52), text: `'`
+  pattern: 37
+    capture: 13 - label, start: (4, 52), end: (4, 53), text: `a`
+  pattern: 1
+    capture: 1 - type.builtin, start: (4, 54), end: (4, 59), text: `isize`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (4, 38), end: (4, 39), text: `<`
+    capture: 10 - punctuation.bracket, start: (4, 59), end: (4, 60), text: `>`
+  pattern: 93
+    capture: 20 - operator, start: (4, 63), end: (4, 64), text: `'`
+  pattern: 37
+    capture: 13 - label, start: (4, 64), end: (4, 65), text: `b`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (4, 65), end: (4, 66), text: `;`
+corpus/declarations.txt/052
+  pattern: 61
+    capture: 14 - keyword, start: (1, 0), end: (1, 3), text: `pub`
+  pattern: 49
+    capture: 14 - keyword, start: (1, 4), end: (1, 6), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (1, 7), end: (1, 8), text: `a`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (1, 8), end: (1, 9), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (1, 9), end: (1, 10), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 11), end: (1, 12), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (1, 12), end: (1, 13), text: `}`
+  pattern: 61
+    capture: 14 - keyword, start: (2, 0), end: (2, 3), text: `pub`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (2, 3), end: (2, 4), text: `(`
+  pattern: 80
+    capture: 14 - keyword, start: (2, 4), end: (2, 9), text: `super`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (2, 9), end: (2, 10), text: `)`
+  pattern: 49
+    capture: 14 - keyword, start: (2, 11), end: (2, 13), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (2, 14), end: (2, 15), text: `b`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (2, 15), end: (2, 16), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (2, 16), end: (2, 17), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (2, 18), end: (2, 19), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (2, 19), end: (2, 20), text: `}`
+  pattern: 61
+    capture: 14 - keyword, start: (3, 0), end: (3, 3), text: `pub`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (3, 3), end: (3, 4), text: `(`
+  pattern: 81
+    capture: 15 - variable.builtin, start: (3, 4), end: (3, 8), text: `self`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (3, 8), end: (3, 9), text: `)`
+  pattern: 49
+    capture: 14 - keyword, start: (3, 10), end: (3, 12), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (3, 13), end: (3, 14), text: `c`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (3, 14), end: (3, 15), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (3, 15), end: (3, 16), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (3, 17), end: (3, 18), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (3, 18), end: (3, 19), text: `}`
+  pattern: 61
+    capture: 14 - keyword, start: (4, 0), end: (4, 3), text: `pub`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (4, 3), end: (4, 4), text: `(`
+  pattern: 75
+    capture: 14 - keyword, start: (4, 4), end: (4, 9), text: `crate`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (4, 9), end: (4, 10), text: `)`
+  pattern: 49
+    capture: 14 - keyword, start: (4, 11), end: (4, 13), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (4, 14), end: (4, 15), text: `c`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (4, 15), end: (4, 16), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (4, 16), end: (4, 17), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (4, 18), end: (4, 19), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (4, 19), end: (4, 20), text: `}`
+  pattern: 61
+    capture: 14 - keyword, start: (5, 0), end: (5, 3), text: `pub`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (5, 3), end: (5, 4), text: `(`
+  pattern: 54
+    capture: 14 - keyword, start: (5, 4), end: (5, 6), text: `in`
+  pattern: 75
+    capture: 14 - keyword, start: (5, 7), end: (5, 12), text: `crate`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (5, 12), end: (5, 14), text: `::`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (5, 15), end: (5, 16), text: `)`
+  pattern: 49
+    capture: 14 - keyword, start: (5, 17), end: (5, 19), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (5, 20), end: (5, 21), text: `e`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (5, 21), end: (5, 22), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (5, 22), end: (5, 23), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (5, 24), end: (5, 25), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (5, 25), end: (5, 26), text: `}`
+corpus/declarations.txt/053
+  pattern: 49
+    capture: 14 - keyword, start: (1, 0), end: (1, 2), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (1, 3), end: (1, 6), text: `foo`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (1, 6), end: (1, 7), text: `(`
+  pattern: 36
+    capture: 12 - variable.parameter, start: (1, 7), end: (1, 10), text: `str`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (1, 10), end: (1, 11), text: `:`
+  pattern: 91
+    capture: 20 - operator, start: (1, 12), end: (1, 13), text: `*`
+  pattern: 42
+    capture: 14 - keyword, start: (1, 13), end: (1, 18), text: `const`
+  pattern: 0
+    capture: 0 - type, start: (1, 19), end: (1, 25), text: `c_char`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (1, 25), end: (1, 26), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 27), end: (1, 28), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (1, 28), end: (1, 29), text: `}`
+  pattern: 49
+    capture: 14 - keyword, start: (2, 0), end: (2, 2), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (2, 3), end: (2, 6), text: `bar`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (2, 6), end: (2, 7), text: `(`
+  pattern: 36
+    capture: 12 - variable.parameter, start: (2, 7), end: (2, 11), text: `bool`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (2, 11), end: (2, 12), text: `:`
+  pattern: 1
+    capture: 1 - type.builtin, start: (2, 13), end: (2, 17), text: `bool`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (2, 17), end: (2, 18), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (2, 19), end: (2, 20), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (2, 20), end: (2, 21), text: `}`
+corpus/declarations.txt/054
+  pattern: 49
+    capture: 14 - keyword, start: (1, 0), end: (1, 2), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (1, 3), end: (1, 7), text: `walk`
+  pattern: 0
+    capture: 0 - type, start: (1, 8), end: (1, 9), text: `F`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (1, 7), end: (1, 8), text: `<`
+    capture: 10 - punctuation.bracket, start: (1, 9), end: (1, 10), text: `>`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (1, 10), end: (1, 11), text: `(`
+  pattern: 92
+    capture: 20 - operator, start: (1, 11), end: (1, 12), text: `&`
+  pattern: 81
+    capture: 15 - variable.builtin, start: (1, 12), end: (1, 16), text: `self`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (1, 16), end: (1, 17), text: `,`
+  pattern: 36
+    capture: 12 - variable.parameter, start: (1, 18), end: (1, 20), text: `it`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (1, 20), end: (1, 21), text: `:`
+  pattern: 92
+    capture: 20 - operator, start: (1, 22), end: (1, 23), text: `&`
+  pattern: 76
+    capture: 14 - keyword, start: (1, 23), end: (1, 26), text: `mut`
+  pattern: 0
+    capture: 0 - type, start: (1, 27), end: (1, 28), text: `F`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (1, 28), end: (1, 29), text: `)`
+  pattern: 1
+    capture: 1 - type.builtin, start: (1, 33), end: (1, 37), text: `bool`
+  pattern: 72
+    capture: 14 - keyword, start: (2, 4), end: (2, 9), text: `where`
+  pattern: 0
+    capture: 0 - type, start: (2, 10), end: (2, 11), text: `F`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (2, 11), end: (2, 12), text: `:`
+  pattern: 0
+    capture: 0 - type, start: (2, 13), end: (2, 18), text: `FnMut`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (2, 18), end: (2, 19), text: `(`
+  pattern: 92
+    capture: 20 - operator, start: (2, 19), end: (2, 20), text: `&`
+  pattern: 0
+    capture: 0 - type, start: (2, 20), end: (2, 23), text: `Pat`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (2, 23), end: (2, 24), text: `)`
+  pattern: 1
+    capture: 1 - type.builtin, start: (2, 28), end: (2, 32), text: `bool`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (3, 0), end: (3, 1), text: `{`
+  pattern: 64
+    capture: 14 - keyword, start: (4, 2), end: (4, 8), text: `return`
+  pattern: 85
+    capture: 17 - constant.builtin, start: (4, 9), end: (4, 14), text: `false`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (5, 0), end: (5, 1), text: `}`
+  pattern: 53
+    capture: 14 - keyword, start: (7, 0), end: (7, 4), text: `impl`
+  pattern: 93
+    capture: 20 - operator, start: (7, 5), end: (7, 6), text: `'`
+  pattern: 37
+    capture: 13 - label, start: (7, 6), end: (7, 7), text: `a`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (7, 7), end: (7, 8), text: `,`
+  pattern: 0
+    capture: 0 - type, start: (7, 9), end: (7, 10), text: `T`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (7, 10), end: (7, 11), text: `:`
+  pattern: 93
+    capture: 20 - operator, start: (7, 12), end: (7, 13), text: `'`
+  pattern: 37
+    capture: 13 - label, start: (7, 13), end: (7, 14), text: `a`
+  pattern: 0
+    capture: 0 - type, start: (7, 17), end: (7, 21), text: `Item`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (7, 4), end: (7, 5), text: `<`
+    capture: 10 - punctuation.bracket, start: (7, 21), end: (7, 22), text: `>`
+  pattern: 0
+    capture: 0 - type, start: (7, 23), end: (7, 31), text: `Iterator`
+  pattern: 50
+    capture: 14 - keyword, start: (7, 32), end: (7, 35), text: `for`
+  pattern: 0
+    capture: 0 - type, start: (7, 36), end: (7, 40), text: `Iter`
+  pattern: 93
+    capture: 20 - operator, start: (7, 41), end: (7, 42), text: `'`
+  pattern: 37
+    capture: 13 - label, start: (7, 42), end: (7, 43), text: `a`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (7, 43), end: (7, 44), text: `,`
+  pattern: 0
+    capture: 0 - type, start: (7, 45), end: (7, 46), text: `T`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (7, 40), end: (7, 41), text: `<`
+    capture: 10 - punctuation.bracket, start: (7, 46), end: (7, 47), text: `>`
+  pattern: 72
+    capture: 14 - keyword, start: (7, 48), end: (7, 53), text: `where`
+  pattern: 0
+    capture: 0 - type, start: (7, 54), end: (7, 58), text: `Self`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (7, 58), end: (7, 59), text: `:`
+  pattern: 93
+    capture: 20 - operator, start: (7, 60), end: (7, 61), text: `'`
+  pattern: 37
+    capture: 13 - label, start: (7, 61), end: (7, 62), text: `a`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (7, 63), end: (7, 64), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (8, 0), end: (8, 1), text: `}`
+  pattern: 53
+    capture: 14 - keyword, start: (10, 0), end: (10, 4), text: `impl`
+  pattern: 0
+    capture: 0 - type, start: (10, 5), end: (10, 6), text: `T`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (10, 4), end: (10, 5), text: `<`
+    capture: 10 - punctuation.bracket, start: (10, 6), end: (10, 7), text: `>`
+  pattern: 0
+    capture: 0 - type, start: (10, 8), end: (10, 9), text: `A`
+  pattern: 50
+    capture: 14 - keyword, start: (10, 10), end: (10, 13), text: `for`
+  pattern: 0
+    capture: 0 - type, start: (10, 14), end: (10, 15), text: `B`
+  pattern: 0
+    capture: 0 - type, start: (10, 16), end: (10, 17), text: `T`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (10, 15), end: (10, 16), text: `<`
+    capture: 10 - punctuation.bracket, start: (10, 17), end: (10, 18), text: `>`
+  pattern: 72
+    capture: 14 - keyword, start: (11, 4), end: (11, 9), text: `where`
+  pattern: 0
+    capture: 0 - type, start: (11, 10), end: (11, 11), text: `C`
+  pattern: 0
+    capture: 0 - type, start: (11, 12), end: (11, 13), text: `T`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (11, 11), end: (11, 12), text: `<`
+    capture: 10 - punctuation.bracket, start: (11, 13), end: (11, 14), text: `>`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (11, 14), end: (11, 15), text: `:`
+  pattern: 0
+    capture: 0 - type, start: (11, 16), end: (11, 17), text: `D`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (11, 17), end: (11, 18), text: `,`
+  pattern: 0
+    capture: 0 - type, start: (12, 10), end: (12, 11), text: `T`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (12, 11), end: (12, 12), text: `:`
+  pattern: 93
+    capture: 20 - operator, start: (12, 13), end: (12, 14), text: `'`
+  pattern: 37
+    capture: 13 - label, start: (12, 14), end: (12, 15), text: `c`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (12, 15), end: (12, 16), text: `,`
+  pattern: 93
+    capture: 20 - operator, start: (13, 10), end: (13, 11), text: `'`
+  pattern: 37
+    capture: 13 - label, start: (13, 11), end: (13, 12), text: `c`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (13, 12), end: (13, 13), text: `:`
+  pattern: 93
+    capture: 20 - operator, start: (13, 14), end: (13, 15), text: `'`
+  pattern: 37
+    capture: 13 - label, start: (13, 15), end: (13, 16), text: `b`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (13, 16), end: (13, 17), text: `,`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (14, 0), end: (14, 1), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (15, 0), end: (15, 1), text: `}`
+  pattern: 53
+    capture: 14 - keyword, start: (17, 0), end: (17, 4), text: `impl`
+  pattern: 93
+    capture: 20 - operator, start: (17, 5), end: (17, 6), text: `'`
+  pattern: 37
+    capture: 13 - label, start: (17, 6), end: (17, 7), text: `a`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (17, 7), end: (17, 8), text: `,`
+  pattern: 0
+    capture: 0 - type, start: (17, 9), end: (17, 10), text: `E`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (17, 4), end: (17, 5), text: `<`
+    capture: 10 - punctuation.bracket, start: (17, 10), end: (17, 11), text: `>`
+  pattern: 0
+    capture: 0 - type, start: (17, 12), end: (17, 16), text: `Read`
+  pattern: 72
+    capture: 14 - keyword, start: (18, 0), end: (18, 5), text: `where`
+  pattern: 92
+    capture: 20 - operator, start: (18, 6), end: (18, 7), text: `&`
+  pattern: 93
+    capture: 20 - operator, start: (18, 7), end: (18, 8), text: `'`
+  pattern: 37
+    capture: 13 - label, start: (18, 8), end: (18, 9), text: `a`
+  pattern: 0
+    capture: 0 - type, start: (18, 10), end: (18, 11), text: `E`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (18, 11), end: (18, 12), text: `:`
+  pattern: 0
+    capture: 0 - type, start: (18, 13), end: (18, 17), text: `Read`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (18, 17), end: (18, 18), text: `,`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (19, 0), end: (19, 1), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (20, 0), end: (20, 1), text: `}`
+  pattern: 53
+    capture: 14 - keyword, start: (22, 0), end: (22, 4), text: `impl`
+  pattern: 0
+    capture: 0 - type, start: (22, 5), end: (22, 6), text: `T`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (22, 4), end: (22, 5), text: `<`
+    capture: 10 - punctuation.bracket, start: (22, 6), end: (22, 7), text: `>`
+  pattern: 0
+    capture: 0 - type, start: (22, 8), end: (22, 9), text: `A`
+  pattern: 50
+    capture: 14 - keyword, start: (22, 10), end: (22, 13), text: `for`
+  pattern: 0
+    capture: 0 - type, start: (22, 14), end: (22, 15), text: `B`
+  pattern: 0
+    capture: 0 - type, start: (22, 16), end: (22, 17), text: `T`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (22, 15), end: (22, 16), text: `<`
+    capture: 10 - punctuation.bracket, start: (22, 17), end: (22, 18), text: `>`
+  pattern: 72
+    capture: 14 - keyword, start: (22, 19), end: (22, 24), text: `where`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (22, 25), end: (22, 26), text: `(`
+  pattern: 0
+    capture: 0 - type, start: (22, 26), end: (22, 27), text: `T`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (22, 27), end: (22, 28), text: `,`
+  pattern: 0
+    capture: 0 - type, start: (22, 29), end: (22, 30), text: `T`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (22, 30), end: (22, 31), text: `,`
+  pattern: 0
+    capture: 0 - type, start: (22, 32), end: (22, 33), text: `T`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (22, 33), end: (22, 34), text: `)`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (22, 34), end: (22, 35), text: `:`
+  pattern: 0
+    capture: 0 - type, start: (22, 36), end: (22, 37), text: `C`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (22, 37), end: (22, 38), text: `,`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (22, 39), end: (22, 40), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (22, 40), end: (22, 41), text: `}`
+  pattern: 53
+    capture: 14 - keyword, start: (24, 0), end: (24, 4), text: `impl`
+  pattern: 0
+    capture: 0 - type, start: (24, 5), end: (24, 6), text: `T`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (24, 4), end: (24, 5), text: `<`
+    capture: 10 - punctuation.bracket, start: (24, 6), end: (24, 7), text: `>`
+  pattern: 0
+    capture: 0 - type, start: (24, 8), end: (24, 9), text: `A`
+  pattern: 50
+    capture: 14 - keyword, start: (24, 10), end: (24, 13), text: `for`
+  pattern: 0
+    capture: 0 - type, start: (24, 14), end: (24, 15), text: `B`
+  pattern: 0
+    capture: 0 - type, start: (24, 16), end: (24, 17), text: `T`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (24, 15), end: (24, 16), text: `<`
+    capture: 10 - punctuation.bracket, start: (24, 17), end: (24, 18), text: `>`
+  pattern: 72
+    capture: 14 - keyword, start: (25, 4), end: (25, 9), text: `where`
+  pattern: 50
+    capture: 14 - keyword, start: (25, 10), end: (25, 13), text: `for`
+  pattern: 93
+    capture: 20 - operator, start: (25, 14), end: (25, 15), text: `'`
+  pattern: 37
+    capture: 13 - label, start: (25, 15), end: (25, 16), text: `a`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (25, 13), end: (25, 14), text: `<`
+    capture: 10 - punctuation.bracket, start: (25, 16), end: (25, 17), text: `>`
+  pattern: 0
+    capture: 0 - type, start: (25, 18), end: (25, 19), text: `D`
+  pattern: 0
+    capture: 0 - type, start: (25, 20), end: (25, 21), text: `T`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (25, 19), end: (25, 20), text: `<`
+    capture: 10 - punctuation.bracket, start: (25, 21), end: (25, 22), text: `>`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (25, 22), end: (25, 23), text: `:`
+  pattern: 0
+    capture: 0 - type, start: (25, 24), end: (25, 25), text: `E`
+  pattern: 93
+    capture: 20 - operator, start: (25, 26), end: (25, 27), text: `'`
+  pattern: 37
+    capture: 13 - label, start: (25, 27), end: (25, 28), text: `a`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (25, 25), end: (25, 26), text: `<`
+    capture: 10 - punctuation.bracket, start: (25, 28), end: (25, 29), text: `>`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (25, 29), end: (25, 30), text: `,`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (26, 0), end: (26, 1), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (27, 0), end: (27, 1), text: `}`
+  pattern: 61
+    capture: 14 - keyword, start: (29, 0), end: (29, 3), text: `pub`
+  pattern: 67
+    capture: 14 - keyword, start: (29, 4), end: (29, 9), text: `trait`
+  pattern: 0
+    capture: 0 - type, start: (29, 10), end: (29, 11), text: `A`
+  pattern: 0
+    capture: 0 - type, start: (29, 12), end: (29, 13), text: `B`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (29, 11), end: (29, 12), text: `<`
+    capture: 10 - punctuation.bracket, start: (29, 13), end: (29, 14), text: `>`
+  pattern: 72
+    capture: 14 - keyword, start: (29, 15), end: (29, 20), text: `where`
+  pattern: 0
+    capture: 0 - type, start: (29, 21), end: (29, 22), text: `B`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (29, 22), end: (29, 23), text: `:`
+  pattern: 0
+    capture: 0 - type, start: (29, 24), end: (29, 25), text: `C`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (29, 25), end: (29, 26), text: `,`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (30, 0), end: (30, 1), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (31, 0), end: (31, 1), text: `}`
+  pattern: 49
+    capture: 14 - keyword, start: (33, 0), end: (33, 2), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (33, 3), end: (33, 6), text: `foo`
+  pattern: 0
+    capture: 0 - type, start: (33, 7), end: (33, 8), text: `A`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (33, 6), end: (33, 7), text: `<`
+    capture: 10 - punctuation.bracket, start: (33, 8), end: (33, 9), text: `>`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (33, 9), end: (33, 10), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (33, 10), end: (33, 11), text: `)`
+  pattern: 72
+    capture: 14 - keyword, start: (33, 12), end: (33, 17), text: `where`
+  pattern: 0
+    capture: 0 - type, start: (33, 18), end: (33, 19), text: `A`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (33, 19), end: (33, 20), text: `:`
+  pattern: 0
+    capture: 0 - type, start: (33, 21), end: (33, 22), text: `B`
+  pattern: 0
+    capture: 0 - type, start: (33, 25), end: (33, 27), text: `As`
+  pattern: 1
+    capture: 1 - type.builtin, start: (33, 28), end: (33, 31), text: `f64`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (33, 27), end: (33, 28), text: `<`
+    capture: 10 - punctuation.bracket, start: (33, 31), end: (33, 32), text: `>`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (33, 32), end: (33, 33), text: `,`
+  pattern: 1
+    capture: 1 - type.builtin, start: (33, 34), end: (33, 37), text: `f64`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (33, 37), end: (33, 38), text: `:`
+  pattern: 0
+    capture: 0 - type, start: (33, 39), end: (33, 41), text: `As`
+  pattern: 0
+    capture: 0 - type, start: (33, 42), end: (33, 43), text: `A`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (33, 41), end: (33, 42), text: `<`
+    capture: 10 - punctuation.bracket, start: (33, 43), end: (33, 44), text: `>`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (33, 45), end: (33, 46), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (33, 46), end: (33, 47), text: `}`
+  pattern: 53
+    capture: 14 - keyword, start: (35, 0), end: (35, 4), text: `impl`
+  pattern: 0
+    capture: 0 - type, start: (35, 5), end: (35, 6), text: `A`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (35, 4), end: (35, 5), text: `<`
+    capture: 10 - punctuation.bracket, start: (35, 6), end: (35, 7), text: `>`
+  pattern: 0
+    capture: 0 - type, start: (35, 8), end: (35, 15), text: `Default`
+  pattern: 50
+    capture: 14 - keyword, start: (35, 16), end: (35, 19), text: `for`
+  pattern: 0
+    capture: 0 - type, start: (35, 20), end: (35, 21), text: `B`
+  pattern: 0
+    capture: 0 - type, start: (35, 22), end: (35, 23), text: `A`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (35, 21), end: (35, 22), text: `<`
+    capture: 10 - punctuation.bracket, start: (35, 23), end: (35, 24), text: `>`
+  pattern: 72
+    capture: 14 - keyword, start: (35, 25), end: (35, 30), text: `where`
+  pattern: 91
+    capture: 20 - operator, start: (35, 31), end: (35, 32), text: `*`
+  pattern: 76
+    capture: 14 - keyword, start: (35, 32), end: (35, 35), text: `mut`
+  pattern: 0
+    capture: 0 - type, start: (35, 36), end: (35, 37), text: `A`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (35, 37), end: (35, 38), text: `:`
+  pattern: 0
+    capture: 0 - type, start: (35, 39), end: (35, 40), text: `C`
+  pattern: 0
+    capture: 0 - type, start: (35, 43), end: (35, 44), text: `D`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (35, 45), end: (35, 46), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (35, 46), end: (35, 47), text: `}`
+corpus/declarations.txt/055
+  pattern: 48
+    capture: 14 - keyword, start: (1, 0), end: (1, 6), text: `extern`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 7), end: (1, 8), text: `{`
+  pattern: 61
+    capture: 14 - keyword, start: (2, 2), end: (2, 5), text: `pub`
+  pattern: 49
+    capture: 14 - keyword, start: (2, 6), end: (2, 8), text: `fn`
+  pattern: 18
+    capture: 5 - function, start: (2, 9), end: (2, 29), text: `napi_module_register`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (2, 29), end: (2, 30), text: `(`
+  pattern: 36
+    capture: 12 - variable.parameter, start: (2, 30), end: (2, 34), text: `mod_`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (2, 34), end: (2, 35), text: `:`
+  pattern: 91
+    capture: 20 - operator, start: (2, 36), end: (2, 37), text: `*`
+  pattern: 76
+    capture: 14 - keyword, start: (2, 37), end: (2, 40), text: `mut`
+  pattern: 0
+    capture: 0 - type, start: (2, 41), end: (2, 52), text: `napi_module`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (2, 52), end: (2, 53), text: `)`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (2, 53), end: (2, 54), text: `;`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (3, 0), end: (3, 1), text: `}`
+  pattern: 48
+    capture: 14 - keyword, start: (5, 0), end: (5, 6), text: `extern`
+  pattern: 83
+    capture: 16 - string, start: (5, 7), end: (5, 10), text: `"C"`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (5, 11), end: (5, 12), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (5, 12), end: (5, 13), text: `}`
+  pattern: 70
+    capture: 14 - keyword, start: (7, 0), end: (7, 6), text: `unsafe`
+  pattern: 48
+    capture: 14 - keyword, start: (7, 7), end: (7, 13), text: `extern`
+  pattern: 83
+    capture: 16 - string, start: (7, 14), end: (7, 17), text: `"C"`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (7, 18), end: (7, 19), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (7, 19), end: (7, 20), text: `}`
+corpus/declarations.txt/056
+  pattern: 75
+    capture: 14 - keyword, start: (1, 0), end: (1, 5), text: `crate`
+  pattern: 59
+    capture: 14 - keyword, start: (1, 6), end: (1, 9), text: `mod`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (1, 13), end: (1, 14), text: `;`
+  pattern: 75
+    capture: 14 - keyword, start: (2, 0), end: (2, 5), text: `crate`
+  pattern: 66
+    capture: 14 - keyword, start: (2, 6), end: (2, 12), text: `struct`
+  pattern: 0
+    capture: 0 - type, start: (2, 13), end: (2, 16), text: `Foo`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (2, 16), end: (2, 17), text: `(`
+  pattern: 75
+    capture: 14 - keyword, start: (2, 17), end: (2, 22), text: `crate`
+  pattern: 75
+    capture: 14 - keyword, start: (2, 23), end: (2, 28), text: `crate`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (2, 28), end: (2, 30), text: `::`
+  pattern: 0
+    capture: 0 - type, start: (2, 30), end: (2, 33), text: `Bar`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (2, 33), end: (2, 34), text: `)`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (2, 34), end: (2, 35), text: `;`
+  pattern: 75
+    capture: 14 - keyword, start: (3, 0), end: (3, 5), text: `crate`
+  pattern: 49
+    capture: 14 - keyword, start: (3, 6), end: (3, 8), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (3, 9), end: (3, 12), text: `foo`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (3, 12), end: (3, 13), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (3, 13), end: (3, 14), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (3, 15), end: (3, 16), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (3, 17), end: (3, 18), text: `}`
+  pattern: 75
+    capture: 14 - keyword, start: (4, 0), end: (4, 5), text: `crate`
+  pattern: 42
+    capture: 14 - keyword, start: (4, 6), end: (4, 11), text: `const`
+  pattern: 4
+    capture: 4 - constructor, start: (4, 12), end: (4, 13), text: `X`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (4, 13), end: (4, 14), text: `:`
+  pattern: 1
+    capture: 1 - type.builtin, start: (4, 15), end: (4, 18), text: `u32`
+  pattern: 86
+    capture: 17 - constant.builtin, start: (4, 21), end: (4, 22), text: `0`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (4, 22), end: (4, 23), text: `;`
+corpus/declarations.txt/057
+  pattern: 66
+    capture: 14 - keyword, start: (1, 0), end: (1, 6), text: `struct`
+  pattern: 0
+    capture: 0 - type, start: (1, 7), end: (1, 8), text: `A`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 9), end: (1, 10), text: `{`
+  pattern: 2
+    capture: 2 - property, start: (2, 2), end: (2, 3), text: `a`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (2, 3), end: (2, 4), text: `:`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (2, 12), end: (2, 14), text: `::`
+  pattern: 0
+    capture: 0 - type, start: (2, 14), end: (2, 15), text: `B`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (2, 15), end: (2, 16), text: `,`
+  pattern: 2
+    capture: 2 - property, start: (3, 2), end: (3, 3), text: `b`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (3, 3), end: (3, 4), text: `:`
+  pattern: 31
+    capture: 11 - punctuation.delimiter, start: (3, 10), end: (3, 12), text: `::`
+  pattern: 0
+    capture: 0 - type, start: (3, 12), end: (3, 13), text: `C`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (3, 13), end: (3, 14), text: `,`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (4, 0), end: (4, 1), text: `}`
+corpus/declarations.txt/058
+  pattern: 49
+    capture: 14 - keyword, start: (1, 0), end: (1, 2), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (1, 3), end: (1, 6), text: `foo`
+  pattern: 0
+    capture: 0 - type, start: (1, 7), end: (1, 8), text: `D`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (1, 6), end: (1, 7), text: `<`
+    capture: 10 - punctuation.bracket, start: (1, 8), end: (1, 9), text: `>`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (1, 9), end: (1, 10), text: `(`
+  pattern: 36
+    capture: 12 - variable.parameter, start: (1, 10), end: (1, 13), text: `val`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (1, 13), end: (1, 14), text: `:`
+  pattern: 0
+    capture: 0 - type, start: (1, 15), end: (1, 16), text: `D`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (1, 16), end: (1, 17), text: `)`
+  pattern: 72
+    capture: 14 - keyword, start: (2, 0), end: (2, 5), text: `where`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (3, 4), end: (3, 5), text: `[`
+  pattern: 1
+    capture: 1 - type.builtin, start: (3, 5), end: (3, 7), text: `u8`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (3, 7), end: (3, 8), text: `;`
+  pattern: 86
+    capture: 17 - constant.builtin, start: (3, 9), end: (3, 11), text: `32`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (3, 11), end: (3, 12), text: `]`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (3, 12), end: (3, 13), text: `:`
+  pattern: 0
+    capture: 0 - type, start: (3, 14), end: (3, 18), text: `From`
+  pattern: 0
+    capture: 0 - type, start: (3, 19), end: (3, 20), text: `D`
+  pattern: 29
+    capture: 10 - punctuation.bracket, start: (3, 18), end: (3, 19), text: `<`
+    capture: 10 - punctuation.bracket, start: (3, 20), end: (3, 21), text: `>`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (3, 21), end: (3, 22), text: `,`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (5, 0), end: (5, 1), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (5, 1), end: (5, 2), text: `}`
+corpus/declarations.txt/059
+  pattern: 61
+    capture: 14 - keyword, start: (1, 0), end: (1, 3), text: `pub`
+  pattern: 66
+    capture: 14 - keyword, start: (1, 4), end: (1, 10), text: `struct`
+  pattern: 0
+    capture: 0 - type, start: (1, 11), end: (1, 15), text: `Loaf`
+  pattern: 0
+    capture: 0 - type, start: (1, 16), end: (1, 17), text: `T`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (1, 17), end: (1, 18), text: `:`
+  pattern: 0
+    capture: 0 - type, start: (1, 19), end: (1, 24), text: `Sized`
+  pattern: 34
+    capture: 11 - punctuation.delimiter, start: (1, 24), end: (1, 25), text: `,`
+  pattern: 42
+    capture: 14 - keyword, start: (1, 26), end: (1, 31), text: `const`
+  pattern: 4
+    capture: 4 - constructor, start: (1, 32), end: (1, 33), text: `N`
+  pattern: 32
+    capture: 11 - punctuation.delimiter, start: (1, 33), end: (1, 34), text: `:`
+  pattern: 1
+    capture: 1 - type.builtin, start: (1, 35), end: (1, 40), text: `usize`
+  pattern: 86
+    capture: 17 - constant.builtin, start: (1, 43), end: (1, 44), text: `1`
+  pattern: 30
+    capture: 10 - punctuation.bracket, start: (1, 15), end: (1, 16), text: `<`
+    capture: 10 - punctuation.bracket, start: (1, 44), end: (1, 45), text: `>`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (1, 45), end: (1, 46), text: `(`
+  pattern: 25
+    capture: 10 - punctuation.bracket, start: (1, 46), end: (1, 47), text: `[`
+  pattern: 0
+    capture: 0 - type, start: (1, 47), end: (1, 48), text: `T`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (1, 48), end: (1, 49), text: `;`
+  pattern: 4
+    capture: 4 - constructor, start: (1, 50), end: (1, 51), text: `N`
+  pattern: 26
+    capture: 10 - punctuation.bracket, start: (1, 51), end: (1, 52), text: `]`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (1, 52), end: (1, 53), text: `)`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (1, 53), end: (1, 54), text: `;`
