@@ -9,4 +9,3 @@ import (
 )
 
 // This file holds the second half of the port in query_upstream1_test.go.
-

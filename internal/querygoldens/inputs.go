@@ -69,7 +69,7 @@ func Queries(g Grammar, dir string) ([]Query, error) {
 func Inputs(g Grammar, dir string) ([]Input, error) {
 	var inputs []Input
 	if g.Samples != "" {
-		samples, err := readFiles(filepath.Join(dir, g.Samples), "samples", func(name string) bool {
+		samples, err := readFiles(filepath.Join(dir, g.Samples), "samples", func(name string, _ int64) bool {
 			return strings.HasSuffix(name, ".txt")
 		})
 		if err != nil {
