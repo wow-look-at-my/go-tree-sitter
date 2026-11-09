@@ -36,9 +36,10 @@ type Grammar struct {
 	Examples string
 	// Corpus is the upstream test/corpus directory.
 	Corpus string
-	// Skip names examples/<file> inputs left out to bound the golden size.
-	Skip []string
 }
+
+// MaxExampleBytes bounds the examples that run.
+const MaxExampleBytes = 16 << 10
 
 // Grammars lists every bundled grammar.
 var Grammars = []Grammar{
