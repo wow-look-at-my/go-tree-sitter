@@ -11,8 +11,8 @@ import (
 	ts "github.com/wow-look-at-my/go-tree-sitter"
 )
 
-// The second half of part 3 of the upstream query suite. The init in
-// query_upstream3_test.go registers these tests.
+// The second half of a later part of the upstream query suite. The
+// init in query_upstream3_test.go registers these tests.
 
 // test_capture_quantifiers. The python row "(module) @mod" becomes the
 // javascript "(program) @mod": both capture the root.
