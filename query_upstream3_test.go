@@ -1,6 +1,7 @@
 package treesitter_test
 
 import (
+	"encoding/json"
 	"strconv"
 	"strings"
 	"testing"
@@ -1028,16 +1029,16 @@ func TestQueryCapturesProgressCallbackStopsBehindAnOpenMatch(t *testing.T) {
 // object, string, number and "]" nodes.
 func TestQueryCapturesProgressCallbackDiscardsInProgressMatches(t *testing.T) {
 	language := queryLanguage(t, "javascript")
-	trues := make([]string, 12)
-	for i := range trues {
-		trues[i] = "true"
+	element := []any{[]any{map[string]int{"a": 1}, 1, 2}}
+	for range 12 {
+		element = append(element, true)
 	}
-	element := `[[{"a":1},1,2],` + strings.Join(trues, ",") + "]"
-	elements := make([]string, 50)
+	elements := make([]any, 50)
 	for i := range elements {
 		elements[i] = element
 	}
-	source := []byte("[" + strings.Join(elements, ",") + "]")
+	source, err := json.Marshal(elements)
+	require.NoError(t, err)
 	tree := parseSource(t, language, string(source))
 	query := p3MustQuery(t, language, `
         (array (object) @object (string))
