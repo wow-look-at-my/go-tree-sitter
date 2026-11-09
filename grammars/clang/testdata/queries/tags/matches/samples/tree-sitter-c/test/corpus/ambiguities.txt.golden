@@ -1,7 +1,0 @@
-samples/tree-sitter-c/test/corpus/ambiguities.txt
-  pattern: 2
-    capture: 2 - definition.function, start: (8, 4), end: (8, 10), text: `main()`
-    capture: 0 - name, start: (8, 4), end: (8, 8), text: `main`
-  pattern: 2
-    capture: 2 - definition.function, start: (10, 7), end: (10, 14), text: `b(T2 a)`
-    capture: 0 - name, start: (10, 7), end: (10, 8), text: `b`

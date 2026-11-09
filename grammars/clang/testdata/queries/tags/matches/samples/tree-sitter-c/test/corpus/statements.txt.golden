@@ -1,7 +1,0 @@
-samples/tree-sitter-c/test/corpus/statements.txt
-  pattern: 2
-    capture: 2 - definition.function, start: (4, 4), end: (4, 10), text: `main()`
-    capture: 0 - name, start: (4, 4), end: (4, 8), text: `main`
-  pattern: 2
-    capture: 2 - definition.function, start: (273, 4), end: (273, 10), text: `main()`
-    capture: 0 - name, start: (273, 4), end: (273, 8), text: `main`
