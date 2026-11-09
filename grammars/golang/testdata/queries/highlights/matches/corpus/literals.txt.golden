@@ -1,0 +1,484 @@
+corpus/literals.txt/000
+  pattern: 9
+    capture: 7 - keyword, start: (1, 0), end: (1, 7), text: `package`
+  pattern: 9
+    capture: 7 - keyword, start: (3, 0), end: (3, 5), text: `const`
+  pattern: 7
+    capture: 5 - variable, start: (4, 2), end: (4, 4), text: `i1`
+  pattern: 8
+    capture: 6 - operator, start: (4, 5), end: (4, 6), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (4, 7), end: (4, 9), text: `42`
+  pattern: 7
+    capture: 5 - variable, start: (5, 2), end: (5, 4), text: `i2`
+  pattern: 8
+    capture: 6 - operator, start: (5, 5), end: (5, 6), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (5, 7), end: (5, 10), text: `4_2`
+  pattern: 7
+    capture: 5 - variable, start: (6, 2), end: (6, 4), text: `i3`
+  pattern: 8
+    capture: 6 - operator, start: (6, 5), end: (6, 6), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (6, 7), end: (6, 11), text: `0600`
+  pattern: 7
+    capture: 5 - variable, start: (7, 2), end: (7, 4), text: `i4`
+  pattern: 8
+    capture: 6 - operator, start: (7, 5), end: (7, 6), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (7, 7), end: (7, 12), text: `0_600`
+  pattern: 7
+    capture: 5 - variable, start: (8, 2), end: (8, 4), text: `i5`
+  pattern: 8
+    capture: 6 - operator, start: (8, 5), end: (8, 6), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (8, 7), end: (8, 12), text: `0o600`
+  pattern: 7
+    capture: 5 - variable, start: (9, 2), end: (9, 4), text: `i6`
+  pattern: 8
+    capture: 6 - operator, start: (9, 5), end: (9, 6), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (9, 7), end: (9, 12), text: `0O600`
+  pattern: 7
+    capture: 5 - variable, start: (10, 2), end: (10, 4), text: `i7`
+  pattern: 8
+    capture: 6 - operator, start: (10, 5), end: (10, 6), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (10, 7), end: (10, 16), text: `0xBadFace`
+  pattern: 7
+    capture: 5 - variable, start: (11, 2), end: (11, 4), text: `i8`
+  pattern: 8
+    capture: 6 - operator, start: (11, 5), end: (11, 6), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (11, 7), end: (11, 17), text: `0xBad_Face`
+  pattern: 7
+    capture: 5 - variable, start: (12, 2), end: (12, 4), text: `i9`
+  pattern: 8
+    capture: 6 - operator, start: (12, 5), end: (12, 6), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (12, 7), end: (12, 27), text: `0x_67_7a_2f_cc_40_c6`
+  pattern: 7
+    capture: 5 - variable, start: (13, 2), end: (13, 5), text: `i10`
+  pattern: 8
+    capture: 6 - operator, start: (13, 6), end: (13, 7), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (13, 8), end: (13, 47), text: `170141183460469231731687303715884105727`
+  pattern: 7
+    capture: 5 - variable, start: (14, 2), end: (14, 5), text: `i11`
+  pattern: 8
+    capture: 6 - operator, start: (14, 6), end: (14, 7), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (14, 8), end: (14, 53), text: `170_141183_460469_231731_687303_715884_105727`
+corpus/literals.txt/001
+  pattern: 9
+    capture: 7 - keyword, start: (1, 0), end: (1, 7), text: `package`
+  pattern: 9
+    capture: 7 - keyword, start: (3, 0), end: (3, 5), text: `const`
+  pattern: 7
+    capture: 5 - variable, start: (4, 2), end: (4, 4), text: `f1`
+  pattern: 8
+    capture: 6 - operator, start: (4, 5), end: (4, 6), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (4, 7), end: (4, 9), text: `0.`
+  pattern: 7
+    capture: 5 - variable, start: (5, 2), end: (5, 4), text: `f2`
+  pattern: 8
+    capture: 6 - operator, start: (5, 5), end: (5, 6), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (5, 7), end: (5, 12), text: `72.40`
+  pattern: 7
+    capture: 5 - variable, start: (6, 2), end: (6, 4), text: `f3`
+  pattern: 8
+    capture: 6 - operator, start: (6, 5), end: (6, 6), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (6, 7), end: (6, 13), text: `072.40`
+  pattern: 7
+    capture: 5 - variable, start: (7, 2), end: (7, 4), text: `f4`
+  pattern: 8
+    capture: 6 - operator, start: (7, 5), end: (7, 6), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (7, 7), end: (7, 14), text: `2.71828`
+  pattern: 7
+    capture: 5 - variable, start: (8, 2), end: (8, 4), text: `f5`
+  pattern: 8
+    capture: 6 - operator, start: (8, 5), end: (8, 6), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (8, 7), end: (8, 12), text: `1.e+0`
+  pattern: 7
+    capture: 5 - variable, start: (9, 2), end: (9, 4), text: `f6`
+  pattern: 8
+    capture: 6 - operator, start: (9, 5), end: (9, 6), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (9, 7), end: (9, 18), text: `6.67428e-11`
+  pattern: 7
+    capture: 5 - variable, start: (10, 2), end: (10, 4), text: `f7`
+  pattern: 8
+    capture: 6 - operator, start: (10, 5), end: (10, 6), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (10, 7), end: (10, 10), text: `1E6`
+  pattern: 7
+    capture: 5 - variable, start: (11, 2), end: (11, 4), text: `f8`
+  pattern: 8
+    capture: 6 - operator, start: (11, 5), end: (11, 6), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (11, 7), end: (11, 10), text: `.25`
+  pattern: 7
+    capture: 5 - variable, start: (12, 2), end: (12, 4), text: `f9`
+  pattern: 8
+    capture: 6 - operator, start: (12, 5), end: (12, 6), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (12, 7), end: (12, 16), text: `.12345E+5`
+  pattern: 7
+    capture: 5 - variable, start: (13, 2), end: (13, 5), text: `f10`
+  pattern: 8
+    capture: 6 - operator, start: (13, 6), end: (13, 7), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (13, 8), end: (13, 12), text: `1_5.`
+  pattern: 7
+    capture: 5 - variable, start: (14, 2), end: (14, 5), text: `f11`
+  pattern: 8
+    capture: 6 - operator, start: (14, 6), end: (14, 7), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (14, 8), end: (14, 17), text: `0.15e+0_2`
+  pattern: 7
+    capture: 5 - variable, start: (15, 2), end: (15, 5), text: `f12`
+  pattern: 8
+    capture: 6 - operator, start: (15, 6), end: (15, 7), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (15, 8), end: (15, 14), text: `0x1p-2`
+  pattern: 7
+    capture: 5 - variable, start: (16, 2), end: (16, 5), text: `f13`
+  pattern: 8
+    capture: 6 - operator, start: (16, 6), end: (16, 7), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (16, 8), end: (16, 15), text: `0x2.p10`
+  pattern: 7
+    capture: 5 - variable, start: (17, 2), end: (17, 5), text: `f14`
+  pattern: 8
+    capture: 6 - operator, start: (17, 6), end: (17, 7), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (17, 8), end: (17, 16), text: `0x1.Fp+0`
+  pattern: 7
+    capture: 5 - variable, start: (18, 2), end: (18, 5), text: `f15`
+  pattern: 8
+    capture: 6 - operator, start: (18, 6), end: (18, 7), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (18, 8), end: (18, 15), text: `0X.8p-0`
+  pattern: 7
+    capture: 5 - variable, start: (19, 2), end: (19, 5), text: `f16`
+  pattern: 8
+    capture: 6 - operator, start: (19, 6), end: (19, 7), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (19, 8), end: (19, 19), text: `0X_1FFFP-16`
+corpus/literals.txt/002
+  pattern: 9
+    capture: 7 - keyword, start: (1, 0), end: (1, 7), text: `package`
+  pattern: 9
+    capture: 7 - keyword, start: (3, 0), end: (3, 5), text: `const`
+  pattern: 7
+    capture: 5 - variable, start: (4, 2), end: (4, 3), text: `a`
+  pattern: 8
+    capture: 6 - operator, start: (4, 4), end: (4, 5), text: `=`
+  pattern: 10
+    capture: 8 - string, start: (4, 6), end: (4, 9), text: `'0'`
+  pattern: 7
+    capture: 5 - variable, start: (5, 2), end: (5, 3), text: `b`
+  pattern: 8
+    capture: 6 - operator, start: (5, 4), end: (5, 5), text: `=`
+  pattern: 10
+    capture: 8 - string, start: (5, 6), end: (5, 10), text: `'\''`
+  pattern: 7
+    capture: 5 - variable, start: (6, 2), end: (6, 3), text: `c`
+  pattern: 8
+    capture: 6 - operator, start: (6, 4), end: (6, 5), text: `=`
+  pattern: 10
+    capture: 8 - string, start: (6, 6), end: (6, 10), text: `'\\'`
+  pattern: 7
+    capture: 5 - variable, start: (7, 2), end: (7, 3), text: `c`
+  pattern: 8
+    capture: 6 - operator, start: (7, 4), end: (7, 5), text: `=`
+  pattern: 10
+    capture: 8 - string, start: (7, 6), end: (7, 10), text: `'\n'`
+  pattern: 7
+    capture: 5 - variable, start: (8, 2), end: (8, 3), text: `c`
+  pattern: 8
+    capture: 6 - operator, start: (8, 4), end: (8, 5), text: `=`
+  pattern: 10
+    capture: 8 - string, start: (8, 6), end: (8, 14), text: `'\u0000'`
+  pattern: 7
+    capture: 5 - variable, start: (9, 2), end: (9, 3), text: `c`
+  pattern: 8
+    capture: 6 - operator, start: (9, 4), end: (9, 5), text: `=`
+  pattern: 10
+    capture: 8 - string, start: (9, 6), end: (9, 18), text: `'\U01234567'`
+corpus/literals.txt/003
+  pattern: 9
+    capture: 7 - keyword, start: (1, 0), end: (1, 7), text: `package`
+  pattern: 9
+    capture: 7 - keyword, start: (3, 0), end: (3, 5), text: `const`
+  pattern: 7
+    capture: 5 - variable, start: (4, 2), end: (4, 3), text: `a`
+  pattern: 8
+    capture: 6 - operator, start: (4, 4), end: (4, 5), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (4, 6), end: (4, 8), text: `0i`
+  pattern: 7
+    capture: 5 - variable, start: (5, 2), end: (5, 3), text: `b`
+  pattern: 8
+    capture: 6 - operator, start: (5, 4), end: (5, 5), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (5, 6), end: (5, 11), text: `0123i`
+  pattern: 7
+    capture: 5 - variable, start: (6, 2), end: (6, 3), text: `c`
+  pattern: 8
+    capture: 6 - operator, start: (6, 4), end: (6, 5), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (6, 6), end: (6, 12), text: `0o123i`
+  pattern: 7
+    capture: 5 - variable, start: (7, 2), end: (7, 3), text: `d`
+  pattern: 8
+    capture: 6 - operator, start: (7, 4), end: (7, 5), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (7, 6), end: (7, 12), text: `0xabci`
+  pattern: 7
+    capture: 5 - variable, start: (8, 2), end: (8, 3), text: `e`
+  pattern: 8
+    capture: 6 - operator, start: (8, 4), end: (8, 5), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (8, 6), end: (8, 9), text: `0.i`
+  pattern: 7
+    capture: 5 - variable, start: (9, 2), end: (9, 3), text: `f`
+  pattern: 8
+    capture: 6 - operator, start: (9, 4), end: (9, 5), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (9, 6), end: (9, 14), text: `2.71828i`
+  pattern: 7
+    capture: 5 - variable, start: (10, 2), end: (10, 3), text: `g`
+  pattern: 8
+    capture: 6 - operator, start: (10, 4), end: (10, 5), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (10, 6), end: (10, 12), text: `1.e+0i`
+  pattern: 7
+    capture: 5 - variable, start: (11, 2), end: (11, 3), text: `h`
+  pattern: 8
+    capture: 6 - operator, start: (11, 4), end: (11, 5), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (11, 6), end: (11, 18), text: `6.67428e-11i`
+  pattern: 7
+    capture: 5 - variable, start: (12, 2), end: (12, 3), text: `i`
+  pattern: 8
+    capture: 6 - operator, start: (12, 4), end: (12, 5), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (12, 6), end: (12, 10), text: `1E6i`
+  pattern: 7
+    capture: 5 - variable, start: (13, 2), end: (13, 3), text: `j`
+  pattern: 8
+    capture: 6 - operator, start: (13, 4), end: (13, 5), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (13, 6), end: (13, 10), text: `.25i`
+  pattern: 7
+    capture: 5 - variable, start: (14, 2), end: (14, 3), text: `k`
+  pattern: 8
+    capture: 6 - operator, start: (14, 4), end: (14, 5), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (14, 6), end: (14, 16), text: `.12345E+5i`
+  pattern: 7
+    capture: 5 - variable, start: (15, 2), end: (15, 3), text: `l`
+  pattern: 8
+    capture: 6 - operator, start: (15, 4), end: (15, 5), text: `=`
+  pattern: 12
+    capture: 10 - number, start: (15, 6), end: (15, 13), text: `0x1p-2i`
+corpus/literals.txt/004
+  pattern: 9
+    capture: 7 - keyword, start: (1, 0), end: (1, 7), text: `package`
+  pattern: 9
+    capture: 7 - keyword, start: (3, 0), end: (3, 5), text: `const`
+  pattern: 7
+    capture: 5 - variable, start: (4, 2), end: (4, 3), text: `a`
+  pattern: 8
+    capture: 6 - operator, start: (4, 4), end: (4, 5), text: `=`
+  pattern: 10
+    capture: 8 - string, start: (4, 6), end: (4, 9), text: `"0"`
+  pattern: 7
+    capture: 5 - variable, start: (5, 2), end: (5, 3), text: `b`
+  pattern: 8
+    capture: 6 - operator, start: (5, 4), end: (5, 5), text: `=`
+  pattern: 10
+    capture: 8 - string, start: (5, 6), end: (5, 12), text: `"`\"`"`
+  pattern: 11
+    capture: 9 - escape, start: (5, 8), end: (5, 10), text: `\"`
+  pattern: 7
+    capture: 5 - variable, start: (6, 2), end: (6, 3), text: `c`
+  pattern: 8
+    capture: 6 - operator, start: (6, 4), end: (6, 5), text: `=`
+  pattern: 10
+    capture: 8 - string, start: (6, 6), end: (6, 12), text: `"\x0c"`
+  pattern: 11
+    capture: 9 - escape, start: (6, 7), end: (6, 11), text: `\x0c`
+  pattern: 7
+    capture: 5 - variable, start: (7, 2), end: (7, 3), text: `d`
+  pattern: 8
+    capture: 6 - operator, start: (7, 4), end: (7, 5), text: `=`
+  pattern: 10
+    capture: 8 - string, start: (7, 6), end: (7, 10), text: ``//``
+  pattern: 7
+    capture: 5 - variable, start: (8, 2), end: (8, 3), text: `e`
+  pattern: 8
+    capture: 6 - operator, start: (8, 4), end: (8, 5), text: `=`
+corpus/literals.txt/005
+  pattern: 9
+    capture: 7 - keyword, start: (1, 0), end: (1, 7), text: `package`
+  pattern: 9
+    capture: 7 - keyword, start: (3, 0), end: (3, 5), text: `const`
+  pattern: 7
+    capture: 5 - variable, start: (3, 6), end: (3, 8), text: `s1`
+  pattern: 8
+    capture: 6 - operator, start: (3, 9), end: (3, 10), text: `=`
+  pattern: 5
+    capture: 3 - type, start: (3, 13), end: (3, 19), text: `string`
+  pattern: 9
+    capture: 7 - keyword, start: (5, 0), end: (5, 5), text: `const`
+  pattern: 7
+    capture: 5 - variable, start: (5, 6), end: (5, 8), text: `s2`
+  pattern: 8
+    capture: 6 - operator, start: (5, 9), end: (5, 10), text: `=`
+  pattern: 5
+    capture: 3 - type, start: (5, 13), end: (5, 19), text: `string`
+  pattern: 10
+    capture: 8 - string, start: (5, 20), end: (5, 24), text: `"hi"`
+  pattern: 9
+    capture: 7 - keyword, start: (7, 0), end: (7, 5), text: `const`
+  pattern: 7
+    capture: 5 - variable, start: (7, 6), end: (7, 8), text: `s3`
+  pattern: 8
+    capture: 6 - operator, start: (7, 9), end: (7, 10), text: `=`
+  pattern: 5
+    capture: 3 - type, start: (7, 13), end: (7, 19), text: `string`
+  pattern: 10
+    capture: 8 - string, start: (8, 2), end: (8, 6), text: `"hi"`
+  pattern: 10
+    capture: 8 - string, start: (9, 2), end: (9, 9), text: `"hello"`
+corpus/literals.txt/006
+  pattern: 9
+    capture: 7 - keyword, start: (1, 0), end: (1, 7), text: `package`
+  pattern: 9
+    capture: 7 - keyword, start: (3, 0), end: (3, 5), text: `const`
+  pattern: 7
+    capture: 5 - variable, start: (3, 6), end: (3, 8), text: `a1`
+  pattern: 8
+    capture: 6 - operator, start: (3, 9), end: (3, 10), text: `=`
+  pattern: 8
+    capture: 6 - operator, start: (3, 12), end: (3, 15), text: `...`
+  pattern: 5
+    capture: 3 - type, start: (3, 16), end: (3, 19), text: `int`
+  pattern: 12
+    capture: 10 - number, start: (3, 20), end: (3, 21), text: `1`
+  pattern: 12
+    capture: 10 - number, start: (3, 23), end: (3, 24), text: `2`
+  pattern: 12
+    capture: 10 - number, start: (3, 26), end: (3, 27), text: `3`
+corpus/literals.txt/007
+  pattern: 9
+    capture: 7 - keyword, start: (1, 0), end: (1, 7), text: `package`
+  pattern: 9
+    capture: 7 - keyword, start: (3, 0), end: (3, 5), text: `const`
+  pattern: 7
+    capture: 5 - variable, start: (3, 6), end: (3, 7), text: `s`
+  pattern: 8
+    capture: 6 - operator, start: (3, 8), end: (3, 9), text: `=`
+  pattern: 9
+    capture: 7 - keyword, start: (3, 10), end: (3, 13), text: `map`
+  pattern: 5
+    capture: 3 - type, start: (3, 14), end: (3, 20), text: `string`
+  pattern: 5
+    capture: 3 - type, start: (3, 21), end: (3, 27), text: `string`
+  pattern: 10
+    capture: 8 - string, start: (4, 2), end: (4, 6), text: `"hi"`
+  pattern: 10
+    capture: 8 - string, start: (4, 8), end: (4, 15), text: `"hello"`
+  pattern: 10
+    capture: 8 - string, start: (5, 2), end: (5, 7), text: `"bye"`
+  pattern: 10
+    capture: 8 - string, start: (5, 9), end: (5, 18), text: `"goodbye"`
+corpus/literals.txt/008
+  pattern: 9
+    capture: 7 - keyword, start: (1, 0), end: (1, 7), text: `package`
+  pattern: 9
+    capture: 7 - keyword, start: (3, 0), end: (3, 5), text: `const`
+  pattern: 7
+    capture: 5 - variable, start: (3, 6), end: (3, 8), text: `s1`
+  pattern: 8
+    capture: 6 - operator, start: (3, 9), end: (3, 10), text: `=`
+  pattern: 5
+    capture: 3 - type, start: (3, 11), end: (3, 17), text: `Person`
+  pattern: 7
+    capture: 5 - variable, start: (4, 2), end: (4, 6), text: `name`
+  pattern: 10
+    capture: 8 - string, start: (4, 8), end: (4, 15), text: `"Frank"`
+  pattern: 7
+    capture: 5 - variable, start: (5, 2), end: (5, 5), text: `Age`
+  pattern: 10
+    capture: 8 - string, start: (5, 7), end: (5, 17), text: `"5 months"`
+  pattern: 9
+    capture: 7 - keyword, start: (8, 0), end: (8, 5), text: `const`
+  pattern: 7
+    capture: 5 - variable, start: (8, 6), end: (8, 8), text: `s2`
+  pattern: 8
+    capture: 6 - operator, start: (8, 9), end: (8, 10), text: `=`
+  pattern: 9
+    capture: 7 - keyword, start: (8, 11), end: (8, 17), text: `struct`
+  pattern: 6
+    capture: 4 - property, start: (8, 18), end: (8, 19), text: `i`
+  pattern: 5
+    capture: 3 - type, start: (8, 20), end: (8, 23), text: `int`
+  pattern: 7
+    capture: 5 - variable, start: (8, 26), end: (8, 27), text: `i`
+  pattern: 12
+    capture: 10 - number, start: (8, 29), end: (8, 30), text: `5`
+  pattern: 9
+    capture: 7 - keyword, start: (10, 0), end: (10, 5), text: `const`
+  pattern: 7
+    capture: 5 - variable, start: (10, 6), end: (10, 8), text: `s3`
+  pattern: 8
+    capture: 6 - operator, start: (10, 9), end: (10, 10), text: `=`
+  pattern: 5
+    capture: 3 - type, start: (10, 16), end: (10, 20), text: `Time`
+  pattern: 9
+    capture: 7 - keyword, start: (12, 0), end: (12, 5), text: `const`
+  pattern: 7
+    capture: 5 - variable, start: (12, 6), end: (12, 8), text: `g1`
+  pattern: 8
+    capture: 6 - operator, start: (12, 9), end: (12, 10), text: `=`
+  pattern: 5
+    capture: 3 - type, start: (12, 11), end: (12, 14), text: `Foo`
+  pattern: 5
+    capture: 3 - type, start: (12, 15), end: (12, 22), text: `float64`
+  pattern: 5
+    capture: 3 - type, start: (12, 24), end: (12, 27), text: `Bar`
+  pattern: 5
+    capture: 3 - type, start: (12, 28), end: (12, 31), text: `int`
+corpus/literals.txt/009
+  pattern: 9
+    capture: 7 - keyword, start: (1, 0), end: (1, 7), text: `package`
+  pattern: 9
+    capture: 7 - keyword, start: (3, 0), end: (3, 5), text: `const`
+  pattern: 7
+    capture: 5 - variable, start: (3, 6), end: (3, 8), text: `s1`
+  pattern: 8
+    capture: 6 - operator, start: (3, 9), end: (3, 10), text: `=`
+  pattern: 9
+    capture: 7 - keyword, start: (3, 11), end: (3, 15), text: `func`
+  pattern: 7
+    capture: 5 - variable, start: (3, 16), end: (3, 17), text: `s`
+  pattern: 5
+    capture: 3 - type, start: (3, 18), end: (3, 24), text: `string`
+  pattern: 5
+    capture: 3 - type, start: (3, 27), end: (3, 30), text: `int`
+  pattern: 5
+    capture: 3 - type, start: (3, 32), end: (3, 35), text: `int`
+  pattern: 9
+    capture: 7 - keyword, start: (4, 2), end: (4, 8), text: `return`
+  pattern: 12
+    capture: 10 - number, start: (4, 9), end: (4, 10), text: `1`
+  pattern: 12
+    capture: 10 - number, start: (4, 12), end: (4, 13), text: `2`

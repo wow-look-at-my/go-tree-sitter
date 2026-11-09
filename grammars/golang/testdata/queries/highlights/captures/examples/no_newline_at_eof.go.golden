@@ -1,0 +1,25 @@
+examples/no_newline_at_eof.go
+    pattern: 14, capture: 12 - comment, start: (0, 0), end: (0, 6), text: `// run`
+    pattern: 14, capture: 12 - comment, start: (2, 0), end: (2, 54), text: `// Copyright 2015 The Go Authors. All rights reserved.`
+    pattern: 14, capture: 12 - comment, start: (3, 0), end: (3, 53), text: `// Use of this source code is governed by a BSD-style`
+    pattern: 14, capture: 12 - comment, start: (4, 0), end: (4, 49), text: `// license that can be found in the LICENSE file.`
+    pattern:  9, capture: 7 - keyword, start: (6, 0), end: (6, 7), text: `package`
+    pattern:  9, capture: 7 - keyword, start: (8, 0), end: (8, 4), text: `func`
+    pattern:  3, capture: 0 - function, start: (8, 5), end: (8, 9), text: `main`
+    pattern:  7, capture: 5 - variable, start: (8, 5), end: (8, 9), text: `main`
+    pattern:  7, capture: 5 - variable, start: (9, 1), end: (9, 2), text: `x`
+    pattern:  8, capture: 6 - operator, start: (9, 3), end: (9, 5), text: `:=`
+    pattern: 12, capture: 10 - number, start: (9, 6), end: (9, 7), text: `0`
+    pattern:  9, capture: 7 - keyword, start: (10, 1), end: (10, 5), text: `func`
+    pattern:  7, capture: 5 - variable, start: (11, 2), end: (11, 3), text: `x`
+    pattern:  8, capture: 6 - operator, start: (11, 4), end: (11, 5), text: `=`
+    pattern: 12, capture: 10 - number, start: (11, 6), end: (11, 7), text: `1`
+    pattern:  9, capture: 7 - keyword, start: (13, 1), end: (13, 5), text: `func`
+    pattern:  9, capture: 7 - keyword, start: (14, 2), end: (14, 4), text: `if`
+    pattern:  7, capture: 5 - variable, start: (14, 5), end: (14, 6), text: `x`
+    pattern:  8, capture: 6 - operator, start: (14, 7), end: (14, 9), text: `!=`
+    pattern: 12, capture: 10 - number, start: (14, 10), end: (14, 11), text: `1`
+    pattern:  0, capture: 0 - function, start: (15, 3), end: (15, 8), text: `panic`
+    pattern:  1, capture: 1 - function.builtin, start: (15, 3), end: (15, 8), text: `panic`
+    pattern:  7, capture: 5 - variable, start: (15, 3), end: (15, 8), text: `panic`
+    pattern: 10, capture: 8 - string, start: (15, 9), end: (15, 17), text: `"x != 1"`

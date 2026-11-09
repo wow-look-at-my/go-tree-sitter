@@ -1,0 +1,227 @@
+samples/sample.go.txt
+  pattern: 9
+    capture: 7 - keyword, start: (0, 0), end: (0, 7), text: `package`
+  pattern: 14
+    capture: 12 - comment, start: (2, 0), end: (2, 18), text: `// A line comment.`
+  pattern: 14
+    capture: comment, start: (4, 0), end: (5, 31)
+  pattern: 9
+    capture: 7 - keyword, start: (7, 0), end: (7, 6), text: `import`
+  pattern: 10
+    capture: 8 - string, start: (8, 1), end: (8, 6), text: `"fmt"`
+  pattern: 10
+    capture: 8 - string, start: (9, 1), end: (9, 10), text: `"strings"`
+  pattern: 9
+    capture: 7 - keyword, start: (12, 0), end: (12, 5), text: `const`
+  pattern: 7
+    capture: 5 - variable, start: (12, 6), end: (12, 9), text: `raw`
+  pattern: 8
+    capture: 6 - operator, start: (12, 10), end: (12, 11), text: `=`
+  pattern: 10
+    capture: string, start: (12, 12), end: (13, 42)
+  pattern: 9
+    capture: 7 - keyword, start: (15, 0), end: (15, 5), text: `const`
+  pattern: 7
+    capture: 5 - variable, start: (15, 6), end: (15, 17), text: `interpreted`
+  pattern: 8
+    capture: 6 - operator, start: (15, 18), end: (15, 19), text: `=`
+  pattern: 10
+    capture: 8 - string, start: (15, 20), end: (15, 63), text: `"an escape \t and a quote \" and a rune é"`
+  pattern: 11
+    capture: 9 - escape, start: (15, 31), end: (15, 33), text: `\t`
+  pattern: 11
+    capture: 9 - escape, start: (15, 46), end: (15, 48), text: `\"`
+  pattern: 9
+    capture: 7 - keyword, start: (17, 0), end: (17, 4), text: `type`
+  pattern: 5
+    capture: 3 - type, start: (17, 5), end: (17, 10), text: `point`
+  pattern: 9
+    capture: 7 - keyword, start: (17, 11), end: (17, 17), text: `struct`
+  pattern: 6
+    capture: 4 - property, start: (18, 1), end: (18, 2), text: `x`
+  pattern: 6
+    capture: 4 - property, start: (18, 4), end: (18, 5), text: `y`
+  pattern: 5
+    capture: 3 - type, start: (18, 6), end: (18, 9), text: `int`
+  pattern: 9
+    capture: 7 - keyword, start: (21, 0), end: (21, 4), text: `func`
+  pattern: 7
+    capture: 5 - variable, start: (21, 6), end: (21, 7), text: `p`
+  pattern: 5
+    capture: 3 - type, start: (21, 8), end: (21, 13), text: `point`
+  pattern: 4
+    capture: 2 - function.method, start: (21, 15), end: (21, 21), text: `String`
+  pattern: 6
+    capture: 4 - property, start: (21, 15), end: (21, 21), text: `String`
+  pattern: 5
+    capture: 3 - type, start: (21, 24), end: (21, 30), text: `string`
+  pattern: 9
+    capture: 7 - keyword, start: (22, 1), end: (22, 7), text: `return`
+  pattern: 7
+    capture: 5 - variable, start: (22, 8), end: (22, 11), text: `fmt`
+  pattern: 2
+    capture: 2 - function.method, start: (22, 12), end: (22, 19), text: `Sprintf`
+  pattern: 6
+    capture: 4 - property, start: (22, 12), end: (22, 19), text: `Sprintf`
+  pattern: 10
+    capture: 8 - string, start: (22, 20), end: (22, 27), text: `"%d,%d"`
+  pattern: 7
+    capture: 5 - variable, start: (22, 29), end: (22, 30), text: `p`
+  pattern: 6
+    capture: 4 - property, start: (22, 31), end: (22, 32), text: `x`
+  pattern: 7
+    capture: 5 - variable, start: (22, 34), end: (22, 35), text: `p`
+  pattern: 6
+    capture: 4 - property, start: (22, 36), end: (22, 37), text: `y`
+  pattern: 9
+    capture: 7 - keyword, start: (25, 0), end: (25, 4), text: `func`
+  pattern: 3
+    capture: 0 - function, start: (25, 5), end: (25, 9), text: `main`
+  pattern: 7
+    capture: 5 - variable, start: (25, 5), end: (25, 9), text: `main`
+  pattern: 7
+    capture: 5 - variable, start: (26, 1), end: (26, 7), text: `values`
+  pattern: 8
+    capture: 6 - operator, start: (26, 8), end: (26, 10), text: `:=`
+  pattern: 5
+    capture: 3 - type, start: (26, 13), end: (26, 18), text: `point`
+  pattern: 12
+    capture: 10 - number, start: (26, 20), end: (26, 21), text: `1`
+  pattern: 12
+    capture: 10 - number, start: (26, 23), end: (26, 24), text: `2`
+  pattern: 12
+    capture: 10 - number, start: (26, 28), end: (26, 29), text: `3`
+  pattern: 12
+    capture: 10 - number, start: (26, 31), end: (26, 32), text: `4`
+  pattern: 9
+    capture: 7 - keyword, start: (27, 1), end: (27, 4), text: `var`
+  pattern: 7
+    capture: 5 - variable, start: (27, 5), end: (27, 10), text: `parts`
+  pattern: 5
+    capture: 3 - type, start: (27, 13), end: (27, 19), text: `string`
+  pattern: 9
+    capture: 7 - keyword, start: (28, 1), end: (28, 4), text: `for`
+  pattern: 7
+    capture: 5 - variable, start: (28, 5), end: (28, 6), text: `_`
+  pattern: 7
+    capture: 5 - variable, start: (28, 8), end: (28, 9), text: `v`
+  pattern: 8
+    capture: 6 - operator, start: (28, 10), end: (28, 12), text: `:=`
+  pattern: 9
+    capture: 7 - keyword, start: (28, 13), end: (28, 18), text: `range`
+  pattern: 7
+    capture: 5 - variable, start: (28, 19), end: (28, 25), text: `values`
+  pattern: 7
+    capture: 5 - variable, start: (29, 2), end: (29, 7), text: `parts`
+  pattern: 8
+    capture: 6 - operator, start: (29, 8), end: (29, 9), text: `=`
+  pattern: 0
+    capture: 0 - function, start: (29, 10), end: (29, 16), text: `append`
+  pattern: 1
+    capture: 1 - function.builtin, start: (29, 10), end: (29, 16), text: `append`
+  pattern: 7
+    capture: 5 - variable, start: (29, 10), end: (29, 16), text: `append`
+  pattern: 7
+    capture: 5 - variable, start: (29, 17), end: (29, 22), text: `parts`
+  pattern: 7
+    capture: 5 - variable, start: (29, 24), end: (29, 25), text: `v`
+  pattern: 2
+    capture: 2 - function.method, start: (29, 26), end: (29, 32), text: `String`
+  pattern: 6
+    capture: 4 - property, start: (29, 26), end: (29, 32), text: `String`
+  pattern: 9
+    capture: 7 - keyword, start: (31, 1), end: (31, 7), text: `switch`
+  pattern: 7
+    capture: 5 - variable, start: (31, 8), end: (31, 9), text: `n`
+  pattern: 8
+    capture: 6 - operator, start: (31, 10), end: (31, 12), text: `:=`
+  pattern: 0
+    capture: 0 - function, start: (31, 13), end: (31, 16), text: `len`
+  pattern: 1
+    capture: 1 - function.builtin, start: (31, 13), end: (31, 16), text: `len`
+  pattern: 7
+    capture: 5 - variable, start: (31, 13), end: (31, 16), text: `len`
+  pattern: 7
+    capture: 5 - variable, start: (31, 17), end: (31, 22), text: `parts`
+  pattern: 9
+    capture: 7 - keyword, start: (32, 1), end: (32, 5), text: `case`
+  pattern: 7
+    capture: 5 - variable, start: (32, 6), end: (32, 7), text: `n`
+  pattern: 8
+    capture: 6 - operator, start: (32, 8), end: (32, 9), text: `>`
+  pattern: 12
+    capture: 10 - number, start: (32, 10), end: (32, 11), text: `2`
+  pattern: 7
+    capture: 5 - variable, start: (33, 2), end: (33, 5), text: `fmt`
+  pattern: 2
+    capture: 2 - function.method, start: (33, 6), end: (33, 13), text: `Println`
+  pattern: 6
+    capture: 4 - property, start: (33, 6), end: (33, 13), text: `Println`
+  pattern: 7
+    capture: 5 - variable, start: (33, 14), end: (33, 21), text: `strings`
+  pattern: 2
+    capture: 2 - function.method, start: (33, 22), end: (33, 26), text: `Join`
+  pattern: 6
+    capture: 4 - property, start: (33, 22), end: (33, 26), text: `Join`
+  pattern: 7
+    capture: 5 - variable, start: (33, 27), end: (33, 32), text: `parts`
+  pattern: 10
+    capture: 8 - string, start: (33, 34), end: (33, 37), text: `";"`
+  pattern: 9
+    capture: 7 - keyword, start: (34, 1), end: (34, 8), text: `default`
+  pattern: 7
+    capture: 5 - variable, start: (35, 2), end: (35, 5), text: `fmt`
+  pattern: 2
+    capture: 2 - function.method, start: (35, 6), end: (35, 13), text: `Println`
+  pattern: 6
+    capture: 4 - property, start: (35, 6), end: (35, 13), text: `Println`
+  pattern: 7
+    capture: 5 - variable, start: (35, 14), end: (35, 17), text: `raw`
+  pattern: 7
+    capture: 5 - variable, start: (35, 19), end: (35, 30), text: `interpreted`
+  pattern: 10
+    capture: 8 - string, start: (35, 32), end: (35, 35), text: `'x'`
+  pattern: 12
+    capture: 10 - number, start: (35, 37), end: (35, 41), text: `0x1f`
+  pattern: 12
+    capture: 10 - number, start: (35, 43), end: (35, 46), text: `1e9`
+  pattern: 9
+    capture: 7 - keyword, start: (37, 1), end: (37, 3), text: `go`
+  pattern: 9
+    capture: 7 - keyword, start: (37, 4), end: (37, 8), text: `func`
+  pattern: 7
+    capture: 5 - variable, start: (37, 13), end: (37, 14), text: `_`
+  pattern: 8
+    capture: 6 - operator, start: (37, 15), end: (37, 16), text: `=`
+  pattern: 7
+    capture: 5 - variable, start: (37, 17), end: (37, 20), text: `raw`
+  pattern: 9
+    capture: 7 - keyword, start: (38, 1), end: (38, 6), text: `defer`
+  pattern: 9
+    capture: 7 - keyword, start: (38, 7), end: (38, 11), text: `func`
+  pattern: 9
+    capture: 7 - keyword, start: (39, 2), end: (39, 4), text: `if`
+  pattern: 7
+    capture: 5 - variable, start: (39, 5), end: (39, 6), text: `r`
+  pattern: 8
+    capture: 6 - operator, start: (39, 7), end: (39, 9), text: `:=`
+  pattern: 0
+    capture: 0 - function, start: (39, 10), end: (39, 17), text: `recover`
+  pattern: 1
+    capture: 1 - function.builtin, start: (39, 10), end: (39, 17), text: `recover`
+  pattern: 7
+    capture: 5 - variable, start: (39, 10), end: (39, 17), text: `recover`
+  pattern: 7
+    capture: 5 - variable, start: (39, 21), end: (39, 22), text: `r`
+  pattern: 8
+    capture: 6 - operator, start: (39, 23), end: (39, 25), text: `!=`
+  pattern: 13
+    capture: 11 - constant.builtin, start: (39, 26), end: (39, 29), text: `nil`
+  pattern: 0
+    capture: 0 - function, start: (40, 3), end: (40, 8), text: `panic`
+  pattern: 1
+    capture: 1 - function.builtin, start: (40, 3), end: (40, 8), text: `panic`
+  pattern: 7
+    capture: 5 - variable, start: (40, 3), end: (40, 8), text: `panic`
+  pattern: 7
+    capture: 5 - variable, start: (40, 9), end: (40, 10), text: `r`

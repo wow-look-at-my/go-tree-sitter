@@ -1,0 +1,1 @@
+Query error at 1:1. Invalid predicate: Wrong number of arguments to #eq? predicate. Expected 2, got 1.

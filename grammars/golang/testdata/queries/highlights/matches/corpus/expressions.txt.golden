@@ -1,0 +1,397 @@
+corpus/expressions.txt/000
+  pattern: 9
+    capture: 7 - keyword, start: (1, 0), end: (1, 7), text: `package`
+  pattern: 9
+    capture: 7 - keyword, start: (3, 0), end: (3, 4), text: `func`
+  pattern: 3
+    capture: 0 - function, start: (3, 5), end: (3, 9), text: `main`
+  pattern: 7
+    capture: 5 - variable, start: (3, 5), end: (3, 9), text: `main`
+  pattern: 0
+    capture: 0 - function, start: (4, 2), end: (4, 3), text: `a`
+  pattern: 7
+    capture: 5 - variable, start: (4, 2), end: (4, 3), text: `a`
+  pattern: 7
+    capture: 5 - variable, start: (4, 4), end: (4, 5), text: `b`
+  pattern: 7
+    capture: 5 - variable, start: (4, 7), end: (4, 8), text: `c`
+  pattern: 8
+    capture: 6 - operator, start: (4, 8), end: (4, 11), text: `...`
+  pattern: 0
+    capture: 0 - function, start: (6, 2), end: (6, 3), text: `a`
+  pattern: 7
+    capture: 5 - variable, start: (6, 2), end: (6, 3), text: `a`
+  pattern: 7
+    capture: 5 - variable, start: (7, 4), end: (7, 5), text: `b`
+  pattern: 7
+    capture: 5 - variable, start: (8, 4), end: (8, 5), text: `c`
+  pattern: 0
+    capture: 0 - function, start: (11, 2), end: (11, 3), text: `a`
+  pattern: 7
+    capture: 5 - variable, start: (11, 2), end: (11, 3), text: `a`
+  pattern: 7
+    capture: 5 - variable, start: (12, 4), end: (12, 5), text: `b`
+  pattern: 7
+    capture: 5 - variable, start: (13, 4), end: (13, 5), text: `c`
+  pattern: 8
+    capture: 6 - operator, start: (13, 5), end: (13, 8), text: `...`
+corpus/expressions.txt/001
+  pattern: 9
+    capture: 7 - keyword, start: (1, 0), end: (1, 7), text: `package`
+  pattern: 9
+    capture: 7 - keyword, start: (3, 0), end: (3, 4), text: `func`
+  pattern: 3
+    capture: 0 - function, start: (3, 5), end: (3, 9), text: `main`
+  pattern: 7
+    capture: 5 - variable, start: (3, 5), end: (3, 9), text: `main`
+  pattern: 0
+    capture: 0 - function, start: (4, 2), end: (4, 3), text: `a`
+  pattern: 7
+    capture: 5 - variable, start: (4, 2), end: (4, 3), text: `a`
+  pattern: 0
+    capture: 0 - function, start: (4, 4), end: (4, 5), text: `b`
+  pattern: 7
+    capture: 5 - variable, start: (4, 4), end: (4, 5), text: `b`
+  pattern: 0
+    capture: 0 - function, start: (4, 6), end: (4, 7), text: `c`
+  pattern: 7
+    capture: 5 - variable, start: (4, 6), end: (4, 7), text: `c`
+  pattern: 7
+    capture: 5 - variable, start: (4, 8), end: (4, 9), text: `d`
+corpus/expressions.txt/002
+  pattern: 9
+    capture: 7 - keyword, start: (1, 0), end: (1, 7), text: `package`
+  pattern: 9
+    capture: 7 - keyword, start: (3, 0), end: (3, 4), text: `func`
+  pattern: 3
+    capture: 0 - function, start: (3, 5), end: (3, 9), text: `main`
+  pattern: 7
+    capture: 5 - variable, start: (3, 5), end: (3, 9), text: `main`
+  pattern: 5
+    capture: 3 - type, start: (4, 2), end: (4, 3), text: `a`
+  pattern: 5
+    capture: 3 - type, start: (4, 4), end: (4, 5), text: `b`
+  pattern: 7
+    capture: 5 - variable, start: (4, 7), end: (4, 8), text: `c`
+  pattern: 5
+    capture: 3 - type, start: (5, 2), end: (5, 3), text: `a`
+  pattern: 5
+    capture: 3 - type, start: (5, 4), end: (5, 5), text: `b`
+  pattern: 5
+    capture: 3 - type, start: (5, 7), end: (5, 8), text: `c`
+  pattern: 7
+    capture: 5 - variable, start: (5, 10), end: (5, 11), text: `d`
+  pattern: 5
+    capture: 3 - type, start: (6, 2), end: (6, 3), text: `a`
+  pattern: 5
+    capture: 3 - type, start: (6, 4), end: (6, 5), text: `b`
+  pattern: 5
+    capture: 3 - type, start: (6, 6), end: (6, 7), text: `c`
+  pattern: 5
+    capture: 3 - type, start: (6, 10), end: (6, 11), text: `d`
+  pattern: 7
+    capture: 5 - variable, start: (6, 13), end: (6, 14), text: `e`
+  pattern: 7
+    capture: 5 - variable, start: (6, 15), end: (6, 16), text: `f`
+corpus/expressions.txt/003
+  pattern: 9
+    capture: 7 - keyword, start: (1, 0), end: (1, 7), text: `package`
+  pattern: 9
+    capture: 7 - keyword, start: (3, 0), end: (3, 4), text: `func`
+  pattern: 3
+    capture: 0 - function, start: (3, 5), end: (3, 9), text: `main`
+  pattern: 7
+    capture: 5 - variable, start: (3, 5), end: (3, 9), text: `main`
+  pattern: 0
+    capture: 0 - function, start: (4, 2), end: (4, 6), text: `make`
+  pattern: 1
+    capture: 1 - function.builtin, start: (4, 2), end: (4, 6), text: `make`
+  pattern: 7
+    capture: 5 - variable, start: (4, 2), end: (4, 6), text: `make`
+  pattern: 9
+    capture: 7 - keyword, start: (4, 7), end: (4, 11), text: `chan`
+  pattern: 8
+    capture: 6 - operator, start: (4, 11), end: (4, 13), text: `<-`
+  pattern: 5
+    capture: 3 - type, start: (4, 14), end: (4, 17), text: `int`
+  pattern: 14
+    capture: 12 - comment, start: (6, 2), end: (6, 56), text: `// `new` and `make` can also be used as variable names`
+  pattern: 0
+    capture: 0 - function, start: (7, 2), end: (7, 6), text: `make`
+  pattern: 1
+    capture: 1 - function.builtin, start: (7, 2), end: (7, 6), text: `make`
+  pattern: 7
+    capture: 5 - variable, start: (7, 2), end: (7, 6), text: `make`
+  pattern: 9
+    capture: 7 - keyword, start: (7, 7), end: (7, 11), text: `chan`
+  pattern: 8
+    capture: 6 - operator, start: (7, 11), end: (7, 13), text: `<-`
+  pattern: 5
+    capture: 3 - type, start: (7, 14), end: (7, 17), text: `int`
+  pattern: 7
+    capture: 5 - variable, start: (7, 20), end: (7, 23), text: `new`
+  pattern: 8
+    capture: 6 - operator, start: (7, 24), end: (7, 25), text: `-`
+  pattern: 7
+    capture: 5 - variable, start: (7, 26), end: (7, 29), text: `old`
+  pattern: 7
+    capture: 5 - variable, start: (7, 32), end: (7, 36), text: `make`
+  pattern: 6
+    capture: 4 - property, start: (7, 37), end: (7, 42), text: `stuff`
+  pattern: 0
+    capture: 0 - function, start: (9, 2), end: (9, 6), text: `make`
+  pattern: 1
+    capture: 1 - function.builtin, start: (9, 2), end: (9, 6), text: `make`
+  pattern: 7
+    capture: 5 - variable, start: (9, 2), end: (9, 6), text: `make`
+  pattern: 9
+    capture: 7 - keyword, start: (9, 7), end: (9, 11), text: `chan`
+  pattern: 8
+    capture: 6 - operator, start: (9, 11), end: (9, 13), text: `<-`
+  pattern: 5
+    capture: 3 - type, start: (9, 14), end: (9, 17), text: `int`
+  pattern: 12
+    capture: 10 - number, start: (9, 19), end: (9, 20), text: `5`
+  pattern: 12
+    capture: 10 - number, start: (9, 22), end: (9, 24), text: `10`
+  pattern: 0
+    capture: 0 - function, start: (10, 2), end: (10, 5), text: `new`
+  pattern: 1
+    capture: 1 - function.builtin, start: (10, 2), end: (10, 5), text: `new`
+  pattern: 7
+    capture: 5 - variable, start: (10, 2), end: (10, 5), text: `new`
+  pattern: 9
+    capture: 7 - keyword, start: (10, 6), end: (10, 9), text: `map`
+  pattern: 5
+    capture: 3 - type, start: (10, 10), end: (10, 16), text: `string`
+  pattern: 5
+    capture: 3 - type, start: (10, 17), end: (10, 23), text: `string`
+  pattern: 9
+    capture: 7 - keyword, start: (13, 0), end: (13, 4), text: `func`
+  pattern: 3
+    capture: 0 - function, start: (13, 5), end: (13, 13), text: `fake_new`
+  pattern: 7
+    capture: 5 - variable, start: (13, 5), end: (13, 13), text: `fake_new`
+  pattern: 7
+    capture: 5 - variable, start: (13, 14), end: (13, 17), text: `new`
+  pattern: 9
+    capture: 7 - keyword, start: (13, 18), end: (13, 22), text: `func`
+  pattern: 5
+    capture: 3 - type, start: (13, 25), end: (13, 28), text: `int`
+  pattern: 5
+    capture: 3 - type, start: (13, 30), end: (13, 33), text: `int`
+  pattern: 9
+    capture: 7 - keyword, start: (14, 2), end: (14, 8), text: `return`
+  pattern: 0
+    capture: 0 - function, start: (14, 9), end: (14, 12), text: `new`
+  pattern: 1
+    capture: 1 - function.builtin, start: (14, 9), end: (14, 12), text: `new`
+  pattern: 7
+    capture: 5 - variable, start: (14, 9), end: (14, 12), text: `new`
+corpus/expressions.txt/004
+  pattern: 9
+    capture: 7 - keyword, start: (1, 0), end: (1, 7), text: `package`
+  pattern: 9
+    capture: 7 - keyword, start: (3, 0), end: (3, 4), text: `func`
+  pattern: 3
+    capture: 0 - function, start: (3, 5), end: (3, 9), text: `main`
+  pattern: 7
+    capture: 5 - variable, start: (3, 5), end: (3, 9), text: `main`
+  pattern: 7
+    capture: 5 - variable, start: (4, 2), end: (4, 3), text: `a`
+  pattern: 6
+    capture: 4 - property, start: (4, 4), end: (4, 5), text: `b`
+  pattern: 2
+    capture: 2 - function.method, start: (4, 6), end: (4, 7), text: `c`
+  pattern: 6
+    capture: 4 - property, start: (4, 6), end: (4, 7), text: `c`
+corpus/expressions.txt/005
+  pattern: 9
+    capture: 7 - keyword, start: (1, 0), end: (1, 7), text: `package`
+  pattern: 9
+    capture: 7 - keyword, start: (3, 0), end: (3, 4), text: `func`
+  pattern: 3
+    capture: 0 - function, start: (3, 5), end: (3, 9), text: `main`
+  pattern: 7
+    capture: 5 - variable, start: (3, 5), end: (3, 9), text: `main`
+  pattern: 7
+    capture: 5 - variable, start: (4, 2), end: (4, 3), text: `_`
+  pattern: 8
+    capture: 6 - operator, start: (4, 4), end: (4, 5), text: `=`
+  pattern: 7
+    capture: 5 - variable, start: (4, 6), end: (4, 7), text: `a`
+  pattern: 12
+    capture: 10 - number, start: (4, 8), end: (4, 9), text: `1`
+  pattern: 7
+    capture: 5 - variable, start: (5, 2), end: (5, 3), text: `_`
+  pattern: 8
+    capture: 6 - operator, start: (5, 4), end: (5, 5), text: `=`
+  pattern: 7
+    capture: 5 - variable, start: (5, 6), end: (5, 7), text: `b`
+  pattern: 7
+    capture: 5 - variable, start: (6, 2), end: (6, 3), text: `_`
+  pattern: 8
+    capture: 6 - operator, start: (6, 4), end: (6, 5), text: `=`
+  pattern: 7
+    capture: 5 - variable, start: (6, 6), end: (6, 7), text: `c`
+  pattern: 12
+    capture: 10 - number, start: (6, 8), end: (6, 9), text: `1`
+  pattern: 7
+    capture: 5 - variable, start: (7, 2), end: (7, 3), text: `_`
+  pattern: 8
+    capture: 6 - operator, start: (7, 4), end: (7, 5), text: `=`
+  pattern: 7
+    capture: 5 - variable, start: (7, 6), end: (7, 7), text: `d`
+  pattern: 12
+    capture: 10 - number, start: (7, 8), end: (7, 9), text: `1`
+  pattern: 12
+    capture: 10 - number, start: (7, 10), end: (7, 11), text: `2`
+  pattern: 7
+    capture: 5 - variable, start: (8, 2), end: (8, 3), text: `_`
+  pattern: 8
+    capture: 6 - operator, start: (8, 4), end: (8, 5), text: `=`
+  pattern: 7
+    capture: 5 - variable, start: (8, 6), end: (8, 7), text: `e`
+  pattern: 12
+    capture: 10 - number, start: (8, 9), end: (8, 10), text: `2`
+  pattern: 12
+    capture: 10 - number, start: (8, 11), end: (8, 12), text: `3`
+  pattern: 7
+    capture: 5 - variable, start: (9, 2), end: (9, 3), text: `_`
+  pattern: 8
+    capture: 6 - operator, start: (9, 4), end: (9, 5), text: `=`
+  pattern: 7
+    capture: 5 - variable, start: (9, 6), end: (9, 7), text: `f`
+  pattern: 12
+    capture: 10 - number, start: (9, 8), end: (9, 9), text: `1`
+  pattern: 12
+    capture: 10 - number, start: (9, 10), end: (9, 11), text: `2`
+  pattern: 12
+    capture: 10 - number, start: (9, 12), end: (9, 13), text: `3`
+corpus/expressions.txt/006
+  pattern: 9
+    capture: 7 - keyword, start: (1, 0), end: (1, 7), text: `package`
+  pattern: 9
+    capture: 7 - keyword, start: (3, 0), end: (3, 4), text: `func`
+  pattern: 3
+    capture: 0 - function, start: (3, 5), end: (3, 9), text: `main`
+  pattern: 7
+    capture: 5 - variable, start: (3, 5), end: (3, 9), text: `main`
+  pattern: 7
+    capture: 5 - variable, start: (4, 2), end: (4, 3), text: `_`
+  pattern: 8
+    capture: 6 - operator, start: (4, 4), end: (4, 5), text: `=`
+  pattern: 7
+    capture: 5 - variable, start: (4, 6), end: (4, 7), text: `a`
+  pattern: 5
+    capture: 3 - type, start: (4, 11), end: (4, 17), text: `Person`
+corpus/expressions.txt/007
+  pattern: 9
+    capture: 7 - keyword, start: (1, 0), end: (1, 7), text: `package`
+  pattern: 9
+    capture: 7 - keyword, start: (3, 0), end: (3, 4), text: `func`
+  pattern: 3
+    capture: 0 - function, start: (3, 5), end: (3, 9), text: `main`
+  pattern: 7
+    capture: 5 - variable, start: (3, 5), end: (3, 9), text: `main`
+  pattern: 7
+    capture: 5 - variable, start: (4, 2), end: (4, 3), text: `_`
+  pattern: 8
+    capture: 6 - operator, start: (4, 4), end: (4, 5), text: `=`
+  pattern: 5
+    capture: 3 - type, start: (4, 10), end: (4, 11), text: `b`
+  pattern: 7
+    capture: 5 - variable, start: (4, 12), end: (4, 13), text: `c`
+  pattern: 6
+    capture: 4 - property, start: (4, 14), end: (4, 15), text: `d`
+  pattern: 7
+    capture: 5 - variable, start: (5, 2), end: (5, 3), text: `_`
+  pattern: 8
+    capture: 6 - operator, start: (5, 4), end: (5, 5), text: `=`
+  pattern: 5
+    capture: 3 - type, start: (5, 11), end: (5, 12), text: `b`
+  pattern: 7
+    capture: 5 - variable, start: (5, 14), end: (5, 15), text: `c`
+  pattern: 6
+    capture: 4 - property, start: (5, 16), end: (5, 17), text: `d`
+  pattern: 7
+    capture: 5 - variable, start: (6, 2), end: (6, 3), text: `_`
+  pattern: 8
+    capture: 6 - operator, start: (6, 4), end: (6, 5), text: `=`
+  pattern: 8
+    capture: 6 - operator, start: (6, 6), end: (6, 8), text: `<-`
+  pattern: 9
+    capture: 7 - keyword, start: (6, 8), end: (6, 12), text: `chan`
+  pattern: 5
+    capture: 3 - type, start: (6, 13), end: (6, 16), text: `int`
+  pattern: 7
+    capture: 5 - variable, start: (6, 17), end: (6, 18), text: `c`
+  pattern: 14
+    capture: 12 - comment, start: (6, 20), end: (6, 49), text: `// conversion to channel type`
+  pattern: 8
+    capture: 6 - operator, start: (7, 2), end: (7, 4), text: `<-`
+  pattern: 9
+    capture: 7 - keyword, start: (7, 5), end: (7, 9), text: `chan`
+  pattern: 5
+    capture: 3 - type, start: (7, 10), end: (7, 13), text: `int`
+  pattern: 7
+    capture: 5 - variable, start: (7, 14), end: (7, 15), text: `c`
+  pattern: 14
+    capture: 12 - comment, start: (7, 18), end: (7, 38), text: `// receive statement`
+  pattern: 14
+    capture: 12 - comment, start: (8, 2), end: (8, 73), text: `// These type conversions cannot be distinguished from call expressions`
+  pattern: 0
+    capture: 0 - function, start: (9, 2), end: (9, 3), text: `T`
+  pattern: 7
+    capture: 5 - variable, start: (9, 2), end: (9, 3), text: `T`
+  pattern: 7
+    capture: 5 - variable, start: (9, 4), end: (9, 5), text: `x`
+  pattern: 8
+    capture: 6 - operator, start: (10, 3), end: (10, 4), text: `*`
+  pattern: 7
+    capture: 5 - variable, start: (10, 4), end: (10, 9), text: `Point`
+  pattern: 7
+    capture: 5 - variable, start: (10, 11), end: (10, 12), text: `p`
+  pattern: 7
+    capture: 5 - variable, start: (11, 2), end: (11, 3), text: `e`
+  pattern: 2
+    capture: 2 - function.method, start: (11, 4), end: (11, 5), text: `f`
+  pattern: 6
+    capture: 4 - property, start: (11, 4), end: (11, 5), text: `f`
+  pattern: 7
+    capture: 5 - variable, start: (11, 6), end: (11, 7), text: `g`
+  pattern: 7
+    capture: 5 - variable, start: (12, 3), end: (12, 4), text: `e`
+  pattern: 6
+    capture: 4 - property, start: (12, 5), end: (12, 6), text: `f`
+  pattern: 7
+    capture: 5 - variable, start: (12, 8), end: (12, 9), text: `g`
+corpus/expressions.txt/008
+  pattern: 9
+    capture: 7 - keyword, start: (1, 0), end: (1, 7), text: `package`
+  pattern: 9
+    capture: 7 - keyword, start: (3, 0), end: (3, 4), text: `func`
+  pattern: 3
+    capture: 0 - function, start: (3, 5), end: (3, 9), text: `main`
+  pattern: 7
+    capture: 5 - variable, start: (3, 5), end: (3, 9), text: `main`
+  pattern: 7
+    capture: 5 - variable, start: (4, 2), end: (4, 3), text: `_`
+  pattern: 8
+    capture: 6 - operator, start: (4, 4), end: (4, 5), text: `=`
+  pattern: 8
+    capture: 6 - operator, start: (4, 6), end: (4, 7), text: `!`
+  pattern: 8
+    capture: 6 - operator, start: (4, 7), end: (4, 9), text: `<-`
+  pattern: 7
+    capture: 5 - variable, start: (4, 9), end: (4, 10), text: `a`
+  pattern: 7
+    capture: 5 - variable, start: (5, 2), end: (5, 3), text: `_`
+  pattern: 8
+    capture: 6 - operator, start: (5, 4), end: (5, 5), text: `=`
+  pattern: 8
+    capture: 6 - operator, start: (5, 6), end: (5, 7), text: `*`
+  pattern: 0
+    capture: 0 - function, start: (5, 7), end: (5, 10), text: `foo`
+  pattern: 7
+    capture: 5 - variable, start: (5, 7), end: (5, 10), text: `foo`

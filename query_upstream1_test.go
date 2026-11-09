@@ -602,4 +602,3 @@ func TestQueryMatchesWithExtraChildren(t *testing.T) {
 			m(1, "comment_in_args", "// not-top-level"),
 		})
 }
-
