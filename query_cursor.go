@@ -164,6 +164,11 @@ func (c *QueryCursor) Exec(query *Query, node Node) {
 	c.workCount = 0
 	c.options = nil
 	c.state = QueryCursorState{}
+	// A null node has nothing to walk. Upstream reads through the null
+	// pointer; this halts instead, so the cursor reports no matches.
+	if node.IsNull() || query == nil {
+		c.halted = true
+	}
 }
 
 // ExecWithOptions is ts_query_cursor_exec_with_options.

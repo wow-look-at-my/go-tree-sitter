@@ -6,6 +6,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
+	"github.com/wow-look-at-my/go-containers/set"
 	ts "github.com/wow-look-at-my/go-tree-sitter"
 	"github.com/wow-look-at-my/go-tree-sitter/grammars/bash"
 	"github.com/wow-look-at-my/go-tree-sitter/grammars/clang"
@@ -192,19 +193,46 @@ var (
 // The suite is accounted for: every upstream test is ported or skipped with
 // a reason, and none is both.
 func TestUpstreamQuerySuiteIsAccountedFor(t *testing.T) {
-	seen := map[string]bool{}
+	seen := set.New[string]()
 	for _, name := range upstreamQueryTestsPorted {
-		require.False(t, seen[name], "ported twice: %s", name)
-		seen[name] = true
+		require.False(t, seen.Contains(name), "ported twice: %s", name)
+		seen.Add(name)
 	}
 	for name, reason := range upstreamQueryTestsSkipped {
-		require.False(t, seen[name], "ported and skipped: %s", name)
+		require.False(t, seen.Contains(name), "ported and skipped: %s", name)
 		require.NotEmpty(t, reason, "skipped without a reason: %s", name)
-		seen[name] = true
+		seen.Add(name)
 	}
-	require.Equal(t, upstreamQueryTestCount, len(seen),
-		"upstream has %d tests; ported %d, skipped %d",
+	require.Equal(t, upstreamQueryTestCount, seen.Len(), "upstream has %d tests; ported %d, skipped %d",
 		upstreamQueryTestCount, len(upstreamQueryTestsPorted), len(upstreamQueryTestsSkipped))
 	fmt.Printf("upstream query tests: %d ported, %d skipped\n",
 		len(upstreamQueryTestsPorted), len(upstreamQueryTestsSkipped))
+}
+
+// The helpers behave as the upstream ones do on a small JavaScript document.
+func TestQueryHelpersMatchTheUpstreamShapes(t *testing.T) {
+	language := queryLanguage(t, "javascript")
+	source := unindent(`
+		function a() {}
+		function b() {}
+	`)
+	require.Equal(t, "function a() {}\nfunction b() {}\n", source)
+
+	query, err := ts.NewQuery(language, "(function_declaration name: (identifier) @name) @fn")
+	require.NoError(t, err)
+	assertQueryMatches(t, language, query, source, []matchResult{
+		m(0, "fn", "function a() {}", "name", "a"),
+		m(0, "fn", "function b() {}", "name", "b"),
+	})
+
+	tree := parseSource(t, language, source)
+	cursor := ts.NewQueryCursor()
+	require.Equal(t, []capturePair{
+		c("fn", "function a() {}"), c("name", "a"),
+		c("fn", "function b() {}"), c("name", "b"),
+	}, collectCaptures(cursor, query, tree.RootNode(), source))
+
+	qerr := queryErrorOf(t, language, "(function_declaration (nonsense))")
+	require.Equal(t, ts.QueryErrorNodeType, qerr.Kind)
+	require.Equal(t, `"nonsense"`, qerr.Message)
 }
