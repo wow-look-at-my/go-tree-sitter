@@ -1,3 +1,5 @@
+// build.go holds the build code.
+
 package main
 
 import (

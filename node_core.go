@@ -1,3 +1,5 @@
+// node_core.go holds the node core code.
+
 package treesitter
 
 // Node is a single node in a syntax tree.

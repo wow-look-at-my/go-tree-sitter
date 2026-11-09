@@ -1,3 +1,5 @@
+// decode.go holds the decode code.
+
 package corpus
 
 import (

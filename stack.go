@@ -1,3 +1,5 @@
+// stack.go holds the stack code.
+
 package treesitter
 
 const maxIteratorCount = 64

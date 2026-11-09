@@ -1,3 +1,5 @@
+// unicode.go holds the unicode code.
+
 package treesitter
 
 const decodeError int32 = -1

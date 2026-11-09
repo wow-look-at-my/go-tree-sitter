@@ -1,3 +1,5 @@
+// clex.go holds the clex code.
+
 package main
 
 import (

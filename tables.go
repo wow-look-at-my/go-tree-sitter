@@ -1,3 +1,5 @@
+// tables.go holds the tables code.
+
 package treesitter
 
 import (

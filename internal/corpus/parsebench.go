@@ -1,3 +1,5 @@
+// parsebench.go holds the parsebench code.
+
 package corpus
 
 import (

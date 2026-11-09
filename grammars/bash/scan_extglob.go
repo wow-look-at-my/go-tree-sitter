@@ -1,3 +1,5 @@
+// scan_extglob.go holds the scan extglob code.
+
 package bash
 
 import ts "github.com/wow-look-at-my/go-tree-sitter"

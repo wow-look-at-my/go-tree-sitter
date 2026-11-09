@@ -1,3 +1,5 @@
+// scan.go holds the scan code.
+
 package bash
 
 import ts "github.com/wow-look-at-my/go-tree-sitter"

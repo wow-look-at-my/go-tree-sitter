@@ -1,3 +1,5 @@
+// emitloader.go holds the emitloader code.
+
 package main
 
 import (

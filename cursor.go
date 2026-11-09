@@ -1,3 +1,5 @@
+// cursor.go holds the cursor code.
+
 package treesitter
 
 type cursorEntry struct {

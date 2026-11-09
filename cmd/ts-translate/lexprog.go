@@ -1,3 +1,5 @@
+// lexprog.go holds the lexprog code.
+
 package main
 
 import (
