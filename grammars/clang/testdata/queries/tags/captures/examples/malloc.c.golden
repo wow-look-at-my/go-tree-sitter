@@ -1,0 +1,60 @@
+examples/malloc.c
+    pattern:  2, capture: 2 - definition.function, start: (15, 6), end: (15, 50), text: `__mmap(void *, size_t, int, int, int, off_t)`
+    pattern:  2, capture: 0 - name, start: (15, 6), end: (15, 12), text: `__mmap`
+    pattern:  2, capture: 2 - definition.function, start: (16, 4), end: (16, 28), text: `__munmap(void *, size_t)`
+    pattern:  2, capture: 0 - name, start: (16, 4), end: (16, 12), text: `__munmap`
+    pattern:  2, capture: 2 - definition.function, start: (17, 6), end: (17, 48), text: `__mremap(void *, size_t, size_t, int, ...)`
+    pattern:  2, capture: 0 - name, start: (17, 6), end: (17, 14), text: `__mremap`
+    pattern:  2, capture: 2 - definition.function, start: (18, 4), end: (18, 34), text: `__madvise(void *, size_t, int)`
+    pattern:  2, capture: 0 - name, start: (18, 4), end: (18, 13), text: `__madvise`
+    pattern:  0, capture: 1 - definition.class, start: (20, 0), end: (23, 1), text: `struct chunk {
+	size_t psize, csize;
+	struct chunk *next, *prev;
+}`
+    pattern:  0, capture: 0 - name, start: (20, 7), end: (20, 12), text: `chunk`
+    pattern:  0, capture: 1 - definition.class, start: (25, 0), end: (29, 1), text: `struct bin {
+	volatile int lock[2];
+	struct chunk *head;
+	struct chunk *tail;
+}`
+    pattern:  0, capture: 0 - name, start: (25, 7), end: (25, 10), text: `bin`
+    pattern:  2, capture: 2 - definition.function, start: (60, 19), end: (60, 41), text: `lock(volatile int *lk)`
+    pattern:  2, capture: 0 - name, start: (60, 19), end: (60, 23), text: `lock`
+    pattern:  2, capture: 2 - definition.function, start: (66, 19), end: (66, 43), text: `unlock(volatile int *lk)`
+    pattern:  2, capture: 0 - name, start: (66, 19), end: (66, 25), text: `unlock`
+    pattern:  2, capture: 2 - definition.function, start: (74, 19), end: (74, 34), text: `lock_bin(int i)`
+    pattern:  2, capture: 0 - name, start: (74, 19), end: (74, 27), text: `lock_bin`
+    pattern:  2, capture: 2 - definition.function, start: (81, 19), end: (81, 36), text: `unlock_bin(int i)`
+    pattern:  2, capture: 0 - name, start: (81, 19), end: (81, 29), text: `unlock_bin`
+    pattern:  2, capture: 2 - definition.function, start: (86, 11), end: (86, 32), text: `first_set(uint64_t x)`
+    pattern:  2, capture: 0 - name, start: (86, 11), end: (86, 20), text: `first_set`
+    pattern:  2, capture: 2 - definition.function, start: (120, 11), end: (120, 30), text: `bin_index(size_t x)`
+    pattern:  2, capture: 0 - name, start: (120, 11), end: (120, 20), text: `bin_index`
+    pattern:  2, capture: 2 - definition.function, start: (129, 11), end: (129, 33), text: `bin_index_up(size_t x)`
+    pattern:  2, capture: 0 - name, start: (129, 11), end: (129, 23), text: `bin_index_up`
+    pattern:  2, capture: 2 - definition.function, start: (139, 5), end: (139, 23), text: `__dump_heap(int x)`
+    pattern:  2, capture: 0 - name, start: (139, 5), end: (139, 16), text: `__dump_heap`
+    pattern:  2, capture: 2 - definition.function, start: (159, 6), end: (159, 29), text: `__expand_heap(size_t *)`
+    pattern:  2, capture: 0 - name, start: (159, 6), end: (159, 19), text: `__expand_heap`
+    pattern:  2, capture: 2 - definition.function, start: (161, 21), end: (161, 42), text: `expand_heap(size_t n)`
+    pattern:  2, capture: 0 - name, start: (161, 21), end: (161, 32), text: `expand_heap`
+    pattern:  2, capture: 2 - definition.function, start: (207, 11), end: (207, 33), text: `adjust_size(size_t *n)`
+    pattern:  2, capture: 0 - name, start: (207, 11), end: (207, 22), text: `adjust_size`
+    pattern:  2, capture: 2 - definition.function, start: (223, 12), end: (223, 41), text: `unbin(struct chunk *c, int i)`
+    pattern:  2, capture: 0 - name, start: (223, 12), end: (223, 17), text: `unbin`
+    pattern:  2, capture: 2 - definition.function, start: (233, 11), end: (233, 37), text: `alloc_fwd(struct chunk *c)`
+    pattern:  2, capture: 0 - name, start: (233, 11), end: (233, 20), text: `alloc_fwd`
+    pattern:  2, capture: 2 - definition.function, start: (250, 11), end: (250, 37), text: `alloc_rev(struct chunk *c)`
+    pattern:  2, capture: 0 - name, start: (250, 11), end: (250, 20), text: `alloc_rev`
+    pattern:  2, capture: 2 - definition.function, start: (271, 11), end: (271, 62), text: `pretrim(struct chunk *self, size_t n, int i, int j)`
+    pattern:  2, capture: 0 - name, start: (271, 11), end: (271, 18), text: `pretrim`
+    pattern:  2, capture: 2 - definition.function, start: (301, 12), end: (301, 46), text: `trim(struct chunk *self, size_t n)`
+    pattern:  2, capture: 0 - name, start: (301, 12), end: (301, 16), text: `trim`
+    pattern:  2, capture: 2 - definition.function, start: (319, 6), end: (319, 22), text: `malloc(size_t n)`
+    pattern:  2, capture: 0 - name, start: (319, 6), end: (319, 12), text: `malloc`
+    pattern:  2, capture: 2 - definition.function, start: (368, 6), end: (368, 25), text: `__malloc0(size_t n)`
+    pattern:  2, capture: 0 - name, start: (368, 6), end: (368, 15), text: `__malloc0`
+    pattern:  2, capture: 2 - definition.function, start: (379, 6), end: (379, 32), text: `realloc(void *p, size_t n)`
+    pattern:  2, capture: 0 - name, start: (379, 6), end: (379, 13), text: `realloc`
+    pattern:  2, capture: 2 - definition.function, start: (450, 5), end: (450, 18), text: `free(void *p)`
+    pattern:  2, capture: 0 - name, start: (450, 5), end: (450, 9), text: `free`

@@ -1,0 +1,592 @@
+examples/letter_test.go
+    pattern:  5, capture: 1 - name, start: (4, 8), end: (4, 20), text: `unicode_test`
+    pattern:  9, capture: 1 - name, start: (15, 4), end: (15, 13), text: `upperTest`
+    pattern:  4, capture: 1 - name, start: (15, 18), end: (15, 22), text: `rune`
+    pattern:  4, capture: 6 - reference.type, start: (15, 18), end: (15, 22), text: `rune`
+    pattern:  9, capture: 1 - name, start: (40, 4), end: (40, 16), text: `notupperTest`
+    pattern:  4, capture: 1 - name, start: (40, 21), end: (40, 25), text: `rune`
+    pattern:  4, capture: 6 - reference.type, start: (40, 21), end: (40, 25), text: `rune`
+    pattern:  9, capture: 1 - name, start: (54, 4), end: (54, 14), text: `letterTest`
+    pattern:  4, capture: 1 - name, start: (54, 19), end: (54, 23), text: `rune`
+    pattern:  4, capture: 6 - reference.type, start: (54, 19), end: (54, 23), text: `rune`
+    pattern:  9, capture: 1 - name, start: (90, 4), end: (90, 17), text: `notletterTest`
+    pattern:  4, capture: 1 - name, start: (90, 22), end: (90, 26), text: `rune`
+    pattern:  4, capture: 6 - reference.type, start: (90, 22), end: (90, 26), text: `rune`
+    pattern:  9, capture: 1 - name, start: (102, 4), end: (102, 13), text: `spaceTest`
+    pattern:  4, capture: 1 - name, start: (102, 18), end: (102, 22), text: `rune`
+    pattern:  4, capture: 6 - reference.type, start: (102, 18), end: (102, 22), text: `rune`
+    pattern:  3, capture: 5 - definition.type, start: (115, 5), end: (118, 1), text: `caseT struct {
+	cas     int
+	in, out rune
+}`
+    pattern:  3, capture: 1 - name, start: (115, 5), end: (115, 10), text: `caseT`
+    pattern:  4, capture: 1 - name, start: (115, 5), end: (115, 10), text: `caseT`
+    pattern:  4, capture: 6 - reference.type, start: (115, 5), end: (115, 10), text: `caseT`
+    pattern:  7, capture: 1 - name, start: (115, 5), end: (115, 10), text: `caseT`
+    pattern:  4, capture: 1 - name, start: (116, 9), end: (116, 12), text: `int`
+    pattern:  4, capture: 6 - reference.type, start: (116, 9), end: (116, 12), text: `int`
+    pattern:  4, capture: 1 - name, start: (117, 9), end: (117, 13), text: `rune`
+    pattern:  4, capture: 6 - reference.type, start: (117, 9), end: (117, 13), text: `rune`
+    pattern:  9, capture: 1 - name, start: (120, 4), end: (120, 12), text: `caseTest`
+    pattern:  4, capture: 1 - name, start: (120, 17), end: (120, 22), text: `caseT`
+    pattern:  4, capture: 6 - reference.type, start: (120, 17), end: (120, 22), text: `caseT`
+    pattern:  0, capture: 2 - definition.function, start: (236, 0), end: (252, 1), text: `func TestIsLetter(t *testing.T) {
+	for _, r := range upperTest {
+		if !IsLetter(r) {
+			t.Errorf("IsLetter(U+%04X) = false, want true", r)
+		}
+	}
+	for _, r := range letterTest {
+		if !IsLetter(r) {
+			t.Errorf("IsLetter(U+%04X) = false, want true", r)
+		}
+	}
+	for _, r := range notletterTest {
+		if IsLetter(r) {
+			t.Errorf("IsLetter(U+%04X) = true, want false", r)
+		}
+	}
+}`
+    pattern:  0, capture: 1 - name, start: (236, 5), end: (236, 17), text: `TestIsLetter`
+    pattern:  4, capture: 1 - name, start: (236, 29), end: (236, 30), text: `T`
+    pattern:  4, capture: 6 - reference.type, start: (236, 29), end: (236, 30), text: `T`
+    pattern:  2, capture: 4 - reference.call, start: (238, 6), end: (238, 17), text: `IsLetter(r)`
+    pattern:  2, capture: 1 - name, start: (238, 6), end: (238, 14), text: `IsLetter`
+    pattern:  2, capture: 4 - reference.call, start: (239, 3), end: (239, 53), text: `t.Errorf("IsLetter(U+%04X) = false, want true", r)`
+    pattern:  2, capture: 1 - name, start: (239, 5), end: (239, 11), text: `Errorf`
+    pattern:  2, capture: 4 - reference.call, start: (243, 6), end: (243, 17), text: `IsLetter(r)`
+    pattern:  2, capture: 1 - name, start: (243, 6), end: (243, 14), text: `IsLetter`
+    pattern:  2, capture: 4 - reference.call, start: (244, 3), end: (244, 53), text: `t.Errorf("IsLetter(U+%04X) = false, want true", r)`
+    pattern:  2, capture: 1 - name, start: (244, 5), end: (244, 11), text: `Errorf`
+    pattern:  2, capture: 4 - reference.call, start: (248, 5), end: (248, 16), text: `IsLetter(r)`
+    pattern:  2, capture: 1 - name, start: (248, 5), end: (248, 13), text: `IsLetter`
+    pattern:  2, capture: 4 - reference.call, start: (249, 3), end: (249, 53), text: `t.Errorf("IsLetter(U+%04X) = true, want false", r)`
+    pattern:  2, capture: 1 - name, start: (249, 5), end: (249, 11), text: `Errorf`
+    pattern:  0, capture: 2 - definition.function, start: (254, 0), end: (270, 1), text: `func TestIsUpper(t *testing.T) {
+	for _, r := range upperTest {
+		if !IsUpper(r) {
+			t.Errorf("IsUpper(U+%04X) = false, want true", r)
+		}
+	}
+	for _, r := range notupperTest {
+		if IsUpper(r) {
+			t.Errorf("IsUpper(U+%04X) = true, want false", r)
+		}
+	}
+	for _, r := range notletterTest {
+		if IsUpper(r) {
+			t.Errorf("IsUpper(U+%04X) = true, want false", r)
+		}
+	}
+}`
+    pattern:  0, capture: 1 - name, start: (254, 5), end: (254, 16), text: `TestIsUpper`
+    pattern:  4, capture: 1 - name, start: (254, 28), end: (254, 29), text: `T`
+    pattern:  4, capture: 6 - reference.type, start: (254, 28), end: (254, 29), text: `T`
+    pattern:  2, capture: 4 - reference.call, start: (256, 6), end: (256, 16), text: `IsUpper(r)`
+    pattern:  2, capture: 1 - name, start: (256, 6), end: (256, 13), text: `IsUpper`
+    pattern:  2, capture: 4 - reference.call, start: (257, 3), end: (257, 52), text: `t.Errorf("IsUpper(U+%04X) = false, want true", r)`
+    pattern:  2, capture: 1 - name, start: (257, 5), end: (257, 11), text: `Errorf`
+    pattern:  2, capture: 4 - reference.call, start: (261, 5), end: (261, 15), text: `IsUpper(r)`
+    pattern:  2, capture: 1 - name, start: (261, 5), end: (261, 12), text: `IsUpper`
+    pattern:  2, capture: 4 - reference.call, start: (262, 3), end: (262, 52), text: `t.Errorf("IsUpper(U+%04X) = true, want false", r)`
+    pattern:  2, capture: 1 - name, start: (262, 5), end: (262, 11), text: `Errorf`
+    pattern:  2, capture: 4 - reference.call, start: (266, 5), end: (266, 15), text: `IsUpper(r)`
+    pattern:  2, capture: 1 - name, start: (266, 5), end: (266, 12), text: `IsUpper`
+    pattern:  2, capture: 4 - reference.call, start: (267, 3), end: (267, 52), text: `t.Errorf("IsUpper(U+%04X) = true, want false", r)`
+    pattern:  2, capture: 1 - name, start: (267, 5), end: (267, 11), text: `Errorf`
+    pattern:  0, capture: 2 - definition.function, start: (272, 0), end: (282, 1), text: `func caseString(c int) string {
+	switch c {
+	case UpperCase:
+		return "UpperCase"
+	case LowerCase:
+		return "LowerCase"
+	case TitleCase:
+		return "TitleCase"
+	}
+	return "ErrorCase"
+}`
+    pattern:  0, capture: 1 - name, start: (272, 5), end: (272, 15), text: `caseString`
+    pattern:  4, capture: 1 - name, start: (272, 18), end: (272, 21), text: `int`
+    pattern:  4, capture: 6 - reference.type, start: (272, 18), end: (272, 21), text: `int`
+    pattern:  4, capture: 1 - name, start: (272, 23), end: (272, 29), text: `string`
+    pattern:  4, capture: 6 - reference.type, start: (272, 23), end: (272, 29), text: `string`
+    pattern:  0, capture: 2 - definition.function, start: (284, 0), end: (291, 1), text: `func TestTo(t *testing.T) {
+	for _, c := range caseTest {
+		r := To(c.cas, c.in)
+		if c.out != r {
+			t.Errorf("To(U+%04X, %s) = U+%04X want U+%04X", c.in, caseString(c.cas), r, c.out)
+		}
+	}
+}`
+    pattern:  0, capture: 1 - name, start: (284, 5), end: (284, 11), text: `TestTo`
+    pattern:  4, capture: 1 - name, start: (284, 23), end: (284, 24), text: `T`
+    pattern:  4, capture: 6 - reference.type, start: (284, 23), end: (284, 24), text: `T`
+    pattern:  2, capture: 4 - reference.call, start: (286, 7), end: (286, 22), text: `To(c.cas, c.in)`
+    pattern:  2, capture: 1 - name, start: (286, 7), end: (286, 9), text: `To`
+    pattern:  2, capture: 4 - reference.call, start: (288, 3), end: (288, 85), text: `t.Errorf("To(U+%04X, %s) = U+%04X want U+%04X", c.in, caseString(c.cas), r, c.out)`
+    pattern:  2, capture: 1 - name, start: (288, 5), end: (288, 11), text: `Errorf`
+    pattern:  2, capture: 4 - reference.call, start: (288, 57), end: (288, 74), text: `caseString(c.cas)`
+    pattern:  2, capture: 1 - name, start: (288, 57), end: (288, 67), text: `caseString`
+    pattern:  0, capture: 2 - definition.function, start: (293, 0), end: (303, 1), text: `func TestToUpperCase(t *testing.T) {
+	for _, c := range caseTest {
+		if c.cas != UpperCase {
+			continue
+		}
+		r := ToUpper(c.in)
+		if c.out != r {
+			t.Errorf("ToUpper(U+%04X) = U+%04X want U+%04X", c.in, r, c.out)
+		}
+	}
+}`
+    pattern:  0, capture: 1 - name, start: (293, 5), end: (293, 20), text: `TestToUpperCase`
+    pattern:  4, capture: 1 - name, start: (293, 32), end: (293, 33), text: `T`
+    pattern:  4, capture: 6 - reference.type, start: (293, 32), end: (293, 33), text: `T`
+    pattern:  2, capture: 4 - reference.call, start: (298, 7), end: (298, 20), text: `ToUpper(c.in)`
+    pattern:  2, capture: 1 - name, start: (298, 7), end: (298, 14), text: `ToUpper`
+    pattern:  2, capture: 4 - reference.call, start: (300, 3), end: (300, 67), text: `t.Errorf("ToUpper(U+%04X) = U+%04X want U+%04X", c.in, r, c.out)`
+    pattern:  2, capture: 1 - name, start: (300, 5), end: (300, 11), text: `Errorf`
+    pattern:  0, capture: 2 - definition.function, start: (305, 0), end: (315, 1), text: `func TestToLowerCase(t *testing.T) {
+	for _, c := range caseTest {
+		if c.cas != LowerCase {
+			continue
+		}
+		r := ToLower(c.in)
+		if c.out != r {
+			t.Errorf("ToLower(U+%04X) = U+%04X want U+%04X", c.in, r, c.out)
+		}
+	}
+}`
+    pattern:  0, capture: 1 - name, start: (305, 5), end: (305, 20), text: `TestToLowerCase`
+    pattern:  4, capture: 1 - name, start: (305, 32), end: (305, 33), text: `T`
+    pattern:  4, capture: 6 - reference.type, start: (305, 32), end: (305, 33), text: `T`
+    pattern:  2, capture: 4 - reference.call, start: (310, 7), end: (310, 20), text: `ToLower(c.in)`
+    pattern:  2, capture: 1 - name, start: (310, 7), end: (310, 14), text: `ToLower`
+    pattern:  2, capture: 4 - reference.call, start: (312, 3), end: (312, 67), text: `t.Errorf("ToLower(U+%04X) = U+%04X want U+%04X", c.in, r, c.out)`
+    pattern:  2, capture: 1 - name, start: (312, 5), end: (312, 11), text: `Errorf`
+    pattern:  0, capture: 2 - definition.function, start: (317, 0), end: (327, 1), text: `func TestToTitleCase(t *testing.T) {
+	for _, c := range caseTest {
+		if c.cas != TitleCase {
+			continue
+		}
+		r := ToTitle(c.in)
+		if c.out != r {
+			t.Errorf("ToTitle(U+%04X) = U+%04X want U+%04X", c.in, r, c.out)
+		}
+	}
+}`
+    pattern:  0, capture: 1 - name, start: (317, 5), end: (317, 20), text: `TestToTitleCase`
+    pattern:  4, capture: 1 - name, start: (317, 32), end: (317, 33), text: `T`
+    pattern:  4, capture: 6 - reference.type, start: (317, 32), end: (317, 33), text: `T`
+    pattern:  2, capture: 4 - reference.call, start: (322, 7), end: (322, 20), text: `ToTitle(c.in)`
+    pattern:  2, capture: 1 - name, start: (322, 7), end: (322, 14), text: `ToTitle`
+    pattern:  2, capture: 4 - reference.call, start: (324, 3), end: (324, 67), text: `t.Errorf("ToTitle(U+%04X) = U+%04X want U+%04X", c.in, r, c.out)`
+    pattern:  2, capture: 1 - name, start: (324, 5), end: (324, 11), text: `Errorf`
+    pattern:  0, capture: 2 - definition.function, start: (329, 0), end: (340, 1), text: `func TestIsSpace(t *testing.T) {
+	for _, c := range spaceTest {
+		if !IsSpace(c) {
+			t.Errorf("IsSpace(U+%04X) = false; want true", c)
+		}
+	}
+	for _, c := range letterTest {
+		if IsSpace(c) {
+			t.Errorf("IsSpace(U+%04X) = true; want false", c)
+		}
+	}
+}`
+    pattern:  0, capture: 1 - name, start: (329, 5), end: (329, 16), text: `TestIsSpace`
+    pattern:  4, capture: 1 - name, start: (329, 28), end: (329, 29), text: `T`
+    pattern:  4, capture: 6 - reference.type, start: (329, 28), end: (329, 29), text: `T`
+    pattern:  2, capture: 4 - reference.call, start: (331, 6), end: (331, 16), text: `IsSpace(c)`
+    pattern:  2, capture: 1 - name, start: (331, 6), end: (331, 13), text: `IsSpace`
+    pattern:  2, capture: 4 - reference.call, start: (332, 3), end: (332, 52), text: `t.Errorf("IsSpace(U+%04X) = false; want true", c)`
+    pattern:  2, capture: 1 - name, start: (332, 5), end: (332, 11), text: `Errorf`
+    pattern:  2, capture: 4 - reference.call, start: (336, 5), end: (336, 15), text: `IsSpace(c)`
+    pattern:  2, capture: 1 - name, start: (336, 5), end: (336, 12), text: `IsSpace`
+    pattern:  2, capture: 4 - reference.call, start: (337, 3), end: (337, 52), text: `t.Errorf("IsSpace(U+%04X) = true; want false", c)`
+    pattern:  2, capture: 1 - name, start: (337, 5), end: (337, 11), text: `Errorf`
+    pattern:  0, capture: 0 - doc, start: (342, 0), end: (342, 72), text: `// Check that the optimizations for IsLetter etc. agree with the tables.`
+    pattern:  0, capture: 0 - doc, start: (343, 0), end: (343, 43), text: `// We only need to check the Latin-1 range.`
+    pattern:  0, capture: 2 - definition.function, start: (344, 0), end: (371, 1), text: `func TestLetterOptimizations(t *testing.T) {
+	for i := rune(0); i <= MaxLatin1; i++ {
+		if Is(Letter, i) != IsLetter(i) {
+			t.Errorf("IsLetter(U+%04X) disagrees with Is(Letter)", i)
+		}
+		if Is(Upper, i) != IsUpper(i) {
+			t.Errorf("IsUpper(U+%04X) disagrees with Is(Upper)", i)
+		}
+		if Is(Lower, i) != IsLower(i) {
+			t.Errorf("IsLower(U+%04X) disagrees with Is(Lower)", i)
+		}
+		if Is(Title, i) != IsTitle(i) {
+			t.Errorf("IsTitle(U+%04X) disagrees with Is(Title)", i)
+		}
+		if Is(White_Space, i) != IsSpace(i) {
+			t.Errorf("IsSpace(U+%04X) disagrees with Is(White_Space)", i)
+		}
+		if To(UpperCase, i) != ToUpper(i) {
+			t.Errorf("ToUpper(U+%04X) disagrees with To(Upper)", i)
+		}
+		if To(LowerCase, i) != ToLower(i) {
+			t.Errorf("ToLower(U+%04X) disagrees with To(Lower)", i)
+		}
+		if To(TitleCase, i) != ToTitle(i) {
+			t.Errorf("ToTitle(U+%04X) disagrees with To(Title)", i)
+		}
+	}
+}`
+    pattern:  0, capture: 1 - name, start: (344, 5), end: (344, 28), text: `TestLetterOptimizations`
+    pattern:  4, capture: 1 - name, start: (344, 40), end: (344, 41), text: `T`
+    pattern:  4, capture: 6 - reference.type, start: (344, 40), end: (344, 41), text: `T`
+    pattern:  2, capture: 4 - reference.call, start: (345, 10), end: (345, 17), text: `rune(0)`
+    pattern:  2, capture: 1 - name, start: (345, 10), end: (345, 14), text: `rune`
+    pattern:  2, capture: 4 - reference.call, start: (346, 5), end: (346, 18), text: `Is(Letter, i)`
+    pattern:  2, capture: 1 - name, start: (346, 5), end: (346, 7), text: `Is`
+    pattern:  2, capture: 4 - reference.call, start: (346, 22), end: (346, 33), text: `IsLetter(i)`
+    pattern:  2, capture: 1 - name, start: (346, 22), end: (346, 30), text: `IsLetter`
+    pattern:  2, capture: 4 - reference.call, start: (347, 3), end: (347, 60), text: `t.Errorf("IsLetter(U+%04X) disagrees with Is(Letter)", i)`
+    pattern:  2, capture: 1 - name, start: (347, 5), end: (347, 11), text: `Errorf`
+    pattern:  2, capture: 4 - reference.call, start: (349, 5), end: (349, 17), text: `Is(Upper, i)`
+    pattern:  2, capture: 1 - name, start: (349, 5), end: (349, 7), text: `Is`
+    pattern:  2, capture: 4 - reference.call, start: (349, 21), end: (349, 31), text: `IsUpper(i)`
+    pattern:  2, capture: 1 - name, start: (349, 21), end: (349, 28), text: `IsUpper`
+    pattern:  2, capture: 4 - reference.call, start: (350, 3), end: (350, 58), text: `t.Errorf("IsUpper(U+%04X) disagrees with Is(Upper)", i)`
+    pattern:  2, capture: 1 - name, start: (350, 5), end: (350, 11), text: `Errorf`
+    pattern:  2, capture: 4 - reference.call, start: (352, 5), end: (352, 17), text: `Is(Lower, i)`
+    pattern:  2, capture: 1 - name, start: (352, 5), end: (352, 7), text: `Is`
+    pattern:  2, capture: 4 - reference.call, start: (352, 21), end: (352, 31), text: `IsLower(i)`
+    pattern:  2, capture: 1 - name, start: (352, 21), end: (352, 28), text: `IsLower`
+    pattern:  2, capture: 4 - reference.call, start: (353, 3), end: (353, 58), text: `t.Errorf("IsLower(U+%04X) disagrees with Is(Lower)", i)`
+    pattern:  2, capture: 1 - name, start: (353, 5), end: (353, 11), text: `Errorf`
+    pattern:  2, capture: 4 - reference.call, start: (355, 5), end: (355, 17), text: `Is(Title, i)`
+    pattern:  2, capture: 1 - name, start: (355, 5), end: (355, 7), text: `Is`
+    pattern:  2, capture: 4 - reference.call, start: (355, 21), end: (355, 31), text: `IsTitle(i)`
+    pattern:  2, capture: 1 - name, start: (355, 21), end: (355, 28), text: `IsTitle`
+    pattern:  2, capture: 4 - reference.call, start: (356, 3), end: (356, 58), text: `t.Errorf("IsTitle(U+%04X) disagrees with Is(Title)", i)`
+    pattern:  2, capture: 1 - name, start: (356, 5), end: (356, 11), text: `Errorf`
+    pattern:  2, capture: 4 - reference.call, start: (358, 5), end: (358, 23), text: `Is(White_Space, i)`
+    pattern:  2, capture: 1 - name, start: (358, 5), end: (358, 7), text: `Is`
+    pattern:  2, capture: 4 - reference.call, start: (358, 27), end: (358, 37), text: `IsSpace(i)`
+    pattern:  2, capture: 1 - name, start: (358, 27), end: (358, 34), text: `IsSpace`
+    pattern:  2, capture: 4 - reference.call, start: (359, 3), end: (359, 64), text: `t.Errorf("IsSpace(U+%04X) disagrees with Is(White_Space)", i)`
+    pattern:  2, capture: 1 - name, start: (359, 5), end: (359, 11), text: `Errorf`
+    pattern:  2, capture: 4 - reference.call, start: (361, 5), end: (361, 21), text: `To(UpperCase, i)`
+    pattern:  2, capture: 1 - name, start: (361, 5), end: (361, 7), text: `To`
+    pattern:  2, capture: 4 - reference.call, start: (361, 25), end: (361, 35), text: `ToUpper(i)`
+    pattern:  2, capture: 1 - name, start: (361, 25), end: (361, 32), text: `ToUpper`
+    pattern:  2, capture: 4 - reference.call, start: (362, 3), end: (362, 58), text: `t.Errorf("ToUpper(U+%04X) disagrees with To(Upper)", i)`
+    pattern:  2, capture: 1 - name, start: (362, 5), end: (362, 11), text: `Errorf`
+    pattern:  2, capture: 4 - reference.call, start: (364, 5), end: (364, 21), text: `To(LowerCase, i)`
+    pattern:  2, capture: 1 - name, start: (364, 5), end: (364, 7), text: `To`
+    pattern:  2, capture: 4 - reference.call, start: (364, 25), end: (364, 35), text: `ToLower(i)`
+    pattern:  2, capture: 1 - name, start: (364, 25), end: (364, 32), text: `ToLower`
+    pattern:  2, capture: 4 - reference.call, start: (365, 3), end: (365, 58), text: `t.Errorf("ToLower(U+%04X) disagrees with To(Lower)", i)`
+    pattern:  2, capture: 1 - name, start: (365, 5), end: (365, 11), text: `Errorf`
+    pattern:  2, capture: 4 - reference.call, start: (367, 5), end: (367, 21), text: `To(TitleCase, i)`
+    pattern:  2, capture: 1 - name, start: (367, 5), end: (367, 7), text: `To`
+    pattern:  2, capture: 4 - reference.call, start: (367, 25), end: (367, 35), text: `ToTitle(i)`
+    pattern:  2, capture: 1 - name, start: (367, 25), end: (367, 32), text: `ToTitle`
+    pattern:  2, capture: 4 - reference.call, start: (368, 3), end: (368, 58), text: `t.Errorf("ToTitle(U+%04X) disagrees with To(Title)", i)`
+    pattern:  2, capture: 1 - name, start: (368, 5), end: (368, 11), text: `Errorf`
+    pattern:  0, capture: 2 - definition.function, start: (373, 0), end: (397, 1), text: `func TestTurkishCase(t *testing.T) {
+	lower := []rune("abcçdefgğhıijklmnoöprsştuüvyz")
+	upper := []rune("ABCÇDEFGĞHIİJKLMNOÖPRSŞTUÜVYZ")
+	for i, l := range lower {
+		u := upper[i]
+		if TurkishCase.ToLower(l) != l {
+			t.Errorf("lower(U+%04X) is U+%04X not U+%04X", l, TurkishCase.ToLower(l), l)
+		}
+		if TurkishCase.ToUpper(u) != u {
+			t.Errorf("upper(U+%04X) is U+%04X not U+%04X", u, TurkishCase.ToUpper(u), u)
+		}
+		if TurkishCase.ToUpper(l) != u {
+			t.Errorf("upper(U+%04X) is U+%04X not U+%04X", l, TurkishCase.ToUpper(l), u)
+		}
+		if TurkishCase.ToLower(u) != l {
+			t.Errorf("lower(U+%04X) is U+%04X not U+%04X", u, TurkishCase.ToLower(l), l)
+		}
+		if TurkishCase.ToTitle(u) != u {
+			t.Errorf("title(U+%04X) is U+%04X not U+%04X", u, TurkishCase.ToTitle(u), u)
+		}
+		if TurkishCase.ToTitle(l) != u {
+			t.Errorf("title(U+%04X) is U+%04X not U+%04X", l, TurkishCase.ToTitle(l), u)
+		}
+	}
+}`
+    pattern:  0, capture: 1 - name, start: (373, 5), end: (373, 20), text: `TestTurkishCase`
+    pattern:  4, capture: 1 - name, start: (373, 32), end: (373, 33), text: `T`
+    pattern:  4, capture: 6 - reference.type, start: (373, 32), end: (373, 33), text: `T`
+    pattern:  4, capture: 1 - name, start: (374, 12), end: (374, 16), text: `rune`
+    pattern:  4, capture: 6 - reference.type, start: (374, 12), end: (374, 16), text: `rune`
+    pattern:  4, capture: 1 - name, start: (375, 12), end: (375, 16), text: `rune`
+    pattern:  4, capture: 6 - reference.type, start: (375, 12), end: (375, 16), text: `rune`
+    pattern:  2, capture: 4 - reference.call, start: (378, 5), end: (378, 27), text: `TurkishCase.ToLower(l)`
+    pattern:  2, capture: 1 - name, start: (378, 17), end: (378, 24), text: `ToLower`
+    pattern:  2, capture: 4 - reference.call, start: (379, 3), end: (379, 79), text: `t.Errorf("lower(U+%04X) is U+%04X not U+%04X", l, TurkishCase.ToLower(l), l)`
+    pattern:  2, capture: 1 - name, start: (379, 5), end: (379, 11), text: `Errorf`
+    pattern:  2, capture: 4 - reference.call, start: (379, 53), end: (379, 75), text: `TurkishCase.ToLower(l)`
+    pattern:  2, capture: 1 - name, start: (379, 65), end: (379, 72), text: `ToLower`
+    pattern:  2, capture: 4 - reference.call, start: (381, 5), end: (381, 27), text: `TurkishCase.ToUpper(u)`
+    pattern:  2, capture: 1 - name, start: (381, 17), end: (381, 24), text: `ToUpper`
+    pattern:  2, capture: 4 - reference.call, start: (382, 3), end: (382, 79), text: `t.Errorf("upper(U+%04X) is U+%04X not U+%04X", u, TurkishCase.ToUpper(u), u)`
+    pattern:  2, capture: 1 - name, start: (382, 5), end: (382, 11), text: `Errorf`
+    pattern:  2, capture: 4 - reference.call, start: (382, 53), end: (382, 75), text: `TurkishCase.ToUpper(u)`
+    pattern:  2, capture: 1 - name, start: (382, 65), end: (382, 72), text: `ToUpper`
+    pattern:  2, capture: 4 - reference.call, start: (384, 5), end: (384, 27), text: `TurkishCase.ToUpper(l)`
+    pattern:  2, capture: 1 - name, start: (384, 17), end: (384, 24), text: `ToUpper`
+    pattern:  2, capture: 4 - reference.call, start: (385, 3), end: (385, 79), text: `t.Errorf("upper(U+%04X) is U+%04X not U+%04X", l, TurkishCase.ToUpper(l), u)`
+    pattern:  2, capture: 1 - name, start: (385, 5), end: (385, 11), text: `Errorf`
+    pattern:  2, capture: 4 - reference.call, start: (385, 53), end: (385, 75), text: `TurkishCase.ToUpper(l)`
+    pattern:  2, capture: 1 - name, start: (385, 65), end: (385, 72), text: `ToUpper`
+    pattern:  2, capture: 4 - reference.call, start: (387, 5), end: (387, 27), text: `TurkishCase.ToLower(u)`
+    pattern:  2, capture: 1 - name, start: (387, 17), end: (387, 24), text: `ToLower`
+    pattern:  2, capture: 4 - reference.call, start: (388, 3), end: (388, 79), text: `t.Errorf("lower(U+%04X) is U+%04X not U+%04X", u, TurkishCase.ToLower(l), l)`
+    pattern:  2, capture: 1 - name, start: (388, 5), end: (388, 11), text: `Errorf`
+    pattern:  2, capture: 4 - reference.call, start: (388, 53), end: (388, 75), text: `TurkishCase.ToLower(l)`
+    pattern:  2, capture: 1 - name, start: (388, 65), end: (388, 72), text: `ToLower`
+    pattern:  2, capture: 4 - reference.call, start: (390, 5), end: (390, 27), text: `TurkishCase.ToTitle(u)`
+    pattern:  2, capture: 1 - name, start: (390, 17), end: (390, 24), text: `ToTitle`
+    pattern:  2, capture: 4 - reference.call, start: (391, 3), end: (391, 79), text: `t.Errorf("title(U+%04X) is U+%04X not U+%04X", u, TurkishCase.ToTitle(u), u)`
+    pattern:  2, capture: 1 - name, start: (391, 5), end: (391, 11), text: `Errorf`
+    pattern:  2, capture: 4 - reference.call, start: (391, 53), end: (391, 75), text: `TurkishCase.ToTitle(u)`
+    pattern:  2, capture: 1 - name, start: (391, 65), end: (391, 72), text: `ToTitle`
+    pattern:  2, capture: 4 - reference.call, start: (393, 5), end: (393, 27), text: `TurkishCase.ToTitle(l)`
+    pattern:  2, capture: 1 - name, start: (393, 17), end: (393, 24), text: `ToTitle`
+    pattern:  2, capture: 4 - reference.call, start: (394, 3), end: (394, 79), text: `t.Errorf("title(U+%04X) is U+%04X not U+%04X", l, TurkishCase.ToTitle(l), u)`
+    pattern:  2, capture: 1 - name, start: (394, 5), end: (394, 11), text: `Errorf`
+    pattern:  2, capture: 4 - reference.call, start: (394, 53), end: (394, 75), text: `TurkishCase.ToTitle(l)`
+    pattern:  2, capture: 1 - name, start: (394, 65), end: (394, 72), text: `ToTitle`
+    pattern:  9, capture: 1 - name, start: (399, 4), end: (399, 19), text: `simpleFoldTests`
+    pattern:  4, capture: 1 - name, start: (399, 24), end: (399, 30), text: `string`
+    pattern:  4, capture: 6 - reference.type, start: (399, 24), end: (399, 30), text: `string`
+    pattern:  0, capture: 2 - definition.function, start: (423, 0), end: (434, 1), text: `func TestSimpleFold(t *testing.T) {
+	for _, tt := range simpleFoldTests {
+		cycle := []rune(tt)
+		r := cycle[len(cycle)-1]
+		for _, out := range cycle {
+			if r := SimpleFold(r); r != out {
+				t.Errorf("SimpleFold(%#U) = %#U, want %#U", r, r, out)
+			}
+			r = out
+		}
+	}
+}`
+    pattern:  0, capture: 1 - name, start: (423, 5), end: (423, 19), text: `TestSimpleFold`
+    pattern:  4, capture: 1 - name, start: (423, 31), end: (423, 32), text: `T`
+    pattern:  4, capture: 6 - reference.type, start: (423, 31), end: (423, 32), text: `T`
+    pattern:  4, capture: 1 - name, start: (425, 13), end: (425, 17), text: `rune`
+    pattern:  4, capture: 6 - reference.type, start: (425, 13), end: (425, 17), text: `rune`
+    pattern:  2, capture: 4 - reference.call, start: (426, 13), end: (426, 23), text: `len(cycle)`
+    pattern:  2, capture: 1 - name, start: (426, 13), end: (426, 16), text: `len`
+    pattern:  2, capture: 4 - reference.call, start: (428, 11), end: (428, 24), text: `SimpleFold(r)`
+    pattern:  2, capture: 1 - name, start: (428, 11), end: (428, 21), text: `SimpleFold`
+    pattern:  2, capture: 4 - reference.call, start: (429, 4), end: (429, 58), text: `t.Errorf("SimpleFold(%#U) = %#U, want %#U", r, r, out)`
+    pattern:  2, capture: 1 - name, start: (429, 6), end: (429, 12), text: `Errorf`
+    pattern:  9, capture: 1 - name, start: (446, 4), end: (446, 13), text: `calibrate`
+    pattern:  2, capture: 4 - reference.call, start: (446, 16), end: (446, 95), text: `flag.Bool("calibrate", false, "compute crossover for linear vs. binary search")`
+    pattern:  2, capture: 1 - name, start: (446, 21), end: (446, 25), text: `Bool`
+    pattern:  0, capture: 2 - definition.function, start: (448, 0), end: (487, 1), text: `func TestCalibrate(t *testing.T) {
+	if !*calibrate {
+		return
+	}
+
+	if runtime.GOARCH == "amd64" {
+		fmt.Printf("warning: running calibration on %s\n", runtime.GOARCH)
+	}
+
+	// Find the point where binary search wins by more than 10%.
+	// The 10% bias gives linear search an edge when they're close,
+	// because on predominantly ASCII inputs linear search is even
+	// better than our benchmarks measure.
+	n := sort.Search(64, func(n int) bool {
+		tab := fakeTable(n)
+		blinear := func(b *testing.B) {
+			tab := tab
+			max := n*5 + 20
+			for i := 0; i < b.N; i++ {
+				for j := 0; j <= max; j++ {
+					linear(tab, uint16(j))
+				}
+			}
+		}
+		bbinary := func(b *testing.B) {
+			tab := tab
+			max := n*5 + 20
+			for i := 0; i < b.N; i++ {
+				for j := 0; j <= max; j++ {
+					binary(tab, uint16(j))
+				}
+			}
+		}
+		bmlinear := testing.Benchmark(blinear)
+		bmbinary := testing.Benchmark(bbinary)
+		fmt.Printf("n=%d: linear=%d binary=%d\n", n, bmlinear.NsPerOp(), bmbinary.NsPerOp())
+		return bmlinear.NsPerOp()*100 > bmbinary.NsPerOp()*110
+	})
+	fmt.Printf("calibration: linear cutoff = %d\n", n)
+}`
+    pattern:  0, capture: 1 - name, start: (448, 5), end: (448, 18), text: `TestCalibrate`
+    pattern:  4, capture: 1 - name, start: (448, 30), end: (448, 31), text: `T`
+    pattern:  4, capture: 6 - reference.type, start: (448, 30), end: (448, 31), text: `T`
+    pattern:  2, capture: 4 - reference.call, start: (454, 2), end: (454, 68), text: `fmt.Printf("warning: running calibration on %s\n", runtime.GOARCH)`
+    pattern:  2, capture: 1 - name, start: (454, 6), end: (454, 12), text: `Printf`
+    pattern:  2, capture: 4 - reference.call, start: (461, 6), end: (485, 3), text: `sort.Search(64, func(n int) bool {
+		tab := fakeTable(n)
+		blinear := func(b *testing.B) {
+			tab := tab
+			max := n*5 + 20
+			for i := 0; i < b.N; i++ {
+				for j := 0; j <= max; j++ {
+					linear(tab, uint16(j))
+				}
+			}
+		}
+		bbinary := func(b *testing.B) {
+			tab := tab
+			max := n*5 + 20
+			for i := 0; i < b.N; i++ {
+				for j := 0; j <= max; j++ {
+					binary(tab, uint16(j))
+				}
+			}
+		}
+		bmlinear := testing.Benchmark(blinear)
+		bmbinary := testing.Benchmark(bbinary)
+		fmt.Printf("n=%d: linear=%d binary=%d\n", n, bmlinear.NsPerOp(), bmbinary.NsPerOp())
+		return bmlinear.NsPerOp()*100 > bmbinary.NsPerOp()*110
+	})`
+    pattern:  2, capture: 1 - name, start: (461, 11), end: (461, 17), text: `Search`
+    pattern:  4, capture: 1 - name, start: (461, 29), end: (461, 32), text: `int`
+    pattern:  4, capture: 6 - reference.type, start: (461, 29), end: (461, 32), text: `int`
+    pattern:  4, capture: 1 - name, start: (461, 34), end: (461, 38), text: `bool`
+    pattern:  4, capture: 6 - reference.type, start: (461, 34), end: (461, 38), text: `bool`
+    pattern:  2, capture: 4 - reference.call, start: (462, 9), end: (462, 21), text: `fakeTable(n)`
+    pattern:  2, capture: 1 - name, start: (462, 9), end: (462, 18), text: `fakeTable`
+    pattern:  4, capture: 1 - name, start: (463, 29), end: (463, 30), text: `B`
+    pattern:  4, capture: 6 - reference.type, start: (463, 29), end: (463, 30), text: `B`
+    pattern:  2, capture: 4 - reference.call, start: (468, 5), end: (468, 27), text: `linear(tab, uint16(j))`
+    pattern:  2, capture: 1 - name, start: (468, 5), end: (468, 11), text: `linear`
+    pattern:  2, capture: 4 - reference.call, start: (468, 17), end: (468, 26), text: `uint16(j)`
+    pattern:  2, capture: 1 - name, start: (468, 17), end: (468, 23), text: `uint16`
+    pattern:  4, capture: 1 - name, start: (472, 29), end: (472, 30), text: `B`
+    pattern:  4, capture: 6 - reference.type, start: (472, 29), end: (472, 30), text: `B`
+    pattern:  2, capture: 4 - reference.call, start: (477, 5), end: (477, 27), text: `binary(tab, uint16(j))`
+    pattern:  2, capture: 1 - name, start: (477, 5), end: (477, 11), text: `binary`
+    pattern:  2, capture: 4 - reference.call, start: (477, 17), end: (477, 26), text: `uint16(j)`
+    pattern:  2, capture: 1 - name, start: (477, 17), end: (477, 23), text: `uint16`
+    pattern:  2, capture: 4 - reference.call, start: (481, 14), end: (481, 40), text: `testing.Benchmark(blinear)`
+    pattern:  2, capture: 1 - name, start: (481, 22), end: (481, 31), text: `Benchmark`
+    pattern:  2, capture: 4 - reference.call, start: (482, 14), end: (482, 40), text: `testing.Benchmark(bbinary)`
+    pattern:  2, capture: 1 - name, start: (482, 22), end: (482, 31), text: `Benchmark`
+    pattern:  2, capture: 4 - reference.call, start: (483, 2), end: (483, 86), text: `fmt.Printf("n=%d: linear=%d binary=%d\n", n, bmlinear.NsPerOp(), bmbinary.NsPerOp())`
+    pattern:  2, capture: 1 - name, start: (483, 6), end: (483, 12), text: `Printf`
+    pattern:  2, capture: 4 - reference.call, start: (483, 47), end: (483, 65), text: `bmlinear.NsPerOp()`
+    pattern:  2, capture: 1 - name, start: (483, 56), end: (483, 63), text: `NsPerOp`
+    pattern:  2, capture: 4 - reference.call, start: (483, 67), end: (483, 85), text: `bmbinary.NsPerOp()`
+    pattern:  2, capture: 1 - name, start: (483, 76), end: (483, 83), text: `NsPerOp`
+    pattern:  2, capture: 4 - reference.call, start: (484, 9), end: (484, 27), text: `bmlinear.NsPerOp()`
+    pattern:  2, capture: 1 - name, start: (484, 18), end: (484, 25), text: `NsPerOp`
+    pattern:  2, capture: 4 - reference.call, start: (484, 34), end: (484, 52), text: `bmbinary.NsPerOp()`
+    pattern:  2, capture: 1 - name, start: (484, 43), end: (484, 50), text: `NsPerOp`
+    pattern:  2, capture: 4 - reference.call, start: (486, 1), end: (486, 51), text: `fmt.Printf("calibration: linear cutoff = %d\n", n)`
+    pattern:  2, capture: 1 - name, start: (486, 5), end: (486, 11), text: `Printf`
+    pattern:  0, capture: 2 - definition.function, start: (489, 0), end: (495, 1), text: `func fakeTable(n int) []Range16 {
+	var r16 []Range16
+	for i := 0; i < n; i++ {
+		r16 = append(r16, Range16{uint16(i*5 + 10), uint16(i*5 + 12), 1})
+	}
+	return r16
+}`
+    pattern:  0, capture: 1 - name, start: (489, 5), end: (489, 14), text: `fakeTable`
+    pattern:  4, capture: 1 - name, start: (489, 17), end: (489, 20), text: `int`
+    pattern:  4, capture: 6 - reference.type, start: (489, 17), end: (489, 20), text: `int`
+    pattern:  4, capture: 1 - name, start: (489, 24), end: (489, 31), text: `Range16`
+    pattern:  4, capture: 6 - reference.type, start: (489, 24), end: (489, 31), text: `Range16`
+    pattern:  9, capture: 1 - name, start: (490, 5), end: (490, 8), text: `r16`
+    pattern:  4, capture: 1 - name, start: (490, 11), end: (490, 18), text: `Range16`
+    pattern:  4, capture: 6 - reference.type, start: (490, 11), end: (490, 18), text: `Range16`
+    pattern:  2, capture: 4 - reference.call, start: (492, 8), end: (492, 67), text: `append(r16, Range16{uint16(i*5 + 10), uint16(i*5 + 12), 1})`
+    pattern:  2, capture: 1 - name, start: (492, 8), end: (492, 14), text: `append`
+    pattern:  4, capture: 1 - name, start: (492, 20), end: (492, 27), text: `Range16`
+    pattern:  4, capture: 6 - reference.type, start: (492, 20), end: (492, 27), text: `Range16`
+    pattern:  2, capture: 4 - reference.call, start: (492, 28), end: (492, 44), text: `uint16(i*5 + 10)`
+    pattern:  2, capture: 1 - name, start: (492, 28), end: (492, 34), text: `uint16`
+    pattern:  2, capture: 4 - reference.call, start: (492, 46), end: (492, 62), text: `uint16(i*5 + 12)`
+    pattern:  2, capture: 1 - name, start: (492, 46), end: (492, 52), text: `uint16`
+    pattern:  0, capture: 2 - definition.function, start: (497, 0), end: (508, 1), text: `func linear(ranges []Range16, r uint16) bool {
+	for i := range ranges {
+		range_ := &ranges[i]
+		if r < range_.Lo {
+			return false
+		}
+		if r <= range_.Hi {
+			return (r-range_.Lo)%range_.Stride == 0
+		}
+	}
+	return false
+}`
+    pattern:  0, capture: 1 - name, start: (497, 5), end: (497, 11), text: `linear`
+    pattern:  4, capture: 1 - name, start: (497, 21), end: (497, 28), text: `Range16`
+    pattern:  4, capture: 6 - reference.type, start: (497, 21), end: (497, 28), text: `Range16`
+    pattern:  4, capture: 1 - name, start: (497, 32), end: (497, 38), text: `uint16`
+    pattern:  4, capture: 6 - reference.type, start: (497, 32), end: (497, 38), text: `uint16`
+    pattern:  4, capture: 1 - name, start: (497, 40), end: (497, 44), text: `bool`
+    pattern:  4, capture: 6 - reference.type, start: (497, 40), end: (497, 44), text: `bool`
+    pattern:  0, capture: 2 - definition.function, start: (510, 0), end: (527, 1), text: `func binary(ranges []Range16, r uint16) bool {
+	// binary search over ranges
+	lo := 0
+	hi := len(ranges)
+	for lo < hi {
+		m := lo + (hi-lo)/2
+		range_ := &ranges[m]
+		if range_.Lo <= r && r <= range_.Hi {
+			return (r-range_.Lo)%range_.Stride == 0
+		}
+		if r < range_.Lo {
+			hi = m
+		} else {
+			lo = m + 1
+		}
+	}
+	return false
+}`
+    pattern:  0, capture: 1 - name, start: (510, 5), end: (510, 11), text: `binary`
+    pattern:  4, capture: 1 - name, start: (510, 21), end: (510, 28), text: `Range16`
+    pattern:  4, capture: 6 - reference.type, start: (510, 21), end: (510, 28), text: `Range16`
+    pattern:  4, capture: 1 - name, start: (510, 32), end: (510, 38), text: `uint16`
+    pattern:  4, capture: 6 - reference.type, start: (510, 32), end: (510, 38), text: `uint16`
+    pattern:  4, capture: 1 - name, start: (510, 40), end: (510, 44), text: `bool`
+    pattern:  4, capture: 6 - reference.type, start: (510, 40), end: (510, 44), text: `bool`
+    pattern:  2, capture: 4 - reference.call, start: (513, 7), end: (513, 18), text: `len(ranges)`
+    pattern:  2, capture: 1 - name, start: (513, 7), end: (513, 10), text: `len`
+    pattern:  0, capture: 2 - definition.function, start: (529, 0), end: (548, 1), text: `func TestLatinOffset(t *testing.T) {
+	var maps = []map[string]*RangeTable{
+		Categories,
+		FoldCategory,
+		FoldScript,
+		Properties,
+		Scripts,
+	}
+	for _, m := range maps {
+		for name, tab := range m {
+			i := 0
+			for i < len(tab.R16) && tab.R16[i].Hi <= MaxLatin1 {
+				i++
+			}
+			if tab.LatinOffset != i {
+				t.Errorf("%s: LatinOffset=%d, want %d", name, tab.LatinOffset, i)
+			}
+		}
+	}
+}`
+    pattern:  0, capture: 1 - name, start: (529, 5), end: (529, 20), text: `TestLatinOffset`
+    pattern:  4, capture: 1 - name, start: (529, 32), end: (529, 33), text: `T`
+    pattern:  4, capture: 6 - reference.type, start: (529, 32), end: (529, 33), text: `T`
+    pattern:  9, capture: 1 - name, start: (530, 5), end: (530, 9), text: `maps`
+    pattern:  4, capture: 1 - name, start: (530, 18), end: (530, 24), text: `string`
+    pattern:  4, capture: 6 - reference.type, start: (530, 18), end: (530, 24), text: `string`
+    pattern:  4, capture: 1 - name, start: (530, 26), end: (530, 36), text: `RangeTable`
+    pattern:  4, capture: 6 - reference.type, start: (530, 26), end: (530, 36), text: `RangeTable`
+    pattern:  2, capture: 4 - reference.call, start: (540, 11), end: (540, 23), text: `len(tab.R16)`
+    pattern:  2, capture: 1 - name, start: (540, 11), end: (540, 14), text: `len`
+    pattern:  2, capture: 4 - reference.call, start: (544, 4), end: (544, 69), text: `t.Errorf("%s: LatinOffset=%d, want %d", name, tab.LatinOffset, i)`
+    pattern:  2, capture: 1 - name, start: (544, 6), end: (544, 12), text: `Errorf`

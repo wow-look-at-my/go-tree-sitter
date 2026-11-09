@@ -1,0 +1,2703 @@
+samples/tree-sitter-go/test/corpus/statements.txt
+    pattern:  5, capture: 1 - name, start: (4, 8), end: (4, 12), text: `main`
+    pattern:  0, capture: 2 - definition.function, start: (6, 0), end: (9, 1), text: `func main() {
+  var x = y
+  const x = 5
+}`
+    pattern:  0, capture: 1 - name, start: (6, 5), end: (6, 9), text: `main`
+    pattern:  9, capture: 1 - name, start: (7, 6), end: (7, 7), text: `x`
+    pattern: 10, capture: 1 - name, start: (8, 8), end: (8, 9), text: `x`
+    pattern:  2, capture: 4 - reference.call, start: (13, 1), end: (15, 25), text: `source_file
+  (package_clause
+    (package_identifier))`
+    pattern:  2, capture: 1 - name, start: (13, 1), end: (13, 12), text: `source_file`
+    pattern:  2, capture: 4 - reference.call, start: (14, 3), end: (15, 24), text: `package_clause
+    (package_identifier)`
+    pattern:  2, capture: 1 - name, start: (14, 3), end: (14, 17), text: `package_clause`
+    pattern:  2, capture: 4 - reference.call, start: (16, 3), end: (17, 16), text: `function_declaration
+    (identifier)`
+    pattern:  2, capture: 1 - name, start: (16, 3), end: (16, 23), text: `function_declaration`
+    pattern:  2, capture: 4 - reference.call, start: (19, 5), end: (30, 31), text: `block
+      (statement_list
+        (var_declaration
+          (var_spec
+            (identifier)
+            (expression_list
+              (identifier))))
+        (const_declaration
+          (const_spec
+            (identifier)
+            (expression_list
+              (int_literal)))))`
+    pattern:  2, capture: 1 - name, start: (19, 5), end: (19, 10), text: `block`
+    pattern:  2, capture: 4 - reference.call, start: (20, 7), end: (25, 29), text: `statement_list
+        (var_declaration
+          (var_spec
+            (identifier)
+            (expression_list
+              (identifier))))`
+    pattern:  2, capture: 1 - name, start: (20, 7), end: (20, 21), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (21, 9), end: (25, 28), text: `var_declaration
+          (var_spec
+            (identifier)
+            (expression_list
+              (identifier)))`
+    pattern:  2, capture: 1 - name, start: (21, 9), end: (21, 24), text: `var_declaration`
+    pattern:  2, capture: 4 - reference.call, start: (22, 11), end: (23, 24), text: `var_spec
+            (identifier)`
+    pattern:  2, capture: 1 - name, start: (22, 11), end: (22, 19), text: `var_spec`
+    pattern:  2, capture: 4 - reference.call, start: (24, 13), end: (25, 26), text: `expression_list
+              (identifier)`
+    pattern:  2, capture: 1 - name, start: (24, 13), end: (24, 28), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (26, 9), end: (30, 29), text: `const_declaration
+          (const_spec
+            (identifier)
+            (expression_list
+              (int_literal)))`
+    pattern:  2, capture: 1 - name, start: (26, 9), end: (26, 26), text: `const_declaration`
+    pattern:  2, capture: 4 - reference.call, start: (27, 11), end: (28, 24), text: `const_spec
+            (identifier)`
+    pattern:  2, capture: 1 - name, start: (27, 11), end: (27, 21), text: `const_spec`
+    pattern:  2, capture: 4 - reference.call, start: (29, 13), end: (30, 27), text: `expression_list
+              (int_literal)`
+    pattern:  2, capture: 1 - name, start: (29, 13), end: (29, 28), text: `expression_list`
+    pattern:  5, capture: 1 - name, start: (36, 8), end: (36, 12), text: `main`
+    pattern:  0, capture: 2 - definition.function, start: (38, 0), end: (40, 1), text: `func main() {
+  foo(5)
+}`
+    pattern:  0, capture: 1 - name, start: (38, 5), end: (38, 9), text: `main`
+    pattern:  2, capture: 4 - reference.call, start: (39, 2), end: (39, 8), text: `foo(5)`
+    pattern:  2, capture: 1 - name, start: (39, 2), end: (39, 5), text: `foo`
+    pattern:  2, capture: 4 - reference.call, start: (44, 1), end: (46, 25), text: `source_file
+  (package_clause
+    (package_identifier))`
+    pattern:  2, capture: 1 - name, start: (44, 1), end: (44, 12), text: `source_file`
+    pattern:  2, capture: 4 - reference.call, start: (45, 3), end: (46, 24), text: `package_clause
+    (package_identifier)`
+    pattern:  2, capture: 1 - name, start: (45, 3), end: (45, 17), text: `package_clause`
+    pattern:  2, capture: 4 - reference.call, start: (47, 3), end: (48, 16), text: `function_declaration
+    (identifier)`
+    pattern:  2, capture: 1 - name, start: (47, 3), end: (47, 23), text: `function_declaration`
+    pattern:  2, capture: 4 - reference.call, start: (50, 5), end: (56, 31), text: `block
+      (statement_list
+        (expression_statement
+          (call_expression
+            (identifier)
+            (argument_list
+              (int_literal)))))`
+    pattern:  2, capture: 1 - name, start: (50, 5), end: (50, 10), text: `block`
+    pattern:  2, capture: 4 - reference.call, start: (51, 7), end: (56, 30), text: `statement_list
+        (expression_statement
+          (call_expression
+            (identifier)
+            (argument_list
+              (int_literal))))`
+    pattern:  2, capture: 1 - name, start: (51, 7), end: (51, 21), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (52, 9), end: (56, 29), text: `expression_statement
+          (call_expression
+            (identifier)
+            (argument_list
+              (int_literal)))`
+    pattern:  2, capture: 1 - name, start: (52, 9), end: (52, 29), text: `expression_statement`
+    pattern:  2, capture: 4 - reference.call, start: (53, 11), end: (54, 24), text: `call_expression
+            (identifier)`
+    pattern:  2, capture: 1 - name, start: (53, 11), end: (53, 26), text: `call_expression`
+    pattern:  2, capture: 4 - reference.call, start: (55, 13), end: (56, 27), text: `argument_list
+              (int_literal)`
+    pattern:  2, capture: 1 - name, start: (55, 13), end: (55, 26), text: `argument_list`
+    pattern:  5, capture: 1 - name, start: (62, 8), end: (62, 12), text: `main`
+    pattern:  0, capture: 2 - definition.function, start: (64, 0), end: (66, 1), text: `func main() {
+  foo <- 5
+}`
+    pattern:  0, capture: 1 - name, start: (64, 5), end: (64, 9), text: `main`
+    pattern:  2, capture: 4 - reference.call, start: (70, 1), end: (72, 25), text: `source_file
+  (package_clause
+    (package_identifier))`
+    pattern:  2, capture: 1 - name, start: (70, 1), end: (70, 12), text: `source_file`
+    pattern:  2, capture: 4 - reference.call, start: (71, 3), end: (72, 24), text: `package_clause
+    (package_identifier)`
+    pattern:  2, capture: 1 - name, start: (71, 3), end: (71, 17), text: `package_clause`
+    pattern:  2, capture: 4 - reference.call, start: (73, 3), end: (74, 16), text: `function_declaration
+    (identifier)`
+    pattern:  2, capture: 1 - name, start: (73, 3), end: (73, 23), text: `function_declaration`
+    pattern:  2, capture: 4 - reference.call, start: (76, 5), end: (80, 25), text: `block
+      (statement_list
+        (send_statement
+          (identifier)
+          (int_literal)))`
+    pattern:  2, capture: 1 - name, start: (76, 5), end: (76, 10), text: `block`
+    pattern:  2, capture: 4 - reference.call, start: (77, 7), end: (80, 24), text: `statement_list
+        (send_statement
+          (identifier)
+          (int_literal))`
+    pattern:  2, capture: 1 - name, start: (77, 7), end: (77, 21), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (78, 9), end: (79, 22), text: `send_statement
+          (identifier)`
+    pattern:  2, capture: 1 - name, start: (78, 9), end: (78, 23), text: `send_statement`
+    pattern:  5, capture: 1 - name, start: (86, 8), end: (86, 12), text: `main`
+    pattern:  0, capture: 2 - definition.function, start: (88, 0), end: (91, 1), text: `func main() {
+  i++
+  j--
+}`
+    pattern:  0, capture: 1 - name, start: (88, 5), end: (88, 9), text: `main`
+    pattern:  2, capture: 4 - reference.call, start: (95, 1), end: (97, 25), text: `source_file
+  (package_clause
+    (package_identifier))`
+    pattern:  2, capture: 1 - name, start: (95, 1), end: (95, 12), text: `source_file`
+    pattern:  2, capture: 4 - reference.call, start: (96, 3), end: (97, 24), text: `package_clause
+    (package_identifier)`
+    pattern:  2, capture: 1 - name, start: (96, 3), end: (96, 17), text: `package_clause`
+    pattern:  2, capture: 4 - reference.call, start: (98, 3), end: (99, 16), text: `function_declaration
+    (identifier)`
+    pattern:  2, capture: 1 - name, start: (98, 3), end: (98, 23), text: `function_declaration`
+    pattern:  2, capture: 4 - reference.call, start: (101, 5), end: (106, 24), text: `block
+      (statement_list
+        (inc_statement
+          (identifier))
+        (dec_statement
+          (identifier)))`
+    pattern:  2, capture: 1 - name, start: (101, 5), end: (101, 10), text: `block`
+    pattern:  2, capture: 4 - reference.call, start: (102, 7), end: (104, 23), text: `statement_list
+        (inc_statement
+          (identifier))`
+    pattern:  2, capture: 1 - name, start: (102, 7), end: (102, 21), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (103, 9), end: (104, 22), text: `inc_statement
+          (identifier)`
+    pattern:  2, capture: 1 - name, start: (103, 9), end: (103, 22), text: `inc_statement`
+    pattern:  2, capture: 4 - reference.call, start: (105, 9), end: (106, 22), text: `dec_statement
+          (identifier)`
+    pattern:  2, capture: 1 - name, start: (105, 9), end: (105, 22), text: `dec_statement`
+    pattern:  5, capture: 1 - name, start: (112, 8), end: (112, 12), text: `main`
+    pattern:  0, capture: 2 - definition.function, start: (114, 0), end: (128, 1), text: `func main() {
+  a = 1
+  b, c += 2, 3
+  d *= 3
+  e += 1
+  f /= 2
+  g <<= 1
+  h >>= 1
+  i %= 1
+  j &= 2
+  k &^= 3
+  l -= 1
+  m |= 2
+  n ^= 2
+}`
+    pattern:  0, capture: 1 - name, start: (114, 5), end: (114, 9), text: `main`
+    pattern:  2, capture: 4 - reference.call, start: (132, 1), end: (134, 25), text: `source_file
+  (package_clause
+    (package_identifier))`
+    pattern:  2, capture: 1 - name, start: (132, 1), end: (132, 12), text: `source_file`
+    pattern:  2, capture: 4 - reference.call, start: (133, 3), end: (134, 24), text: `package_clause
+    (package_identifier)`
+    pattern:  2, capture: 1 - name, start: (133, 3), end: (133, 17), text: `package_clause`
+    pattern:  2, capture: 4 - reference.call, start: (135, 3), end: (136, 16), text: `function_declaration
+    (identifier)`
+    pattern:  2, capture: 1 - name, start: (135, 3), end: (135, 23), text: `function_declaration`
+    pattern:  2, capture: 4 - reference.call, start: (138, 5), end: (206, 28), text: `block
+      (statement_list
+        (assignment_statement
+          (expression_list
+            (identifier))
+          (expression_list
+            (int_literal)))
+        (assignment_statement
+          (expression_list
+            (identifier)
+            (identifier))
+          (expression_list
+            (int_literal)
+            (int_literal)))
+        (assignment_statement
+          (expression_list
+            (identifier))
+          (expression_list
+            (int_literal)))
+        (assignment_statement
+          (expression_list
+            (identifier))
+          (expression_list
+            (int_literal)))
+        (assignment_statement
+          (expression_list
+            (identifier))
+          (expression_list
+            (int_literal)))
+        (assignment_statement
+          (expression_list
+            (identifier))
+          (expression_list
+            (int_literal)))
+        (assignment_statement
+          (expression_list
+            (identifier))
+          (expression_list
+            (int_literal)))
+        (assignment_statement
+          (expression_list
+            (identifier))
+          (expression_list
+            (int_literal)))
+        (assignment_statement
+          (expression_list
+            (identifier))
+          (expression_list
+            (int_literal)))
+        (assignment_statement
+          (expression_list
+            (identifier))
+          (expression_list
+            (int_literal)))
+        (assignment_statement
+          (expression_list
+            (identifier))
+          (expression_list
+            (int_literal)))
+        (assignment_statement
+          (expression_list
+            (identifier))
+          (expression_list
+            (int_literal)))
+        (assignment_statement
+          (expression_list
+            (identifier))
+          (expression_list
+            (int_literal))))`
+    pattern:  2, capture: 1 - name, start: (138, 5), end: (138, 10), text: `block`
+    pattern:  2, capture: 4 - reference.call, start: (139, 7), end: (144, 27), text: `statement_list
+        (assignment_statement
+          (expression_list
+            (identifier))
+          (expression_list
+            (int_literal)))`
+    pattern:  2, capture: 1 - name, start: (139, 7), end: (139, 21), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (140, 9), end: (142, 25), text: `assignment_statement
+          (expression_list
+            (identifier))`
+    pattern:  2, capture: 1 - name, start: (140, 9), end: (140, 29), text: `assignment_statement`
+    pattern:  2, capture: 4 - reference.call, start: (141, 11), end: (142, 24), text: `expression_list
+            (identifier)`
+    pattern:  2, capture: 1 - name, start: (141, 11), end: (141, 26), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (143, 11), end: (144, 25), text: `expression_list
+            (int_literal)`
+    pattern:  2, capture: 1 - name, start: (143, 11), end: (143, 26), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (145, 9), end: (148, 25), text: `assignment_statement
+          (expression_list
+            (identifier)
+            (identifier))`
+    pattern:  2, capture: 1 - name, start: (145, 9), end: (145, 29), text: `assignment_statement`
+    pattern:  2, capture: 4 - reference.call, start: (146, 11), end: (147, 24), text: `expression_list
+            (identifier)`
+    pattern:  2, capture: 1 - name, start: (146, 11), end: (146, 26), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (149, 11), end: (150, 25), text: `expression_list
+            (int_literal)`
+    pattern:  2, capture: 1 - name, start: (149, 11), end: (149, 26), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (152, 9), end: (154, 25), text: `assignment_statement
+          (expression_list
+            (identifier))`
+    pattern:  2, capture: 1 - name, start: (152, 9), end: (152, 29), text: `assignment_statement`
+    pattern:  2, capture: 4 - reference.call, start: (153, 11), end: (154, 24), text: `expression_list
+            (identifier)`
+    pattern:  2, capture: 1 - name, start: (153, 11), end: (153, 26), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (155, 11), end: (156, 25), text: `expression_list
+            (int_literal)`
+    pattern:  2, capture: 1 - name, start: (155, 11), end: (155, 26), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (157, 9), end: (159, 25), text: `assignment_statement
+          (expression_list
+            (identifier))`
+    pattern:  2, capture: 1 - name, start: (157, 9), end: (157, 29), text: `assignment_statement`
+    pattern:  2, capture: 4 - reference.call, start: (158, 11), end: (159, 24), text: `expression_list
+            (identifier)`
+    pattern:  2, capture: 1 - name, start: (158, 11), end: (158, 26), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (160, 11), end: (161, 25), text: `expression_list
+            (int_literal)`
+    pattern:  2, capture: 1 - name, start: (160, 11), end: (160, 26), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (162, 9), end: (164, 25), text: `assignment_statement
+          (expression_list
+            (identifier))`
+    pattern:  2, capture: 1 - name, start: (162, 9), end: (162, 29), text: `assignment_statement`
+    pattern:  2, capture: 4 - reference.call, start: (163, 11), end: (164, 24), text: `expression_list
+            (identifier)`
+    pattern:  2, capture: 1 - name, start: (163, 11), end: (163, 26), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (165, 11), end: (166, 25), text: `expression_list
+            (int_literal)`
+    pattern:  2, capture: 1 - name, start: (165, 11), end: (165, 26), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (167, 9), end: (169, 25), text: `assignment_statement
+          (expression_list
+            (identifier))`
+    pattern:  2, capture: 1 - name, start: (167, 9), end: (167, 29), text: `assignment_statement`
+    pattern:  2, capture: 4 - reference.call, start: (168, 11), end: (169, 24), text: `expression_list
+            (identifier)`
+    pattern:  2, capture: 1 - name, start: (168, 11), end: (168, 26), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (170, 11), end: (171, 25), text: `expression_list
+            (int_literal)`
+    pattern:  2, capture: 1 - name, start: (170, 11), end: (170, 26), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (172, 9), end: (174, 25), text: `assignment_statement
+          (expression_list
+            (identifier))`
+    pattern:  2, capture: 1 - name, start: (172, 9), end: (172, 29), text: `assignment_statement`
+    pattern:  2, capture: 4 - reference.call, start: (173, 11), end: (174, 24), text: `expression_list
+            (identifier)`
+    pattern:  2, capture: 1 - name, start: (173, 11), end: (173, 26), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (175, 11), end: (176, 25), text: `expression_list
+            (int_literal)`
+    pattern:  2, capture: 1 - name, start: (175, 11), end: (175, 26), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (177, 9), end: (179, 25), text: `assignment_statement
+          (expression_list
+            (identifier))`
+    pattern:  2, capture: 1 - name, start: (177, 9), end: (177, 29), text: `assignment_statement`
+    pattern:  2, capture: 4 - reference.call, start: (178, 11), end: (179, 24), text: `expression_list
+            (identifier)`
+    pattern:  2, capture: 1 - name, start: (178, 11), end: (178, 26), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (180, 11), end: (181, 25), text: `expression_list
+            (int_literal)`
+    pattern:  2, capture: 1 - name, start: (180, 11), end: (180, 26), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (182, 9), end: (184, 25), text: `assignment_statement
+          (expression_list
+            (identifier))`
+    pattern:  2, capture: 1 - name, start: (182, 9), end: (182, 29), text: `assignment_statement`
+    pattern:  2, capture: 4 - reference.call, start: (183, 11), end: (184, 24), text: `expression_list
+            (identifier)`
+    pattern:  2, capture: 1 - name, start: (183, 11), end: (183, 26), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (185, 11), end: (186, 25), text: `expression_list
+            (int_literal)`
+    pattern:  2, capture: 1 - name, start: (185, 11), end: (185, 26), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (187, 9), end: (189, 25), text: `assignment_statement
+          (expression_list
+            (identifier))`
+    pattern:  2, capture: 1 - name, start: (187, 9), end: (187, 29), text: `assignment_statement`
+    pattern:  2, capture: 4 - reference.call, start: (188, 11), end: (189, 24), text: `expression_list
+            (identifier)`
+    pattern:  2, capture: 1 - name, start: (188, 11), end: (188, 26), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (190, 11), end: (191, 25), text: `expression_list
+            (int_literal)`
+    pattern:  2, capture: 1 - name, start: (190, 11), end: (190, 26), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (192, 9), end: (194, 25), text: `assignment_statement
+          (expression_list
+            (identifier))`
+    pattern:  2, capture: 1 - name, start: (192, 9), end: (192, 29), text: `assignment_statement`
+    pattern:  2, capture: 4 - reference.call, start: (193, 11), end: (194, 24), text: `expression_list
+            (identifier)`
+    pattern:  2, capture: 1 - name, start: (193, 11), end: (193, 26), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (195, 11), end: (196, 25), text: `expression_list
+            (int_literal)`
+    pattern:  2, capture: 1 - name, start: (195, 11), end: (195, 26), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (197, 9), end: (199, 25), text: `assignment_statement
+          (expression_list
+            (identifier))`
+    pattern:  2, capture: 1 - name, start: (197, 9), end: (197, 29), text: `assignment_statement`
+    pattern:  2, capture: 4 - reference.call, start: (198, 11), end: (199, 24), text: `expression_list
+            (identifier)`
+    pattern:  2, capture: 1 - name, start: (198, 11), end: (198, 26), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (200, 11), end: (201, 25), text: `expression_list
+            (int_literal)`
+    pattern:  2, capture: 1 - name, start: (200, 11), end: (200, 26), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (202, 9), end: (204, 25), text: `assignment_statement
+          (expression_list
+            (identifier))`
+    pattern:  2, capture: 1 - name, start: (202, 9), end: (202, 29), text: `assignment_statement`
+    pattern:  2, capture: 4 - reference.call, start: (203, 11), end: (204, 24), text: `expression_list
+            (identifier)`
+    pattern:  2, capture: 1 - name, start: (203, 11), end: (203, 26), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (205, 11), end: (206, 25), text: `expression_list
+            (int_literal)`
+    pattern:  2, capture: 1 - name, start: (205, 11), end: (205, 26), text: `expression_list`
+    pattern:  5, capture: 1 - name, start: (212, 8), end: (212, 12), text: `main`
+    pattern:  0, capture: 2 - definition.function, start: (214, 0), end: (216, 1), text: `func main() {
+  a, b := 1, 2
+}`
+    pattern:  0, capture: 1 - name, start: (214, 5), end: (214, 9), text: `main`
+    pattern:  2, capture: 4 - reference.call, start: (220, 1), end: (222, 25), text: `source_file
+  (package_clause
+    (package_identifier))`
+    pattern:  2, capture: 1 - name, start: (220, 1), end: (220, 12), text: `source_file`
+    pattern:  2, capture: 4 - reference.call, start: (221, 3), end: (222, 24), text: `package_clause
+    (package_identifier)`
+    pattern:  2, capture: 1 - name, start: (221, 3), end: (221, 17), text: `package_clause`
+    pattern:  2, capture: 4 - reference.call, start: (223, 3), end: (224, 16), text: `function_declaration
+    (identifier)`
+    pattern:  2, capture: 1 - name, start: (223, 3), end: (223, 23), text: `function_declaration`
+    pattern:  2, capture: 4 - reference.call, start: (226, 5), end: (234, 28), text: `block
+      (statement_list
+        (short_var_declaration
+          (expression_list
+            (identifier)
+            (identifier))
+          (expression_list
+            (int_literal)
+            (int_literal))))`
+    pattern:  2, capture: 1 - name, start: (226, 5), end: (226, 10), text: `block`
+    pattern:  2, capture: 4 - reference.call, start: (227, 7), end: (234, 27), text: `statement_list
+        (short_var_declaration
+          (expression_list
+            (identifier)
+            (identifier))
+          (expression_list
+            (int_literal)
+            (int_literal)))`
+    pattern:  2, capture: 1 - name, start: (227, 7), end: (227, 21), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (228, 9), end: (231, 25), text: `short_var_declaration
+          (expression_list
+            (identifier)
+            (identifier))`
+    pattern:  2, capture: 1 - name, start: (228, 9), end: (228, 30), text: `short_var_declaration`
+    pattern:  2, capture: 4 - reference.call, start: (229, 11), end: (230, 24), text: `expression_list
+            (identifier)`
+    pattern:  2, capture: 1 - name, start: (229, 11), end: (229, 26), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (232, 11), end: (233, 25), text: `expression_list
+            (int_literal)`
+    pattern:  2, capture: 1 - name, start: (232, 11), end: (232, 26), text: `expression_list`
+    pattern:  5, capture: 1 - name, start: (240, 8), end: (240, 12), text: `main`
+    pattern:  0, capture: 2 - definition.function, start: (242, 0), end: (264, 1), text: `func main() {
+  if a {
+    b()
+  }
+
+  if a := b(); c {
+    d()
+  }
+
+  if a {
+    b()
+  } else {
+    c()
+  }
+
+  if b {
+    c()
+  } else if d {
+    e()
+  } else {
+    f()
+  }
+}`
+    pattern:  0, capture: 1 - name, start: (242, 5), end: (242, 9), text: `main`
+    pattern:  2, capture: 4 - reference.call, start: (244, 4), end: (244, 7), text: `b()`
+    pattern:  2, capture: 1 - name, start: (244, 4), end: (244, 5), text: `b`
+    pattern:  2, capture: 4 - reference.call, start: (247, 10), end: (247, 13), text: `b()`
+    pattern:  2, capture: 1 - name, start: (247, 10), end: (247, 11), text: `b`
+    pattern:  2, capture: 4 - reference.call, start: (248, 4), end: (248, 7), text: `d()`
+    pattern:  2, capture: 1 - name, start: (248, 4), end: (248, 5), text: `d`
+    pattern:  2, capture: 4 - reference.call, start: (252, 4), end: (252, 7), text: `b()`
+    pattern:  2, capture: 1 - name, start: (252, 4), end: (252, 5), text: `b`
+    pattern:  2, capture: 4 - reference.call, start: (254, 4), end: (254, 7), text: `c()`
+    pattern:  2, capture: 1 - name, start: (254, 4), end: (254, 5), text: `c`
+    pattern:  2, capture: 4 - reference.call, start: (258, 4), end: (258, 7), text: `c()`
+    pattern:  2, capture: 1 - name, start: (258, 4), end: (258, 5), text: `c`
+    pattern:  2, capture: 4 - reference.call, start: (260, 4), end: (260, 7), text: `e()`
+    pattern:  2, capture: 1 - name, start: (260, 4), end: (260, 5), text: `e`
+    pattern:  2, capture: 4 - reference.call, start: (262, 4), end: (262, 7), text: `f()`
+    pattern:  2, capture: 1 - name, start: (262, 4), end: (262, 5), text: `f`
+    pattern:  2, capture: 4 - reference.call, start: (268, 1), end: (270, 25), text: `source_file
+  (package_clause
+    (package_identifier))`
+    pattern:  2, capture: 1 - name, start: (268, 1), end: (268, 12), text: `source_file`
+    pattern:  2, capture: 4 - reference.call, start: (269, 3), end: (270, 24), text: `package_clause
+    (package_identifier)`
+    pattern:  2, capture: 1 - name, start: (269, 3), end: (269, 17), text: `package_clause`
+    pattern:  2, capture: 4 - reference.call, start: (271, 3), end: (272, 22), text: `function_declaration
+    name: (identifier)`
+    pattern:  2, capture: 1 - name, start: (271, 3), end: (271, 23), text: `function_declaration`
+    pattern:  2, capture: 4 - reference.call, start: (274, 11), end: (334, 53), text: `block
+      (statement_list
+        (if_statement
+          condition: (identifier)
+          consequence: (block
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list))))))
+        (if_statement
+          initializer: (short_var_declaration
+            left: (expression_list
+              (identifier))
+            right: (expression_list
+              (call_expression
+                function: (identifier)
+                arguments: (argument_list))))
+          condition: (identifier)
+          consequence: (block
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list))))))
+        (if_statement
+          condition: (identifier)
+          consequence: (block
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list)))))
+          alternative: (block
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list))))))
+        (if_statement
+          condition: (identifier)
+          consequence: (block
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list)))))
+          alternative: (if_statement
+            condition: (identifier)
+            consequence: (block
+              (statement_list
+                (expression_statement
+                  (call_expression
+                    function: (identifier)
+                    arguments: (argument_list)))))
+            alternative: (block
+              (statement_list
+                (expression_statement
+                  (call_expression
+                    function: (identifier)
+                    arguments: (argument_list))))))))`
+    pattern:  2, capture: 1 - name, start: (274, 11), end: (274, 16), text: `block`
+    pattern:  2, capture: 4 - reference.call, start: (275, 7), end: (283, 49), text: `statement_list
+        (if_statement
+          condition: (identifier)
+          consequence: (block
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list))))))`
+    pattern:  2, capture: 1 - name, start: (275, 7), end: (275, 21), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (276, 9), end: (277, 33), text: `if_statement
+          condition: (identifier)`
+    pattern:  2, capture: 1 - name, start: (276, 9), end: (276, 21), text: `if_statement`
+    pattern:  2, capture: 4 - reference.call, start: (278, 24), end: (283, 47), text: `block
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list))))`
+    pattern:  2, capture: 1 - name, start: (278, 24), end: (278, 29), text: `block`
+    pattern:  2, capture: 4 - reference.call, start: (279, 13), end: (283, 46), text: `statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list)))`
+    pattern:  2, capture: 1 - name, start: (279, 13), end: (279, 27), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (280, 15), end: (283, 45), text: `expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list))`
+    pattern:  2, capture: 1 - name, start: (280, 15), end: (280, 35), text: `expression_statement`
+    pattern:  2, capture: 4 - reference.call, start: (281, 17), end: (282, 40), text: `call_expression
+                  function: (identifier)`
+    pattern:  2, capture: 1 - name, start: (281, 17), end: (281, 32), text: `call_expression`
+    pattern:  2, capture: 4 - reference.call, start: (284, 9), end: (291, 45), text: `if_statement
+          initializer: (short_var_declaration
+            left: (expression_list
+              (identifier))
+            right: (expression_list
+              (call_expression
+                function: (identifier)
+                arguments: (argument_list))))`
+    pattern:  2, capture: 1 - name, start: (284, 9), end: (284, 21), text: `if_statement`
+    pattern:  2, capture: 4 - reference.call, start: (285, 24), end: (287, 27), text: `short_var_declaration
+            left: (expression_list
+              (identifier))`
+    pattern:  2, capture: 1 - name, start: (285, 24), end: (285, 45), text: `short_var_declaration`
+    pattern:  2, capture: 4 - reference.call, start: (286, 19), end: (287, 26), text: `expression_list
+              (identifier)`
+    pattern:  2, capture: 1 - name, start: (286, 19), end: (286, 34), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (288, 20), end: (291, 43), text: `expression_list
+              (call_expression
+                function: (identifier)
+                arguments: (argument_list))`
+    pattern:  2, capture: 1 - name, start: (288, 20), end: (288, 35), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (289, 15), end: (290, 38), text: `call_expression
+                function: (identifier)`
+    pattern:  2, capture: 1 - name, start: (289, 15), end: (289, 30), text: `call_expression`
+    pattern:  2, capture: 4 - reference.call, start: (293, 24), end: (298, 47), text: `block
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list))))`
+    pattern:  2, capture: 1 - name, start: (293, 24), end: (293, 29), text: `block`
+    pattern:  2, capture: 4 - reference.call, start: (294, 13), end: (298, 46), text: `statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list)))`
+    pattern:  2, capture: 1 - name, start: (294, 13), end: (294, 27), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (295, 15), end: (298, 45), text: `expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list))`
+    pattern:  2, capture: 1 - name, start: (295, 15), end: (295, 35), text: `expression_statement`
+    pattern:  2, capture: 4 - reference.call, start: (296, 17), end: (297, 40), text: `call_expression
+                  function: (identifier)`
+    pattern:  2, capture: 1 - name, start: (296, 17), end: (296, 32), text: `call_expression`
+    pattern:  2, capture: 4 - reference.call, start: (299, 9), end: (300, 33), text: `if_statement
+          condition: (identifier)`
+    pattern:  2, capture: 1 - name, start: (299, 9), end: (299, 21), text: `if_statement`
+    pattern:  2, capture: 4 - reference.call, start: (301, 24), end: (306, 47), text: `block
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list))))`
+    pattern:  2, capture: 1 - name, start: (301, 24), end: (301, 29), text: `block`
+    pattern:  2, capture: 4 - reference.call, start: (302, 13), end: (306, 46), text: `statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list)))`
+    pattern:  2, capture: 1 - name, start: (302, 13), end: (302, 27), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (303, 15), end: (306, 45), text: `expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list))`
+    pattern:  2, capture: 1 - name, start: (303, 15), end: (303, 35), text: `expression_statement`
+    pattern:  2, capture: 4 - reference.call, start: (304, 17), end: (305, 40), text: `call_expression
+                  function: (identifier)`
+    pattern:  2, capture: 1 - name, start: (304, 17), end: (304, 32), text: `call_expression`
+    pattern:  2, capture: 4 - reference.call, start: (307, 24), end: (312, 47), text: `block
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list))))`
+    pattern:  2, capture: 1 - name, start: (307, 24), end: (307, 29), text: `block`
+    pattern:  2, capture: 4 - reference.call, start: (308, 13), end: (312, 46), text: `statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list)))`
+    pattern:  2, capture: 1 - name, start: (308, 13), end: (308, 27), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (309, 15), end: (312, 45), text: `expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list))`
+    pattern:  2, capture: 1 - name, start: (309, 15), end: (309, 35), text: `expression_statement`
+    pattern:  2, capture: 4 - reference.call, start: (310, 17), end: (311, 40), text: `call_expression
+                  function: (identifier)`
+    pattern:  2, capture: 1 - name, start: (310, 17), end: (310, 32), text: `call_expression`
+    pattern:  2, capture: 4 - reference.call, start: (313, 9), end: (314, 33), text: `if_statement
+          condition: (identifier)`
+    pattern:  2, capture: 1 - name, start: (313, 9), end: (313, 21), text: `if_statement`
+    pattern:  2, capture: 4 - reference.call, start: (315, 24), end: (320, 47), text: `block
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list))))`
+    pattern:  2, capture: 1 - name, start: (315, 24), end: (315, 29), text: `block`
+    pattern:  2, capture: 4 - reference.call, start: (316, 13), end: (320, 46), text: `statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list)))`
+    pattern:  2, capture: 1 - name, start: (316, 13), end: (316, 27), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (317, 15), end: (320, 45), text: `expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list))`
+    pattern:  2, capture: 1 - name, start: (317, 15), end: (317, 35), text: `expression_statement`
+    pattern:  2, capture: 4 - reference.call, start: (318, 17), end: (319, 40), text: `call_expression
+                  function: (identifier)`
+    pattern:  2, capture: 1 - name, start: (318, 17), end: (318, 32), text: `call_expression`
+    pattern:  2, capture: 4 - reference.call, start: (321, 24), end: (322, 35), text: `if_statement
+            condition: (identifier)`
+    pattern:  2, capture: 1 - name, start: (321, 24), end: (321, 36), text: `if_statement`
+    pattern:  2, capture: 4 - reference.call, start: (323, 26), end: (328, 49), text: `block
+              (statement_list
+                (expression_statement
+                  (call_expression
+                    function: (identifier)
+                    arguments: (argument_list))))`
+    pattern:  2, capture: 1 - name, start: (323, 26), end: (323, 31), text: `block`
+    pattern:  2, capture: 4 - reference.call, start: (324, 15), end: (328, 48), text: `statement_list
+                (expression_statement
+                  (call_expression
+                    function: (identifier)
+                    arguments: (argument_list)))`
+    pattern:  2, capture: 1 - name, start: (324, 15), end: (324, 29), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (325, 17), end: (328, 47), text: `expression_statement
+                  (call_expression
+                    function: (identifier)
+                    arguments: (argument_list))`
+    pattern:  2, capture: 1 - name, start: (325, 17), end: (325, 37), text: `expression_statement`
+    pattern:  2, capture: 4 - reference.call, start: (326, 19), end: (327, 42), text: `call_expression
+                    function: (identifier)`
+    pattern:  2, capture: 1 - name, start: (326, 19), end: (326, 34), text: `call_expression`
+    pattern:  2, capture: 4 - reference.call, start: (329, 26), end: (334, 49), text: `block
+              (statement_list
+                (expression_statement
+                  (call_expression
+                    function: (identifier)
+                    arguments: (argument_list))))`
+    pattern:  2, capture: 1 - name, start: (329, 26), end: (329, 31), text: `block`
+    pattern:  2, capture: 4 - reference.call, start: (330, 15), end: (334, 48), text: `statement_list
+                (expression_statement
+                  (call_expression
+                    function: (identifier)
+                    arguments: (argument_list)))`
+    pattern:  2, capture: 1 - name, start: (330, 15), end: (330, 29), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (331, 17), end: (334, 47), text: `expression_statement
+                  (call_expression
+                    function: (identifier)
+                    arguments: (argument_list))`
+    pattern:  2, capture: 1 - name, start: (331, 17), end: (331, 37), text: `expression_statement`
+    pattern:  2, capture: 4 - reference.call, start: (332, 19), end: (333, 42), text: `call_expression
+                    function: (identifier)`
+    pattern:  2, capture: 1 - name, start: (332, 19), end: (332, 34), text: `call_expression`
+    pattern:  5, capture: 1 - name, start: (340, 8), end: (340, 12), text: `main`
+    pattern:  0, capture: 2 - definition.function, start: (342, 0), end: (368, 1), text: `func main() {
+  for {
+    a()
+    goto loop
+  }
+
+  loop: for i := 0; i < 5; i++ {
+    a()
+    break loop
+  }
+
+loop2:
+  for ; i < 10; i++ {
+    a()
+    continue loop2
+  }
+
+  for ;; {
+    a()
+    continue
+  }
+
+  for x := range y {
+    a(x)
+    break
+  }
+}`
+    pattern:  0, capture: 1 - name, start: (342, 5), end: (342, 9), text: `main`
+    pattern:  2, capture: 4 - reference.call, start: (344, 4), end: (344, 7), text: `a()`
+    pattern:  2, capture: 1 - name, start: (344, 4), end: (344, 5), text: `a`
+    pattern:  2, capture: 4 - reference.call, start: (349, 4), end: (349, 7), text: `a()`
+    pattern:  2, capture: 1 - name, start: (349, 4), end: (349, 5), text: `a`
+    pattern:  2, capture: 4 - reference.call, start: (355, 4), end: (355, 7), text: `a()`
+    pattern:  2, capture: 1 - name, start: (355, 4), end: (355, 5), text: `a`
+    pattern:  2, capture: 4 - reference.call, start: (360, 4), end: (360, 7), text: `a()`
+    pattern:  2, capture: 1 - name, start: (360, 4), end: (360, 5), text: `a`
+    pattern:  2, capture: 4 - reference.call, start: (365, 4), end: (365, 8), text: `a(x)`
+    pattern:  2, capture: 1 - name, start: (365, 4), end: (365, 5), text: `a`
+    pattern:  2, capture: 4 - reference.call, start: (372, 1), end: (374, 25), text: `source_file
+  (package_clause
+    (package_identifier))`
+    pattern:  2, capture: 1 - name, start: (372, 1), end: (372, 12), text: `source_file`
+    pattern:  2, capture: 4 - reference.call, start: (373, 3), end: (374, 24), text: `package_clause
+    (package_identifier)`
+    pattern:  2, capture: 1 - name, start: (373, 3), end: (373, 17), text: `package_clause`
+    pattern:  2, capture: 4 - reference.call, start: (375, 3), end: (376, 16), text: `function_declaration
+    (identifier)`
+    pattern:  2, capture: 1 - name, start: (375, 3), end: (375, 23), text: `function_declaration`
+    pattern:  2, capture: 4 - reference.call, start: (378, 5), end: (449, 35), text: `block
+      (statement_list
+        (for_statement
+          (block
+            (statement_list
+              (expression_statement
+                (call_expression
+                  (identifier)
+                  (argument_list)))
+              (goto_statement
+                (label_name)))))
+        (labeled_statement
+          (label_name)
+          (for_statement
+            (for_clause
+              (short_var_declaration
+                (expression_list
+                  (identifier))
+                (expression_list
+                  (int_literal)))
+              (binary_expression
+                (identifier)
+                (int_literal))
+              (inc_statement
+                (identifier)))
+            (block
+              (statement_list
+                (expression_statement
+                  (call_expression
+                    (identifier)
+                    (argument_list)))
+                (break_statement
+                  (label_name))))))
+        (labeled_statement
+          (label_name)
+          (for_statement
+            (for_clause
+              (binary_expression
+                (identifier)
+                (int_literal))
+              (inc_statement
+                (identifier)))
+            (block
+              (statement_list
+                (expression_statement
+                  (call_expression
+                    (identifier)
+                    (argument_list)))
+                (continue_statement
+                  (label_name))))))
+        (for_statement
+          (for_clause)
+          (block
+            (statement_list
+              (expression_statement
+                (call_expression
+                  (identifier)
+                  (argument_list)))
+              (continue_statement))))
+        (for_statement
+          (range_clause
+            (expression_list
+              (identifier))
+            (identifier))
+          (block
+            (statement_list
+              (expression_statement
+                (call_expression
+                  (identifier)
+                  (argument_list
+                    (identifier))))
+              (break_statement)))))`
+    pattern:  2, capture: 1 - name, start: (378, 5), end: (378, 10), text: `block`
+    pattern:  2, capture: 4 - reference.call, start: (379, 7), end: (388, 32), text: `statement_list
+        (for_statement
+          (block
+            (statement_list
+              (expression_statement
+                (call_expression
+                  (identifier)
+                  (argument_list)))
+              (goto_statement
+                (label_name)))))`
+    pattern:  2, capture: 1 - name, start: (379, 7), end: (379, 21), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (380, 9), end: (388, 31), text: `for_statement
+          (block
+            (statement_list
+              (expression_statement
+                (call_expression
+                  (identifier)
+                  (argument_list)))
+              (goto_statement
+                (label_name))))`
+    pattern:  2, capture: 1 - name, start: (380, 9), end: (380, 22), text: `for_statement`
+    pattern:  2, capture: 4 - reference.call, start: (381, 11), end: (388, 30), text: `block
+            (statement_list
+              (expression_statement
+                (call_expression
+                  (identifier)
+                  (argument_list)))
+              (goto_statement
+                (label_name)))`
+    pattern:  2, capture: 1 - name, start: (381, 11), end: (381, 16), text: `block`
+    pattern:  2, capture: 4 - reference.call, start: (382, 13), end: (386, 35), text: `statement_list
+              (expression_statement
+                (call_expression
+                  (identifier)
+                  (argument_list)))`
+    pattern:  2, capture: 1 - name, start: (382, 13), end: (382, 27), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (383, 15), end: (386, 34), text: `expression_statement
+                (call_expression
+                  (identifier)
+                  (argument_list))`
+    pattern:  2, capture: 1 - name, start: (383, 15), end: (383, 35), text: `expression_statement`
+    pattern:  2, capture: 4 - reference.call, start: (384, 17), end: (385, 30), text: `call_expression
+                  (identifier)`
+    pattern:  2, capture: 1 - name, start: (384, 17), end: (384, 32), text: `call_expression`
+    pattern:  2, capture: 4 - reference.call, start: (387, 15), end: (388, 28), text: `goto_statement
+                (label_name)`
+    pattern:  2, capture: 1 - name, start: (387, 15), end: (387, 29), text: `goto_statement`
+    pattern:  2, capture: 4 - reference.call, start: (389, 9), end: (390, 22), text: `labeled_statement
+          (label_name)`
+    pattern:  2, capture: 1 - name, start: (389, 9), end: (389, 26), text: `labeled_statement`
+    pattern:  2, capture: 4 - reference.call, start: (391, 11), end: (402, 30), text: `for_statement
+            (for_clause
+              (short_var_declaration
+                (expression_list
+                  (identifier))
+                (expression_list
+                  (int_literal)))
+              (binary_expression
+                (identifier)
+                (int_literal))
+              (inc_statement
+                (identifier)))`
+    pattern:  2, capture: 1 - name, start: (391, 11), end: (391, 24), text: `for_statement`
+    pattern:  2, capture: 4 - reference.call, start: (392, 13), end: (397, 33), text: `for_clause
+              (short_var_declaration
+                (expression_list
+                  (identifier))
+                (expression_list
+                  (int_literal)))`
+    pattern:  2, capture: 1 - name, start: (392, 13), end: (392, 23), text: `for_clause`
+    pattern:  2, capture: 4 - reference.call, start: (393, 15), end: (395, 31), text: `short_var_declaration
+                (expression_list
+                  (identifier))`
+    pattern:  2, capture: 1 - name, start: (393, 15), end: (393, 36), text: `short_var_declaration`
+    pattern:  2, capture: 4 - reference.call, start: (394, 17), end: (395, 30), text: `expression_list
+                  (identifier)`
+    pattern:  2, capture: 1 - name, start: (394, 17), end: (394, 32), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (396, 17), end: (397, 31), text: `expression_list
+                  (int_literal)`
+    pattern:  2, capture: 1 - name, start: (396, 17), end: (396, 32), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (398, 15), end: (399, 28), text: `binary_expression
+                (identifier)`
+    pattern:  2, capture: 1 - name, start: (398, 15), end: (398, 32), text: `binary_expression`
+    pattern:  2, capture: 4 - reference.call, start: (401, 15), end: (402, 28), text: `inc_statement
+                (identifier)`
+    pattern:  2, capture: 1 - name, start: (401, 15), end: (401, 28), text: `inc_statement`
+    pattern:  2, capture: 4 - reference.call, start: (403, 13), end: (410, 32), text: `block
+              (statement_list
+                (expression_statement
+                  (call_expression
+                    (identifier)
+                    (argument_list)))
+                (break_statement
+                  (label_name)))`
+    pattern:  2, capture: 1 - name, start: (403, 13), end: (403, 18), text: `block`
+    pattern:  2, capture: 4 - reference.call, start: (404, 15), end: (408, 37), text: `statement_list
+                (expression_statement
+                  (call_expression
+                    (identifier)
+                    (argument_list)))`
+    pattern:  2, capture: 1 - name, start: (404, 15), end: (404, 29), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (405, 17), end: (408, 36), text: `expression_statement
+                  (call_expression
+                    (identifier)
+                    (argument_list))`
+    pattern:  2, capture: 1 - name, start: (405, 17), end: (405, 37), text: `expression_statement`
+    pattern:  2, capture: 4 - reference.call, start: (406, 19), end: (407, 32), text: `call_expression
+                    (identifier)`
+    pattern:  2, capture: 1 - name, start: (406, 19), end: (406, 34), text: `call_expression`
+    pattern:  2, capture: 4 - reference.call, start: (409, 17), end: (410, 30), text: `break_statement
+                  (label_name)`
+    pattern:  2, capture: 1 - name, start: (409, 17), end: (409, 32), text: `break_statement`
+    pattern:  2, capture: 4 - reference.call, start: (411, 9), end: (412, 22), text: `labeled_statement
+          (label_name)`
+    pattern:  2, capture: 1 - name, start: (411, 9), end: (411, 26), text: `labeled_statement`
+    pattern:  2, capture: 4 - reference.call, start: (413, 11), end: (419, 30), text: `for_statement
+            (for_clause
+              (binary_expression
+                (identifier)
+                (int_literal))
+              (inc_statement
+                (identifier)))`
+    pattern:  2, capture: 1 - name, start: (413, 11), end: (413, 24), text: `for_statement`
+    pattern:  2, capture: 4 - reference.call, start: (414, 13), end: (417, 30), text: `for_clause
+              (binary_expression
+                (identifier)
+                (int_literal))`
+    pattern:  2, capture: 1 - name, start: (414, 13), end: (414, 23), text: `for_clause`
+    pattern:  2, capture: 4 - reference.call, start: (415, 15), end: (416, 28), text: `binary_expression
+                (identifier)`
+    pattern:  2, capture: 1 - name, start: (415, 15), end: (415, 32), text: `binary_expression`
+    pattern:  2, capture: 4 - reference.call, start: (418, 15), end: (419, 28), text: `inc_statement
+                (identifier)`
+    pattern:  2, capture: 1 - name, start: (418, 15), end: (418, 28), text: `inc_statement`
+    pattern:  2, capture: 4 - reference.call, start: (420, 13), end: (427, 32), text: `block
+              (statement_list
+                (expression_statement
+                  (call_expression
+                    (identifier)
+                    (argument_list)))
+                (continue_statement
+                  (label_name)))`
+    pattern:  2, capture: 1 - name, start: (420, 13), end: (420, 18), text: `block`
+    pattern:  2, capture: 4 - reference.call, start: (421, 15), end: (425, 37), text: `statement_list
+                (expression_statement
+                  (call_expression
+                    (identifier)
+                    (argument_list)))`
+    pattern:  2, capture: 1 - name, start: (421, 15), end: (421, 29), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (422, 17), end: (425, 36), text: `expression_statement
+                  (call_expression
+                    (identifier)
+                    (argument_list))`
+    pattern:  2, capture: 1 - name, start: (422, 17), end: (422, 37), text: `expression_statement`
+    pattern:  2, capture: 4 - reference.call, start: (423, 19), end: (424, 32), text: `call_expression
+                    (identifier)`
+    pattern:  2, capture: 1 - name, start: (423, 19), end: (423, 34), text: `call_expression`
+    pattern:  2, capture: 4 - reference.call, start: (426, 17), end: (427, 30), text: `continue_statement
+                  (label_name)`
+    pattern:  2, capture: 1 - name, start: (426, 17), end: (426, 35), text: `continue_statement`
+    pattern:  2, capture: 4 - reference.call, start: (428, 9), end: (429, 22), text: `for_statement
+          (for_clause)`
+    pattern:  2, capture: 1 - name, start: (428, 9), end: (428, 22), text: `for_statement`
+    pattern:  2, capture: 4 - reference.call, start: (430, 11), end: (436, 35), text: `block
+            (statement_list
+              (expression_statement
+                (call_expression
+                  (identifier)
+                  (argument_list)))
+              (continue_statement))`
+    pattern:  2, capture: 1 - name, start: (430, 11), end: (430, 16), text: `block`
+    pattern:  2, capture: 4 - reference.call, start: (431, 13), end: (435, 35), text: `statement_list
+              (expression_statement
+                (call_expression
+                  (identifier)
+                  (argument_list)))`
+    pattern:  2, capture: 1 - name, start: (431, 13), end: (431, 27), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (432, 15), end: (435, 34), text: `expression_statement
+                (call_expression
+                  (identifier)
+                  (argument_list))`
+    pattern:  2, capture: 1 - name, start: (432, 15), end: (432, 35), text: `expression_statement`
+    pattern:  2, capture: 4 - reference.call, start: (433, 17), end: (434, 30), text: `call_expression
+                  (identifier)`
+    pattern:  2, capture: 1 - name, start: (433, 17), end: (433, 32), text: `call_expression`
+    pattern:  2, capture: 4 - reference.call, start: (437, 9), end: (441, 25), text: `for_statement
+          (range_clause
+            (expression_list
+              (identifier))
+            (identifier))`
+    pattern:  2, capture: 1 - name, start: (437, 9), end: (437, 22), text: `for_statement`
+    pattern:  2, capture: 4 - reference.call, start: (438, 11), end: (440, 27), text: `range_clause
+            (expression_list
+              (identifier))`
+    pattern:  2, capture: 1 - name, start: (438, 11), end: (438, 23), text: `range_clause`
+    pattern:  2, capture: 4 - reference.call, start: (439, 13), end: (440, 26), text: `expression_list
+              (identifier)`
+    pattern:  2, capture: 1 - name, start: (439, 13), end: (439, 28), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (442, 11), end: (449, 32), text: `block
+            (statement_list
+              (expression_statement
+                (call_expression
+                  (identifier)
+                  (argument_list
+                    (identifier))))
+              (break_statement))`
+    pattern:  2, capture: 1 - name, start: (442, 11), end: (442, 16), text: `block`
+    pattern:  2, capture: 4 - reference.call, start: (443, 13), end: (448, 35), text: `statement_list
+              (expression_statement
+                (call_expression
+                  (identifier)
+                  (argument_list
+                    (identifier))))`
+    pattern:  2, capture: 1 - name, start: (443, 13), end: (443, 27), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (444, 15), end: (448, 34), text: `expression_statement
+                (call_expression
+                  (identifier)
+                  (argument_list
+                    (identifier)))`
+    pattern:  2, capture: 1 - name, start: (444, 15), end: (444, 35), text: `expression_statement`
+    pattern:  2, capture: 4 - reference.call, start: (445, 17), end: (446, 30), text: `call_expression
+                  (identifier)`
+    pattern:  2, capture: 1 - name, start: (445, 17), end: (445, 32), text: `call_expression`
+    pattern:  2, capture: 4 - reference.call, start: (447, 19), end: (448, 32), text: `argument_list
+                    (identifier)`
+    pattern:  2, capture: 1 - name, start: (447, 19), end: (447, 32), text: `argument_list`
+    pattern:  2, capture: 4 - reference.call, start: (458, 6), end: (458, 9), text: `a()`
+    pattern:  2, capture: 1 - name, start: (458, 6), end: (458, 7), text: `a`
+    pattern:  2, capture: 4 - reference.call, start: (461, 6), end: (461, 9), text: `d()`
+    pattern:  2, capture: 1 - name, start: (461, 6), end: (461, 7), text: `d`
+    pattern:  2, capture: 4 - reference.call, start: (463, 6), end: (463, 9), text: `c()`
+    pattern:  2, capture: 1 - name, start: (463, 6), end: (463, 7), text: `c`
+    pattern:  2, capture: 4 - reference.call, start: (472, 14), end: (472, 17), text: `y()`
+    pattern:  2, capture: 1 - name, start: (472, 14), end: (472, 15), text: `y`
+    pattern:  2, capture: 4 - reference.call, start: (478, 1), end: (525, 33), text: `source_file
+  (function_declaration
+    name: (identifier)
+    parameters: (parameter_list)
+    body: (block
+      (statement_list
+        (expression_switch_statement
+          value: (identifier)
+          (expression_case
+            value: (expression_list
+              (int_literal)
+              (int_literal))
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list)))
+              (fallthrough_statement)))
+          (expression_case
+            value: (expression_list
+              (int_literal))
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list)))))
+          (default_case
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list)))
+              (break_statement))))
+        (expression_switch_statement
+          (expression_case
+            value: (expression_list
+              (true))
+            (statement_list
+              (return_statement))))
+        (expression_switch_statement
+          initializer: (short_var_declaration
+            left: (expression_list
+              (identifier))
+            right: (expression_list
+              (call_expression
+                function: (identifier)
+                arguments: (argument_list))))
+          value: (identifier)))))`
+    pattern:  2, capture: 1 - name, start: (478, 1), end: (478, 12), text: `source_file`
+    pattern:  2, capture: 4 - reference.call, start: (479, 3), end: (480, 22), text: `function_declaration
+    name: (identifier)`
+    pattern:  2, capture: 1 - name, start: (479, 3), end: (479, 23), text: `function_declaration`
+    pattern:  2, capture: 4 - reference.call, start: (482, 11), end: (525, 31), text: `block
+      (statement_list
+        (expression_switch_statement
+          value: (identifier)
+          (expression_case
+            value: (expression_list
+              (int_literal)
+              (int_literal))
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list)))
+              (fallthrough_statement)))
+          (expression_case
+            value: (expression_list
+              (int_literal))
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list)))))
+          (default_case
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list)))
+              (break_statement))))
+        (expression_switch_statement
+          (expression_case
+            value: (expression_list
+              (true))
+            (statement_list
+              (return_statement))))
+        (expression_switch_statement
+          initializer: (short_var_declaration
+            left: (expression_list
+              (identifier))
+            right: (expression_list
+              (call_expression
+                function: (identifier)
+                arguments: (argument_list))))
+          value: (identifier)))`
+    pattern:  2, capture: 1 - name, start: (482, 11), end: (482, 16), text: `block`
+    pattern:  2, capture: 4 - reference.call, start: (483, 7), end: (510, 34), text: `statement_list
+        (expression_switch_statement
+          value: (identifier)
+          (expression_case
+            value: (expression_list
+              (int_literal)
+              (int_literal))
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list)))
+              (fallthrough_statement)))
+          (expression_case
+            value: (expression_list
+              (int_literal))
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list)))))
+          (default_case
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list)))
+              (break_statement))))`
+    pattern:  2, capture: 1 - name, start: (483, 7), end: (483, 21), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (484, 9), end: (485, 29), text: `expression_switch_statement
+          value: (identifier)`
+    pattern:  2, capture: 1 - name, start: (484, 9), end: (484, 36), text: `expression_switch_statement`
+    pattern:  2, capture: 4 - reference.call, start: (486, 11), end: (489, 28), text: `expression_case
+            value: (expression_list
+              (int_literal)
+              (int_literal))`
+    pattern:  2, capture: 1 - name, start: (486, 11), end: (486, 26), text: `expression_case`
+    pattern:  2, capture: 4 - reference.call, start: (487, 20), end: (488, 27), text: `expression_list
+              (int_literal)`
+    pattern:  2, capture: 1 - name, start: (487, 20), end: (487, 35), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (490, 13), end: (494, 46), text: `statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list)))`
+    pattern:  2, capture: 1 - name, start: (490, 13), end: (490, 27), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (491, 15), end: (494, 45), text: `expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list))`
+    pattern:  2, capture: 1 - name, start: (491, 15), end: (491, 35), text: `expression_statement`
+    pattern:  2, capture: 4 - reference.call, start: (492, 17), end: (493, 40), text: `call_expression
+                  function: (identifier)`
+    pattern:  2, capture: 1 - name, start: (492, 17), end: (492, 32), text: `call_expression`
+    pattern:  2, capture: 4 - reference.call, start: (496, 11), end: (498, 28), text: `expression_case
+            value: (expression_list
+              (int_literal))`
+    pattern:  2, capture: 1 - name, start: (496, 11), end: (496, 26), text: `expression_case`
+    pattern:  2, capture: 4 - reference.call, start: (497, 20), end: (498, 27), text: `expression_list
+              (int_literal)`
+    pattern:  2, capture: 1 - name, start: (497, 20), end: (497, 35), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (499, 13), end: (503, 46), text: `statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list)))`
+    pattern:  2, capture: 1 - name, start: (499, 13), end: (499, 27), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (500, 15), end: (503, 45), text: `expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list))`
+    pattern:  2, capture: 1 - name, start: (500, 15), end: (500, 35), text: `expression_statement`
+    pattern:  2, capture: 4 - reference.call, start: (501, 17), end: (502, 40), text: `call_expression
+                  function: (identifier)`
+    pattern:  2, capture: 1 - name, start: (501, 17), end: (501, 32), text: `call_expression`
+    pattern:  2, capture: 4 - reference.call, start: (504, 11), end: (510, 32), text: `default_case
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list)))
+              (break_statement))`
+    pattern:  2, capture: 1 - name, start: (504, 11), end: (504, 23), text: `default_case`
+    pattern:  2, capture: 4 - reference.call, start: (505, 13), end: (509, 46), text: `statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list)))`
+    pattern:  2, capture: 1 - name, start: (505, 13), end: (505, 27), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (506, 15), end: (509, 45), text: `expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list))`
+    pattern:  2, capture: 1 - name, start: (506, 15), end: (506, 35), text: `expression_statement`
+    pattern:  2, capture: 4 - reference.call, start: (507, 17), end: (508, 40), text: `call_expression
+                  function: (identifier)`
+    pattern:  2, capture: 1 - name, start: (507, 17), end: (507, 32), text: `call_expression`
+    pattern:  2, capture: 4 - reference.call, start: (511, 9), end: (516, 34), text: `expression_switch_statement
+          (expression_case
+            value: (expression_list
+              (true))
+            (statement_list
+              (return_statement)))`
+    pattern:  2, capture: 1 - name, start: (511, 9), end: (511, 36), text: `expression_switch_statement`
+    pattern:  2, capture: 4 - reference.call, start: (512, 11), end: (514, 21), text: `expression_case
+            value: (expression_list
+              (true))`
+    pattern:  2, capture: 1 - name, start: (512, 11), end: (512, 26), text: `expression_case`
+    pattern:  2, capture: 4 - reference.call, start: (513, 20), end: (514, 20), text: `expression_list
+              (true)`
+    pattern:  2, capture: 1 - name, start: (513, 20), end: (513, 35), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (515, 13), end: (516, 32), text: `statement_list
+              (return_statement)`
+    pattern:  2, capture: 1 - name, start: (515, 13), end: (515, 27), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (517, 9), end: (524, 45), text: `expression_switch_statement
+          initializer: (short_var_declaration
+            left: (expression_list
+              (identifier))
+            right: (expression_list
+              (call_expression
+                function: (identifier)
+                arguments: (argument_list))))`
+    pattern:  2, capture: 1 - name, start: (517, 9), end: (517, 36), text: `expression_switch_statement`
+    pattern:  2, capture: 4 - reference.call, start: (518, 24), end: (520, 27), text: `short_var_declaration
+            left: (expression_list
+              (identifier))`
+    pattern:  2, capture: 1 - name, start: (518, 24), end: (518, 45), text: `short_var_declaration`
+    pattern:  2, capture: 4 - reference.call, start: (519, 19), end: (520, 26), text: `expression_list
+              (identifier)`
+    pattern:  2, capture: 1 - name, start: (519, 19), end: (519, 34), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (521, 20), end: (524, 43), text: `expression_list
+              (call_expression
+                function: (identifier)
+                arguments: (argument_list))`
+    pattern:  2, capture: 1 - name, start: (521, 20), end: (521, 35), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (522, 15), end: (523, 38), text: `call_expression
+                function: (identifier)`
+    pattern:  2, capture: 1 - name, start: (522, 15), end: (522, 30), text: `call_expression`
+    pattern:  0, capture: 2 - definition.function, start: (531, 0), end: (552, 1), text: `func main() {
+  switch e.(type) {
+    case []Person:
+      a()
+    case *Dog:
+      break
+  }
+  switch i := x.(type) {
+    case nil:
+    	printString("x is nil")
+    case int:
+    	printInt(i)
+    case float64:
+    	printFloat64(i)
+    case func(int) float64:
+    	printFunction(i)
+    case bool, string:
+    	printString("type is bool or string")
+    default:
+    	printString("don't know the type")
+  }
+}`
+    pattern:  0, capture: 1 - name, start: (531, 5), end: (531, 9), text: `main`
+    pattern:  4, capture: 1 - name, start: (533, 11), end: (533, 17), text: `Person`
+    pattern:  4, capture: 6 - reference.type, start: (533, 11), end: (533, 17), text: `Person`
+    pattern:  2, capture: 4 - reference.call, start: (534, 6), end: (534, 9), text: `a()`
+    pattern:  2, capture: 1 - name, start: (534, 6), end: (534, 7), text: `a`
+    pattern:  4, capture: 1 - name, start: (535, 10), end: (535, 13), text: `Dog`
+    pattern:  4, capture: 6 - reference.type, start: (535, 10), end: (535, 13), text: `Dog`
+    pattern:  4, capture: 1 - name, start: (539, 9), end: (539, 12), text: `nil`
+    pattern:  4, capture: 6 - reference.type, start: (539, 9), end: (539, 12), text: `nil`
+    pattern:  2, capture: 4 - reference.call, start: (540, 5), end: (540, 28), text: `printString("x is nil")`
+    pattern:  2, capture: 1 - name, start: (540, 5), end: (540, 16), text: `printString`
+    pattern:  4, capture: 1 - name, start: (541, 9), end: (541, 12), text: `int`
+    pattern:  4, capture: 6 - reference.type, start: (541, 9), end: (541, 12), text: `int`
+    pattern:  2, capture: 4 - reference.call, start: (542, 5), end: (542, 16), text: `printInt(i)`
+    pattern:  2, capture: 1 - name, start: (542, 5), end: (542, 13), text: `printInt`
+    pattern:  4, capture: 1 - name, start: (543, 9), end: (543, 16), text: `float64`
+    pattern:  4, capture: 6 - reference.type, start: (543, 9), end: (543, 16), text: `float64`
+    pattern:  2, capture: 4 - reference.call, start: (544, 5), end: (544, 20), text: `printFloat64(i)`
+    pattern:  2, capture: 1 - name, start: (544, 5), end: (544, 17), text: `printFloat64`
+    pattern:  4, capture: 1 - name, start: (545, 14), end: (545, 17), text: `int`
+    pattern:  4, capture: 6 - reference.type, start: (545, 14), end: (545, 17), text: `int`
+    pattern:  4, capture: 1 - name, start: (545, 19), end: (545, 26), text: `float64`
+    pattern:  4, capture: 6 - reference.type, start: (545, 19), end: (545, 26), text: `float64`
+    pattern:  2, capture: 4 - reference.call, start: (546, 5), end: (546, 21), text: `printFunction(i)`
+    pattern:  2, capture: 1 - name, start: (546, 5), end: (546, 18), text: `printFunction`
+    pattern:  4, capture: 1 - name, start: (547, 9), end: (547, 13), text: `bool`
+    pattern:  4, capture: 6 - reference.type, start: (547, 9), end: (547, 13), text: `bool`
+    pattern:  4, capture: 1 - name, start: (547, 15), end: (547, 21), text: `string`
+    pattern:  4, capture: 6 - reference.type, start: (547, 15), end: (547, 21), text: `string`
+    pattern:  2, capture: 4 - reference.call, start: (548, 5), end: (548, 42), text: `printString("type is bool or string")`
+    pattern:  2, capture: 1 - name, start: (548, 5), end: (548, 16), text: `printString`
+    pattern:  2, capture: 4 - reference.call, start: (550, 5), end: (550, 39), text: `printString("don't know the type")`
+    pattern:  2, capture: 1 - name, start: (550, 5), end: (550, 16), text: `printString`
+    pattern:  2, capture: 4 - reference.call, start: (556, 1), end: (635, 68), text: `source_file
+  (function_declaration
+    name: (identifier)
+    parameters: (parameter_list)
+    body: (block
+      (statement_list
+        (type_switch_statement
+          value: (identifier)
+          (type_case
+            type: (slice_type
+              element: (type_identifier))
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list)))))
+          (type_case
+            type: (pointer_type
+              (type_identifier))
+            (statement_list
+              (break_statement))))
+        (type_switch_statement
+          alias: (expression_list
+            (identifier))
+          value: (identifier)
+          (type_case
+            type: (type_identifier)
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (interpreted_string_literal
+                      (interpreted_string_literal_content)))))))
+          (type_case
+            type: (type_identifier)
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (identifier))))))
+          (type_case
+            type: (type_identifier)
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (identifier))))))
+          (type_case
+            type: (function_type
+              parameters: (parameter_list
+                (parameter_declaration
+                  type: (type_identifier)))
+              result: (type_identifier))
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (identifier))))))
+          (type_case
+            type: (type_identifier)
+            type: (type_identifier)
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (interpreted_string_literal
+                      (interpreted_string_literal_content)))))))
+          (default_case
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (interpreted_string_literal
+                      (interpreted_string_literal_content)))))))))))`
+    pattern:  2, capture: 1 - name, start: (556, 1), end: (556, 12), text: `source_file`
+    pattern:  2, capture: 4 - reference.call, start: (557, 3), end: (558, 22), text: `function_declaration
+    name: (identifier)`
+    pattern:  2, capture: 1 - name, start: (557, 3), end: (557, 23), text: `function_declaration`
+    pattern:  2, capture: 4 - reference.call, start: (560, 11), end: (635, 66), text: `block
+      (statement_list
+        (type_switch_statement
+          value: (identifier)
+          (type_case
+            type: (slice_type
+              element: (type_identifier))
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list)))))
+          (type_case
+            type: (pointer_type
+              (type_identifier))
+            (statement_list
+              (break_statement))))
+        (type_switch_statement
+          alias: (expression_list
+            (identifier))
+          value: (identifier)
+          (type_case
+            type: (type_identifier)
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (interpreted_string_literal
+                      (interpreted_string_literal_content)))))))
+          (type_case
+            type: (type_identifier)
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (identifier))))))
+          (type_case
+            type: (type_identifier)
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (identifier))))))
+          (type_case
+            type: (function_type
+              parameters: (parameter_list
+                (parameter_declaration
+                  type: (type_identifier)))
+              result: (type_identifier))
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (identifier))))))
+          (type_case
+            type: (type_identifier)
+            type: (type_identifier)
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (interpreted_string_literal
+                      (interpreted_string_literal_content)))))))
+          (default_case
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (interpreted_string_literal
+                      (interpreted_string_literal_content)))))))))`
+    pattern:  2, capture: 1 - name, start: (560, 11), end: (560, 16), text: `block`
+    pattern:  2, capture: 4 - reference.call, start: (561, 7), end: (576, 34), text: `statement_list
+        (type_switch_statement
+          value: (identifier)
+          (type_case
+            type: (slice_type
+              element: (type_identifier))
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list)))))
+          (type_case
+            type: (pointer_type
+              (type_identifier))
+            (statement_list
+              (break_statement))))`
+    pattern:  2, capture: 1 - name, start: (561, 7), end: (561, 21), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (562, 9), end: (563, 29), text: `type_switch_statement
+          value: (identifier)`
+    pattern:  2, capture: 1 - name, start: (562, 9), end: (562, 30), text: `type_switch_statement`
+    pattern:  2, capture: 4 - reference.call, start: (564, 11), end: (566, 41), text: `type_case
+            type: (slice_type
+              element: (type_identifier))`
+    pattern:  2, capture: 1 - name, start: (564, 11), end: (564, 20), text: `type_case`
+    pattern:  2, capture: 4 - reference.call, start: (565, 19), end: (566, 40), text: `slice_type
+              element: (type_identifier)`
+    pattern:  2, capture: 1 - name, start: (565, 19), end: (565, 29), text: `slice_type`
+    pattern:  2, capture: 4 - reference.call, start: (567, 13), end: (571, 46), text: `statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list)))`
+    pattern:  2, capture: 1 - name, start: (567, 13), end: (567, 27), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (568, 15), end: (571, 45), text: `expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list))`
+    pattern:  2, capture: 1 - name, start: (568, 15), end: (568, 35), text: `expression_statement`
+    pattern:  2, capture: 4 - reference.call, start: (569, 17), end: (570, 40), text: `call_expression
+                  function: (identifier)`
+    pattern:  2, capture: 1 - name, start: (569, 17), end: (569, 32), text: `call_expression`
+    pattern:  2, capture: 4 - reference.call, start: (572, 11), end: (574, 32), text: `type_case
+            type: (pointer_type
+              (type_identifier))`
+    pattern:  2, capture: 1 - name, start: (572, 11), end: (572, 20), text: `type_case`
+    pattern:  2, capture: 4 - reference.call, start: (573, 19), end: (574, 31), text: `pointer_type
+              (type_identifier)`
+    pattern:  2, capture: 1 - name, start: (573, 19), end: (573, 31), text: `pointer_type`
+    pattern:  2, capture: 4 - reference.call, start: (575, 13), end: (576, 31), text: `statement_list
+              (break_statement)`
+    pattern:  2, capture: 1 - name, start: (575, 13), end: (575, 27), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (577, 9), end: (579, 25), text: `type_switch_statement
+          alias: (expression_list
+            (identifier))`
+    pattern:  2, capture: 1 - name, start: (577, 9), end: (577, 30), text: `type_switch_statement`
+    pattern:  2, capture: 4 - reference.call, start: (578, 18), end: (579, 24), text: `expression_list
+            (identifier)`
+    pattern:  2, capture: 1 - name, start: (578, 18), end: (578, 33), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (581, 11), end: (582, 35), text: `type_case
+            type: (type_identifier)`
+    pattern:  2, capture: 1 - name, start: (581, 11), end: (581, 20), text: `type_case`
+    pattern:  2, capture: 4 - reference.call, start: (583, 13), end: (589, 62), text: `statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (interpreted_string_literal
+                      (interpreted_string_literal_content)))))`
+    pattern:  2, capture: 1 - name, start: (583, 13), end: (583, 27), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (584, 15), end: (589, 61), text: `expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (interpreted_string_literal
+                      (interpreted_string_literal_content))))`
+    pattern:  2, capture: 1 - name, start: (584, 15), end: (584, 35), text: `expression_statement`
+    pattern:  2, capture: 4 - reference.call, start: (585, 17), end: (586, 40), text: `call_expression
+                  function: (identifier)`
+    pattern:  2, capture: 1 - name, start: (585, 17), end: (585, 32), text: `call_expression`
+    pattern:  2, capture: 4 - reference.call, start: (587, 30), end: (589, 59), text: `argument_list
+                    (interpreted_string_literal
+                      (interpreted_string_literal_content))`
+    pattern:  2, capture: 1 - name, start: (587, 30), end: (587, 43), text: `argument_list`
+    pattern:  2, capture: 4 - reference.call, start: (588, 21), end: (589, 58), text: `interpreted_string_literal
+                      (interpreted_string_literal_content)`
+    pattern:  2, capture: 1 - name, start: (588, 21), end: (588, 47), text: `interpreted_string_literal`
+    pattern:  2, capture: 4 - reference.call, start: (590, 11), end: (591, 35), text: `type_case
+            type: (type_identifier)`
+    pattern:  2, capture: 1 - name, start: (590, 11), end: (590, 20), text: `type_case`
+    pattern:  2, capture: 4 - reference.call, start: (592, 13), end: (597, 35), text: `statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (identifier))))`
+    pattern:  2, capture: 1 - name, start: (592, 13), end: (592, 27), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (593, 15), end: (597, 34), text: `expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (identifier)))`
+    pattern:  2, capture: 1 - name, start: (593, 15), end: (593, 35), text: `expression_statement`
+    pattern:  2, capture: 4 - reference.call, start: (594, 17), end: (595, 40), text: `call_expression
+                  function: (identifier)`
+    pattern:  2, capture: 1 - name, start: (594, 17), end: (594, 32), text: `call_expression`
+    pattern:  2, capture: 4 - reference.call, start: (596, 30), end: (597, 32), text: `argument_list
+                    (identifier)`
+    pattern:  2, capture: 1 - name, start: (596, 30), end: (596, 43), text: `argument_list`
+    pattern:  2, capture: 4 - reference.call, start: (598, 11), end: (599, 35), text: `type_case
+            type: (type_identifier)`
+    pattern:  2, capture: 1 - name, start: (598, 11), end: (598, 20), text: `type_case`
+    pattern:  2, capture: 4 - reference.call, start: (600, 13), end: (605, 35), text: `statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (identifier))))`
+    pattern:  2, capture: 1 - name, start: (600, 13), end: (600, 27), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (601, 15), end: (605, 34), text: `expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (identifier)))`
+    pattern:  2, capture: 1 - name, start: (601, 15), end: (601, 35), text: `expression_statement`
+    pattern:  2, capture: 4 - reference.call, start: (602, 17), end: (603, 40), text: `call_expression
+                  function: (identifier)`
+    pattern:  2, capture: 1 - name, start: (602, 17), end: (602, 32), text: `call_expression`
+    pattern:  2, capture: 4 - reference.call, start: (604, 30), end: (605, 32), text: `argument_list
+                    (identifier)`
+    pattern:  2, capture: 1 - name, start: (604, 30), end: (604, 43), text: `argument_list`
+    pattern:  2, capture: 4 - reference.call, start: (606, 11), end: (611, 40), text: `type_case
+            type: (function_type
+              parameters: (parameter_list
+                (parameter_declaration
+                  type: (type_identifier)))
+              result: (type_identifier))`
+    pattern:  2, capture: 1 - name, start: (606, 11), end: (606, 20), text: `type_case`
+    pattern:  2, capture: 4 - reference.call, start: (607, 19), end: (610, 43), text: `function_type
+              parameters: (parameter_list
+                (parameter_declaration
+                  type: (type_identifier)))`
+    pattern:  2, capture: 1 - name, start: (607, 19), end: (607, 32), text: `function_type`
+    pattern:  2, capture: 4 - reference.call, start: (608, 27), end: (610, 42), text: `parameter_list
+                (parameter_declaration
+                  type: (type_identifier))`
+    pattern:  2, capture: 1 - name, start: (608, 27), end: (608, 41), text: `parameter_list`
+    pattern:  2, capture: 4 - reference.call, start: (609, 17), end: (610, 41), text: `parameter_declaration
+                  type: (type_identifier)`
+    pattern:  2, capture: 1 - name, start: (609, 17), end: (609, 38), text: `parameter_declaration`
+    pattern:  2, capture: 4 - reference.call, start: (612, 13), end: (617, 35), text: `statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (identifier))))`
+    pattern:  2, capture: 1 - name, start: (612, 13), end: (612, 27), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (613, 15), end: (617, 34), text: `expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (identifier)))`
+    pattern:  2, capture: 1 - name, start: (613, 15), end: (613, 35), text: `expression_statement`
+    pattern:  2, capture: 4 - reference.call, start: (614, 17), end: (615, 40), text: `call_expression
+                  function: (identifier)`
+    pattern:  2, capture: 1 - name, start: (614, 17), end: (614, 32), text: `call_expression`
+    pattern:  2, capture: 4 - reference.call, start: (616, 30), end: (617, 32), text: `argument_list
+                    (identifier)`
+    pattern:  2, capture: 1 - name, start: (616, 30), end: (616, 43), text: `argument_list`
+    pattern:  2, capture: 4 - reference.call, start: (618, 11), end: (619, 35), text: `type_case
+            type: (type_identifier)`
+    pattern:  2, capture: 1 - name, start: (618, 11), end: (618, 20), text: `type_case`
+    pattern:  2, capture: 4 - reference.call, start: (621, 13), end: (627, 62), text: `statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (interpreted_string_literal
+                      (interpreted_string_literal_content)))))`
+    pattern:  2, capture: 1 - name, start: (621, 13), end: (621, 27), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (622, 15), end: (627, 61), text: `expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (interpreted_string_literal
+                      (interpreted_string_literal_content))))`
+    pattern:  2, capture: 1 - name, start: (622, 15), end: (622, 35), text: `expression_statement`
+    pattern:  2, capture: 4 - reference.call, start: (623, 17), end: (624, 40), text: `call_expression
+                  function: (identifier)`
+    pattern:  2, capture: 1 - name, start: (623, 17), end: (623, 32), text: `call_expression`
+    pattern:  2, capture: 4 - reference.call, start: (625, 30), end: (627, 59), text: `argument_list
+                    (interpreted_string_literal
+                      (interpreted_string_literal_content))`
+    pattern:  2, capture: 1 - name, start: (625, 30), end: (625, 43), text: `argument_list`
+    pattern:  2, capture: 4 - reference.call, start: (626, 21), end: (627, 58), text: `interpreted_string_literal
+                      (interpreted_string_literal_content)`
+    pattern:  2, capture: 1 - name, start: (626, 21), end: (626, 47), text: `interpreted_string_literal`
+    pattern:  2, capture: 4 - reference.call, start: (628, 11), end: (635, 63), text: `default_case
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (interpreted_string_literal
+                      (interpreted_string_literal_content))))))`
+    pattern:  2, capture: 1 - name, start: (628, 11), end: (628, 23), text: `default_case`
+    pattern:  2, capture: 4 - reference.call, start: (629, 13), end: (635, 62), text: `statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (interpreted_string_literal
+                      (interpreted_string_literal_content)))))`
+    pattern:  2, capture: 1 - name, start: (629, 13), end: (629, 27), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (630, 15), end: (635, 61), text: `expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (interpreted_string_literal
+                      (interpreted_string_literal_content))))`
+    pattern:  2, capture: 1 - name, start: (630, 15), end: (630, 35), text: `expression_statement`
+    pattern:  2, capture: 4 - reference.call, start: (631, 17), end: (632, 40), text: `call_expression
+                  function: (identifier)`
+    pattern:  2, capture: 1 - name, start: (631, 17), end: (631, 32), text: `call_expression`
+    pattern:  2, capture: 4 - reference.call, start: (633, 30), end: (635, 59), text: `argument_list
+                    (interpreted_string_literal
+                      (interpreted_string_literal_content))`
+    pattern:  2, capture: 1 - name, start: (633, 30), end: (633, 43), text: `argument_list`
+    pattern:  2, capture: 4 - reference.call, start: (634, 21), end: (635, 58), text: `interpreted_string_literal
+                      (interpreted_string_literal_content)`
+    pattern:  2, capture: 1 - name, start: (634, 21), end: (634, 47), text: `interpreted_string_literal`
+    pattern:  5, capture: 1 - name, start: (641, 8), end: (641, 12), text: `main`
+    pattern:  0, capture: 2 - definition.function, start: (643, 0), end: (654, 1), text: `func main() {
+  select {
+    case x := <-c:
+      println(x)
+    case y <- c:
+      println(5)
+    case <-time.After(1):
+      println(6)
+    default:
+      return
+  }
+}`
+    pattern:  0, capture: 1 - name, start: (643, 5), end: (643, 9), text: `main`
+    pattern:  2, capture: 4 - reference.call, start: (646, 6), end: (646, 16), text: `println(x)`
+    pattern:  2, capture: 1 - name, start: (646, 6), end: (646, 13), text: `println`
+    pattern:  2, capture: 4 - reference.call, start: (648, 6), end: (648, 16), text: `println(5)`
+    pattern:  2, capture: 1 - name, start: (648, 6), end: (648, 13), text: `println`
+    pattern:  2, capture: 4 - reference.call, start: (649, 11), end: (649, 24), text: `time.After(1)`
+    pattern:  2, capture: 1 - name, start: (649, 16), end: (649, 21), text: `After`
+    pattern:  2, capture: 4 - reference.call, start: (650, 6), end: (650, 16), text: `println(6)`
+    pattern:  2, capture: 1 - name, start: (650, 6), end: (650, 13), text: `println`
+    pattern:  2, capture: 4 - reference.call, start: (658, 1), end: (660, 25), text: `source_file
+  (package_clause
+    (package_identifier))`
+    pattern:  2, capture: 1 - name, start: (658, 1), end: (658, 12), text: `source_file`
+    pattern:  2, capture: 4 - reference.call, start: (659, 3), end: (660, 24), text: `package_clause
+    (package_identifier)`
+    pattern:  2, capture: 1 - name, start: (659, 3), end: (659, 17), text: `package_clause`
+    pattern:  2, capture: 4 - reference.call, start: (661, 3), end: (662, 22), text: `function_declaration
+    name: (identifier)`
+    pattern:  2, capture: 1 - name, start: (661, 3), end: (661, 23), text: `function_declaration`
+    pattern:  2, capture: 4 - reference.call, start: (664, 11), end: (706, 36), text: `block
+      (statement_list
+        (select_statement
+          (communication_case
+            communication: (receive_statement
+              left: (expression_list
+                (identifier))
+              right: (unary_expression
+                operand: (identifier)))
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (identifier))))))
+          (communication_case
+            communication: (send_statement
+              channel: (identifier)
+              value: (identifier))
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (int_literal))))))
+          (communication_case
+            communication: (receive_statement
+              right: (unary_expression
+                operand: (call_expression
+                  function: (selector_expression
+                    operand: (identifier)
+                    field: (field_identifier))
+                  arguments: (argument_list
+                    (int_literal)))))
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (int_literal))))))
+          (default_case
+            (statement_list
+              (return_statement)))))`
+    pattern:  2, capture: 1 - name, start: (664, 11), end: (664, 16), text: `block`
+    pattern:  2, capture: 4 - reference.call, start: (665, 7), end: (706, 35), text: `statement_list
+        (select_statement
+          (communication_case
+            communication: (receive_statement
+              left: (expression_list
+                (identifier))
+              right: (unary_expression
+                operand: (identifier)))
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (identifier))))))
+          (communication_case
+            communication: (send_statement
+              channel: (identifier)
+              value: (identifier))
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (int_literal))))))
+          (communication_case
+            communication: (receive_statement
+              right: (unary_expression
+                operand: (call_expression
+                  function: (selector_expression
+                    operand: (identifier)
+                    field: (field_identifier))
+                  arguments: (argument_list
+                    (int_literal)))))
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (int_literal))))))
+          (default_case
+            (statement_list
+              (return_statement))))`
+    pattern:  2, capture: 1 - name, start: (665, 7), end: (665, 21), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (666, 9), end: (678, 37), text: `select_statement
+          (communication_case
+            communication: (receive_statement
+              left: (expression_list
+                (identifier))
+              right: (unary_expression
+                operand: (identifier)))
+            (statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (identifier))))))`
+    pattern:  2, capture: 1 - name, start: (666, 9), end: (666, 25), text: `select_statement`
+    pattern:  2, capture: 4 - reference.call, start: (667, 11), end: (672, 39), text: `communication_case
+            communication: (receive_statement
+              left: (expression_list
+                (identifier))
+              right: (unary_expression
+                operand: (identifier)))`
+    pattern:  2, capture: 1 - name, start: (667, 11), end: (667, 29), text: `communication_case`
+    pattern:  2, capture: 4 - reference.call, start: (668, 28), end: (670, 29), text: `receive_statement
+              left: (expression_list
+                (identifier))`
+    pattern:  2, capture: 1 - name, start: (668, 28), end: (668, 45), text: `receive_statement`
+    pattern:  2, capture: 4 - reference.call, start: (669, 21), end: (670, 28), text: `expression_list
+                (identifier)`
+    pattern:  2, capture: 1 - name, start: (669, 21), end: (669, 36), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (671, 22), end: (672, 37), text: `unary_expression
+                operand: (identifier)`
+    pattern:  2, capture: 1 - name, start: (671, 22), end: (671, 38), text: `unary_expression`
+    pattern:  2, capture: 4 - reference.call, start: (673, 13), end: (678, 35), text: `statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (identifier))))`
+    pattern:  2, capture: 1 - name, start: (673, 13), end: (673, 27), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (674, 15), end: (678, 34), text: `expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (identifier)))`
+    pattern:  2, capture: 1 - name, start: (674, 15), end: (674, 35), text: `expression_statement`
+    pattern:  2, capture: 4 - reference.call, start: (675, 17), end: (676, 40), text: `call_expression
+                  function: (identifier)`
+    pattern:  2, capture: 1 - name, start: (675, 17), end: (675, 32), text: `call_expression`
+    pattern:  2, capture: 4 - reference.call, start: (677, 30), end: (678, 32), text: `argument_list
+                    (identifier)`
+    pattern:  2, capture: 1 - name, start: (677, 30), end: (677, 43), text: `argument_list`
+    pattern:  2, capture: 4 - reference.call, start: (679, 11), end: (682, 34), text: `communication_case
+            communication: (send_statement
+              channel: (identifier)
+              value: (identifier))`
+    pattern:  2, capture: 1 - name, start: (679, 11), end: (679, 29), text: `communication_case`
+    pattern:  2, capture: 4 - reference.call, start: (680, 28), end: (681, 35), text: `send_statement
+              channel: (identifier)`
+    pattern:  2, capture: 1 - name, start: (680, 28), end: (680, 42), text: `send_statement`
+    pattern:  2, capture: 4 - reference.call, start: (683, 13), end: (688, 36), text: `statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (int_literal))))`
+    pattern:  2, capture: 1 - name, start: (683, 13), end: (683, 27), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (684, 15), end: (688, 35), text: `expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (int_literal)))`
+    pattern:  2, capture: 1 - name, start: (684, 15), end: (684, 35), text: `expression_statement`
+    pattern:  2, capture: 4 - reference.call, start: (685, 17), end: (686, 40), text: `call_expression
+                  function: (identifier)`
+    pattern:  2, capture: 1 - name, start: (685, 17), end: (685, 32), text: `call_expression`
+    pattern:  2, capture: 4 - reference.call, start: (687, 30), end: (688, 33), text: `argument_list
+                    (int_literal)`
+    pattern:  2, capture: 1 - name, start: (687, 30), end: (687, 43), text: `argument_list`
+    pattern:  2, capture: 4 - reference.call, start: (689, 11), end: (697, 37), text: `communication_case
+            communication: (receive_statement
+              right: (unary_expression
+                operand: (call_expression
+                  function: (selector_expression
+                    operand: (identifier)
+                    field: (field_identifier))
+                  arguments: (argument_list
+                    (int_literal)))))`
+    pattern:  2, capture: 1 - name, start: (689, 11), end: (689, 29), text: `communication_case`
+    pattern:  2, capture: 4 - reference.call, start: (690, 28), end: (697, 36), text: `receive_statement
+              right: (unary_expression
+                operand: (call_expression
+                  function: (selector_expression
+                    operand: (identifier)
+                    field: (field_identifier))
+                  arguments: (argument_list
+                    (int_literal))))`
+    pattern:  2, capture: 1 - name, start: (690, 28), end: (690, 45), text: `receive_statement`
+    pattern:  2, capture: 4 - reference.call, start: (691, 22), end: (697, 35), text: `unary_expression
+                operand: (call_expression
+                  function: (selector_expression
+                    operand: (identifier)
+                    field: (field_identifier))
+                  arguments: (argument_list
+                    (int_literal)))`
+    pattern:  2, capture: 1 - name, start: (691, 22), end: (691, 38), text: `unary_expression`
+    pattern:  2, capture: 4 - reference.call, start: (692, 26), end: (695, 46), text: `call_expression
+                  function: (selector_expression
+                    operand: (identifier)
+                    field: (field_identifier))`
+    pattern:  2, capture: 1 - name, start: (692, 26), end: (692, 41), text: `call_expression`
+    pattern:  2, capture: 4 - reference.call, start: (693, 29), end: (694, 41), text: `selector_expression
+                    operand: (identifier)`
+    pattern:  2, capture: 1 - name, start: (693, 29), end: (693, 48), text: `selector_expression`
+    pattern:  2, capture: 4 - reference.call, start: (696, 30), end: (697, 33), text: `argument_list
+                    (int_literal)`
+    pattern:  2, capture: 1 - name, start: (696, 30), end: (696, 43), text: `argument_list`
+    pattern:  2, capture: 4 - reference.call, start: (698, 13), end: (703, 36), text: `statement_list
+              (expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (int_literal))))`
+    pattern:  2, capture: 1 - name, start: (698, 13), end: (698, 27), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (699, 15), end: (703, 35), text: `expression_statement
+                (call_expression
+                  function: (identifier)
+                  arguments: (argument_list
+                    (int_literal)))`
+    pattern:  2, capture: 1 - name, start: (699, 15), end: (699, 35), text: `expression_statement`
+    pattern:  2, capture: 4 - reference.call, start: (700, 17), end: (701, 40), text: `call_expression
+                  function: (identifier)`
+    pattern:  2, capture: 1 - name, start: (700, 17), end: (700, 32), text: `call_expression`
+    pattern:  2, capture: 4 - reference.call, start: (702, 30), end: (703, 33), text: `argument_list
+                    (int_literal)`
+    pattern:  2, capture: 1 - name, start: (702, 30), end: (702, 43), text: `argument_list`
+    pattern:  2, capture: 4 - reference.call, start: (704, 11), end: (706, 33), text: `default_case
+            (statement_list
+              (return_statement))`
+    pattern:  2, capture: 1 - name, start: (704, 11), end: (704, 23), text: `default_case`
+    pattern:  2, capture: 4 - reference.call, start: (705, 13), end: (706, 32), text: `statement_list
+              (return_statement)`
+    pattern:  2, capture: 1 - name, start: (705, 13), end: (705, 27), text: `statement_list`
+    pattern:  5, capture: 1 - name, start: (712, 8), end: (712, 12), text: `main`
+    pattern:  0, capture: 2 - definition.function, start: (714, 0), end: (717, 1), text: `func main() {
+  defer x.y()
+  go x.y()
+}`
+    pattern:  0, capture: 1 - name, start: (714, 5), end: (714, 9), text: `main`
+    pattern:  2, capture: 4 - reference.call, start: (715, 8), end: (715, 13), text: `x.y()`
+    pattern:  2, capture: 1 - name, start: (715, 10), end: (715, 11), text: `y`
+    pattern:  2, capture: 4 - reference.call, start: (716, 5), end: (716, 10), text: `x.y()`
+    pattern:  2, capture: 1 - name, start: (716, 7), end: (716, 8), text: `y`
+    pattern:  2, capture: 4 - reference.call, start: (721, 1), end: (723, 25), text: `source_file
+  (package_clause
+    (package_identifier))`
+    pattern:  2, capture: 1 - name, start: (721, 1), end: (721, 12), text: `source_file`
+    pattern:  2, capture: 4 - reference.call, start: (722, 3), end: (723, 24), text: `package_clause
+    (package_identifier)`
+    pattern:  2, capture: 1 - name, start: (722, 3), end: (722, 17), text: `package_clause`
+    pattern:  2, capture: 4 - reference.call, start: (724, 3), end: (725, 16), text: `function_declaration
+    (identifier)`
+    pattern:  2, capture: 1 - name, start: (724, 3), end: (724, 23), text: `function_declaration`
+    pattern:  2, capture: 4 - reference.call, start: (727, 5), end: (740, 30), text: `block
+      (statement_list
+        (defer_statement
+          (call_expression
+            (selector_expression
+              (identifier)
+              (field_identifier))
+            (argument_list)))
+        (go_statement
+          (call_expression
+            (selector_expression
+              (identifier)
+              (field_identifier))
+            (argument_list))))`
+    pattern:  2, capture: 1 - name, start: (727, 5), end: (727, 10), text: `block`
+    pattern:  2, capture: 4 - reference.call, start: (728, 7), end: (734, 29), text: `statement_list
+        (defer_statement
+          (call_expression
+            (selector_expression
+              (identifier)
+              (field_identifier))
+            (argument_list)))`
+    pattern:  2, capture: 1 - name, start: (728, 7), end: (728, 21), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (729, 9), end: (734, 28), text: `defer_statement
+          (call_expression
+            (selector_expression
+              (identifier)
+              (field_identifier))
+            (argument_list))`
+    pattern:  2, capture: 1 - name, start: (729, 9), end: (729, 24), text: `defer_statement`
+    pattern:  2, capture: 4 - reference.call, start: (730, 11), end: (733, 33), text: `call_expression
+            (selector_expression
+              (identifier)
+              (field_identifier))`
+    pattern:  2, capture: 1 - name, start: (730, 11), end: (730, 26), text: `call_expression`
+    pattern:  2, capture: 4 - reference.call, start: (731, 13), end: (732, 26), text: `selector_expression
+              (identifier)`
+    pattern:  2, capture: 1 - name, start: (731, 13), end: (731, 32), text: `selector_expression`
+    pattern:  2, capture: 4 - reference.call, start: (735, 9), end: (740, 28), text: `go_statement
+          (call_expression
+            (selector_expression
+              (identifier)
+              (field_identifier))
+            (argument_list))`
+    pattern:  2, capture: 1 - name, start: (735, 9), end: (735, 21), text: `go_statement`
+    pattern:  2, capture: 4 - reference.call, start: (736, 11), end: (739, 33), text: `call_expression
+            (selector_expression
+              (identifier)
+              (field_identifier))`
+    pattern:  2, capture: 1 - name, start: (736, 11), end: (736, 26), text: `call_expression`
+    pattern:  2, capture: 4 - reference.call, start: (737, 13), end: (738, 26), text: `selector_expression
+              (identifier)`
+    pattern:  2, capture: 1 - name, start: (737, 13), end: (737, 32), text: `selector_expression`
+    pattern:  0, capture: 2 - definition.function, start: (746, 0), end: (753, 1), text: `func main() {
+  {
+    println("hi")
+  }
+  {
+    println("bye")
+  }
+}`
+    pattern:  0, capture: 1 - name, start: (746, 5), end: (746, 9), text: `main`
+    pattern:  2, capture: 4 - reference.call, start: (748, 4), end: (748, 17), text: `println("hi")`
+    pattern:  2, capture: 1 - name, start: (748, 4), end: (748, 11), text: `println`
+    pattern:  2, capture: 4 - reference.call, start: (751, 4), end: (751, 18), text: `println("bye")`
+    pattern:  2, capture: 1 - name, start: (751, 4), end: (751, 11), text: `println`
+    pattern:  2, capture: 4 - reference.call, start: (757, 1), end: (778, 65), text: `source_file
+  (function_declaration
+    (identifier)
+    (parameter_list)
+    (block
+      (statement_list
+        (block
+          (statement_list
+            (expression_statement
+              (call_expression
+                (identifier)
+                (argument_list
+                  (interpreted_string_literal
+                    (interpreted_string_literal_content)))))))
+        (block
+          (statement_list
+            (expression_statement
+              (call_expression
+                (identifier)
+                (argument_list
+                  (interpreted_string_literal
+                    (interpreted_string_literal_content))))))))))`
+    pattern:  2, capture: 1 - name, start: (757, 1), end: (757, 12), text: `source_file`
+    pattern:  2, capture: 4 - reference.call, start: (758, 3), end: (759, 16), text: `function_declaration
+    (identifier)`
+    pattern:  2, capture: 1 - name, start: (758, 3), end: (758, 23), text: `function_declaration`
+    pattern:  2, capture: 4 - reference.call, start: (761, 5), end: (778, 63), text: `block
+      (statement_list
+        (block
+          (statement_list
+            (expression_statement
+              (call_expression
+                (identifier)
+                (argument_list
+                  (interpreted_string_literal
+                    (interpreted_string_literal_content)))))))
+        (block
+          (statement_list
+            (expression_statement
+              (call_expression
+                (identifier)
+                (argument_list
+                  (interpreted_string_literal
+                    (interpreted_string_literal_content))))))))`
+    pattern:  2, capture: 1 - name, start: (761, 5), end: (761, 10), text: `block`
+    pattern:  2, capture: 4 - reference.call, start: (762, 7), end: (770, 62), text: `statement_list
+        (block
+          (statement_list
+            (expression_statement
+              (call_expression
+                (identifier)
+                (argument_list
+                  (interpreted_string_literal
+                    (interpreted_string_literal_content)))))))`
+    pattern:  2, capture: 1 - name, start: (762, 7), end: (762, 21), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (763, 9), end: (770, 61), text: `block
+          (statement_list
+            (expression_statement
+              (call_expression
+                (identifier)
+                (argument_list
+                  (interpreted_string_literal
+                    (interpreted_string_literal_content))))))`
+    pattern:  2, capture: 1 - name, start: (763, 9), end: (763, 14), text: `block`
+    pattern:  2, capture: 4 - reference.call, start: (764, 11), end: (770, 60), text: `statement_list
+            (expression_statement
+              (call_expression
+                (identifier)
+                (argument_list
+                  (interpreted_string_literal
+                    (interpreted_string_literal_content)))))`
+    pattern:  2, capture: 1 - name, start: (764, 11), end: (764, 25), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (765, 13), end: (770, 59), text: `expression_statement
+              (call_expression
+                (identifier)
+                (argument_list
+                  (interpreted_string_literal
+                    (interpreted_string_literal_content))))`
+    pattern:  2, capture: 1 - name, start: (765, 13), end: (765, 33), text: `expression_statement`
+    pattern:  2, capture: 4 - reference.call, start: (766, 15), end: (767, 28), text: `call_expression
+                (identifier)`
+    pattern:  2, capture: 1 - name, start: (766, 15), end: (766, 30), text: `call_expression`
+    pattern:  2, capture: 4 - reference.call, start: (768, 17), end: (770, 57), text: `argument_list
+                  (interpreted_string_literal
+                    (interpreted_string_literal_content))`
+    pattern:  2, capture: 1 - name, start: (768, 17), end: (768, 30), text: `argument_list`
+    pattern:  2, capture: 4 - reference.call, start: (769, 19), end: (770, 56), text: `interpreted_string_literal
+                    (interpreted_string_literal_content)`
+    pattern:  2, capture: 1 - name, start: (769, 19), end: (769, 45), text: `interpreted_string_literal`
+    pattern:  2, capture: 4 - reference.call, start: (771, 9), end: (778, 61), text: `block
+          (statement_list
+            (expression_statement
+              (call_expression
+                (identifier)
+                (argument_list
+                  (interpreted_string_literal
+                    (interpreted_string_literal_content))))))`
+    pattern:  2, capture: 1 - name, start: (771, 9), end: (771, 14), text: `block`
+    pattern:  2, capture: 4 - reference.call, start: (772, 11), end: (778, 60), text: `statement_list
+            (expression_statement
+              (call_expression
+                (identifier)
+                (argument_list
+                  (interpreted_string_literal
+                    (interpreted_string_literal_content)))))`
+    pattern:  2, capture: 1 - name, start: (772, 11), end: (772, 25), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (773, 13), end: (778, 59), text: `expression_statement
+              (call_expression
+                (identifier)
+                (argument_list
+                  (interpreted_string_literal
+                    (interpreted_string_literal_content))))`
+    pattern:  2, capture: 1 - name, start: (773, 13), end: (773, 33), text: `expression_statement`
+    pattern:  2, capture: 4 - reference.call, start: (774, 15), end: (775, 28), text: `call_expression
+                (identifier)`
+    pattern:  2, capture: 1 - name, start: (774, 15), end: (774, 30), text: `call_expression`
+    pattern:  2, capture: 4 - reference.call, start: (776, 17), end: (778, 57), text: `argument_list
+                  (interpreted_string_literal
+                    (interpreted_string_literal_content))`
+    pattern:  2, capture: 1 - name, start: (776, 17), end: (776, 30), text: `argument_list`
+    pattern:  2, capture: 4 - reference.call, start: (777, 19), end: (778, 56), text: `interpreted_string_literal
+                    (interpreted_string_literal_content)`
+    pattern:  2, capture: 1 - name, start: (777, 19), end: (777, 45), text: `interpreted_string_literal`
+    pattern:  0, capture: 2 - definition.function, start: (784, 0), end: (788, 1), text: `func main() {
+  {
+  end_of_block:
+  }
+}`
+    pattern:  0, capture: 1 - name, start: (784, 5), end: (784, 9), text: `main`
+    pattern:  2, capture: 4 - reference.call, start: (792, 1), end: (801, 39), text: `source_file
+  (function_declaration
+    name: (identifier)
+    parameters: (parameter_list)
+    body: (block
+      (statement_list
+        (block
+          (statement_list
+            (labeled_statement
+              label: (label_name)))))))`
+    pattern:  2, capture: 1 - name, start: (792, 1), end: (792, 12), text: `source_file`
+    pattern:  2, capture: 4 - reference.call, start: (793, 3), end: (794, 22), text: `function_declaration
+    name: (identifier)`
+    pattern:  2, capture: 1 - name, start: (793, 3), end: (793, 23), text: `function_declaration`
+    pattern:  2, capture: 4 - reference.call, start: (796, 11), end: (801, 37), text: `block
+      (statement_list
+        (block
+          (statement_list
+            (labeled_statement
+              label: (label_name)))))`
+    pattern:  2, capture: 1 - name, start: (796, 11), end: (796, 16), text: `block`
+    pattern:  2, capture: 4 - reference.call, start: (797, 7), end: (801, 36), text: `statement_list
+        (block
+          (statement_list
+            (labeled_statement
+              label: (label_name))))`
+    pattern:  2, capture: 1 - name, start: (797, 7), end: (797, 21), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (798, 9), end: (801, 35), text: `block
+          (statement_list
+            (labeled_statement
+              label: (label_name)))`
+    pattern:  2, capture: 1 - name, start: (798, 9), end: (798, 14), text: `block`
+    pattern:  2, capture: 4 - reference.call, start: (799, 11), end: (801, 34), text: `statement_list
+            (labeled_statement
+              label: (label_name))`
+    pattern:  2, capture: 1 - name, start: (799, 11), end: (799, 25), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (800, 13), end: (801, 33), text: `labeled_statement
+              label: (label_name)`
+    pattern:  2, capture: 1 - name, start: (800, 13), end: (800, 30), text: `labeled_statement`
+    pattern:  5, capture: 1 - name, start: (807, 8), end: (807, 12), text: `main`
+    pattern:  0, capture: 2 - definition.function, start: (809, 0), end: (811, 1), text: `func main() {
+	;
+}`
+    pattern:  0, capture: 1 - name, start: (809, 5), end: (809, 9), text: `main`
+    pattern:  2, capture: 4 - reference.call, start: (815, 1), end: (817, 25), text: `source_file
+  (package_clause
+    (package_identifier))`
+    pattern:  2, capture: 1 - name, start: (815, 1), end: (815, 12), text: `source_file`
+    pattern:  2, capture: 4 - reference.call, start: (816, 3), end: (817, 24), text: `package_clause
+    (package_identifier)`
+    pattern:  2, capture: 1 - name, start: (816, 3), end: (816, 17), text: `package_clause`
+    pattern:  2, capture: 4 - reference.call, start: (818, 3), end: (819, 16), text: `function_declaration
+    (identifier)`
+    pattern:  2, capture: 1 - name, start: (818, 3), end: (818, 23), text: `function_declaration`
+    pattern:  2, capture: 4 - reference.call, start: (821, 5), end: (823, 26), text: `block
+      (statement_list
+        (empty_statement))`
+    pattern:  2, capture: 1 - name, start: (821, 5), end: (821, 10), text: `block`
+    pattern:  2, capture: 4 - reference.call, start: (822, 7), end: (823, 25), text: `statement_list
+        (empty_statement)`
+    pattern:  2, capture: 1 - name, start: (822, 7), end: (822, 21), text: `statement_list`
+    pattern:  5, capture: 1 - name, start: (829, 8), end: (829, 12), text: `main`
+    pattern:  0, capture: 2 - definition.function, start: (831, 0), end: (839, 1), text: `func main() {
+  for i, v := range vectors {
+    func() {
+      if v == v {
+        fmt.Println("something: %v", vectors[i])
+      }
+    }()
+  }
+}`
+    pattern:  0, capture: 1 - name, start: (831, 5), end: (831, 9), text: `main`
+    pattern:  2, capture: 4 - reference.call, start: (835, 8), end: (835, 48), text: `fmt.Println("something: %v", vectors[i])`
+    pattern:  2, capture: 1 - name, start: (835, 12), end: (835, 19), text: `Println`
+    pattern:  2, capture: 4 - reference.call, start: (843, 1), end: (845, 25), text: `source_file
+  (package_clause
+    (package_identifier))`
+    pattern:  2, capture: 1 - name, start: (843, 1), end: (843, 12), text: `source_file`
+    pattern:  2, capture: 4 - reference.call, start: (844, 3), end: (845, 24), text: `package_clause
+    (package_identifier)`
+    pattern:  2, capture: 1 - name, start: (844, 3), end: (844, 17), text: `package_clause`
+    pattern:  2, capture: 4 - reference.call, start: (846, 3), end: (847, 16), text: `function_declaration
+    (identifier)`
+    pattern:  2, capture: 1 - name, start: (846, 3), end: (846, 23), text: `function_declaration`
+    pattern:  2, capture: 4 - reference.call, start: (849, 5), end: (882, 39), text: `block
+      (statement_list
+        (for_statement
+          (range_clause
+            (expression_list
+              (identifier)
+              (identifier))
+            (identifier))
+          (block
+            (statement_list
+              (expression_statement
+                (call_expression
+                  (func_literal
+                    (parameter_list)
+                    (block
+                      (statement_list
+                        (if_statement
+                          (binary_expression
+                            (identifier)
+                            (identifier))
+                          (block
+                            (statement_list
+                              (expression_statement
+                                (call_expression
+                                  (selector_expression
+                                    (identifier)
+                                    (field_identifier))
+                                  (argument_list
+                                    (interpreted_string_literal
+                                      (interpreted_string_literal_content))
+                                    (index_expression
+                                      (identifier)
+                                      (identifier)))))))))))
+                  (argument_list)))))))`
+    pattern:  2, capture: 1 - name, start: (849, 5), end: (849, 10), text: `block`
+    pattern:  2, capture: 4 - reference.call, start: (850, 7), end: (882, 38), text: `statement_list
+        (for_statement
+          (range_clause
+            (expression_list
+              (identifier)
+              (identifier))
+            (identifier))
+          (block
+            (statement_list
+              (expression_statement
+                (call_expression
+                  (func_literal
+                    (parameter_list)
+                    (block
+                      (statement_list
+                        (if_statement
+                          (binary_expression
+                            (identifier)
+                            (identifier))
+                          (block
+                            (statement_list
+                              (expression_statement
+                                (call_expression
+                                  (selector_expression
+                                    (identifier)
+                                    (field_identifier))
+                                  (argument_list
+                                    (interpreted_string_literal
+                                      (interpreted_string_literal_content))
+                                    (index_expression
+                                      (identifier)
+                                      (identifier)))))))))))
+                  (argument_list))))))`
+    pattern:  2, capture: 1 - name, start: (850, 7), end: (850, 21), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (851, 9), end: (856, 25), text: `for_statement
+          (range_clause
+            (expression_list
+              (identifier)
+              (identifier))
+            (identifier))`
+    pattern:  2, capture: 1 - name, start: (851, 9), end: (851, 22), text: `for_statement`
+    pattern:  2, capture: 4 - reference.call, start: (852, 11), end: (855, 27), text: `range_clause
+            (expression_list
+              (identifier)
+              (identifier))`
+    pattern:  2, capture: 1 - name, start: (852, 11), end: (852, 23), text: `range_clause`
+    pattern:  2, capture: 4 - reference.call, start: (853, 13), end: (854, 26), text: `expression_list
+              (identifier)`
+    pattern:  2, capture: 1 - name, start: (853, 13), end: (853, 28), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (857, 11), end: (882, 36), text: `block
+            (statement_list
+              (expression_statement
+                (call_expression
+                  (func_literal
+                    (parameter_list)
+                    (block
+                      (statement_list
+                        (if_statement
+                          (binary_expression
+                            (identifier)
+                            (identifier))
+                          (block
+                            (statement_list
+                              (expression_statement
+                                (call_expression
+                                  (selector_expression
+                                    (identifier)
+                                    (field_identifier))
+                                  (argument_list
+                                    (interpreted_string_literal
+                                      (interpreted_string_literal_content))
+                                    (index_expression
+                                      (identifier)
+                                      (identifier)))))))))))
+                  (argument_list))))`
+    pattern:  2, capture: 1 - name, start: (857, 11), end: (857, 16), text: `block`
+    pattern:  2, capture: 4 - reference.call, start: (858, 13), end: (882, 35), text: `statement_list
+              (expression_statement
+                (call_expression
+                  (func_literal
+                    (parameter_list)
+                    (block
+                      (statement_list
+                        (if_statement
+                          (binary_expression
+                            (identifier)
+                            (identifier))
+                          (block
+                            (statement_list
+                              (expression_statement
+                                (call_expression
+                                  (selector_expression
+                                    (identifier)
+                                    (field_identifier))
+                                  (argument_list
+                                    (interpreted_string_literal
+                                      (interpreted_string_literal_content))
+                                    (index_expression
+                                      (identifier)
+                                      (identifier)))))))))))
+                  (argument_list)))`
+    pattern:  2, capture: 1 - name, start: (858, 13), end: (858, 27), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (859, 15), end: (882, 34), text: `expression_statement
+                (call_expression
+                  (func_literal
+                    (parameter_list)
+                    (block
+                      (statement_list
+                        (if_statement
+                          (binary_expression
+                            (identifier)
+                            (identifier))
+                          (block
+                            (statement_list
+                              (expression_statement
+                                (call_expression
+                                  (selector_expression
+                                    (identifier)
+                                    (field_identifier))
+                                  (argument_list
+                                    (interpreted_string_literal
+                                      (interpreted_string_literal_content))
+                                    (index_expression
+                                      (identifier)
+                                      (identifier)))))))))))
+                  (argument_list))`
+    pattern:  2, capture: 1 - name, start: (859, 15), end: (859, 35), text: `expression_statement`
+    pattern:  2, capture: 4 - reference.call, start: (860, 17), end: (881, 60), text: `call_expression
+                  (func_literal
+                    (parameter_list)
+                    (block
+                      (statement_list
+                        (if_statement
+                          (binary_expression
+                            (identifier)
+                            (identifier))
+                          (block
+                            (statement_list
+                              (expression_statement
+                                (call_expression
+                                  (selector_expression
+                                    (identifier)
+                                    (field_identifier))
+                                  (argument_list
+                                    (interpreted_string_literal
+                                      (interpreted_string_literal_content))
+                                    (index_expression
+                                      (identifier)
+                                      (identifier)))))))))))`
+    pattern:  2, capture: 1 - name, start: (860, 17), end: (860, 32), text: `call_expression`
+    pattern:  2, capture: 4 - reference.call, start: (861, 19), end: (862, 36), text: `func_literal
+                    (parameter_list)`
+    pattern:  2, capture: 1 - name, start: (861, 19), end: (861, 31), text: `func_literal`
+    pattern:  2, capture: 4 - reference.call, start: (863, 21), end: (881, 58), text: `block
+                      (statement_list
+                        (if_statement
+                          (binary_expression
+                            (identifier)
+                            (identifier))
+                          (block
+                            (statement_list
+                              (expression_statement
+                                (call_expression
+                                  (selector_expression
+                                    (identifier)
+                                    (field_identifier))
+                                  (argument_list
+                                    (interpreted_string_literal
+                                      (interpreted_string_literal_content))
+                                    (index_expression
+                                      (identifier)
+                                      (identifier)))))))))`
+    pattern:  2, capture: 1 - name, start: (863, 21), end: (863, 26), text: `block`
+    pattern:  2, capture: 4 - reference.call, start: (864, 23), end: (881, 57), text: `statement_list
+                        (if_statement
+                          (binary_expression
+                            (identifier)
+                            (identifier))
+                          (block
+                            (statement_list
+                              (expression_statement
+                                (call_expression
+                                  (selector_expression
+                                    (identifier)
+                                    (field_identifier))
+                                  (argument_list
+                                    (interpreted_string_literal
+                                      (interpreted_string_literal_content))
+                                    (index_expression
+                                      (identifier)
+                                      (identifier))))))))`
+    pattern:  2, capture: 1 - name, start: (864, 23), end: (864, 37), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (865, 25), end: (868, 41), text: `if_statement
+                          (binary_expression
+                            (identifier)
+                            (identifier))`
+    pattern:  2, capture: 1 - name, start: (865, 25), end: (865, 37), text: `if_statement`
+    pattern:  2, capture: 4 - reference.call, start: (866, 27), end: (867, 40), text: `binary_expression
+                            (identifier)`
+    pattern:  2, capture: 1 - name, start: (866, 27), end: (866, 44), text: `binary_expression`
+    pattern:  2, capture: 4 - reference.call, start: (869, 27), end: (881, 55), text: `block
+                            (statement_list
+                              (expression_statement
+                                (call_expression
+                                  (selector_expression
+                                    (identifier)
+                                    (field_identifier))
+                                  (argument_list
+                                    (interpreted_string_literal
+                                      (interpreted_string_literal_content))
+                                    (index_expression
+                                      (identifier)
+                                      (identifier))))))`
+    pattern:  2, capture: 1 - name, start: (869, 27), end: (869, 32), text: `block`
+    pattern:  2, capture: 4 - reference.call, start: (870, 29), end: (881, 54), text: `statement_list
+                              (expression_statement
+                                (call_expression
+                                  (selector_expression
+                                    (identifier)
+                                    (field_identifier))
+                                  (argument_list
+                                    (interpreted_string_literal
+                                      (interpreted_string_literal_content))
+                                    (index_expression
+                                      (identifier)
+                                      (identifier)))))`
+    pattern:  2, capture: 1 - name, start: (870, 29), end: (870, 43), text: `statement_list`
+    pattern:  2, capture: 4 - reference.call, start: (871, 31), end: (881, 53), text: `expression_statement
+                                (call_expression
+                                  (selector_expression
+                                    (identifier)
+                                    (field_identifier))
+                                  (argument_list
+                                    (interpreted_string_literal
+                                      (interpreted_string_literal_content))
+                                    (index_expression
+                                      (identifier)
+                                      (identifier))))`
+    pattern:  2, capture: 1 - name, start: (871, 31), end: (871, 51), text: `expression_statement`
+    pattern:  2, capture: 4 - reference.call, start: (872, 33), end: (875, 55), text: `call_expression
+                                  (selector_expression
+                                    (identifier)
+                                    (field_identifier))`
+    pattern:  2, capture: 1 - name, start: (872, 33), end: (872, 48), text: `call_expression`
+    pattern:  2, capture: 4 - reference.call, start: (873, 35), end: (874, 48), text: `selector_expression
+                                    (identifier)`
+    pattern:  2, capture: 1 - name, start: (873, 35), end: (873, 54), text: `selector_expression`
+    pattern:  2, capture: 4 - reference.call, start: (876, 35), end: (878, 75), text: `argument_list
+                                    (interpreted_string_literal
+                                      (interpreted_string_literal_content))`
+    pattern:  2, capture: 1 - name, start: (876, 35), end: (876, 48), text: `argument_list`
+    pattern:  2, capture: 4 - reference.call, start: (877, 37), end: (878, 74), text: `interpreted_string_literal
+                                      (interpreted_string_literal_content)`
+    pattern:  2, capture: 1 - name, start: (877, 37), end: (877, 63), text: `interpreted_string_literal`
+    pattern:  2, capture: 4 - reference.call, start: (879, 37), end: (880, 50), text: `index_expression
+                                      (identifier)`
+    pattern:  2, capture: 1 - name, start: (879, 37), end: (879, 53), text: `index_expression`
+    pattern:  2, capture: 4 - reference.call, start: (888, 0), end: (888, 6), text: `foo(5)`
+    pattern:  2, capture: 1 - name, start: (888, 0), end: (888, 3), text: `foo`
+    pattern:  4, capture: 1 - name, start: (889, 5), end: (889, 6), text: `T`
+    pattern:  4, capture: 6 - reference.type, start: (889, 5), end: (889, 6), text: `T`
+    pattern:  2, capture: 4 - reference.call, start: (893, 1), end: (898, 24), text: `source_file
+  (expression_statement
+    (call_expression
+      (identifier)
+      (argument_list
+        (int_literal))))`
+    pattern:  2, capture: 1 - name, start: (893, 1), end: (893, 12), text: `source_file`
+    pattern:  2, capture: 4 - reference.call, start: (894, 3), end: (898, 23), text: `expression_statement
+    (call_expression
+      (identifier)
+      (argument_list
+        (int_literal)))`
+    pattern:  2, capture: 1 - name, start: (894, 3), end: (894, 23), text: `expression_statement`
+    pattern:  2, capture: 4 - reference.call, start: (895, 5), end: (896, 18), text: `call_expression
+      (identifier)`
+    pattern:  2, capture: 1 - name, start: (895, 5), end: (895, 20), text: `call_expression`
+    pattern:  2, capture: 4 - reference.call, start: (897, 7), end: (898, 21), text: `argument_list
+        (int_literal)`
+    pattern:  2, capture: 1 - name, start: (897, 7), end: (897, 20), text: `argument_list`
+    pattern:  2, capture: 4 - reference.call, start: (899, 3), end: (901, 19), text: `short_var_declaration
+    (expression_list
+      (identifier))`
+    pattern:  2, capture: 1 - name, start: (899, 3), end: (899, 24), text: `short_var_declaration`
+    pattern:  2, capture: 4 - reference.call, start: (900, 5), end: (901, 18), text: `expression_list
+      (identifier)`
+    pattern:  2, capture: 1 - name, start: (900, 5), end: (900, 20), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (902, 5), end: (910, 30), text: `expression_list
+      (composite_literal
+        (type_identifier)
+        (literal_value
+          (keyed_element
+            (literal_element
+              (identifier))
+            (literal_element
+              (identifier)))))`
+    pattern:  2, capture: 1 - name, start: (902, 5), end: (902, 20), text: `expression_list`
+    pattern:  2, capture: 4 - reference.call, start: (903, 7), end: (904, 25), text: `composite_literal
+        (type_identifier)`
+    pattern:  2, capture: 1 - name, start: (903, 7), end: (903, 24), text: `composite_literal`
+    pattern:  2, capture: 4 - reference.call, start: (905, 9), end: (910, 28), text: `literal_value
+          (keyed_element
+            (literal_element
+              (identifier))
+            (literal_element
+              (identifier)))`
+    pattern:  2, capture: 1 - name, start: (905, 9), end: (905, 22), text: `literal_value`
+    pattern:  2, capture: 4 - reference.call, start: (906, 11), end: (908, 27), text: `keyed_element
+            (literal_element
+              (identifier))`
+    pattern:  2, capture: 1 - name, start: (906, 11), end: (906, 24), text: `keyed_element`
+    pattern:  2, capture: 4 - reference.call, start: (907, 13), end: (908, 26), text: `literal_element
+              (identifier)`
+    pattern:  2, capture: 1 - name, start: (907, 13), end: (907, 28), text: `literal_element`
+    pattern:  2, capture: 4 - reference.call, start: (909, 13), end: (910, 26), text: `literal_element
+              (identifier)`
+    pattern:  2, capture: 1 - name, start: (909, 13), end: (909, 28), text: `literal_element`

@@ -1,0 +1,84 @@
+samples/tree-sitter-c/test/corpus/preprocessor.txt
+    pattern:  2, capture: 2 - definition.function, start: (13, 4), end: (14, 23), text: `path: (string_literal
+      (string_content))`
+    pattern:  2, capture: 0 - name, start: (13, 4), end: (13, 8), text: `path`
+    pattern:  2, capture: 2 - definition.function, start: (16, 4), end: (16, 29), text: `path: (system_lib_string)`
+    pattern:  2, capture: 0 - name, start: (16, 4), end: (16, 8), text: `path`
+    pattern:  2, capture: 2 - definition.function, start: (18, 4), end: (18, 22), text: `path: (identifier)`
+    pattern:  2, capture: 0 - name, start: (18, 4), end: (18, 8), text: `path`
+    pattern:  2, capture: 2 - definition.function, start: (20, 4), end: (24, 22), text: `path: (call_expression
+      function: (identifier)
+      arguments: (argument_list
+        (identifier)
+        (identifier)))`
+    pattern:  2, capture: 0 - name, start: (20, 4), end: (20, 8), text: `path`
+    pattern:  2, capture: 2 - definition.function, start: (21, 6), end: (24, 21), text: `function: (identifier)
+      arguments: (argument_list
+        (identifier)
+        (identifier))`
+    pattern:  2, capture: 0 - name, start: (21, 6), end: (21, 14), text: `function`
+    pattern:  2, capture: 2 - definition.function, start: (53, 4), end: (53, 22), text: `name: (identifier)`
+    pattern:  2, capture: 0 - name, start: (53, 4), end: (53, 8), text: `name`
+    pattern:  2, capture: 2 - definition.function, start: (55, 4), end: (56, 24), text: `name: (identifier)
+    value: (preproc_arg)`
+    pattern:  2, capture: 0 - name, start: (55, 4), end: (55, 8), text: `name`
+    pattern:  2, capture: 2 - definition.function, start: (58, 4), end: (59, 24), text: `name: (identifier)
+    value: (preproc_arg)`
+    pattern:  2, capture: 0 - name, start: (58, 4), end: (58, 8), text: `name`
+    pattern:  2, capture: 2 - definition.function, start: (61, 4), end: (62, 24), text: `name: (identifier)
+    value: (preproc_arg)`
+    pattern:  2, capture: 0 - name, start: (61, 4), end: (61, 8), text: `name`
+    pattern:  2, capture: 2 - definition.function, start: (64, 4), end: (68, 24), text: `name: (identifier)
+    parameters: (preproc_params
+      (identifier)
+      (identifier))
+    value: (preproc_arg)`
+    pattern:  2, capture: 0 - name, start: (64, 4), end: (64, 8), text: `name`
+    pattern:  2, capture: 2 - definition.function, start: (70, 4), end: (74, 24), text: `name: (identifier)
+    parameters: (preproc_params
+      (identifier)
+      (identifier))
+    value: (preproc_arg)`
+    pattern:  2, capture: 0 - name, start: (70, 4), end: (70, 8), text: `name`
+    pattern:  2, capture: 2 - definition.function, start: (76, 4), end: (77, 24), text: `name: (identifier)
+    value: (preproc_arg)`
+    pattern:  2, capture: 0 - name, start: (76, 4), end: (76, 8), text: `name`
+    pattern:  2, capture: 2 - definition.function, start: (80, 4), end: (83, 24), text: `name: (identifier)
+    parameters: (preproc_params
+      (identifier))
+    value: (preproc_arg)`
+    pattern:  2, capture: 0 - name, start: (80, 4), end: (80, 8), text: `name`
+    pattern:  2, capture: 2 - definition.function, start: (249, 4), end: (249, 22), text: `name: (identifier)`
+    pattern:  2, capture: 0 - name, start: (249, 4), end: (249, 8), text: `name`
+    pattern:  2, capture: 2 - definition.function, start: (251, 6), end: (252, 30), text: `type: (primitive_type)
+      declarator: (identifier)`
+    pattern:  2, capture: 0 - name, start: (251, 6), end: (251, 10), text: `type`
+    pattern:  2, capture: 2 - definition.function, start: (257, 8), end: (258, 32), text: `type: (primitive_type)
+        declarator: (identifier)`
+    pattern:  2, capture: 0 - name, start: (257, 8), end: (257, 12), text: `type`
+    pattern:  2, capture: 2 - definition.function, start: (263, 6), end: (264, 30), text: `type: (primitive_type)
+      declarator: (identifier)`
+    pattern:  2, capture: 0 - name, start: (263, 6), end: (263, 10), text: `type`
+    pattern:  2, capture: 2 - definition.function, start: (266, 6), end: (266, 24), text: `name: (identifier)`
+    pattern:  2, capture: 0 - name, start: (266, 6), end: (266, 10), text: `name`
+    pattern:  2, capture: 2 - definition.function, start: (268, 8), end: (269, 32), text: `type: (primitive_type)
+        declarator: (identifier)`
+    pattern:  2, capture: 0 - name, start: (268, 8), end: (268, 12), text: `type`
+    pattern:  2, capture: 2 - definition.function, start: (293, 4), end: (297, 22), text: `condition: (binary_expression
+      left: (preproc_defined
+        (identifier))
+      right: (preproc_defined
+        (identifier)))`
+    pattern:  2, capture: 0 - name, start: (293, 4), end: (293, 13), text: `condition`
+    pattern:  2, capture: 2 - definition.function, start: (294, 6), end: (297, 21), text: `left: (preproc_defined
+        (identifier))
+      right: (preproc_defined
+        (identifier))`
+    pattern:  2, capture: 0 - name, start: (294, 6), end: (294, 10), text: `left`
+    pattern:  2, capture: 2 - definition.function, start: (299, 6), end: (300, 26), text: `name: (identifier)
+      value: (preproc_arg)`
+    pattern:  2, capture: 0 - name, start: (299, 6), end: (299, 10), text: `name`
+    pattern:  2, capture: 2 - definition.function, start: (305, 8), end: (305, 26), text: `name: (identifier)`
+    pattern:  2, capture: 0 - name, start: (305, 8), end: (305, 12), text: `name`
+    pattern:  2, capture: 2 - definition.function, start: (311, 10), end: (311, 28), text: `name: (identifier)`
+    pattern:  2, capture: 0 - name, start: (311, 10), end: (311, 14), text: `name`

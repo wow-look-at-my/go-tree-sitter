@@ -1,0 +1,139 @@
+samples/tree-sitter-c/test/corpus/crlf.txt
+  pattern: 36
+    capture: 3 - operator, start: (0, 0), end: (0, 1), text: `=`
+  pattern: 45
+    capture: 3 - operator, start: (0, 1), end: (0, 3), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (0, 3), end: (0, 5), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (0, 5), end: (0, 7), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (0, 7), end: (0, 9), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (0, 9), end: (0, 11), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (0, 11), end: (0, 13), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (0, 13), end: (0, 15), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (0, 15), end: (0, 17), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (0, 17), end: (0, 19), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (0, 19), end: (0, 21), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (0, 21), end: (0, 23), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (0, 23), end: (0, 25), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (0, 25), end: (0, 27), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (0, 27), end: (0, 29), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (0, 29), end: (0, 31), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (0, 31), end: (0, 33), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (0, 33), end: (0, 35), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (0, 35), end: (0, 37), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (0, 37), end: (0, 39), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (0, 39), end: (0, 41), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (0, 41), end: (0, 43), text: `==`
+  pattern: 36
+    capture: 3 - operator, start: (0, 43), end: (0, 44), text: `=`
+  pattern: 57
+    capture: 9 - type, start: (1, 0), end: (1, 4), text: `Line`
+  pattern: 0
+    capture: 0 - variable, start: (1, 5), end: (1, 13), text: `comments`
+  pattern: 49
+    capture: 4 - delimiter, start: (1, 13), end: (1, 13), text: ``
+  pattern: 57
+    capture: 9 - type, start: (1, 14), end: (1, 18), text: `with`
+  pattern: 0
+    capture: 0 - variable, start: (1, 19), end: (1, 26), text: `escaped`
+  pattern: 49
+    capture: 4 - delimiter, start: (1, 26), end: (1, 26), text: ``
+  pattern: 57
+    capture: 9 - type, start: (1, 27), end: (1, 31), text: `CRLF`
+  pattern: 0
+    capture: 0 - variable, start: (1, 32), end: (1, 36), text: `line`
+  pattern: 49
+    capture: 4 - delimiter, start: (1, 36), end: (1, 36), text: ``
+  pattern: 0
+    capture: 0 - variable, start: (1, 37), end: (1, 44), text: `endings`
+  pattern: 45
+    capture: 3 - operator, start: (2, 0), end: (2, 2), text: `==`
+  pattern: 36
+    capture: 3 - operator, start: (2, 2), end: (2, 3), text: `=`
+  pattern: 45
+    capture: 3 - operator, start: (2, 3), end: (2, 5), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (2, 5), end: (2, 7), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (2, 7), end: (2, 9), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (2, 9), end: (2, 11), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (2, 11), end: (2, 13), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (2, 13), end: (2, 15), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (2, 15), end: (2, 17), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (2, 17), end: (2, 19), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (2, 19), end: (2, 21), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (2, 21), end: (2, 23), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (2, 23), end: (2, 25), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (2, 25), end: (2, 27), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (2, 27), end: (2, 29), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (2, 29), end: (2, 31), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (2, 31), end: (2, 33), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (2, 33), end: (2, 35), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (2, 35), end: (2, 37), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (2, 37), end: (2, 39), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (2, 39), end: (2, 41), text: `==`
+  pattern: 45
+    capture: 3 - operator, start: (2, 41), end: (2, 43), text: `==`
+  pattern: 36
+    capture: 3 - operator, start: (2, 43), end: (2, 44), text: `=`
+  pattern: 64
+    capture: comment, start: (4, 0), end: (5, 27)
+  pattern: 0
+    capture: 0 - variable, start: (6, 0), end: (6, 11), text: `this_is_not`
+  pattern: 0
+    capture: 0 - variable, start: (6, 12), end: (6, 21), text: `a_comment`
+  pattern: 49
+    capture: 4 - delimiter, start: (6, 21), end: (6, 22), text: `;`
+  pattern: 32
+    capture: 3 - operator, start: (8, 0), end: (8, 2), text: `--`
+  pattern: 33
+    capture: 3 - operator, start: (8, 2), end: (8, 3), text: `-`
+  pattern: 60
+    capture: 10 - function, start: (10, 1), end: (10, 17), text: `translation_unit`
+  pattern: 0
+    capture: 0 - variable, start: (10, 1), end: (10, 17), text: `translation_unit`
+  pattern: 0
+    capture: 0 - variable, start: (11, 3), end: (11, 10), text: `comment`
+  pattern: 60
+    capture: 10 - function, start: (12, 3), end: (12, 14), text: `declaration`
+  pattern: 0
+    capture: 0 - variable, start: (12, 3), end: (12, 14), text: `declaration`
+  pattern: 0
+    capture: 0 - variable, start: (12, 16), end: (12, 31), text: `type_identifier`
+  pattern: 0
+    capture: 0 - variable, start: (12, 34), end: (12, 44), text: `identifier`

@@ -1,0 +1,34 @@
+corpus/microsoft.txt/000
+  pattern: 0
+    capture: definition.class, start: (1, 0), end: (3, 1)
+    capture: 0 - name, start: (1, 29), end: (1, 31), text: `s2`
+corpus/microsoft.txt/001
+  pattern: 0
+    capture: definition.class, start: (1, 0), end: (7, 1)
+    capture: 0 - name, start: (1, 7), end: (1, 9), text: `s2`
+  pattern: 2
+    capture: definition.function, start: (9, 5), end: (10, 27)
+    capture: 0 - name, start: (9, 5), end: (9, 9), text: `sum2`
+  pattern: 2
+    capture: 2 - definition.function, start: (18, 5), end: (18, 38), text: `MyFunction(char * __uptr myValue)`
+    capture: 0 - name, start: (18, 5), end: (18, 15), text: `MyFunction`
+corpus/microsoft.txt/002
+  pattern: 2
+    capture: 2 - definition.function, start: (1, 13), end: (1, 23), text: `mymethod()`
+    capture: 0 - name, start: (1, 13), end: (1, 21), text: `mymethod`
+  pattern: 2
+    capture: 2 - definition.function, start: (5, 16), end: (5, 26), text: `mymethod()`
+    capture: 0 - name, start: (5, 16), end: (5, 24), text: `mymethod`
+  pattern: 2
+    capture: 2 - definition.function, start: (9, 15), end: (9, 18), text: `f()`
+    capture: 0 - name, start: (9, 15), end: (9, 16), text: `f`
+  pattern: 2
+    capture: 2 - definition.function, start: (13, 15), end: (13, 18), text: `h()`
+    capture: 0 - name, start: (13, 15), end: (13, 16), text: `h`
+  pattern: 2
+    capture: 2 - definition.function, start: (15, 16), end: (15, 19), text: `j()`
+    capture: 0 - name, start: (15, 16), end: (15, 17), text: `j`
+corpus/microsoft.txt/003
+  pattern: 2
+    capture: 2 - definition.function, start: (1, 4), end: (1, 10), text: `main()`
+    capture: 0 - name, start: (1, 4), end: (1, 8), text: `main`

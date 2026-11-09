@@ -1,0 +1,5 @@
+samples/ambiguous.c.txt
+    pattern:  3, capture: 3 - definition.type, start: (0, 0), end: (0, 18), text: `typedef int myint;`
+    pattern:  3, capture: 0 - name, start: (0, 12), end: (0, 17), text: `myint`
+    pattern:  2, capture: 2 - definition.function, start: (4, 5), end: (4, 12), text: `f(void)`
+    pattern:  2, capture: 0 - name, start: (4, 5), end: (4, 6), text: `f`

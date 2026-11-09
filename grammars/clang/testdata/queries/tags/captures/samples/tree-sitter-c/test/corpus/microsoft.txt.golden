@@ -1,0 +1,65 @@
+samples/tree-sitter-c/test/corpus/microsoft.txt
+    pattern:  0, capture: 1 - definition.class, start: (4, 0), end: (6, 1), text: `struct __declspec(dllexport) s2
+{
+}`
+    pattern:  0, capture: 0 - name, start: (4, 29), end: (4, 31), text: `s2`
+    pattern:  2, capture: 2 - definition.function, start: (17, 4), end: (18, 34), text: `name: (type_identifier)
+    body: (field_declaration_list)`
+    pattern:  2, capture: 0 - name, start: (17, 4), end: (17, 8), text: `name`
+    pattern:  2, capture: 2 - definition.function, start: (22, 4), end: (23, 34), text: `name: (type_identifier)
+    body: (field_declaration_list)`
+    pattern:  2, capture: 0 - name, start: (22, 4), end: (22, 8), text: `name`
+    pattern:  2, capture: 2 - definition.function, start: (46, 5), end: (46, 38), text: `MyFunction(char * __uptr myValue)`
+    pattern:  2, capture: 0 - name, start: (46, 5), end: (46, 15), text: `MyFunction`
+    pattern:  2, capture: 2 - definition.function, start: (52, 4), end: (59, 42), text: `name: (type_identifier)
+    body: (field_declaration_list
+      (field_declaration
+        type: (primitive_type)
+        declarator: (pointer_declarator
+          (ms_pointer_modifier
+            (ms_restrict_modifier))
+          declarator: (field_identifier)))`
+    pattern:  2, capture: 0 - name, start: (52, 4), end: (52, 8), text: `name`
+    pattern:  2, capture: 2 - definition.function, start: (61, 8), end: (65, 40), text: `type: (primitive_type)
+        declarator: (pointer_declarator
+          (ms_pointer_modifier
+            (ms_signed_ptr_modifier))
+          declarator: (field_identifier)`
+    pattern:  2, capture: 0 - name, start: (61, 8), end: (61, 12), text: `type`
+    pattern:  2, capture: 2 - definition.function, start: (67, 8), end: (71, 41), text: `type: (primitive_type)
+        declarator: (pointer_declarator
+          (ms_pointer_modifier
+            (ms_unsigned_ptr_modifier))
+          declarator: (field_identifier))`
+    pattern:  2, capture: 0 - name, start: (67, 8), end: (67, 12), text: `type`
+    pattern:  2, capture: 2 - definition.function, start: (73, 8), end: (77, 41), text: `type: (primitive_type)
+        declarator: (pointer_declarator
+          (ms_pointer_modifier
+            (ms_unaligned_ptr_modifier))
+          declarator: (field_identifier))`
+    pattern:  2, capture: 0 - name, start: (73, 8), end: (73, 12), text: `type`
+    pattern:  2, capture: 2 - definition.function, start: (174, 16), end: (174, 19), text: `j()`
+    pattern:  2, capture: 0 - name, start: (174, 16), end: (174, 17), text: `j`
+    pattern:  2, capture: 2 - definition.function, start: (183, 4), end: (188, 25), text: `type: (primitive_type)
+    declarator: (function_declarator
+      declarator: (identifier)
+      parameters: (parameter_list))
+    body: (compound_statement
+      (return_statement))`
+    pattern:  2, capture: 0 - name, start: (183, 4), end: (183, 8), text: `type`
+    pattern:  2, capture: 2 - definition.function, start: (191, 4), end: (196, 25), text: `type: (primitive_type)
+    declarator: (function_declarator
+      declarator: (identifier)
+      parameters: (parameter_list))
+    body: (compound_statement
+      (return_statement))`
+    pattern:  2, capture: 0 - name, start: (191, 4), end: (191, 8), text: `type`
+    pattern:  2, capture: 2 - definition.function, start: (198, 4), end: (198, 26), text: `type: (primitive_type)`
+    pattern:  2, capture: 0 - name, start: (198, 4), end: (198, 8), text: `type`
+    pattern:  2, capture: 2 - definition.function, start: (205, 4), end: (210, 34), text: `type: (primitive_type)
+    declarator: (function_declarator
+      declarator: (parenthesized_declarator
+        (ms_call_modifier)
+        (identifier))
+      parameters: (parameter_list)`
+    pattern:  2, capture: 0 - name, start: (205, 4), end: (205, 8), text: `type`

@@ -1,0 +1,255 @@
+corpus/ambiguities.txt/000
+  pattern: 57
+    capture: 9 - type, start: (1, 0), end: (1, 10), text: `TSLanguage`
+  pattern: 38
+    capture: 3 - operator, start: (1, 11), end: (1, 12), text: `*`
+  pattern: 38
+    capture: 3 - operator, start: (1, 13), end: (1, 14), text: `*`
+  pattern: 0
+    capture: 0 - variable, start: (1, 14), end: (1, 25), text: `lang_parser`
+  pattern: 58
+    capture: 9 - type, start: (1, 27), end: (1, 31), text: `void`
+  pattern: 49
+    capture: 4 - delimiter, start: (1, 32), end: (1, 33), text: `;`
+  pattern: 58
+    capture: 9 - type, start: (3, 0), end: (3, 4), text: `char`
+  pattern: 38
+    capture: 3 - operator, start: (3, 6), end: (3, 7), text: `*`
+  pattern: 0
+    capture: 0 - variable, start: (3, 7), end: (3, 19), text: `ptr_to_array`
+  pattern: 49
+    capture: 4 - delimiter, start: (3, 22), end: (3, 23), text: `;`
+  pattern: 58
+    capture: 9 - type, start: (5, 0), end: (5, 3), text: `int`
+  pattern: 62
+    capture: 10 - function, start: (5, 4), end: (5, 8), text: `main`
+  pattern: 0
+    capture: 0 - variable, start: (5, 4), end: (5, 8), text: `main`
+  pattern: 64
+    capture: 12 - comment, start: (6, 2), end: (6, 31), text: `// declare a function pointer`
+  pattern: 57
+    capture: 9 - type, start: (7, 2), end: (7, 4), text: `T1`
+  pattern: 38
+    capture: 3 - operator, start: (7, 5), end: (7, 6), text: `*`
+  pattern: 62
+    capture: 10 - function, start: (7, 7), end: (7, 8), text: `b`
+  pattern: 0
+    capture: 0 - variable, start: (7, 7), end: (7, 8), text: `b`
+  pattern: 57
+    capture: 9 - type, start: (7, 9), end: (7, 11), text: `T2`
+  pattern: 0
+    capture: 0 - variable, start: (7, 12), end: (7, 13), text: `a`
+  pattern: 49
+    capture: 4 - delimiter, start: (7, 14), end: (7, 15), text: `;`
+  pattern: 64
+    capture: 12 - comment, start: (9, 2), end: (9, 25), text: `// evaluate expressions`
+  pattern: 0
+    capture: 0 - variable, start: (10, 2), end: (10, 3), text: `c`
+  pattern: 38
+    capture: 3 - operator, start: (10, 4), end: (10, 5), text: `*`
+  pattern: 60
+    capture: 10 - function, start: (10, 6), end: (10, 7), text: `d`
+  pattern: 0
+    capture: 0 - variable, start: (10, 6), end: (10, 7), text: `d`
+  pattern: 53
+    capture: 6 - number, start: (10, 8), end: (10, 9), text: `5`
+  pattern: 49
+    capture: 4 - delimiter, start: (10, 10), end: (10, 11), text: `;`
+  pattern: 60
+    capture: 10 - function, start: (11, 2), end: (11, 3), text: `e`
+  pattern: 0
+    capture: 0 - variable, start: (11, 2), end: (11, 3), text: `e`
+  pattern: 0
+    capture: 0 - variable, start: (11, 4), end: (11, 5), text: `f`
+  pattern: 38
+    capture: 3 - operator, start: (11, 6), end: (11, 7), text: `*`
+  pattern: 0
+    capture: 0 - variable, start: (11, 8), end: (11, 9), text: `g`
+  pattern: 49
+    capture: 4 - delimiter, start: (11, 10), end: (11, 11), text: `;`
+corpus/ambiguities.txt/001
+  pattern: 64
+    capture: comment, start: (1, 0), end: (3, 3)
+  pattern: 58
+    capture: 9 - type, start: (5, 0), end: (5, 3), text: `int`
+  pattern: 62
+    capture: 10 - function, start: (5, 4), end: (5, 8), text: `main`
+  pattern: 0
+    capture: 0 - variable, start: (5, 4), end: (5, 8), text: `main`
+  pattern: 64
+    capture: 12 - comment, start: (6, 2), end: (6, 9), text: `// cast`
+  pattern: 60
+    capture: 10 - function, start: (7, 2), end: (7, 3), text: `a`
+  pattern: 0
+    capture: 0 - variable, start: (7, 2), end: (7, 3), text: `a`
+  pattern: 57
+    capture: 9 - type, start: (7, 5), end: (7, 6), text: `B`
+  pattern: 38
+    capture: 3 - operator, start: (7, 7), end: (7, 8), text: `*`
+  pattern: 0
+    capture: 0 - variable, start: (7, 9), end: (7, 10), text: `c`
+  pattern: 49
+    capture: 4 - delimiter, start: (7, 11), end: (7, 12), text: `;`
+  pattern: 64
+    capture: 12 - comment, start: (9, 2), end: (9, 26), text: `// parenthesized product`
+  pattern: 60
+    capture: 10 - function, start: (10, 2), end: (10, 3), text: `d`
+  pattern: 0
+    capture: 0 - variable, start: (10, 2), end: (10, 3), text: `d`
+  pattern: 0
+    capture: 0 - variable, start: (10, 5), end: (10, 6), text: `e`
+  pattern: 38
+    capture: 3 - operator, start: (10, 7), end: (10, 8), text: `*`
+  pattern: 0
+    capture: 0 - variable, start: (10, 9), end: (10, 10), text: `f`
+  pattern: 49
+    capture: 4 - delimiter, start: (10, 12), end: (10, 13), text: `;`
+corpus/ambiguities.txt/002
+  pattern: 64
+    capture: 12 - comment, start: (1, 0), end: (1, 18), text: `// this is a macro`
+  pattern: 0
+    capture: 0 - variable, start: (2, 0), end: (2, 10), text: `GIT_INLINE`
+  pattern: 1
+    capture: 1 - constant, start: (2, 0), end: (2, 10), text: `GIT_INLINE`
+  pattern: 58
+    capture: 9 - type, start: (2, 11), end: (2, 14), text: `int`
+  pattern: 38
+    capture: 3 - operator, start: (2, 15), end: (2, 16), text: `*`
+  pattern: 0
+    capture: 0 - variable, start: (2, 18), end: (2, 19), text: `x`
+  pattern: 36
+    capture: 3 - operator, start: (2, 20), end: (2, 21), text: `=`
+  pattern: 53
+    capture: 6 - number, start: (2, 22), end: (2, 23), text: `5`
+  pattern: 49
+    capture: 4 - delimiter, start: (2, 23), end: (2, 24), text: `;`
+corpus/ambiguities.txt/003
+  pattern: 58
+    capture: 9 - type, start: (1, 0), end: (1, 3), text: `int`
+  pattern: 62
+    capture: 10 - function, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 0
+    capture: 0 - variable, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 64
+    capture: comment, start: (2, 2), end: (7, 5)
+  pattern: 60
+    capture: 10 - function, start: (8, 2), end: (8, 5), text: `ABC`
+  pattern: 0
+    capture: 0 - variable, start: (8, 2), end: (8, 5), text: `ABC`
+  pattern: 1
+    capture: 1 - constant, start: (8, 2), end: (8, 5), text: `ABC`
+  pattern: 0
+    capture: 0 - variable, start: (8, 6), end: (8, 7), text: `d`
+  pattern: 49
+    capture: 4 - delimiter, start: (8, 8), end: (8, 9), text: `;`
+  pattern: 64
+    capture: comment, start: (10, 2), end: (12, 5)
+  pattern: 57
+    capture: 9 - type, start: (13, 2), end: (13, 5), text: `efg`
+  pattern: 0
+    capture: 0 - variable, start: (13, 6), end: (13, 9), text: `hij`
+  pattern: 49
+    capture: 4 - delimiter, start: (13, 9), end: (13, 10), text: `;`
+corpus/ambiguities.txt/004
+  pattern: 58
+    capture: 9 - type, start: (1, 0), end: (1, 3), text: `int`
+  pattern: 62
+    capture: 10 - function, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 0
+    capture: 0 - variable, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 58
+    capture: 9 - type, start: (2, 2), end: (2, 5), text: `int`
+  pattern: 0
+    capture: 0 - variable, start: (2, 6), end: (2, 7), text: `a`
+  pattern: 36
+    capture: 3 - operator, start: (2, 8), end: (2, 9), text: `=`
+  pattern: 53
+    capture: 6 - number, start: (2, 10), end: (2, 11), text: `1`
+  pattern: 49
+    capture: 4 - delimiter, start: (2, 11), end: (2, 12), text: `;`
+  pattern: 60
+    capture: 10 - function, start: (3, 2), end: (3, 3), text: `b`
+  pattern: 0
+    capture: 0 - variable, start: (3, 2), end: (3, 3), text: `b`
+  pattern: 0
+    capture: 0 - variable, start: (3, 4), end: (3, 5), text: `a`
+  pattern: 49
+    capture: 4 - delimiter, start: (3, 6), end: (3, 7), text: `;`
+  pattern: 0
+    capture: 0 - variable, start: (4, 2), end: (4, 3), text: `A`
+  pattern: 1
+    capture: 1 - constant, start: (4, 2), end: (4, 3), text: `A`
+  pattern: 57
+    capture: 9 - type, start: (4, 4), end: (4, 5), text: `A`
+  pattern: 38
+    capture: 3 - operator, start: (4, 6), end: (4, 7), text: `*`
+  pattern: 49
+    capture: 4 - delimiter, start: (4, 8), end: (4, 9), text: `;`
+corpus/ambiguities.txt/005
+  pattern: 58
+    capture: 9 - type, start: (1, 0), end: (1, 3), text: `int`
+  pattern: 62
+    capture: 10 - function, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 0
+    capture: 0 - variable, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 11
+    capture: 2 - keyword, start: (2, 2), end: (2, 5), text: `for`
+  pattern: 57
+    capture: 9 - type, start: (2, 7), end: (2, 8), text: `a`
+  pattern: 38
+    capture: 3 - operator, start: (2, 9), end: (2, 10), text: `*`
+  pattern: 0
+    capture: 0 - variable, start: (2, 10), end: (2, 11), text: `b`
+  pattern: 36
+    capture: 3 - operator, start: (2, 12), end: (2, 13), text: `=`
+  pattern: 0
+    capture: 0 - variable, start: (2, 14), end: (2, 15), text: `c`
+  pattern: 49
+    capture: 4 - delimiter, start: (2, 15), end: (2, 16), text: `;`
+  pattern: 0
+    capture: 0 - variable, start: (2, 17), end: (2, 18), text: `d`
+  pattern: 49
+    capture: 4 - delimiter, start: (2, 18), end: (2, 19), text: `;`
+  pattern: 0
+    capture: 0 - variable, start: (2, 20), end: (2, 21), text: `e`
+  pattern: 0
+    capture: 0 - variable, start: (3, 4), end: (3, 7), text: `aff`
+  pattern: 49
+    capture: 4 - delimiter, start: (3, 7), end: (3, 8), text: `;`
+  pattern: 64
+    capture: 12 - comment, start: (6, 2), end: (6, 14), text: `// a-comment`
+  pattern: 0
+    capture: 0 - variable, start: (8, 2), end: (8, 3), text: `g`
+  pattern: 49
+    capture: 4 - delimiter, start: (8, 3), end: (8, 4), text: `;`
+corpus/ambiguities.txt/006
+  pattern: 60
+    capture: 10 - function, start: (1, 0), end: (1, 16), text: `DEFINE_SOMETHING`
+  pattern: 0
+    capture: 0 - variable, start: (1, 0), end: (1, 16), text: `DEFINE_SOMETHING`
+  pattern: 1
+    capture: 1 - constant, start: (1, 0), end: (1, 16), text: `DEFINE_SOMETHING`
+  pattern: 0
+    capture: 0 - variable, start: (1, 17), end: (1, 24), text: `THING_A`
+  pattern: 1
+    capture: 1 - constant, start: (1, 17), end: (1, 24), text: `THING_A`
+  pattern: 50
+    capture: 5 - string, start: (1, 26), end: (1, 45), text: `"this is a thing a"`
+  pattern: 49
+    capture: 4 - delimiter, start: (1, 46), end: (1, 47), text: `;`
+  pattern: 60
+    capture: 10 - function, start: (2, 0), end: (2, 16), text: `DEFINE_SOMETHING`
+  pattern: 0
+    capture: 0 - variable, start: (2, 0), end: (2, 16), text: `DEFINE_SOMETHING`
+  pattern: 1
+    capture: 1 - constant, start: (2, 0), end: (2, 16), text: `DEFINE_SOMETHING`
+  pattern: 0
+    capture: 0 - variable, start: (2, 17), end: (2, 24), text: `THING_B`
+  pattern: 1
+    capture: 1 - constant, start: (2, 17), end: (2, 24), text: `THING_B`
+  pattern: 50
+    capture: 5 - string, start: (2, 26), end: (2, 45), text: `"this is a thing b"`
+  pattern: 50
+    capture: 5 - string, start: (2, 47), end: (2, 55), text: `"thanks"`
+  pattern: 49
+    capture: 4 - delimiter, start: (2, 56), end: (2, 57), text: `;`

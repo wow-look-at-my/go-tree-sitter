@@ -1,0 +1,9 @@
+samples/tree-sitter-c/test/corpus/types.txt
+    pattern:  2, capture: 2 - definition.function, start: (47, 5), end: (47, 20), text: `f(unsigned int)`
+    pattern:  2, capture: 0 - name, start: (47, 5), end: (47, 6), text: `f`
+    pattern:  2, capture: 2 - definition.function, start: (48, 5), end: (48, 23), text: `f(signed long int)`
+    pattern:  2, capture: 0 - name, start: (48, 5), end: (48, 6), text: `f`
+    pattern:  2, capture: 2 - definition.function, start: (49, 5), end: (49, 19), text: `f(unsigned v1)`
+    pattern:  2, capture: 0 - name, start: (49, 5), end: (49, 6), text: `f`
+    pattern:  2, capture: 2 - definition.function, start: (50, 5), end: (50, 24), text: `f(unsigned long v2)`
+    pattern:  2, capture: 0 - name, start: (50, 5), end: (50, 6), text: `f`

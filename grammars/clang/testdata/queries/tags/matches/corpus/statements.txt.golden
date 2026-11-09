@@ -1,0 +1,34 @@
+corpus/statements.txt/000
+  pattern: 2
+    capture: 2 - definition.function, start: (1, 4), end: (1, 10), text: `main()`
+    capture: 0 - name, start: (1, 4), end: (1, 8), text: `main`
+corpus/statements.txt/001
+  pattern: 2
+    capture: 2 - definition.function, start: (1, 4), end: (1, 10), text: `main()`
+    capture: 0 - name, start: (1, 4), end: (1, 8), text: `main`
+corpus/statements.txt/002
+  pattern: 2
+    capture: 2 - definition.function, start: (1, 4), end: (1, 10), text: `main()`
+    capture: 0 - name, start: (1, 4), end: (1, 8), text: `main`
+corpus/statements.txt/003
+  pattern: 2
+    capture: 2 - definition.function, start: (1, 5), end: (1, 14), text: `foo(T *t)`
+    capture: 0 - name, start: (1, 5), end: (1, 8), text: `foo`
+corpus/statements.txt/004
+  pattern: 2
+    capture: 2 - definition.function, start: (1, 5), end: (1, 15), text: `foo(int a)`
+    capture: 0 - name, start: (1, 5), end: (1, 8), text: `foo`
+corpus/statements.txt/005
+  pattern: 2
+    capture: 2 - definition.function, start: (1, 4), end: (1, 10), text: `main()`
+    capture: 0 - name, start: (1, 4), end: (1, 8), text: `main`
+corpus/statements.txt/006
+  pattern: 2
+    capture: 2 - definition.function, start: (1, 5), end: (1, 10), text: `foo()`
+    capture: 0 - name, start: (1, 5), end: (1, 8), text: `foo`
+corpus/statements.txt/007
+corpus/statements.txt/008
+corpus/statements.txt/009
+  pattern: 2
+    capture: 2 - definition.function, start: (1, 5), end: (1, 8), text: `f()`
+    capture: 0 - name, start: (1, 5), end: (1, 6), text: `f`

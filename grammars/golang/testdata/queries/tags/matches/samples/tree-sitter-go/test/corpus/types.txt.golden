@@ -1,0 +1,1034 @@
+samples/tree-sitter-go/test/corpus/types.txt
+  pattern: 3
+    capture: 5 - definition.type, start: (4, 5), end: (4, 10), text: `a b.c`
+    capture: 1 - name, start: (4, 5), end: (4, 6), text: `a`
+  pattern: 4
+    capture: 1 - name, start: (4, 5), end: (4, 6), text: `a`
+    capture: 6 - reference.type, start: (4, 5), end: (4, 6), text: `a`
+  pattern: 4
+    capture: 1 - name, start: (4, 9), end: (4, 10), text: `c`
+    capture: 6 - reference.type, start: (4, 9), end: (4, 10), text: `c`
+  pattern: 2
+    capture: reference.call, start: (8, 1), end: (14, 34)
+    capture: 1 - name, start: (8, 1), end: (8, 12), text: `source_file`
+  pattern: 2
+    capture: reference.call, start: (9, 3), end: (14, 33)
+    capture: 1 - name, start: (9, 3), end: (9, 19), text: `type_declaration`
+  pattern: 2
+    capture: reference.call, start: (10, 5), end: (11, 29)
+    capture: 1 - name, start: (10, 5), end: (10, 14), text: `type_spec`
+  pattern: 2
+    capture: reference.call, start: (12, 13), end: (13, 37)
+    capture: 1 - name, start: (12, 13), end: (12, 27), text: `qualified_type`
+  pattern: 3
+    capture: 5 - definition.type, start: (20, 5), end: (20, 13), text: `a [2+2]c`
+    capture: 1 - name, start: (20, 5), end: (20, 6), text: `a`
+  pattern: 4
+    capture: 1 - name, start: (20, 5), end: (20, 6), text: `a`
+    capture: 6 - reference.type, start: (20, 5), end: (20, 6), text: `a`
+  pattern: 4
+    capture: 1 - name, start: (20, 12), end: (20, 13), text: `c`
+    capture: 6 - reference.type, start: (20, 12), end: (20, 13), text: `c`
+  pattern: 2
+    capture: reference.call, start: (24, 1), end: (32, 37)
+    capture: 1 - name, start: (24, 1), end: (24, 12), text: `source_file`
+  pattern: 2
+    capture: reference.call, start: (25, 3), end: (32, 36)
+    capture: 1 - name, start: (25, 3), end: (25, 19), text: `type_declaration`
+  pattern: 2
+    capture: reference.call, start: (26, 5), end: (27, 29)
+    capture: 1 - name, start: (26, 5), end: (26, 14), text: `type_spec`
+  pattern: 2
+    capture: reference.call, start: (28, 13), end: (31, 31)
+    capture: 1 - name, start: (28, 13), end: (28, 23), text: `array_type`
+  pattern: 2
+    capture: reference.call, start: (29, 17), end: (30, 29)
+    capture: 1 - name, start: (29, 17), end: (29, 34), text: `binary_expression`
+  pattern: 5
+    capture: 1 - name, start: (38, 8), end: (38, 12), text: `main`
+  pattern: 3
+    capture: 5 - definition.type, start: (40, 5), end: (40, 10), text: `a []c`
+    capture: 1 - name, start: (40, 5), end: (40, 6), text: `a`
+  pattern: 4
+    capture: 1 - name, start: (40, 5), end: (40, 6), text: `a`
+    capture: 6 - reference.type, start: (40, 5), end: (40, 6), text: `a`
+  pattern: 4
+    capture: 1 - name, start: (40, 9), end: (40, 10), text: `c`
+    capture: 6 - reference.type, start: (40, 9), end: (40, 10), text: `c`
+  pattern: 3
+    capture: 5 - definition.type, start: (41, 5), end: (41, 12), text: `b [][]d`
+    capture: 1 - name, start: (41, 5), end: (41, 6), text: `b`
+  pattern: 4
+    capture: 1 - name, start: (41, 5), end: (41, 6), text: `b`
+    capture: 6 - reference.type, start: (41, 5), end: (41, 6), text: `b`
+  pattern: 4
+    capture: 1 - name, start: (41, 11), end: (41, 12), text: `d`
+    capture: 6 - reference.type, start: (41, 11), end: (41, 12), text: `d`
+  pattern: 2
+    capture: reference.call, start: (45, 1), end: (47, 25)
+    capture: 1 - name, start: (45, 1), end: (45, 12), text: `source_file`
+  pattern: 2
+    capture: reference.call, start: (46, 3), end: (47, 24)
+    capture: 1 - name, start: (46, 3), end: (46, 17), text: `package_clause`
+  pattern: 2
+    capture: reference.call, start: (48, 3), end: (52, 27)
+    capture: 1 - name, start: (48, 3), end: (48, 19), text: `type_declaration`
+  pattern: 2
+    capture: reference.call, start: (49, 5), end: (50, 23)
+    capture: 1 - name, start: (49, 5), end: (49, 14), text: `type_spec`
+  pattern: 2
+    capture: reference.call, start: (51, 7), end: (52, 25)
+    capture: 1 - name, start: (51, 7), end: (51, 17), text: `slice_type`
+  pattern: 2
+    capture: reference.call, start: (53, 3), end: (58, 30)
+    capture: 1 - name, start: (53, 3), end: (53, 19), text: `type_declaration`
+  pattern: 2
+    capture: reference.call, start: (54, 5), end: (55, 23)
+    capture: 1 - name, start: (54, 5), end: (54, 14), text: `type_spec`
+  pattern: 2
+    capture: reference.call, start: (56, 7), end: (58, 28)
+    capture: 1 - name, start: (56, 7), end: (56, 17), text: `slice_type`
+  pattern: 2
+    capture: reference.call, start: (57, 9), end: (58, 27)
+    capture: 1 - name, start: (57, 9), end: (57, 19), text: `slice_type`
+  pattern: 5
+    capture: 1 - name, start: (64, 8), end: (64, 12), text: `main`
+  pattern: 3
+    capture: 5 - definition.type, start: (66, 5), end: (66, 17), text: `s1 struct {}`
+    capture: 1 - name, start: (66, 5), end: (66, 7), text: `s1`
+  pattern: 4
+    capture: 1 - name, start: (66, 5), end: (66, 7), text: `s1`
+    capture: 6 - reference.type, start: (66, 5), end: (66, 7), text: `s1`
+  pattern: 7
+    capture: 1 - name, start: (66, 5), end: (66, 7), text: `s1`
+  pattern: 3
+    capture: 5 - definition.type, start: (68, 5), end: (68, 25), text: `s2 struct { Person }`
+    capture: 1 - name, start: (68, 5), end: (68, 7), text: `s2`
+  pattern: 4
+    capture: 1 - name, start: (68, 5), end: (68, 7), text: `s2`
+    capture: 6 - reference.type, start: (68, 5), end: (68, 7), text: `s2`
+  pattern: 7
+    capture: 1 - name, start: (68, 5), end: (68, 7), text: `s2`
+  pattern: 4
+    capture: 1 - name, start: (68, 17), end: (68, 23), text: `Person`
+    capture: 6 - reference.type, start: (68, 17), end: (68, 23), text: `Person`
+  pattern: 3
+    capture: definition.type, start: (70, 5), end: (72, 1)
+    capture: 1 - name, start: (70, 5), end: (70, 7), text: `s2`
+  pattern: 4
+    capture: 1 - name, start: (70, 5), end: (70, 7), text: `s2`
+    capture: 6 - reference.type, start: (70, 5), end: (70, 7), text: `s2`
+  pattern: 7
+    capture: 1 - name, start: (70, 5), end: (70, 7), text: `s2`
+  pattern: 4
+    capture: 1 - name, start: (71, 7), end: (71, 10), text: `int`
+    capture: 6 - reference.type, start: (71, 7), end: (71, 10), text: `int`
+  pattern: 3
+    capture: definition.type, start: (74, 5), end: (80, 1)
+    capture: 1 - name, start: (74, 5), end: (74, 7), text: `s3`
+  pattern: 4
+    capture: 1 - name, start: (74, 5), end: (74, 7), text: `s3`
+    capture: 6 - reference.type, start: (74, 5), end: (74, 7), text: `s3`
+  pattern: 7
+    capture: 1 - name, start: (74, 5), end: (74, 7), text: `s3`
+  pattern: 4
+    capture: 1 - name, start: (76, 4), end: (76, 6), text: `s1`
+    capture: 6 - reference.type, start: (76, 4), end: (76, 6), text: `s1`
+  pattern: 4
+    capture: 1 - name, start: (79, 4), end: (79, 7), text: `int`
+    capture: 6 - reference.type, start: (79, 4), end: (79, 7), text: `int`
+  pattern: 3
+    capture: definition.type, start: (82, 5), end: (85, 1)
+    capture: 1 - name, start: (82, 5), end: (82, 7), text: `g1`
+  pattern: 4
+    capture: 1 - name, start: (82, 5), end: (82, 7), text: `g1`
+    capture: 6 - reference.type, start: (82, 5), end: (82, 7), text: `g1`
+  pattern: 7
+    capture: 1 - name, start: (82, 5), end: (82, 7), text: `g1`
+  pattern: 4
+    capture: 1 - name, start: (83, 11), end: (83, 16), text: `Array`
+    capture: 6 - reference.type, start: (83, 11), end: (83, 16), text: `Array`
+  pattern: 4
+    capture: 1 - name, start: (83, 17), end: (83, 18), text: `T`
+    capture: 6 - reference.type, start: (83, 17), end: (83, 18), text: `T`
+  pattern: 4
+    capture: 1 - name, start: (84, 11), end: (84, 16), text: `Array`
+    capture: 6 - reference.type, start: (84, 11), end: (84, 16), text: `Array`
+  pattern: 4
+    capture: 1 - name, start: (84, 17), end: (84, 22), text: `Array`
+    capture: 6 - reference.type, start: (84, 17), end: (84, 22), text: `Array`
+  pattern: 4
+    capture: 1 - name, start: (84, 23), end: (84, 24), text: `T`
+    capture: 6 - reference.type, start: (84, 23), end: (84, 24), text: `T`
+  pattern: 3
+    capture: 5 - definition.type, start: (87, 5), end: (87, 57), text: `g2[T, U any, V interface{}, W Foo[Bar[T]]] struct {}`
+    capture: 1 - name, start: (87, 5), end: (87, 7), text: `g2`
+  pattern: 4
+    capture: 1 - name, start: (87, 5), end: (87, 7), text: `g2`
+    capture: 6 - reference.type, start: (87, 5), end: (87, 7), text: `g2`
+  pattern: 4
+    capture: 1 - name, start: (87, 13), end: (87, 16), text: `any`
+    capture: 6 - reference.type, start: (87, 13), end: (87, 16), text: `any`
+  pattern: 4
+    capture: 1 - name, start: (87, 35), end: (87, 38), text: `Foo`
+    capture: 6 - reference.type, start: (87, 35), end: (87, 38), text: `Foo`
+  pattern: 4
+    capture: 1 - name, start: (87, 39), end: (87, 42), text: `Bar`
+    capture: 6 - reference.type, start: (87, 39), end: (87, 42), text: `Bar`
+  pattern: 4
+    capture: 1 - name, start: (87, 43), end: (87, 44), text: `T`
+    capture: 6 - reference.type, start: (87, 43), end: (87, 44), text: `T`
+  pattern: 7
+    capture: 1 - name, start: (87, 5), end: (87, 7), text: `g2`
+  pattern: 2
+    capture: reference.call, start: (91, 1), end: (93, 25)
+    capture: 1 - name, start: (91, 1), end: (91, 12), text: `source_file`
+  pattern: 2
+    capture: reference.call, start: (92, 3), end: (93, 24)
+    capture: 1 - name, start: (92, 3), end: (92, 17), text: `package_clause`
+  pattern: 2
+    capture: reference.call, start: (94, 3), end: (98, 34)
+    capture: 1 - name, start: (94, 3), end: (94, 19), text: `type_declaration`
+  pattern: 2
+    capture: reference.call, start: (95, 5), end: (96, 23)
+    capture: 1 - name, start: (95, 5), end: (95, 14), text: `type_spec`
+  pattern: 2
+    capture: reference.call, start: (97, 7), end: (98, 32)
+    capture: 1 - name, start: (97, 7), end: (97, 18), text: `struct_type`
+  pattern: 2
+    capture: reference.call, start: (99, 3), end: (105, 33)
+    capture: 1 - name, start: (99, 3), end: (99, 19), text: `type_declaration`
+  pattern: 2
+    capture: reference.call, start: (100, 5), end: (101, 23)
+    capture: 1 - name, start: (100, 5), end: (100, 14), text: `type_spec`
+  pattern: 2
+    capture: reference.call, start: (102, 7), end: (105, 31)
+    capture: 1 - name, start: (102, 7), end: (102, 18), text: `struct_type`
+  pattern: 2
+    capture: reference.call, start: (103, 9), end: (105, 30)
+    capture: 1 - name, start: (103, 9), end: (103, 31), text: `field_declaration_list`
+  pattern: 2
+    capture: reference.call, start: (104, 11), end: (105, 29)
+    capture: 1 - name, start: (104, 11), end: (104, 28), text: `field_declaration`
+  pattern: 2
+    capture: reference.call, start: (106, 3), end: (114, 33)
+    capture: 1 - name, start: (106, 3), end: (106, 19), text: `type_declaration`
+  pattern: 2
+    capture: reference.call, start: (107, 5), end: (108, 23)
+    capture: 1 - name, start: (107, 5), end: (107, 14), text: `type_spec`
+  pattern: 2
+    capture: reference.call, start: (109, 7), end: (114, 31)
+    capture: 1 - name, start: (109, 7), end: (109, 18), text: `struct_type`
+  pattern: 2
+    capture: reference.call, start: (110, 9), end: (114, 30)
+    capture: 1 - name, start: (110, 9), end: (110, 31), text: `field_declaration_list`
+  pattern: 2
+    capture: reference.call, start: (111, 11), end: (112, 30)
+    capture: 1 - name, start: (111, 11), end: (111, 28), text: `field_declaration`
+  pattern: 2
+    capture: reference.call, start: (115, 3), end: (130, 47)
+    capture: 1 - name, start: (115, 3), end: (115, 19), text: `type_declaration`
+  pattern: 2
+    capture: reference.call, start: (116, 5), end: (117, 23)
+    capture: 1 - name, start: (116, 5), end: (116, 14), text: `type_spec`
+  pattern: 2
+    capture: reference.call, start: (118, 7), end: (130, 45)
+    capture: 1 - name, start: (118, 7), end: (118, 18), text: `struct_type`
+  pattern: 2
+    capture: reference.call, start: (119, 9), end: (120, 19)
+    capture: 1 - name, start: (119, 9), end: (119, 31), text: `field_declaration_list`
+  pattern: 2
+    capture: reference.call, start: (121, 11), end: (124, 32)
+    capture: 1 - name, start: (121, 11), end: (121, 28), text: `field_declaration`
+  pattern: 2
+    capture: reference.call, start: (122, 13), end: (123, 34)
+    capture: 1 - name, start: (122, 13), end: (122, 27), text: `qualified_type`
+  pattern: 2
+    capture: reference.call, start: (126, 11), end: (127, 30)
+    capture: 1 - name, start: (126, 11), end: (126, 28), text: `field_declaration`
+  pattern: 2
+    capture: reference.call, start: (129, 13), end: (130, 42)
+    capture: 1 - name, start: (129, 13), end: (129, 31), text: `raw_string_literal`
+  pattern: 2
+    capture: reference.call, start: (131, 3), end: (153, 51)
+    capture: 1 - name, start: (131, 3), end: (131, 19), text: `type_declaration`
+  pattern: 2
+    capture: reference.call, start: (132, 5), end: (133, 23)
+    capture: 1 - name, start: (132, 5), end: (132, 14), text: `type_spec`
+  pattern: 2
+    capture: reference.call, start: (134, 7), end: (153, 49)
+    capture: 1 - name, start: (134, 7), end: (134, 18), text: `struct_type`
+  pattern: 2
+    capture: reference.call, start: (135, 9), end: (142, 39)
+    capture: 1 - name, start: (135, 9), end: (135, 31), text: `field_declaration_list`
+  pattern: 2
+    capture: reference.call, start: (136, 11), end: (137, 30)
+    capture: 1 - name, start: (136, 11), end: (136, 28), text: `field_declaration`
+  pattern: 2
+    capture: reference.call, start: (138, 13), end: (139, 31)
+    capture: 1 - name, start: (138, 13), end: (138, 25), text: `generic_type`
+  pattern: 2
+    capture: reference.call, start: (140, 15), end: (142, 36)
+    capture: 1 - name, start: (140, 15), end: (140, 29), text: `type_arguments`
+  pattern: 2
+    capture: reference.call, start: (141, 17), end: (142, 35)
+    capture: 1 - name, start: (141, 17), end: (141, 26), text: `type_elem`
+  pattern: 2
+    capture: reference.call, start: (143, 11), end: (144, 30)
+    capture: 1 - name, start: (143, 11), end: (143, 28), text: `field_declaration`
+  pattern: 2
+    capture: reference.call, start: (145, 13), end: (146, 31)
+    capture: 1 - name, start: (145, 13), end: (145, 25), text: `generic_type`
+  pattern: 2
+    capture: reference.call, start: (147, 15), end: (153, 45)
+    capture: 1 - name, start: (147, 15), end: (147, 29), text: `type_arguments`
+  pattern: 2
+    capture: reference.call, start: (148, 17), end: (153, 44)
+    capture: 1 - name, start: (148, 17), end: (148, 26), text: `type_elem`
+  pattern: 2
+    capture: reference.call, start: (149, 19), end: (150, 37)
+    capture: 1 - name, start: (149, 19), end: (149, 31), text: `generic_type`
+  pattern: 2
+    capture: reference.call, start: (151, 21), end: (153, 42)
+    capture: 1 - name, start: (151, 21), end: (151, 35), text: `type_arguments`
+  pattern: 2
+    capture: reference.call, start: (152, 23), end: (153, 41)
+    capture: 1 - name, start: (152, 23), end: (152, 32), text: `type_elem`
+  pattern: 2
+    capture: reference.call, start: (154, 3), end: (180, 34)
+    capture: 1 - name, start: (154, 3), end: (154, 19), text: `type_declaration`
+  pattern: 2
+    capture: reference.call, start: (155, 5), end: (156, 23)
+    capture: 1 - name, start: (155, 5), end: (155, 14), text: `type_spec`
+  pattern: 2
+    capture: reference.call, start: (157, 7), end: (162, 31)
+    capture: 1 - name, start: (157, 7), end: (157, 26), text: `type_parameter_list`
+  pattern: 2
+    capture: reference.call, start: (158, 9), end: (159, 22)
+    capture: 1 - name, start: (158, 9), end: (158, 35), text: `type_parameter_declaration`
+  pattern: 2
+    capture: reference.call, start: (161, 11), end: (162, 29)
+    capture: 1 - name, start: (161, 11), end: (161, 26), text: `type_constraint`
+  pattern: 2
+    capture: reference.call, start: (163, 9), end: (164, 22)
+    capture: 1 - name, start: (163, 9), end: (163, 35), text: `type_parameter_declaration`
+  pattern: 2
+    capture: reference.call, start: (165, 11), end: (166, 28)
+    capture: 1 - name, start: (165, 11), end: (165, 26), text: `type_constraint`
+  pattern: 2
+    capture: reference.call, start: (167, 9), end: (168, 22)
+    capture: 1 - name, start: (167, 9), end: (167, 35), text: `type_parameter_declaration`
+  pattern: 2
+    capture: reference.call, start: (169, 11), end: (178, 47)
+    capture: 1 - name, start: (169, 11), end: (169, 26), text: `type_constraint`
+  pattern: 2
+    capture: reference.call, start: (170, 13), end: (171, 31)
+    capture: 1 - name, start: (170, 13), end: (170, 25), text: `generic_type`
+  pattern: 2
+    capture: reference.call, start: (172, 15), end: (178, 45)
+    capture: 1 - name, start: (172, 15), end: (172, 29), text: `type_arguments`
+  pattern: 2
+    capture: reference.call, start: (173, 17), end: (178, 44)
+    capture: 1 - name, start: (173, 17), end: (173, 26), text: `type_elem`
+  pattern: 2
+    capture: reference.call, start: (174, 19), end: (175, 37)
+    capture: 1 - name, start: (174, 19), end: (174, 31), text: `generic_type`
+  pattern: 2
+    capture: reference.call, start: (176, 21), end: (178, 42)
+    capture: 1 - name, start: (176, 21), end: (176, 35), text: `type_arguments`
+  pattern: 2
+    capture: reference.call, start: (177, 23), end: (178, 41)
+    capture: 1 - name, start: (177, 23), end: (177, 32), text: `type_elem`
+  pattern: 2
+    capture: reference.call, start: (179, 7), end: (180, 32)
+    capture: 1 - name, start: (179, 7), end: (179, 18), text: `struct_type`
+  pattern: 5
+    capture: 1 - name, start: (186, 8), end: (186, 12), text: `main`
+  pattern: 3
+    capture: 5 - definition.type, start: (188, 5), end: (188, 20), text: `i1 interface {}`
+    capture: 1 - name, start: (188, 5), end: (188, 7), text: `i1`
+  pattern: 4
+    capture: 1 - name, start: (188, 5), end: (188, 7), text: `i1`
+    capture: 6 - reference.type, start: (188, 5), end: (188, 7), text: `i1`
+  pattern: 6
+    capture: 1 - name, start: (188, 5), end: (188, 7), text: `i1`
+  pattern: 3
+    capture: 5 - definition.type, start: (190, 5), end: (190, 31), text: `i1 interface { io.Reader }`
+    capture: 1 - name, start: (190, 5), end: (190, 7), text: `i1`
+  pattern: 4
+    capture: 1 - name, start: (190, 5), end: (190, 7), text: `i1`
+    capture: 6 - reference.type, start: (190, 5), end: (190, 7), text: `i1`
+  pattern: 6
+    capture: 1 - name, start: (190, 5), end: (190, 7), text: `i1`
+  pattern: 4
+    capture: 1 - name, start: (190, 23), end: (190, 29), text: `Reader`
+    capture: 6 - reference.type, start: (190, 23), end: (190, 29), text: `Reader`
+  pattern: 3
+    capture: definition.type, start: (192, 5), end: (197, 1)
+    capture: 1 - name, start: (192, 5), end: (192, 7), text: `i2`
+  pattern: 4
+    capture: 1 - name, start: (192, 5), end: (192, 7), text: `i2`
+    capture: 6 - reference.type, start: (192, 5), end: (192, 7), text: `i2`
+  pattern: 6
+    capture: 1 - name, start: (192, 5), end: (192, 7), text: `i2`
+  pattern: 4
+    capture: 1 - name, start: (193, 2), end: (193, 4), text: `i1`
+    capture: 6 - reference.type, start: (193, 2), end: (193, 4), text: `i1`
+  pattern: 4
+    capture: 1 - name, start: (194, 5), end: (194, 11), text: `Reader`
+    capture: 6 - reference.type, start: (194, 5), end: (194, 11), text: `Reader`
+  pattern: 4
+    capture: 1 - name, start: (195, 15), end: (195, 21), text: `string`
+    capture: 6 - reference.type, start: (195, 15), end: (195, 21), text: `string`
+  pattern: 4
+    capture: 1 - name, start: (195, 23), end: (195, 28), text: `error`
+    capture: 6 - reference.type, start: (195, 23), end: (195, 28), text: `error`
+  pattern: 4
+    capture: 1 - name, start: (196, 14), end: (196, 17), text: `int`
+    capture: 6 - reference.type, start: (196, 14), end: (196, 17), text: `int`
+  pattern: 4
+    capture: 1 - name, start: (196, 22), end: (196, 26), text: `bool`
+    capture: 6 - reference.type, start: (196, 22), end: (196, 26), text: `bool`
+  pattern: 4
+    capture: 1 - name, start: (196, 28), end: (196, 32), text: `bool`
+    capture: 6 - reference.type, start: (196, 28), end: (196, 32), text: `bool`
+  pattern: 3
+    capture: definition.type, start: (199, 5), end: (201, 1)
+    capture: 1 - name, start: (199, 5), end: (199, 18), text: `SignedInteger`
+  pattern: 4
+    capture: 1 - name, start: (199, 5), end: (199, 18), text: `SignedInteger`
+    capture: 6 - reference.type, start: (199, 5), end: (199, 18), text: `SignedInteger`
+  pattern: 6
+    capture: 1 - name, start: (199, 5), end: (199, 18), text: `SignedInteger`
+  pattern: 4
+    capture: 1 - name, start: (200, 2), end: (200, 5), text: `int`
+    capture: 6 - reference.type, start: (200, 2), end: (200, 5), text: `int`
+  pattern: 4
+    capture: 1 - name, start: (200, 8), end: (200, 12), text: `int8`
+    capture: 6 - reference.type, start: (200, 8), end: (200, 12), text: `int8`
+  pattern: 4
+    capture: 1 - name, start: (200, 16), end: (200, 20), text: `uint`
+    capture: 6 - reference.type, start: (200, 16), end: (200, 20), text: `uint`
+  pattern: 4
+    capture: 1 - name, start: (200, 24), end: (200, 29), text: `uint8`
+    capture: 6 - reference.type, start: (200, 24), end: (200, 29), text: `uint8`
+  pattern: 2
+    capture: reference.call, start: (205, 1), end: (207, 25)
+    capture: 1 - name, start: (205, 1), end: (205, 12), text: `source_file`
+  pattern: 2
+    capture: reference.call, start: (206, 3), end: (207, 24)
+    capture: 1 - name, start: (206, 3), end: (206, 17), text: `package_clause`
+  pattern: 2
+    capture: reference.call, start: (208, 3), end: (211, 23)
+    capture: 1 - name, start: (208, 3), end: (208, 19), text: `type_declaration`
+  pattern: 2
+    capture: reference.call, start: (209, 5), end: (210, 23)
+    capture: 1 - name, start: (209, 5), end: (209, 14), text: `type_spec`
+  pattern: 2
+    capture: reference.call, start: (212, 3), end: (219, 33)
+    capture: 1 - name, start: (212, 3), end: (212, 19), text: `type_declaration`
+  pattern: 2
+    capture: reference.call, start: (213, 5), end: (214, 23)
+    capture: 1 - name, start: (213, 5), end: (213, 14), text: `type_spec`
+  pattern: 2
+    capture: reference.call, start: (215, 7), end: (219, 31)
+    capture: 1 - name, start: (215, 7), end: (215, 21), text: `interface_type`
+  pattern: 2
+    capture: reference.call, start: (216, 9), end: (219, 30)
+    capture: 1 - name, start: (216, 9), end: (216, 18), text: `type_elem`
+  pattern: 2
+    capture: reference.call, start: (217, 11), end: (218, 32)
+    capture: 1 - name, start: (217, 11), end: (217, 25), text: `qualified_type`
+  pattern: 2
+    capture: reference.call, start: (220, 3), end: (244, 30)
+    capture: 1 - name, start: (220, 3), end: (220, 19), text: `type_declaration`
+  pattern: 2
+    capture: reference.call, start: (221, 5), end: (222, 23)
+    capture: 1 - name, start: (221, 5), end: (221, 14), text: `type_spec`
+  pattern: 2
+    capture: reference.call, start: (223, 7), end: (225, 28)
+    capture: 1 - name, start: (223, 7), end: (223, 21), text: `interface_type`
+  pattern: 2
+    capture: reference.call, start: (224, 9), end: (225, 27)
+    capture: 1 - name, start: (224, 9), end: (224, 18), text: `type_elem`
+  pattern: 2
+    capture: reference.call, start: (226, 9), end: (229, 30)
+    capture: 1 - name, start: (226, 9), end: (226, 18), text: `type_elem`
+  pattern: 2
+    capture: reference.call, start: (227, 11), end: (228, 32)
+    capture: 1 - name, start: (227, 11), end: (227, 25), text: `qualified_type`
+  pattern: 2
+    capture: reference.call, start: (230, 9), end: (231, 28)
+    capture: 1 - name, start: (230, 9), end: (230, 20), text: `method_elem`
+  pattern: 2
+    capture: reference.call, start: (232, 11), end: (235, 32)
+    capture: 1 - name, start: (232, 11), end: (232, 25), text: `parameter_list`
+  pattern: 2
+    capture: reference.call, start: (233, 13), end: (234, 26)
+    capture: 1 - name, start: (233, 13), end: (233, 34), text: `parameter_declaration`
+  pattern: 2
+    capture: reference.call, start: (237, 9), end: (238, 28)
+    capture: 1 - name, start: (237, 9), end: (237, 20), text: `method_elem`
+  pattern: 2
+    capture: reference.call, start: (239, 11), end: (241, 32)
+    capture: 1 - name, start: (239, 11), end: (239, 25), text: `parameter_list`
+  pattern: 2
+    capture: reference.call, start: (240, 13), end: (241, 31)
+    capture: 1 - name, start: (240, 13), end: (240, 34), text: `parameter_declaration`
+  pattern: 2
+    capture: reference.call, start: (242, 13), end: (243, 31)
+    capture: 1 - name, start: (242, 13), end: (242, 43), text: `variadic_parameter_declaration`
+  pattern: 2
+    capture: reference.call, start: (245, 3), end: (255, 33)
+    capture: 1 - name, start: (245, 3), end: (245, 19), text: `type_declaration`
+  pattern: 2
+    capture: reference.call, start: (246, 5), end: (247, 23)
+    capture: 1 - name, start: (246, 5), end: (246, 14), text: `type_spec`
+  pattern: 2
+    capture: reference.call, start: (248, 7), end: (255, 31)
+    capture: 1 - name, start: (248, 7), end: (248, 21), text: `interface_type`
+  pattern: 2
+    capture: reference.call, start: (249, 9), end: (250, 27)
+    capture: 1 - name, start: (249, 9), end: (249, 18), text: `type_elem`
+  pattern: 2
+    capture: reference.call, start: (252, 11), end: (253, 29)
+    capture: 1 - name, start: (252, 11), end: (252, 23), text: `negated_type`
+  pattern: 2
+    capture: reference.call, start: (254, 11), end: (255, 29)
+    capture: 1 - name, start: (254, 11), end: (254, 23), text: `negated_type`
+  pattern: 5
+    capture: 1 - name, start: (261, 8), end: (261, 12), text: `main`
+  pattern: 3
+    capture: definition.type, start: (263, 5), end: (269, 1)
+    capture: 1 - name, start: (263, 5), end: (263, 18), text: `NewEmbeddings`
+  pattern: 4
+    capture: 1 - name, start: (263, 5), end: (263, 18), text: `NewEmbeddings`
+    capture: 6 - reference.type, start: (263, 5), end: (263, 18), text: `NewEmbeddings`
+  pattern: 6
+    capture: 1 - name, start: (263, 5), end: (263, 18), text: `NewEmbeddings`
+  pattern: 4
+    capture: 1 - name, start: (264, 18), end: (264, 21), text: `int`
+    capture: 6 - reference.type, start: (264, 18), end: (264, 21), text: `int`
+  pattern: 4
+    capture: 1 - name, start: (265, 19), end: (265, 22), text: `int`
+    capture: 6 - reference.type, start: (265, 19), end: (265, 22), text: `int`
+  pattern: 4
+    capture: 1 - name, start: (266, 19), end: (266, 22), text: `int`
+    capture: 6 - reference.type, start: (266, 19), end: (266, 22), text: `int`
+  pattern: 4
+    capture: 1 - name, start: (267, 18), end: (267, 21), text: `int`
+    capture: 6 - reference.type, start: (267, 18), end: (267, 21), text: `int`
+  pattern: 4
+    capture: 1 - name, start: (267, 37), end: (267, 40), text: `int`
+    capture: 6 - reference.type, start: (267, 37), end: (267, 40), text: `int`
+  pattern: 4
+    capture: 1 - name, start: (268, 18), end: (268, 21), text: `int`
+    capture: 6 - reference.type, start: (268, 18), end: (268, 21), text: `int`
+  pattern: 4
+    capture: 1 - name, start: (268, 26), end: (268, 32), text: `string`
+    capture: 6 - reference.type, start: (268, 26), end: (268, 32), text: `string`
+  pattern: 2
+    capture: reference.call, start: (273, 1), end: (275, 25)
+    capture: 1 - name, start: (273, 1), end: (273, 12), text: `source_file`
+  pattern: 2
+    capture: reference.call, start: (274, 3), end: (275, 24)
+    capture: 1 - name, start: (274, 3), end: (274, 17), text: `package_clause`
+  pattern: 2
+    capture: reference.call, start: (276, 3), end: (318, 30)
+    capture: 1 - name, start: (276, 3), end: (276, 19), text: `type_declaration`
+  pattern: 2
+    capture: reference.call, start: (277, 5), end: (278, 23)
+    capture: 1 - name, start: (277, 5), end: (277, 14), text: `type_spec`
+  pattern: 2
+    capture: reference.call, start: (279, 7), end: (285, 37)
+    capture: 1 - name, start: (279, 7), end: (279, 21), text: `interface_type`
+  pattern: 2
+    capture: reference.call, start: (280, 9), end: (285, 36)
+    capture: 1 - name, start: (280, 9), end: (280, 18), text: `type_elem`
+  pattern: 2
+    capture: reference.call, start: (281, 11), end: (285, 35)
+    capture: 1 - name, start: (281, 11), end: (281, 22), text: `struct_type`
+  pattern: 2
+    capture: reference.call, start: (282, 13), end: (285, 34)
+    capture: 1 - name, start: (282, 13), end: (282, 35), text: `field_declaration_list`
+  pattern: 2
+    capture: reference.call, start: (283, 15), end: (284, 34)
+    capture: 1 - name, start: (283, 15), end: (283, 32), text: `field_declaration`
+  pattern: 2
+    capture: reference.call, start: (286, 9), end: (292, 39)
+    capture: 1 - name, start: (286, 9), end: (286, 18), text: `type_elem`
+  pattern: 2
+    capture: reference.call, start: (287, 11), end: (292, 38)
+    capture: 1 - name, start: (287, 11), end: (287, 23), text: `negated_type`
+  pattern: 2
+    capture: reference.call, start: (288, 13), end: (292, 37)
+    capture: 1 - name, start: (288, 13), end: (288, 24), text: `struct_type`
+  pattern: 2
+    capture: reference.call, start: (289, 15), end: (292, 36)
+    capture: 1 - name, start: (289, 15), end: (289, 37), text: `field_declaration_list`
+  pattern: 2
+    capture: reference.call, start: (290, 17), end: (291, 36)
+    capture: 1 - name, start: (290, 17), end: (290, 34), text: `field_declaration`
+  pattern: 2
+    capture: reference.call, start: (293, 9), end: (299, 39)
+    capture: 1 - name, start: (293, 9), end: (293, 18), text: `type_elem`
+  pattern: 2
+    capture: reference.call, start: (294, 11), end: (299, 38)
+    capture: 1 - name, start: (294, 11), end: (294, 23), text: `pointer_type`
+  pattern: 2
+    capture: reference.call, start: (295, 13), end: (299, 37)
+    capture: 1 - name, start: (295, 13), end: (295, 24), text: `struct_type`
+  pattern: 2
+    capture: reference.call, start: (296, 15), end: (299, 36)
+    capture: 1 - name, start: (296, 15), end: (296, 37), text: `field_declaration_list`
+  pattern: 2
+    capture: reference.call, start: (297, 17), end: (298, 36)
+    capture: 1 - name, start: (297, 17), end: (297, 34), text: `field_declaration`
+  pattern: 2
+    capture: reference.call, start: (300, 9), end: (305, 36)
+    capture: 1 - name, start: (300, 9), end: (300, 18), text: `type_elem`
+  pattern: 2
+    capture: reference.call, start: (301, 11), end: (305, 35)
+    capture: 1 - name, start: (301, 11), end: (301, 22), text: `struct_type`
+  pattern: 2
+    capture: reference.call, start: (302, 13), end: (305, 34)
+    capture: 1 - name, start: (302, 13), end: (302, 35), text: `field_declaration_list`
+  pattern: 2
+    capture: reference.call, start: (303, 15), end: (304, 34)
+    capture: 1 - name, start: (303, 15), end: (303, 32), text: `field_declaration`
+  pattern: 2
+    capture: reference.call, start: (306, 11), end: (311, 38)
+    capture: 1 - name, start: (306, 11), end: (306, 23), text: `negated_type`
+  pattern: 2
+    capture: reference.call, start: (307, 13), end: (311, 37)
+    capture: 1 - name, start: (307, 13), end: (307, 24), text: `struct_type`
+  pattern: 2
+    capture: reference.call, start: (308, 15), end: (311, 36)
+    capture: 1 - name, start: (308, 15), end: (308, 37), text: `field_declaration_list`
+  pattern: 2
+    capture: reference.call, start: (309, 17), end: (310, 36)
+    capture: 1 - name, start: (309, 17), end: (309, 34), text: `field_declaration`
+  pattern: 2
+    capture: reference.call, start: (312, 9), end: (317, 36)
+    capture: 1 - name, start: (312, 9), end: (312, 18), text: `type_elem`
+  pattern: 2
+    capture: reference.call, start: (313, 11), end: (317, 35)
+    capture: 1 - name, start: (313, 11), end: (313, 22), text: `struct_type`
+  pattern: 2
+    capture: reference.call, start: (314, 13), end: (317, 34)
+    capture: 1 - name, start: (314, 13), end: (314, 35), text: `field_declaration_list`
+  pattern: 2
+    capture: reference.call, start: (315, 15), end: (316, 34)
+    capture: 1 - name, start: (315, 15), end: (315, 32), text: `field_declaration`
+  pattern: 5
+    capture: 1 - name, start: (324, 8), end: (324, 12), text: `main`
+  pattern: 3
+    capture: 5 - definition.type, start: (326, 5), end: (326, 24), text: `m1 map[string]error`
+    capture: 1 - name, start: (326, 5), end: (326, 7), text: `m1`
+  pattern: 4
+    capture: 1 - name, start: (326, 5), end: (326, 7), text: `m1`
+    capture: 6 - reference.type, start: (326, 5), end: (326, 7), text: `m1`
+  pattern: 4
+    capture: 1 - name, start: (326, 12), end: (326, 18), text: `string`
+    capture: 6 - reference.type, start: (326, 12), end: (326, 18), text: `string`
+  pattern: 4
+    capture: 1 - name, start: (326, 19), end: (326, 24), text: `error`
+    capture: 6 - reference.type, start: (326, 19), end: (326, 24), text: `error`
+  pattern: 2
+    capture: reference.call, start: (330, 1), end: (332, 25)
+    capture: 1 - name, start: (330, 1), end: (330, 12), text: `source_file`
+  pattern: 2
+    capture: reference.call, start: (331, 3), end: (332, 24)
+    capture: 1 - name, start: (331, 3), end: (331, 17), text: `package_clause`
+  pattern: 2
+    capture: reference.call, start: (333, 3), end: (338, 27)
+    capture: 1 - name, start: (333, 3), end: (333, 19), text: `type_declaration`
+  pattern: 2
+    capture: reference.call, start: (334, 5), end: (335, 23)
+    capture: 1 - name, start: (334, 5), end: (334, 14), text: `type_spec`
+  pattern: 2
+    capture: reference.call, start: (336, 7), end: (337, 25)
+    capture: 1 - name, start: (336, 7), end: (336, 15), text: `map_type`
+  pattern: 5
+    capture: 1 - name, start: (344, 8), end: (344, 12), text: `main`
+  pattern: 3
+    capture: 5 - definition.type, start: (347, 2), end: (347, 12), text: `p1 *string`
+    capture: 1 - name, start: (347, 2), end: (347, 4), text: `p1`
+  pattern: 4
+    capture: 1 - name, start: (347, 2), end: (347, 4), text: `p1`
+    capture: 6 - reference.type, start: (347, 2), end: (347, 4), text: `p1`
+  pattern: 4
+    capture: 1 - name, start: (347, 6), end: (347, 12), text: `string`
+    capture: 6 - reference.type, start: (347, 6), end: (347, 12), text: `string`
+  pattern: 3
+    capture: 5 - definition.type, start: (348, 2), end: (348, 9), text: `p2 **p1`
+    capture: 1 - name, start: (348, 2), end: (348, 4), text: `p2`
+  pattern: 4
+    capture: 1 - name, start: (348, 2), end: (348, 4), text: `p2`
+    capture: 6 - reference.type, start: (348, 2), end: (348, 4), text: `p2`
+  pattern: 4
+    capture: 1 - name, start: (348, 7), end: (348, 9), text: `p1`
+    capture: 6 - reference.type, start: (348, 7), end: (348, 9), text: `p1`
+  pattern: 2
+    capture: reference.call, start: (353, 1), end: (355, 25)
+    capture: 1 - name, start: (353, 1), end: (353, 12), text: `source_file`
+  pattern: 2
+    capture: reference.call, start: (354, 3), end: (355, 24)
+    capture: 1 - name, start: (354, 3), end: (354, 17), text: `package_clause`
+  pattern: 2
+    capture: reference.call, start: (356, 3), end: (360, 27)
+    capture: 1 - name, start: (356, 3), end: (356, 19), text: `type_declaration`
+  pattern: 2
+    capture: reference.call, start: (357, 5), end: (358, 23)
+    capture: 1 - name, start: (357, 5), end: (357, 14), text: `type_spec`
+  pattern: 2
+    capture: reference.call, start: (359, 7), end: (360, 25)
+    capture: 1 - name, start: (359, 7), end: (359, 19), text: `pointer_type`
+  pattern: 2
+    capture: reference.call, start: (361, 5), end: (362, 23)
+    capture: 1 - name, start: (361, 5), end: (361, 14), text: `type_spec`
+  pattern: 2
+    capture: reference.call, start: (363, 7), end: (365, 28)
+    capture: 1 - name, start: (363, 7), end: (363, 19), text: `pointer_type`
+  pattern: 2
+    capture: reference.call, start: (364, 9), end: (365, 27)
+    capture: 1 - name, start: (364, 9), end: (364, 21), text: `pointer_type`
+  pattern: 5
+    capture: 1 - name, start: (371, 8), end: (371, 12), text: `main`
+  pattern: 3
+    capture: 5 - definition.type, start: (374, 2), end: (374, 20), text: `c1 chan<- chan int`
+    capture: 1 - name, start: (374, 2), end: (374, 4), text: `c1`
+  pattern: 4
+    capture: 1 - name, start: (374, 2), end: (374, 4), text: `c1`
+    capture: 6 - reference.type, start: (374, 2), end: (374, 4), text: `c1`
+  pattern: 4
+    capture: 1 - name, start: (374, 17), end: (374, 20), text: `int`
+    capture: 6 - reference.type, start: (374, 17), end: (374, 20), text: `int`
+  pattern: 3
+    capture: 5 - definition.type, start: (375, 2), end: (375, 27), text: `c2 chan<- chan<- struct{}`
+    capture: 1 - name, start: (375, 2), end: (375, 4), text: `c2`
+  pattern: 4
+    capture: 1 - name, start: (375, 2), end: (375, 4), text: `c2`
+    capture: 6 - reference.type, start: (375, 2), end: (375, 4), text: `c2`
+  pattern: 3
+    capture: 5 - definition.type, start: (376, 2), end: (376, 22), text: `c3 chan<- <-chan int`
+    capture: 1 - name, start: (376, 2), end: (376, 4), text: `c3`
+  pattern: 4
+    capture: 1 - name, start: (376, 2), end: (376, 4), text: `c3`
+    capture: 6 - reference.type, start: (376, 2), end: (376, 4), text: `c3`
+  pattern: 4
+    capture: 1 - name, start: (376, 19), end: (376, 22), text: `int`
+    capture: 6 - reference.type, start: (376, 19), end: (376, 22), text: `int`
+  pattern: 2
+    capture: reference.call, start: (381, 1), end: (383, 25)
+    capture: 1 - name, start: (381, 1), end: (381, 12), text: `source_file`
+  pattern: 2
+    capture: reference.call, start: (382, 3), end: (383, 24)
+    capture: 1 - name, start: (382, 3), end: (382, 17), text: `package_clause`
+  pattern: 2
+    capture: reference.call, start: (384, 3), end: (389, 30)
+    capture: 1 - name, start: (384, 3), end: (384, 19), text: `type_declaration`
+  pattern: 2
+    capture: reference.call, start: (385, 5), end: (386, 23)
+    capture: 1 - name, start: (385, 5), end: (385, 14), text: `type_spec`
+  pattern: 2
+    capture: reference.call, start: (387, 7), end: (389, 28)
+    capture: 1 - name, start: (387, 7), end: (387, 19), text: `channel_type`
+  pattern: 2
+    capture: reference.call, start: (388, 9), end: (389, 27)
+    capture: 1 - name, start: (388, 9), end: (388, 21), text: `channel_type`
+  pattern: 2
+    capture: reference.call, start: (390, 5), end: (391, 23)
+    capture: 1 - name, start: (390, 5), end: (390, 14), text: `type_spec`
+  pattern: 2
+    capture: reference.call, start: (392, 7), end: (395, 38)
+    capture: 1 - name, start: (392, 7), end: (392, 19), text: `channel_type`
+  pattern: 2
+    capture: reference.call, start: (393, 9), end: (395, 37)
+    capture: 1 - name, start: (393, 9), end: (393, 21), text: `channel_type`
+  pattern: 2
+    capture: reference.call, start: (394, 11), end: (395, 36)
+    capture: 1 - name, start: (394, 11), end: (394, 22), text: `struct_type`
+  pattern: 2
+    capture: reference.call, start: (396, 5), end: (397, 23)
+    capture: 1 - name, start: (396, 5), end: (396, 14), text: `type_spec`
+  pattern: 2
+    capture: reference.call, start: (398, 7), end: (400, 28)
+    capture: 1 - name, start: (398, 7), end: (398, 19), text: `channel_type`
+  pattern: 2
+    capture: reference.call, start: (399, 9), end: (400, 27)
+    capture: 1 - name, start: (399, 9), end: (399, 21), text: `channel_type`
+  pattern: 5
+    capture: 1 - name, start: (406, 8), end: (406, 12), text: `main`
+  pattern: 3
+    capture: 5 - definition.type, start: (409, 2), end: (409, 17), text: `a func(int) int`
+    capture: 1 - name, start: (409, 2), end: (409, 3), text: `a`
+  pattern: 4
+    capture: 1 - name, start: (409, 2), end: (409, 3), text: `a`
+    capture: 6 - reference.type, start: (409, 2), end: (409, 3), text: `a`
+  pattern: 4
+    capture: 1 - name, start: (409, 9), end: (409, 12), text: `int`
+    capture: 6 - reference.type, start: (409, 9), end: (409, 12), text: `int`
+  pattern: 4
+    capture: 1 - name, start: (409, 14), end: (409, 17), text: `int`
+    capture: 6 - reference.type, start: (409, 14), end: (409, 17), text: `int`
+  pattern: 3
+    capture: 5 - definition.type, start: (410, 2), end: (410, 36), text: `b func(int, *string) (bool, error)`
+    capture: 1 - name, start: (410, 2), end: (410, 3), text: `b`
+  pattern: 4
+    capture: 1 - name, start: (410, 2), end: (410, 3), text: `b`
+    capture: 6 - reference.type, start: (410, 2), end: (410, 3), text: `b`
+  pattern: 4
+    capture: 1 - name, start: (410, 9), end: (410, 12), text: `int`
+    capture: 6 - reference.type, start: (410, 9), end: (410, 12), text: `int`
+  pattern: 4
+    capture: 1 - name, start: (410, 15), end: (410, 21), text: `string`
+    capture: 6 - reference.type, start: (410, 15), end: (410, 21), text: `string`
+  pattern: 4
+    capture: 1 - name, start: (410, 24), end: (410, 28), text: `bool`
+    capture: 6 - reference.type, start: (410, 24), end: (410, 28), text: `bool`
+  pattern: 4
+    capture: 1 - name, start: (410, 30), end: (410, 35), text: `error`
+    capture: 6 - reference.type, start: (410, 30), end: (410, 35), text: `error`
+  pattern: 3
+    capture: 5 - definition.type, start: (411, 2), end: (411, 30), text: `c func(int, ...*string) bool`
+    capture: 1 - name, start: (411, 2), end: (411, 3), text: `c`
+  pattern: 4
+    capture: 1 - name, start: (411, 2), end: (411, 3), text: `c`
+    capture: 6 - reference.type, start: (411, 2), end: (411, 3), text: `c`
+  pattern: 4
+    capture: 1 - name, start: (411, 9), end: (411, 12), text: `int`
+    capture: 6 - reference.type, start: (411, 9), end: (411, 12), text: `int`
+  pattern: 4
+    capture: 1 - name, start: (411, 18), end: (411, 24), text: `string`
+    capture: 6 - reference.type, start: (411, 18), end: (411, 24), text: `string`
+  pattern: 4
+    capture: 1 - name, start: (411, 26), end: (411, 30), text: `bool`
+    capture: 6 - reference.type, start: (411, 26), end: (411, 30), text: `bool`
+  pattern: 2
+    capture: reference.call, start: (416, 1), end: (418, 25)
+    capture: 1 - name, start: (416, 1), end: (416, 12), text: `source_file`
+  pattern: 2
+    capture: reference.call, start: (417, 3), end: (418, 24)
+    capture: 1 - name, start: (417, 3), end: (417, 17), text: `package_clause`
+  pattern: 2
+    capture: reference.call, start: (419, 3), end: (426, 27)
+    capture: 1 - name, start: (419, 3), end: (419, 19), text: `type_declaration`
+  pattern: 2
+    capture: reference.call, start: (420, 5), end: (421, 23)
+    capture: 1 - name, start: (420, 5), end: (420, 14), text: `type_spec`
+  pattern: 2
+    capture: reference.call, start: (422, 7), end: (425, 31)
+    capture: 1 - name, start: (422, 7), end: (422, 20), text: `function_type`
+  pattern: 2
+    capture: reference.call, start: (423, 9), end: (425, 30)
+    capture: 1 - name, start: (423, 9), end: (423, 23), text: `parameter_list`
+  pattern: 2
+    capture: reference.call, start: (424, 11), end: (425, 29)
+    capture: 1 - name, start: (424, 11), end: (424, 32), text: `parameter_declaration`
+  pattern: 2
+    capture: reference.call, start: (427, 5), end: (428, 23)
+    capture: 1 - name, start: (427, 5), end: (427, 14), text: `type_spec`
+  pattern: 2
+    capture: reference.call, start: (429, 7), end: (435, 34)
+    capture: 1 - name, start: (429, 7), end: (429, 20), text: `function_type`
+  pattern: 2
+    capture: reference.call, start: (430, 9), end: (432, 30)
+    capture: 1 - name, start: (430, 9), end: (430, 23), text: `parameter_list`
+  pattern: 2
+    capture: reference.call, start: (431, 11), end: (432, 29)
+    capture: 1 - name, start: (431, 11), end: (431, 32), text: `parameter_declaration`
+  pattern: 2
+    capture: reference.call, start: (433, 11), end: (435, 32)
+    capture: 1 - name, start: (433, 11), end: (433, 32), text: `parameter_declaration`
+  pattern: 2
+    capture: reference.call, start: (434, 13), end: (435, 31)
+    capture: 1 - name, start: (434, 13), end: (434, 25), text: `pointer_type`
+  pattern: 2
+    capture: reference.call, start: (436, 9), end: (438, 30)
+    capture: 1 - name, start: (436, 9), end: (436, 23), text: `parameter_list`
+  pattern: 2
+    capture: reference.call, start: (437, 11), end: (438, 29)
+    capture: 1 - name, start: (437, 11), end: (437, 32), text: `parameter_declaration`
+  pattern: 2
+    capture: reference.call, start: (439, 11), end: (440, 29)
+    capture: 1 - name, start: (439, 11), end: (439, 32), text: `parameter_declaration`
+  pattern: 2
+    capture: reference.call, start: (441, 5), end: (442, 23)
+    capture: 1 - name, start: (441, 5), end: (441, 14), text: `type_spec`
+  pattern: 2
+    capture: reference.call, start: (443, 7), end: (449, 34)
+    capture: 1 - name, start: (443, 7), end: (443, 20), text: `function_type`
+  pattern: 2
+    capture: reference.call, start: (444, 9), end: (446, 30)
+    capture: 1 - name, start: (444, 9), end: (444, 23), text: `parameter_list`
+  pattern: 2
+    capture: reference.call, start: (445, 11), end: (446, 29)
+    capture: 1 - name, start: (445, 11), end: (445, 32), text: `parameter_declaration`
+  pattern: 2
+    capture: reference.call, start: (447, 11), end: (449, 32)
+    capture: 1 - name, start: (447, 11), end: (447, 41), text: `variadic_parameter_declaration`
+  pattern: 2
+    capture: reference.call, start: (448, 13), end: (449, 31)
+    capture: 1 - name, start: (448, 13), end: (448, 25), text: `pointer_type`
+  pattern: 5
+    capture: 1 - name, start: (456, 8), end: (456, 12), text: `main`
+  pattern: 4
+    capture: 1 - name, start: (458, 5), end: (458, 7), text: `H1`
+    capture: 6 - reference.type, start: (458, 5), end: (458, 7), text: `H1`
+  pattern: 4
+    capture: 1 - name, start: (458, 10), end: (458, 12), text: `G1`
+    capture: 6 - reference.type, start: (458, 10), end: (458, 12), text: `G1`
+  pattern: 4
+    capture: 1 - name, start: (459, 5), end: (459, 6), text: `_`
+    capture: 6 - reference.type, start: (459, 5), end: (459, 6), text: `_`
+  pattern: 4
+    capture: 1 - name, start: (459, 9), end: (459, 11), text: `G2`
+    capture: 6 - reference.type, start: (459, 9), end: (459, 11), text: `G2`
+  pattern: 4
+    capture: 1 - name, start: (460, 5), end: (460, 6), text: `_`
+    capture: 6 - reference.type, start: (460, 5), end: (460, 6), text: `_`
+  pattern: 4
+    capture: 1 - name, start: (462, 1), end: (462, 3), text: `A0`
+    capture: 6 - reference.type, start: (462, 1), end: (462, 3), text: `A0`
+  pattern: 4
+    capture: 1 - name, start: (462, 6), end: (462, 8), text: `T0`
+    capture: 6 - reference.type, start: (462, 6), end: (462, 8), text: `T0`
+  pattern: 4
+    capture: 1 - name, start: (463, 1), end: (463, 3), text: `A1`
+    capture: 6 - reference.type, start: (463, 1), end: (463, 3), text: `A1`
+  pattern: 4
+    capture: 1 - name, start: (463, 6), end: (463, 9), text: `int`
+    capture: 6 - reference.type, start: (463, 6), end: (463, 9), text: `int`
+  pattern: 4
+    capture: 1 - name, start: (464, 1), end: (464, 3), text: `A2`
+    capture: 6 - reference.type, start: (464, 1), end: (464, 3), text: `A2`
+  pattern: 4
+    capture: 1 - name, start: (465, 1), end: (465, 3), text: `A3`
+    capture: 6 - reference.type, start: (465, 1), end: (465, 3), text: `A3`
+  pattern: 4
+    capture: 1 - name, start: (465, 14), end: (465, 19), text: `Value`
+    capture: 6 - reference.type, start: (465, 14), end: (465, 19), text: `Value`
+  pattern: 4
+    capture: 1 - name, start: (466, 1), end: (466, 3), text: `A4`
+    capture: 6 - reference.type, start: (466, 1), end: (466, 3), text: `A4`
+  pattern: 4
+    capture: 1 - name, start: (466, 6), end: (466, 11), text: `Value`
+    capture: 6 - reference.type, start: (466, 6), end: (466, 11), text: `Value`
+  pattern: 4
+    capture: 1 - name, start: (467, 1), end: (467, 3), text: `A5`
+    capture: 6 - reference.type, start: (467, 1), end: (467, 3), text: `A5`
+  pattern: 4
+    capture: 1 - name, start: (467, 6), end: (467, 11), text: `Value`
+    capture: 6 - reference.type, start: (467, 6), end: (467, 11), text: `Value`
+  pattern: 4
+    capture: 1 - name, start: (469, 5), end: (469, 7), text: `G3`
+    capture: 6 - reference.type, start: (469, 5), end: (469, 7), text: `G3`
+  pattern: 4
+    capture: 1 - name, start: (469, 10), end: (469, 13), text: `any`
+    capture: 6 - reference.type, start: (469, 10), end: (469, 13), text: `any`
+  pattern: 4
+    capture: 1 - name, start: (469, 17), end: (469, 27), text: `Constraint`
+    capture: 6 - reference.type, start: (469, 17), end: (469, 27), text: `Constraint`
+  pattern: 4
+    capture: 1 - name, start: (469, 31), end: (469, 33), text: `G4`
+    capture: 6 - reference.type, start: (469, 31), end: (469, 33), text: `G4`
+  pattern: 4
+    capture: 1 - name, start: (469, 34), end: (469, 35), text: `T`
+    capture: 6 - reference.type, start: (469, 34), end: (469, 35), text: `T`
+  pattern: 4
+    capture: 1 - name, start: (469, 37), end: (469, 43), text: `string`
+    capture: 6 - reference.type, start: (469, 37), end: (469, 43), text: `string`
+  pattern: 4
+    capture: 1 - name, start: (469, 45), end: (469, 46), text: `C`
+    capture: 6 - reference.type, start: (469, 45), end: (469, 46), text: `C`
+  pattern: 2
+    capture: reference.call, start: (473, 1), end: (475, 25)
+    capture: 1 - name, start: (473, 1), end: (473, 12), text: `source_file`
+  pattern: 2
+    capture: reference.call, start: (474, 3), end: (475, 24)
+    capture: 1 - name, start: (474, 3), end: (474, 17), text: `package_clause`
+  pattern: 2
+    capture: reference.call, start: (476, 3), end: (479, 24)
+    capture: 1 - name, start: (476, 3), end: (476, 19), text: `type_declaration`
+  pattern: 2
+    capture: reference.call, start: (477, 5), end: (478, 23)
+    capture: 1 - name, start: (477, 5), end: (477, 15), text: `type_alias`
+  pattern: 2
+    capture: reference.call, start: (480, 3), end: (483, 24)
+    capture: 1 - name, start: (480, 3), end: (480, 19), text: `type_declaration`
+  pattern: 2
+    capture: reference.call, start: (481, 5), end: (482, 23)
+    capture: 1 - name, start: (481, 5), end: (481, 15), text: `type_alias`
+  pattern: 2
+    capture: reference.call, start: (484, 3), end: (488, 34)
+    capture: 1 - name, start: (484, 3), end: (484, 19), text: `type_declaration`
+  pattern: 2
+    capture: reference.call, start: (485, 5), end: (486, 23)
+    capture: 1 - name, start: (485, 5), end: (485, 15), text: `type_alias`
+  pattern: 2
+    capture: reference.call, start: (487, 7), end: (488, 32)
+    capture: 1 - name, start: (487, 7), end: (487, 18), text: `struct_type`
+  pattern: 2
+    capture: reference.call, start: (489, 3), end: (492, 24)
+    capture: 1 - name, start: (489, 3), end: (489, 19), text: `type_declaration`
+  pattern: 2
+    capture: reference.call, start: (490, 5), end: (491, 23)
+    capture: 1 - name, start: (490, 5), end: (490, 15), text: `type_alias`
+  pattern: 2
+    capture: reference.call, start: (493, 5), end: (494, 23)
+    capture: 1 - name, start: (493, 5), end: (493, 15), text: `type_alias`
+  pattern: 2
+    capture: reference.call, start: (496, 5), end: (497, 23)
+    capture: 1 - name, start: (496, 5), end: (496, 15), text: `type_alias`
+  pattern: 2
+    capture: reference.call, start: (498, 7), end: (499, 32)
+    capture: 1 - name, start: (498, 7), end: (498, 18), text: `struct_type`
+  pattern: 2
+    capture: reference.call, start: (500, 5), end: (501, 23)
+    capture: 1 - name, start: (500, 5), end: (500, 15), text: `type_alias`
+  pattern: 2
+    capture: reference.call, start: (502, 7), end: (503, 28)
+    capture: 1 - name, start: (502, 7), end: (502, 21), text: `qualified_type`
+  pattern: 2
+    capture: reference.call, start: (505, 5), end: (506, 23)
+    capture: 1 - name, start: (505, 5), end: (505, 15), text: `type_alias`
+  pattern: 2
+    capture: reference.call, start: (508, 5), end: (509, 23)
+    capture: 1 - name, start: (508, 5), end: (508, 15), text: `type_alias`
+  pattern: 2
+    capture: reference.call, start: (511, 7), end: (531, 37)
+    capture: 1 - name, start: (511, 7), end: (511, 23), text: `type_declaration`
+  pattern: 2
+    capture: reference.call, start: (512, 9), end: (513, 27)
+    capture: 1 - name, start: (512, 9), end: (512, 19), text: `type_alias`
+  pattern: 2
+    capture: reference.call, start: (514, 11), end: (518, 35)
+    capture: 1 - name, start: (514, 11), end: (514, 30), text: `type_parameter_list`
+  pattern: 2
+    capture: reference.call, start: (515, 13), end: (516, 26)
+    capture: 1 - name, start: (515, 13), end: (515, 39), text: `type_parameter_declaration`
+  pattern: 2
+    capture: reference.call, start: (517, 15), end: (518, 33)
+    capture: 1 - name, start: (517, 15), end: (517, 30), text: `type_constraint`
+  pattern: 2
+    capture: reference.call, start: (519, 13), end: (520, 26)
+    capture: 1 - name, start: (519, 13), end: (519, 39), text: `type_parameter_declaration`
+  pattern: 2
+    capture: reference.call, start: (521, 15), end: (522, 33)
+    capture: 1 - name, start: (521, 15), end: (521, 30), text: `type_constraint`
+  pattern: 2
+    capture: reference.call, start: (523, 11), end: (524, 29)
+    capture: 1 - name, start: (523, 11), end: (523, 23), text: `generic_type`
+  pattern: 2
+    capture: reference.call, start: (525, 13), end: (527, 34)
+    capture: 1 - name, start: (525, 13), end: (525, 27), text: `type_arguments`
+  pattern: 2
+    capture: reference.call, start: (526, 15), end: (527, 33)
+    capture: 1 - name, start: (526, 15), end: (526, 24), text: `type_elem`
+  pattern: 2
+    capture: reference.call, start: (528, 15), end: (529, 33)
+    capture: 1 - name, start: (528, 15), end: (528, 24), text: `type_elem`
+  pattern: 2
+    capture: reference.call, start: (530, 15), end: (531, 33)
+    capture: 1 - name, start: (530, 15), end: (530, 24), text: `type_elem`

@@ -1,0 +1,48 @@
+corpus/source_files.txt/000
+  pattern: 5
+    capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+corpus/source_files.txt/001
+  pattern: 5
+    capture: 1 - name, start: (1, 8), end: (1, 9), text: `a`
+  pattern: 8
+    capture: 1 - name, start: (3, 7), end: (3, 17), text: `"net/http"`
+  pattern: 8
+    capture: 1 - name, start: (4, 7), end: (4, 19), text: `. "some/dsl"`
+  pattern: 8
+    capture: 1 - name, start: (5, 7), end: (5, 13), text: `_ "os"`
+  pattern: 8
+    capture: 1 - name, start: (6, 7), end: (6, 27), text: `alias "some/package"`
+corpus/source_files.txt/002
+  pattern: 5
+    capture: 1 - name, start: (1, 8), end: (1, 9), text: `a`
+corpus/source_files.txt/003
+  pattern: 5
+    capture: 1 - name, start: (4, 8), end: (4, 9), text: `a`
+corpus/source_files.txt/004
+  pattern: 5
+    capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+  pattern: 10
+    capture: 1 - name, start: (4, 6), end: (4, 7), text: `a`
+  pattern: 10
+    capture: 1 - name, start: (7, 6), end: (7, 7), text: `b`
+  pattern: 10
+    capture: 1 - name, start: (10, 6), end: (10, 7), text: `c`
+  pattern: 10
+    capture: 1 - name, start: (15, 6), end: (15, 7), text: `d`
+corpus/source_files.txt/005
+  pattern: 5
+    capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+  pattern: 10
+    capture: 1 - name, start: (4, 2), end: (4, 4), text: `α`
+  pattern: 10
+    capture: 1 - name, start: (5, 2), end: (5, 4), text: `Α`
+  pattern: 10
+    capture: 1 - name, start: (6, 2), end: (6, 5), text: `µs`
+  pattern: 10
+    capture: 1 - name, start: (7, 2), end: (7, 5), text: `δ1`
+  pattern: 10
+    capture: 1 - name, start: (8, 2), end: (8, 8), text: `ΔΔΔ`
+  pattern: 10
+    capture: 1 - name, start: (9, 2), end: (9, 10), text: `ω_omega`
+  pattern: 10
+    capture: 1 - name, start: (10, 2), end: (10, 10), text: `Ω_OMEGA`
