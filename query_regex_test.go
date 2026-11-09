@@ -100,7 +100,7 @@ var regexSyntaxDivergences = []regexSyntaxDivergence{
 	{name: "nested character classes", example: `[a[bc]]`, detect: regexp.MustCompile(`\[[^\]]*\[[^:]`), goRejects: false},
 	{name: "the x flag for insignificant whitespace", example: `(?x) a b`, detect: regexp.MustCompile(`\(\?[a-zA-Z-]*x`), goRejects: true},
 	{name: "the R flag for CRLF line anchors", example: `(?R)^a$`, detect: regexp.MustCompile(`\(\?[a-zA-Z-]*R`), goRejects: true},
-	{name: `\b{start} word boundary variants`, example: `\b{start}a`, detect: regexp.MustCompile(`\\b\{`), goRejects: true},
+	{name: `\b{start} word boundary variants`, example: `\b{start}a`, detect: regexp.MustCompile(`\\b\{`), goRejects: false},
 }
 
 // Each divergence behaves as recorded: Go rejects the example or reads it as
@@ -121,4 +121,8 @@ func TestRegexSyntaxDivergencesAreRecorded(t *testing.T) {
 	re := regexp.MustCompile(`^[a-z&&[^aeiou]]$`)
 	require.False(t, re.MatchString("b"))
 	require.True(t, re.MatchString("&]"))
+	// Go reads `\b{start}` as a word boundary and then the literal text `{start}`.
+	re = regexp.MustCompile(`\b{start}a`)
+	require.False(t, re.MatchString("a"))
+	require.True(t, re.MatchString("{start}a"))
 }

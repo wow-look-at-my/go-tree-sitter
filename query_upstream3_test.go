@@ -1033,7 +1033,7 @@ func TestQueryCapturesProgressCallbackDiscardsInProgressMatches(t *testing.T) {
 	for i := range trues {
 		trues[i] = "true"
 	}
-	element := fmt.Sprintf(`[[{"a":1},1,2],%s]`, strings.Join(trues, ","))
+	element := `[[{"a":1},1,2],` + strings.Join(trues, ",") + "]"
 	elements := make([]string, 50)
 	for i := range elements {
 		elements[i] = element

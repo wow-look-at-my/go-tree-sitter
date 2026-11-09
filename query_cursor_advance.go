@@ -313,7 +313,8 @@ func (c *QueryCursor) matchNode(node, parentNode Node, nodeIntersectsRange, pare
 		// Follow alternatives, copying the state for each branch.
 		endIndex := j + 1
 		for k := j; k < endIndex; k++ {
-			childState := &c.states[k]
+			stateIndex := k
+			childState := &c.states[stateIndex]
 			childStep := &q.steps[childState.stepIndex]
 			if childStep.alternativeIndex == noneIndex {
 				continue
@@ -326,7 +327,8 @@ func (c *QueryCursor) matchNode(node, parentNode Node, nodeIntersectsRange, pare
 				continue
 			}
 
-			// A pass-through splits, then advances past itself.
+			// A pass-through splits, then advances past itself. The same
+			// state is looked at again on the next turn of the loop.
 			if childStep.isPassThrough {
 				childState.stepIndex++
 				k--
@@ -338,11 +340,11 @@ func (c *QueryCursor) matchNode(node, parentNode Node, nodeIntersectsRange, pare
 				continue
 			}
 
-			if c.copyState(k) {
+			if c.copyState(stateIndex) {
 				endIndex++
 				copyCount++
-				childState = &c.states[k]
-				stateCopy := &c.states[k+1]
+				childState = &c.states[stateIndex]
+				stateCopy := &c.states[stateIndex+1]
 				stateCopy.stepIndex = childStep.alternativeIndex
 				if childStep.isPassThrough {
 					stateCopy.seekingImmediateMatch = true
