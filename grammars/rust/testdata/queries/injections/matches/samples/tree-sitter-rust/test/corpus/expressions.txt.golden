@@ -1,5 +1,0 @@
-samples/tree-sitter-rust/test/corpus/expressions.txt
-  pattern: 0
-    capture: 0 - injection.content, start: (730, 10), end: (730, 13), text: `(4)`
-  pattern: 0
-    capture: 0 - injection.content, start: (1137, 7), end: (1137, 9), text: `[]`

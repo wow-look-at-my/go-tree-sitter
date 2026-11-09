@@ -1,0 +1,83 @@
+corpus/expressions.txt/000
+    pattern:  2, capture: 2 - definition.function, start: (1, 4), end: (1, 10), text: `main()`
+    pattern:  2, capture: 0 - name, start: (1, 4), end: (1, 8), text: `main`
+corpus/expressions.txt/001
+corpus/expressions.txt/002
+    pattern:  2, capture: 2 - definition.function, start: (1, 4), end: (1, 10), text: `main()`
+    pattern:  2, capture: 0 - name, start: (1, 4), end: (1, 8), text: `main`
+corpus/expressions.txt/003
+    pattern:  2, capture: 2 - definition.function, start: (1, 4), end: (1, 10), text: `main()`
+    pattern:  2, capture: 0 - name, start: (1, 4), end: (1, 8), text: `main`
+corpus/expressions.txt/004
+    pattern:  2, capture: 2 - definition.function, start: (1, 4), end: (1, 10), text: `main()`
+    pattern:  2, capture: 0 - name, start: (1, 4), end: (1, 8), text: `main`
+corpus/expressions.txt/005
+    pattern:  2, capture: 2 - definition.function, start: (1, 5), end: (1, 11), text: `test()`
+    pattern:  2, capture: 0 - name, start: (1, 5), end: (1, 9), text: `test`
+corpus/expressions.txt/006
+corpus/expressions.txt/007
+    pattern:  7, capture: 1 - definition.class, start: (1, 0), end: (16, 1), text: `class A {
+  A() : T::template Nested<int>::type() {}
+  A() : T::template Nested<int>::template Nested2<float>::type() {}
+
+  B<C::D<E, F>>::G field;
+  using B<C>::template D<int>;
+
+  H<I<J>> method() {
+    K::L<M<N>> variable1 = K::L<M<N>>{};
+    typename K::template L<M<N>>::type variable2;
+    typename K::template L<M<N>>::template O<P>::type variable3;
+  }
+
+  typename Z::template Nested<int>::type x;
+  typename X::template Nested<int>::Y::template Nested2<D> x;
+}`
+    pattern:  7, capture: 0 - name, start: (1, 6), end: (1, 7), text: `A`
+    pattern:  2, capture: 2 - definition.function, start: (2, 2), end: (2, 5), text: `A()`
+    pattern:  2, capture: 0 - name, start: (2, 2), end: (2, 3), text: `A`
+    pattern:  2, capture: 2 - definition.function, start: (3, 2), end: (3, 5), text: `A()`
+    pattern:  2, capture: 0 - name, start: (3, 2), end: (3, 3), text: `A`
+    pattern:  3, capture: 2 - definition.function, start: (8, 10), end: (8, 18), text: `method()`
+    pattern:  3, capture: 0 - name, start: (8, 10), end: (8, 16), text: `method`
+corpus/expressions.txt/008
+    pattern:  2, capture: 2 - definition.function, start: (1, 4), end: (1, 10), text: `main()`
+    pattern:  2, capture: 0 - name, start: (1, 4), end: (1, 8), text: `main`
+corpus/expressions.txt/009
+corpus/expressions.txt/010
+corpus/expressions.txt/011
+    pattern:  2, capture: 2 - definition.function, start: (1, 4), end: (1, 10), text: `main()`
+    pattern:  2, capture: 0 - name, start: (1, 4), end: (1, 8), text: `main`
+corpus/expressions.txt/012
+    pattern:  5, capture: 5 - definition.type, start: (4, 0), end: (4, 42), text: `typedef Tuple<Pair<Args1, Args2>...> type;`
+    pattern:  5, capture: 0 - name, start: (4, 37), end: (4, 41), text: `type`
+    pattern:  7, capture: 1 - definition.class, start: (18, 0), end: (21, 1), text: `class X : public Mixins... {
+public:
+    X(const Mixins&... mixins) : Mixins(mixins)... { }
+}`
+    pattern:  7, capture: 0 - name, start: (18, 6), end: (18, 7), text: `X`
+    pattern:  2, capture: 2 - definition.function, start: (20, 4), end: (20, 30), text: `X(const Mixins&... mixins)`
+    pattern:  2, capture: 0 - name, start: (20, 4), end: (20, 5), text: `X`
+    pattern:  2, capture: 2 - definition.function, start: (24, 5), end: (24, 25), text: `wrap(Args&&... args)`
+    pattern:  2, capture: 0 - name, start: (24, 5), end: (24, 9), text: `wrap`
+    pattern:  2, capture: 2 - definition.function, start: (28, 5), end: (28, 12), text: `f(T...)`
+    pattern:  2, capture: 0 - name, start: (28, 5), end: (28, 6), text: `f`
+corpus/expressions.txt/013
+corpus/expressions.txt/014
+corpus/expressions.txt/015
+corpus/expressions.txt/016
+corpus/expressions.txt/017
+corpus/expressions.txt/018
+corpus/expressions.txt/019
+corpus/expressions.txt/020
+corpus/expressions.txt/021
+corpus/expressions.txt/022
+corpus/expressions.txt/023
+    pattern:  2, capture: 2 - definition.function, start: (1, 5), end: (1, 8), text: `f()`
+    pattern:  2, capture: 0 - name, start: (1, 5), end: (1, 6), text: `f`
+corpus/expressions.txt/024
+corpus/expressions.txt/025
+    pattern:  2, capture: 2 - definition.function, start: (1, 4), end: (1, 10), text: `main()`
+    pattern:  2, capture: 0 - name, start: (1, 4), end: (1, 8), text: `main`
+corpus/expressions.txt/026
+    pattern:  2, capture: 2 - definition.function, start: (1, 33), end: (1, 59), text: `negateValues(Args... args)`
+    pattern:  2, capture: 0 - name, start: (1, 33), end: (1, 45), text: `negateValues`
