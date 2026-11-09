@@ -78,8 +78,8 @@ func Inputs(g Grammar, dir string) ([]Input, error) {
 		inputs = append(inputs, samples...)
 	}
 	if g.Examples != "" {
-		examples, err := readFiles(filepath.Join(dir, g.Examples), "examples", func(name string) bool {
-			return !slices.Contains(g.Skip, "examples/"+name)
+		examples, err := readFiles(filepath.Join(dir, g.Examples), "examples", func(_ string, size int64) bool {
+			return size <= MaxExampleBytes
 		})
 		if err != nil {
 			return nil, err
@@ -94,7 +94,7 @@ func Inputs(g Grammar, dir string) ([]Input, error) {
 }
 
 // readFiles reads the files of a directory, one input each.
-func readFiles(dir, prefix string, keep func(string) bool) ([]Input, error) {
+func readFiles(dir, prefix string, keep func(name string, size int64) bool) ([]Input, error) {
 	var inputs []Input
 	err := filepath.WalkDir(dir, func(p string, entry fs.DirEntry, err error) error {
 		if err != nil {
@@ -108,7 +108,11 @@ func readFiles(dir, prefix string, keep func(string) bool) ([]Input, error) {
 			return err
 		}
 		rel = filepath.ToSlash(rel)
-		if !keep(rel) {
+		info, err := entry.Info()
+		if err != nil {
+			return err
+		}
+		if !keep(rel, info.Size()) {
 			return nil
 		}
 		source, err := os.ReadFile(p)
