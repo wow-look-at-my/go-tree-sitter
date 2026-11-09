@@ -1,3 +1,5 @@
+// grammar.go holds the grammar code.
+
 package javascript
 
 import (

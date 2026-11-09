@@ -1,0 +1,362 @@
+corpus/declarations.txt/000
+  pattern: 5
+    capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+  pattern: 10
+    capture: 1 - name, start: (3, 6), end: (3, 10), text: `zero`
+  pattern: 10
+    capture: 1 - name, start: (4, 6), end: (4, 9), text: `one`
+  pattern: 10
+    capture: 1 - name, start: (5, 6), end: (5, 11), text: `three`
+corpus/declarations.txt/001
+  pattern: 5
+    capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+  pattern: 10
+    capture: 1 - name, start: (3, 6), end: (3, 10), text: `zero`
+  pattern: 4
+    capture: 1 - name, start: (3, 11), end: (3, 14), text: `int`
+    capture: 6 - reference.type, start: (3, 11), end: (3, 14), text: `int`
+  pattern: 10
+    capture: 1 - name, start: (4, 6), end: (4, 9), text: `one`
+  pattern: 4
+    capture: 1 - name, start: (4, 15), end: (4, 21), text: `uint64`
+    capture: 6 - reference.type, start: (4, 15), end: (4, 21), text: `uint64`
+corpus/declarations.txt/002
+  pattern: 5
+    capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+  pattern: 10
+    capture: 1 - name, start: (4, 2), end: (4, 6), text: `zero`
+  pattern: 10
+    capture: 1 - name, start: (5, 2), end: (5, 5), text: `one`
+corpus/declarations.txt/003
+  pattern: 5
+    capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+  pattern: 10
+    capture: 1 - name, start: (4, 2), end: (4, 6), text: `zero`
+  pattern: 10
+    capture: 1 - name, start: (5, 2), end: (5, 5), text: `one`
+  pattern: 10
+    capture: 1 - name, start: (6, 2), end: (6, 5), text: `two`
+corpus/declarations.txt/004
+  pattern: 5
+    capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+  pattern: 9
+    capture: 1 - name, start: (3, 4), end: (3, 8), text: `zero`
+  pattern: 9
+    capture: 1 - name, start: (4, 4), end: (4, 7), text: `one`
+  pattern: 9
+    capture: 1 - name, start: (4, 9), end: (4, 12), text: `two`
+  pattern: 9
+    capture: 1 - name, start: (5, 4), end: (5, 9), text: `three`
+  pattern: 9
+    capture: 1 - name, start: (5, 11), end: (5, 15), text: `four`
+  pattern: 9
+    capture: 1 - name, start: (5, 17), end: (5, 21), text: `five`
+corpus/declarations.txt/005
+  pattern: 5
+    capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+  pattern: 9
+    capture: 1 - name, start: (3, 4), end: (3, 8), text: `zero`
+  pattern: 4
+    capture: 1 - name, start: (3, 9), end: (3, 12), text: `int`
+    capture: 6 - reference.type, start: (3, 9), end: (3, 12), text: `int`
+  pattern: 9
+    capture: 1 - name, start: (4, 4), end: (4, 7), text: `one`
+  pattern: 9
+    capture: 1 - name, start: (4, 9), end: (4, 12), text: `two`
+  pattern: 4
+    capture: 1 - name, start: (4, 13), end: (4, 19), text: `uint64`
+    capture: 6 - reference.type, start: (4, 13), end: (4, 19), text: `uint64`
+corpus/declarations.txt/006
+  pattern: 5
+    capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+  pattern: 9
+    capture: 1 - name, start: (3, 4), end: (3, 8), text: `zero`
+  pattern: 4
+    capture: 1 - name, start: (3, 9), end: (3, 12), text: `int`
+    capture: 6 - reference.type, start: (3, 9), end: (3, 12), text: `int`
+  pattern: 9
+    capture: 1 - name, start: (4, 4), end: (4, 7), text: `one`
+  pattern: 9
+    capture: 1 - name, start: (4, 9), end: (4, 12), text: `two`
+  pattern: 4
+    capture: 1 - name, start: (4, 13), end: (4, 19), text: `uint64`
+    capture: 6 - reference.type, start: (4, 13), end: (4, 19), text: `uint64`
+corpus/declarations.txt/007
+  pattern: 5
+    capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+corpus/declarations.txt/008
+  pattern: 5
+    capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+  pattern: 0
+    capture: 2 - definition.function, start: (3, 0), end: (3, 12), text: `func f1() {}`
+    capture: 1 - name, start: (3, 5), end: (3, 7), text: `f1`
+  pattern: 0
+    capture: 2 - definition.function, start: (4, 0), end: (4, 37), text: `func f2(a File, b, c, d Thing) int {}`
+    capture: 1 - name, start: (4, 5), end: (4, 7), text: `f2`
+  pattern: 4
+    capture: 1 - name, start: (4, 10), end: (4, 14), text: `File`
+    capture: 6 - reference.type, start: (4, 10), end: (4, 14), text: `File`
+  pattern: 4
+    capture: 1 - name, start: (4, 24), end: (4, 29), text: `Thing`
+    capture: 6 - reference.type, start: (4, 24), end: (4, 29), text: `Thing`
+  pattern: 4
+    capture: 1 - name, start: (4, 31), end: (4, 34), text: `int`
+    capture: 6 - reference.type, start: (4, 31), end: (4, 34), text: `int`
+  pattern: 0
+    capture: 2 - definition.function, start: (5, 0), end: (5, 26), text: `func f2() (File, Thing) {}`
+    capture: 1 - name, start: (5, 5), end: (5, 7), text: `f2`
+  pattern: 4
+    capture: 1 - name, start: (5, 11), end: (5, 15), text: `File`
+    capture: 6 - reference.type, start: (5, 11), end: (5, 15), text: `File`
+  pattern: 4
+    capture: 1 - name, start: (5, 17), end: (5, 22), text: `Thing`
+    capture: 6 - reference.type, start: (5, 17), end: (5, 22), text: `Thing`
+  pattern: 0
+    capture: 2 - definition.function, start: (6, 0), end: (6, 36), text: `func f2() (result int, err error) {}`
+    capture: 1 - name, start: (6, 5), end: (6, 7), text: `f2`
+  pattern: 4
+    capture: 1 - name, start: (6, 18), end: (6, 21), text: `int`
+    capture: 6 - reference.type, start: (6, 18), end: (6, 21), text: `int`
+  pattern: 4
+    capture: 1 - name, start: (6, 27), end: (6, 32), text: `error`
+    capture: 6 - reference.type, start: (6, 27), end: (6, 32), text: `error`
+  pattern: 0
+    capture: 2 - definition.function, start: (7, 0), end: (7, 28), text: `func f(x ... int, y ... int)`
+    capture: 1 - name, start: (7, 5), end: (7, 6), text: `f`
+  pattern: 4
+    capture: 1 - name, start: (7, 13), end: (7, 16), text: `int`
+    capture: 6 - reference.type, start: (7, 13), end: (7, 16), text: `int`
+  pattern: 4
+    capture: 1 - name, start: (7, 24), end: (7, 27), text: `int`
+    capture: 6 - reference.type, start: (7, 24), end: (7, 27), text: `int`
+  pattern: 0
+    capture: 2 - definition.function, start: (8, 0), end: (8, 60), text: `func g1[T, U any, V interface{}, W Foo[Bar[T]]](a Foo[T]) {}`
+    capture: 1 - name, start: (8, 5), end: (8, 7), text: `g1`
+  pattern: 4
+    capture: 1 - name, start: (8, 13), end: (8, 16), text: `any`
+    capture: 6 - reference.type, start: (8, 13), end: (8, 16), text: `any`
+  pattern: 4
+    capture: 1 - name, start: (8, 35), end: (8, 38), text: `Foo`
+    capture: 6 - reference.type, start: (8, 35), end: (8, 38), text: `Foo`
+  pattern: 4
+    capture: 1 - name, start: (8, 39), end: (8, 42), text: `Bar`
+    capture: 6 - reference.type, start: (8, 39), end: (8, 42), text: `Bar`
+  pattern: 4
+    capture: 1 - name, start: (8, 43), end: (8, 44), text: `T`
+    capture: 6 - reference.type, start: (8, 43), end: (8, 44), text: `T`
+  pattern: 4
+    capture: 1 - name, start: (8, 50), end: (8, 53), text: `Foo`
+    capture: 6 - reference.type, start: (8, 50), end: (8, 53), text: `Foo`
+  pattern: 4
+    capture: 1 - name, start: (8, 54), end: (8, 55), text: `T`
+    capture: 6 - reference.type, start: (8, 54), end: (8, 55), text: `T`
+  pattern: 0
+    capture: 2 - definition.function, start: (9, 0), end: (9, 60), text: `func g1[T, U any, V interface{}, W Foo[Bar[T]]](a Foo[T]) {}`
+    capture: 1 - name, start: (9, 5), end: (9, 7), text: `g1`
+  pattern: 4
+    capture: 1 - name, start: (9, 13), end: (9, 16), text: `any`
+    capture: 6 - reference.type, start: (9, 13), end: (9, 16), text: `any`
+  pattern: 4
+    capture: 1 - name, start: (9, 35), end: (9, 38), text: `Foo`
+    capture: 6 - reference.type, start: (9, 35), end: (9, 38), text: `Foo`
+  pattern: 4
+    capture: 1 - name, start: (9, 39), end: (9, 42), text: `Bar`
+    capture: 6 - reference.type, start: (9, 39), end: (9, 42), text: `Bar`
+  pattern: 4
+    capture: 1 - name, start: (9, 43), end: (9, 44), text: `T`
+    capture: 6 - reference.type, start: (9, 43), end: (9, 44), text: `T`
+  pattern: 4
+    capture: 1 - name, start: (9, 50), end: (9, 53), text: `Foo`
+    capture: 6 - reference.type, start: (9, 50), end: (9, 53), text: `Foo`
+  pattern: 4
+    capture: 1 - name, start: (9, 54), end: (9, 55), text: `T`
+    capture: 6 - reference.type, start: (9, 54), end: (9, 55), text: `T`
+  pattern: 0
+    capture: 2 - definition.function, start: (10, 0), end: (10, 26), text: `func g2(a foo.bar[int]) {}`
+    capture: 1 - name, start: (10, 5), end: (10, 7), text: `g2`
+  pattern: 4
+    capture: 1 - name, start: (10, 14), end: (10, 17), text: `bar`
+    capture: 6 - reference.type, start: (10, 14), end: (10, 17), text: `bar`
+  pattern: 4
+    capture: 1 - name, start: (10, 18), end: (10, 21), text: `int`
+    capture: 6 - reference.type, start: (10, 18), end: (10, 21), text: `int`
+  pattern: 0
+    capture: 2 - definition.function, start: (11, 0), end: (11, 46), text: `func f[A int|string, B ~int, C ~int|~string]()`
+    capture: 1 - name, start: (11, 5), end: (11, 6), text: `f`
+  pattern: 4
+    capture: 1 - name, start: (11, 9), end: (11, 12), text: `int`
+    capture: 6 - reference.type, start: (11, 9), end: (11, 12), text: `int`
+  pattern: 4
+    capture: 1 - name, start: (11, 13), end: (11, 19), text: `string`
+    capture: 6 - reference.type, start: (11, 13), end: (11, 19), text: `string`
+  pattern: 4
+    capture: 1 - name, start: (11, 24), end: (11, 27), text: `int`
+    capture: 6 - reference.type, start: (11, 24), end: (11, 27), text: `int`
+  pattern: 4
+    capture: 1 - name, start: (11, 32), end: (11, 35), text: `int`
+    capture: 6 - reference.type, start: (11, 32), end: (11, 35), text: `int`
+  pattern: 4
+    capture: 1 - name, start: (11, 37), end: (11, 43), text: `string`
+    capture: 6 - reference.type, start: (11, 37), end: (11, 43), text: `string`
+  pattern: 0
+    capture: 2 - definition.function, start: (12, 0), end: (12, 37), text: `func f2(a File, b, c, d Thing) int {}`
+    capture: 1 - name, start: (12, 5), end: (12, 7), text: `f2`
+  pattern: 4
+    capture: 1 - name, start: (12, 10), end: (12, 14), text: `File`
+    capture: 6 - reference.type, start: (12, 10), end: (12, 14), text: `File`
+  pattern: 4
+    capture: 1 - name, start: (12, 24), end: (12, 29), text: `Thing`
+    capture: 6 - reference.type, start: (12, 24), end: (12, 29), text: `Thing`
+  pattern: 4
+    capture: 1 - name, start: (12, 31), end: (12, 34), text: `int`
+    capture: 6 - reference.type, start: (12, 31), end: (12, 34), text: `int`
+  pattern: 0
+    capture: 2 - definition.function, start: (13, 0), end: (13, 45), text: `func f3([]string, int, map[int]int, error) {}`
+    capture: 1 - name, start: (13, 5), end: (13, 7), text: `f3`
+  pattern: 4
+    capture: 1 - name, start: (13, 10), end: (13, 16), text: `string`
+    capture: 6 - reference.type, start: (13, 10), end: (13, 16), text: `string`
+  pattern: 4
+    capture: 1 - name, start: (13, 18), end: (13, 21), text: `int`
+    capture: 6 - reference.type, start: (13, 18), end: (13, 21), text: `int`
+  pattern: 4
+    capture: 1 - name, start: (13, 27), end: (13, 30), text: `int`
+    capture: 6 - reference.type, start: (13, 27), end: (13, 30), text: `int`
+  pattern: 4
+    capture: 1 - name, start: (13, 31), end: (13, 34), text: `int`
+    capture: 6 - reference.type, start: (13, 31), end: (13, 34), text: `int`
+  pattern: 4
+    capture: 1 - name, start: (13, 36), end: (13, 41), text: `error`
+    capture: 6 - reference.type, start: (13, 36), end: (13, 41), text: `error`
+  pattern: 0
+    capture: 2 - definition.function, start: (14, 0), end: (14, 48), text: `func f4() ([]string, int, map[int]int, error) {}`
+    capture: 1 - name, start: (14, 5), end: (14, 7), text: `f4`
+  pattern: 4
+    capture: 1 - name, start: (14, 13), end: (14, 19), text: `string`
+    capture: 6 - reference.type, start: (14, 13), end: (14, 19), text: `string`
+  pattern: 4
+    capture: 1 - name, start: (14, 21), end: (14, 24), text: `int`
+    capture: 6 - reference.type, start: (14, 21), end: (14, 24), text: `int`
+  pattern: 4
+    capture: 1 - name, start: (14, 30), end: (14, 33), text: `int`
+    capture: 6 - reference.type, start: (14, 30), end: (14, 33), text: `int`
+  pattern: 4
+    capture: 1 - name, start: (14, 34), end: (14, 37), text: `int`
+    capture: 6 - reference.type, start: (14, 34), end: (14, 37), text: `int`
+  pattern: 4
+    capture: 1 - name, start: (14, 39), end: (14, 44), text: `error`
+    capture: 6 - reference.type, start: (14, 39), end: (14, 44), text: `error`
+corpus/declarations.txt/009
+  pattern: 5
+    capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+  pattern: 0
+    capture: 2 - definition.function, start: (3, 0), end: (3, 17), text: `func f1() { a() }`
+    capture: 1 - name, start: (3, 5), end: (3, 7), text: `f1`
+  pattern: 2
+    capture: 4 - reference.call, start: (3, 12), end: (3, 15), text: `a()`
+    capture: 1 - name, start: (3, 12), end: (3, 13), text: `a`
+  pattern: 0
+    capture: 2 - definition.function, start: (4, 0), end: (4, 22), text: `func f2() { a(); b() }`
+    capture: 1 - name, start: (4, 5), end: (4, 7), text: `f2`
+  pattern: 2
+    capture: 4 - reference.call, start: (4, 12), end: (4, 15), text: `a()`
+    capture: 1 - name, start: (4, 12), end: (4, 13), text: `a`
+  pattern: 2
+    capture: 4 - reference.call, start: (4, 17), end: (4, 20), text: `b()`
+    capture: 1 - name, start: (4, 17), end: (4, 18), text: `b`
+  pattern: 0
+    capture: 2 - definition.function, start: (5, 0), end: (5, 23), text: `func f3() { a(); b(); }`
+    capture: 1 - name, start: (5, 5), end: (5, 7), text: `f3`
+  pattern: 2
+    capture: 4 - reference.call, start: (5, 12), end: (5, 15), text: `a()`
+    capture: 1 - name, start: (5, 12), end: (5, 13), text: `a`
+  pattern: 2
+    capture: 4 - reference.call, start: (5, 17), end: (5, 20), text: `b()`
+    capture: 1 - name, start: (5, 17), end: (5, 18), text: `b`
+corpus/declarations.txt/010
+  pattern: 5
+    capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+  pattern: 0
+    capture: 2 - definition.function, start: (3, 0), end: (3, 21), text: `func f1(a ...*int) {}`
+    capture: 1 - name, start: (3, 5), end: (3, 7), text: `f1`
+  pattern: 4
+    capture: 1 - name, start: (3, 14), end: (3, 17), text: `int`
+    capture: 6 - reference.type, start: (3, 14), end: (3, 17), text: `int`
+  pattern: 0
+    capture: 2 - definition.function, start: (4, 0), end: (4, 27), text: `func f2(a int, b ...int) {}`
+    capture: 1 - name, start: (4, 5), end: (4, 7), text: `f2`
+  pattern: 4
+    capture: 1 - name, start: (4, 10), end: (4, 13), text: `int`
+    capture: 6 - reference.type, start: (4, 10), end: (4, 13), text: `int`
+  pattern: 4
+    capture: 1 - name, start: (4, 20), end: (4, 23), text: `int`
+    capture: 6 - reference.type, start: (4, 20), end: (4, 23), text: `int`
+  pattern: 0
+    capture: 2 - definition.function, start: (5, 0), end: (5, 19), text: `func f3(...bool) {}`
+    capture: 1 - name, start: (5, 5), end: (5, 7), text: `f3`
+  pattern: 4
+    capture: 1 - name, start: (5, 11), end: (5, 15), text: `bool`
+    capture: 6 - reference.type, start: (5, 11), end: (5, 15), text: `bool`
+corpus/declarations.txt/011
+  pattern: 5
+    capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+  pattern: 4
+    capture: 1 - name, start: (3, 11), end: (3, 17), text: `Person`
+    capture: 6 - reference.type, start: (3, 11), end: (3, 17), text: `Person`
+  pattern: 1
+    capture: 3 - definition.method, start: (3, 0), end: (3, 47), text: `func (self Person) Equals(other Person) bool {}`
+    capture: 1 - name, start: (3, 19), end: (3, 25), text: `Equals`
+  pattern: 4
+    capture: 1 - name, start: (3, 32), end: (3, 38), text: `Person`
+    capture: 6 - reference.type, start: (3, 32), end: (3, 38), text: `Person`
+  pattern: 4
+    capture: 1 - name, start: (3, 40), end: (3, 44), text: `bool`
+    capture: 6 - reference.type, start: (3, 40), end: (3, 44), text: `bool`
+  pattern: 4
+    capture: 1 - name, start: (4, 9), end: (4, 14), text: `Value`
+    capture: 6 - reference.type, start: (4, 9), end: (4, 14), text: `Value`
+  pattern: 1
+    capture: 3 - definition.method, start: (4, 0), end: (4, 56), text: `func (v *Value) ObjxMap(optionalDefault ...(Map)) Map {}`
+    capture: 1 - name, start: (4, 16), end: (4, 23), text: `ObjxMap`
+  pattern: 4
+    capture: 1 - name, start: (4, 44), end: (4, 47), text: `Map`
+    capture: 6 - reference.type, start: (4, 44), end: (4, 47), text: `Map`
+  pattern: 4
+    capture: 1 - name, start: (4, 50), end: (4, 53), text: `Map`
+    capture: 6 - reference.type, start: (4, 50), end: (4, 53), text: `Map`
+  pattern: 4
+    capture: 1 - name, start: (5, 9), end: (5, 11), text: `T1`
+    capture: 6 - reference.type, start: (5, 9), end: (5, 11), text: `T1`
+  pattern: 1
+    capture: 3 - definition.method, start: (5, 0), end: (5, 17), text: `func (p *T1) M1()`
+    capture: 1 - name, start: (5, 13), end: (5, 15), text: `M1`
+corpus/declarations.txt/012
+  pattern: 5
+    capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+  pattern: 3
+    capture: 5 - definition.type, start: (3, 5), end: (3, 8), text: `a b`
+    capture: 1 - name, start: (3, 5), end: (3, 6), text: `a`
+  pattern: 4
+    capture: 1 - name, start: (3, 5), end: (3, 6), text: `a`
+    capture: 6 - reference.type, start: (3, 5), end: (3, 6), text: `a`
+  pattern: 4
+    capture: 1 - name, start: (3, 7), end: (3, 8), text: `b`
+    capture: 6 - reference.type, start: (3, 7), end: (3, 8), text: `b`
+  pattern: 3
+    capture: 5 - definition.type, start: (5, 2), end: (5, 5), text: `a b`
+    capture: 1 - name, start: (5, 2), end: (5, 3), text: `a`
+  pattern: 4
+    capture: 1 - name, start: (5, 2), end: (5, 3), text: `a`
+    capture: 6 - reference.type, start: (5, 2), end: (5, 3), text: `a`
+  pattern: 4
+    capture: 1 - name, start: (5, 4), end: (5, 5), text: `b`
+    capture: 6 - reference.type, start: (5, 4), end: (5, 5), text: `b`
+  pattern: 3
+    capture: 5 - definition.type, start: (6, 2), end: (6, 5), text: `c d`
+    capture: 1 - name, start: (6, 2), end: (6, 3), text: `c`
+  pattern: 4
+    capture: 1 - name, start: (6, 2), end: (6, 3), text: `c`
+    capture: 6 - reference.type, start: (6, 2), end: (6, 3), text: `c`
+  pattern: 4
+    capture: 1 - name, start: (6, 4), end: (6, 5), text: `d`
+    capture: 6 - reference.type, start: (6, 4), end: (6, 5), text: `d`

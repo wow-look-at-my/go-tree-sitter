@@ -1,0 +1,6 @@
+corpus/crlf.txt/000
+    pattern: 64, capture: 12 - comment, start: (1, 0), end: (2, 27), text: `// hello \
+   this is still a comment`
+    pattern: 57, capture: 9 - type, start: (3, 0), end: (3, 11), text: `this_is_not`
+    pattern:  0, capture: 0 - variable, start: (3, 12), end: (3, 21), text: `a_comment`
+    pattern: 49, capture: 4 - delimiter, start: (3, 21), end: (3, 22), text: `;`

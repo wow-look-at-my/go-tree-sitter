@@ -1,0 +1,150 @@
+corpus/types.txt/000
+corpus/types.txt/001
+corpus/types.txt/002
+corpus/types.txt/003
+corpus/types.txt/004
+corpus/types.txt/005
+corpus/types.txt/006
+corpus/types.txt/007
+corpus/types.txt/008
+  pattern: 6
+    capture: 6 - reference.type, start: (2, 16), end: (2, 26), text: `: Readable`
+    capture: 0 - name, start: (2, 18), end: (2, 26), text: `Readable`
+corpus/types.txt/009
+  pattern: 6
+    capture: 6 - reference.type, start: (1, 13), end: (1, 18), text: `: Foo`
+    capture: 0 - name, start: (1, 15), end: (1, 18), text: `Foo`
+corpus/types.txt/010
+corpus/types.txt/011
+corpus/types.txt/012
+corpus/types.txt/013
+corpus/types.txt/014
+corpus/types.txt/015
+corpus/types.txt/016
+  pattern: 5
+    capture: 5 - definition.interface, start: (2, 7), end: (2, 33), text: `interface UserInterface {}`
+    capture: 0 - name, start: (2, 17), end: (2, 30), text: `UserInterface`
+corpus/types.txt/017
+  pattern: 6
+    capture: 6 - reference.type, start: (2, 10), end: (2, 15), text: `: Doc`
+    capture: 0 - name, start: (2, 12), end: (2, 15), text: `Doc`
+  pattern: 6
+    capture: 6 - reference.type, start: (3, 14), end: (3, 19), text: `: Doc`
+    capture: 0 - name, start: (3, 16), end: (3, 19), text: `Doc`
+  pattern: 6
+    capture: 6 - reference.type, start: (4, 14), end: (4, 19), text: `: Doc`
+    capture: 0 - name, start: (4, 16), end: (4, 19), text: `Doc`
+  pattern: 6
+    capture: 6 - reference.type, start: (9, 8), end: (9, 20), text: `: LineHandle`
+    capture: 0 - name, start: (9, 10), end: (9, 20), text: `LineHandle`
+  pattern: 6
+    capture: 6 - reference.type, start: (10, 9), end: (10, 21), text: `: LineHandle`
+    capture: 0 - name, start: (10, 11), end: (10, 21), text: `LineHandle`
+  pattern: 6
+    capture: 6 - reference.type, start: (11, 6), end: (11, 18), text: `: LineHandle`
+    capture: 0 - name, start: (11, 8), end: (11, 18), text: `LineHandle`
+corpus/types.txt/018
+corpus/types.txt/019
+  pattern: 5
+    capture: 5 - definition.interface, start: (1, 0), end: (1, 26), text: `interface A { a: string; }`
+    capture: 0 - name, start: (1, 10), end: (1, 11), text: `A`
+  pattern: 5
+    capture: 5 - definition.interface, start: (3, 0), end: (3, 36), text: `interface B extends A { b: string; }`
+    capture: 0 - name, start: (3, 10), end: (3, 11), text: `B`
+  pattern: 5
+    capture: definition.interface, start: (5, 0), end: (8, 1)
+    capture: 0 - name, start: (5, 10), end: (5, 16), text: `Friend`
+  pattern: 5
+    capture: definition.interface, start: (10, 0), end: (13, 1)
+    capture: 0 - name, start: (10, 10), end: (10, 11), text: `G`
+  pattern: 6
+    capture: 6 - reference.type, start: (11, 5), end: (11, 8), text: `: T`
+    capture: 0 - name, start: (11, 7), end: (11, 8), text: `T`
+  pattern: 6
+    capture: 6 - reference.type, start: (12, 5), end: (12, 8), text: `: U`
+    capture: 0 - name, start: (12, 7), end: (12, 8), text: `U`
+  pattern: 5
+    capture: definition.interface, start: (15, 0), end: (19, 1)
+    capture: 0 - name, start: (15, 10), end: (15, 11), text: `X`
+  pattern: 1
+    capture: 2 - definition.method, start: (18, 2), end: (18, 27), text: `get(key: Key): Promise<T>`
+    capture: 0 - name, start: (18, 2), end: (18, 5), text: `get`
+  pattern: 6
+    capture: 6 - reference.type, start: (18, 9), end: (18, 14), text: `: Key`
+    capture: 0 - name, start: (18, 11), end: (18, 14), text: `Key`
+  pattern: 5
+    capture: definition.interface, start: (21, 0), end: (23, 1)
+    capture: 0 - name, start: (21, 10), end: (21, 14), text: `Enum`
+  pattern: 1
+    capture: 2 - definition.method, start: (22, 2), end: (22, 22), text: `public toEnum(): Int`
+    capture: 0 - name, start: (22, 9), end: (22, 15), text: `toEnum`
+  pattern: 6
+    capture: 6 - reference.type, start: (22, 17), end: (22, 22), text: `: Int`
+    capture: 0 - name, start: (22, 19), end: (22, 22), text: `Int`
+corpus/types.txt/020
+corpus/types.txt/021
+corpus/types.txt/022
+corpus/types.txt/023
+corpus/types.txt/024
+corpus/types.txt/025
+corpus/types.txt/026
+corpus/types.txt/027
+  pattern: 5
+    capture: definition.interface, start: (1, 0), end: (3, 1)
+    capture: 0 - name, start: (1, 10), end: (1, 11), text: `X`
+  pattern: 1
+    capture: 2 - definition.method, start: (2, 2), end: (2, 26), text: `x(): Promise<Array<Foo>>`
+    capture: 0 - name, start: (2, 2), end: (2, 3), text: `x`
+corpus/types.txt/028
+corpus/types.txt/029
+corpus/types.txt/030
+corpus/types.txt/031
+corpus/types.txt/032
+corpus/types.txt/033
+corpus/types.txt/034
+  pattern: 6
+    capture: 6 - reference.type, start: (8, 14), end: (8, 17), text: `: T`
+    capture: 0 - name, start: (8, 16), end: (8, 17), text: `T`
+corpus/types.txt/035
+corpus/types.txt/036
+  pattern: 6
+    capture: 6 - reference.type, start: (1, 19), end: (1, 25), text: `: Fish`
+    capture: 0 - name, start: (1, 21), end: (1, 25), text: `Fish`
+  pattern: 6
+    capture: 6 - reference.type, start: (4, 22), end: (4, 28), text: `: Fish`
+    capture: 0 - name, start: (4, 24), end: (4, 28), text: `Fish`
+corpus/types.txt/037
+corpus/types.txt/038
+  pattern: 6
+    capture: 6 - reference.type, start: (10, 11), end: (10, 14), text: `: A`
+    capture: 0 - name, start: (10, 13), end: (10, 14), text: `A`
+  pattern: 6
+    capture: 6 - reference.type, start: (10, 18), end: (10, 21), text: `: B`
+    capture: 0 - name, start: (10, 20), end: (10, 21), text: `B`
+corpus/types.txt/039
+  pattern: 6
+    capture: 6 - reference.type, start: (3, 21), end: (3, 24), text: `: T`
+    capture: 0 - name, start: (3, 23), end: (3, 24), text: `T`
+  pattern: 6
+    capture: 6 - reference.type, start: (3, 61), end: (3, 64), text: `: T`
+    capture: 0 - name, start: (3, 63), end: (3, 64), text: `T`
+  pattern: 6
+    capture: 6 - reference.type, start: (4, 20), end: (4, 23), text: `: T`
+    capture: 0 - name, start: (4, 22), end: (4, 23), text: `T`
+  pattern: 6
+    capture: 6 - reference.type, start: (4, 58), end: (4, 61), text: `: T`
+    capture: 0 - name, start: (4, 60), end: (4, 61), text: `T`
+corpus/types.txt/040
+corpus/types.txt/041
+corpus/types.txt/042
+corpus/types.txt/043
+corpus/types.txt/044
+corpus/types.txt/045
+corpus/types.txt/046
+corpus/types.txt/047
+corpus/types.txt/048
+corpus/types.txt/049
+  pattern: 1
+    capture: 2 - definition.method, start: (2, 2), end: (2, 7), text: `bar()`
+    capture: 0 - name, start: (2, 2), end: (2, 5), text: `bar`
+corpus/types.txt/050

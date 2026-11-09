@@ -1,0 +1,22 @@
+corpus/errors.txt/000
+    pattern:  0, capture: 2 - definition.function, start: (1, 0), end: (7, 1), text: `func a() {
+    a.    // Should error here, and not use 'if' as a field
+
+    if b > c {
+        d()
+    }
+}`
+    pattern:  0, capture: 1 - name, start: (1, 5), end: (1, 6), text: `a`
+    pattern:  2, capture: 4 - reference.call, start: (5, 8), end: (5, 11), text: `d()`
+    pattern:  2, capture: 1 - name, start: (5, 8), end: (5, 9), text: `d`
+    pattern:  0, capture: 2 - definition.function, start: (10, 0), end: (17, 1), text: `func b() {
+    b.     // Should error here, and not use 'switch' as a field
+
+    switch v {
+    case 1:
+        doSomething()
+    }
+}`
+    pattern:  0, capture: 1 - name, start: (10, 5), end: (10, 6), text: `b`
+    pattern:  2, capture: 4 - reference.call, start: (15, 8), end: (15, 21), text: `doSomething()`
+    pattern:  2, capture: 1 - name, start: (15, 8), end: (15, 19), text: `doSomething`

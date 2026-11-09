@@ -1,0 +1,16 @@
+corpus/c/preprocessor.txt/000
+corpus/c/preprocessor.txt/001
+corpus/c/preprocessor.txt/002
+corpus/c/preprocessor.txt/003
+corpus/c/preprocessor.txt/004
+corpus/c/preprocessor.txt/005
+corpus/c/preprocessor.txt/006
+  pattern: 2
+    capture: 2 - definition.function, start: (1, 4), end: (1, 10), text: `main()`
+    capture: 0 - name, start: (1, 4), end: (1, 8), text: `main`
+corpus/c/preprocessor.txt/007
+  pattern: 0
+    capture: definition.class, start: (1, 0), end: (7, 1)
+    capture: 0 - name, start: (1, 7), end: (1, 8), text: `S`
+corpus/c/preprocessor.txt/008
+corpus/c/preprocessor.txt/009

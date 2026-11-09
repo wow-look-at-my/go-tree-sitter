@@ -1,0 +1,76 @@
+corpus/definitions.txt/000
+  pattern: 6
+    capture: 1 - type, start: (1, 4), end: (1, 5), text: `T`
+  pattern: 4
+    capture: 0 - function, start: (1, 7), end: (1, 10), text: `foo`
+  pattern: 6
+    capture: 1 - type, start: (2, 4), end: (2, 5), text: `T`
+  pattern: 4
+    capture: 0 - function, start: (2, 7), end: (2, 10), text: `foo`
+corpus/definitions.txt/001
+  pattern: 6
+    capture: 1 - type, start: (1, 0), end: (1, 1), text: `T`
+  pattern: 4
+    capture: 0 - function, start: (1, 3), end: (1, 4), text: `T`
+  pattern: 6
+    capture: 1 - type, start: (3, 0), end: (3, 1), text: `T`
+  pattern: 4
+    capture: 0 - function, start: (3, 3), end: (3, 4), text: `T`
+  pattern: 6
+    capture: 1 - type, start: (7, 0), end: (7, 1), text: `T`
+  pattern: 4
+    capture: 0 - function, start: (7, 3), end: (7, 4), text: `T`
+  pattern: 2
+    capture: 0 - function, start: (7, 9), end: (7, 13), text: `Base`
+  pattern: 6
+    capture: 1 - type, start: (9, 0), end: (9, 1), text: `T`
+  pattern: 4
+    capture: 0 - function, start: (9, 3), end: (9, 4), text: `T`
+  pattern: 11
+    capture: 5 - keyword, start: (9, 7), end: (9, 10), text: `try`
+  pattern: 11
+    capture: 5 - keyword, start: (9, 22), end: (9, 27), text: `catch`
+corpus/definitions.txt/002
+  pattern: 11
+    capture: 5 - keyword, start: (1, 0), end: (1, 5), text: `class`
+  pattern: 11
+    capture: 5 - keyword, start: (2, 2), end: (2, 10), text: `explicit`
+  pattern: 11
+    capture: 5 - keyword, start: (4, 1), end: (4, 8), text: `private`
+corpus/definitions.txt/003
+  pattern: 11
+    capture: 5 - keyword, start: (1, 0), end: (1, 5), text: `class`
+  pattern: 11
+    capture: 5 - keyword, start: (2, 2), end: (2, 10), text: `explicit`
+  pattern: 11
+    capture: 5 - keyword, start: (3, 2), end: (3, 10), text: `explicit`
+corpus/definitions.txt/004
+  pattern: 11
+    capture: 5 - keyword, start: (1, 0), end: (1, 5), text: `class`
+  pattern: 11
+    capture: 5 - keyword, start: (1, 10), end: (1, 16), text: `public`
+  pattern: 11
+    capture: 5 - keyword, start: (3, 12), end: (3, 18), text: `delete`
+  pattern: 5
+    capture: 0 - function, start: (4, 7), end: (4, 8), text: `f`
+  pattern: 11
+    capture: 5 - keyword, start: (4, 13), end: (4, 19), text: `delete`
+  pattern: 11
+    capture: 5 - keyword, start: (6, 22), end: (6, 28), text: `delete`
+corpus/definitions.txt/005
+  pattern: 6
+    capture: 1 - type, start: (2, 0), end: (2, 1), text: `T`
+corpus/definitions.txt/006
+  pattern: 11
+    capture: 5 - keyword, start: (1, 11), end: (1, 14), text: `try`
+  pattern: 11
+    capture: 5 - keyword, start: (1, 18), end: (1, 23), text: `catch`
+corpus/definitions.txt/007
+  pattern: 6
+    capture: 1 - type, start: (1, 0), end: (1, 1), text: `T`
+  pattern: 11
+    capture: 5 - keyword, start: (1, 18), end: (1, 21), text: `try`
+  pattern: 11
+    capture: 5 - keyword, start: (1, 24), end: (1, 29), text: `throw`
+  pattern: 11
+    capture: 5 - keyword, start: (1, 35), end: (1, 40), text: `catch`

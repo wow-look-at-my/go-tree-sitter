@@ -1,3 +1,5 @@
+// cparse.go holds the cparse code.
+
 package main
 
 import (

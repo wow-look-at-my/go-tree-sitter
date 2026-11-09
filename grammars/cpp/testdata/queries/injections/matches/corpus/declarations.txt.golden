@@ -1,0 +1,44 @@
+corpus/declarations.txt/000
+corpus/declarations.txt/001
+corpus/declarations.txt/002
+corpus/declarations.txt/003
+corpus/declarations.txt/004
+corpus/declarations.txt/005
+corpus/declarations.txt/006
+corpus/declarations.txt/007
+corpus/declarations.txt/008
+corpus/declarations.txt/009
+corpus/declarations.txt/010
+corpus/declarations.txt/011
+corpus/declarations.txt/012
+corpus/declarations.txt/013
+corpus/declarations.txt/014
+corpus/declarations.txt/015
+corpus/declarations.txt/016
+corpus/declarations.txt/017
+corpus/declarations.txt/018
+corpus/declarations.txt/019
+corpus/declarations.txt/020
+corpus/declarations.txt/021
+corpus/declarations.txt/022
+corpus/declarations.txt/023
+corpus/declarations.txt/024
+corpus/declarations.txt/025
+corpus/declarations.txt/026
+corpus/declarations.txt/027
+corpus/declarations.txt/028
+corpus/declarations.txt/029
+corpus/declarations.txt/030
+  pattern: 0
+    capture: 0 - injection.language, start: (5, 22), end: (5, 25), text: `FOO`
+    capture: 1 - injection.content, start: (5, 26), end: (5, 32), text: `string`
+corpus/declarations.txt/031
+corpus/declarations.txt/032
+corpus/declarations.txt/033
+corpus/declarations.txt/034
+corpus/declarations.txt/035
+corpus/declarations.txt/036
+corpus/declarations.txt/037
+corpus/declarations.txt/038
+corpus/declarations.txt/039
+corpus/declarations.txt/040

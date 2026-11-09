@@ -1,0 +1,34 @@
+corpus/semicolon_insertion.txt/000
+corpus/semicolon_insertion.txt/001
+corpus/semicolon_insertion.txt/002
+corpus/semicolon_insertion.txt/003
+corpus/semicolon_insertion.txt/004
+  pattern: 2
+    capture: 1 - injection.content, start: (15, 6), end: (15, 29), text: `// standalone statement`
+corpus/semicolon_insertion.txt/005
+corpus/semicolon_insertion.txt/006
+corpus/semicolon_insertion.txt/007
+corpus/semicolon_insertion.txt/008
+corpus/semicolon_insertion.txt/009
+corpus/semicolon_insertion.txt/010
+corpus/semicolon_insertion.txt/011
+  pattern: 2
+    capture: 1 - injection.content, start: (1, 6), end: (1, 38), text: `// comment at end of declaration`
+  pattern: 2
+    capture: 1 - injection.content, start: (3, 0), end: (3, 33), text: `// comment outside of declaration`
+  pattern: 2
+    capture: 1 - injection.content, start: (4, 6), end: (4, 39), text: `/* comment between declarators */`
+  pattern: 2
+    capture: 1 - injection.content, start: (6, 0), end: (6, 28), text: `/** comment with *stars* **/`
+  pattern: 2
+    capture: 1 - injection.content, start: (6, 29), end: (6, 57), text: `/* comment with /slashes/ */`
+  pattern: 2
+    capture: 1 - injection.content, start: (7, 0), end: (7, 28), text: `/* third comment in a row */`
+  pattern: 2
+    capture: 1 - injection.content, start: (12, 0), end: (12, 18), text: `/* back to back */`
+  pattern: 2
+    capture: 1 - injection.content, start: (12, 18), end: (12, 32), text: `/* comments */`
+  pattern: 2
+    capture: 1 - injection.content, start: (15, 8), end: (15, 19), text: `/*comment*/`
+  pattern: 2
+    capture: 1 - injection.content, start: (19, 0), end: (19, 36), text: `/* interleaved non-semi-insertion */`

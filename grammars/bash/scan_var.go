@@ -1,3 +1,5 @@
+// scan_var.go holds the scan var code.
+
 package bash
 
 import ts "github.com/wow-look-at-my/go-tree-sitter"

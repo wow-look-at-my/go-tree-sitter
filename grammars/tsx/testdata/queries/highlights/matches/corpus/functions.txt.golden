@@ -1,0 +1,150 @@
+corpus/functions.txt/000
+  pattern: 4
+    capture: 3 - variable.parameter, start: (1, 17), end: (1, 23), text: `person`
+  pattern: 1
+    capture: 1 - type.builtin, start: (1, 25), end: (1, 31), text: `string`
+  pattern: 0
+    capture: 0 - type, start: (5, 13), end: (5, 14), text: `T`
+  pattern: 4
+    capture: 3 - variable.parameter, start: (5, 16), end: (5, 17), text: `x`
+  pattern: 0
+    capture: 0 - type, start: (5, 19), end: (5, 20), text: `T`
+  pattern: 0
+    capture: 0 - type, start: (5, 23), end: (5, 24), text: `T`
+  pattern: 0
+    capture: 0 - type, start: (9, 13), end: (9, 14), text: `T`
+  pattern: 0
+    capture: 0 - type, start: (9, 16), end: (9, 17), text: `U`
+  pattern: 4
+    capture: 3 - variable.parameter, start: (9, 19), end: (9, 20), text: `a`
+  pattern: 0
+    capture: 0 - type, start: (9, 22), end: (9, 23), text: `T`
+  pattern: 4
+    capture: 3 - variable.parameter, start: (9, 27), end: (9, 28), text: `f`
+  pattern: 4
+    capture: 3 - variable.parameter, start: (9, 31), end: (9, 32), text: `x`
+  pattern: 0
+    capture: 0 - type, start: (9, 34), end: (9, 35), text: `T`
+  pattern: 0
+    capture: 0 - type, start: (9, 40), end: (9, 41), text: `U`
+  pattern: 0
+    capture: 0 - type, start: (9, 44), end: (9, 45), text: `U`
+  pattern: 0
+    capture: 0 - type, start: (13, 13), end: (13, 14), text: `T`
+  pattern: 0
+    capture: 0 - type, start: (13, 16), end: (13, 17), text: `U`
+  pattern: 0
+    capture: 0 - type, start: (13, 25), end: (13, 26), text: `T`
+  pattern: 0
+    capture: 0 - type, start: (13, 31), end: (13, 32), text: `U`
+  pattern: 0
+    capture: 0 - type, start: (17, 19), end: (17, 20), text: `T`
+  pattern: 0
+    capture: 0 - type, start: (17, 28), end: (17, 29), text: `U`
+  pattern: 1
+    capture: 1 - type.builtin, start: (17, 38), end: (17, 44), text: `string`
+  pattern: 4
+    capture: 3 - variable.parameter, start: (17, 46), end: (17, 47), text: `x`
+  pattern: 0
+    capture: 0 - type, start: (17, 49), end: (17, 50), text: `T`
+  pattern: 4
+    capture: 3 - variable.parameter, start: (17, 52), end: (17, 53), text: `y`
+  pattern: 0
+    capture: 0 - type, start: (17, 55), end: (17, 56), text: `U`
+corpus/functions.txt/001
+  pattern: 2
+    capture: 0 - type, start: (1, 18), end: (1, 23), text: `Array`
+  pattern: 0
+    capture: 0 - type, start: (1, 24), end: (1, 32), text: `DiffLine`
+  pattern: 3
+    capture: 2 - punctuation.bracket, start: (1, 23), end: (1, 24), text: `<`
+    capture: 2 - punctuation.bracket, start: (1, 32), end: (1, 33), text: `>`
+corpus/functions.txt/002
+  pattern: 0
+    capture: 0 - type, start: (1, 5), end: (1, 6), text: `C`
+  pattern: 3
+    capture: 2 - punctuation.bracket, start: (1, 3), end: (1, 4), text: `<`
+    capture: 2 - punctuation.bracket, start: (1, 7), end: (1, 8), text: `>`
+  pattern: 2
+    capture: 0 - type, start: (2, 2), end: (2, 3), text: `C`
+  pattern: 0
+    capture: 0 - type, start: (2, 4), end: (2, 5), text: `D`
+  pattern: 3
+    capture: 2 - punctuation.bracket, start: (2, 1), end: (2, 2), text: `<`
+    capture: 2 - punctuation.bracket, start: (2, 7), end: (2, 8), text: `>`
+corpus/functions.txt/003
+  pattern: 2
+    capture: 0 - type, start: (1, 0), end: (1, 1), text: `A`
+  pattern: 0
+    capture: 0 - type, start: (1, 4), end: (1, 5), text: `B`
+  pattern: 3
+    capture: 2 - punctuation.bracket, start: (1, 3), end: (1, 4), text: `<`
+    capture: 2 - punctuation.bracket, start: (1, 5), end: (1, 6), text: `>`
+corpus/functions.txt/004
+  pattern: 0
+    capture: 0 - type, start: (1, 1), end: (1, 2), text: `A`
+  pattern: 4
+    capture: 3 - variable.parameter, start: (1, 4), end: (1, 10), text: `amount`
+  pattern: 4
+    capture: 3 - variable.parameter, start: (1, 12), end: (1, 24), text: `interestRate`
+  pattern: 4
+    capture: 3 - variable.parameter, start: (1, 26), end: (1, 34), text: `duration`
+  pattern: 1
+    capture: 1 - type.builtin, start: (1, 37), end: (1, 43), text: `number`
+  pattern: 0
+    capture: 0 - type, start: (3, 14), end: (3, 15), text: `A`
+  pattern: 4
+    capture: 3 - variable.parameter, start: (3, 17), end: (3, 23), text: `amount`
+  pattern: 4
+    capture: 3 - variable.parameter, start: (3, 25), end: (3, 37), text: `interestRate`
+  pattern: 4
+    capture: 3 - variable.parameter, start: (3, 39), end: (3, 47), text: `duration`
+  pattern: 1
+    capture: 1 - type.builtin, start: (3, 50), end: (3, 56), text: `number`
+  pattern: 4
+    capture: 3 - variable.parameter, start: (7, 1), end: (7, 7), text: `module`
+  pattern: 1
+    capture: 1 - type.builtin, start: (7, 9), end: (7, 12), text: `any`
+  pattern: 1
+    capture: 1 - type.builtin, start: (7, 15), end: (7, 21), text: `number`
+corpus/functions.txt/005
+corpus/functions.txt/006
+  pattern: 0
+    capture: 0 - type, start: (1, 6), end: (1, 7), text: `A`
+  pattern: 2
+    capture: 0 - type, start: (1, 16), end: (1, 17), text: `B`
+  pattern: 4
+    capture: 3 - variable.parameter, start: (2, 16), end: (2, 17), text: `x`
+  pattern: 1
+    capture: 1 - type.builtin, start: (2, 19), end: (2, 25), text: `number`
+  pattern: 4
+    capture: 3 - variable.parameter, start: (2, 27), end: (2, 28), text: `y`
+  pattern: 1
+    capture: 1 - type.builtin, start: (2, 30), end: (2, 36), text: `number`
+  pattern: 6
+    capture: 4 - keyword, start: (5, 4), end: (5, 10), text: `public`
+corpus/functions.txt/007
+  pattern: 6
+    capture: 4 - keyword, start: (1, 0), end: (1, 6), text: `export`
+  pattern: 0
+    capture: 0 - type, start: (1, 31), end: (1, 34), text: `bar`
+corpus/functions.txt/008
+  pattern: 4
+    capture: 3 - variable.parameter, start: (4, 13), end: (4, 16), text: `bar`
+  pattern: 4
+    capture: 3 - variable.parameter, start: (5, 13), end: (5, 16), text: `bar`
+  pattern: 0
+    capture: 0 - type, start: (5, 19), end: (5, 22), text: `baz`
+  pattern: 4
+    capture: 3 - variable.parameter, start: (6, 13), end: (6, 16), text: `bar`
+  pattern: 0
+    capture: 0 - type, start: (8, 30), end: (8, 33), text: `foo`
+  pattern: 0
+    capture: 0 - type, start: (8, 36), end: (8, 39), text: `bar`
+  pattern: 0
+    capture: 0 - type, start: (9, 30), end: (9, 33), text: `foo`
+  pattern: 0
+    capture: 0 - type, start: (9, 36), end: (9, 39), text: `bar`
+corpus/functions.txt/009
+  pattern: 1
+    capture: 1 - type.builtin, start: (10, 4), end: (10, 10), text: `number`

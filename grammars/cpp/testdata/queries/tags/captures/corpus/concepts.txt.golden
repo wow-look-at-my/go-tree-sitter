@@ -1,0 +1,30 @@
+corpus/concepts.txt/000
+corpus/concepts.txt/001
+corpus/concepts.txt/002
+    pattern:  2, capture: 2 - definition.function, start: (2, 5), end: (2, 26), text: `f(T&&) requires Eq<T>`
+    pattern:  2, capture: 0 - name, start: (2, 5), end: (2, 6), text: `f`
+    pattern:  2, capture: 2 - definition.function, start: (5, 2), end: (5, 15), text: `add(T a, T b)`
+    pattern:  2, capture: 0 - name, start: (5, 2), end: (5, 5), text: `add`
+    pattern:  2, capture: 2 - definition.function, start: (12, 2), end: (12, 15), text: `add(T a, T b)`
+    pattern:  2, capture: 0 - name, start: (12, 2), end: (12, 5), text: `add`
+    pattern:  2, capture: 2 - definition.function, start: (16, 5), end: (16, 9), text: `f(T)`
+    pattern:  2, capture: 0 - name, start: (16, 5), end: (16, 6), text: `f`
+    pattern:  2, capture: 2 - definition.function, start: (19, 2), end: (19, 6), text: `f(T)`
+    pattern:  2, capture: 0 - name, start: (19, 2), end: (19, 3), text: `f`
+    pattern:  2, capture: 2 - definition.function, start: (22, 2), end: (22, 6), text: `f(T)`
+    pattern:  2, capture: 0 - name, start: (22, 2), end: (22, 3), text: `f`
+    pattern:  2, capture: 2 - definition.function, start: (25, 2), end: (25, 6), text: `f(T)`
+    pattern:  2, capture: 0 - name, start: (25, 2), end: (25, 3), text: `f`
+    pattern:  2, capture: 2 - definition.function, start: (28, 2), end: (28, 6), text: `f(T)`
+    pattern:  2, capture: 0 - name, start: (28, 2), end: (28, 3), text: `f`
+    pattern:  2, capture: 2 - definition.function, start: (31, 2), end: (31, 6), text: `f(T)`
+    pattern:  2, capture: 0 - name, start: (31, 2), end: (31, 3), text: `f`
+    pattern:  2, capture: 2 - definition.function, start: (34, 2), end: (34, 6), text: `f(T)`
+    pattern:  2, capture: 0 - name, start: (34, 2), end: (34, 3), text: `f`
+corpus/concepts.txt/003
+corpus/concepts.txt/004
+corpus/concepts.txt/005
+    pattern:  2, capture: 2 - definition.function, start: (2, 5), end: (2, 16), text: `f(const T&)`
+    pattern:  2, capture: 0 - name, start: (2, 5), end: (2, 6), text: `f`
+    pattern:  2, capture: 2 - definition.function, start: (4, 5), end: (4, 38), text: `f(const EqualityComparable auto&)`
+    pattern:  2, capture: 0 - name, start: (4, 5), end: (4, 6), text: `f`

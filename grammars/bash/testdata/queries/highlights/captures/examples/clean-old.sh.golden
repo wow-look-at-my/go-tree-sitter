@@ -1,0 +1,488 @@
+examples/clean-old.sh
+    pattern:  4, capture: 4 - comment, start: (0, 0), end: (0, 11), text: `#!/bin/bash`
+    pattern:  4, capture: 4 - comment, start: (2, 0), end: (2, 44), text: `# look for old 0.x cruft, and get rid of it.`
+    pattern:  4, capture: 4 - comment, start: (3, 0), end: (3, 46), text: `# Should already be sitting in the npm folder.`
+    pattern:  4, capture: 4 - comment, start: (5, 0), end: (5, 64), text: `# This doesn't have to be quite as cross-platform as install.sh.`
+    pattern:  4, capture: 4 - comment, start: (6, 0), end: (6, 53), text: `# There are some bash-isms, because maintaining *two*`
+    pattern:  4, capture: 4 - comment, start: (7, 0), end: (7, 56), text: `# fully-portable posix/bourne sh scripts is too much for`
+    pattern:  4, capture: 4 - comment, start: (8, 0), end: (8, 37), text: `# one project with a sane maintainer.`
+    pattern:  4, capture: 4 - comment, start: (10, 0), end: (10, 60), text: `# If readlink isn't available, then this is just too tricky.`
+    pattern:  4, capture: 4 - comment, start: (11, 0), end: (11, 65), text: `# However, greadlink is fine, so Solaris can join the party, too.`
+    pattern:  2, capture: 2 - property, start: (12, 0), end: (12, 8), text: `readlink`
+    pattern:  0, capture: 0 - string, start: (12, 9), end: (12, 19), text: `"readlink"`
+    pattern:  1, capture: 1 - function, start: (13, 0), end: (13, 5), text: `which`
+    pattern:  8, capture: 7 - operator, start: (13, 6), end: (13, 7), text: `$`
+    pattern:  2, capture: 2 - property, start: (13, 7), end: (13, 15), text: `readlink`
+    pattern:  8, capture: 7 - operator, start: (13, 16), end: (13, 17), text: `>`
+    pattern:  6, capture: 5 - number, start: (13, 27), end: (13, 28), text: `2`
+    pattern:  8, capture: 7 - operator, start: (13, 28), end: (13, 29), text: `>`
+    pattern:  3, capture: 3 - keyword, start: (14, 0), end: (14, 2), text: `if`
+    pattern:  8, capture: 7 - operator, start: (14, 5), end: (14, 6), text: `$`
+    pattern:  3, capture: 3 - keyword, start: (14, 17), end: (14, 21), text: `then`
+    pattern:  2, capture: 2 - property, start: (15, 2), end: (15, 10), text: `readlink`
+    pattern:  0, capture: 0 - string, start: (15, 11), end: (15, 22), text: `"greadlink"`
+    pattern:  1, capture: 1 - function, start: (16, 2), end: (16, 7), text: `which`
+    pattern:  8, capture: 7 - operator, start: (16, 8), end: (16, 9), text: `$`
+    pattern:  2, capture: 2 - property, start: (16, 9), end: (16, 17), text: `readlink`
+    pattern:  8, capture: 7 - operator, start: (16, 18), end: (16, 19), text: `>`
+    pattern:  6, capture: 5 - number, start: (16, 29), end: (16, 30), text: `2`
+    pattern:  8, capture: 7 - operator, start: (16, 30), end: (16, 31), text: `>`
+    pattern:  3, capture: 3 - keyword, start: (17, 2), end: (17, 4), text: `if`
+    pattern:  8, capture: 7 - operator, start: (17, 7), end: (17, 8), text: `$`
+    pattern:  3, capture: 3 - keyword, start: (17, 19), end: (17, 23), text: `then`
+    pattern:  1, capture: 1 - function, start: (18, 4), end: (18, 8), text: `echo`
+    pattern:  0, capture: 0 - string, start: (18, 9), end: (18, 66), text: `"Can't find the readlink or greadlink command. Aborting."`
+    pattern:  1, capture: 1 - function, start: (19, 4), end: (19, 8), text: `exit`
+    pattern:  3, capture: 3 - keyword, start: (20, 2), end: (20, 4), text: `fi`
+    pattern:  3, capture: 3 - keyword, start: (21, 0), end: (21, 2), text: `fi`
+    pattern:  3, capture: 3 - keyword, start: (23, 0), end: (23, 2), text: `if`
+    pattern:  0, capture: 0 - string, start: (23, 5), end: (23, 26), text: `"x$npm_config_prefix"`
+    pattern:  8, capture: 7 - operator, start: (23, 7), end: (23, 8), text: `$`
+    pattern:  2, capture: 2 - property, start: (23, 8), end: (23, 25), text: `npm_config_prefix`
+    pattern:  0, capture: 0 - string, start: (23, 30), end: (23, 33), text: `"x"`
+    pattern:  3, capture: 3 - keyword, start: (23, 37), end: (23, 41), text: `then`
+    pattern:  2, capture: 2 - property, start: (24, 2), end: (24, 10), text: `PREFIXES`
+    pattern:  8, capture: 7 - operator, start: (24, 11), end: (24, 12), text: `$`
+    pattern:  2, capture: 2 - property, start: (24, 12), end: (24, 29), text: `npm_config_prefix`
+    pattern:  3, capture: 3 - keyword, start: (25, 0), end: (25, 4), text: `else`
+    pattern:  2, capture: 2 - property, start: (26, 2), end: (26, 6), text: `node`
+    pattern:  0, capture: 0 - string, start: (26, 7), end: (26, 14), text: `"$NODE"`
+    pattern:  8, capture: 7 - operator, start: (26, 8), end: (26, 9), text: `$`
+    pattern:  2, capture: 2 - property, start: (26, 9), end: (26, 13), text: `NODE`
+    pattern:  3, capture: 3 - keyword, start: (27, 2), end: (27, 4), text: `if`
+    pattern:  0, capture: 0 - string, start: (27, 7), end: (27, 15), text: `"x$node"`
+    pattern:  8, capture: 7 - operator, start: (27, 9), end: (27, 10), text: `$`
+    pattern:  2, capture: 2 - property, start: (27, 10), end: (27, 14), text: `node`
+    pattern:  0, capture: 0 - string, start: (27, 18), end: (27, 21), text: `"x"`
+    pattern:  3, capture: 3 - keyword, start: (27, 25), end: (27, 29), text: `then`
+    pattern:  2, capture: 2 - property, start: (28, 4), end: (28, 8), text: `node`
+    pattern:  7, capture: 6 - embedded, start: (28, 9), end: (28, 21), text: ``which node``
+    pattern:  1, capture: 1 - function, start: (28, 10), end: (28, 15), text: `which`
+    pattern:  3, capture: 3 - keyword, start: (29, 2), end: (29, 4), text: `fi`
+    pattern:  3, capture: 3 - keyword, start: (30, 2), end: (30, 4), text: `if`
+    pattern:  0, capture: 0 - string, start: (30, 7), end: (30, 15), text: `"x$node"`
+    pattern:  8, capture: 7 - operator, start: (30, 9), end: (30, 10), text: `$`
+    pattern:  2, capture: 2 - property, start: (30, 10), end: (30, 14), text: `node`
+    pattern:  0, capture: 0 - string, start: (30, 18), end: (30, 21), text: `"x"`
+    pattern:  3, capture: 3 - keyword, start: (30, 25), end: (30, 29), text: `then`
+    pattern:  1, capture: 1 - function, start: (31, 4), end: (31, 8), text: `echo`
+    pattern:  0, capture: 0 - string, start: (31, 9), end: (31, 57), text: `"Can't find node to determine prefix. Aborting."`
+    pattern:  1, capture: 1 - function, start: (32, 4), end: (32, 8), text: `exit`
+    pattern:  3, capture: 3 - keyword, start: (33, 2), end: (33, 4), text: `fi`
+    pattern:  2, capture: 2 - property, start: (36, 2), end: (36, 8), text: `PREFIX`
+    pattern:  7, capture: 6 - embedded, start: (36, 9), end: (36, 24), text: ``dirname $node``
+    pattern:  1, capture: 1 - function, start: (36, 10), end: (36, 17), text: `dirname`
+    pattern:  8, capture: 7 - operator, start: (36, 18), end: (36, 19), text: `$`
+    pattern:  2, capture: 2 - property, start: (36, 19), end: (36, 23), text: `node`
+    pattern:  2, capture: 2 - property, start: (37, 2), end: (37, 8), text: `PREFIX`
+    pattern:  7, capture: 6 - embedded, start: (37, 9), end: (37, 26), text: ``dirname $PREFIX``
+    pattern:  1, capture: 1 - function, start: (37, 10), end: (37, 17), text: `dirname`
+    pattern:  8, capture: 7 - operator, start: (37, 18), end: (37, 19), text: `$`
+    pattern:  2, capture: 2 - property, start: (37, 19), end: (37, 25), text: `PREFIX`
+    pattern:  1, capture: 1 - function, start: (38, 2), end: (38, 6), text: `echo`
+    pattern:  0, capture: 0 - string, start: (38, 7), end: (38, 31), text: `"cleanup prefix=$PREFIX"`
+    pattern:  8, capture: 7 - operator, start: (38, 23), end: (38, 24), text: `$`
+    pattern:  2, capture: 2 - property, start: (38, 24), end: (38, 30), text: `PREFIX`
+    pattern:  2, capture: 2 - property, start: (39, 2), end: (39, 10), text: `PREFIXES`
+    pattern:  8, capture: 7 - operator, start: (39, 11), end: (39, 12), text: `$`
+    pattern:  2, capture: 2 - property, start: (39, 12), end: (39, 18), text: `PREFIX`
+    pattern:  2, capture: 2 - property, start: (41, 2), end: (41, 11), text: `altprefix`
+    pattern:  7, capture: 6 - embedded, start: (41, 12), end: (41, 46), text: ``"$node" -e process.installPrefix``
+    pattern:  1, capture: 1 - function, start: (41, 13), end: (41, 20), text: `"$node"`
+    pattern:  0, capture: 0 - string, start: (41, 13), end: (41, 20), text: `"$node"`
+    pattern:  8, capture: 7 - operator, start: (41, 14), end: (41, 15), text: `$`
+    pattern:  2, capture: 2 - property, start: (41, 15), end: (41, 19), text: `node`
+    pattern:  9, capture: 8 - constant, start: (41, 21), end: (41, 23), text: `-e`
+    pattern:  3, capture: 3 - keyword, start: (42, 2), end: (42, 4), text: `if`
+    pattern:  0, capture: 0 - string, start: (42, 7), end: (42, 20), text: `"x$altprefix"`
+    pattern:  8, capture: 7 - operator, start: (42, 9), end: (42, 10), text: `$`
+    pattern:  2, capture: 2 - property, start: (42, 10), end: (42, 19), text: `altprefix`
+    pattern:  0, capture: 0 - string, start: (42, 24), end: (42, 27), text: `"x"`
+    pattern:  8, capture: 7 - operator, start: (42, 30), end: (42, 32), text: `&&`
+    pattern:  0, capture: 0 - string, start: (42, 35), end: (42, 48), text: `"x$altprefix"`
+    pattern:  8, capture: 7 - operator, start: (42, 37), end: (42, 38), text: `$`
+    pattern:  2, capture: 2 - property, start: (42, 38), end: (42, 47), text: `altprefix`
+    pattern:  0, capture: 0 - string, start: (42, 52), end: (42, 62), text: `"x$PREFIX"`
+    pattern:  8, capture: 7 - operator, start: (42, 54), end: (42, 55), text: `$`
+    pattern:  2, capture: 2 - property, start: (42, 55), end: (42, 61), text: `PREFIX`
+    pattern:  3, capture: 3 - keyword, start: (42, 66), end: (42, 70), text: `then`
+    pattern:  1, capture: 1 - function, start: (43, 4), end: (43, 8), text: `echo`
+    pattern:  0, capture: 0 - string, start: (43, 9), end: (43, 31), text: `"altprefix=$altprefix"`
+    pattern:  8, capture: 7 - operator, start: (43, 20), end: (43, 21), text: `$`
+    pattern:  2, capture: 2 - property, start: (43, 21), end: (43, 30), text: `altprefix`
+    pattern:  2, capture: 2 - property, start: (44, 4), end: (44, 12), text: `PREFIXES`
+    pattern:  0, capture: 0 - string, start: (44, 13), end: (44, 33), text: `"$PREFIX $altprefix"`
+    pattern:  8, capture: 7 - operator, start: (44, 14), end: (44, 15), text: `$`
+    pattern:  2, capture: 2 - property, start: (44, 15), end: (44, 21), text: `PREFIX`
+    pattern:  8, capture: 7 - operator, start: (44, 21), end: (44, 23), text: ` $`
+    pattern:  2, capture: 2 - property, start: (44, 23), end: (44, 32), text: `altprefix`
+    pattern:  3, capture: 3 - keyword, start: (45, 2), end: (45, 4), text: `fi`
+    pattern:  3, capture: 3 - keyword, start: (46, 0), end: (46, 2), text: `fi`
+    pattern:  4, capture: 4 - comment, start: (48, 0), end: (48, 52), text: `# now prefix is where npm would be rooted by default`
+    pattern:  4, capture: 4 - comment, start: (49, 0), end: (49, 13), text: `# go hunting.`
+    pattern:  2, capture: 2 - property, start: (51, 0), end: (51, 8), text: `packages`
+    pattern:  3, capture: 3 - keyword, start: (52, 0), end: (52, 3), text: `for`
+    pattern:  2, capture: 2 - property, start: (52, 4), end: (52, 10), text: `prefix`
+    pattern:  3, capture: 3 - keyword, start: (52, 11), end: (52, 13), text: `in`
+    pattern:  8, capture: 7 - operator, start: (52, 14), end: (52, 15), text: `$`
+    pattern:  2, capture: 2 - property, start: (52, 15), end: (52, 23), text: `PREFIXES`
+    pattern:  3, capture: 3 - keyword, start: (52, 25), end: (52, 27), text: `do`
+    pattern:  2, capture: 2 - property, start: (53, 2), end: (53, 10), text: `packages`
+    pattern:  0, capture: 0 - string, start: (53, 11), end: (54, 5), text: `"$packages
+    "`
+    pattern:  8, capture: 7 - operator, start: (53, 12), end: (53, 13), text: `$`
+    pattern:  2, capture: 2 - property, start: (53, 13), end: (53, 21), text: `packages`
+    pattern:  7, capture: 6 - embedded, start: (54, 5), end: (54, 62), text: ``ls "$prefix"/lib/node/.npm 2>/dev/null | grep -v .cache``
+    pattern:  1, capture: 1 - function, start: (54, 6), end: (54, 8), text: `ls`
+    pattern:  0, capture: 0 - string, start: (54, 9), end: (54, 18), text: `"$prefix"`
+    pattern:  8, capture: 7 - operator, start: (54, 10), end: (54, 11), text: `$`
+    pattern:  2, capture: 2 - property, start: (54, 11), end: (54, 17), text: `prefix`
+    pattern:  6, capture: 5 - number, start: (54, 33), end: (54, 34), text: `2`
+    pattern:  8, capture: 7 - operator, start: (54, 34), end: (54, 35), text: `>`
+    pattern:  8, capture: 7 - operator, start: (54, 45), end: (54, 46), text: `|`
+    pattern:  1, capture: 1 - function, start: (54, 47), end: (54, 51), text: `grep`
+    pattern:  9, capture: 8 - constant, start: (54, 52), end: (54, 54), text: `-v`
+    pattern:  3, capture: 3 - keyword, start: (55, 0), end: (55, 4), text: `done`
+    pattern:  2, capture: 2 - property, start: (57, 0), end: (57, 8), text: `packages`
+    pattern:  7, capture: 6 - embedded, start: (57, 9), end: (57, 25), text: ``echo $packages``
+    pattern:  1, capture: 1 - function, start: (57, 10), end: (57, 14), text: `echo`
+    pattern:  8, capture: 7 - operator, start: (57, 15), end: (57, 16), text: `$`
+    pattern:  2, capture: 2 - property, start: (57, 16), end: (57, 24), text: `packages`
+    pattern:  2, capture: 2 - property, start: (59, 0), end: (59, 8), text: `filelist`
+    pattern:  2, capture: 2 - property, start: (60, 0), end: (60, 3), text: `fid`
+    pattern:  3, capture: 3 - keyword, start: (62, 0), end: (62, 3), text: `for`
+    pattern:  2, capture: 2 - property, start: (62, 4), end: (62, 10), text: `prefix`
+    pattern:  3, capture: 3 - keyword, start: (62, 11), end: (62, 13), text: `in`
+    pattern:  8, capture: 7 - operator, start: (62, 14), end: (62, 15), text: `$`
+    pattern:  2, capture: 2 - property, start: (62, 15), end: (62, 23), text: `PREFIXES`
+    pattern:  3, capture: 3 - keyword, start: (62, 25), end: (62, 27), text: `do`
+    pattern:  4, capture: 4 - comment, start: (63, 2), end: (63, 51), text: `# remove any links into the .npm dir, or links to`
+    pattern:  4, capture: 4 - comment, start: (64, 2), end: (64, 33), text: `# version-named shims/symlinks.`
+    pattern:  3, capture: 3 - keyword, start: (65, 2), end: (65, 5), text: `for`
+    pattern:  2, capture: 2 - property, start: (65, 6), end: (65, 12), text: `folder`
+    pattern:  3, capture: 3 - keyword, start: (65, 13), end: (65, 15), text: `in`
+    pattern:  3, capture: 3 - keyword, start: (65, 40), end: (65, 42), text: `do`
+    pattern:  1, capture: 1 - function, start: (66, 4), end: (66, 8), text: `find`
+    pattern:  8, capture: 7 - operator, start: (66, 9), end: (66, 10), text: `$`
+    pattern:  2, capture: 2 - property, start: (66, 10), end: (66, 16), text: `prefix`
+    pattern:  8, capture: 7 - operator, start: (66, 17), end: (66, 18), text: `$`
+    pattern:  2, capture: 2 - property, start: (66, 18), end: (66, 24), text: `folder`
+    pattern:  9, capture: 8 - constant, start: (66, 25), end: (66, 30), text: `-type`
+    pattern:  8, capture: 7 - operator, start: (66, 33), end: (66, 34), text: `|`
+    pattern:  3, capture: 3 - keyword, start: (66, 35), end: (66, 40), text: `while`
+    pattern:  1, capture: 1 - function, start: (66, 41), end: (66, 45), text: `read`
+    pattern:  3, capture: 3 - keyword, start: (66, 52), end: (66, 54), text: `do`
+    pattern:  2, capture: 2 - property, start: (67, 6), end: (67, 12), text: `target`
+    pattern:  7, capture: 6 - embedded, start: (67, 13), end: (67, 47), text: ``$readlink $file | grep '/\.npm/'``
+    pattern:  1, capture: 1 - function, start: (67, 14), end: (67, 23), text: `$readlink`
+    pattern:  8, capture: 7 - operator, start: (67, 14), end: (67, 15), text: `$`
+    pattern:  2, capture: 2 - property, start: (67, 15), end: (67, 23), text: `readlink`
+    pattern:  8, capture: 7 - operator, start: (67, 24), end: (67, 25), text: `$`
+    pattern:  2, capture: 2 - property, start: (67, 25), end: (67, 29), text: `file`
+    pattern:  8, capture: 7 - operator, start: (67, 30), end: (67, 31), text: `|`
+    pattern:  1, capture: 1 - function, start: (67, 32), end: (67, 36), text: `grep`
+    pattern:  0, capture: 0 - string, start: (67, 37), end: (67, 46), text: `'/\.npm/'`
+    pattern:  3, capture: 3 - keyword, start: (68, 6), end: (68, 8), text: `if`
+    pattern:  0, capture: 0 - string, start: (68, 11), end: (68, 21), text: `"x$target"`
+    pattern:  8, capture: 7 - operator, start: (68, 13), end: (68, 14), text: `$`
+    pattern:  2, capture: 2 - property, start: (68, 14), end: (68, 20), text: `target`
+    pattern:  0, capture: 0 - string, start: (68, 25), end: (68, 28), text: `"x"`
+    pattern:  3, capture: 3 - keyword, start: (68, 32), end: (68, 36), text: `then`
+    pattern:  4, capture: 4 - comment, start: (69, 8), end: (69, 20), text: `# found one!`
+    pattern:  2, capture: 2 - property, start: (70, 8), end: (70, 16), text: `filelist`
+    pattern:  8, capture: 7 - operator, start: (70, 17), end: (70, 18), text: `$`
+    pattern:  2, capture: 2 - property, start: (70, 18), end: (70, 21), text: `fid`
+    pattern:  0, capture: 0 - string, start: (70, 23), end: (70, 30), text: `"$file"`
+    pattern:  8, capture: 7 - operator, start: (70, 24), end: (70, 25), text: `$`
+    pattern:  2, capture: 2 - property, start: (70, 25), end: (70, 29), text: `file`
+    pattern:  1, capture: 1 - function, start: (71, 8), end: (71, 11), text: `let`
+    pattern:  0, capture: 0 - string, start: (71, 12), end: (71, 19), text: `'fid++'`
+    pattern:  4, capture: 4 - comment, start: (72, 8), end: (72, 48), text: `# also remove any symlinks to this file.`
+    pattern:  2, capture: 2 - property, start: (73, 8), end: (73, 12), text: `base`
+    pattern:  7, capture: 6 - embedded, start: (73, 13), end: (73, 31), text: ``basename "$file"``
+    pattern:  1, capture: 1 - function, start: (73, 14), end: (73, 22), text: `basename`
+    pattern:  0, capture: 0 - string, start: (73, 23), end: (73, 30), text: `"$file"`
+    pattern:  8, capture: 7 - operator, start: (73, 24), end: (73, 25), text: `$`
+    pattern:  2, capture: 2 - property, start: (73, 25), end: (73, 29), text: `file`
+    pattern:  2, capture: 2 - property, start: (74, 8), end: (74, 12), text: `base`
+    pattern:  7, capture: 6 - embedded, start: (74, 13), end: (74, 50), text: ``echo "$base" | awk -F@ '{print $1}'``
+    pattern:  1, capture: 1 - function, start: (74, 14), end: (74, 18), text: `echo`
+    pattern:  0, capture: 0 - string, start: (74, 19), end: (74, 26), text: `"$base"`
+    pattern:  8, capture: 7 - operator, start: (74, 20), end: (74, 21), text: `$`
+    pattern:  2, capture: 2 - property, start: (74, 21), end: (74, 25), text: `base`
+    pattern:  8, capture: 7 - operator, start: (74, 27), end: (74, 28), text: `|`
+    pattern:  1, capture: 1 - function, start: (74, 29), end: (74, 32), text: `awk`
+    pattern:  9, capture: 8 - constant, start: (74, 33), end: (74, 36), text: `-F@`
+    pattern:  0, capture: 0 - string, start: (74, 37), end: (74, 49), text: `'{print $1}'`
+    pattern:  3, capture: 3 - keyword, start: (75, 8), end: (75, 10), text: `if`
+    pattern:  0, capture: 0 - string, start: (75, 13), end: (75, 21), text: `"x$base"`
+    pattern:  8, capture: 7 - operator, start: (75, 15), end: (75, 16), text: `$`
+    pattern:  2, capture: 2 - property, start: (75, 16), end: (75, 20), text: `base`
+    pattern:  0, capture: 0 - string, start: (75, 25), end: (75, 28), text: `"x"`
+    pattern:  3, capture: 3 - keyword, start: (75, 32), end: (75, 36), text: `then`
+    pattern:  1, capture: 1 - function, start: (76, 10), end: (76, 14), text: `find`
+    pattern:  0, capture: 0 - string, start: (76, 15), end: (76, 32), text: `"`dirname $file`"`
+    pattern:  7, capture: 6 - embedded, start: (76, 16), end: (76, 31), text: ``dirname $file``
+    pattern:  1, capture: 1 - function, start: (76, 17), end: (76, 24), text: `dirname`
+    pattern:  8, capture: 7 - operator, start: (76, 25), end: (76, 26), text: `$`
+    pattern:  2, capture: 2 - property, start: (76, 26), end: (76, 30), text: `file`
+    pattern:  9, capture: 8 - constant, start: (76, 33), end: (76, 38), text: `-type`
+    pattern:  9, capture: 8 - constant, start: (76, 41), end: (76, 46), text: `-name`
+    pattern:  0, capture: 0 - string, start: (76, 47), end: (76, 54), text: `"$base"`
+    pattern:  8, capture: 7 - operator, start: (76, 48), end: (76, 49), text: `$`
+    pattern:  2, capture: 2 - property, start: (76, 49), end: (76, 53), text: `base`
+    pattern:  0, capture: 0 - string, start: (76, 54), end: (76, 57), text: `'*'`
+    pattern:  8, capture: 7 - operator, start: (77, 10), end: (77, 11), text: `|`
+    pattern:  3, capture: 3 - keyword, start: (77, 12), end: (77, 17), text: `while`
+    pattern:  1, capture: 1 - function, start: (77, 18), end: (77, 22), text: `read`
+    pattern:  3, capture: 3 - keyword, start: (77, 26), end: (77, 28), text: `do`
+    pattern:  2, capture: 2 - property, start: (78, 14), end: (78, 20), text: `target`
+    pattern:  7, capture: 6 - embedded, start: (78, 21), end: (78, 52), text: ``$readlink "$l" | grep "$base"``
+    pattern:  1, capture: 1 - function, start: (78, 22), end: (78, 31), text: `$readlink`
+    pattern:  8, capture: 7 - operator, start: (78, 22), end: (78, 23), text: `$`
+    pattern:  2, capture: 2 - property, start: (78, 23), end: (78, 31), text: `readlink`
+    pattern:  0, capture: 0 - string, start: (78, 32), end: (78, 36), text: `"$l"`
+    pattern:  8, capture: 7 - operator, start: (78, 33), end: (78, 34), text: `$`
+    pattern:  2, capture: 2 - property, start: (78, 34), end: (78, 35), text: `l`
+    pattern:  8, capture: 7 - operator, start: (78, 37), end: (78, 38), text: `|`
+    pattern:  1, capture: 1 - function, start: (78, 39), end: (78, 43), text: `grep`
+    pattern:  0, capture: 0 - string, start: (78, 44), end: (78, 51), text: `"$base"`
+    pattern:  8, capture: 7 - operator, start: (78, 45), end: (78, 46), text: `$`
+    pattern:  2, capture: 2 - property, start: (78, 46), end: (78, 50), text: `base`
+    pattern:  3, capture: 3 - keyword, start: (79, 14), end: (79, 16), text: `if`
+    pattern:  0, capture: 0 - string, start: (79, 19), end: (79, 29), text: `"x$target"`
+    pattern:  8, capture: 7 - operator, start: (79, 21), end: (79, 22), text: `$`
+    pattern:  2, capture: 2 - property, start: (79, 22), end: (79, 28), text: `target`
+    pattern:  0, capture: 0 - string, start: (79, 33), end: (79, 36), text: `"x"`
+    pattern:  3, capture: 3 - keyword, start: (79, 40), end: (79, 44), text: `then`
+    pattern:  2, capture: 2 - property, start: (80, 16), end: (80, 24), text: `filelist`
+    pattern:  8, capture: 7 - operator, start: (80, 25), end: (80, 26), text: `$`
+    pattern:  2, capture: 2 - property, start: (80, 26), end: (80, 29), text: `fid`
+    pattern:  0, capture: 0 - string, start: (80, 31), end: (80, 35), text: `"$1"`
+    pattern:  8, capture: 7 - operator, start: (80, 32), end: (80, 33), text: `$`
+    pattern:  2, capture: 2 - property, start: (80, 33), end: (80, 34), text: `1`
+    pattern:  1, capture: 1 - function, start: (81, 16), end: (81, 19), text: `let`
+    pattern:  0, capture: 0 - string, start: (81, 20), end: (81, 27), text: `'fid++'`
+    pattern:  3, capture: 3 - keyword, start: (82, 14), end: (82, 16), text: `fi`
+    pattern:  3, capture: 3 - keyword, start: (83, 12), end: (83, 16), text: `done`
+    pattern:  3, capture: 3 - keyword, start: (84, 8), end: (84, 10), text: `fi`
+    pattern:  3, capture: 3 - keyword, start: (85, 6), end: (85, 8), text: `fi`
+    pattern:  3, capture: 3 - keyword, start: (86, 4), end: (86, 8), text: `done`
+    pattern:  4, capture: 4 - comment, start: (88, 4), end: (88, 66), text: `# Scour for shim files.  These are relics of 0.2 npm installs.`
+    pattern:  4, capture: 4 - comment, start: (89, 4), end: (89, 36), text: `# note: grep -r is not portable.`
+    pattern:  1, capture: 1 - function, start: (90, 4), end: (90, 8), text: `find`
+    pattern:  8, capture: 7 - operator, start: (90, 9), end: (90, 10), text: `$`
+    pattern:  2, capture: 2 - property, start: (90, 10), end: (90, 16), text: `prefix`
+    pattern:  8, capture: 7 - operator, start: (90, 17), end: (90, 18), text: `$`
+    pattern:  2, capture: 2 - property, start: (90, 18), end: (90, 24), text: `folder`
+    pattern:  9, capture: 8 - constant, start: (90, 25), end: (90, 30), text: `-type`
+    pattern:  8, capture: 7 - operator, start: (91, 6), end: (91, 7), text: `|`
+    pattern:  1, capture: 1 - function, start: (91, 8), end: (91, 13), text: `xargs`
+    pattern:  9, capture: 8 - constant, start: (91, 19), end: (91, 22), text: `-sl`
+    pattern:  0, capture: 0 - string, start: (91, 23), end: (91, 44), text: `'// generated by npm'`
+    pattern:  8, capture: 7 - operator, start: (92, 6), end: (92, 7), text: `|`
+    pattern:  3, capture: 3 - keyword, start: (92, 8), end: (92, 13), text: `while`
+    pattern:  1, capture: 1 - function, start: (92, 14), end: (92, 18), text: `read`
+    pattern:  3, capture: 3 - keyword, start: (92, 25), end: (92, 27), text: `do`
+    pattern:  2, capture: 2 - property, start: (93, 10), end: (93, 18), text: `filelist`
+    pattern:  8, capture: 7 - operator, start: (93, 19), end: (93, 20), text: `$`
+    pattern:  2, capture: 2 - property, start: (93, 20), end: (93, 23), text: `fid`
+    pattern:  0, capture: 0 - string, start: (93, 25), end: (93, 32), text: `"$file"`
+    pattern:  8, capture: 7 - operator, start: (93, 26), end: (93, 27), text: `$`
+    pattern:  2, capture: 2 - property, start: (93, 27), end: (93, 31), text: `file`
+    pattern:  1, capture: 1 - function, start: (94, 10), end: (94, 13), text: `let`
+    pattern:  0, capture: 0 - string, start: (94, 14), end: (94, 21), text: `'fid++'`
+    pattern:  3, capture: 3 - keyword, start: (95, 8), end: (95, 12), text: `done`
+    pattern:  3, capture: 3 - keyword, start: (96, 2), end: (96, 6), text: `done`
+    pattern:  4, capture: 4 - comment, start: (98, 2), end: (98, 63), text: `# now remove the package modules, and the .npm folder itself.`
+    pattern:  3, capture: 3 - keyword, start: (99, 2), end: (99, 4), text: `if`
+    pattern:  0, capture: 0 - string, start: (99, 7), end: (99, 19), text: `"x$packages"`
+    pattern:  8, capture: 7 - operator, start: (99, 9), end: (99, 10), text: `$`
+    pattern:  2, capture: 2 - property, start: (99, 10), end: (99, 18), text: `packages`
+    pattern:  0, capture: 0 - string, start: (99, 23), end: (99, 26), text: `"x"`
+    pattern:  3, capture: 3 - keyword, start: (99, 30), end: (99, 34), text: `then`
+    pattern:  3, capture: 3 - keyword, start: (100, 4), end: (100, 7), text: `for`
+    pattern:  2, capture: 2 - property, start: (100, 8), end: (100, 11), text: `pkg`
+    pattern:  3, capture: 3 - keyword, start: (100, 12), end: (100, 14), text: `in`
+    pattern:  8, capture: 7 - operator, start: (100, 15), end: (100, 16), text: `$`
+    pattern:  2, capture: 2 - property, start: (100, 16), end: (100, 24), text: `packages`
+    pattern:  3, capture: 3 - keyword, start: (100, 26), end: (100, 28), text: `do`
+    pattern:  2, capture: 2 - property, start: (101, 6), end: (101, 14), text: `filelist`
+    pattern:  8, capture: 7 - operator, start: (101, 15), end: (101, 16), text: `$`
+    pattern:  2, capture: 2 - property, start: (101, 16), end: (101, 19), text: `fid`
+    pattern:  0, capture: 0 - string, start: (101, 21), end: (101, 44), text: `"$prefix/lib/node/$pkg"`
+    pattern:  8, capture: 7 - operator, start: (101, 22), end: (101, 23), text: `$`
+    pattern:  2, capture: 2 - property, start: (101, 23), end: (101, 29), text: `prefix`
+    pattern:  8, capture: 7 - operator, start: (101, 39), end: (101, 40), text: `$`
+    pattern:  2, capture: 2 - property, start: (101, 40), end: (101, 43), text: `pkg`
+    pattern:  1, capture: 1 - function, start: (102, 6), end: (102, 9), text: `let`
+    pattern:  0, capture: 0 - string, start: (102, 10), end: (102, 17), text: `'fid++'`
+    pattern:  3, capture: 3 - keyword, start: (103, 6), end: (103, 9), text: `for`
+    pattern:  2, capture: 2 - property, start: (103, 10), end: (103, 11), text: `i`
+    pattern:  3, capture: 3 - keyword, start: (103, 12), end: (103, 14), text: `in`
+    pattern:  8, capture: 7 - operator, start: (103, 15), end: (103, 16), text: `$`
+    pattern:  2, capture: 2 - property, start: (103, 16), end: (103, 22), text: `prefix`
+    pattern:  8, capture: 7 - operator, start: (103, 32), end: (103, 33), text: `$`
+    pattern:  3, capture: 3 - keyword, start: (103, 41), end: (103, 43), text: `do`
+    pattern:  2, capture: 2 - property, start: (104, 8), end: (104, 16), text: `filelist`
+    pattern:  8, capture: 7 - operator, start: (104, 17), end: (104, 18), text: `$`
+    pattern:  2, capture: 2 - property, start: (104, 18), end: (104, 21), text: `fid`
+    pattern:  0, capture: 0 - string, start: (104, 23), end: (104, 27), text: `"$i"`
+    pattern:  8, capture: 7 - operator, start: (104, 24), end: (104, 25), text: `$`
+    pattern:  2, capture: 2 - property, start: (104, 25), end: (104, 26), text: `i`
+    pattern:  1, capture: 1 - function, start: (105, 8), end: (105, 11), text: `let`
+    pattern:  0, capture: 0 - string, start: (105, 12), end: (105, 19), text: `'fid++'`
+    pattern:  3, capture: 3 - keyword, start: (106, 6), end: (106, 10), text: `done`
+    pattern:  3, capture: 3 - keyword, start: (107, 4), end: (107, 8), text: `done`
+    pattern:  3, capture: 3 - keyword, start: (108, 2), end: (108, 4), text: `fi`
+    pattern:  3, capture: 3 - keyword, start: (110, 2), end: (110, 5), text: `for`
+    pattern:  2, capture: 2 - property, start: (110, 6), end: (110, 12), text: `folder`
+    pattern:  3, capture: 3 - keyword, start: (110, 13), end: (110, 15), text: `in`
+    pattern:  3, capture: 3 - keyword, start: (110, 49), end: (110, 51), text: `do`
+    pattern:  3, capture: 3 - keyword, start: (111, 4), end: (111, 6), text: `if`
+    pattern:  8, capture: 7 - operator, start: (111, 12), end: (111, 13), text: `$`
+    pattern:  2, capture: 2 - property, start: (111, 13), end: (111, 19), text: `prefix`
+    pattern:  8, capture: 7 - operator, start: (111, 20), end: (111, 21), text: `$`
+    pattern:  2, capture: 2 - property, start: (111, 21), end: (111, 27), text: `folder`
+    pattern:  3, capture: 3 - keyword, start: (111, 31), end: (111, 35), text: `then`
+    pattern:  2, capture: 2 - property, start: (112, 6), end: (112, 14), text: `filelist`
+    pattern:  8, capture: 7 - operator, start: (112, 15), end: (112, 16), text: `$`
+    pattern:  2, capture: 2 - property, start: (112, 16), end: (112, 19), text: `fid`
+    pattern:  0, capture: 0 - string, start: (112, 21), end: (112, 38), text: `"$prefix/$folder"`
+    pattern:  8, capture: 7 - operator, start: (112, 22), end: (112, 23), text: `$`
+    pattern:  2, capture: 2 - property, start: (112, 23), end: (112, 29), text: `prefix`
+    pattern:  8, capture: 7 - operator, start: (112, 30), end: (112, 31), text: `$`
+    pattern:  2, capture: 2 - property, start: (112, 31), end: (112, 37), text: `folder`
+    pattern:  1, capture: 1 - function, start: (113, 6), end: (113, 9), text: `let`
+    pattern:  0, capture: 0 - string, start: (113, 10), end: (113, 17), text: `'fid++'`
+    pattern:  3, capture: 3 - keyword, start: (114, 4), end: (114, 6), text: `fi`
+    pattern:  3, capture: 3 - keyword, start: (115, 2), end: (115, 6), text: `done`
+    pattern:  3, capture: 3 - keyword, start: (116, 0), end: (116, 4), text: `done`
+    pattern:  4, capture: 4 - comment, start: (118, 0), end: (118, 59), text: `# now actually clean, but only if there's anything TO clean`
+    pattern:  3, capture: 3 - keyword, start: (119, 0), end: (119, 2), text: `if`
+    pattern:  0, capture: 0 - string, start: (119, 5), end: (119, 22), text: `"${#filelist[@]}"`
+    pattern:  7, capture: 6 - embedded, start: (119, 6), end: (119, 21), text: `${#filelist[@]}`
+    pattern:  2, capture: 2 - property, start: (119, 9), end: (119, 17), text: `filelist`
+    pattern:  3, capture: 3 - keyword, start: (119, 32), end: (119, 36), text: `then`
+    pattern:  1, capture: 1 - function, start: (120, 2), end: (120, 6), text: `echo`
+    pattern:  0, capture: 0 - string, start: (120, 7), end: (120, 9), text: `""`
+    pattern:  1, capture: 1 - function, start: (121, 2), end: (121, 6), text: `echo`
+    pattern:  0, capture: 0 - string, start: (121, 7), end: (121, 64), text: `"This script will find and eliminate any shims, symbolic"`
+    pattern:  1, capture: 1 - function, start: (122, 2), end: (122, 6), text: `echo`
+    pattern:  0, capture: 0 - string, start: (122, 7), end: (122, 62), text: `"links, and other cruft that was installed by npm 0.x."`
+    pattern:  1, capture: 1 - function, start: (123, 2), end: (123, 6), text: `echo`
+    pattern:  0, capture: 0 - string, start: (123, 7), end: (123, 9), text: `""`
+    pattern:  3, capture: 3 - keyword, start: (125, 2), end: (125, 4), text: `if`
+    pattern:  0, capture: 0 - string, start: (125, 7), end: (125, 19), text: `"x$packages"`
+    pattern:  8, capture: 7 - operator, start: (125, 9), end: (125, 10), text: `$`
+    pattern:  2, capture: 2 - property, start: (125, 10), end: (125, 18), text: `packages`
+    pattern:  0, capture: 0 - string, start: (125, 23), end: (125, 26), text: `"x"`
+    pattern:  3, capture: 3 - keyword, start: (125, 30), end: (125, 34), text: `then`
+    pattern:  1, capture: 1 - function, start: (126, 4), end: (126, 8), text: `echo`
+    pattern:  0, capture: 0 - string, start: (126, 9), end: (126, 68), text: `"The following packages appear to have been installed with"`
+    pattern:  1, capture: 1 - function, start: (127, 4), end: (127, 8), text: `echo`
+    pattern:  0, capture: 0 - string, start: (127, 9), end: (127, 63), text: `"an old version of npm, and will be removed forcibly:"`
+    pattern:  3, capture: 3 - keyword, start: (128, 4), end: (128, 7), text: `for`
+    pattern:  2, capture: 2 - property, start: (128, 8), end: (128, 11), text: `pkg`
+    pattern:  3, capture: 3 - keyword, start: (128, 12), end: (128, 14), text: `in`
+    pattern:  8, capture: 7 - operator, start: (128, 15), end: (128, 16), text: `$`
+    pattern:  2, capture: 2 - property, start: (128, 16), end: (128, 24), text: `packages`
+    pattern:  3, capture: 3 - keyword, start: (128, 26), end: (128, 28), text: `do`
+    pattern:  1, capture: 1 - function, start: (129, 6), end: (129, 10), text: `echo`
+    pattern:  0, capture: 0 - string, start: (129, 11), end: (129, 21), text: `"    $pkg"`
+    pattern:  8, capture: 7 - operator, start: (129, 12), end: (129, 17), text: `    $`
+    pattern:  2, capture: 2 - property, start: (129, 17), end: (129, 20), text: `pkg`
+    pattern:  3, capture: 3 - keyword, start: (130, 4), end: (130, 8), text: `done`
+    pattern:  1, capture: 1 - function, start: (131, 4), end: (131, 8), text: `echo`
+    pattern:  0, capture: 0 - string, start: (131, 9), end: (131, 61), text: `"Make a note of these. You may want to install them"`
+    pattern:  1, capture: 1 - function, start: (132, 4), end: (132, 8), text: `echo`
+    pattern:  0, capture: 0 - string, start: (132, 9), end: (132, 55), text: `"with npm 1.0 when this process is completed."`
+    pattern:  1, capture: 1 - function, start: (133, 4), end: (133, 8), text: `echo`
+    pattern:  0, capture: 0 - string, start: (133, 9), end: (133, 11), text: `""`
+    pattern:  3, capture: 3 - keyword, start: (134, 2), end: (134, 4), text: `fi`
+    pattern:  2, capture: 2 - property, start: (136, 2), end: (136, 4), text: `OK`
+    pattern:  3, capture: 3 - keyword, start: (137, 2), end: (137, 4), text: `if`
+    pattern:  0, capture: 0 - string, start: (137, 7), end: (137, 12), text: `"x$1"`
+    pattern:  8, capture: 7 - operator, start: (137, 9), end: (137, 10), text: `$`
+    pattern:  2, capture: 2 - property, start: (137, 10), end: (137, 11), text: `1`
+    pattern:  0, capture: 0 - string, start: (137, 15), end: (137, 20), text: `"x-y"`
+    pattern:  3, capture: 3 - keyword, start: (137, 24), end: (137, 28), text: `then`
+    pattern:  2, capture: 2 - property, start: (138, 4), end: (138, 6), text: `OK`
+    pattern:  0, capture: 0 - string, start: (138, 7), end: (138, 12), text: `"yes"`
+    pattern:  3, capture: 3 - keyword, start: (139, 2), end: (139, 4), text: `fi`
+    pattern:  3, capture: 3 - keyword, start: (141, 2), end: (141, 7), text: `while`
+    pattern:  0, capture: 0 - string, start: (141, 10), end: (141, 15), text: `"$OK"`
+    pattern:  8, capture: 7 - operator, start: (141, 11), end: (141, 12), text: `$`
+    pattern:  2, capture: 2 - property, start: (141, 12), end: (141, 14), text: `OK`
+    pattern:  0, capture: 0 - string, start: (141, 19), end: (141, 22), text: `"y"`
+    pattern:  8, capture: 7 - operator, start: (141, 25), end: (141, 27), text: `&&`
+    pattern:  0, capture: 0 - string, start: (141, 30), end: (141, 35), text: `"$OK"`
+    pattern:  8, capture: 7 - operator, start: (141, 31), end: (141, 32), text: `$`
+    pattern:  2, capture: 2 - property, start: (141, 32), end: (141, 34), text: `OK`
+    pattern:  0, capture: 0 - string, start: (141, 39), end: (141, 44), text: `"yes"`
+    pattern:  8, capture: 7 - operator, start: (141, 47), end: (141, 49), text: `&&`
+    pattern:  0, capture: 0 - string, start: (141, 52), end: (141, 57), text: `"$OK"`
+    pattern:  8, capture: 7 - operator, start: (141, 53), end: (141, 54), text: `$`
+    pattern:  2, capture: 2 - property, start: (141, 54), end: (141, 56), text: `OK`
+    pattern:  0, capture: 0 - string, start: (141, 61), end: (141, 65), text: `"no"`
+    pattern:  3, capture: 3 - keyword, start: (141, 69), end: (141, 71), text: `do`
+    pattern:  1, capture: 1 - function, start: (142, 4), end: (142, 8), text: `echo`
+    pattern:  0, capture: 0 - string, start: (142, 9), end: (142, 22), text: `"Is this OK?"`
+    pattern:  1, capture: 1 - function, start: (143, 4), end: (143, 8), text: `echo`
+    pattern:  0, capture: 0 - string, start: (143, 9), end: (143, 32), text: `"  enter 'yes' or 'no'"`
+    pattern:  1, capture: 1 - function, start: (144, 4), end: (144, 8), text: `echo`
+    pattern:  0, capture: 0 - string, start: (144, 9), end: (144, 46), text: `"  or 'show' to see a list of files "`
+    pattern:  1, capture: 1 - function, start: (145, 4), end: (145, 8), text: `read`
+    pattern:  3, capture: 3 - keyword, start: (146, 4), end: (146, 6), text: `if`
+    pattern:  0, capture: 0 - string, start: (146, 9), end: (146, 15), text: `"x$OK"`
+    pattern:  8, capture: 7 - operator, start: (146, 11), end: (146, 12), text: `$`
+    pattern:  2, capture: 2 - property, start: (146, 12), end: (146, 14), text: `OK`
+    pattern:  0, capture: 0 - string, start: (146, 18), end: (146, 25), text: `"xshow"`
+    pattern:  0, capture: 0 - string, start: (146, 33), end: (146, 39), text: `"x$OK"`
+    pattern:  8, capture: 7 - operator, start: (146, 35), end: (146, 36), text: `$`
+    pattern:  2, capture: 2 - property, start: (146, 36), end: (146, 38), text: `OK`
+    pattern:  0, capture: 0 - string, start: (146, 42), end: (146, 46), text: `"xs"`
+    pattern:  3, capture: 3 - keyword, start: (146, 50), end: (146, 54), text: `then`
+    pattern:  3, capture: 3 - keyword, start: (147, 6), end: (147, 9), text: `for`
+    pattern:  2, capture: 2 - property, start: (147, 10), end: (147, 11), text: `i`
+    pattern:  3, capture: 3 - keyword, start: (147, 12), end: (147, 14), text: `in`
+    pattern:  0, capture: 0 - string, start: (147, 15), end: (147, 31), text: `"${filelist[@]}"`
+    pattern:  7, capture: 6 - embedded, start: (147, 16), end: (147, 30), text: `${filelist[@]}`
+    pattern:  2, capture: 2 - property, start: (147, 18), end: (147, 26), text: `filelist`
+    pattern:  3, capture: 3 - keyword, start: (147, 33), end: (147, 35), text: `do`
+    pattern:  1, capture: 1 - function, start: (148, 8), end: (148, 12), text: `echo`
+    pattern:  0, capture: 0 - string, start: (148, 13), end: (148, 17), text: `"$i"`
+    pattern:  8, capture: 7 - operator, start: (148, 14), end: (148, 15), text: `$`
+    pattern:  2, capture: 2 - property, start: (148, 15), end: (148, 16), text: `i`
+    pattern:  3, capture: 3 - keyword, start: (149, 6), end: (149, 10), text: `done`
+    pattern:  3, capture: 3 - keyword, start: (150, 4), end: (150, 6), text: `fi`
+    pattern:  3, capture: 3 - keyword, start: (151, 2), end: (151, 6), text: `done`
+    pattern:  3, capture: 3 - keyword, start: (152, 2), end: (152, 4), text: `if`
+    pattern:  0, capture: 0 - string, start: (152, 7), end: (152, 12), text: `"$OK"`
+    pattern:  8, capture: 7 - operator, start: (152, 8), end: (152, 9), text: `$`
+    pattern:  2, capture: 2 - property, start: (152, 9), end: (152, 11), text: `OK`
+    pattern:  0, capture: 0 - string, start: (152, 15), end: (152, 19), text: `"no"`
+    pattern:  3, capture: 3 - keyword, start: (152, 23), end: (152, 27), text: `then`
+    pattern:  1, capture: 1 - function, start: (153, 4), end: (153, 8), text: `echo`
+    pattern:  0, capture: 0 - string, start: (153, 9), end: (153, 19), text: `"Aborting"`
+    pattern:  1, capture: 1 - function, start: (154, 4), end: (154, 8), text: `exit`
+    pattern:  3, capture: 3 - keyword, start: (155, 2), end: (155, 4), text: `fi`
+    pattern:  3, capture: 3 - keyword, start: (156, 2), end: (156, 5), text: `for`
+    pattern:  2, capture: 2 - property, start: (156, 6), end: (156, 7), text: `i`
+    pattern:  3, capture: 3 - keyword, start: (156, 8), end: (156, 10), text: `in`
+    pattern:  0, capture: 0 - string, start: (156, 11), end: (156, 27), text: `"${filelist[@]}"`
+    pattern:  7, capture: 6 - embedded, start: (156, 12), end: (156, 26), text: `${filelist[@]}`
+    pattern:  2, capture: 2 - property, start: (156, 14), end: (156, 22), text: `filelist`
+    pattern:  3, capture: 3 - keyword, start: (156, 29), end: (156, 31), text: `do`
+    pattern:  1, capture: 1 - function, start: (157, 4), end: (157, 6), text: `rm`
+    pattern:  9, capture: 8 - constant, start: (157, 7), end: (157, 10), text: `-rf`
+    pattern:  0, capture: 0 - string, start: (157, 11), end: (157, 15), text: `"$i"`
+    pattern:  8, capture: 7 - operator, start: (157, 12), end: (157, 13), text: `$`
+    pattern:  2, capture: 2 - property, start: (157, 13), end: (157, 14), text: `i`
+    pattern:  3, capture: 3 - keyword, start: (158, 2), end: (158, 6), text: `done`
+    pattern:  3, capture: 3 - keyword, start: (159, 0), end: (159, 2), text: `fi`
+    pattern:  1, capture: 1 - function, start: (161, 0), end: (161, 4), text: `echo`
+    pattern:  0, capture: 0 - string, start: (161, 5), end: (161, 7), text: `""`
+    pattern:  1, capture: 1 - function, start: (162, 0), end: (162, 4), text: `echo`
+    pattern:  0, capture: 0 - string, start: (162, 5), end: (162, 17), text: `'All clean!'`
+    pattern:  1, capture: 1 - function, start: (164, 0), end: (164, 4), text: `exit`

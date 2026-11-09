@@ -1,0 +1,154 @@
+corpus/c/declarations.txt/000
+  pattern: 0
+    capture: definition.class, start: (3, 0), end: (6, 1)
+    capture: 0 - name, start: (3, 7), end: (3, 9), text: `s2`
+  pattern: 0
+    capture: definition.class, start: (8, 0), end: (10, 1)
+    capture: 0 - name, start: (8, 7), end: (8, 9), text: `s3`
+corpus/c/declarations.txt/001
+corpus/c/declarations.txt/002
+  pattern: 6
+    capture: 5 - definition.type, start: (1, 0), end: (1, 7), text: `enum e1`
+    capture: 0 - name, start: (1, 5), end: (1, 7), text: `e1`
+  pattern: 6
+    capture: definition.type, start: (3, 0), end: (7, 1)
+    capture: 0 - name, start: (3, 5), end: (3, 7), text: `e2`
+  pattern: 6
+    capture: definition.type, start: (9, 0), end: (11, 1)
+    capture: 0 - name, start: (9, 5), end: (9, 7), text: `e3`
+  pattern: 6
+    capture: definition.type, start: (13, 0), end: (15, 1)
+    capture: 0 - name, start: (13, 5), end: (13, 7), text: `e4`
+corpus/c/declarations.txt/003
+  pattern: 0
+    capture: definition.class, start: (1, 0), end: (5, 1)
+    capture: 0 - name, start: (1, 7), end: (1, 8), text: `s`
+corpus/c/declarations.txt/004
+corpus/c/declarations.txt/005
+corpus/c/declarations.txt/006
+corpus/c/declarations.txt/007
+corpus/c/declarations.txt/008
+  pattern: 5
+    capture: 5 - definition.type, start: (1, 0), end: (1, 19), text: `typedef int my_int;`
+    capture: 0 - name, start: (1, 12), end: (1, 18), text: `my_int`
+  pattern: 0
+    capture: definition.class, start: (9, 8), end: (11, 1)
+    capture: 0 - name, start: (9, 15), end: (9, 16), text: `A`
+  pattern: 5
+    capture: definition.type, start: (9, 0), end: (11, 7)
+    capture: 0 - name, start: (11, 2), end: (11, 3), text: `a`
+  pattern: 5
+    capture: definition.type, start: (9, 0), end: (11, 7)
+    capture: 0 - name, start: (11, 5), end: (11, 6), text: `b`
+  pattern: 5
+    capture: 5 - definition.type, start: (23, 0), end: (23, 30), text: `typedef unsigned long ulong_t;`
+    capture: 0 - name, start: (23, 22), end: (23, 29), text: `ulong_t`
+  pattern: 5
+    capture: 5 - definition.type, start: (24, 0), end: (24, 20), text: `typedef long long_t;`
+    capture: 0 - name, start: (24, 13), end: (24, 19), text: `long_t`
+  pattern: 5
+    capture: 5 - definition.type, start: (25, 0), end: (25, 32), text: `typedef unsigned short ushort_t;`
+    capture: 0 - name, start: (25, 23), end: (25, 31), text: `ushort_t`
+  pattern: 5
+    capture: 5 - definition.type, start: (26, 0), end: (26, 22), text: `typedef short short_t;`
+    capture: 0 - name, start: (26, 14), end: (26, 21), text: `short_t`
+  pattern: 5
+    capture: 5 - definition.type, start: (27, 0), end: (27, 28), text: `typedef unsigned unsigned_t;`
+    capture: 0 - name, start: (27, 17), end: (27, 27), text: `unsigned_t`
+  pattern: 5
+    capture: 5 - definition.type, start: (28, 0), end: (28, 24), text: `typedef signed signed_t;`
+    capture: 0 - name, start: (28, 15), end: (28, 23), text: `signed_t`
+  pattern: 5
+    capture: 5 - definition.type, start: (32, 0), end: (32, 26), text: `typedef unsigned int uint;`
+    capture: 0 - name, start: (32, 21), end: (32, 25), text: `uint`
+  pattern: 5
+    capture: 5 - definition.type, start: (33, 0), end: (33, 30), text: `typedef unsigned short ushort;`
+    capture: 0 - name, start: (33, 23), end: (33, 29), text: `ushort`
+  pattern: 5
+    capture: 5 - definition.type, start: (38, 0), end: (38, 59), text: `typedef int register_t __attribute__((__mode__(__word__)));`
+    capture: 0 - name, start: (38, 12), end: (38, 22), text: `register_t`
+  pattern: 5
+    capture: 5 - definition.type, start: (40, 0), end: (40, 38), text: `__extension__ typedef long int greg_t;`
+    capture: 0 - name, start: (40, 31), end: (40, 37), text: `greg_t`
+  pattern: 5
+    capture: definition.type, start: (42, 0), end: (45, 10)
+    capture: 0 - name, start: (45, 2), end: (45, 9), text: `lldiv_t`
+corpus/c/declarations.txt/009
+  pattern: 2
+    capture: 2 - definition.function, start: (1, 4), end: (1, 37), text: `main(int argc, const char **argv)`
+    capture: 0 - name, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 2
+    capture: 2 - definition.function, start: (2, 11), end: (2, 16), text: `bar()`
+    capture: 0 - name, start: (2, 11), end: (2, 14), text: `bar`
+  pattern: 2
+    capture: 2 - definition.function, start: (3, 11), end: (3, 20), text: `quux(...)`
+    capture: 0 - name, start: (3, 11), end: (3, 15), text: `quux`
+corpus/c/declarations.txt/010
+  pattern: 2
+    capture: 2 - definition.function, start: (1, 7), end: (1, 25), text: `do_stuff(int arg1)`
+    capture: 0 - name, start: (1, 7), end: (1, 15), text: `do_stuff`
+corpus/c/declarations.txt/011
+  pattern: 2
+    capture: 2 - definition.function, start: (1, 18), end: (1, 36), text: `do_stuff(int arg1)`
+    capture: 0 - name, start: (1, 18), end: (1, 26), text: `do_stuff`
+corpus/c/declarations.txt/012
+  pattern: 2
+    capture: 2 - definition.function, start: (1, 15), end: (1, 20), text: `foo()`
+    capture: 0 - name, start: (1, 15), end: (1, 18), text: `foo`
+  pattern: 2
+    capture: 2 - definition.function, start: (3, 15), end: (3, 20), text: `foo()`
+    capture: 0 - name, start: (3, 15), end: (3, 18), text: `foo`
+  pattern: 2
+    capture: 2 - definition.function, start: (6, 6), end: (6, 11), text: `bar()`
+    capture: 0 - name, start: (6, 6), end: (6, 9), text: `bar`
+  pattern: 2
+    capture: 2 - definition.function, start: (7, 6), end: (7, 11), text: `baz()`
+    capture: 0 - name, start: (7, 6), end: (7, 9), text: `baz`
+corpus/c/declarations.txt/013
+  pattern: 2
+    capture: 2 - definition.function, start: (6, 14), end: (6, 17), text: `b()`
+    capture: 0 - name, start: (6, 14), end: (6, 15), text: `b`
+  pattern: 2
+    capture: definition.function, start: (7, 26), end: (8, 63)
+    capture: 0 - name, start: (7, 26), end: (7, 31), text: `ffsll`
+corpus/c/declarations.txt/014
+  pattern: 2
+    capture: 2 - definition.function, start: (1, 4), end: (1, 10), text: `main()`
+    capture: 0 - name, start: (1, 4), end: (1, 8), text: `main`
+corpus/c/declarations.txt/015
+  pattern: 2
+    capture: 2 - definition.function, start: (1, 49), end: (1, 54), text: `foo()`
+    capture: 0 - name, start: (1, 49), end: (1, 52), text: `foo`
+  pattern: 2
+    capture: 2 - definition.function, start: (2, 11), end: (2, 39), text: `bar() __attribute__((const))`
+    capture: 0 - name, start: (2, 11), end: (2, 14), text: `bar`
+  pattern: 2
+    capture: definition.function, start: (3, 5), end: (4, 69)
+    capture: 0 - name, start: (3, 5), end: (3, 8), text: `die`
+  pattern: 2
+    capture: 2 - definition.function, start: (5, 56), end: (5, 70), text: `print_status()`
+    capture: 0 - name, start: (5, 56), end: (5, 68), text: `print_status`
+  pattern: 2
+    capture: definition.function, start: (7, 11), end: (10, 64)
+    capture: 0 - name, start: (7, 11), end: (7, 21), text: `strerror_r`
+  pattern: 2
+    capture: 2 - definition.function, start: (12, 4), end: (12, 27), text: `f([[a::b(c), d]] int x)`
+    capture: 0 - name, start: (12, 4), end: (12, 5), text: `f`
+  pattern: 2
+    capture: 2 - definition.function, start: (15, 4), end: (15, 11), text: `g(void)`
+    capture: 0 - name, start: (15, 4), end: (15, 5), text: `g`
+  pattern: 2
+    capture: 2 - definition.function, start: (18, 4), end: (18, 11), text: `g(void)`
+    capture: 0 - name, start: (18, 4), end: (18, 5), text: `g`
+  pattern: 0
+    capture: definition.class, start: (27, 0), end: (29, 1)
+    capture: 0 - name, start: (27, 7), end: (27, 8), text: `S`
+  pattern: 0
+    capture: definition.class, start: (33, 0), end: (35, 30)
+    capture: 0 - name, start: (33, 7), end: (33, 8), text: `X`
+  pattern: 6
+    capture: definition.type, start: (41, 0), end: (43, 30)
+    capture: 0 - name, start: (41, 5), end: (41, 6), text: `Z`
+  pattern: 0
+    capture: definition.class, start: (45, 0), end: (47, 1)
+    capture: 0 - name, start: (45, 35), end: (45, 40), text: `foo_t`

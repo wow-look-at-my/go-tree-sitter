@@ -1,0 +1,189 @@
+corpus/declarations.txt/000
+  pattern: 6
+    capture: 6 - reference.type, start: (2, 13), end: (2, 23), text: `: Function`
+    capture: 0 - name, start: (2, 15), end: (2, 23), text: `Function`
+  pattern: 0
+    capture: 1 - definition.function, start: (9, 8), end: (9, 47), text: `function greet(greeting: string): void;`
+    capture: 0 - name, start: (9, 17), end: (9, 22), text: `greet`
+  pattern: 0
+    capture: 1 - definition.function, start: (12, 4), end: (12, 45), text: `function makeGreeting(s: string): string;`
+    capture: 0 - name, start: (12, 13), end: (12, 25), text: `makeGreeting`
+  pattern: 5
+    capture: definition.interface, start: (15, 4), end: (17, 5)
+    capture: 0 - name, start: (15, 14), end: (15, 24), text: `LogOptions`
+  pattern: 5
+    capture: definition.interface, start: (18, 4), end: (22, 5)
+    capture: 0 - name, start: (18, 14), end: (18, 26), text: `AlertOptions`
+  pattern: 1
+    capture: 2 - definition.method, start: (26, 2), end: (26, 31), text: `constructor(greeting: string)`
+    capture: 0 - name, start: (26, 2), end: (26, 13), text: `constructor`
+  pattern: 1
+    capture: 2 - definition.method, start: (29, 2), end: (29, 22), text: `showGreeting(): void`
+    capture: 0 - name, start: (29, 2), end: (29, 14), text: `showGreeting`
+  pattern: 4
+    capture: definition.module, start: (34, 8), end: (54, 1)
+    capture: 0 - name, start: (34, 15), end: (34, 18), text: `Foo`
+corpus/declarations.txt/001
+corpus/declarations.txt/002
+  pattern: 5
+    capture: definition.interface, start: (1, 8), end: (4, 1)
+    capture: 0 - name, start: (1, 18), end: (1, 22), text: `IFoo`
+  pattern: 1
+    capture: 2 - definition.method, start: (2, 2), end: (2, 15), text: `bar(): number`
+    capture: 0 - name, start: (2, 2), end: (2, 5), text: `bar`
+  pattern: 1
+    capture: 2 - definition.method, start: (3, 2), end: (3, 13), text: `baz(): IBaz`
+    capture: 0 - name, start: (3, 2), end: (3, 5), text: `baz`
+  pattern: 6
+    capture: 6 - reference.type, start: (3, 7), end: (3, 13), text: `: IBaz`
+    capture: 0 - name, start: (3, 9), end: (3, 13), text: `IBaz`
+  pattern: 1
+    capture: 2 - definition.method, start: (7, 2), end: (7, 15), text: `bar(): number`
+    capture: 0 - name, start: (7, 2), end: (7, 5), text: `bar`
+  pattern: 1
+    capture: 2 - definition.method, start: (8, 2), end: (8, 12), text: `baz(): Baz`
+    capture: 0 - name, start: (8, 2), end: (8, 5), text: `baz`
+  pattern: 6
+    capture: 6 - reference.type, start: (8, 7), end: (8, 12), text: `: Baz`
+    capture: 0 - name, start: (8, 9), end: (8, 12), text: `Baz`
+corpus/declarations.txt/003
+corpus/declarations.txt/004
+  pattern: 0
+    capture: 1 - definition.function, start: (9, 7), end: (9, 65), text: `async function readFile(filename: string): Promise<Buffer>`
+    capture: 0 - name, start: (9, 22), end: (9, 30), text: `readFile`
+corpus/declarations.txt/005
+corpus/declarations.txt/006
+corpus/declarations.txt/007
+corpus/declarations.txt/008
+  pattern: 4
+    capture: definition.module, start: (1, 0), end: (3, 1)
+    capture: 0 - name, start: (1, 7), end: (1, 8), text: `C`
+corpus/declarations.txt/009
+  pattern: 4
+    capture: definition.module, start: (1, 0), end: (5, 1)
+    capture: 0 - name, start: (1, 7), end: (1, 8), text: `M`
+  pattern: 4
+    capture: definition.module, start: (2, 11), end: (3, 5)
+    capture: 0 - name, start: (2, 18), end: (2, 19), text: `N`
+corpus/declarations.txt/010
+  pattern: 5
+    capture: definition.interface, start: (1, 7), end: (3, 1)
+    capture: 0 - name, start: (1, 17), end: (1, 26), text: `IAppState`
+corpus/declarations.txt/011
+corpus/declarations.txt/012
+  pattern: 4
+    capture: definition.module, start: (1, 0), end: (4, 1)
+    capture: 0 - name, start: (1, 7), end: (1, 14), text: `Promise`
+  pattern: 0
+    capture: 1 - definition.function, start: (3, 11), end: (3, 64), text: `function resolve<R>(value?: Thenable<R>): Promise<R>;`
+    capture: 0 - name, start: (3, 20), end: (3, 27), text: `resolve`
+corpus/declarations.txt/013
+corpus/declarations.txt/014
+corpus/declarations.txt/015
+  pattern: 5
+    capture: definition.interface, start: (1, 7), end: (3, 1)
+    capture: 0 - name, start: (1, 17), end: (1, 20), text: `Foo`
+  pattern: 0
+    capture: 1 - definition.function, start: (2, 9), end: (2, 81), text: `function OrderedMap<K, V>(iter: Iterable.Keyed<K, V>): OrderedMap<K, V>;`
+    capture: 0 - name, start: (2, 18), end: (2, 28), text: `OrderedMap`
+corpus/declarations.txt/016
+  pattern: 0
+    capture: 1 - definition.function, start: (8, 9), end: (8, 32), text: `function utc(): Moment;`
+    capture: 0 - name, start: (8, 18), end: (8, 21), text: `utc`
+  pattern: 6
+    capture: 6 - reference.type, start: (8, 23), end: (8, 31), text: `: Moment`
+    capture: 0 - name, start: (8, 25), end: (8, 31), text: `Moment`
+corpus/declarations.txt/017
+  pattern: 5
+    capture: definition.interface, start: (2, 9), end: (3, 3)
+    capture: 0 - name, start: (2, 19), end: (2, 22), text: `Bar`
+corpus/declarations.txt/018
+corpus/declarations.txt/019
+  pattern: 6
+    capture: 6 - reference.type, start: (3, 7), end: (3, 15), text: `: Result`
+    capture: 0 - name, start: (3, 9), end: (3, 15), text: `Result`
+corpus/declarations.txt/020
+  pattern: 1
+    capture: 2 - definition.method, start: (2, 2), end: (2, 175), text: `public async waitFor<T>(func: () => T | Promise<T | undefined>, accept?: (result: T) => boolean | Promise<boolean>, timeoutMessage?: string, retryCount?: number): Promise<T>`
+    capture: 0 - name, start: (2, 15), end: (2, 22), text: `waitFor`
+  pattern: 6
+    capture: 6 - reference.type, start: (2, 82), end: (2, 85), text: `: T`
+    capture: 0 - name, start: (2, 84), end: (2, 85), text: `T`
+  pattern: 1
+    capture: 2 - definition.method, start: (4, 2), end: (4, 33), text: `public readonly async bar?<T>()`
+    capture: 0 - name, start: (4, 24), end: (4, 27), text: `bar`
+  pattern: 1
+    capture: 2 - definition.method, start: (5, 2), end: (5, 22), text: `private static bar()`
+    capture: 0 - name, start: (5, 17), end: (5, 20), text: `bar`
+  pattern: 1
+    capture: 2 - definition.method, start: (6, 2), end: (6, 31), text: `private static async bar(): T`
+    capture: 0 - name, start: (6, 23), end: (6, 26), text: `bar`
+  pattern: 6
+    capture: 6 - reference.type, start: (6, 28), end: (6, 31), text: `: T`
+    capture: 0 - name, start: (6, 30), end: (6, 31), text: `T`
+corpus/declarations.txt/021
+  pattern: 6
+    capture: 6 - reference.type, start: (4, 33), end: (4, 38), text: `: int`
+    capture: 0 - name, start: (4, 35), end: (4, 38), text: `int`
+  pattern: 6
+    capture: 6 - reference.type, start: (5, 26), end: (5, 31), text: `: int`
+    capture: 0 - name, start: (5, 28), end: (5, 31), text: `int`
+  pattern: 6
+    capture: 6 - reference.type, start: (6, 19), end: (6, 24), text: `: int`
+    capture: 0 - name, start: (6, 21), end: (6, 24), text: `int`
+corpus/declarations.txt/022
+corpus/declarations.txt/023
+  pattern: 6
+    capture: 6 - reference.type, start: (4, 29), end: (4, 34), text: `: int`
+    capture: 0 - name, start: (4, 31), end: (4, 34), text: `int`
+corpus/declarations.txt/024
+corpus/declarations.txt/025
+corpus/declarations.txt/026
+corpus/declarations.txt/027
+  pattern: 3
+    capture: definition.class, start: (1, 0), end: (2, 1)
+    capture: 0 - name, start: (1, 15), end: (1, 18), text: `Foo`
+  pattern: 3
+    capture: definition.class, start: (4, 0), end: (13, 1)
+    capture: 0 - name, start: (4, 15), end: (4, 21), text: `Animal`
+  pattern: 2
+    capture: 2 - definition.method, start: (7, 4), end: (7, 30), text: `abstract makeSound(): void`
+    capture: 0 - name, start: (7, 13), end: (7, 22), text: `makeSound`
+  pattern: 2
+    capture: 2 - definition.method, start: (8, 4), end: (8, 39), text: `abstract get readonlyProp(): string`
+    capture: 0 - name, start: (8, 17), end: (8, 29), text: `readonlyProp`
+  pattern: 2
+    capture: 2 - definition.method, start: (9, 4), end: (9, 46), text: `protected abstract readonlyProp?(): string`
+    capture: 0 - name, start: (9, 23), end: (9, 35), text: `readonlyProp`
+  pattern: 3
+    capture: definition.class, start: (15, 0), end: (17, 1)
+    capture: 0 - name, start: (16, 15), end: (16, 18), text: `Foo`
+corpus/declarations.txt/028
+corpus/declarations.txt/029
+corpus/declarations.txt/030
+  pattern: 6
+    capture: 6 - reference.type, start: (1, 6), end: (1, 9), text: `: b`
+    capture: 0 - name, start: (1, 8), end: (1, 9), text: `b`
+  pattern: 6
+    capture: 6 - reference.type, start: (2, 6), end: (2, 9), text: `: b`
+    capture: 0 - name, start: (2, 8), end: (2, 9), text: `b`
+corpus/declarations.txt/031
+  pattern: 3
+    capture: 3 - definition.class, start: (1, 15), end: (1, 35), text: `abstract class C { }`
+    capture: 0 - name, start: (1, 30), end: (1, 31), text: `C`
+  pattern: 5
+    capture: 5 - definition.interface, start: (4, 15), end: (4, 30), text: `interface I { }`
+    capture: 0 - name, start: (4, 25), end: (4, 26), text: `I`
+  pattern: 5
+    capture: 5 - definition.interface, start: (5, 7), end: (5, 22), text: `interface I { }`
+    capture: 0 - name, start: (5, 17), end: (5, 18), text: `I`
+corpus/declarations.txt/032
+corpus/declarations.txt/033
+corpus/declarations.txt/034
+corpus/declarations.txt/035
+  pattern: 3
+    capture: definition.class, start: (1, 0), end: (3, 1)
+    capture: 0 - name, start: (1, 15), end: (1, 18), text: `Foo`
+  pattern: 2
+    capture: 2 - definition.method, start: (2, 2), end: (2, 22), text: `abstract baz(): void`
+    capture: 0 - name, start: (2, 11), end: (2, 14), text: `baz`

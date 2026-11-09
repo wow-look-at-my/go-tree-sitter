@@ -1,0 +1,17 @@
+corpus/destructuring.txt/000
+corpus/destructuring.txt/001
+  pattern: 2
+    capture: 4 - definition.function, start: (1, 0), end: (1, 27), text: `function a ({b, c}, {d}) {}`
+    capture: 1 - name, start: (1, 9), end: (1, 10), text: `a`
+corpus/destructuring.txt/002
+corpus/destructuring.txt/003
+  pattern: 2
+    capture: 4 - definition.function, start: (3, 0), end: (3, 41), text: `function a({b = true}, [c, d = false]) {}`
+    capture: 1 - name, start: (3, 9), end: (3, 10), text: `a`
+  pattern: 2
+    capture: 4 - definition.function, start: (4, 0), end: (4, 23), text: `function b({c} = {}) {}`
+    capture: 1 - name, start: (4, 9), end: (4, 10), text: `b`
+corpus/destructuring.txt/004
+  pattern: 5
+    capture: 4 - definition.function, start: (2, 2), end: (2, 24), text: `x = function(a) { b; }`
+    capture: 1 - name, start: (2, 2), end: (2, 3), text: `x`

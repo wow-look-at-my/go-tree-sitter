@@ -1,0 +1,48 @@
+corpus/reflection.txt/000
+  pattern: 0
+    capture: 1 - definition.class, start: (3, 15), end: (3, 26), text: `struct X {}`
+    capture: 0 - name, start: (3, 22), end: (3, 23), text: `X`
+  pattern: 2
+    capture: 2 - definition.function, start: (5, 15), end: (5, 48), text: `g(std::meta::info r, X<false> xv)`
+    capture: 0 - name, start: (5, 15), end: (5, 16), text: `g`
+  pattern: 2
+    capture: 2 - definition.function, start: (14, 27), end: (14, 55), text: `fn() requires (^^T == ^^int)`
+    capture: 0 - name, start: (14, 27), end: (14, 29), text: `fn`
+  pattern: 0
+    capture: definition.class, start: (20, 0), end: (23, 1)
+    capture: 0 - name, start: (20, 7), end: (20, 8), text: `S`
+corpus/reflection.txt/001
+corpus/reflection.txt/002
+  pattern: 2
+    capture: 2 - definition.function, start: (17, 5), end: (17, 9), text: `fn()`
+    capture: 0 - name, start: (17, 5), end: (17, 7), text: `fn`
+corpus/reflection.txt/003
+  pattern: 7
+    capture: definition.class, start: (0, 0), end: (6, 1)
+    capture: 0 - name, start: (0, 6), end: (0, 7), text: `A`
+  pattern: 2
+    capture: 2 - definition.function, start: (8, 44), end: (8, 50), text: `tfn2()`
+    capture: 0 - name, start: (8, 44), end: (8, 48), text: `tfn2`
+  pattern: 0
+    capture: definition.class, start: (12, 20), end: (18, 1)
+    capture: 0 - name, start: (12, 27), end: (12, 31), text: `TCls`
+  pattern: 3
+    capture: definition.function, start: (13, 24), end: (17, 6)
+    capture: 0 - name, start: (13, 24), end: (13, 27), text: `sfn`
+corpus/reflection.txt/004
+  pattern: 2
+    capture: 2 - definition.function, start: (1, 12), end: (1, 15), text: `f()`
+    capture: 0 - name, start: (1, 12), end: (1, 13), text: `f`
+  pattern: 2
+    capture: 2 - definition.function, start: (2, 16), end: (2, 19), text: `g()`
+    capture: 0 - name, start: (2, 16), end: (2, 17), text: `g`
+  pattern: 2
+    capture: 2 - definition.function, start: (6, 20), end: (6, 26), text: `f(T t)`
+    capture: 0 - name, start: (6, 20), end: (6, 21), text: `f`
+  pattern: 0
+    capture: 1 - definition.class, start: (8, 0), end: (8, 29), text: `struct Option { bool value; }`
+    capture: 0 - name, start: (8, 7), end: (8, 13), text: `Option`
+  pattern: 0
+    capture: definition.class, start: (9, 0), end: (12, 1)
+    capture: 0 - name, start: (9, 7), end: (9, 8), text: `C`
+corpus/reflection.txt/005

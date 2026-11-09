@@ -1,0 +1,246 @@
+corpus/expressions.txt/000
+corpus/expressions.txt/001
+corpus/expressions.txt/002
+corpus/expressions.txt/003
+corpus/expressions.txt/004
+corpus/expressions.txt/005
+corpus/expressions.txt/006
+corpus/expressions.txt/007
+corpus/expressions.txt/008
+corpus/expressions.txt/009
+corpus/expressions.txt/010
+corpus/expressions.txt/011
+corpus/expressions.txt/012
+corpus/expressions.txt/013
+corpus/expressions.txt/014
+corpus/expressions.txt/015
+corpus/expressions.txt/016
+corpus/expressions.txt/017
+corpus/expressions.txt/018
+corpus/expressions.txt/019
+corpus/expressions.txt/020
+corpus/expressions.txt/021
+corpus/expressions.txt/022
+corpus/expressions.txt/023
+corpus/expressions.txt/024
+corpus/expressions.txt/025
+corpus/expressions.txt/026
+corpus/expressions.txt/027
+corpus/expressions.txt/028
+corpus/expressions.txt/029
+corpus/expressions.txt/030
+corpus/expressions.txt/031
+corpus/expressions.txt/032
+corpus/expressions.txt/033
+corpus/expressions.txt/034
+corpus/expressions.txt/035
+corpus/expressions.txt/036
+corpus/expressions.txt/037
+corpus/expressions.txt/038
+corpus/expressions.txt/039
+corpus/expressions.txt/040
+corpus/expressions.txt/041
+corpus/expressions.txt/042
+corpus/expressions.txt/043
+corpus/expressions.txt/044
+corpus/expressions.txt/045
+corpus/expressions.txt/046
+corpus/expressions.txt/047
+  pattern: 6
+    capture: 2 - punctuation.bracket, start: (1, 4), end: (1, 5), text: `<`
+  pattern: 2
+    capture: 0 - tag, start: (1, 5), end: (1, 8), text: `div`
+  pattern: 3
+    capture: 1 - attribute, start: (1, 9), end: (1, 18), text: `className`
+  pattern: 3
+    capture: 1 - attribute, start: (1, 23), end: (1, 31), text: `tabIndex`
+  pattern: 6
+    capture: 2 - punctuation.bracket, start: (1, 36), end: (1, 38), text: `/>`
+  pattern: 4
+    capture: 2 - punctuation.bracket, start: (2, 4), end: (2, 5), text: `<`
+  pattern: 4
+    capture: 2 - punctuation.bracket, start: (2, 12), end: (2, 13), text: `>`
+  pattern: 4
+    capture: 2 - punctuation.bracket, start: (2, 15), end: (2, 16), text: `<`
+  pattern: 0
+    capture: 0 - tag, start: (2, 16), end: (2, 20), text: `span`
+  pattern: 4
+    capture: 2 - punctuation.bracket, start: (2, 20), end: (2, 21), text: `>`
+  pattern: 5
+    capture: 2 - punctuation.bracket, start: (2, 22), end: (2, 24), text: `</`
+  pattern: 1
+    capture: 0 - tag, start: (2, 24), end: (2, 28), text: `span`
+  pattern: 5
+    capture: 2 - punctuation.bracket, start: (2, 28), end: (2, 29), text: `>`
+  pattern: 5
+    capture: 2 - punctuation.bracket, start: (2, 31), end: (2, 33), text: `</`
+  pattern: 5
+    capture: 2 - punctuation.bracket, start: (2, 40), end: (2, 41), text: `>`
+  pattern: 4
+    capture: 2 - punctuation.bracket, start: (3, 4), end: (3, 5), text: `<`
+  pattern: 4
+    capture: 2 - punctuation.bracket, start: (3, 20), end: (3, 21), text: `>`
+  pattern: 5
+    capture: 2 - punctuation.bracket, start: (3, 21), end: (3, 23), text: `</`
+  pattern: 5
+    capture: 2 - punctuation.bracket, start: (3, 38), end: (3, 39), text: `>`
+corpus/expressions.txt/048
+  pattern: 4
+    capture: 2 - punctuation.bracket, start: (1, 4), end: (1, 5), text: `<`
+  pattern: 4
+    capture: 2 - punctuation.bracket, start: (1, 5), end: (1, 6), text: `>`
+  pattern: 5
+    capture: 2 - punctuation.bracket, start: (1, 6), end: (1, 8), text: `</`
+  pattern: 5
+    capture: 2 - punctuation.bracket, start: (1, 8), end: (1, 9), text: `>`
+  pattern: 4
+    capture: 2 - punctuation.bracket, start: (2, 4), end: (2, 5), text: `<`
+  pattern: 4
+    capture: 2 - punctuation.bracket, start: (2, 6), end: (2, 7), text: `>`
+  pattern: 4
+    capture: 2 - punctuation.bracket, start: (2, 7), end: (2, 8), text: `<`
+  pattern: 4
+    capture: 2 - punctuation.bracket, start: (2, 8), end: (2, 9), text: `>`
+  pattern: 5
+    capture: 2 - punctuation.bracket, start: (2, 9), end: (2, 11), text: `</`
+  pattern: 5
+    capture: 2 - punctuation.bracket, start: (2, 11), end: (2, 12), text: `>`
+  pattern: 5
+    capture: 2 - punctuation.bracket, start: (2, 12), end: (2, 14), text: `</`
+  pattern: 5
+    capture: 2 - punctuation.bracket, start: (2, 15), end: (2, 16), text: `>`
+corpus/expressions.txt/049
+  pattern: 4
+    capture: 2 - punctuation.bracket, start: (1, 4), end: (1, 5), text: `<`
+  pattern: 0
+    capture: 0 - tag, start: (1, 5), end: (1, 6), text: `a`
+  pattern: 3
+    capture: 1 - attribute, start: (1, 7), end: (1, 8), text: `b`
+  pattern: 3
+    capture: 1 - attribute, start: (1, 9), end: (1, 10), text: `c`
+  pattern: 4
+    capture: 2 - punctuation.bracket, start: (1, 14), end: (1, 15), text: `>`
+  pattern: 5
+    capture: 2 - punctuation.bracket, start: (1, 24), end: (1, 26), text: `</`
+  pattern: 1
+    capture: 0 - tag, start: (1, 26), end: (1, 27), text: `a`
+  pattern: 5
+    capture: 2 - punctuation.bracket, start: (1, 27), end: (1, 28), text: `>`
+  pattern: 4
+    capture: 2 - punctuation.bracket, start: (2, 4), end: (2, 5), text: `<`
+  pattern: 0
+    capture: 0 - tag, start: (2, 5), end: (2, 6), text: `i`
+  pattern: 4
+    capture: 2 - punctuation.bracket, start: (2, 6), end: (2, 7), text: `>`
+  pattern: 5
+    capture: 2 - punctuation.bracket, start: (2, 13), end: (2, 15), text: `</`
+  pattern: 1
+    capture: 0 - tag, start: (2, 15), end: (2, 16), text: `i`
+  pattern: 5
+    capture: 2 - punctuation.bracket, start: (2, 16), end: (2, 17), text: `>`
+  pattern: 6
+    capture: 2 - punctuation.bracket, start: (3, 4), end: (3, 5), text: `<`
+  pattern: 6
+    capture: 2 - punctuation.bracket, start: (3, 17), end: (3, 19), text: `/>`
+  pattern: 4
+    capture: 2 - punctuation.bracket, start: (4, 4), end: (4, 5), text: `<`
+  pattern: 4
+    capture: 2 - punctuation.bracket, start: (4, 16), end: (4, 17), text: `>`
+  pattern: 5
+    capture: 2 - punctuation.bracket, start: (4, 17), end: (4, 19), text: `</`
+  pattern: 5
+    capture: 2 - punctuation.bracket, start: (4, 23), end: (4, 24), text: `>`
+corpus/expressions.txt/050
+corpus/expressions.txt/051
+corpus/expressions.txt/052
+corpus/expressions.txt/053
+corpus/expressions.txt/054
+corpus/expressions.txt/055
+  pattern: 4
+    capture: 2 - punctuation.bracket, start: (1, 8), end: (1, 9), text: `<`
+  pattern: 4
+    capture: 2 - punctuation.bracket, start: (1, 12), end: (1, 13), text: `>`
+  pattern: 5
+    capture: 2 - punctuation.bracket, start: (1, 13), end: (1, 15), text: `</`
+  pattern: 5
+    capture: 2 - punctuation.bracket, start: (1, 18), end: (1, 19), text: `>`
+  pattern: 4
+    capture: 2 - punctuation.bracket, start: (2, 4), end: (2, 5), text: `<`
+  pattern: 4
+    capture: 2 - punctuation.bracket, start: (2, 12), end: (2, 13), text: `>`
+  pattern: 5
+    capture: 2 - punctuation.bracket, start: (2, 13), end: (2, 15), text: `</`
+  pattern: 5
+    capture: 2 - punctuation.bracket, start: (2, 22), end: (2, 23), text: `>`
+  pattern: 4
+    capture: 2 - punctuation.bracket, start: (3, 4), end: (3, 5), text: `<`
+  pattern: 4
+    capture: 2 - punctuation.bracket, start: (3, 5), end: (3, 6), text: `>`
+  pattern: 6
+    capture: 2 - punctuation.bracket, start: (3, 7), end: (3, 8), text: `<`
+  pattern: 6
+    capture: 2 - punctuation.bracket, start: (3, 12), end: (3, 14), text: `/>`
+  pattern: 5
+    capture: 2 - punctuation.bracket, start: (3, 15), end: (3, 17), text: `</`
+  pattern: 5
+    capture: 2 - punctuation.bracket, start: (3, 17), end: (3, 18), text: `>`
+  pattern: 4
+    capture: 2 - punctuation.bracket, start: (4, 4), end: (4, 5), text: `<`
+  pattern: 4
+    capture: 2 - punctuation.bracket, start: (4, 8), end: (4, 9), text: `>`
+  pattern: 6
+    capture: 2 - punctuation.bracket, start: (4, 10), end: (4, 11), text: `<`
+  pattern: 6
+    capture: 2 - punctuation.bracket, start: (4, 15), end: (4, 17), text: `/>`
+  pattern: 5
+    capture: 2 - punctuation.bracket, start: (4, 18), end: (4, 20), text: `</`
+  pattern: 5
+    capture: 2 - punctuation.bracket, start: (4, 23), end: (4, 24), text: `>`
+  pattern: 6
+    capture: 2 - punctuation.bracket, start: (5, 4), end: (5, 5), text: `<`
+  pattern: 3
+    capture: 1 - attribute, start: (5, 9), end: (5, 12), text: `bar`
+  pattern: 6
+    capture: 2 - punctuation.bracket, start: (5, 12), end: (5, 14), text: `/>`
+  pattern: 6
+    capture: 2 - punctuation.bracket, start: (6, 4), end: (6, 5), text: `<`
+  pattern: 3
+    capture: 1 - attribute, start: (6, 9), end: (6, 12), text: `bar`
+  pattern: 3
+    capture: 1 - attribute, start: (6, 22), end: (6, 25), text: `baz`
+  pattern: 3
+    capture: 1 - attribute, start: (6, 30), end: (6, 38), text: `data-i8n`
+  pattern: 3
+    capture: 1 - attribute, start: (6, 65), end: (6, 68), text: `bam`
+  pattern: 6
+    capture: 2 - punctuation.bracket, start: (6, 69), end: (6, 71), text: `/>`
+  pattern: 6
+    capture: 2 - punctuation.bracket, start: (7, 4), end: (7, 5), text: `<`
+  pattern: 3
+    capture: 1 - attribute, start: (7, 12), end: (7, 18), text: `userId`
+  pattern: 6
+    capture: 2 - punctuation.bracket, start: (7, 35), end: (7, 37), text: `/>`
+  pattern: 4
+    capture: 2 - punctuation.bracket, start: (8, 4), end: (8, 5), text: `<`
+  pattern: 0
+    capture: 0 - tag, start: (8, 5), end: (8, 10), text: `input`
+  pattern: 3
+    capture: 1 - attribute, start: (8, 11), end: (8, 18), text: `checked`
+  pattern: 4
+    capture: 2 - punctuation.bracket, start: (8, 115), end: (8, 116), text: `>`
+  pattern: 5
+    capture: 2 - punctuation.bracket, start: (8, 117), end: (8, 119), text: `</`
+  pattern: 1
+    capture: 0 - tag, start: (8, 119), end: (8, 124), text: `input`
+  pattern: 5
+    capture: 2 - punctuation.bracket, start: (8, 124), end: (8, 125), text: `>`
+  pattern: 4
+    capture: 2 - punctuation.bracket, start: (9, 4), end: (9, 5), text: `<`
+  pattern: 3
+    capture: 1 - attribute, start: (9, 13), end: (9, 16), text: `bar`
+  pattern: 4
+    capture: 2 - punctuation.bracket, start: (9, 19), end: (9, 20), text: `>`
+  pattern: 5
+    capture: 2 - punctuation.bracket, start: (9, 33), end: (9, 35), text: `</`
+  pattern: 5
+    capture: 2 - punctuation.bracket, start: (9, 42), end: (9, 43), text: `>`

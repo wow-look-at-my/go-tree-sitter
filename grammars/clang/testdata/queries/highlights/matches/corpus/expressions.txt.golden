@@ -1,0 +1,1411 @@
+corpus/expressions.txt/000
+  pattern: 58
+    capture: 9 - type, start: (1, 0), end: (1, 6), text: `double`
+  pattern: 0
+    capture: 0 - variable, start: (1, 7), end: (1, 8), text: `a`
+  pattern: 36
+    capture: 3 - operator, start: (1, 9), end: (1, 10), text: `=`
+  pattern: 53
+    capture: 6 - number, start: (2, 2), end: (2, 8), text: `0xAC00`
+  pattern: 53
+    capture: 6 - number, start: (3, 2), end: (3, 7), text: `0.123`
+  pattern: 53
+    capture: 6 - number, start: (4, 2), end: (4, 11), text: `0b1010001`
+  pattern: 53
+    capture: 6 - number, start: (5, 2), end: (5, 12), text: `0xabc00ull`
+  pattern: 53
+    capture: 6 - number, start: (6, 2), end: (6, 7), text: `-0.1f`
+  pattern: 53
+    capture: 6 - number, start: (7, 2), end: (7, 19), text: `1'000'000.000'001`
+  pattern: 53
+    capture: 6 - number, start: (8, 2), end: (8, 7), text: `24e-5`
+  pattern: 53
+    capture: 6 - number, start: (9, 2), end: (9, 6), text: `0.1E`
+  pattern: 53
+    capture: 6 - number, start: (10, 2), end: (10, 5), text: `58.`
+  pattern: 53
+    capture: 6 - number, start: (11, 2), end: (11, 5), text: `4e2`
+  pattern: 53
+    capture: 6 - number, start: (12, 2), end: (12, 13), text: `123.456e-67`
+  pattern: 53
+    capture: 6 - number, start: (13, 2), end: (13, 7), text: `.1E4f`
+  pattern: 53
+    capture: 6 - number, start: (14, 2), end: (14, 10), text: `0x10.1p0`
+  pattern: 53
+    capture: 6 - number, start: (15, 2), end: (15, 5), text: `0X1`
+  pattern: 53
+    capture: 6 - number, start: (15, 7), end: (15, 10), text: `0B1`
+  pattern: 53
+    capture: 6 - number, start: (16, 2), end: (16, 7), text: `2.0dd`
+  pattern: 53
+    capture: 6 - number, start: (16, 9), end: (16, 12), text: `5wb`
+  pattern: 49
+    capture: 4 - delimiter, start: (17, 1), end: (17, 2), text: `;`
+corpus/expressions.txt/001
+  pattern: 58
+    capture: 9 - type, start: (1, 0), end: (1, 3), text: `int`
+  pattern: 62
+    capture: 10 - function, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 0
+    capture: 0 - variable, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 0
+    capture: 0 - variable, start: (2, 2), end: (2, 6), text: `_abc`
+  pattern: 49
+    capture: 4 - delimiter, start: (2, 6), end: (2, 7), text: `;`
+  pattern: 0
+    capture: 0 - variable, start: (3, 2), end: (3, 9), text: `d_EG123`
+  pattern: 49
+    capture: 4 - delimiter, start: (3, 9), end: (3, 10), text: `;`
+  pattern: 0
+    capture: 0 - variable, start: (4, 2), end: (4, 4), text: `$f`
+  pattern: 49
+    capture: 4 - delimiter, start: (4, 4), end: (4, 5), text: `;`
+corpus/expressions.txt/002
+  pattern: 58
+    capture: 9 - type, start: (1, 0), end: (1, 3), text: `int`
+  pattern: 62
+    capture: 10 - function, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 0
+    capture: 0 - variable, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 0
+    capture: 0 - variable, start: (2, 2), end: (2, 5), text: `µs`
+  pattern: 49
+    capture: 4 - delimiter, start: (2, 5), end: (2, 6), text: `;`
+  pattern: 0
+    capture: 0 - variable, start: (3, 2), end: (3, 15), text: `blah_accenté`
+  pattern: 49
+    capture: 4 - delimiter, start: (3, 15), end: (3, 16), text: `;`
+corpus/expressions.txt/003
+  pattern: 58
+    capture: 9 - type, start: (1, 0), end: (1, 3), text: `int`
+  pattern: 62
+    capture: 10 - function, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 0
+    capture: 0 - variable, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 49
+    capture: 4 - delimiter, start: (2, 6), end: (2, 7), text: `;`
+  pattern: 49
+    capture: 4 - delimiter, start: (3, 7), end: (3, 8), text: `;`
+  pattern: 52
+    capture: 1 - constant, start: (4, 2), end: (4, 6), text: `NULL`
+  pattern: 49
+    capture: 4 - delimiter, start: (4, 6), end: (4, 7), text: `;`
+  pattern: 64
+    capture: 12 - comment, start: (6, 2), end: (6, 87), text: `// regression test - identifiers starting w/ these strings should tokenize correctly.`
+  pattern: 0
+    capture: 0 - variable, start: (7, 2), end: (7, 12), text: `true_value`
+  pattern: 49
+    capture: 4 - delimiter, start: (7, 12), end: (7, 13), text: `;`
+  pattern: 0
+    capture: 0 - variable, start: (8, 2), end: (8, 13), text: `false_value`
+  pattern: 49
+    capture: 4 - delimiter, start: (8, 13), end: (8, 14), text: `;`
+  pattern: 0
+    capture: 0 - variable, start: (9, 2), end: (9, 12), text: `NULL_value`
+  pattern: 49
+    capture: 4 - delimiter, start: (9, 12), end: (9, 13), text: `;`
+corpus/expressions.txt/004
+  pattern: 58
+    capture: 9 - type, start: (1, 0), end: (1, 3), text: `int`
+  pattern: 62
+    capture: 10 - function, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 0
+    capture: 0 - variable, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 60
+    capture: 10 - function, start: (2, 2), end: (2, 8), text: `printf`
+  pattern: 0
+    capture: 0 - variable, start: (2, 2), end: (2, 8), text: `printf`
+  pattern: 50
+    capture: 5 - string, start: (2, 9), end: (2, 19), text: `"hi! %d\n"`
+  pattern: 0
+    capture: 0 - variable, start: (2, 21), end: (2, 22), text: `x`
+  pattern: 49
+    capture: 4 - delimiter, start: (2, 23), end: (2, 24), text: `;`
+  pattern: 60
+    capture: 10 - function, start: (3, 2), end: (3, 15), text: `__assert_fail`
+  pattern: 0
+    capture: 0 - variable, start: (3, 2), end: (3, 15), text: `__assert_fail`
+  pattern: 50
+    capture: 5 - string, start: (3, 16), end: (3, 36), text: `"some_error_message"`
+  pattern: 53
+    capture: 6 - number, start: (3, 38), end: (3, 41), text: `115`
+  pattern: 0
+    capture: 0 - variable, start: (3, 57), end: (3, 65), text: `__func__`
+  pattern: 49
+    capture: 4 - delimiter, start: (3, 66), end: (3, 67), text: `;`
+corpus/expressions.txt/005
+  pattern: 21
+    capture: 2 - keyword, start: (1, 4), end: (1, 12), text: `volatile`
+  pattern: 50
+    capture: 5 - string, start: (2, 4), end: (2, 18), text: `"mov r0, %0\n"`
+  pattern: 50
+    capture: 5 - string, start: (3, 4), end: (3, 20), text: `"mov r1, %[y]\n"`
+  pattern: 50
+    capture: 5 - string, start: (4, 4), end: (4, 22), text: `"add r2, r0, r1\n"`
+  pattern: 50
+    capture: 5 - string, start: (5, 4), end: (5, 18), text: `"mov %1, r2\n"`
+  pattern: 50
+    capture: 5 - string, start: (6, 10), end: (6, 13), text: `"r"`
+  pattern: 0
+    capture: 0 - variable, start: (6, 16), end: (6, 17), text: `z`
+  pattern: 50
+    capture: 5 - string, start: (7, 10), end: (7, 14), text: `"=r"`
+  pattern: 0
+    capture: 0 - variable, start: (7, 16), end: (7, 17), text: `x`
+  pattern: 0
+    capture: 0 - variable, start: (8, 7), end: (8, 8), text: `y`
+  pattern: 50
+    capture: 5 - string, start: (8, 10), end: (8, 14), text: `"=r"`
+  pattern: 58
+    capture: 9 - type, start: (8, 17), end: (8, 26), text: `uintptr_t`
+  pattern: 0
+    capture: 0 - variable, start: (8, 28), end: (8, 29), text: `y`
+  pattern: 50
+    capture: 5 - string, start: (9, 6), end: (9, 10), text: `"r2"`
+  pattern: 49
+    capture: 4 - delimiter, start: (9, 11), end: (9, 12), text: `;`
+corpus/expressions.txt/006
+  pattern: 23
+    capture: 2 - keyword, start: (1, 0), end: (1, 7), text: `#define`
+  pattern: 63
+    capture: 11 - function.special, start: (1, 8), end: (1, 19), text: `TAKES_BLOCK`
+  pattern: 0
+    capture: 0 - variable, start: (1, 8), end: (1, 19), text: `TAKES_BLOCK`
+  pattern: 1
+    capture: 1 - constant, start: (1, 8), end: (1, 19), text: `TAKES_BLOCK`
+  pattern: 0
+    capture: 0 - variable, start: (1, 20), end: (1, 21), text: `x`
+  pattern: 0
+    capture: 0 - variable, start: (1, 23), end: (1, 28), text: `block`
+  pattern: 58
+    capture: 9 - type, start: (3, 0), end: (3, 3), text: `int`
+  pattern: 62
+    capture: 10 - function, start: (3, 4), end: (3, 8), text: `main`
+  pattern: 0
+    capture: 0 - variable, start: (3, 4), end: (3, 8), text: `main`
+  pattern: 58
+    capture: 9 - type, start: (3, 9), end: (3, 13), text: `void`
+  pattern: 58
+    capture: 9 - type, start: (5, 4), end: (5, 7), text: `int`
+  pattern: 0
+    capture: 0 - variable, start: (5, 8), end: (5, 9), text: `x`
+  pattern: 36
+    capture: 3 - operator, start: (5, 10), end: (5, 11), text: `=`
+  pattern: 53
+    capture: 6 - number, start: (5, 12), end: (5, 13), text: `0`
+  pattern: 49
+    capture: 4 - delimiter, start: (5, 13), end: (5, 14), text: `;`
+  pattern: 60
+    capture: 10 - function, start: (7, 2), end: (7, 13), text: `TAKES_BLOCK`
+  pattern: 0
+    capture: 0 - variable, start: (7, 2), end: (7, 13), text: `TAKES_BLOCK`
+  pattern: 1
+    capture: 1 - constant, start: (7, 2), end: (7, 13), text: `TAKES_BLOCK`
+  pattern: 53
+    capture: 6 - number, start: (7, 14), end: (7, 16), text: `10`
+  pattern: 64
+    capture: 12 - comment, start: (8, 4), end: (8, 40), text: `// Doesn't matter what I put in here`
+  pattern: 49
+    capture: 4 - delimiter, start: (9, 4), end: (9, 5), text: `;`
+corpus/expressions.txt/007
+  pattern: 58
+    capture: 9 - type, start: (1, 0), end: (1, 3), text: `int`
+  pattern: 62
+    capture: 10 - function, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 0
+    capture: 0 - variable, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 50
+    capture: 5 - string, start: (2, 2), end: (2, 5), text: `"a"`
+  pattern: 49
+    capture: 4 - delimiter, start: (2, 5), end: (2, 6), text: `;`
+  pattern: 50
+    capture: 5 - string, start: (3, 2), end: (3, 5), text: `"b"`
+  pattern: 50
+    capture: 5 - string, start: (3, 6), end: (3, 9), text: `"c"`
+  pattern: 50
+    capture: 5 - string, start: (3, 10), end: (3, 13), text: `"d"`
+  pattern: 49
+    capture: 4 - delimiter, start: (3, 13), end: (3, 14), text: `;`
+  pattern: 0
+    capture: 0 - variable, start: (4, 2), end: (4, 3), text: `e`
+  pattern: 50
+    capture: 5 - string, start: (4, 4), end: (4, 7), text: `"f"`
+  pattern: 0
+    capture: 0 - variable, start: (4, 8), end: (4, 9), text: `g`
+  pattern: 49
+    capture: 4 - delimiter, start: (4, 9), end: (4, 10), text: `;`
+  pattern: 50
+    capture: 5 - string, start: (5, 2), end: (5, 10), text: `"\"hi\""`
+  pattern: 49
+    capture: 4 - delimiter, start: (5, 10), end: (5, 11), text: `;`
+  pattern: 50
+    capture: 5 - string, start: (6, 2), end: (6, 12), text: `L"bonjour"`
+  pattern: 49
+    capture: 4 - delimiter, start: (6, 12), end: (6, 13), text: `;`
+  pattern: 50
+    capture: 5 - string, start: (7, 2), end: (7, 17), text: `u"guten morgen"`
+  pattern: 49
+    capture: 4 - delimiter, start: (7, 17), end: (7, 18), text: `;`
+  pattern: 50
+    capture: 5 - string, start: (8, 2), end: (8, 16), text: `U"buenos dias"`
+  pattern: 49
+    capture: 4 - delimiter, start: (8, 16), end: (8, 17), text: `;`
+  pattern: 50
+    capture: 5 - string, start: (9, 2), end: (9, 16), text: `u8"buongiorno"`
+  pattern: 49
+    capture: 4 - delimiter, start: (9, 16), end: (9, 17), text: `;`
+corpus/expressions.txt/008
+  pattern: 58
+    capture: 9 - type, start: (1, 0), end: (1, 3), text: `int`
+  pattern: 62
+    capture: 10 - function, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 0
+    capture: 0 - variable, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 54
+    capture: 6 - number, start: (2, 2), end: (2, 5), text: `'a'`
+  pattern: 49
+    capture: 4 - delimiter, start: (2, 5), end: (2, 6), text: `;`
+  pattern: 54
+    capture: 6 - number, start: (3, 2), end: (3, 6), text: `'\0'`
+  pattern: 49
+    capture: 4 - delimiter, start: (3, 6), end: (3, 7), text: `;`
+  pattern: 54
+    capture: 6 - number, start: (4, 2), end: (4, 6), text: `'\t'`
+  pattern: 49
+    capture: 4 - delimiter, start: (4, 6), end: (4, 7), text: `;`
+  pattern: 54
+    capture: 6 - number, start: (5, 2), end: (5, 6), text: `'\''`
+  pattern: 49
+    capture: 4 - delimiter, start: (5, 6), end: (5, 7), text: `;`
+  pattern: 54
+    capture: 6 - number, start: (6, 2), end: (6, 6), text: `L'b'`
+  pattern: 49
+    capture: 4 - delimiter, start: (6, 6), end: (6, 7), text: `;`
+  pattern: 54
+    capture: 6 - number, start: (7, 2), end: (7, 6), text: `u'c'`
+  pattern: 49
+    capture: 4 - delimiter, start: (7, 6), end: (7, 7), text: `;`
+  pattern: 54
+    capture: 6 - number, start: (8, 2), end: (8, 9), text: `U'\xa1'`
+  pattern: 49
+    capture: 4 - delimiter, start: (8, 9), end: (8, 10), text: `;`
+  pattern: 54
+    capture: 6 - number, start: (9, 2), end: (9, 10), text: `u8'\x1A'`
+  pattern: 49
+    capture: 4 - delimiter, start: (9, 10), end: (9, 11), text: `;`
+  pattern: 54
+    capture: 6 - number, start: (10, 2), end: (10, 7), text: `'\x3'`
+  pattern: 49
+    capture: 4 - delimiter, start: (10, 7), end: (10, 8), text: `;`
+corpus/expressions.txt/009
+  pattern: 58
+    capture: 9 - type, start: (1, 0), end: (1, 3), text: `int`
+  pattern: 62
+    capture: 10 - function, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 0
+    capture: 0 - variable, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 0
+    capture: 0 - variable, start: (2, 2), end: (2, 3), text: `s`
+  pattern: 48
+    capture: 4 - delimiter, start: (2, 3), end: (2, 4), text: `.`
+  pattern: 55
+    capture: 7 - property, start: (2, 4), end: (2, 9), text: `data1`
+  pattern: 49
+    capture: 4 - delimiter, start: (2, 9), end: (2, 10), text: `;`
+  pattern: 0
+    capture: 0 - variable, start: (3, 2), end: (3, 3), text: `p`
+  pattern: 35
+    capture: 3 - operator, start: (3, 3), end: (3, 5), text: `->`
+  pattern: 55
+    capture: 7 - property, start: (3, 5), end: (3, 10), text: `data2`
+  pattern: 49
+    capture: 4 - delimiter, start: (3, 10), end: (3, 11), text: `;`
+  pattern: 0
+    capture: 0 - variable, start: (4, 2), end: (4, 3), text: `q`
+  pattern: 0
+    capture: 0 - variable, start: (4, 4), end: (4, 9), text: `data3`
+  pattern: 49
+    capture: 4 - delimiter, start: (4, 10), end: (4, 11), text: `;`
+corpus/expressions.txt/010
+  pattern: 58
+    capture: 9 - type, start: (1, 0), end: (1, 3), text: `int`
+  pattern: 62
+    capture: 10 - function, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 0
+    capture: 0 - variable, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 0
+    capture: 0 - variable, start: (2, 3), end: (2, 4), text: `x`
+  pattern: 47
+    capture: 3 - operator, start: (2, 5), end: (2, 7), text: `||`
+  pattern: 0
+    capture: 0 - variable, start: (2, 9), end: (2, 10), text: `y`
+  pattern: 40
+    capture: 3 - operator, start: (2, 11), end: (2, 13), text: `&&`
+  pattern: 0
+    capture: 0 - variable, start: (2, 15), end: (2, 16), text: `z`
+  pattern: 49
+    capture: 4 - delimiter, start: (2, 16), end: (2, 17), text: `;`
+corpus/expressions.txt/011
+  pattern: 58
+    capture: 9 - type, start: (1, 0), end: (1, 3), text: `int`
+  pattern: 62
+    capture: 10 - function, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 0
+    capture: 0 - variable, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 33
+    capture: 3 - operator, start: (2, 2), end: (2, 3), text: `-`
+  pattern: 0
+    capture: 0 - variable, start: (2, 3), end: (2, 4), text: `a`
+  pattern: 0
+    capture: 0 - variable, start: (2, 7), end: (2, 8), text: `b`
+  pattern: 41
+    capture: 3 - operator, start: (2, 9), end: (2, 10), text: `+`
+  pattern: 0
+    capture: 0 - variable, start: (2, 11), end: (2, 12), text: `c`
+  pattern: 38
+    capture: 3 - operator, start: (2, 13), end: (2, 14), text: `*`
+  pattern: 33
+    capture: 3 - operator, start: (2, 15), end: (2, 16), text: `-`
+  pattern: 0
+    capture: 0 - variable, start: (2, 16), end: (2, 17), text: `d`
+  pattern: 49
+    capture: 4 - delimiter, start: (2, 17), end: (2, 18), text: `;`
+  pattern: 0
+    capture: 0 - variable, start: (3, 2), end: (3, 3), text: `a`
+  pattern: 42
+    capture: 3 - operator, start: (3, 3), end: (3, 5), text: `++`
+  pattern: 33
+    capture: 3 - operator, start: (3, 6), end: (3, 7), text: `-`
+  pattern: 42
+    capture: 3 - operator, start: (3, 8), end: (3, 10), text: `++`
+  pattern: 0
+    capture: 0 - variable, start: (3, 10), end: (3, 11), text: `b`
+  pattern: 41
+    capture: 3 - operator, start: (3, 12), end: (3, 13), text: `+`
+  pattern: 0
+    capture: 0 - variable, start: (3, 14), end: (3, 15), text: `c`
+  pattern: 32
+    capture: 3 - operator, start: (3, 15), end: (3, 17), text: `--`
+  pattern: 41
+    capture: 3 - operator, start: (3, 18), end: (3, 19), text: `+`
+  pattern: 32
+    capture: 3 - operator, start: (3, 20), end: (3, 22), text: `--`
+  pattern: 0
+    capture: 0 - variable, start: (3, 22), end: (3, 23), text: `d`
+  pattern: 49
+    capture: 4 - delimiter, start: (3, 23), end: (3, 24), text: `;`
+  pattern: 42
+    capture: 3 - operator, start: (4, 2), end: (4, 4), text: `++`
+  pattern: 0
+    capture: 0 - variable, start: (4, 4), end: (4, 5), text: `L`
+  pattern: 1
+    capture: 1 - constant, start: (4, 4), end: (4, 5), text: `L`
+  pattern: 49
+    capture: 4 - delimiter, start: (4, 5), end: (4, 6), text: `;`
+corpus/expressions.txt/012
+  pattern: 58
+    capture: 9 - type, start: (1, 0), end: (1, 3), text: `int`
+  pattern: 62
+    capture: 10 - function, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 0
+    capture: 0 - variable, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 0
+    capture: 0 - variable, start: (2, 2), end: (2, 3), text: `i`
+  pattern: 32
+    capture: 3 - operator, start: (2, 3), end: (2, 5), text: `--`
+  pattern: 0
+    capture: 0 - variable, start: (2, 7), end: (2, 8), text: `j`
+  pattern: 32
+    capture: 3 - operator, start: (2, 8), end: (2, 10), text: `--`
+  pattern: 49
+    capture: 4 - delimiter, start: (2, 10), end: (2, 11), text: `;`
+  pattern: 0
+    capture: 0 - variable, start: (3, 3), end: (3, 4), text: `i`
+  pattern: 32
+    capture: 3 - operator, start: (3, 4), end: (3, 6), text: `--`
+  pattern: 0
+    capture: 0 - variable, start: (3, 8), end: (3, 9), text: `j`
+  pattern: 32
+    capture: 3 - operator, start: (3, 9), end: (3, 11), text: `--`
+  pattern: 49
+    capture: 4 - delimiter, start: (3, 12), end: (3, 13), text: `;`
+corpus/expressions.txt/013
+  pattern: 58
+    capture: 9 - type, start: (1, 0), end: (1, 3), text: `int`
+  pattern: 62
+    capture: 10 - function, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 0
+    capture: 0 - variable, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 16
+    capture: 2 - keyword, start: (2, 2), end: (2, 8), text: `static`
+  pattern: 58
+    capture: 9 - type, start: (2, 9), end: (2, 12), text: `int`
+  pattern: 0
+    capture: 0 - variable, start: (2, 13), end: (2, 14), text: `a`
+  pattern: 36
+    capture: 3 - operator, start: (2, 15), end: (2, 16), text: `=`
+  pattern: 53
+    capture: 6 - number, start: (2, 17), end: (2, 18), text: `1`
+  pattern: 49
+    capture: 4 - delimiter, start: (2, 18), end: (2, 19), text: `;`
+  pattern: 0
+    capture: 0 - variable, start: (3, 2), end: (3, 3), text: `b`
+  pattern: 36
+    capture: 3 - operator, start: (3, 4), end: (3, 5), text: `=`
+  pattern: 38
+    capture: 3 - operator, start: (3, 6), end: (3, 7), text: `*`
+  pattern: 0
+    capture: 0 - variable, start: (3, 7), end: (3, 8), text: `c`
+  pattern: 36
+    capture: 3 - operator, start: (3, 9), end: (3, 10), text: `=`
+  pattern: 53
+    capture: 6 - number, start: (3, 11), end: (3, 12), text: `2`
+  pattern: 49
+    capture: 4 - delimiter, start: (3, 12), end: (3, 13), text: `;`
+  pattern: 0
+    capture: 0 - variable, start: (4, 2), end: (4, 3), text: `d`
+  pattern: 48
+    capture: 4 - delimiter, start: (4, 3), end: (4, 4), text: `.`
+  pattern: 55
+    capture: 7 - property, start: (4, 4), end: (4, 5), text: `e`
+  pattern: 36
+    capture: 3 - operator, start: (4, 6), end: (4, 7), text: `=`
+  pattern: 53
+    capture: 6 - number, start: (4, 8), end: (4, 9), text: `3`
+  pattern: 49
+    capture: 4 - delimiter, start: (4, 9), end: (4, 10), text: `;`
+  pattern: 0
+    capture: 0 - variable, start: (5, 2), end: (5, 3), text: `f`
+  pattern: 35
+    capture: 3 - operator, start: (5, 3), end: (5, 5), text: `->`
+  pattern: 55
+    capture: 7 - property, start: (5, 5), end: (5, 6), text: `g`
+  pattern: 36
+    capture: 3 - operator, start: (5, 7), end: (5, 8), text: `=`
+  pattern: 53
+    capture: 6 - number, start: (5, 9), end: (5, 10), text: `4`
+  pattern: 49
+    capture: 4 - delimiter, start: (5, 10), end: (5, 11), text: `;`
+  pattern: 0
+    capture: 0 - variable, start: (6, 2), end: (6, 3), text: `h`
+  pattern: 0
+    capture: 0 - variable, start: (6, 4), end: (6, 5), text: `i`
+  pattern: 36
+    capture: 3 - operator, start: (6, 7), end: (6, 8), text: `=`
+  pattern: 0
+    capture: 0 - variable, start: (6, 9), end: (6, 10), text: `j`
+  pattern: 49
+    capture: 4 - delimiter, start: (6, 10), end: (6, 11), text: `;`
+  pattern: 0
+    capture: 0 - variable, start: (7, 2), end: (7, 3), text: `k`
+  pattern: 43
+    capture: 3 - operator, start: (7, 4), end: (7, 6), text: `+=`
+  pattern: 0
+    capture: 0 - variable, start: (7, 7), end: (7, 8), text: `l`
+  pattern: 49
+    capture: 4 - delimiter, start: (7, 8), end: (7, 9), text: `;`
+  pattern: 0
+    capture: 0 - variable, start: (8, 2), end: (8, 3), text: `m`
+  pattern: 34
+    capture: 3 - operator, start: (8, 4), end: (8, 6), text: `-=`
+  pattern: 0
+    capture: 0 - variable, start: (8, 7), end: (8, 8), text: `o`
+  pattern: 49
+    capture: 4 - delimiter, start: (8, 8), end: (8, 9), text: `;`
+  pattern: 0
+    capture: 0 - variable, start: (9, 2), end: (9, 3), text: `n`
+  pattern: 0
+    capture: 0 - variable, start: (9, 7), end: (9, 8), text: `p`
+  pattern: 49
+    capture: 4 - delimiter, start: (9, 8), end: (9, 9), text: `;`
+  pattern: 0
+    capture: 0 - variable, start: (10, 2), end: (10, 3), text: `q`
+  pattern: 0
+    capture: 0 - variable, start: (10, 7), end: (10, 8), text: `r`
+  pattern: 49
+    capture: 4 - delimiter, start: (10, 8), end: (10, 9), text: `;`
+  pattern: 38
+    capture: 3 - operator, start: (11, 2), end: (11, 3), text: `*`
+  pattern: 0
+    capture: 0 - variable, start: (11, 3), end: (11, 4), text: `s`
+  pattern: 42
+    capture: 3 - operator, start: (11, 4), end: (11, 6), text: `++`
+  pattern: 36
+    capture: 3 - operator, start: (11, 7), end: (11, 8), text: `=`
+  pattern: 53
+    capture: 6 - number, start: (11, 9), end: (11, 10), text: `1`
+  pattern: 49
+    capture: 4 - delimiter, start: (11, 10), end: (11, 11), text: `;`
+  pattern: 38
+    capture: 3 - operator, start: (12, 3), end: (12, 4), text: `*`
+  pattern: 0
+    capture: 0 - variable, start: (12, 4), end: (12, 5), text: `t`
+  pattern: 36
+    capture: 3 - operator, start: (12, 7), end: (12, 8), text: `=`
+  pattern: 53
+    capture: 6 - number, start: (12, 9), end: (12, 10), text: `1`
+  pattern: 49
+    capture: 4 - delimiter, start: (12, 10), end: (12, 11), text: `;`
+  pattern: 0
+    capture: 0 - variable, start: (13, 2), end: (13, 3), text: `a`
+  pattern: 0
+    capture: 0 - variable, start: (13, 9), end: (13, 10), text: `b`
+  pattern: 37
+    capture: 3 - operator, start: (13, 10), end: (13, 12), text: `!=`
+  pattern: 0
+    capture: 0 - variable, start: (13, 12), end: (13, 13), text: `c`
+  pattern: 0
+    capture: 0 - variable, start: (13, 17), end: (13, 18), text: `d`
+  pattern: 0
+    capture: 0 - variable, start: (13, 21), end: (13, 22), text: `e`
+  pattern: 49
+    capture: 4 - delimiter, start: (13, 23), end: (13, 24), text: `;`
+corpus/expressions.txt/014
+  pattern: 58
+    capture: 9 - type, start: (1, 0), end: (1, 3), text: `int`
+  pattern: 62
+    capture: 10 - function, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 0
+    capture: 0 - variable, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 60
+    capture: 10 - function, start: (2, 2), end: (2, 13), text: `doSomething`
+  pattern: 0
+    capture: 0 - variable, start: (2, 2), end: (2, 13), text: `doSomething`
+  pattern: 39
+    capture: 3 - operator, start: (2, 14), end: (2, 15), text: `&`
+  pattern: 0
+    capture: 0 - variable, start: (2, 15), end: (2, 16), text: `x`
+  pattern: 38
+    capture: 3 - operator, start: (2, 18), end: (2, 19), text: `*`
+  pattern: 0
+    capture: 0 - variable, start: (2, 19), end: (2, 20), text: `x`
+  pattern: 49
+    capture: 4 - delimiter, start: (2, 21), end: (2, 22), text: `;`
+corpus/expressions.txt/015
+  pattern: 58
+    capture: 9 - type, start: (1, 0), end: (1, 3), text: `int`
+  pattern: 62
+    capture: 10 - function, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 0
+    capture: 0 - variable, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 0
+    capture: 0 - variable, start: (2, 2), end: (2, 3), text: `x`
+  pattern: 36
+    capture: 3 - operator, start: (2, 4), end: (2, 5), text: `=`
+  pattern: 4
+    capture: 2 - keyword, start: (2, 7), end: (2, 12), text: `const`
+  pattern: 57
+    capture: 9 - type, start: (2, 13), end: (2, 21), text: `SomeType`
+  pattern: 38
+    capture: 3 - operator, start: (2, 22), end: (2, 23), text: `*`
+  pattern: 0
+    capture: 0 - variable, start: (2, 24), end: (2, 29), text: `thing`
+  pattern: 49
+    capture: 4 - delimiter, start: (2, 29), end: (2, 30), text: `;`
+corpus/expressions.txt/016
+  pattern: 58
+    capture: 9 - type, start: (1, 0), end: (1, 3), text: `int`
+  pattern: 62
+    capture: 10 - function, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 0
+    capture: 0 - variable, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 15
+    capture: 2 - keyword, start: (2, 2), end: (2, 8), text: `sizeof`
+  pattern: 0
+    capture: 0 - variable, start: (2, 9), end: (2, 10), text: `x`
+  pattern: 48
+    capture: 4 - delimiter, start: (2, 10), end: (2, 11), text: `.`
+  pattern: 55
+    capture: 7 - property, start: (2, 11), end: (2, 12), text: `a`
+  pattern: 49
+    capture: 4 - delimiter, start: (2, 12), end: (2, 13), text: `;`
+  pattern: 15
+    capture: 2 - keyword, start: (3, 2), end: (3, 8), text: `sizeof`
+  pattern: 0
+    capture: 0 - variable, start: (3, 9), end: (3, 10), text: `x`
+  pattern: 48
+    capture: 4 - delimiter, start: (3, 10), end: (3, 11), text: `.`
+  pattern: 55
+    capture: 7 - property, start: (3, 11), end: (3, 12), text: `a`
+  pattern: 49
+    capture: 4 - delimiter, start: (3, 13), end: (3, 14), text: `;`
+  pattern: 15
+    capture: 2 - keyword, start: (4, 2), end: (4, 8), text: `sizeof`
+  pattern: 4
+    capture: 2 - keyword, start: (4, 9), end: (4, 14), text: `const`
+  pattern: 58
+    capture: 9 - type, start: (4, 15), end: (4, 19), text: `char`
+  pattern: 38
+    capture: 3 - operator, start: (4, 20), end: (4, 21), text: `*`
+  pattern: 38
+    capture: 3 - operator, start: (4, 21), end: (4, 22), text: `*`
+  pattern: 49
+    capture: 4 - delimiter, start: (4, 23), end: (4, 24), text: `;`
+  pattern: 15
+    capture: 2 - keyword, start: (5, 2), end: (5, 8), text: `sizeof`
+  pattern: 58
+    capture: 9 - type, start: (5, 9), end: (5, 13), text: `char`
+  pattern: 38
+    capture: 3 - operator, start: (5, 14), end: (5, 15), text: `*`
+  pattern: 49
+    capture: 4 - delimiter, start: (5, 19), end: (5, 20), text: `;`
+  pattern: 15
+    capture: 2 - keyword, start: (6, 2), end: (6, 8), text: `sizeof`
+  pattern: 53
+    capture: 6 - number, start: (6, 9), end: (6, 10), text: `1`
+  pattern: 41
+    capture: 3 - operator, start: (6, 12), end: (6, 13), text: `+`
+  pattern: 53
+    capture: 6 - number, start: (6, 14), end: (6, 15), text: `1`
+  pattern: 49
+    capture: 4 - delimiter, start: (6, 15), end: (6, 16), text: `;`
+  pattern: 15
+    capture: 2 - keyword, start: (7, 2), end: (7, 8), text: `sizeof`
+  pattern: 53
+    capture: 6 - number, start: (7, 10), end: (7, 11), text: `1`
+  pattern: 41
+    capture: 3 - operator, start: (7, 13), end: (7, 14), text: `+`
+  pattern: 53
+    capture: 6 - number, start: (7, 15), end: (7, 16), text: `1`
+  pattern: 49
+    capture: 4 - delimiter, start: (7, 17), end: (7, 18), text: `;`
+  pattern: 15
+    capture: 2 - keyword, start: (8, 2), end: (8, 8), text: `sizeof`
+  pattern: 58
+    capture: 9 - type, start: (8, 9), end: (8, 12), text: `int`
+  pattern: 41
+    capture: 3 - operator, start: (8, 14), end: (8, 15), text: `+`
+  pattern: 53
+    capture: 6 - number, start: (8, 16), end: (8, 17), text: `1`
+  pattern: 49
+    capture: 4 - delimiter, start: (8, 17), end: (8, 18), text: `;`
+  pattern: 15
+    capture: 2 - keyword, start: (9, 2), end: (9, 8), text: `sizeof`
+  pattern: 17
+    capture: 2 - keyword, start: (9, 9), end: (9, 15), text: `struct`
+  pattern: 57
+    capture: 9 - type, start: (9, 16), end: (9, 19), text: `foo`
+  pattern: 41
+    capture: 3 - operator, start: (9, 21), end: (9, 22), text: `+`
+  pattern: 15
+    capture: 2 - keyword, start: (9, 23), end: (9, 29), text: `sizeof`
+  pattern: 17
+    capture: 2 - keyword, start: (9, 30), end: (9, 36), text: `struct`
+  pattern: 57
+    capture: 9 - type, start: (9, 37), end: (9, 40), text: `bar`
+  pattern: 41
+    capture: 3 - operator, start: (9, 42), end: (9, 43), text: `+`
+  pattern: 53
+    capture: 6 - number, start: (9, 44), end: (9, 45), text: `1`
+  pattern: 49
+    capture: 4 - delimiter, start: (9, 45), end: (9, 46), text: `;`
+corpus/expressions.txt/017
+  pattern: 19
+    capture: 2 - keyword, start: (1, 0), end: (1, 7), text: `typedef`
+  pattern: 17
+    capture: 2 - keyword, start: (1, 8), end: (1, 14), text: `struct`
+  pattern: 59
+    capture: 9 - type, start: (2, 4), end: (2, 13), text: `long long`
+  pattern: 55
+    capture: 7 - property, start: (2, 14), end: (2, 38), text: `__clang_max_align_nonce1`
+  pattern: 60
+    capture: 10 - function, start: (3, 23), end: (3, 34), text: `__aligned__`
+  pattern: 0
+    capture: 0 - variable, start: (3, 23), end: (3, 34), text: `__aligned__`
+  pattern: 59
+    capture: 9 - type, start: (3, 47), end: (3, 56), text: `long long`
+  pattern: 49
+    capture: 4 - delimiter, start: (3, 60), end: (3, 61), text: `;`
+  pattern: 59
+    capture: 9 - type, start: (4, 4), end: (4, 15), text: `long double`
+  pattern: 58
+    capture: 9 - type, start: (4, 9), end: (4, 15), text: `double`
+  pattern: 55
+    capture: 7 - property, start: (4, 16), end: (4, 40), text: `__clang_max_align_nonce2`
+  pattern: 60
+    capture: 10 - function, start: (5, 23), end: (5, 34), text: `__aligned__`
+  pattern: 0
+    capture: 0 - variable, start: (5, 23), end: (5, 34), text: `__aligned__`
+  pattern: 59
+    capture: 9 - type, start: (5, 47), end: (5, 58), text: `long double`
+  pattern: 58
+    capture: 9 - type, start: (5, 52), end: (5, 58), text: `double`
+  pattern: 49
+    capture: 4 - delimiter, start: (5, 62), end: (5, 63), text: `;`
+  pattern: 58
+    capture: 9 - type, start: (6, 2), end: (6, 13), text: `max_align_t`
+  pattern: 49
+    capture: 4 - delimiter, start: (6, 13), end: (6, 14), text: `;`
+corpus/expressions.txt/018
+  pattern: 58
+    capture: 9 - type, start: (1, 0), end: (1, 3), text: `int`
+  pattern: 62
+    capture: 10 - function, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 0
+    capture: 0 - variable, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 17
+    capture: 2 - keyword, start: (2, 12), end: (2, 18), text: `struct`
+  pattern: 57
+    capture: 9 - type, start: (2, 19), end: (2, 20), text: `x`
+  pattern: 55
+    capture: 7 - property, start: (2, 22), end: (2, 23), text: `a`
+  pattern: 49
+    capture: 4 - delimiter, start: (2, 25), end: (2, 26), text: `;`
+  pattern: 57
+    capture: 9 - type, start: (3, 12), end: (3, 13), text: `x`
+  pattern: 55
+    capture: 7 - property, start: (3, 15), end: (3, 16), text: `a`
+  pattern: 49
+    capture: 4 - delimiter, start: (3, 18), end: (3, 19), text: `;`
+  pattern: 57
+    capture: 9 - type, start: (4, 12), end: (4, 13), text: `x`
+  pattern: 55
+    capture: 7 - property, start: (4, 15), end: (4, 16), text: `a`
+  pattern: 41
+    capture: 3 - operator, start: (4, 19), end: (4, 20), text: `+`
+  pattern: 53
+    capture: 6 - number, start: (4, 21), end: (4, 22), text: `1`
+  pattern: 49
+    capture: 4 - delimiter, start: (4, 22), end: (4, 23), text: `;`
+corpus/expressions.txt/019
+  pattern: 58
+    capture: 9 - type, start: (1, 0), end: (1, 3), text: `int`
+  pattern: 62
+    capture: 10 - function, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 0
+    capture: 0 - variable, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 0
+    capture: 0 - variable, start: (2, 2), end: (2, 3), text: `x`
+  pattern: 36
+    capture: 3 - operator, start: (2, 4), end: (2, 5), text: `=`
+  pattern: 57
+    capture: 9 - type, start: (2, 7), end: (2, 15), text: `SomeType`
+  pattern: 48
+    capture: 4 - delimiter, start: (3, 4), end: (3, 5), text: `.`
+  pattern: 55
+    capture: 7 - property, start: (3, 5), end: (3, 7), text: `f1`
+  pattern: 48
+    capture: 4 - delimiter, start: (3, 7), end: (3, 8), text: `.`
+  pattern: 55
+    capture: 7 - property, start: (3, 8), end: (3, 10), text: `f2`
+  pattern: 0
+    capture: 0 - variable, start: (3, 11), end: (3, 13), text: `f3`
+  pattern: 36
+    capture: 3 - operator, start: (3, 15), end: (3, 16), text: `=`
+  pattern: 53
+    capture: 6 - number, start: (3, 17), end: (3, 18), text: `5`
+  pattern: 48
+    capture: 4 - delimiter, start: (4, 4), end: (4, 5), text: `.`
+  pattern: 55
+    capture: 7 - property, start: (4, 5), end: (4, 7), text: `f4`
+  pattern: 36
+    capture: 3 - operator, start: (4, 8), end: (4, 9), text: `=`
+  pattern: 48
+    capture: 4 - delimiter, start: (5, 4), end: (5, 5), text: `.`
+  pattern: 55
+    capture: 7 - property, start: (5, 5), end: (5, 7), text: `f5`
+  pattern: 53
+    capture: 6 - number, start: (5, 8), end: (5, 9), text: `1`
+  pattern: 53
+    capture: 6 - number, start: (5, 14), end: (5, 16), text: `10`
+  pattern: 36
+    capture: 3 - operator, start: (5, 18), end: (5, 19), text: `=`
+  pattern: 53
+    capture: 6 - number, start: (5, 20), end: (5, 22), text: `-1`
+  pattern: 55
+    capture: 7 - property, start: (6, 4), end: (6, 6), text: `f6`
+  pattern: 53
+    capture: 6 - number, start: (6, 8), end: (6, 9), text: `6`
+  pattern: 49
+    capture: 4 - delimiter, start: (7, 3), end: (7, 4), text: `;`
+  pattern: 0
+    capture: 0 - variable, start: (8, 2), end: (8, 3), text: `y`
+  pattern: 36
+    capture: 3 - operator, start: (8, 4), end: (8, 5), text: `=`
+  pattern: 17
+    capture: 2 - keyword, start: (8, 7), end: (8, 13), text: `struct`
+  pattern: 57
+    capture: 9 - type, start: (8, 14), end: (8, 24), text: `SomeStruct`
+  pattern: 53
+    capture: 6 - number, start: (9, 4), end: (9, 5), text: `7`
+  pattern: 53
+    capture: 6 - number, start: (10, 4), end: (10, 5), text: `8`
+  pattern: 49
+    capture: 4 - delimiter, start: (11, 3), end: (11, 4), text: `;`
+  pattern: 0
+    capture: 0 - variable, start: (12, 2), end: (12, 3), text: `z`
+  pattern: 36
+    capture: 3 - operator, start: (12, 4), end: (12, 5), text: `=`
+  pattern: 58
+    capture: 9 - type, start: (12, 7), end: (12, 11), text: `char`
+  pattern: 4
+    capture: 2 - keyword, start: (12, 12), end: (12, 17), text: `const`
+  pattern: 54
+    capture: 6 - number, start: (12, 23), end: (12, 26), text: `'a'`
+  pattern: 54
+    capture: 6 - number, start: (12, 28), end: (12, 31), text: `'b'`
+  pattern: 49
+    capture: 4 - delimiter, start: (12, 32), end: (12, 33), text: `;`
+corpus/expressions.txt/020
+  pattern: 58
+    capture: 9 - type, start: (1, 0), end: (1, 3), text: `int`
+  pattern: 62
+    capture: 10 - function, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 0
+    capture: 0 - variable, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 0
+    capture: 0 - variable, start: (2, 2), end: (2, 3), text: `y`
+  pattern: 36
+    capture: 3 - operator, start: (2, 4), end: (2, 5), text: `=`
+  pattern: 17
+    capture: 2 - keyword, start: (2, 7), end: (2, 13), text: `struct`
+  pattern: 57
+    capture: 9 - type, start: (2, 14), end: (2, 24), text: `SomeStruct`
+  pattern: 53
+    capture: 6 - number, start: (2, 28), end: (2, 29), text: `7`
+  pattern: 53
+    capture: 6 - number, start: (2, 31), end: (2, 32), text: `8`
+  pattern: 49
+    capture: 4 - delimiter, start: (2, 35), end: (2, 36), text: `;`
+corpus/expressions.txt/021
+  pattern: 64
+    capture: comment, start: (1, 0), end: (2, 6)
+corpus/expressions.txt/022
+  pattern: 64
+    capture: comment, start: (1, 0), end: (2, 6)
+  pattern: 64
+    capture: 12 - comment, start: (3, 0), end: (3, 12), text: `// one \c \d`
+corpus/expressions.txt/023
+  pattern: 58
+    capture: 9 - type, start: (1, 0), end: (1, 3), text: `int`
+  pattern: 62
+    capture: 10 - function, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 0
+    capture: 0 - variable, start: (1, 4), end: (1, 8), text: `main`
+  pattern: 58
+    capture: 9 - type, start: (1, 9), end: (1, 12), text: `int`
+  pattern: 0
+    capture: 0 - variable, start: (1, 13), end: (1, 17), text: `argc`
+  pattern: 58
+    capture: 9 - type, start: (1, 19), end: (1, 23), text: `char`
+  pattern: 38
+    capture: 3 - operator, start: (1, 24), end: (1, 25), text: `*`
+  pattern: 38
+    capture: 3 - operator, start: (1, 25), end: (1, 26), text: `*`
+  pattern: 0
+    capture: 0 - variable, start: (1, 26), end: (1, 30), text: `argv`
+  pattern: 58
+    capture: 9 - type, start: (2, 2), end: (2, 5), text: `int`
+  pattern: 0
+    capture: 0 - variable, start: (2, 9), end: (2, 10), text: `a`
+  pattern: 36
+    capture: 3 - operator, start: (2, 11), end: (2, 12), text: `=`
+  pattern: 53
+    capture: 6 - number, start: (2, 13), end: (2, 15), text: `10`
+  pattern: 49
+    capture: 4 - delimiter, start: (2, 15), end: (2, 16), text: `;`
+  pattern: 58
+    capture: 9 - type, start: (3, 2), end: (3, 7), text: `float`
+  pattern: 0
+    capture: 0 - variable, start: (3, 9), end: (3, 10), text: `b`
+  pattern: 36
+    capture: 3 - operator, start: (3, 11), end: (3, 12), text: `=`
+  pattern: 53
+    capture: 6 - number, start: (3, 13), end: (3, 17), text: `3.14`
+  pattern: 49
+    capture: 4 - delimiter, start: (3, 17), end: (3, 18), text: `;`
+  pattern: 58
+    capture: 9 - type, start: (4, 2), end: (4, 8), text: `double`
+  pattern: 0
+    capture: 0 - variable, start: (4, 9), end: (4, 10), text: `c`
+  pattern: 36
+    capture: 3 - operator, start: (4, 11), end: (4, 12), text: `=`
+  pattern: 53
+    capture: 6 - number, start: (4, 13), end: (4, 20), text: `2.71828`
+  pattern: 49
+    capture: 4 - delimiter, start: (4, 20), end: (4, 21), text: `;`
+  pattern: 58
+    capture: 9 - type, start: (5, 2), end: (5, 6), text: `char`
+  pattern: 0
+    capture: 0 - variable, start: (5, 9), end: (5, 10), text: `d`
+  pattern: 36
+    capture: 3 - operator, start: (5, 11), end: (5, 12), text: `=`
+  pattern: 54
+    capture: 6 - number, start: (5, 13), end: (5, 16), text: `'A'`
+  pattern: 49
+    capture: 4 - delimiter, start: (5, 16), end: (5, 17), text: `;`
+  pattern: 0
+    capture: 0 - variable, start: (7, 2), end: (7, 3), text: `a`
+  pattern: 36
+    capture: 3 - operator, start: (7, 4), end: (7, 5), text: `=`
+  pattern: 0
+    capture: 0 - variable, start: (7, 15), end: (7, 16), text: `d`
+  pattern: 58
+    capture: 9 - type, start: (7, 18), end: (7, 21), text: `int`
+  pattern: 53
+    capture: 6 - number, start: (7, 23), end: (7, 24), text: `5`
+  pattern: 58
+    capture: 9 - type, start: (7, 26), end: (7, 31), text: `float`
+  pattern: 53
+    capture: 6 - number, start: (7, 33), end: (7, 34), text: `0`
+  pattern: 58
+    capture: 9 - type, start: (7, 36), end: (7, 40), text: `char`
+  pattern: 53
+    capture: 6 - number, start: (7, 42), end: (7, 45), text: `100`
+  pattern: 49
+    capture: 4 - delimiter, start: (7, 46), end: (7, 47), text: `;`
+  pattern: 0
+    capture: 0 - variable, start: (8, 2), end: (8, 3), text: `b`
+  pattern: 36
+    capture: 3 - operator, start: (8, 4), end: (8, 5), text: `=`
+  pattern: 0
+    capture: 0 - variable, start: (8, 15), end: (8, 16), text: `a`
+  pattern: 58
+    capture: 9 - type, start: (8, 18), end: (8, 22), text: `void`
+  pattern: 38
+    capture: 3 - operator, start: (8, 23), end: (8, 24), text: `*`
+  pattern: 53
+    capture: 6 - number, start: (8, 26), end: (8, 27), text: `0`
+  pattern: 58
+    capture: 9 - type, start: (8, 29), end: (8, 32), text: `int`
+  pattern: 53
+    capture: 6 - number, start: (8, 34), end: (8, 37), text: `4.0`
+  pattern: 58
+    capture: 9 - type, start: (8, 39), end: (8, 44), text: `float`
+  pattern: 53
+    capture: 6 - number, start: (8, 46), end: (8, 50), text: `3.14`
+  pattern: 58
+    capture: 9 - type, start: (8, 52), end: (8, 58), text: `double`
+  pattern: 53
+    capture: 6 - number, start: (8, 60), end: (8, 67), text: `2.71828`
+  pattern: 58
+    capture: 9 - type, start: (8, 69), end: (8, 73), text: `char`
+  pattern: 53
+    capture: 6 - number, start: (8, 75), end: (8, 78), text: `1.0`
+  pattern: 49
+    capture: 4 - delimiter, start: (8, 79), end: (8, 80), text: `;`
+  pattern: 0
+    capture: 0 - variable, start: (9, 1), end: (9, 2), text: `c`
+  pattern: 36
+    capture: 3 - operator, start: (9, 3), end: (9, 4), text: `=`
+  pattern: 0
+    capture: 0 - variable, start: (9, 14), end: (9, 15), text: `b`
+  pattern: 58
+    capture: 9 - type, start: (9, 17), end: (9, 21), text: `void`
+  pattern: 38
+    capture: 3 - operator, start: (9, 22), end: (9, 23), text: `*`
+  pattern: 53
+    capture: 6 - number, start: (9, 25), end: (9, 26), text: `0`
+  pattern: 58
+    capture: 9 - type, start: (9, 28), end: (9, 31), text: `int`
+  pattern: 53
+    capture: 6 - number, start: (9, 33), end: (9, 36), text: `4.0`
+  pattern: 58
+    capture: 9 - type, start: (9, 38), end: (9, 43), text: `float`
+  pattern: 53
+    capture: 6 - number, start: (9, 45), end: (9, 49), text: `3.14`
+  pattern: 58
+    capture: 9 - type, start: (9, 51), end: (9, 57), text: `double`
+  pattern: 53
+    capture: 6 - number, start: (9, 59), end: (9, 66), text: `2.71828`
+  pattern: 58
+    capture: 9 - type, start: (9, 68), end: (9, 72), text: `char`
+  pattern: 53
+    capture: 6 - number, start: (9, 74), end: (9, 77), text: `1.0`
+  pattern: 49
+    capture: 4 - delimiter, start: (9, 78), end: (9, 79), text: `;`
+  pattern: 0
+    capture: 0 - variable, start: (10, 1), end: (10, 2), text: `d`
+  pattern: 36
+    capture: 3 - operator, start: (10, 3), end: (10, 4), text: `=`
+  pattern: 0
+    capture: 0 - variable, start: (10, 14), end: (10, 15), text: `c`
+  pattern: 58
+    capture: 9 - type, start: (10, 17), end: (10, 21), text: `void`
+  pattern: 38
+    capture: 3 - operator, start: (10, 22), end: (10, 23), text: `*`
+  pattern: 54
+    capture: 6 - number, start: (10, 25), end: (10, 29), text: `'\0'`
+  pattern: 58
+    capture: 9 - type, start: (10, 31), end: (10, 34), text: `int`
+  pattern: 54
+    capture: 6 - number, start: (10, 36), end: (10, 39), text: `'0'`
+  pattern: 58
+    capture: 9 - type, start: (10, 41), end: (10, 46), text: `float`
+  pattern: 54
+    capture: 6 - number, start: (10, 48), end: (10, 51), text: `'3'`
+  pattern: 58
+    capture: 9 - type, start: (10, 53), end: (10, 59), text: `double`
+  pattern: 54
+    capture: 6 - number, start: (10, 61), end: (10, 64), text: `'2'`
+  pattern: 58
+    capture: 9 - type, start: (10, 66), end: (10, 70), text: `char`
+  pattern: 54
+    capture: 6 - number, start: (10, 72), end: (10, 75), text: `'1'`
+  pattern: 49
+    capture: 4 - delimiter, start: (10, 76), end: (10, 77), text: `;`
+  pattern: 0
+    capture: 0 - variable, start: (12, 11), end: (12, 12), text: `a`
+  pattern: 58
+    capture: 9 - type, start: (12, 14), end: (12, 17), text: `int`
+  pattern: 60
+    capture: 10 - function, start: (12, 19), end: (12, 25), text: `printf`
+  pattern: 0
+    capture: 0 - variable, start: (12, 19), end: (12, 25), text: `printf`
+  pattern: 50
+    capture: 5 - string, start: (12, 26), end: (12, 41), text: `"a is an int\n"`
+  pattern: 58
+    capture: 9 - type, start: (12, 44), end: (12, 49), text: `float`
+  pattern: 60
+    capture: 10 - function, start: (12, 51), end: (12, 57), text: `printf`
+  pattern: 0
+    capture: 0 - variable, start: (12, 51), end: (12, 57), text: `printf`
+  pattern: 50
+    capture: 5 - string, start: (12, 58), end: (12, 74), text: `"a is a float\n"`
+  pattern: 58
+    capture: 9 - type, start: (12, 77), end: (12, 83), text: `double`
+  pattern: 60
+    capture: 10 - function, start: (12, 85), end: (12, 91), text: `printf`
+  pattern: 0
+    capture: 0 - variable, start: (12, 85), end: (12, 91), text: `printf`
+  pattern: 50
+    capture: 5 - string, start: (12, 92), end: (12, 109), text: `"a is a double\n"`
+  pattern: 58
+    capture: 9 - type, start: (12, 112), end: (12, 116), text: `char`
+  pattern: 60
+    capture: 10 - function, start: (12, 118), end: (12, 124), text: `printf`
+  pattern: 0
+    capture: 0 - variable, start: (12, 118), end: (12, 124), text: `printf`
+  pattern: 50
+    capture: 5 - string, start: (12, 125), end: (12, 140), text: `"a is a char\n"`
+  pattern: 49
+    capture: 4 - delimiter, start: (12, 142), end: (12, 143), text: `;`
+  pattern: 0
+    capture: 0 - variable, start: (13, 11), end: (13, 12), text: `b`
+  pattern: 58
+    capture: 9 - type, start: (13, 14), end: (13, 17), text: `int`
+  pattern: 60
+    capture: 10 - function, start: (13, 19), end: (13, 25), text: `printf`
+  pattern: 0
+    capture: 0 - variable, start: (13, 19), end: (13, 25), text: `printf`
+  pattern: 50
+    capture: 5 - string, start: (13, 26), end: (13, 41), text: `"b is an int\n"`
+  pattern: 58
+    capture: 9 - type, start: (13, 44), end: (13, 49), text: `float`
+  pattern: 60
+    capture: 10 - function, start: (13, 51), end: (13, 57), text: `printf`
+  pattern: 0
+    capture: 0 - variable, start: (13, 51), end: (13, 57), text: `printf`
+  pattern: 50
+    capture: 5 - string, start: (13, 58), end: (13, 74), text: `"b is a float\n"`
+  pattern: 58
+    capture: 9 - type, start: (13, 77), end: (13, 83), text: `double`
+  pattern: 60
+    capture: 10 - function, start: (13, 85), end: (13, 91), text: `printf`
+  pattern: 0
+    capture: 0 - variable, start: (13, 85), end: (13, 91), text: `printf`
+  pattern: 50
+    capture: 5 - string, start: (13, 92), end: (13, 109), text: `"b is a double\n"`
+  pattern: 58
+    capture: 9 - type, start: (13, 112), end: (13, 116), text: `char`
+  pattern: 60
+    capture: 10 - function, start: (13, 118), end: (13, 124), text: `printf`
+  pattern: 0
+    capture: 0 - variable, start: (13, 118), end: (13, 124), text: `printf`
+  pattern: 50
+    capture: 5 - string, start: (13, 125), end: (13, 140), text: `"b is a char\n"`
+  pattern: 49
+    capture: 4 - delimiter, start: (13, 142), end: (13, 143), text: `;`
+  pattern: 0
+    capture: 0 - variable, start: (14, 11), end: (14, 12), text: `c`
+  pattern: 58
+    capture: 9 - type, start: (14, 14), end: (14, 17), text: `int`
+  pattern: 60
+    capture: 10 - function, start: (14, 19), end: (14, 25), text: `printf`
+  pattern: 0
+    capture: 0 - variable, start: (14, 19), end: (14, 25), text: `printf`
+  pattern: 50
+    capture: 5 - string, start: (14, 26), end: (14, 41), text: `"c is an int\n"`
+  pattern: 58
+    capture: 9 - type, start: (14, 44), end: (14, 49), text: `float`
+  pattern: 60
+    capture: 10 - function, start: (14, 51), end: (14, 57), text: `printf`
+  pattern: 0
+    capture: 0 - variable, start: (14, 51), end: (14, 57), text: `printf`
+  pattern: 50
+    capture: 5 - string, start: (14, 58), end: (14, 74), text: `"c is a float\n"`
+  pattern: 58
+    capture: 9 - type, start: (14, 77), end: (14, 83), text: `double`
+  pattern: 60
+    capture: 10 - function, start: (14, 85), end: (14, 91), text: `printf`
+  pattern: 0
+    capture: 0 - variable, start: (14, 85), end: (14, 91), text: `printf`
+  pattern: 50
+    capture: 5 - string, start: (14, 92), end: (14, 109), text: `"c is a double\n"`
+  pattern: 58
+    capture: 9 - type, start: (14, 112), end: (14, 116), text: `char`
+  pattern: 60
+    capture: 10 - function, start: (14, 118), end: (14, 124), text: `printf`
+  pattern: 0
+    capture: 0 - variable, start: (14, 118), end: (14, 124), text: `printf`
+  pattern: 50
+    capture: 5 - string, start: (14, 125), end: (14, 140), text: `"c is a char\n"`
+  pattern: 49
+    capture: 4 - delimiter, start: (14, 142), end: (14, 143), text: `;`
+  pattern: 0
+    capture: 0 - variable, start: (15, 11), end: (15, 12), text: `d`
+  pattern: 58
+    capture: 9 - type, start: (15, 14), end: (15, 17), text: `int`
+  pattern: 60
+    capture: 10 - function, start: (15, 19), end: (15, 25), text: `printf`
+  pattern: 0
+    capture: 0 - variable, start: (15, 19), end: (15, 25), text: `printf`
+  pattern: 50
+    capture: 5 - string, start: (15, 26), end: (15, 41), text: `"d is an int\n"`
+  pattern: 58
+    capture: 9 - type, start: (15, 44), end: (15, 49), text: `float`
+  pattern: 60
+    capture: 10 - function, start: (15, 51), end: (15, 57), text: `printf`
+  pattern: 0
+    capture: 0 - variable, start: (15, 51), end: (15, 57), text: `printf`
+  pattern: 50
+    capture: 5 - string, start: (15, 58), end: (15, 74), text: `"d is a float\n"`
+  pattern: 58
+    capture: 9 - type, start: (15, 77), end: (15, 83), text: `double`
+  pattern: 60
+    capture: 10 - function, start: (15, 85), end: (15, 91), text: `printf`
+  pattern: 0
+    capture: 0 - variable, start: (15, 85), end: (15, 91), text: `printf`
+  pattern: 50
+    capture: 5 - string, start: (15, 92), end: (15, 109), text: `"d is a double\n"`
+  pattern: 58
+    capture: 9 - type, start: (15, 112), end: (15, 116), text: `char`
+  pattern: 60
+    capture: 10 - function, start: (15, 118), end: (15, 124), text: `printf`
+  pattern: 0
+    capture: 0 - variable, start: (15, 118), end: (15, 124), text: `printf`
+  pattern: 50
+    capture: 5 - string, start: (15, 125), end: (15, 140), text: `"d is a char\n"`
+  pattern: 49
+    capture: 4 - delimiter, start: (15, 142), end: (15, 143), text: `;`
+  pattern: 14
+    capture: 2 - keyword, start: (17, 2), end: (17, 8), text: `return`
+  pattern: 53
+    capture: 6 - number, start: (17, 9), end: (17, 10), text: `0`
+  pattern: 49
+    capture: 4 - delimiter, start: (17, 10), end: (17, 11), text: `;`
+corpus/expressions.txt/024
+  pattern: 58
+    capture: 9 - type, start: (1, 10), end: (1, 14), text: `void`
+  pattern: 62
+    capture: 10 - function, start: (1, 15), end: (1, 19), text: `kill`
+  pattern: 0
+    capture: 0 - variable, start: (1, 15), end: (1, 19), text: `kill`
+  pattern: 58
+    capture: 9 - type, start: (1, 20), end: (1, 24), text: `void`
+  pattern: 60
+    capture: 10 - function, start: (2, 2), end: (2, 8), text: `printf`
+  pattern: 0
+    capture: 0 - variable, start: (2, 2), end: (2, 8), text: `printf`
+  pattern: 50
+    capture: 5 - string, start: (2, 9), end: (2, 32), text: `"Killing the program\n"`
+  pattern: 49
+    capture: 4 - delimiter, start: (2, 33), end: (2, 34), text: `;`
+  pattern: 60
+    capture: 10 - function, start: (3, 2), end: (3, 6), text: `exit`
+  pattern: 0
+    capture: 0 - variable, start: (3, 2), end: (3, 6), text: `exit`
+  pattern: 53
+    capture: 6 - number, start: (3, 7), end: (3, 8), text: `0`
+  pattern: 49
+    capture: 4 - delimiter, start: (3, 9), end: (3, 10), text: `;`
+corpus/expressions.txt/025
+  pattern: 58
+    capture: 9 - type, start: (1, 0), end: (1, 4), text: `void`
+  pattern: 62
+    capture: 10 - function, start: (1, 5), end: (1, 7), text: `fn`
+  pattern: 0
+    capture: 0 - variable, start: (1, 5), end: (1, 7), text: `fn`
+  pattern: 58
+    capture: 9 - type, start: (1, 9), end: (1, 12), text: `int`
+  pattern: 38
+    capture: 3 - operator, start: (1, 13), end: (1, 14), text: `*`
+  pattern: 0
+    capture: 0 - variable, start: (1, 27), end: (1, 31), text: `rptr`
+  pattern: 58
+    capture: 9 - type, start: (2, 2), end: (2, 5), text: `int`
+  pattern: 38
+    capture: 3 - operator, start: (2, 6), end: (2, 7), text: `*`
+  pattern: 0
+    capture: 0 - variable, start: (2, 7), end: (2, 10), text: `ptr`
+  pattern: 36
+    capture: 3 - operator, start: (2, 11), end: (2, 12), text: `=`
+  pattern: 0
+    capture: 0 - variable, start: (2, 13), end: (2, 17), text: `rptr`
+  pattern: 49
+    capture: 4 - delimiter, start: (2, 17), end: (2, 18), text: `;`
+  pattern: 38
+    capture: 3 - operator, start: (3, 2), end: (3, 3), text: `*`
+  pattern: 0
+    capture: 0 - variable, start: (3, 3), end: (3, 6), text: `ptr`
+  pattern: 36
+    capture: 3 - operator, start: (3, 7), end: (3, 8), text: `=`
+  pattern: 53
+    capture: 6 - number, start: (3, 9), end: (3, 10), text: `0`
+  pattern: 49
+    capture: 4 - delimiter, start: (3, 10), end: (3, 11), text: `;`
+corpus/expressions.txt/026
+  pattern: 58
+    capture: 9 - type, start: (1, 0), end: (1, 4), text: `void`
+  pattern: 62
+    capture: 10 - function, start: (1, 5), end: (1, 6), text: `f`
+  pattern: 0
+    capture: 0 - variable, start: (1, 5), end: (1, 6), text: `f`
+  pattern: 53
+    capture: 6 - number, start: (2, 2), end: (2, 3), text: `0`
+  pattern: 53
+    capture: 6 - number, start: (2, 6), end: (2, 7), text: `1`
+  pattern: 53
+    capture: 6 - number, start: (2, 10), end: (2, 11), text: `2`
+  pattern: 49
+    capture: 4 - delimiter, start: (2, 11), end: (2, 12), text: `;`
+  pattern: 0
+    capture: 0 - variable, start: (3, 2), end: (3, 3), text: `a`
+  pattern: 36
+    capture: 3 - operator, start: (3, 4), end: (3, 5), text: `=`
+  pattern: 53
+    capture: 6 - number, start: (3, 6), end: (3, 7), text: `0`
+  pattern: 53
+    capture: 6 - number, start: (3, 10), end: (3, 11), text: `1`
+  pattern: 53
+    capture: 6 - number, start: (3, 14), end: (3, 15), text: `2`
+  pattern: 49
+    capture: 4 - delimiter, start: (3, 15), end: (3, 16), text: `;`
+  pattern: 0
+    capture: 0 - variable, start: (4, 2), end: (4, 3), text: `a`
+  pattern: 36
+    capture: 3 - operator, start: (4, 4), end: (4, 5), text: `=`
+  pattern: 0
+    capture: 0 - variable, start: (4, 6), end: (4, 9), text: `val`
+  pattern: 0
+    capture: 0 - variable, start: (4, 12), end: (4, 13), text: `b`
+  pattern: 36
+    capture: 3 - operator, start: (4, 14), end: (4, 15), text: `=`
+  pattern: 53
+    capture: 6 - number, start: (4, 16), end: (4, 17), text: `3`
+  pattern: 53
+    capture: 6 - number, start: (4, 19), end: (4, 20), text: `1`
+  pattern: 53
+    capture: 6 - number, start: (4, 23), end: (4, 24), text: `0`
+  pattern: 49
+    capture: 4 - delimiter, start: (4, 24), end: (4, 25), text: `;`
+corpus/expressions.txt/027
+  pattern: 60
+    capture: 10 - function, start: (1, 0), end: (1, 3), text: `foo`
+  pattern: 0
+    capture: 0 - variable, start: (1, 0), end: (1, 3), text: `foo`
+  pattern: 50
+    capture: 5 - string, start: (1, 4), end: (1, 11), text: `"hello"`
+  pattern: 0
+    capture: 0 - variable, start: (1, 12), end: (1, 15), text: `PRI`
+  pattern: 1
+    capture: 1 - constant, start: (1, 12), end: (1, 15), text: `PRI`
+  pattern: 50
+    capture: 5 - string, start: (1, 16), end: (1, 24), text: `" world"`
+  pattern: 49
+    capture: 4 - delimiter, start: (1, 25), end: (1, 26), text: `;`
+  pattern: 60
+    capture: 10 - function, start: (2, 0), end: (2, 3), text: `foo`
+  pattern: 0
+    capture: 0 - variable, start: (2, 0), end: (2, 3), text: `foo`
+  pattern: 50
+    capture: 5 - string, start: (2, 4), end: (2, 11), text: `"hello"`
+  pattern: 0
+    capture: 0 - variable, start: (2, 12), end: (2, 15), text: `PRI`
+  pattern: 1
+    capture: 1 - constant, start: (2, 12), end: (2, 15), text: `PRI`
+  pattern: 49
+    capture: 4 - delimiter, start: (2, 16), end: (2, 17), text: `;`
+  pattern: 60
+    capture: 10 - function, start: (3, 0), end: (3, 3), text: `foo`
+  pattern: 0
+    capture: 0 - variable, start: (3, 0), end: (3, 3), text: `foo`
+  pattern: 50
+    capture: 5 - string, start: (3, 4), end: (3, 11), text: `"hello"`
+  pattern: 50
+    capture: 5 - string, start: (3, 12), end: (3, 20), text: `" world"`
+  pattern: 49
+    capture: 4 - delimiter, start: (3, 21), end: (3, 22), text: `;`
+  pattern: 60
+    capture: 10 - function, start: (4, 0), end: (4, 3), text: `foo`
+  pattern: 0
+    capture: 0 - variable, start: (4, 0), end: (4, 3), text: `foo`
+  pattern: 50
+    capture: 5 - string, start: (4, 4), end: (4, 11), text: `"hello"`
+  pattern: 50
+    capture: 5 - string, start: (4, 12), end: (4, 21), text: `" world "`
+  pattern: 0
+    capture: 0 - variable, start: (4, 22), end: (4, 25), text: `PRI`
+  pattern: 1
+    capture: 1 - constant, start: (4, 22), end: (4, 25), text: `PRI`
+  pattern: 49
+    capture: 4 - delimiter, start: (4, 26), end: (4, 27), text: `;`
+  pattern: 60
+    capture: 10 - function, start: (5, 0), end: (5, 3), text: `foo`
+  pattern: 0
+    capture: 0 - variable, start: (5, 0), end: (5, 3), text: `foo`
+  pattern: 0
+    capture: 0 - variable, start: (5, 4), end: (5, 7), text: `PRI`
+  pattern: 1
+    capture: 1 - constant, start: (5, 4), end: (5, 7), text: `PRI`
+  pattern: 50
+    capture: 5 - string, start: (5, 8), end: (5, 15), text: `"hello"`
+  pattern: 0
+    capture: 0 - variable, start: (5, 16), end: (5, 19), text: `PRI`
+  pattern: 1
+    capture: 1 - constant, start: (5, 16), end: (5, 19), text: `PRI`
+  pattern: 49
+    capture: 4 - delimiter, start: (5, 20), end: (5, 21), text: `;`
+  pattern: 60
+    capture: 10 - function, start: (6, 0), end: (6, 3), text: `foo`
+  pattern: 0
+    capture: 0 - variable, start: (6, 0), end: (6, 3), text: `foo`
+  pattern: 0
+    capture: 0 - variable, start: (6, 4), end: (6, 7), text: `PRI`
+  pattern: 1
+    capture: 1 - constant, start: (6, 4), end: (6, 7), text: `PRI`
+  pattern: 50
+    capture: 5 - string, start: (6, 8), end: (6, 15), text: `"hello"`
+  pattern: 49
+    capture: 4 - delimiter, start: (6, 16), end: (6, 17), text: `;`
+corpus/expressions.txt/028
+  pattern: 58
+    capture: 9 - type, start: (1, 0), end: (1, 4), text: `void`
+  pattern: 62
+    capture: 10 - function, start: (1, 5), end: (1, 8), text: `foo`
+  pattern: 0
+    capture: 0 - variable, start: (1, 5), end: (1, 8), text: `foo`
+  pattern: 58
+    capture: 9 - type, start: (2, 2), end: (2, 5), text: `int`
+  pattern: 38
+    capture: 3 - operator, start: (2, 6), end: (2, 7), text: `*`
+  pattern: 0
+    capture: 0 - variable, start: (2, 16), end: (2, 17), text: `n`
+  pattern: 49
+    capture: 4 - delimiter, start: (2, 17), end: (2, 18), text: `;`
+corpus/expressions.txt/029
+  pattern: 49
+    capture: 4 - delimiter, start: (1, 0), end: (1, 1), text: `;`
+corpus/expressions.txt/030
+  pattern: 59
+    capture: 9 - type, start: (1, 0), end: (1, 19), text: `unsigned const char`
+  pattern: 4
+    capture: 2 - keyword, start: (1, 9), end: (1, 14), text: `const`
+  pattern: 58
+    capture: 9 - type, start: (1, 15), end: (1, 19), text: `char`
+  pattern: 38
+    capture: 3 - operator, start: (1, 20), end: (1, 21), text: `*`
+  pattern: 0
+    capture: 0 - variable, start: (1, 21), end: (1, 22), text: `c`
+  pattern: 49
+    capture: 4 - delimiter, start: (1, 22), end: (1, 23), text: `;`

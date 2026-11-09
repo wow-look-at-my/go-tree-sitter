@@ -1,0 +1,298 @@
+corpus/commands.txt/000
+    pattern:  1, capture: 1 - function, start: (1, 0), end: (1, 6), text: `whoami`
+corpus/commands.txt/001
+    pattern:  1, capture: 1 - function, start: (1, 0), end: (1, 3), text: `cat`
+    pattern:  1, capture: 1 - function, start: (2, 0), end: (2, 3), text: `git`
+    pattern:  9, capture: 8 - constant, start: (2, 9), end: (2, 26), text: `--word-diff=color`
+    pattern:  9, capture: 8 - constant, start: (2, 27), end: (2, 29), text: `--`
+    pattern:  1, capture: 1 - function, start: (3, 0), end: (3, 4), text: `echo`
+    pattern:  8, capture: 7 - operator, start: (3, 5), end: (3, 6), text: `$`
+    pattern:  2, capture: 2 - property, start: (3, 6), end: (3, 10), text: `sing`
+corpus/commands.txt/002
+    pattern:  1, capture: 1 - function, start: (1, 0), end: (1, 7), text: `"$a/$b"`
+    pattern:  0, capture: 0 - string, start: (1, 0), end: (1, 7), text: `"$a/$b"`
+    pattern:  8, capture: 7 - operator, start: (1, 1), end: (1, 2), text: `$`
+    pattern:  2, capture: 2 - property, start: (1, 2), end: (1, 3), text: `a`
+    pattern:  8, capture: 7 - operator, start: (1, 4), end: (1, 5), text: `$`
+    pattern:  2, capture: 2 - property, start: (1, 5), end: (1, 6), text: `b`
+corpus/commands.txt/003
+    pattern:  1, capture: 1 - function, start: (1, 0), end: (1, 4), text: `exit`
+corpus/commands.txt/004
+    pattern:  2, capture: 2 - property, start: (1, 0), end: (1, 4), text: `VAR1`
+    pattern:  1, capture: 1 - function, start: (1, 7), end: (1, 20), text: `./script/test`
+    pattern:  2, capture: 2 - property, start: (2, 0), end: (2, 4), text: `VAR1`
+    pattern:  2, capture: 2 - property, start: (2, 7), end: (2, 11), text: `VAR2`
+    pattern:  0, capture: 0 - string, start: (2, 12), end: (2, 16), text: `"ok"`
+    pattern:  1, capture: 1 - function, start: (2, 17), end: (2, 20), text: `git`
+    pattern:  9, capture: 8 - constant, start: (2, 26), end: (2, 43), text: `--word-diff=color`
+corpus/commands.txt/005
+    pattern:  2, capture: 2 - property, start: (1, 0), end: (1, 4), text: `VAR1`
+    pattern:  2, capture: 2 - property, start: (2, 0), end: (2, 4), text: `VAR2`
+    pattern:  1, capture: 1 - function, start: (2, 6), end: (2, 10), text: `echo`
+corpus/commands.txt/006
+    pattern:  1, capture: 1 - function, start: (1, 0), end: (1, 6), text: `whoami`
+    pattern:  8, capture: 7 - operator, start: (1, 7), end: (1, 8), text: `>`
+    pattern:  1, capture: 1 - function, start: (2, 0), end: (2, 3), text: `cat`
+    pattern:  8, capture: 7 - operator, start: (2, 8), end: (2, 9), text: `>`
+    pattern:  6, capture: 5 - number, start: (3, 0), end: (3, 1), text: `2`
+    pattern:  1, capture: 1 - function, start: (3, 5), end: (3, 11), text: `whoami`
+    pattern:  1, capture: 1 - function, start: (4, 0), end: (4, 4), text: `echo`
+    pattern:  0, capture: 0 - string, start: (4, 5), end: (4, 13), text: `"foobar"`
+    pattern:  1, capture: 1 - function, start: (5, 4), end: (5, 11), text: `command`
+    pattern:  9, capture: 8 - constant, start: (5, 12), end: (5, 14), text: `-v`
+    pattern:  8, capture: 7 - operator, start: (5, 32), end: (5, 34), text: `&&`
+    pattern:  1, capture: 1 - function, start: (5, 35), end: (5, 41), text: `return`
+    pattern:  3, capture: 3 - keyword, start: (7, 0), end: (7, 2), text: `if`
+    pattern:  3, capture: 3 - keyword, start: (7, 8), end: (7, 12), text: `then`
+    pattern:  8, capture: 7 - operator, start: (8, 1), end: (8, 2), text: `>`
+    pattern:  8, capture: 7 - operator, start: (8, 5), end: (8, 6), text: `>`
+    pattern:  3, capture: 3 - keyword, start: (9, 0), end: (9, 2), text: `fi`
+    pattern:  1, capture: 1 - function, start: (11, 0), end: (11, 4), text: `exec`
+    pattern:  1, capture: 1 - function, start: (12, 0), end: (12, 4), text: `exec`
+    pattern:  1, capture: 1 - function, start: (14, 0), end: (14, 4), text: `grep`
+    pattern:  6, capture: 5 - number, start: (14, 5), end: (14, 6), text: `2`
+    pattern:  8, capture: 7 - operator, start: (14, 6), end: (14, 7), text: `>`
+    pattern:  0, capture: 0 - string, start: (14, 20), end: (14, 40), text: `"^/usr/bin/scponly$"`
+    pattern:  8, capture: 7 - operator, start: (14, 38), end: (14, 39), text: `$`
+    pattern:  1, capture: 1 - function, start: (16, 0), end: (16, 1), text: `x`
+    pattern:  8, capture: 7 - operator, start: (16, 2), end: (16, 3), text: `<`
+corpus/commands.txt/007
+    pattern:  1, capture: 1 - function, start: (1, 0), end: (1, 6), text: `whoami`
+    pattern:  1, capture: 1 - function, start: (2, 0), end: (2, 3), text: `cat`
+corpus/commands.txt/008
+    pattern:  1, capture: 1 - function, start: (1, 0), end: (1, 4), text: `node`
+    pattern:  0, capture: 0 - string, start: (1, 7), end: (1, 9), text: `JS`
+    pattern:  0, capture: 0 - string, start: (2, 0), end: (3, 0), text: `console.log("hi")
+`
+    pattern:  1, capture: 1 - function, start: (5, 0), end: (5, 4), text: `bash`
+    pattern:  9, capture: 8 - constant, start: (5, 5), end: (5, 7), text: `-c`
+    pattern:  0, capture: 0 - string, start: (5, 10), end: (5, 12), text: `JS`
+    pattern:  0, capture: 0 - string, start: (6, 0), end: (7, 0), text: `echo hi
+`
+    pattern:  1, capture: 1 - function, start: (9, 0), end: (9, 6), text: `newins`
+    pattern:  0, capture: 0 - string, start: (9, 10), end: (9, 13), text: `EOF`
+    pattern:  0, capture: 0 - string, start: (10, 1), end: (13, 0), text: `[D-BUS Service]
+	Name=org.freedesktop.Notifications
+	Exec=/usr/libexec/notification-daemon
+`
+corpus/commands.txt/009
+    pattern:  1, capture: 1 - function, start: (1, 0), end: (1, 4), text: `node`
+    pattern:  0, capture: 0 - string, start: (1, 7), end: (1, 9), text: `JS`
+    pattern:  0, capture: 0 - string, start: (2, 0), end: (3, 0), text: `a $B ${C}
+`
+    pattern:  8, capture: 7 - operator, start: (2, 2), end: (2, 3), text: `$`
+    pattern:  2, capture: 2 - property, start: (2, 3), end: (2, 4), text: `B`
+    pattern:  7, capture: 6 - embedded, start: (2, 5), end: (2, 9), text: `${C}`
+    pattern:  2, capture: 2 - property, start: (2, 7), end: (2, 8), text: `C`
+    pattern:  1, capture: 1 - function, start: (5, 0), end: (5, 4), text: `exit`
+corpus/commands.txt/010
+    pattern:  1, capture: 1 - function, start: (1, 0), end: (1, 3), text: `cat`
+    pattern:  0, capture: 0 - string, start: (1, 6), end: (1, 9), text: `EOF`
+    pattern:  8, capture: 7 - operator, start: (1, 10), end: (1, 11), text: `>`
+    pattern:  8, capture: 7 - operator, start: (1, 12), end: (1, 13), text: `$`
+    pattern:  2, capture: 2 - property, start: (1, 13), end: (1, 20), text: `tmpfile`
+    pattern:  0, capture: 0 - string, start: (2, 0), end: (3, 0), text: `a $B ${C}
+`
+    pattern:  8, capture: 7 - operator, start: (2, 2), end: (2, 3), text: `$`
+    pattern:  2, capture: 2 - property, start: (2, 3), end: (2, 4), text: `B`
+    pattern:  7, capture: 6 - embedded, start: (2, 5), end: (2, 9), text: `${C}`
+    pattern:  2, capture: 2 - property, start: (2, 7), end: (2, 8), text: `C`
+    pattern:  1, capture: 1 - function, start: (5, 0), end: (5, 2), text: `wc`
+    pattern:  9, capture: 8 - constant, start: (5, 3), end: (5, 5), text: `-l`
+    pattern:  8, capture: 7 - operator, start: (5, 6), end: (5, 7), text: `$`
+    pattern:  2, capture: 2 - property, start: (5, 7), end: (5, 14), text: `tmpfile`
+corpus/commands.txt/011
+    pattern:  2, capture: 2 - property, start: (1, 0), end: (1, 3), text: `FOO`
+    pattern:  1, capture: 1 - function, start: (1, 8), end: (1, 12), text: `echo`
+    pattern:  0, capture: 0 - string, start: (1, 15), end: (1, 18), text: `EOF`
+    pattern:  6, capture: 5 - number, start: (1, 19), end: (1, 20), text: `2`
+    pattern:  8, capture: 7 - operator, start: (1, 20), end: (1, 21), text: `>`
+    pattern:  8, capture: 7 - operator, start: (1, 30), end: (1, 31), text: `>`
+    pattern:  0, capture: 0 - string, start: (2, 0), end: (3, 0), text: `hello
+`
+corpus/commands.txt/012
+    pattern:  1, capture: 1 - function, start: (1, 0), end: (1, 3), text: `one`
+    pattern:  0, capture: 0 - string, start: (1, 6), end: (1, 9), text: `EOF`
+    pattern:  8, capture: 7 - operator, start: (1, 10), end: (1, 11), text: `|`
+    pattern:  1, capture: 1 - function, start: (1, 12), end: (1, 16), text: `grep`
+    pattern:  0, capture: 0 - string, start: (2, 0), end: (3, 0), text: `three
+`
+corpus/commands.txt/013
+    pattern:  1, capture: 1 - function, start: (1, 0), end: (1, 3), text: `cat`
+    pattern:  0, capture: 0 - string, start: (1, 8), end: (1, 11), text: `EOF`
+    pattern:  0, capture: 0 - string, start: (2, 0), end: (3, 0), text: `DEV_NAME=\$(lsblk)
+`
+corpus/commands.txt/014
+    pattern:  1, capture: 1 - function, start: (1, 0), end: (1, 3), text: `cat`
+    pattern:  0, capture: 0 - string, start: (1, 7), end: (1, 12), text: `'EOF'`
+    pattern:  0, capture: 0 - string, start: (2, 0), end: (3, 0), text: `a=$b
+`
+    pattern:  1, capture: 1 - function, start: (5, 0), end: (5, 3), text: `cat`
+    pattern:  0, capture: 0 - string, start: (5, 7), end: (5, 12), text: `"EOF"`
+    pattern:  0, capture: 0 - string, start: (6, 0), end: (7, 0), text: `a=$b
+`
+    pattern:  1, capture: 1 - function, start: (9, 0), end: (9, 3), text: `cat`
+    pattern:  0, capture: 0 - string, start: (9, 6), end: (9, 19), text: `"END OF FILE"`
+    pattern:  0, capture: 0 - string, start: (10, 0), end: (12, 0), text: `hello,
+world
+`
+    pattern:  1, capture: 1 - function, start: (14, 0), end: (14, 3), text: `cat`
+    pattern:  0, capture: 0 - string, start: (14, 7), end: (14, 11), text: `\EOF`
+    pattern:  0, capture: 0 - string, start: (15, 0), end: (15, 0), text: ``
+corpus/commands.txt/015
+    pattern:  5, capture: 1 - function, start: (1, 0), end: (1, 5), text: `usage`
+    pattern:  1, capture: 1 - function, start: (2, 1), end: (2, 4), text: `cat`
+    pattern:  0, capture: 0 - string, start: (2, 8), end: (2, 11), text: `EOF`
+    pattern:  0, capture: 0 - string, start: (3, 2), end: (4, 1), text: `Usage: ${0##*/} FOO BAR
+	`
+    pattern:  7, capture: 6 - embedded, start: (3, 9), end: (3, 17), text: `${0##*/}`
+    pattern:  2, capture: 2 - property, start: (3, 11), end: (3, 12), text: `0`
+corpus/commands.txt/016
+    pattern:  1, capture: 1 - function, start: (1, 0), end: (1, 4), text: `node`
+    pattern:  0, capture: 0 - string, start: (1, 7), end: (1, 9), text: `JS`
+    pattern:  0, capture: 0 - string, start: (2, 0), end: (2, 0), text: ``
+    pattern:  1, capture: 1 - function, start: (4, 0), end: (4, 4), text: `node`
+    pattern:  0, capture: 0 - string, start: (4, 8), end: (4, 12), text: `'SJ'`
+    pattern:  0, capture: 0 - string, start: (5, 0), end: (5, 0), text: ``
+    pattern:  5, capture: 1 - function, start: (7, 0), end: (7, 5), text: `usage`
+    pattern:  1, capture: 1 - function, start: (8, 1), end: (8, 4), text: `cat`
+    pattern:  0, capture: 0 - string, start: (8, 8), end: (8, 11), text: `EOF`
+    pattern:  0, capture: 0 - string, start: (9, 1), end: (9, 1), text: ``
+    pattern:  1, capture: 1 - function, start: (12, 0), end: (12, 4), text: `node`
+    pattern:  0, capture: 0 - string, start: (12, 8), end: (12, 13), text: `'EOF'`
+    pattern:  8, capture: 7 - operator, start: (12, 14), end: (12, 15), text: `>`
+    pattern:  0, capture: 0 - string, start: (13, 0), end: (13, 0), text: ``
+corpus/commands.txt/017
+    pattern:  1, capture: 1 - function, start: (1, 0), end: (1, 4), text: `node`
+    pattern:  0, capture: 0 - string, start: (1, 7), end: (1, 35), text: `_DELIMITER_WITH_UNDERSCORES_`
+    pattern:  0, capture: 0 - string, start: (2, 0), end: (3, 0), text: `Hello.
+`
+    pattern:  1, capture: 1 - function, start: (5, 0), end: (5, 4), text: `node`
+    pattern:  0, capture: 0 - string, start: (5, 7), end: (5, 12), text: `'```'`
+    pattern:  0, capture: 0 - string, start: (6, 0), end: (7, 0), text: `Hello.
+`
+    pattern:  1, capture: 1 - function, start: (9, 0), end: (9, 4), text: `node`
+    pattern:  0, capture: 0 - string, start: (9, 7), end: (9, 16), text: `!HEREDOC!`
+    pattern:  0, capture: 0 - string, start: (10, 0), end: (11, 0), text: `Hello.
+`
+    pattern:  1, capture: 1 - function, start: (13, 0), end: (13, 4), text: `node`
+    pattern:  0, capture: 0 - string, start: (13, 7), end: (13, 9), text: `\'`
+    pattern:  0, capture: 0 - string, start: (14, 0), end: (15, 0), text: `Hello.
+`
+    pattern:  1, capture: 1 - function, start: (17, 0), end: (17, 4), text: `node`
+    pattern:  0, capture: 0 - string, start: (17, 7), end: (17, 9), text: `\\`
+    pattern:  0, capture: 0 - string, start: (18, 0), end: (19, 0), text: `Hello.
+`
+corpus/commands.txt/018
+    pattern:  1, capture: 1 - function, start: (1, 0), end: (1, 3), text: `cat`
+    pattern:  0, capture: 0 - string, start: (1, 7), end: (1, 12), text: `_EOF_`
+    pattern:  1, capture: 1 - function, start: (1, 16), end: (1, 19), text: `die`
+    pattern:  0, capture: 0 - string, start: (1, 20), end: (1, 36), text: `"cat EOF failed"`
+    pattern:  0, capture: 0 - string, start: (2, 1), end: (4, 0), text: `#!/bin/sh
+	echo hello
+`
+corpus/commands.txt/019
+    pattern:  1, capture: 1 - function, start: (1, 0), end: (1, 3), text: `cat`
+    pattern:  0, capture: 0 - string, start: (1, 6), end: (1, 9), text: `EOF`
+    pattern:  0, capture: 0 - string, start: (2, 0), end: (3, 0), text: `# check out this regex '^EOF$'
+`
+corpus/commands.txt/020
+    pattern:  1, capture: 1 - function, start: (1, 0), end: (1, 3), text: `cat`
+    pattern:  0, capture: 0 - string, start: (1, 6), end: (1, 11), text: `OUTER`
+    pattern:  0, capture: 0 - string, start: (2, 0), end: (11, 0), text: `Outer Heredoc Start
+$(cat <<INNER
+Inner Heredoc Content
+$(cat <<INNERMOST
+Innermost Heredoc Content
+INNERMOST
+)
+INNER)
+Outer Heredoc End
+`
+    pattern:  7, capture: 6 - embedded, start: (3, 0), end: (9, 6), text: `$(cat <<INNER
+Inner Heredoc Content
+$(cat <<INNERMOST
+Innermost Heredoc Content
+INNERMOST
+)
+INNER)`
+    pattern:  1, capture: 1 - function, start: (3, 2), end: (3, 5), text: `cat`
+    pattern:  0, capture: 0 - string, start: (3, 8), end: (3, 13), text: `INNER`
+    pattern:  0, capture: 0 - string, start: (4, 0), end: (9, 0), text: `Inner Heredoc Content
+$(cat <<INNERMOST
+Innermost Heredoc Content
+INNERMOST
+)
+`
+    pattern:  7, capture: 6 - embedded, start: (5, 0), end: (8, 1), text: `$(cat <<INNERMOST
+Innermost Heredoc Content
+INNERMOST
+)`
+    pattern:  1, capture: 1 - function, start: (5, 2), end: (5, 5), text: `cat`
+    pattern:  0, capture: 0 - string, start: (5, 8), end: (5, 17), text: `INNERMOST`
+    pattern:  0, capture: 0 - string, start: (6, 0), end: (7, 0), text: `Innermost Heredoc Content
+`
+corpus/commands.txt/021
+    pattern:  1, capture: 1 - function, start: (1, 0), end: (1, 4), text: `node`
+    pattern:  3, capture: 3 - keyword, start: (3, 0), end: (3, 5), text: `while`
+    pattern:  1, capture: 1 - function, start: (3, 6), end: (3, 10), text: `read`
+    pattern:  9, capture: 8 - constant, start: (3, 11), end: (3, 13), text: `-u`
+    pattern:  3, capture: 3 - keyword, start: (3, 23), end: (3, 25), text: `do`
+    pattern:  1, capture: 1 - function, start: (4, 2), end: (4, 6), text: `echo`
+    pattern:  8, capture: 7 - operator, start: (4, 7), end: (4, 8), text: `$`
+    pattern:  2, capture: 2 - property, start: (4, 8), end: (4, 13), text: `entry`
+    pattern:  3, capture: 3 - keyword, start: (5, 0), end: (5, 4), text: `done`
+    pattern:  6, capture: 5 - number, start: (5, 5), end: (5, 6), text: `3`
+    pattern:  0, capture: 0 - string, start: (5, 9), end: (5, 19), text: `"$ENTRIES"`
+    pattern:  8, capture: 7 - operator, start: (5, 10), end: (5, 11), text: `$`
+    pattern:  2, capture: 2 - property, start: (5, 11), end: (5, 18), text: `ENTRIES`
+    pattern:  1, capture: 1 - function, start: (7, 0), end: (7, 11), text: `$(tc-getCC)`
+    pattern:  7, capture: 6 - embedded, start: (7, 0), end: (7, 11), text: `$(tc-getCC)`
+    pattern:  1, capture: 1 - function, start: (7, 2), end: (7, 10), text: `tc-getCC`
+    pattern:  9, capture: 8 - constant, start: (7, 12), end: (7, 19), text: `-Werror`
+    pattern:  9, capture: 8 - constant, start: (7, 20), end: (7, 44), text: `-Wl,-l:libobjc.so.${ver}`
+    pattern:  7, capture: 6 - embedded, start: (7, 38), end: (7, 44), text: `${ver}`
+    pattern:  2, capture: 2 - property, start: (7, 40), end: (7, 43), text: `ver`
+    pattern:  9, capture: 8 - constant, start: (7, 45), end: (7, 47), text: `-x`
+    pattern:  9, capture: 8 - constant, start: (8, 2), end: (8, 3), text: `-`
+    pattern:  9, capture: 8 - constant, start: (8, 24), end: (8, 26), text: `-o`
+    pattern:  6, capture: 5 - number, start: (8, 37), end: (8, 38), text: `2`
+    pattern:  8, capture: 7 - operator, start: (8, 38), end: (8, 39), text: `>`
+    pattern:  1, capture: 1 - function, start: (10, 10), end: (10, 13), text: `cmd`
+    pattern:  1, capture: 1 - function, start: (12, 0), end: (12, 3), text: `cmd`
+    pattern:  1, capture: 1 - function, start: (14, 0), end: (14, 3), text: `cmd`
+corpus/commands.txt/022
+    pattern:  1, capture: 1 - function, start: (1, 0), end: (1, 4), text: `echo`
+    pattern:  7, capture: 6 - embedded, start: (1, 5), end: (1, 16), text: `${a[1 + 2]}`
+    pattern:  2, capture: 2 - property, start: (1, 7), end: (1, 8), text: `a`
+    pattern:  1, capture: 1 - function, start: (3, 0), end: (3, 4), text: `echo`
+    pattern:  7, capture: 6 - embedded, start: (3, 5), end: (3, 19), text: `${b[1234 % 2]}`
+    pattern:  2, capture: 2 - property, start: (3, 7), end: (3, 8), text: `b`
+    pattern:  1, capture: 1 - function, start: (5, 0), end: (5, 19), text: `${words[++counter]}`
+    pattern:  7, capture: 6 - embedded, start: (5, 0), end: (5, 19), text: `${words[++counter]}`
+    pattern:  2, capture: 2 - property, start: (5, 2), end: (5, 7), text: `words`
+    pattern:  1, capture: 1 - function, start: (7, 0), end: (7, 23), text: `${array[(($number+1))]}`
+    pattern:  7, capture: 6 - embedded, start: (7, 0), end: (7, 23), text: `${array[(($number+1))]}`
+    pattern:  2, capture: 2 - property, start: (7, 2), end: (7, 7), text: `array`
+    pattern:  8, capture: 7 - operator, start: (7, 10), end: (7, 11), text: `$`
+    pattern:  2, capture: 2 - property, start: (7, 11), end: (7, 17), text: `number`
+    pattern:  1, capture: 1 - function, start: (9, 0), end: (9, 22), text: `${array[((number+1))]}`
+    pattern:  7, capture: 6 - embedded, start: (9, 0), end: (9, 22), text: `${array[((number+1))]}`
+    pattern:  2, capture: 2 - property, start: (9, 2), end: (9, 7), text: `array`
+    pattern:  2, capture: 2 - property, start: (9, 10), end: (9, 16), text: `number`
+corpus/commands.txt/023
+    pattern:  1, capture: 1 - function, start: (1, 0), end: (1, 4), text: `echo`
+    pattern:  8, capture: 7 - operator, start: (1, 5), end: (1, 6), text: `$`
+    pattern:  1, capture: 1 - function, start: (2, 0), end: (2, 4), text: `echo`
+    pattern:  0, capture: 0 - string, start: (2, 5), end: (2, 16), text: `"${module}"`
+    pattern:  7, capture: 6 - embedded, start: (2, 6), end: (2, 15), text: `${module}`
+    pattern:  2, capture: 2 - property, start: (2, 8), end: (2, 14), text: `module`
+    pattern:  8, capture: 7 - operator, start: (2, 16), end: (2, 17), text: `$`
+    pattern:  1, capture: 1 - function, start: (3, 0), end: (3, 4), text: `echo`
+    pattern:  8, capture: 7 - operator, start: (3, 5), end: (3, 6), text: `$`
+corpus/commands.txt/024
+    pattern:  1, capture: 1 - function, start: (1, 0), end: (1, 25), text: `$(( $( ver_cut 2 ) - 1 ))`
+    pattern:  7, capture: 6 - embedded, start: (1, 4), end: (1, 18), text: `$( ver_cut 2 )`
+    pattern:  1, capture: 1 - function, start: (1, 7), end: (1, 14), text: `ver_cut`
+corpus/commands.txt/025
+    pattern:  1, capture: 1 - function, start: (1, 0), end: (1, 6), text: `bin/ls`

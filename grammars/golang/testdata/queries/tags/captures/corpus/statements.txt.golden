@@ -1,0 +1,302 @@
+corpus/statements.txt/000
+    pattern:  5, capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+    pattern:  0, capture: 2 - definition.function, start: (3, 0), end: (6, 1), text: `func main() {
+  var x = y
+  const x = 5
+}`
+    pattern:  0, capture: 1 - name, start: (3, 5), end: (3, 9), text: `main`
+    pattern:  9, capture: 1 - name, start: (4, 6), end: (4, 7), text: `x`
+    pattern: 10, capture: 1 - name, start: (5, 8), end: (5, 9), text: `x`
+corpus/statements.txt/001
+    pattern:  5, capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+    pattern:  0, capture: 2 - definition.function, start: (3, 0), end: (5, 1), text: `func main() {
+  foo(5)
+}`
+    pattern:  0, capture: 1 - name, start: (3, 5), end: (3, 9), text: `main`
+    pattern:  2, capture: 4 - reference.call, start: (4, 2), end: (4, 8), text: `foo(5)`
+    pattern:  2, capture: 1 - name, start: (4, 2), end: (4, 5), text: `foo`
+corpus/statements.txt/002
+    pattern:  5, capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+    pattern:  0, capture: 2 - definition.function, start: (3, 0), end: (5, 1), text: `func main() {
+  foo <- 5
+}`
+    pattern:  0, capture: 1 - name, start: (3, 5), end: (3, 9), text: `main`
+corpus/statements.txt/003
+    pattern:  5, capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+    pattern:  0, capture: 2 - definition.function, start: (3, 0), end: (6, 1), text: `func main() {
+  i++
+  j--
+}`
+    pattern:  0, capture: 1 - name, start: (3, 5), end: (3, 9), text: `main`
+corpus/statements.txt/004
+    pattern:  5, capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+    pattern:  0, capture: 2 - definition.function, start: (3, 0), end: (17, 1), text: `func main() {
+  a = 1
+  b, c += 2, 3
+  d *= 3
+  e += 1
+  f /= 2
+  g <<= 1
+  h >>= 1
+  i %= 1
+  j &= 2
+  k &^= 3
+  l -= 1
+  m |= 2
+  n ^= 2
+}`
+    pattern:  0, capture: 1 - name, start: (3, 5), end: (3, 9), text: `main`
+corpus/statements.txt/005
+    pattern:  5, capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+    pattern:  0, capture: 2 - definition.function, start: (3, 0), end: (5, 1), text: `func main() {
+  a, b := 1, 2
+}`
+    pattern:  0, capture: 1 - name, start: (3, 5), end: (3, 9), text: `main`
+corpus/statements.txt/006
+    pattern:  5, capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+    pattern:  0, capture: 2 - definition.function, start: (3, 0), end: (25, 1), text: `func main() {
+  if a {
+    b()
+  }
+
+  if a := b(); c {
+    d()
+  }
+
+  if a {
+    b()
+  } else {
+    c()
+  }
+
+  if b {
+    c()
+  } else if d {
+    e()
+  } else {
+    f()
+  }
+}`
+    pattern:  0, capture: 1 - name, start: (3, 5), end: (3, 9), text: `main`
+    pattern:  2, capture: 4 - reference.call, start: (5, 4), end: (5, 7), text: `b()`
+    pattern:  2, capture: 1 - name, start: (5, 4), end: (5, 5), text: `b`
+    pattern:  2, capture: 4 - reference.call, start: (8, 10), end: (8, 13), text: `b()`
+    pattern:  2, capture: 1 - name, start: (8, 10), end: (8, 11), text: `b`
+    pattern:  2, capture: 4 - reference.call, start: (9, 4), end: (9, 7), text: `d()`
+    pattern:  2, capture: 1 - name, start: (9, 4), end: (9, 5), text: `d`
+    pattern:  2, capture: 4 - reference.call, start: (13, 4), end: (13, 7), text: `b()`
+    pattern:  2, capture: 1 - name, start: (13, 4), end: (13, 5), text: `b`
+    pattern:  2, capture: 4 - reference.call, start: (15, 4), end: (15, 7), text: `c()`
+    pattern:  2, capture: 1 - name, start: (15, 4), end: (15, 5), text: `c`
+    pattern:  2, capture: 4 - reference.call, start: (19, 4), end: (19, 7), text: `c()`
+    pattern:  2, capture: 1 - name, start: (19, 4), end: (19, 5), text: `c`
+    pattern:  2, capture: 4 - reference.call, start: (21, 4), end: (21, 7), text: `e()`
+    pattern:  2, capture: 1 - name, start: (21, 4), end: (21, 5), text: `e`
+    pattern:  2, capture: 4 - reference.call, start: (23, 4), end: (23, 7), text: `f()`
+    pattern:  2, capture: 1 - name, start: (23, 4), end: (23, 5), text: `f`
+corpus/statements.txt/007
+    pattern:  5, capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+    pattern:  0, capture: 2 - definition.function, start: (3, 0), end: (29, 1), text: `func main() {
+  for {
+    a()
+    goto loop
+  }
+
+  loop: for i := 0; i < 5; i++ {
+    a()
+    break loop
+  }
+
+loop2:
+  for ; i < 10; i++ {
+    a()
+    continue loop2
+  }
+
+  for ;; {
+    a()
+    continue
+  }
+
+  for x := range y {
+    a(x)
+    break
+  }
+}`
+    pattern:  0, capture: 1 - name, start: (3, 5), end: (3, 9), text: `main`
+    pattern:  2, capture: 4 - reference.call, start: (5, 4), end: (5, 7), text: `a()`
+    pattern:  2, capture: 1 - name, start: (5, 4), end: (5, 5), text: `a`
+    pattern:  2, capture: 4 - reference.call, start: (10, 4), end: (10, 7), text: `a()`
+    pattern:  2, capture: 1 - name, start: (10, 4), end: (10, 5), text: `a`
+    pattern:  2, capture: 4 - reference.call, start: (16, 4), end: (16, 7), text: `a()`
+    pattern:  2, capture: 1 - name, start: (16, 4), end: (16, 5), text: `a`
+    pattern:  2, capture: 4 - reference.call, start: (21, 4), end: (21, 7), text: `a()`
+    pattern:  2, capture: 1 - name, start: (21, 4), end: (21, 5), text: `a`
+    pattern:  2, capture: 4 - reference.call, start: (26, 4), end: (26, 8), text: `a(x)`
+    pattern:  2, capture: 1 - name, start: (26, 4), end: (26, 5), text: `a`
+corpus/statements.txt/008
+    pattern:  0, capture: 2 - definition.function, start: (1, 0), end: (20, 1), text: `func main() {
+  switch e {
+    case 1, 2:
+      a()
+      fallthrough
+    case 3:
+      d()
+    default:
+      c()
+      break
+  }
+
+  switch {
+    case true:
+      return
+  }
+
+  switch f := y(); f {
+  }
+}`
+    pattern:  0, capture: 1 - name, start: (1, 5), end: (1, 9), text: `main`
+    pattern:  2, capture: 4 - reference.call, start: (4, 6), end: (4, 9), text: `a()`
+    pattern:  2, capture: 1 - name, start: (4, 6), end: (4, 7), text: `a`
+    pattern:  2, capture: 4 - reference.call, start: (7, 6), end: (7, 9), text: `d()`
+    pattern:  2, capture: 1 - name, start: (7, 6), end: (7, 7), text: `d`
+    pattern:  2, capture: 4 - reference.call, start: (9, 6), end: (9, 9), text: `c()`
+    pattern:  2, capture: 1 - name, start: (9, 6), end: (9, 7), text: `c`
+    pattern:  2, capture: 4 - reference.call, start: (18, 14), end: (18, 17), text: `y()`
+    pattern:  2, capture: 1 - name, start: (18, 14), end: (18, 15), text: `y`
+corpus/statements.txt/009
+    pattern:  0, capture: 2 - definition.function, start: (1, 0), end: (22, 1), text: `func main() {
+  switch e.(type) {
+    case []Person:
+      a()
+    case *Dog:
+      break
+  }
+  switch i := x.(type) {
+    case nil:
+    	printString("x is nil")
+    case int:
+    	printInt(i)
+    case float64:
+    	printFloat64(i)
+    case func(int) float64:
+    	printFunction(i)
+    case bool, string:
+    	printString("type is bool or string")
+    default:
+    	printString("don't know the type")
+  }
+}`
+    pattern:  0, capture: 1 - name, start: (1, 5), end: (1, 9), text: `main`
+    pattern:  4, capture: 1 - name, start: (3, 11), end: (3, 17), text: `Person`
+    pattern:  4, capture: 6 - reference.type, start: (3, 11), end: (3, 17), text: `Person`
+    pattern:  2, capture: 4 - reference.call, start: (4, 6), end: (4, 9), text: `a()`
+    pattern:  2, capture: 1 - name, start: (4, 6), end: (4, 7), text: `a`
+    pattern:  4, capture: 1 - name, start: (5, 10), end: (5, 13), text: `Dog`
+    pattern:  4, capture: 6 - reference.type, start: (5, 10), end: (5, 13), text: `Dog`
+    pattern:  4, capture: 1 - name, start: (9, 9), end: (9, 12), text: `nil`
+    pattern:  4, capture: 6 - reference.type, start: (9, 9), end: (9, 12), text: `nil`
+    pattern:  2, capture: 4 - reference.call, start: (10, 5), end: (10, 28), text: `printString("x is nil")`
+    pattern:  2, capture: 1 - name, start: (10, 5), end: (10, 16), text: `printString`
+    pattern:  4, capture: 1 - name, start: (11, 9), end: (11, 12), text: `int`
+    pattern:  4, capture: 6 - reference.type, start: (11, 9), end: (11, 12), text: `int`
+    pattern:  2, capture: 4 - reference.call, start: (12, 5), end: (12, 16), text: `printInt(i)`
+    pattern:  2, capture: 1 - name, start: (12, 5), end: (12, 13), text: `printInt`
+    pattern:  4, capture: 1 - name, start: (13, 9), end: (13, 16), text: `float64`
+    pattern:  4, capture: 6 - reference.type, start: (13, 9), end: (13, 16), text: `float64`
+    pattern:  2, capture: 4 - reference.call, start: (14, 5), end: (14, 20), text: `printFloat64(i)`
+    pattern:  2, capture: 1 - name, start: (14, 5), end: (14, 17), text: `printFloat64`
+    pattern:  4, capture: 1 - name, start: (15, 14), end: (15, 17), text: `int`
+    pattern:  4, capture: 6 - reference.type, start: (15, 14), end: (15, 17), text: `int`
+    pattern:  4, capture: 1 - name, start: (15, 19), end: (15, 26), text: `float64`
+    pattern:  4, capture: 6 - reference.type, start: (15, 19), end: (15, 26), text: `float64`
+    pattern:  2, capture: 4 - reference.call, start: (16, 5), end: (16, 21), text: `printFunction(i)`
+    pattern:  2, capture: 1 - name, start: (16, 5), end: (16, 18), text: `printFunction`
+    pattern:  4, capture: 1 - name, start: (17, 9), end: (17, 13), text: `bool`
+    pattern:  4, capture: 6 - reference.type, start: (17, 9), end: (17, 13), text: `bool`
+    pattern:  4, capture: 1 - name, start: (17, 15), end: (17, 21), text: `string`
+    pattern:  4, capture: 6 - reference.type, start: (17, 15), end: (17, 21), text: `string`
+    pattern:  2, capture: 4 - reference.call, start: (18, 5), end: (18, 42), text: `printString("type is bool or string")`
+    pattern:  2, capture: 1 - name, start: (18, 5), end: (18, 16), text: `printString`
+    pattern:  2, capture: 4 - reference.call, start: (20, 5), end: (20, 39), text: `printString("don't know the type")`
+    pattern:  2, capture: 1 - name, start: (20, 5), end: (20, 16), text: `printString`
+corpus/statements.txt/010
+    pattern:  5, capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+    pattern:  0, capture: 2 - definition.function, start: (3, 0), end: (14, 1), text: `func main() {
+  select {
+    case x := <-c:
+      println(x)
+    case y <- c:
+      println(5)
+    case <-time.After(1):
+      println(6)
+    default:
+      return
+  }
+}`
+    pattern:  0, capture: 1 - name, start: (3, 5), end: (3, 9), text: `main`
+    pattern:  2, capture: 4 - reference.call, start: (6, 6), end: (6, 16), text: `println(x)`
+    pattern:  2, capture: 1 - name, start: (6, 6), end: (6, 13), text: `println`
+    pattern:  2, capture: 4 - reference.call, start: (8, 6), end: (8, 16), text: `println(5)`
+    pattern:  2, capture: 1 - name, start: (8, 6), end: (8, 13), text: `println`
+    pattern:  2, capture: 4 - reference.call, start: (9, 11), end: (9, 24), text: `time.After(1)`
+    pattern:  2, capture: 1 - name, start: (9, 16), end: (9, 21), text: `After`
+    pattern:  2, capture: 4 - reference.call, start: (10, 6), end: (10, 16), text: `println(6)`
+    pattern:  2, capture: 1 - name, start: (10, 6), end: (10, 13), text: `println`
+corpus/statements.txt/011
+    pattern:  5, capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+    pattern:  0, capture: 2 - definition.function, start: (3, 0), end: (6, 1), text: `func main() {
+  defer x.y()
+  go x.y()
+}`
+    pattern:  0, capture: 1 - name, start: (3, 5), end: (3, 9), text: `main`
+    pattern:  2, capture: 4 - reference.call, start: (4, 8), end: (4, 13), text: `x.y()`
+    pattern:  2, capture: 1 - name, start: (4, 10), end: (4, 11), text: `y`
+    pattern:  2, capture: 4 - reference.call, start: (5, 5), end: (5, 10), text: `x.y()`
+    pattern:  2, capture: 1 - name, start: (5, 7), end: (5, 8), text: `y`
+corpus/statements.txt/012
+    pattern:  0, capture: 2 - definition.function, start: (1, 0), end: (8, 1), text: `func main() {
+  {
+    println("hi")
+  }
+  {
+    println("bye")
+  }
+}`
+    pattern:  0, capture: 1 - name, start: (1, 5), end: (1, 9), text: `main`
+    pattern:  2, capture: 4 - reference.call, start: (3, 4), end: (3, 17), text: `println("hi")`
+    pattern:  2, capture: 1 - name, start: (3, 4), end: (3, 11), text: `println`
+    pattern:  2, capture: 4 - reference.call, start: (6, 4), end: (6, 18), text: `println("bye")`
+    pattern:  2, capture: 1 - name, start: (6, 4), end: (6, 11), text: `println`
+corpus/statements.txt/013
+    pattern:  0, capture: 2 - definition.function, start: (1, 0), end: (5, 1), text: `func main() {
+  {
+  end_of_block:
+  }
+}`
+    pattern:  0, capture: 1 - name, start: (1, 5), end: (1, 9), text: `main`
+corpus/statements.txt/014
+    pattern:  5, capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+    pattern:  0, capture: 2 - definition.function, start: (3, 0), end: (5, 1), text: `func main() {
+	;
+}`
+    pattern:  0, capture: 1 - name, start: (3, 5), end: (3, 9), text: `main`
+corpus/statements.txt/015
+    pattern:  5, capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+    pattern:  0, capture: 2 - definition.function, start: (3, 0), end: (11, 1), text: `func main() {
+  for i, v := range vectors {
+    func() {
+      if v == v {
+        fmt.Println("something: %v", vectors[i])
+      }
+    }()
+  }
+}`
+    pattern:  0, capture: 1 - name, start: (3, 5), end: (3, 9), text: `main`
+    pattern:  2, capture: 4 - reference.call, start: (7, 8), end: (7, 48), text: `fmt.Println("something: %v", vectors[i])`
+    pattern:  2, capture: 1 - name, start: (7, 12), end: (7, 19), text: `Println`
+corpus/statements.txt/016
+    pattern:  2, capture: 4 - reference.call, start: (1, 0), end: (1, 6), text: `foo(5)`
+    pattern:  2, capture: 1 - name, start: (1, 0), end: (1, 3), text: `foo`
+    pattern:  4, capture: 1 - name, start: (2, 5), end: (2, 6), text: `T`
+    pattern:  4, capture: 6 - reference.type, start: (2, 5), end: (2, 6), text: `T`

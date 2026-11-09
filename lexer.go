@@ -1,3 +1,5 @@
+// lexer.go holds the lexer code.
+
 package treesitter
 
 // Range is a contiguous region of a document.

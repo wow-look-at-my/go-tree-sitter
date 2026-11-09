@@ -1,0 +1,9 @@
+corpus/ambiguities.txt/000
+corpus/ambiguities.txt/001
+    pattern:  2, capture: 2 - definition.function, start: (2, 3), end: (2, 11), text: `a(T2 *b)`
+    pattern:  2, capture: 0 - name, start: (2, 3), end: (2, 4), text: `a`
+    pattern:  2, capture: 2 - definition.function, start: (3, 3), end: (3, 19), text: `c(T4 &d, T5 &&e)`
+    pattern:  2, capture: 0 - name, start: (3, 3), end: (3, 4), text: `c`
+corpus/ambiguities.txt/002
+    pattern:  2, capture: 2 - definition.function, start: (1, 4), end: (1, 10), text: `main()`
+    pattern:  2, capture: 0 - name, start: (1, 4), end: (1, 8), text: `main`

@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           submodules: recursive
-      - uses: wow-look-at-my/go-toolchain@master
+      - uses: wow-look-at-my/go-toolchain@lkgb
         with:
           # Approves the //go:generate directives; editing a single fails the build with the new value.
-          generate: b9dcd726c561
+          generate: a19b07a93920

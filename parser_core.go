@@ -1,3 +1,5 @@
+// parser_core.go holds the parser core code.
+
 package treesitter
 
 const (

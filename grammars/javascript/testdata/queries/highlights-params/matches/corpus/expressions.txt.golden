@@ -1,0 +1,118 @@
+corpus/expressions.txt/000
+corpus/expressions.txt/001
+corpus/expressions.txt/002
+corpus/expressions.txt/003
+corpus/expressions.txt/004
+corpus/expressions.txt/005
+corpus/expressions.txt/006
+corpus/expressions.txt/007
+corpus/expressions.txt/008
+corpus/expressions.txt/009
+corpus/expressions.txt/010
+corpus/expressions.txt/011
+corpus/expressions.txt/012
+  pattern: 0
+    capture: 0 - variable.parameter, start: (4, 6), end: (4, 7), text: `a`
+  pattern: 0
+    capture: 0 - variable.parameter, start: (4, 9), end: (4, 10), text: `b`
+  pattern: 0
+    capture: 0 - variable.parameter, start: (10, 10), end: (10, 11), text: `a`
+corpus/expressions.txt/013
+corpus/expressions.txt/014
+  pattern: 0
+    capture: 0 - variable.parameter, start: (4, 13), end: (4, 14), text: `a`
+  pattern: 0
+    capture: 0 - variable.parameter, start: (5, 6), end: (5, 7), text: `b`
+  pattern: 0
+    capture: 0 - variable.parameter, start: (6, 8), end: (6, 9), text: `c`
+  pattern: 0
+    capture: 0 - variable.parameter, start: (7, 8), end: (7, 9), text: `d`
+corpus/expressions.txt/015
+corpus/expressions.txt/016
+corpus/expressions.txt/017
+  pattern: 0
+    capture: 0 - variable.parameter, start: (6, 19), end: (6, 23), text: `quux`
+corpus/expressions.txt/018
+corpus/expressions.txt/019
+corpus/expressions.txt/020
+  pattern: 0
+    capture: 0 - variable.parameter, start: (3, 11), end: (3, 15), text: `arg1`
+  pattern: 0
+    capture: 0 - variable.parameter, start: (7, 20), end: (7, 21), text: `a`
+  pattern: 0
+    capture: 0 - variable.parameter, start: (8, 20), end: (8, 21), text: `a`
+  pattern: 0
+    capture: 0 - variable.parameter, start: (8, 22), end: (8, 23), text: `b`
+  pattern: 0
+    capture: 0 - variable.parameter, start: (9, 20), end: (9, 25), text: `async`
+corpus/expressions.txt/021
+  pattern: 0
+    capture: 0 - variable.parameter, start: (3, 1), end: (3, 2), text: `d`
+  pattern: 0
+    capture: 0 - variable.parameter, start: (3, 4), end: (3, 5), text: `e`
+  pattern: 0
+    capture: 0 - variable.parameter, start: (4, 1), end: (4, 2), text: `f`
+  pattern: 0
+    capture: 0 - variable.parameter, start: (4, 4), end: (4, 5), text: `g`
+  pattern: 0
+    capture: 0 - variable.parameter, start: (7, 1), end: (7, 9), text: `trailing`
+  pattern: 0
+    capture: 0 - variable.parameter, start: (8, 1), end: (8, 2), text: `h`
+  pattern: 0
+    capture: 0 - variable.parameter, start: (8, 4), end: (8, 12), text: `trailing`
+  pattern: 0
+    capture: 0 - variable.parameter, start: (9, 1), end: (9, 4), text: `set`
+  pattern: 0
+    capture: 0 - variable.parameter, start: (9, 6), end: (9, 8), text: `kv`
+corpus/expressions.txt/022
+  pattern: 0
+    capture: 0 - variable.parameter, start: (3, 26), end: (3, 30), text: `arg1`
+  pattern: 0
+    capture: 0 - variable.parameter, start: (3, 32), end: (3, 36), text: `arg2`
+corpus/expressions.txt/023
+  pattern: 0
+    capture: 0 - variable.parameter, start: (1, 12), end: (1, 13), text: `b`
+corpus/expressions.txt/024
+corpus/expressions.txt/025
+corpus/expressions.txt/026
+  pattern: 0
+    capture: 0 - variable.parameter, start: (1, 26), end: (1, 27), text: `a`
+  pattern: 0
+    capture: 0 - variable.parameter, start: (7, 18), end: (7, 19), text: `c`
+corpus/expressions.txt/027
+  pattern: 0
+    capture: 0 - variable.parameter, start: (2, 9), end: (2, 10), text: `x`
+  pattern: 0
+    capture: 0 - variable.parameter, start: (2, 12), end: (2, 13), text: `y`
+corpus/expressions.txt/028
+corpus/expressions.txt/029
+corpus/expressions.txt/030
+corpus/expressions.txt/031
+corpus/expressions.txt/032
+corpus/expressions.txt/033
+  pattern: 0
+    capture: 0 - variable.parameter, start: (12, 7), end: (12, 8), text: `a`
+corpus/expressions.txt/034
+corpus/expressions.txt/035
+corpus/expressions.txt/036
+corpus/expressions.txt/037
+corpus/expressions.txt/038
+corpus/expressions.txt/039
+corpus/expressions.txt/040
+corpus/expressions.txt/041
+corpus/expressions.txt/042
+corpus/expressions.txt/043
+corpus/expressions.txt/044
+corpus/expressions.txt/045
+corpus/expressions.txt/046
+corpus/expressions.txt/047
+corpus/expressions.txt/048
+corpus/expressions.txt/049
+corpus/expressions.txt/050
+corpus/expressions.txt/051
+corpus/expressions.txt/052
+corpus/expressions.txt/053
+corpus/expressions.txt/054
+  pattern: 0
+    capture: 0 - variable.parameter, start: (1, 15), end: (1, 20), text: `await`
+corpus/expressions.txt/055

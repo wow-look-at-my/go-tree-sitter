@@ -43,7 +43,7 @@ func main() {
 }
 ```
 
-`Node` also carries `NamedChild`, `Parent`, `NextSibling`, `ChildByFieldName`, and byte and point ranges. `Tree.Walk` returns a cursor for a full traversal.
+`Tree.Walk` returns a cursor for a full traversal.
 
 ## Status
 
@@ -63,6 +63,50 @@ The blob holds the lexer too. A tree-sitter lexer arrives as a C function of a f
 
 A whole parse costs about 12% more than the compiled form did, which `BenchmarkParse` measures.
 
+## Queries
+
+The query engine is a port of `lib/src/query.c` from tree-sitter v0.27.2, commit `3fb7be49145acfb07e33b61ed5689e2b6771b2e9`, plus the predicate layer the Rust binding adds in `lib/binding_rust/lib.rs`. The `query*.go` files hold it, one concern per file, and every function names the upstream function it ports.
+
+```go
+query, err := ts.NewQuery(golang.Language(), `(function_declaration name: (identifier) @name)`)
+if err != nil {
+	log.Fatal(err) // a *ts.QueryError with Kind, Offset, Row and Column
+}
+cursor := ts.NewQueryCursor()
+for match := range cursor.Matches(query, tree.RootNode(), source) {
+	for _, capture := range match.Captures {
+		fmt.Println(query.CaptureNameForID(capture.Index), capture.Node.Type())
+	}
+}
+```
+
+`Matches` and `Captures` are `iter.Seq` and `iter.Seq2` wrappers that apply the text predicates. Byte and point ranges, containing ranges, the match limit, the maximum start depth and the progress callback all carry their upstream names. Any other predicate comes back as data.
+
+Oracles check the port against upstream:
+
+- The upstream query suite, `crates/cli/src/tests/query_test.rs`, is ported in `query_upstream*_test.go`. Every test is ported or sits in the skip table with its reason. It generates a grammar from source, uses a test fixture grammar, or draws random patterns. A test written for a grammar this repository lacks is rewritten against one it has, and the pinned CLI confirmed each rewrite.
+- Goldens from `tree-sitter query` 0.27.2, in match and captures mode, for every bundled `.scm` file over each grammar's samples, small examples and corpus inputs. Every golden file matches byte for byte. Examples over 16 KB are left out to keep the goldens small.
+- Compile parity: every bundled query file compiles in both. Hand-written invalid queries under `grammars/golang/testdata/invalid-queries` cover every error kind, with the same kind, offset, row and column as the CLI.
+
+| Check | Count |
+| --- | --- |
+| Upstream query tests | 131 |
+| Ported and passing | 124 |
+| Skipped, with a reason | 7 |
+| Query golden files, byte for byte | 416 |
+| Bundled `.scm` files, compile parity | 22 |
+| Hand-written invalid queries | 9 |
+
+`FuzzNewQuery` and `FuzzQueryExec` fuzz compilation and execution. `BenchmarkCompileHighlights` and `BenchmarkHighlightCaptures` in the Rust and TypeScript grammars report allocations per operation.
+
+Known divergences from upstream:
+
+- `#match?` uses Go's `regexp`, which is RE2 syntax, where upstream uses the Rust `regex` crate. The bundled queries use no construct the two read differently. `query_regex_test.go` lists the constructs that differ and refuses a bundled regex that uses one.
+- The pattern reader classifies letters and spaces as the C locale does, with ASCII only, because that is the locale the CLI runs under.
+- A query with CRLF line endings reports the column the CLI reports. The Rust binding drops each `\r` while it counts lines, so the column drifts by one per earlier line. The byte offset is exact in both.
+- A `TextProvider` returns one byte slice per node. The Rust one yields chunks.
+- Executing over a null node reports no matches. Upstream reads through the null pointer.
+
 ## The limit worth knowing
 
 A grammar reaches this runtime by way of `cmd/ts-translate`, which refuses an ABI outside the range `parser_core.go` accepts. A grammar outside that range fails the build rather than becoming a package that loads and parses nothing.
@@ -78,3 +122,11 @@ go-toolchain
 ```
 
 A checkout without the submodules fails the corpus tests loudly rather than reporting a green over zero cases.
+
+Each grammar's bundled queries also run against its samples, its small examples and its corpus inputs. The output must match `tree-sitter query` 0.27.2 byte for byte. The goldens live in `grammars/*/testdata/queries`, and `internal/querygoldens` describes their layout. To record them again:
+
+```sh
+TS_GOLDENS_RECORD=1 TS_GOLDENS_CLI=/path/to/tree-sitter go-toolchain
+```
+
+`ts-goldens query -lang all -cli /path/to/tree-sitter` does the same from a built binary.

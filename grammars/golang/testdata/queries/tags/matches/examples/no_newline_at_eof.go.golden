@@ -1,0 +1,9 @@
+examples/no_newline_at_eof.go
+  pattern: 5
+    capture: 1 - name, start: (6, 8), end: (6, 12), text: `main`
+  pattern: 0
+    capture: definition.function, start: (8, 0), end: (18, 1)
+    capture: 1 - name, start: (8, 5), end: (8, 9), text: `main`
+  pattern: 2
+    capture: 4 - reference.call, start: (15, 3), end: (15, 18), text: `panic("x != 1")`
+    capture: 1 - name, start: (15, 3), end: (15, 8), text: `panic`

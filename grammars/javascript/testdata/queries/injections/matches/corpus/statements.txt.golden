@@ -1,0 +1,72 @@
+corpus/statements.txt/000
+corpus/statements.txt/001
+corpus/statements.txt/002
+  pattern: 2
+    capture: 1 - injection.content, start: (16, 5), end: (16, 18), text: `/* comment */`
+corpus/statements.txt/003
+corpus/statements.txt/004
+corpus/statements.txt/005
+corpus/statements.txt/006
+corpus/statements.txt/007
+corpus/statements.txt/008
+corpus/statements.txt/009
+corpus/statements.txt/010
+corpus/statements.txt/011
+corpus/statements.txt/012
+corpus/statements.txt/013
+corpus/statements.txt/014
+corpus/statements.txt/015
+corpus/statements.txt/016
+corpus/statements.txt/017
+corpus/statements.txt/018
+corpus/statements.txt/019
+  pattern: 2
+    capture: 1 - injection.content, start: (3, 2), end: (3, 23), text: `// This is a property`
+  pattern: 2
+    capture: injection.content, start: (6, 2), end: (8, 5)
+corpus/statements.txt/020
+  pattern: 2
+    capture: 1 - injection.content, start: (1, 0), end: (1, 39), text: `// this is the beginning of the script.`
+  pattern: 2
+    capture: 1 - injection.content, start: (2, 0), end: (2, 14), text: `// here we go.`
+  pattern: 2
+    capture: 1 - injection.content, start: (5, 2), end: (5, 24), text: `// this is a property.`
+  pattern: 2
+    capture: 1 - injection.content, start: (6, 2), end: (6, 29), text: `// its value is a function.`
+  pattern: 2
+    capture: 1 - injection.content, start: (7, 18), end: (7, 43), text: `/* this is a parameter */`
+  pattern: 2
+    capture: 1 - injection.content, start: (8, 4), end: (8, 28), text: `// this is one statement`
+  pattern: 2
+    capture: 1 - injection.content, start: (10, 4), end: (10, 32), text: `// this is another statement`
+  pattern: 2
+    capture: 1 - injection.content, start: (16, 2), end: (16, 22), text: `// this is a comment`
+  pattern: 2
+    capture: 1 - injection.content, start: (19, 6), end: (19, 15), text: `/* >_< */`
+corpus/statements.txt/021
+  pattern: 2
+    capture: 1 - injection.content, start: (1, 0), end: (1, 7), text: `/* a */`
+  pattern: 2
+    capture: 1 - injection.content, start: (4, 0), end: (4, 8), text: `/* b **/`
+  pattern: 2
+    capture: 1 - injection.content, start: (7, 0), end: (7, 9), text: `/* c ***/`
+  pattern: 2
+    capture: injection.content, start: (10, 0), end: (12, 4)
+  pattern: 2
+    capture: injection.content, start: (17, 6), end: (18, 13)
+corpus/statements.txt/022
+  pattern: 2
+    capture: 1 - injection.content, start: (1, 2), end: (1, 12), text: `// comment`
+corpus/statements.txt/023
+corpus/statements.txt/024
+corpus/statements.txt/025
+corpus/statements.txt/026
+corpus/statements.txt/027
+corpus/statements.txt/028
+corpus/statements.txt/029
+corpus/statements.txt/030
+corpus/statements.txt/031
+corpus/statements.txt/032
+corpus/statements.txt/033
+  pattern: 2
+    capture: 1 - injection.content, start: (1, 13), end: (1, 15), text: `//`

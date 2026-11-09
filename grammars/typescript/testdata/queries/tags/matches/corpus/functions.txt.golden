@@ -1,0 +1,61 @@
+corpus/functions.txt/000
+  pattern: 6
+    capture: 6 - reference.type, start: (5, 17), end: (5, 20), text: `: T`
+    capture: 0 - name, start: (5, 19), end: (5, 20), text: `T`
+  pattern: 6
+    capture: 6 - reference.type, start: (5, 21), end: (5, 24), text: `: T`
+    capture: 0 - name, start: (5, 23), end: (5, 24), text: `T`
+  pattern: 6
+    capture: 6 - reference.type, start: (9, 32), end: (9, 35), text: `: T`
+    capture: 0 - name, start: (9, 34), end: (9, 35), text: `T`
+  pattern: 6
+    capture: 6 - reference.type, start: (17, 47), end: (17, 50), text: `: T`
+    capture: 0 - name, start: (17, 49), end: (17, 50), text: `T`
+  pattern: 6
+    capture: 6 - reference.type, start: (17, 53), end: (17, 56), text: `: U`
+    capture: 0 - name, start: (17, 55), end: (17, 56), text: `U`
+corpus/functions.txt/001
+  pattern: 7
+    capture: 7 - reference.class, start: (1, 14), end: (1, 35), text: `new Array<DiffLine>()`
+    capture: 0 - name, start: (1, 18), end: (1, 23), text: `Array`
+corpus/functions.txt/002
+corpus/functions.txt/003
+corpus/functions.txt/004
+corpus/functions.txt/005
+corpus/functions.txt/006
+corpus/functions.txt/007
+  pattern: 0
+    capture: 1 - definition.function, start: (1, 15), end: (1, 34), text: `function foo(): bar`
+    capture: 0 - name, start: (1, 24), end: (1, 27), text: `foo`
+  pattern: 6
+    capture: 6 - reference.type, start: (1, 29), end: (1, 34), text: `: bar`
+    capture: 0 - name, start: (1, 31), end: (1, 34), text: `bar`
+corpus/functions.txt/008
+  pattern: 0
+    capture: 1 - definition.function, start: (4, 0), end: (4, 17), text: `function foo(bar)`
+    capture: 0 - name, start: (4, 9), end: (4, 12), text: `foo`
+  pattern: 0
+    capture: 1 - definition.function, start: (5, 0), end: (5, 23), text: `function foo(bar): baz;`
+    capture: 0 - name, start: (5, 9), end: (5, 12), text: `foo`
+  pattern: 6
+    capture: 6 - reference.type, start: (5, 17), end: (5, 22), text: `: baz`
+    capture: 0 - name, start: (5, 19), end: (5, 22), text: `baz`
+  pattern: 0
+    capture: 1 - definition.function, start: (6, 0), end: (6, 17), text: `function foo(bar)`
+    capture: 0 - name, start: (6, 9), end: (6, 12), text: `foo`
+  pattern: 0
+    capture: 1 - definition.function, start: (8, 0), end: (8, 41), text: `function foo(): () => { [key: foo]: bar }`
+    capture: 0 - name, start: (8, 9), end: (8, 12), text: `foo`
+  pattern: 6
+    capture: 6 - reference.type, start: (8, 34), end: (8, 39), text: `: bar`
+    capture: 0 - name, start: (8, 36), end: (8, 39), text: `bar`
+  pattern: 6
+    capture: 6 - reference.type, start: (9, 34), end: (9, 39), text: `: bar`
+    capture: 0 - name, start: (9, 36), end: (9, 39), text: `bar`
+corpus/functions.txt/009
+  pattern: 0
+    capture: 1 - definition.function, start: (1, 0), end: (1, 14), text: `function foo()`
+    capture: 0 - name, start: (1, 9), end: (1, 12), text: `foo`
+  pattern: 0
+    capture: definition.function, start: (9, 0), end: (10, 11)
+    capture: 0 - name, start: (9, 9), end: (9, 12), text: `foo`

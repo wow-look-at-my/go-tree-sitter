@@ -1,0 +1,81 @@
+corpus/expressions.txt/000
+corpus/expressions.txt/001
+corpus/expressions.txt/002
+    pattern:  0, capture: 0 - injection.language, start: (1, 4), end: (1, 5), text: `f`
+    pattern:  0, capture: 1 - injection.content, start: (1, 6), end: (1, 11), text: `hello`
+    pattern:  0, capture: 0 - injection.language, start: (3, 0), end: (3, 1), text: `f`
+    pattern:  0, capture: 1 - injection.content, start: (3, 2), end: (3, 7), text: `hello`
+corpus/expressions.txt/003
+    pattern:  0, capture: 0 - injection.language, start: (1, 0), end: (1, 1), text: `f`
+    pattern:  0, capture: 1 - injection.content, start: (1, 3), end: (1, 8), text: `hello`
+    pattern:  0, capture: 0 - injection.language, start: (2, 0), end: (2, 1), text: `f`
+    pattern:  0, capture: 1 - injection.content, start: (3, 1), end: (3, 6), text: `hello`
+corpus/expressions.txt/004
+corpus/expressions.txt/005
+corpus/expressions.txt/006
+corpus/expressions.txt/007
+corpus/expressions.txt/008
+    pattern:  1, capture: 1 - injection.content, start: (1, 1), end: (1, 6), text: `one\\`
+    pattern:  1, capture: 1 - injection.content, start: (2, 1), end: (2, 4), text: `one`
+    pattern:  1, capture: 1 - injection.content, start: (3, 1), end: (3, 4), text: `one`
+    pattern:  1, capture: 1 - injection.content, start: (4, 1), end: (4, 4), text: `one`
+    pattern:  1, capture: 1 - injection.content, start: (5, 1), end: (5, 6), text: `on\/e`
+    pattern:  1, capture: 1 - injection.content, start: (6, 1), end: (6, 10), text: `on[^/]afe`
+    pattern:  1, capture: 1 - injection.content, start: (7, 1), end: (7, 6), text: `[\]/]`
+    pattern:  1, capture: 1 - injection.content, start: (8, 1), end: (8, 5), text: `<!--`
+    pattern:  1, capture: 1 - injection.content, start: (9, 1), end: (9, 2), text: `a`
+    pattern:  2, capture: 1 - injection.content, start: (9, 3), end: (9, 13), text: `//comment;`
+corpus/expressions.txt/009
+    pattern:  2, capture: 1 - injection.content, start: (2, 6), end: (2, 19), text: `/* comment */`
+corpus/expressions.txt/010
+corpus/expressions.txt/011
+corpus/expressions.txt/012
+corpus/expressions.txt/013
+corpus/expressions.txt/014
+corpus/expressions.txt/015
+corpus/expressions.txt/016
+corpus/expressions.txt/017
+corpus/expressions.txt/018
+corpus/expressions.txt/019
+corpus/expressions.txt/020
+corpus/expressions.txt/021
+corpus/expressions.txt/022
+corpus/expressions.txt/023
+corpus/expressions.txt/024
+corpus/expressions.txt/025
+corpus/expressions.txt/026
+    pattern:  2, capture: 1 - injection.content, start: (5, 0), end: (5, 12), text: `// a comment`
+corpus/expressions.txt/027
+corpus/expressions.txt/028
+corpus/expressions.txt/029
+corpus/expressions.txt/030
+corpus/expressions.txt/031
+corpus/expressions.txt/032
+corpus/expressions.txt/033
+corpus/expressions.txt/034
+corpus/expressions.txt/035
+corpus/expressions.txt/036
+corpus/expressions.txt/037
+corpus/expressions.txt/038
+corpus/expressions.txt/039
+corpus/expressions.txt/040
+corpus/expressions.txt/041
+corpus/expressions.txt/042
+corpus/expressions.txt/043
+corpus/expressions.txt/044
+corpus/expressions.txt/045
+corpus/expressions.txt/046
+corpus/expressions.txt/047
+corpus/expressions.txt/048
+corpus/expressions.txt/049
+corpus/expressions.txt/050
+corpus/expressions.txt/051
+    pattern:  1, capture: 1 - injection.content, start: (2, 16), end: (2, 19), text: `baz`
+corpus/expressions.txt/052
+    pattern:  2, capture: 1 - injection.content, start: (1, 3), end: (1, 39), text: `// Type definitions for Dexie v1.4.1`
+    pattern:  2, capture: 1 - injection.content, start: (2, 3), end: (2, 53), text: `// Project: https://github.com/dfahlander/Dexie.js`
+    pattern:  2, capture: 1 - injection.content, start: (3, 3), end: (3, 68), text: `// Definitions by: David Fahlander <http://github.com/dfahlander>`
+    pattern:  2, capture: 1 - injection.content, start: (4, 0), end: (4, 66), text: `// Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped`
+corpus/expressions.txt/053
+corpus/expressions.txt/054
+corpus/expressions.txt/055

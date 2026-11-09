@@ -1,0 +1,10 @@
+samples/sample.c.txt
+    pattern:  0, capture: 1 - definition.class, start: (9, 0), end: (12, 1), text: `struct point {
+	int x;
+	int y;
+}`
+    pattern:  0, capture: 0 - name, start: (9, 7), end: (9, 12), text: `point`
+    pattern:  2, capture: 2 - definition.function, start: (16, 4), end: (16, 21), text: `add(int a, int b)`
+    pattern:  2, capture: 0 - name, start: (16, 4), end: (16, 7), text: `add`
+    pattern:  2, capture: 2 - definition.function, start: (20, 4), end: (20, 14), text: `main(void)`
+    pattern:  2, capture: 0 - name, start: (20, 4), end: (20, 8), text: `main`

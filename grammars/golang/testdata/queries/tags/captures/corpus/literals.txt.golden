@@ -1,0 +1,111 @@
+corpus/literals.txt/000
+    pattern:  5, capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+    pattern: 10, capture: 1 - name, start: (4, 2), end: (4, 4), text: `i1`
+    pattern: 10, capture: 1 - name, start: (5, 2), end: (5, 4), text: `i2`
+    pattern: 10, capture: 1 - name, start: (6, 2), end: (6, 4), text: `i3`
+    pattern: 10, capture: 1 - name, start: (7, 2), end: (7, 4), text: `i4`
+    pattern: 10, capture: 1 - name, start: (8, 2), end: (8, 4), text: `i5`
+    pattern: 10, capture: 1 - name, start: (9, 2), end: (9, 4), text: `i6`
+    pattern: 10, capture: 1 - name, start: (10, 2), end: (10, 4), text: `i7`
+    pattern: 10, capture: 1 - name, start: (11, 2), end: (11, 4), text: `i8`
+    pattern: 10, capture: 1 - name, start: (12, 2), end: (12, 4), text: `i9`
+    pattern: 10, capture: 1 - name, start: (13, 2), end: (13, 5), text: `i10`
+    pattern: 10, capture: 1 - name, start: (14, 2), end: (14, 5), text: `i11`
+corpus/literals.txt/001
+    pattern:  5, capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+    pattern: 10, capture: 1 - name, start: (4, 2), end: (4, 4), text: `f1`
+    pattern: 10, capture: 1 - name, start: (5, 2), end: (5, 4), text: `f2`
+    pattern: 10, capture: 1 - name, start: (6, 2), end: (6, 4), text: `f3`
+    pattern: 10, capture: 1 - name, start: (7, 2), end: (7, 4), text: `f4`
+    pattern: 10, capture: 1 - name, start: (8, 2), end: (8, 4), text: `f5`
+    pattern: 10, capture: 1 - name, start: (9, 2), end: (9, 4), text: `f6`
+    pattern: 10, capture: 1 - name, start: (10, 2), end: (10, 4), text: `f7`
+    pattern: 10, capture: 1 - name, start: (11, 2), end: (11, 4), text: `f8`
+    pattern: 10, capture: 1 - name, start: (12, 2), end: (12, 4), text: `f9`
+    pattern: 10, capture: 1 - name, start: (13, 2), end: (13, 5), text: `f10`
+    pattern: 10, capture: 1 - name, start: (14, 2), end: (14, 5), text: `f11`
+    pattern: 10, capture: 1 - name, start: (15, 2), end: (15, 5), text: `f12`
+    pattern: 10, capture: 1 - name, start: (16, 2), end: (16, 5), text: `f13`
+    pattern: 10, capture: 1 - name, start: (17, 2), end: (17, 5), text: `f14`
+    pattern: 10, capture: 1 - name, start: (18, 2), end: (18, 5), text: `f15`
+    pattern: 10, capture: 1 - name, start: (19, 2), end: (19, 5), text: `f16`
+corpus/literals.txt/002
+    pattern:  5, capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+    pattern: 10, capture: 1 - name, start: (4, 2), end: (4, 3), text: `a`
+    pattern: 10, capture: 1 - name, start: (5, 2), end: (5, 3), text: `b`
+    pattern: 10, capture: 1 - name, start: (6, 2), end: (6, 3), text: `c`
+    pattern: 10, capture: 1 - name, start: (7, 2), end: (7, 3), text: `c`
+    pattern: 10, capture: 1 - name, start: (8, 2), end: (8, 3), text: `c`
+    pattern: 10, capture: 1 - name, start: (9, 2), end: (9, 3), text: `c`
+corpus/literals.txt/003
+    pattern:  5, capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+    pattern: 10, capture: 1 - name, start: (4, 2), end: (4, 3), text: `a`
+    pattern: 10, capture: 1 - name, start: (5, 2), end: (5, 3), text: `b`
+    pattern: 10, capture: 1 - name, start: (6, 2), end: (6, 3), text: `c`
+    pattern: 10, capture: 1 - name, start: (7, 2), end: (7, 3), text: `d`
+    pattern: 10, capture: 1 - name, start: (8, 2), end: (8, 3), text: `e`
+    pattern: 10, capture: 1 - name, start: (9, 2), end: (9, 3), text: `f`
+    pattern: 10, capture: 1 - name, start: (10, 2), end: (10, 3), text: `g`
+    pattern: 10, capture: 1 - name, start: (11, 2), end: (11, 3), text: `h`
+    pattern: 10, capture: 1 - name, start: (12, 2), end: (12, 3), text: `i`
+    pattern: 10, capture: 1 - name, start: (13, 2), end: (13, 3), text: `j`
+    pattern: 10, capture: 1 - name, start: (14, 2), end: (14, 3), text: `k`
+    pattern: 10, capture: 1 - name, start: (15, 2), end: (15, 3), text: `l`
+corpus/literals.txt/004
+    pattern:  5, capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+    pattern: 10, capture: 1 - name, start: (4, 2), end: (4, 3), text: `a`
+    pattern: 10, capture: 1 - name, start: (5, 2), end: (5, 3), text: `b`
+    pattern: 10, capture: 1 - name, start: (6, 2), end: (6, 3), text: `c`
+    pattern: 10, capture: 1 - name, start: (7, 2), end: (7, 3), text: `d`
+corpus/literals.txt/005
+    pattern:  5, capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+    pattern: 10, capture: 1 - name, start: (3, 6), end: (3, 8), text: `s1`
+    pattern:  4, capture: 1 - name, start: (3, 13), end: (3, 19), text: `string`
+    pattern:  4, capture: 6 - reference.type, start: (3, 13), end: (3, 19), text: `string`
+    pattern: 10, capture: 1 - name, start: (5, 6), end: (5, 8), text: `s2`
+    pattern:  4, capture: 1 - name, start: (5, 13), end: (5, 19), text: `string`
+    pattern:  4, capture: 6 - reference.type, start: (5, 13), end: (5, 19), text: `string`
+    pattern: 10, capture: 1 - name, start: (7, 6), end: (7, 8), text: `s3`
+    pattern:  4, capture: 1 - name, start: (7, 13), end: (7, 19), text: `string`
+    pattern:  4, capture: 6 - reference.type, start: (7, 13), end: (7, 19), text: `string`
+corpus/literals.txt/006
+    pattern:  5, capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+    pattern: 10, capture: 1 - name, start: (3, 6), end: (3, 8), text: `a1`
+    pattern:  4, capture: 1 - name, start: (3, 16), end: (3, 19), text: `int`
+    pattern:  4, capture: 6 - reference.type, start: (3, 16), end: (3, 19), text: `int`
+corpus/literals.txt/007
+    pattern:  5, capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+    pattern: 10, capture: 1 - name, start: (3, 6), end: (3, 7), text: `s`
+    pattern:  4, capture: 1 - name, start: (3, 14), end: (3, 20), text: `string`
+    pattern:  4, capture: 6 - reference.type, start: (3, 14), end: (3, 20), text: `string`
+    pattern:  4, capture: 1 - name, start: (3, 21), end: (3, 27), text: `string`
+    pattern:  4, capture: 6 - reference.type, start: (3, 21), end: (3, 27), text: `string`
+corpus/literals.txt/008
+    pattern:  5, capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+    pattern: 10, capture: 1 - name, start: (3, 6), end: (3, 8), text: `s1`
+    pattern:  4, capture: 1 - name, start: (3, 11), end: (3, 17), text: `Person`
+    pattern:  4, capture: 6 - reference.type, start: (3, 11), end: (3, 17), text: `Person`
+    pattern: 10, capture: 1 - name, start: (8, 6), end: (8, 8), text: `s2`
+    pattern:  4, capture: 1 - name, start: (8, 20), end: (8, 23), text: `int`
+    pattern:  4, capture: 6 - reference.type, start: (8, 20), end: (8, 23), text: `int`
+    pattern: 10, capture: 1 - name, start: (10, 6), end: (10, 8), text: `s3`
+    pattern:  4, capture: 1 - name, start: (10, 16), end: (10, 20), text: `Time`
+    pattern:  4, capture: 6 - reference.type, start: (10, 16), end: (10, 20), text: `Time`
+    pattern: 10, capture: 1 - name, start: (12, 6), end: (12, 8), text: `g1`
+    pattern:  4, capture: 1 - name, start: (12, 11), end: (12, 14), text: `Foo`
+    pattern:  4, capture: 6 - reference.type, start: (12, 11), end: (12, 14), text: `Foo`
+    pattern:  4, capture: 1 - name, start: (12, 15), end: (12, 22), text: `float64`
+    pattern:  4, capture: 6 - reference.type, start: (12, 15), end: (12, 22), text: `float64`
+    pattern:  4, capture: 1 - name, start: (12, 24), end: (12, 27), text: `Bar`
+    pattern:  4, capture: 6 - reference.type, start: (12, 24), end: (12, 27), text: `Bar`
+    pattern:  4, capture: 1 - name, start: (12, 28), end: (12, 31), text: `int`
+    pattern:  4, capture: 6 - reference.type, start: (12, 28), end: (12, 31), text: `int`
+corpus/literals.txt/009
+    pattern:  5, capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+    pattern: 10, capture: 1 - name, start: (3, 6), end: (3, 8), text: `s1`
+    pattern:  4, capture: 1 - name, start: (3, 18), end: (3, 24), text: `string`
+    pattern:  4, capture: 6 - reference.type, start: (3, 18), end: (3, 24), text: `string`
+    pattern:  4, capture: 1 - name, start: (3, 27), end: (3, 30), text: `int`
+    pattern:  4, capture: 6 - reference.type, start: (3, 27), end: (3, 30), text: `int`
+    pattern:  4, capture: 1 - name, start: (3, 32), end: (3, 35), text: `int`
+    pattern:  4, capture: 6 - reference.type, start: (3, 32), end: (3, 35), text: `int`

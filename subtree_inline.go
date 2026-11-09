@@ -1,3 +1,5 @@
+// subtree_inline.go holds the subtree inline code.
+
 package treesitter
 
 // The inline arm, and every accessor that asks which arm it reads. The field

@@ -1,0 +1,96 @@
+corpus/modules.txt/000
+  pattern: 11
+    capture: 5 - keyword, start: (1, 0), end: (1, 6), text: `module`
+  pattern: 10
+    capture: 4 - module, start: (1, 7), end: (1, 10), text: `mod`
+corpus/modules.txt/001
+  pattern: 11
+    capture: 5 - keyword, start: (1, 0), end: (1, 6), text: `export`
+  pattern: 11
+    capture: 5 - keyword, start: (1, 7), end: (1, 13), text: `module`
+  pattern: 10
+    capture: 4 - module, start: (1, 14), end: (1, 17), text: `mod`
+corpus/modules.txt/002
+  pattern: 11
+    capture: 5 - keyword, start: (1, 0), end: (1, 6), text: `export`
+  pattern: 11
+    capture: 5 - keyword, start: (1, 7), end: (1, 13), text: `module`
+  pattern: 10
+    capture: 4 - module, start: (1, 14), end: (1, 17), text: `mod`
+  pattern: 10
+    capture: 4 - module, start: (1, 18), end: (1, 21), text: `mod`
+corpus/modules.txt/003
+  pattern: 11
+    capture: 5 - keyword, start: (1, 0), end: (1, 6), text: `export`
+  pattern: 11
+    capture: 5 - keyword, start: (1, 7), end: (1, 13), text: `module`
+  pattern: 10
+    capture: 4 - module, start: (1, 14), end: (1, 17), text: `mod`
+  pattern: 10
+    capture: 4 - module, start: (1, 18), end: (1, 21), text: `mod`
+corpus/modules.txt/004
+  pattern: 11
+    capture: 5 - keyword, start: (1, 0), end: (1, 6), text: `import`
+  pattern: 10
+    capture: 4 - module, start: (1, 7), end: (1, 10), text: `mod`
+corpus/modules.txt/005
+  pattern: 11
+    capture: 5 - keyword, start: (1, 0), end: (1, 6), text: `export`
+  pattern: 11
+    capture: 5 - keyword, start: (1, 7), end: (1, 13), text: `import`
+  pattern: 10
+    capture: 4 - module, start: (1, 14), end: (1, 17), text: `mod`
+corpus/modules.txt/006
+  pattern: 11
+    capture: 5 - keyword, start: (1, 0), end: (1, 6), text: `export`
+  pattern: 11
+    capture: 5 - keyword, start: (1, 7), end: (1, 13), text: `import`
+  pattern: 10
+    capture: 4 - module, start: (1, 15), end: (1, 18), text: `mod`
+corpus/modules.txt/007
+  pattern: 11
+    capture: 5 - keyword, start: (1, 0), end: (1, 6), text: `export`
+  pattern: 11
+    capture: 5 - keyword, start: (1, 7), end: (1, 13), text: `import`
+corpus/modules.txt/008
+  pattern: 11
+    capture: 5 - keyword, start: (1, 0), end: (1, 6), text: `module`
+corpus/modules.txt/009
+  pattern: 11
+    capture: 5 - keyword, start: (1, 0), end: (1, 6), text: `module`
+  pattern: 11
+    capture: 5 - keyword, start: (1, 8), end: (1, 15), text: `private`
+corpus/modules.txt/010
+  pattern: 11
+    capture: 5 - keyword, start: (1, 0), end: (1, 6), text: `export`
+  pattern: 11
+    capture: 5 - keyword, start: (1, 7), end: (1, 13), text: `module`
+  pattern: 10
+    capture: 4 - module, start: (1, 14), end: (1, 15), text: `A`
+  pattern: 11
+    capture: 5 - keyword, start: (3, 0), end: (3, 6), text: `export`
+  pattern: 11
+    capture: 5 - keyword, start: (7, 0), end: (7, 6), text: `export`
+  pattern: 11
+    capture: 5 - keyword, start: (12, 0), end: (12, 6), text: `export`
+  pattern: 11
+    capture: 5 - keyword, start: (12, 7), end: (12, 16), text: `namespace`
+corpus/modules.txt/011
+  pattern: 11
+    capture: 5 - keyword, start: (2, 0), end: (2, 6), text: `module`
+  pattern: 11
+    capture: 5 - keyword, start: (4, 0), end: (4, 6), text: `export`
+  pattern: 11
+    capture: 5 - keyword, start: (4, 7), end: (4, 13), text: `module`
+  pattern: 10
+    capture: 4 - module, start: (4, 14), end: (4, 17), text: `foo`
+  pattern: 11
+    capture: 5 - keyword, start: (8, 0), end: (8, 6), text: `import`
+  pattern: 10
+    capture: 4 - module, start: (8, 7), end: (8, 10), text: `std`
+  pattern: 11
+    capture: 5 - keyword, start: (10, 0), end: (10, 6), text: `import`
+  pattern: 11
+    capture: 5 - keyword, start: (13, 0), end: (13, 6), text: `export`
+  pattern: 11
+    capture: 5 - keyword, start: (15, 0), end: (15, 5), text: `class`

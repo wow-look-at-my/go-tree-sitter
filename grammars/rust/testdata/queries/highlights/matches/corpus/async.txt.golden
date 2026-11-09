@@ -1,0 +1,181 @@
+corpus/async.txt/000
+  pattern: 39
+    capture: 14 - keyword, start: (1, 0), end: (1, 5), text: `async`
+  pattern: 49
+    capture: 14 - keyword, start: (1, 6), end: (1, 8), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (1, 9), end: (1, 12), text: `abc`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (1, 12), end: (1, 13), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (1, 13), end: (1, 14), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 15), end: (1, 16), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (1, 16), end: (1, 17), text: `}`
+  pattern: 39
+    capture: 14 - keyword, start: (3, 0), end: (3, 5), text: `async`
+  pattern: 49
+    capture: 14 - keyword, start: (3, 6), end: (3, 8), text: `fn`
+  pattern: 17
+    capture: 5 - function, start: (3, 9), end: (3, 13), text: `main`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (3, 13), end: (3, 14), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (3, 14), end: (3, 15), text: `)`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (3, 16), end: (3, 17), text: `{`
+  pattern: 55
+    capture: 14 - keyword, start: (4, 4), end: (4, 7), text: `let`
+  pattern: 33
+    capture: 11 - punctuation.delimiter, start: (4, 19), end: (4, 20), text: `.`
+  pattern: 40
+    capture: 14 - keyword, start: (4, 20), end: (4, 25), text: `await`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (4, 26), end: (4, 27), text: `;`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (5, 0), end: (5, 1), text: `}`
+corpus/async.txt/001
+  pattern: 33
+    capture: 11 - punctuation.delimiter, start: (1, 7), end: (1, 8), text: `.`
+  pattern: 40
+    capture: 14 - keyword, start: (1, 8), end: (1, 13), text: `await`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (1, 13), end: (1, 14), text: `;`
+  pattern: 33
+    capture: 11 - punctuation.delimiter, start: (2, 7), end: (2, 8), text: `.`
+  pattern: 40
+    capture: 14 - keyword, start: (2, 8), end: (2, 13), text: `await`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (2, 14), end: (2, 15), text: `;`
+  pattern: 33
+    capture: 11 - punctuation.delimiter, start: (3, 7), end: (3, 8), text: `.`
+  pattern: 40
+    capture: 14 - keyword, start: (3, 8), end: (3, 13), text: `await`
+  pattern: 33
+    capture: 11 - punctuation.delimiter, start: (3, 14), end: (3, 15), text: `.`
+  pattern: 40
+    capture: 14 - keyword, start: (3, 15), end: (3, 20), text: `await`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (3, 21), end: (3, 22), text: `;`
+  pattern: 33
+    capture: 11 - punctuation.delimiter, start: (4, 7), end: (4, 8), text: `.`
+  pattern: 40
+    capture: 14 - keyword, start: (4, 8), end: (4, 13), text: `await`
+  pattern: 33
+    capture: 11 - punctuation.delimiter, start: (4, 14), end: (4, 15), text: `.`
+  pattern: 11
+    capture: 6 - function.method, start: (4, 15), end: (4, 23), text: `function`
+  pattern: 2
+    capture: 2 - property, start: (4, 15), end: (4, 23), text: `function`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (4, 23), end: (4, 24), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (4, 24), end: (4, 25), text: `)`
+  pattern: 33
+    capture: 11 - punctuation.delimiter, start: (4, 25), end: (4, 26), text: `.`
+  pattern: 40
+    capture: 14 - keyword, start: (4, 26), end: (4, 31), text: `await`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (4, 32), end: (4, 33), text: `;`
+corpus/async.txt/002
+  pattern: 39
+    capture: 14 - keyword, start: (1, 0), end: (1, 5), text: `async`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 6), end: (1, 7), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (1, 7), end: (1, 8), text: `}`
+  pattern: 39
+    capture: 14 - keyword, start: (2, 0), end: (2, 5), text: `async`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (2, 6), end: (2, 7), text: `{`
+  pattern: 55
+    capture: 14 - keyword, start: (2, 8), end: (2, 11), text: `let`
+  pattern: 86
+    capture: 17 - constant.builtin, start: (2, 16), end: (2, 18), text: `10`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (2, 18), end: (2, 19), text: `;`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (2, 20), end: (2, 21), text: `}`
+  pattern: 39
+    capture: 14 - keyword, start: (3, 0), end: (3, 5), text: `async`
+  pattern: 60
+    capture: 14 - keyword, start: (3, 6), end: (3, 10), text: `move`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (3, 11), end: (3, 12), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (3, 12), end: (3, 13), text: `}`
+corpus/async.txt/003
+  pattern: 55
+    capture: 14 - keyword, start: (1, 0), end: (1, 3), text: `let`
+  pattern: 39
+    capture: 14 - keyword, start: (1, 8), end: (1, 13), text: `async`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (1, 17), end: (1, 18), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (1, 18), end: (1, 19), text: `)`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (1, 19), end: (1, 20), text: `;`
+corpus/async.txt/004
+  pattern: 55
+    capture: 14 - keyword, start: (1, 0), end: (1, 3), text: `let`
+  pattern: 39
+    capture: 14 - keyword, start: (1, 8), end: (1, 13), text: `async`
+  pattern: 60
+    capture: 14 - keyword, start: (1, 14), end: (1, 18), text: `move`
+  pattern: 39
+    capture: 14 - keyword, start: (1, 22), end: (1, 27), text: `async`
+  pattern: 60
+    capture: 14 - keyword, start: (1, 28), end: (1, 32), text: `move`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 33), end: (1, 34), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (1, 34), end: (1, 35), text: `}`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (1, 35), end: (1, 36), text: `;`
+corpus/async.txt/005
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 4), end: (1, 5), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (1, 5), end: (1, 6), text: `}`
+corpus/async.txt/006
+  pattern: 51
+    capture: 14 - keyword, start: (1, 0), end: (1, 3), text: `gen`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (1, 4), end: (1, 5), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (1, 5), end: (1, 6), text: `}`
+  pattern: 51
+    capture: 14 - keyword, start: (2, 0), end: (2, 3), text: `gen`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (2, 4), end: (2, 5), text: `{`
+  pattern: 55
+    capture: 14 - keyword, start: (2, 6), end: (2, 9), text: `let`
+  pattern: 86
+    capture: 17 - constant.builtin, start: (2, 14), end: (2, 16), text: `10`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (2, 16), end: (2, 17), text: `;`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (2, 18), end: (2, 19), text: `}`
+  pattern: 51
+    capture: 14 - keyword, start: (3, 0), end: (3, 3), text: `gen`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (3, 4), end: (3, 5), text: `{`
+  pattern: 74
+    capture: 14 - keyword, start: (3, 6), end: (3, 11), text: `yield`
+  pattern: 23
+    capture: 10 - punctuation.bracket, start: (3, 12), end: (3, 13), text: `(`
+  pattern: 24
+    capture: 10 - punctuation.bracket, start: (3, 13), end: (3, 14), text: `)`
+  pattern: 35
+    capture: 11 - punctuation.delimiter, start: (3, 14), end: (3, 15), text: `;`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (3, 16), end: (3, 17), text: `}`
+  pattern: 51
+    capture: 14 - keyword, start: (4, 0), end: (4, 3), text: `gen`
+  pattern: 60
+    capture: 14 - keyword, start: (4, 4), end: (4, 8), text: `move`
+  pattern: 27
+    capture: 10 - punctuation.bracket, start: (4, 9), end: (4, 10), text: `{`
+  pattern: 28
+    capture: 10 - punctuation.bracket, start: (4, 10), end: (4, 11), text: `}`

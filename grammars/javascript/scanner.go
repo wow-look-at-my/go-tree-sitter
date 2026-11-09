@@ -1,3 +1,5 @@
+// scanner.go holds the scanner code.
+
 package javascript
 
 import (

@@ -1,3 +1,5 @@
+// grammar.go holds the grammar code.
+
 package treesitter
 
 // LoadGrammar decodes a grammar's table blob and wires its lexer. Pass a nil

@@ -1,0 +1,974 @@
+corpus/expressions.txt/000
+corpus/expressions.txt/001
+  pattern: 3
+    capture: 2 - local.reference, start: (22, 21), end: (22, 25), text: `args`
+  pattern: 3
+    capture: 2 - local.reference, start: (22, 73), end: (22, 81), text: `exitCode`
+corpus/expressions.txt/002
+  pattern: 3
+    capture: 2 - local.reference, start: (0, 4), end: (0, 5), text: `f`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 4), end: (1, 5), text: `f`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 0), end: (2, 3), text: `arr`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 0), end: (3, 1), text: `f`
+corpus/expressions.txt/003
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 0), end: (1, 1), text: `f`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 0), end: (2, 1), text: `f`
+corpus/expressions.txt/004
+corpus/expressions.txt/005
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 0), end: (1, 6), text: `theVar`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 0), end: (2, 7), text: `theVar2`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 0), end: (3, 2), text: `$_`
+  pattern: 3
+    capture: 2 - local.reference, start: (4, 0), end: (4, 14), text: `\u0061\u{62}cd`
+corpus/expressions.txt/006
+  pattern: 2
+    capture: 1 - local.definition, start: (1, 4), end: (1, 5), text: `a`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 4), end: (1, 5), text: `a`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 8), end: (1, 9), text: `b`
+  pattern: 2
+    capture: 1 - local.definition, start: (2, 4), end: (2, 5), text: `c`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 4), end: (2, 5), text: `c`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 8), end: (2, 9), text: `d`
+  pattern: 2
+    capture: 1 - local.definition, start: (3, 4), end: (3, 5), text: `e`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 4), end: (3, 5), text: `e`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 8), end: (3, 9), text: `f`
+corpus/expressions.txt/007
+corpus/expressions.txt/008
+corpus/expressions.txt/009
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 2), end: (1, 5), text: `foo`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 19), end: (2, 22), text: `bar`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 6), end: (3, 9), text: `baz`
+corpus/expressions.txt/010
+  pattern: 0
+    capture: 0 - local.scope, start: (1, 0), end: (1, 2), text: `{}`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 15), end: (3, 16), text: `f`
+  pattern: 3
+    capture: 2 - local.reference, start: (5, 5), end: (5, 6), text: `h`
+  pattern: 0
+    capture: local.scope, start: (9, 2), end: (10, 3)
+  pattern: 3
+    capture: 2 - local.reference, start: (9, 3), end: (9, 13), text: `methodName`
+  pattern: 0
+    capture: local.scope, start: (9, 17), end: (10, 3)
+corpus/expressions.txt/011
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 0), end: (1, 1), text: `x`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 0), end: (2, 1), text: `y`
+corpus/expressions.txt/012
+  pattern: 0
+    capture: local.scope, start: (4, 2), end: (6, 3)
+  pattern: 1
+    capture: 1 - local.definition, start: (4, 6), end: (4, 7), text: `a`
+  pattern: 3
+    capture: 2 - local.reference, start: (4, 6), end: (4, 7), text: `a`
+  pattern: 1
+    capture: 1 - local.definition, start: (4, 9), end: (4, 10), text: `b`
+  pattern: 3
+    capture: 2 - local.reference, start: (4, 9), end: (4, 10), text: `b`
+  pattern: 0
+    capture: local.scope, start: (4, 12), end: (6, 3)
+  pattern: 3
+    capture: 2 - local.reference, start: (5, 11), end: (5, 12), text: `a`
+  pattern: 3
+    capture: 2 - local.reference, start: (5, 15), end: (5, 16), text: `b`
+  pattern: 0
+    capture: 0 - local.scope, start: (8, 2), end: (8, 25), text: `get bar() { return c; }`
+  pattern: 0
+    capture: 0 - local.scope, start: (8, 12), end: (8, 25), text: `{ return c; }`
+  pattern: 3
+    capture: 2 - local.reference, start: (8, 21), end: (8, 22), text: `c`
+  pattern: 0
+    capture: 0 - local.scope, start: (10, 2), end: (10, 23), text: `set bar(a) { c = a; }`
+  pattern: 1
+    capture: 1 - local.definition, start: (10, 10), end: (10, 11), text: `a`
+  pattern: 3
+    capture: 2 - local.reference, start: (10, 10), end: (10, 11), text: `a`
+  pattern: 0
+    capture: 0 - local.scope, start: (10, 13), end: (10, 23), text: `{ c = a; }`
+  pattern: 3
+    capture: 2 - local.reference, start: (10, 15), end: (10, 16), text: `c`
+  pattern: 3
+    capture: 2 - local.reference, start: (10, 19), end: (10, 20), text: `a`
+  pattern: 0
+    capture: 0 - local.scope, start: (12, 2), end: (12, 30), text: `*barGenerator() { yield c; }`
+  pattern: 0
+    capture: 0 - local.scope, start: (12, 18), end: (12, 30), text: `{ yield c; }`
+  pattern: 3
+    capture: 2 - local.reference, start: (12, 26), end: (12, 27), text: `c`
+  pattern: 0
+    capture: 0 - local.scope, start: (14, 2), end: (14, 21), text: `get() { return 1; }`
+  pattern: 0
+    capture: 0 - local.scope, start: (14, 8), end: (14, 21), text: `{ return 1; }`
+corpus/expressions.txt/013
+  pattern: 0
+    capture: 0 - local.scope, start: (2, 2), end: (2, 14), text: `finally() {}`
+  pattern: 0
+    capture: 0 - local.scope, start: (2, 12), end: (2, 14), text: `{}`
+  pattern: 0
+    capture: 0 - local.scope, start: (3, 2), end: (3, 12), text: `catch() {}`
+  pattern: 0
+    capture: 0 - local.scope, start: (3, 10), end: (3, 12), text: `{}`
+  pattern: 0
+    capture: 0 - local.scope, start: (4, 7), end: (4, 21), text: `function () {}`
+  pattern: 0
+    capture: 0 - local.scope, start: (4, 19), end: (4, 21), text: `{}`
+  pattern: 0
+    capture: 0 - local.scope, start: (5, 7), end: (5, 21), text: `function () {}`
+  pattern: 0
+    capture: 0 - local.scope, start: (5, 19), end: (5, 21), text: `{}`
+corpus/expressions.txt/014
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 6), end: (1, 9), text: `Foo`
+  pattern: 0
+    capture: 0 - local.scope, start: (4, 2), end: (4, 29), text: `static one(a) { return a; }`
+  pattern: 1
+    capture: 1 - local.definition, start: (4, 13), end: (4, 14), text: `a`
+  pattern: 3
+    capture: 2 - local.reference, start: (4, 13), end: (4, 14), text: `a`
+  pattern: 0
+    capture: 0 - local.scope, start: (4, 16), end: (4, 29), text: `{ return a; }`
+  pattern: 3
+    capture: 2 - local.reference, start: (4, 25), end: (4, 26), text: `a`
+  pattern: 0
+    capture: 0 - local.scope, start: (5, 2), end: (5, 22), text: `two(b) { return b; }`
+  pattern: 1
+    capture: 1 - local.definition, start: (5, 6), end: (5, 7), text: `b`
+  pattern: 3
+    capture: 2 - local.reference, start: (5, 6), end: (5, 7), text: `b`
+  pattern: 0
+    capture: 0 - local.scope, start: (5, 9), end: (5, 22), text: `{ return b; }`
+  pattern: 3
+    capture: 2 - local.reference, start: (5, 18), end: (5, 19), text: `b`
+  pattern: 0
+    capture: 0 - local.scope, start: (6, 2), end: (6, 24), text: `three(c) { return c; }`
+  pattern: 1
+    capture: 1 - local.definition, start: (6, 8), end: (6, 9), text: `c`
+  pattern: 3
+    capture: 2 - local.reference, start: (6, 8), end: (6, 9), text: `c`
+  pattern: 0
+    capture: 0 - local.scope, start: (6, 11), end: (6, 24), text: `{ return c; }`
+  pattern: 3
+    capture: 2 - local.reference, start: (6, 20), end: (6, 21), text: `c`
+  pattern: 0
+    capture: 0 - local.scope, start: (7, 2), end: (7, 30), text: `#four(d) { return this.#e; }`
+  pattern: 1
+    capture: 1 - local.definition, start: (7, 8), end: (7, 9), text: `d`
+  pattern: 3
+    capture: 2 - local.reference, start: (7, 8), end: (7, 9), text: `d`
+  pattern: 0
+    capture: 0 - local.scope, start: (7, 11), end: (7, 30), text: `{ return this.#e; }`
+  pattern: 3
+    capture: 2 - local.reference, start: (10, 6), end: (10, 9), text: `Foo`
+  pattern: 3
+    capture: 2 - local.reference, start: (10, 18), end: (10, 25), text: `require`
+  pattern: 0
+    capture: local.scope, start: (11, 2), end: (13, 3)
+  pattern: 0
+    capture: local.scope, start: (11, 16), end: (13, 3)
+  pattern: 0
+    capture: local.scope, start: (16, 2), end: (18, 3)
+  pattern: 0
+    capture: local.scope, start: (20, 2), end: (23, 3)
+  pattern: 0
+    capture: local.scope, start: (20, 8), end: (23, 3)
+  pattern: 0
+    capture: local.scope, start: (25, 2), end: (27, 3)
+  pattern: 0
+    capture: local.scope, start: (25, 9), end: (27, 3)
+  pattern: 3
+    capture: 2 - local.reference, start: (30, 6), end: (30, 7), text: `A`
+corpus/expressions.txt/015
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 6), end: (1, 9), text: `Foo`
+  pattern: 0
+    capture: 0 - local.scope, start: (2, 2), end: (2, 12), text: `catch() {}`
+  pattern: 0
+    capture: 0 - local.scope, start: (2, 10), end: (2, 12), text: `{}`
+  pattern: 0
+    capture: 0 - local.scope, start: (3, 2), end: (3, 14), text: `finally() {}`
+  pattern: 0
+    capture: 0 - local.scope, start: (3, 12), end: (3, 14), text: `{}`
+  pattern: 0
+    capture: 0 - local.scope, start: (4, 2), end: (4, 12), text: `await() {}`
+  pattern: 0
+    capture: 0 - local.scope, start: (4, 10), end: (4, 12), text: `{}`
+corpus/expressions.txt/016
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 6), end: (1, 9), text: `Foo`
+  pattern: 3
+    capture: 2 - local.reference, start: (5, 6), end: (5, 9), text: `Bar`
+  pattern: 0
+    capture: local.scope, start: (6, 2), end: (7, 21)
+  pattern: 0
+    capture: 0 - local.scope, start: (7, 8), end: (7, 21), text: `{ return 1; }`
+corpus/expressions.txt/017
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 6), end: (1, 9), text: `Foo`
+  pattern: 3
+    capture: 2 - local.reference, start: (5, 6), end: (5, 9), text: `Bar`
+  pattern: 0
+    capture: 0 - local.scope, start: (6, 8), end: (6, 49), text: `static foo(quux) { return #BAZ in quux; }`
+  pattern: 1
+    capture: 1 - local.definition, start: (6, 19), end: (6, 23), text: `quux`
+  pattern: 3
+    capture: 2 - local.reference, start: (6, 19), end: (6, 23), text: `quux`
+  pattern: 0
+    capture: 0 - local.scope, start: (6, 25), end: (6, 49), text: `{ return #BAZ in quux; }`
+  pattern: 3
+    capture: 2 - local.reference, start: (6, 42), end: (6, 46), text: `quux`
+corpus/expressions.txt/018
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 1), end: (1, 7), text: `reload`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 1), end: (2, 5), text: `eval`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 6), end: (3, 9), text: `Foo`
+  pattern: 0
+    capture: local.scope, start: (4, 1), end: (6, 2)
+  pattern: 3
+    capture: 2 - local.reference, start: (4, 2), end: (4, 5), text: `foo`
+  pattern: 3
+    capture: 2 - local.reference, start: (4, 10), end: (4, 13), text: `baz`
+  pattern: 0
+    capture: local.scope, start: (4, 28), end: (6, 2)
+  pattern: 3
+    capture: 2 - local.reference, start: (8, 2), end: (8, 5), text: `foo`
+corpus/expressions.txt/019
+  pattern: 3
+    capture: 2 - local.reference, start: (4, 11), end: (4, 16), text: `item2`
+  pattern: 3
+    capture: 2 - local.reference, start: (5, 4), end: (5, 9), text: `item2`
+  pattern: 3
+    capture: 2 - local.reference, start: (6, 2), end: (6, 7), text: `item2`
+corpus/expressions.txt/020
+  pattern: 0
+    capture: 0 - local.scope, start: (2, 2), end: (2, 15), text: `function() {}`
+  pattern: 0
+    capture: 0 - local.scope, start: (2, 13), end: (2, 15), text: `{}`
+  pattern: 0
+    capture: local.scope, start: (3, 2), end: (5, 3)
+  pattern: 1
+    capture: 1 - local.definition, start: (3, 11), end: (3, 15), text: `arg1`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 11), end: (3, 15), text: `arg1`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 20), end: (3, 24), text: `arg2`
+  pattern: 0
+    capture: local.scope, start: (3, 26), end: (5, 3)
+  pattern: 3
+    capture: 2 - local.reference, start: (4, 4), end: (4, 8), text: `arg2`
+  pattern: 0
+    capture: 0 - local.scope, start: (6, 2), end: (6, 21), text: `function stuff() {}`
+  pattern: 3
+    capture: 2 - local.reference, start: (6, 11), end: (6, 16), text: `stuff`
+  pattern: 0
+    capture: 0 - local.scope, start: (6, 19), end: (6, 21), text: `{}`
+  pattern: 0
+    capture: 0 - local.scope, start: (7, 2), end: (7, 26), text: `function trailing(a,) {}`
+  pattern: 3
+    capture: 2 - local.reference, start: (7, 11), end: (7, 19), text: `trailing`
+  pattern: 1
+    capture: 1 - local.definition, start: (7, 20), end: (7, 21), text: `a`
+  pattern: 3
+    capture: 2 - local.reference, start: (7, 20), end: (7, 21), text: `a`
+  pattern: 0
+    capture: 0 - local.scope, start: (7, 24), end: (7, 26), text: `{}`
+  pattern: 0
+    capture: 0 - local.scope, start: (8, 2), end: (8, 28), text: `function trailing(a,b,) {}`
+  pattern: 3
+    capture: 2 - local.reference, start: (8, 11), end: (8, 19), text: `trailing`
+  pattern: 1
+    capture: 1 - local.definition, start: (8, 20), end: (8, 21), text: `a`
+  pattern: 3
+    capture: 2 - local.reference, start: (8, 20), end: (8, 21), text: `a`
+  pattern: 1
+    capture: 1 - local.definition, start: (8, 22), end: (8, 23), text: `b`
+  pattern: 3
+    capture: 2 - local.reference, start: (8, 22), end: (8, 23), text: `b`
+  pattern: 0
+    capture: 0 - local.scope, start: (8, 26), end: (8, 28), text: `{}`
+  pattern: 0
+    capture: 0 - local.scope, start: (9, 2), end: (9, 29), text: `function reserved(async) {}`
+  pattern: 3
+    capture: 2 - local.reference, start: (9, 11), end: (9, 19), text: `reserved`
+  pattern: 1
+    capture: 1 - local.definition, start: (9, 20), end: (9, 25), text: `async`
+  pattern: 3
+    capture: 2 - local.reference, start: (9, 20), end: (9, 25), text: `async`
+  pattern: 0
+    capture: 0 - local.scope, start: (9, 27), end: (9, 29), text: `{}`
+  pattern: 0
+    capture: 0 - local.scope, start: (10, 2), end: (10, 30), text: `function rest(...[_ = x]) {}`
+  pattern: 3
+    capture: 2 - local.reference, start: (10, 11), end: (10, 15), text: `rest`
+  pattern: 1
+    capture: 1 - local.definition, start: (10, 20), end: (10, 21), text: `_`
+  pattern: 3
+    capture: 2 - local.reference, start: (10, 20), end: (10, 21), text: `_`
+  pattern: 3
+    capture: 2 - local.reference, start: (10, 24), end: (10, 25), text: `x`
+  pattern: 0
+    capture: 0 - local.scope, start: (10, 28), end: (10, 30), text: `{}`
+corpus/expressions.txt/021
+  pattern: 0
+    capture: 0 - local.scope, start: (1, 0), end: (1, 6), text: `a => 1`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 0), end: (1, 1), text: `a`
+  pattern: 0
+    capture: 0 - local.scope, start: (2, 0), end: (2, 7), text: `() => 2`
+  pattern: 0
+    capture: 0 - local.scope, start: (3, 0), end: (3, 11), text: `(d, e) => 3`
+  pattern: 1
+    capture: 1 - local.definition, start: (3, 1), end: (3, 2), text: `d`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 1), end: (3, 2), text: `d`
+  pattern: 1
+    capture: 1 - local.definition, start: (3, 4), end: (3, 5), text: `e`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 4), end: (3, 5), text: `e`
+  pattern: 0
+    capture: local.scope, start: (4, 0), end: (6, 1)
+  pattern: 1
+    capture: 1 - local.definition, start: (4, 1), end: (4, 2), text: `f`
+  pattern: 3
+    capture: 2 - local.reference, start: (4, 1), end: (4, 2), text: `f`
+  pattern: 1
+    capture: 1 - local.definition, start: (4, 4), end: (4, 5), text: `g`
+  pattern: 3
+    capture: 2 - local.reference, start: (4, 4), end: (4, 5), text: `g`
+  pattern: 0
+    capture: local.scope, start: (4, 10), end: (6, 1)
+  pattern: 3
+    capture: 2 - local.reference, start: (5, 9), end: (5, 10), text: `h`
+  pattern: 0
+    capture: 0 - local.scope, start: (7, 0), end: (7, 16), text: `(trailing,) => 4`
+  pattern: 1
+    capture: 1 - local.definition, start: (7, 1), end: (7, 9), text: `trailing`
+  pattern: 3
+    capture: 2 - local.reference, start: (7, 1), end: (7, 9), text: `trailing`
+  pattern: 0
+    capture: 0 - local.scope, start: (8, 0), end: (8, 19), text: `(h, trailing,) => 5`
+  pattern: 1
+    capture: 1 - local.definition, start: (8, 1), end: (8, 2), text: `h`
+  pattern: 3
+    capture: 2 - local.reference, start: (8, 1), end: (8, 2), text: `h`
+  pattern: 1
+    capture: 1 - local.definition, start: (8, 4), end: (8, 12), text: `trailing`
+  pattern: 3
+    capture: 2 - local.reference, start: (8, 4), end: (8, 12), text: `trailing`
+  pattern: 0
+    capture: 0 - local.scope, start: (9, 0), end: (9, 14), text: `(set, kv) => 2`
+  pattern: 1
+    capture: 1 - local.definition, start: (9, 1), end: (9, 4), text: `set`
+  pattern: 3
+    capture: 2 - local.reference, start: (9, 1), end: (9, 4), text: `set`
+  pattern: 1
+    capture: 1 - local.definition, start: (9, 6), end: (9, 8), text: `kv`
+  pattern: 3
+    capture: 2 - local.reference, start: (9, 6), end: (9, 8), text: `kv`
+  pattern: 0
+    capture: 0 - local.scope, start: (10, 0), end: (10, 18), text: `async => async + 1`
+  pattern: 3
+    capture: 2 - local.reference, start: (10, 0), end: (10, 5), text: `async`
+  pattern: 3
+    capture: 2 - local.reference, start: (10, 9), end: (10, 14), text: `async`
+corpus/expressions.txt/022
+  pattern: 0
+    capture: 0 - local.scope, start: (2, 15), end: (2, 17), text: `{}`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 12), end: (3, 25), text: `generateStuff`
+  pattern: 1
+    capture: 1 - local.definition, start: (3, 26), end: (3, 30), text: `arg1`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 26), end: (3, 30), text: `arg1`
+  pattern: 1
+    capture: 1 - local.definition, start: (3, 32), end: (3, 36), text: `arg2`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 32), end: (3, 36), text: `arg2`
+  pattern: 0
+    capture: local.scope, start: (3, 38), end: (7, 3)
+  pattern: 3
+    capture: 2 - local.reference, start: (5, 10), end: (5, 14), text: `arg2`
+  pattern: 3
+    capture: 2 - local.reference, start: (6, 12), end: (6, 15), text: `foo`
+corpus/expressions.txt/023
+  pattern: 0
+    capture: local.scope, start: (1, 0), end: (2, 1)
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 9), end: (1, 10), text: `a`
+  pattern: 1
+    capture: 1 - local.definition, start: (1, 16), end: (1, 17), text: `c`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 16), end: (1, 17), text: `c`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 20), end: (1, 21), text: `d`
+  pattern: 1
+    capture: 1 - local.definition, start: (1, 23), end: (1, 24), text: `e`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 23), end: (1, 24), text: `e`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 27), end: (1, 28), text: `f`
+  pattern: 1
+    capture: 1 - local.definition, start: (1, 30), end: (1, 35), text: `async`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 30), end: (1, 35), text: `async`
+  pattern: 0
+    capture: local.scope, start: (1, 44), end: (2, 1)
+corpus/expressions.txt/024
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 0), end: (1, 1), text: `x`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 0), end: (2, 1), text: `x`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 2), end: (2, 14), text: `someVariable`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 0), end: (3, 1), text: `x`
+corpus/expressions.txt/025
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 7), end: (1, 15), text: `returned`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 9), end: (2, 17), text: `newDefer`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 9), end: (3, 17), text: `newDefer`
+corpus/expressions.txt/026
+  pattern: 0
+    capture: local.scope, start: (1, 16), end: (3, 1)
+  pattern: 1
+    capture: 1 - local.definition, start: (1, 26), end: (1, 27), text: `a`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 26), end: (1, 27), text: `a`
+  pattern: 0
+    capture: local.scope, start: (1, 29), end: (3, 1)
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 9), end: (2, 10), text: `a`
+  pattern: 0
+    capture: local.scope, start: (7, 8), end: (9, 1)
+  pattern: 1
+    capture: 1 - local.definition, start: (7, 18), end: (7, 19), text: `c`
+  pattern: 3
+    capture: 2 - local.reference, start: (7, 18), end: (7, 19), text: `c`
+  pattern: 0
+    capture: local.scope, start: (7, 21), end: (9, 1)
+  pattern: 3
+    capture: 2 - local.reference, start: (8, 9), end: (8, 10), text: `c`
+corpus/expressions.txt/027
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 0), end: (1, 1), text: `x`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 13), end: (1, 17), text: `arg1`
+  pattern: 0
+    capture: local.scope, start: (2, 0), end: (4, 1)
+  pattern: 1
+    capture: 1 - local.definition, start: (2, 9), end: (2, 10), text: `x`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 9), end: (2, 10), text: `x`
+  pattern: 1
+    capture: 1 - local.definition, start: (2, 12), end: (2, 13), text: `y`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 12), end: (2, 13), text: `y`
+  pattern: 0
+    capture: local.scope, start: (2, 15), end: (4, 1)
+  pattern: 3
+    capture: 2 - local.reference, start: (4, 2), end: (4, 3), text: `a`
+  pattern: 3
+    capture: 2 - local.reference, start: (4, 5), end: (4, 6), text: `b`
+corpus/expressions.txt/028
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 0), end: (1, 1), text: `a`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 0), end: (2, 1), text: `a`
+corpus/expressions.txt/029
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 0), end: (1, 1), text: `a`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 3), end: (1, 4), text: `b`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 0), end: (2, 1), text: `a`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 6), end: (2, 7), text: `b`
+corpus/expressions.txt/030
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 0), end: (1, 1), text: `a`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 4), end: (1, 5), text: `b`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 0), end: (2, 1), text: `a`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 2), end: (2, 3), text: `b`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 7), end: (2, 8), text: `c`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 0), end: (3, 1), text: `d`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 6), end: (3, 7), text: `f`
+corpus/expressions.txt/031
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 4), end: (1, 10), text: `module`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 4), end: (2, 9), text: `Thing`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 8), end: (3, 14), text: `module`
+  pattern: 3
+    capture: 2 - local.reference, start: (4, 8), end: (4, 13), text: `Thing`
+corpus/expressions.txt/032
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 6), end: (1, 19), text: `asyncFunction`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 6), end: (2, 18), text: `asyncPromise`
+corpus/expressions.txt/033
+  pattern: 0
+    capture: 0 - local.scope, start: (1, 0), end: (1, 23), text: `async function foo() {}`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 15), end: (1, 18), text: `foo`
+  pattern: 0
+    capture: 0 - local.scope, start: (1, 21), end: (1, 23), text: `{}`
+  pattern: 0
+    capture: local.scope, start: (4, 2), end: (5, 3)
+  pattern: 0
+    capture: local.scope, start: (4, 14), end: (5, 3)
+  pattern: 3
+    capture: 2 - local.reference, start: (8, 6), end: (8, 9), text: `Foo`
+  pattern: 0
+    capture: 0 - local.scope, start: (9, 2), end: (9, 16), text: `async bar() {}`
+  pattern: 0
+    capture: 0 - local.scope, start: (9, 14), end: (9, 16), text: `{}`
+  pattern: 0
+    capture: 0 - local.scope, start: (12, 0), end: (12, 28), text: `async (a) => { return foo; }`
+  pattern: 1
+    capture: 1 - local.definition, start: (12, 7), end: (12, 8), text: `a`
+  pattern: 3
+    capture: 2 - local.reference, start: (12, 7), end: (12, 8), text: `a`
+  pattern: 0
+    capture: 0 - local.scope, start: (12, 13), end: (12, 28), text: `{ return foo; }`
+  pattern: 3
+    capture: 2 - local.reference, start: (12, 22), end: (12, 25), text: `foo`
+  pattern: 3
+    capture: 2 - local.reference, start: (14, 16), end: (14, 19), text: `foo`
+  pattern: 0
+    capture: 0 - local.scope, start: (14, 22), end: (14, 34), text: `{ yield 1; }`
+corpus/expressions.txt/034
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 0), end: (1, 1), text: `i`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 0), end: (2, 1), text: `i`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 0), end: (3, 1), text: `i`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 4), end: (3, 5), text: `j`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 12), end: (3, 13), text: `j`
+  pattern: 3
+    capture: 2 - local.reference, start: (4, 5), end: (4, 6), text: `i`
+  pattern: 3
+    capture: 2 - local.reference, start: (5, 4), end: (5, 5), text: `i`
+  pattern: 3
+    capture: 2 - local.reference, start: (6, 5), end: (6, 6), text: `i`
+  pattern: 3
+    capture: 2 - local.reference, start: (7, 1), end: (7, 2), text: `x`
+  pattern: 3
+    capture: 2 - local.reference, start: (8, 1), end: (8, 2), text: `x`
+  pattern: 3
+    capture: 2 - local.reference, start: (9, 0), end: (9, 3), text: `let`
+corpus/expressions.txt/035
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 0), end: (1, 1), text: `i`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 5), end: (1, 6), text: `j`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 0), end: (2, 1), text: `i`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 5), end: (2, 6), text: `j`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 1), end: (3, 2), text: `a`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 7), end: (3, 8), text: `b`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 13), end: (3, 14), text: `c`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 19), end: (3, 20), text: `d`
+corpus/expressions.txt/036
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 0), end: (1, 1), text: `x`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 4), end: (1, 5), text: `b`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 9), end: (1, 10), text: `c`
+corpus/expressions.txt/037
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 0), end: (1, 1), text: `i`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 5), end: (1, 6), text: `j`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 0), end: (2, 1), text: `i`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 6), end: (2, 7), text: `j`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 0), end: (3, 1), text: `i`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 5), end: (3, 6), text: `j`
+  pattern: 3
+    capture: 2 - local.reference, start: (4, 0), end: (4, 1), text: `i`
+  pattern: 3
+    capture: 2 - local.reference, start: (4, 4), end: (4, 5), text: `j`
+  pattern: 3
+    capture: 2 - local.reference, start: (5, 0), end: (5, 1), text: `i`
+  pattern: 3
+    capture: 2 - local.reference, start: (5, 4), end: (5, 5), text: `j`
+  pattern: 3
+    capture: 2 - local.reference, start: (6, 1), end: (6, 2), text: `i`
+  pattern: 3
+    capture: 2 - local.reference, start: (6, 6), end: (6, 7), text: `j`
+corpus/expressions.txt/038
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 0), end: (1, 1), text: `x`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 4), end: (1, 5), text: `y`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 0), end: (2, 1), text: `x`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 5), end: (2, 6), text: `y`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 0), end: (3, 1), text: `x`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 5), end: (3, 6), text: `y`
+  pattern: 3
+    capture: 2 - local.reference, start: (4, 0), end: (4, 1), text: `x`
+  pattern: 3
+    capture: 2 - local.reference, start: (4, 6), end: (4, 7), text: `y`
+  pattern: 3
+    capture: 2 - local.reference, start: (5, 0), end: (5, 1), text: `x`
+  pattern: 3
+    capture: 2 - local.reference, start: (5, 5), end: (5, 6), text: `y`
+  pattern: 3
+    capture: 2 - local.reference, start: (6, 0), end: (6, 1), text: `x`
+  pattern: 3
+    capture: 2 - local.reference, start: (6, 6), end: (6, 7), text: `y`
+  pattern: 3
+    capture: 2 - local.reference, start: (7, 0), end: (7, 1), text: `x`
+  pattern: 3
+    capture: 2 - local.reference, start: (7, 5), end: (7, 6), text: `y`
+  pattern: 3
+    capture: 2 - local.reference, start: (8, 0), end: (8, 1), text: `x`
+  pattern: 3
+    capture: 2 - local.reference, start: (8, 4), end: (8, 5), text: `y`
+corpus/expressions.txt/039
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 0), end: (1, 1), text: `x`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 0), end: (2, 1), text: `x`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 0), end: (3, 1), text: `x`
+  pattern: 3
+    capture: 2 - local.reference, start: (4, 0), end: (4, 5), text: `async`
+  pattern: 3
+    capture: 2 - local.reference, start: (5, 1), end: (5, 2), text: `x`
+  pattern: 3
+    capture: 2 - local.reference, start: (6, 1), end: (6, 2), text: `x`
+  pattern: 3
+    capture: 2 - local.reference, start: (7, 0), end: (7, 1), text: `x`
+corpus/expressions.txt/040
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 0), end: (1, 1), text: `a`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 7), end: (1, 8), text: `b`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 0), end: (2, 1), text: `c`
+corpus/expressions.txt/041
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 0), end: (1, 9), text: `condition`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 12), end: (1, 17), text: `case1`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 20), end: (1, 25), text: `case2`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 0), end: (3, 1), text: `x`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 6), end: (3, 10), text: `some`
+  pattern: 3
+    capture: 2 - local.reference, start: (4, 2), end: (4, 6), text: `some`
+  pattern: 3
+    capture: 2 - local.reference, start: (5, 2), end: (5, 6), text: `some`
+  pattern: 3
+    capture: 2 - local.reference, start: (7, 0), end: (7, 1), text: `a`
+corpus/expressions.txt/042
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 7), end: (1, 8), text: `x`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 0), end: (2, 1), text: `x`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 13), end: (2, 19), text: `String`
+corpus/expressions.txt/043
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 7), end: (1, 12), text: `thing`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 14), end: (2, 19), text: `thing`
+corpus/expressions.txt/044
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 0), end: (1, 1), text: `a`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 9), end: (1, 10), text: `b`
+corpus/expressions.txt/045
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 0), end: (1, 1), text: `s`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 0), end: (2, 1), text: `t`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 0), end: (3, 1), text: `w`
+  pattern: 3
+    capture: 2 - local.reference, start: (4, 0), end: (4, 1), text: `x`
+  pattern: 3
+    capture: 2 - local.reference, start: (5, 0), end: (5, 1), text: `y`
+  pattern: 3
+    capture: 2 - local.reference, start: (6, 0), end: (6, 5), text: `async`
+  pattern: 3
+    capture: 2 - local.reference, start: (7, 0), end: (7, 1), text: `a`
+  pattern: 3
+    capture: 2 - local.reference, start: (8, 0), end: (8, 1), text: `b`
+  pattern: 3
+    capture: 2 - local.reference, start: (9, 0), end: (9, 1), text: `c`
+corpus/expressions.txt/046
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 0), end: (1, 1), text: `a`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 5), end: (1, 6), text: `b`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 10), end: (1, 11), text: `c`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 15), end: (1, 16), text: `d`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 0), end: (2, 1), text: `a`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 6), end: (2, 7), text: `c`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 10), end: (2, 11), text: `d`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 14), end: (2, 15), text: `e`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 0), end: (3, 1), text: `a`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 5), end: (3, 6), text: `b`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 7), end: (3, 8), text: `c`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 13), end: (3, 14), text: `d`
+  pattern: 3
+    capture: 2 - local.reference, start: (4, 0), end: (4, 1), text: `a`
+  pattern: 3
+    capture: 2 - local.reference, start: (4, 9), end: (4, 10), text: `b`
+  pattern: 3
+    capture: 2 - local.reference, start: (4, 11), end: (4, 12), text: `c`
+  pattern: 3
+    capture: 2 - local.reference, start: (4, 17), end: (4, 18), text: `d`
+  pattern: 3
+    capture: 2 - local.reference, start: (5, 7), end: (5, 8), text: `a`
+  pattern: 3
+    capture: 2 - local.reference, start: (5, 12), end: (5, 13), text: `b`
+  pattern: 3
+    capture: 2 - local.reference, start: (5, 17), end: (5, 18), text: `c`
+  pattern: 3
+    capture: 2 - local.reference, start: (5, 30), end: (5, 31), text: `d`
+  pattern: 3
+    capture: 2 - local.reference, start: (6, 0), end: (6, 1), text: `a`
+  pattern: 3
+    capture: 2 - local.reference, start: (6, 5), end: (6, 6), text: `b`
+  pattern: 3
+    capture: 2 - local.reference, start: (6, 9), end: (6, 10), text: `c`
+  pattern: 3
+    capture: 2 - local.reference, start: (7, 0), end: (7, 1), text: `a`
+  pattern: 3
+    capture: 2 - local.reference, start: (7, 4), end: (7, 5), text: `b`
+  pattern: 3
+    capture: 2 - local.reference, start: (7, 9), end: (7, 10), text: `c`
+  pattern: 3
+    capture: 2 - local.reference, start: (8, 0), end: (8, 1), text: `a`
+  pattern: 3
+    capture: 2 - local.reference, start: (8, 5), end: (8, 6), text: `b`
+  pattern: 3
+    capture: 2 - local.reference, start: (8, 10), end: (8, 11), text: `c`
+  pattern: 3
+    capture: 2 - local.reference, start: (8, 15), end: (8, 16), text: `d`
+  pattern: 3
+    capture: 2 - local.reference, start: (9, 6), end: (9, 7), text: `a`
+  pattern: 3
+    capture: 2 - local.reference, start: (9, 11), end: (9, 12), text: `b`
+corpus/expressions.txt/047
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 0), end: (1, 1), text: `a`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 5), end: (1, 8), text: `div`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 0), end: (2, 1), text: `b`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 5), end: (2, 8), text: `Foo`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 16), end: (2, 20), text: `span`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 24), end: (2, 28), text: `span`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 33), end: (2, 36), text: `Foo`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 0), end: (3, 1), text: `b`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 5), end: (3, 8), text: `Foo`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 23), end: (3, 26), text: `Foo`
+corpus/expressions.txt/048
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 0), end: (1, 1), text: `a`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 0), end: (2, 1), text: `a`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 5), end: (2, 6), text: `E`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 14), end: (2, 15), text: `E`
+corpus/expressions.txt/049
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 0), end: (1, 1), text: `a`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 5), end: (1, 6), text: `a`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 12), end: (1, 13), text: `d`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 19), end: (1, 20), text: `f`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 26), end: (1, 27), text: `a`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 0), end: (2, 1), text: `h`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 5), end: (2, 6), text: `i`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 11), end: (2, 12), text: `j`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 15), end: (2, 16), text: `i`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 0), end: (3, 1), text: `b`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 5), end: (3, 9), text: `Text`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 14), end: (3, 15), text: `j`
+  pattern: 3
+    capture: 2 - local.reference, start: (4, 0), end: (4, 1), text: `b`
+  pattern: 3
+    capture: 2 - local.reference, start: (4, 5), end: (4, 9), text: `Text`
+  pattern: 3
+    capture: 2 - local.reference, start: (4, 14), end: (4, 15), text: `j`
+  pattern: 3
+    capture: 2 - local.reference, start: (4, 19), end: (4, 23), text: `Text`
+corpus/expressions.txt/050
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 0), end: (1, 3), text: `foo`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 7), end: (1, 11), text: `rest`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 0), end: (2, 3), text: `foo`
+  pattern: 1
+    capture: 1 - local.definition, start: (2, 11), end: (2, 14), text: `bar`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 11), end: (2, 14), text: `bar`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 19), end: (2, 22), text: `baz`
+corpus/expressions.txt/051
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 1), end: (1, 4), text: `foo`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 7), end: (1, 10), text: `bar`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 14), end: (1, 17), text: `baz`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 4), end: (2, 7), text: `foo`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 10), end: (2, 13), text: `bar`
+corpus/expressions.txt/052
+corpus/expressions.txt/053
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 6), end: (1, 8), text: `db`
+corpus/expressions.txt/054
+  pattern: 0
+    capture: 0 - local.scope, start: (1, 0), end: (1, 59), text: `function await(await) { await: await (await + await (0)); }`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 9), end: (1, 14), text: `await`
+  pattern: 1
+    capture: 1 - local.definition, start: (1, 15), end: (1, 20), text: `await`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 15), end: (1, 20), text: `await`
+  pattern: 0
+    capture: 0 - local.scope, start: (1, 22), end: (1, 59), text: `{ await: await (await + await (0)); }`
+corpus/expressions.txt/055
+  pattern: 2
+    capture: 1 - local.definition, start: (1, 4), end: (1, 5), text: `a`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 4), end: (1, 5), text: `a`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 9), end: (1, 12), text: `Foo`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 15), end: (1, 18), text: `Foo`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 0), end: (2, 1), text: `b`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 5), end: (2, 8), text: `Foo`
+  pattern: 3
+    capture: 2 - local.reference, start: (2, 15), end: (2, 18), text: `Foo`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 0), end: (3, 1), text: `c`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 8), end: (3, 11), text: `Foo`
+  pattern: 3
+    capture: 2 - local.reference, start: (4, 0), end: (4, 1), text: `d`
+  pattern: 3
+    capture: 2 - local.reference, start: (4, 5), end: (4, 8), text: `Bar`
+  pattern: 3
+    capture: 2 - local.reference, start: (4, 11), end: (4, 14), text: `Foo`
+  pattern: 3
+    capture: 2 - local.reference, start: (4, 20), end: (4, 23), text: `Bar`
+  pattern: 3
+    capture: 2 - local.reference, start: (5, 0), end: (5, 1), text: `e`
+  pattern: 3
+    capture: 2 - local.reference, start: (5, 5), end: (5, 8), text: `Foo`
+  pattern: 3
+    capture: 2 - local.reference, start: (6, 0), end: (6, 1), text: `f`
+  pattern: 3
+    capture: 2 - local.reference, start: (6, 5), end: (6, 8), text: `Foo`
+  pattern: 3
+    capture: 2 - local.reference, start: (7, 0), end: (7, 1), text: `g`
+  pattern: 3
+    capture: 2 - local.reference, start: (7, 5), end: (7, 11), text: `Avatar`
+  pattern: 3
+    capture: 2 - local.reference, start: (7, 20), end: (7, 23), text: `foo`
+  pattern: 3
+    capture: 2 - local.reference, start: (8, 0), end: (8, 1), text: `h`
+  pattern: 3
+    capture: 2 - local.reference, start: (8, 5), end: (8, 10), text: `input`
+  pattern: 3
+    capture: 2 - local.reference, start: (8, 119), end: (8, 124), text: `input`
+  pattern: 3
+    capture: 2 - local.reference, start: (9, 0), end: (9, 1), text: `i`
+  pattern: 3
+    capture: 2 - local.reference, start: (9, 5), end: (9, 8), text: `Foo`
+  pattern: 3
+    capture: 2 - local.reference, start: (9, 9), end: (9, 12), text: `Bar`
+  pattern: 3
+    capture: 2 - local.reference, start: (9, 24), end: (9, 32), text: `children`
+  pattern: 3
+    capture: 2 - local.reference, start: (9, 35), end: (9, 38), text: `Foo`
+  pattern: 3
+    capture: 2 - local.reference, start: (9, 39), end: (9, 42), text: `Bar`

@@ -1,0 +1,168 @@
+corpus/expressions.txt/000
+  pattern: 5
+    capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+  pattern: 0
+    capture: definition.function, start: (3, 0), end: (15, 1)
+    capture: 1 - name, start: (3, 5), end: (3, 9), text: `main`
+  pattern: 2
+    capture: 4 - reference.call, start: (4, 2), end: (4, 12), text: `a(b, c...)`
+    capture: 1 - name, start: (4, 2), end: (4, 3), text: `a`
+  pattern: 2
+    capture: reference.call, start: (6, 2), end: (9, 3)
+    capture: 1 - name, start: (6, 2), end: (6, 3), text: `a`
+  pattern: 2
+    capture: reference.call, start: (11, 2), end: (14, 3)
+    capture: 1 - name, start: (11, 2), end: (11, 3), text: `a`
+corpus/expressions.txt/001
+  pattern: 5
+    capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+  pattern: 0
+    capture: definition.function, start: (3, 0), end: (5, 1)
+    capture: 1 - name, start: (3, 5), end: (3, 9), text: `main`
+  pattern: 2
+    capture: 4 - reference.call, start: (4, 2), end: (4, 12), text: `a(b(c(d)))`
+    capture: 1 - name, start: (4, 2), end: (4, 3), text: `a`
+  pattern: 2
+    capture: 4 - reference.call, start: (4, 4), end: (4, 11), text: `b(c(d))`
+    capture: 1 - name, start: (4, 4), end: (4, 5), text: `b`
+  pattern: 2
+    capture: 4 - reference.call, start: (4, 6), end: (4, 10), text: `c(d)`
+    capture: 1 - name, start: (4, 6), end: (4, 7), text: `c`
+corpus/expressions.txt/002
+  pattern: 5
+    capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+  pattern: 0
+    capture: definition.function, start: (3, 0), end: (7, 1)
+    capture: 1 - name, start: (3, 5), end: (3, 9), text: `main`
+  pattern: 4
+    capture: 1 - name, start: (4, 2), end: (4, 3), text: `a`
+    capture: 6 - reference.type, start: (4, 2), end: (4, 3), text: `a`
+  pattern: 4
+    capture: 1 - name, start: (4, 4), end: (4, 5), text: `b`
+    capture: 6 - reference.type, start: (4, 4), end: (4, 5), text: `b`
+  pattern: 4
+    capture: 1 - name, start: (5, 2), end: (5, 3), text: `a`
+    capture: 6 - reference.type, start: (5, 2), end: (5, 3), text: `a`
+  pattern: 4
+    capture: 1 - name, start: (5, 4), end: (5, 5), text: `b`
+    capture: 6 - reference.type, start: (5, 4), end: (5, 5), text: `b`
+  pattern: 4
+    capture: 1 - name, start: (5, 7), end: (5, 8), text: `c`
+    capture: 6 - reference.type, start: (5, 7), end: (5, 8), text: `c`
+  pattern: 4
+    capture: 1 - name, start: (6, 2), end: (6, 3), text: `a`
+    capture: 6 - reference.type, start: (6, 2), end: (6, 3), text: `a`
+  pattern: 4
+    capture: 1 - name, start: (6, 4), end: (6, 5), text: `b`
+    capture: 6 - reference.type, start: (6, 4), end: (6, 5), text: `b`
+  pattern: 4
+    capture: 1 - name, start: (6, 6), end: (6, 7), text: `c`
+    capture: 6 - reference.type, start: (6, 6), end: (6, 7), text: `c`
+  pattern: 4
+    capture: 1 - name, start: (6, 10), end: (6, 11), text: `d`
+    capture: 6 - reference.type, start: (6, 10), end: (6, 11), text: `d`
+corpus/expressions.txt/003
+  pattern: 5
+    capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+  pattern: 0
+    capture: definition.function, start: (3, 0), end: (11, 1)
+    capture: 1 - name, start: (3, 5), end: (3, 9), text: `main`
+  pattern: 2
+    capture: 4 - reference.call, start: (4, 2), end: (4, 18), text: `make(chan<- int)`
+    capture: 1 - name, start: (4, 2), end: (4, 6), text: `make`
+  pattern: 4
+    capture: 1 - name, start: (4, 14), end: (4, 17), text: `int`
+    capture: 6 - reference.type, start: (4, 14), end: (4, 17), text: `int`
+  pattern: 2
+    capture: 4 - reference.call, start: (7, 2), end: (7, 43), text: `make(chan<- int, (new - old), make.stuff)`
+    capture: 1 - name, start: (7, 2), end: (7, 6), text: `make`
+  pattern: 4
+    capture: 1 - name, start: (7, 14), end: (7, 17), text: `int`
+    capture: 6 - reference.type, start: (7, 14), end: (7, 17), text: `int`
+  pattern: 2
+    capture: 4 - reference.call, start: (9, 2), end: (9, 25), text: `make(chan<- int, 5, 10)`
+    capture: 1 - name, start: (9, 2), end: (9, 6), text: `make`
+  pattern: 4
+    capture: 1 - name, start: (9, 14), end: (9, 17), text: `int`
+    capture: 6 - reference.type, start: (9, 14), end: (9, 17), text: `int`
+  pattern: 2
+    capture: 4 - reference.call, start: (10, 2), end: (10, 24), text: `new(map[string]string)`
+    capture: 1 - name, start: (10, 2), end: (10, 5), text: `new`
+  pattern: 4
+    capture: 1 - name, start: (10, 10), end: (10, 16), text: `string`
+    capture: 6 - reference.type, start: (10, 10), end: (10, 16), text: `string`
+  pattern: 4
+    capture: 1 - name, start: (10, 17), end: (10, 23), text: `string`
+    capture: 6 - reference.type, start: (10, 17), end: (10, 23), text: `string`
+  pattern: 0
+    capture: definition.function, start: (13, 0), end: (15, 1)
+    capture: 1 - name, start: (13, 5), end: (13, 13), text: `fake_new`
+  pattern: 4
+    capture: 1 - name, start: (13, 25), end: (13, 28), text: `int`
+    capture: 6 - reference.type, start: (13, 25), end: (13, 28), text: `int`
+  pattern: 4
+    capture: 1 - name, start: (13, 30), end: (13, 33), text: `int`
+    capture: 6 - reference.type, start: (13, 30), end: (13, 33), text: `int`
+  pattern: 2
+    capture: 4 - reference.call, start: (14, 9), end: (14, 14), text: `new()`
+    capture: 1 - name, start: (14, 9), end: (14, 12), text: `new`
+corpus/expressions.txt/004
+  pattern: 5
+    capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+  pattern: 0
+    capture: definition.function, start: (3, 0), end: (5, 1)
+    capture: 1 - name, start: (3, 5), end: (3, 9), text: `main`
+  pattern: 2
+    capture: 4 - reference.call, start: (4, 2), end: (4, 9), text: `a.b.c()`
+    capture: 1 - name, start: (4, 6), end: (4, 7), text: `c`
+corpus/expressions.txt/005
+  pattern: 5
+    capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+  pattern: 0
+    capture: definition.function, start: (3, 0), end: (10, 1)
+    capture: 1 - name, start: (3, 5), end: (3, 9), text: `main`
+corpus/expressions.txt/006
+  pattern: 5
+    capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+  pattern: 0
+    capture: definition.function, start: (3, 0), end: (5, 1)
+    capture: 1 - name, start: (3, 5), end: (3, 9), text: `main`
+  pattern: 4
+    capture: 1 - name, start: (4, 11), end: (4, 17), text: `Person`
+    capture: 6 - reference.type, start: (4, 11), end: (4, 17), text: `Person`
+corpus/expressions.txt/007
+  pattern: 5
+    capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+  pattern: 0
+    capture: definition.function, start: (3, 0), end: (13, 1)
+    capture: 1 - name, start: (3, 5), end: (3, 9), text: `main`
+  pattern: 4
+    capture: 1 - name, start: (4, 10), end: (4, 11), text: `b`
+    capture: 6 - reference.type, start: (4, 10), end: (4, 11), text: `b`
+  pattern: 4
+    capture: 1 - name, start: (5, 11), end: (5, 12), text: `b`
+    capture: 6 - reference.type, start: (5, 11), end: (5, 12), text: `b`
+  pattern: 4
+    capture: 1 - name, start: (6, 13), end: (6, 16), text: `int`
+    capture: 6 - reference.type, start: (6, 13), end: (6, 16), text: `int`
+  pattern: 4
+    capture: 1 - name, start: (7, 10), end: (7, 13), text: `int`
+    capture: 6 - reference.type, start: (7, 10), end: (7, 13), text: `int`
+  pattern: 2
+    capture: 4 - reference.call, start: (9, 2), end: (9, 6), text: `T(x)`
+    capture: 1 - name, start: (9, 2), end: (9, 3), text: `T`
+  pattern: 2
+    capture: 4 - reference.call, start: (11, 2), end: (11, 8), text: `e.f(g)`
+    capture: 1 - name, start: (11, 4), end: (11, 5), text: `f`
+  pattern: 2
+    capture: 4 - reference.call, start: (12, 2), end: (12, 10), text: `(e.f)(g)`
+    capture: 1 - name, start: (12, 5), end: (12, 6), text: `f`
+corpus/expressions.txt/008
+  pattern: 5
+    capture: 1 - name, start: (1, 8), end: (1, 12), text: `main`
+  pattern: 0
+    capture: definition.function, start: (3, 0), end: (6, 1)
+    capture: 1 - name, start: (3, 5), end: (3, 9), text: `main`
+  pattern: 2
+    capture: 4 - reference.call, start: (5, 7), end: (5, 12), text: `foo()`
+    capture: 1 - name, start: (5, 7), end: (5, 10), text: `foo`

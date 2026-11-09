@@ -1,36 +1,28 @@
-// Command ts-goldens records the reference parse of a source file.
+// Command ts-goldens records reference results with the upstream tree-sitter
+// command line tool.
 //
-// It runs the upstream tree-sitter command line tool against a grammar
-// directory and stores the result beside the source file.
+//	ts-goldens [parse] -grammar DIR FILE...   parse trees beside each file
+//	ts-goldens query -lang NAME|all           query goldens of a grammar
 package main
 
 import (
-	"flag"
 	"fmt"
 	"os"
-	"os/exec"
 )
 
-func main() {
-	grammar := flag.String("grammar", "", "path of the upstream grammar checkout")
-	flag.Parse()
-	if *grammar == "" || flag.NArg() == 0 {
-		fmt.Fprintln(os.Stderr, "usage: ts-goldens -grammar DIR FILE...")
-		os.Exit(2)
-	}
+// commands maps a subcommand name to its entry point. Each subcommand file registers itself.
+var commands = map[string]func(args []string) error{}
 
-	for _, path := range flag.Args() {
-		cmd := exec.Command("tree-sitter", "parse", "--no-ranges", "-p", *grammar, path)
-		cmd.Stderr = os.Stderr
-		out, err := cmd.Output()
-		if err != nil && len(out) == 0 {
-			fmt.Fprintf(os.Stderr, "%s: %v\n", path, err)
-			os.Exit(1)
+func main() {
+	args := os.Args[1:]
+	run := commands["parse"]
+	if len(args) > 0 {
+		if cmd, ok := commands[args[0]]; ok {
+			run, args = cmd, args[1:]
 		}
-		if err := os.WriteFile(path+".golden", out, 0o644); err != nil {
-			fmt.Fprintln(os.Stderr, err)
-			os.Exit(1)
-		}
-		fmt.Printf("wrote %s.golden (%d bytes)\n", path, len(out))
+	}
+	if err := run(args); err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		os.Exit(1)
 	}
 }

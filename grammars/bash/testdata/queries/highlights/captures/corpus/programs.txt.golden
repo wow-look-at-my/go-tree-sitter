@@ -1,0 +1,17 @@
+corpus/programs.txt/000
+    pattern:  4, capture: 4 - comment, start: (1, 0), end: (1, 11), text: `#!/bin/bash`
+    pattern:  4, capture: 4 - comment, start: (2, 0), end: (2, 4), text: `# hi`
+corpus/programs.txt/001
+    pattern:  1, capture: 1 - function, start: (1, 0), end: (1, 3), text: `abc`
+    pattern:  2, capture: 2 - property, start: (5, 0), end: (5, 1), text: `f`
+    pattern:  2, capture: 2 - property, start: (6, 2), end: (6, 3), text: `h`
+    pattern:  1, capture: 1 - function, start: (7, 2), end: (7, 3), text: `j`
+    pattern:  9, capture: 8 - constant, start: (8, 2), end: (8, 5), text: `--k`
+corpus/programs.txt/002
+    pattern:  1, capture: 1 - function, start: (1, 0), end: (1, 4), text: `echo`
+    pattern:  1, capture: 1 - function, start: (4, 0), end: (4, 4), text: `echo`
+    pattern:  1, capture: 1 - function, start: (7, 0), end: (7, 4), text: `echo`
+corpus/programs.txt/003
+    pattern:  1, capture: 1 - function, start: (1, 0), end: (1, 4), text: `echo`
+corpus/programs.txt/004
+    pattern:  1, capture: 1 - function, start: (1, 0), end: (1, 4), text: `echo`

@@ -1,0 +1,677 @@
+corpus/statements.txt/000
+    pattern:  1, capture: 1 - function, start: (1, 0), end: (1, 6), text: `whoami`
+    pattern:  8, capture: 7 - operator, start: (1, 7), end: (1, 8), text: `|`
+    pattern:  1, capture: 1 - function, start: (1, 9), end: (1, 12), text: `cat`
+    pattern:  1, capture: 1 - function, start: (2, 0), end: (2, 3), text: `cat`
+    pattern:  8, capture: 7 - operator, start: (2, 8), end: (2, 9), text: `|`
+    pattern:  1, capture: 1 - function, start: (2, 10), end: (2, 14), text: `grep`
+    pattern:  9, capture: 8 - constant, start: (2, 15), end: (2, 17), text: `-v`
+    pattern:  1, capture: 1 - function, start: (3, 0), end: (3, 3), text: `cat`
+    pattern:  8, capture: 7 - operator, start: (3, 8), end: (3, 9), text: `|`
+    pattern:  1, capture: 1 - function, start: (3, 10), end: (3, 14), text: `head`
+    pattern:  9, capture: 8 - constant, start: (3, 15), end: (3, 17), text: `-n`
+corpus/statements.txt/001
+    pattern:  1, capture: 1 - function, start: (1, 0), end: (1, 1), text: `a`
+    pattern:  8, capture: 7 - operator, start: (1, 2), end: (1, 3), text: `|`
+    pattern:  1, capture: 1 - function, start: (1, 4), end: (1, 5), text: `b`
+    pattern:  8, capture: 7 - operator, start: (1, 6), end: (1, 8), text: `&&`
+    pattern:  1, capture: 1 - function, start: (1, 9), end: (1, 10), text: `c`
+    pattern:  8, capture: 7 - operator, start: (1, 11), end: (1, 13), text: `&&`
+    pattern:  1, capture: 1 - function, start: (1, 14), end: (1, 15), text: `d`
+    pattern:  1, capture: 1 - function, start: (1, 17), end: (1, 18), text: `d`
+    pattern:  1, capture: 1 - function, start: (1, 26), end: (1, 27), text: `e`
+corpus/statements.txt/002
+    pattern:  3, capture: 3 - keyword, start: (1, 0), end: (1, 5), text: `while`
+    pattern:  1, capture: 1 - function, start: (1, 6), end: (1, 15), text: `something`
+    pattern:  3, capture: 3 - keyword, start: (1, 25), end: (1, 27), text: `do`
+    pattern:  1, capture: 1 - function, start: (2, 2), end: (2, 6), text: `echo`
+    pattern:  1, capture: 1 - function, start: (3, 2), end: (3, 6), text: `echo`
+    pattern:  3, capture: 3 - keyword, start: (4, 0), end: (4, 4), text: `done`
+    pattern:  3, capture: 3 - keyword, start: (6, 0), end: (6, 5), text: `while`
+    pattern:  2, capture: 2 - property, start: (6, 12), end: (6, 16), text: `name`
+    pattern:  0, capture: 0 - string, start: (6, 17), end: (6, 21), text: `"$1"`
+    pattern:  8, capture: 7 - operator, start: (6, 18), end: (6, 19), text: `$`
+    pattern:  2, capture: 2 - property, start: (6, 19), end: (6, 20), text: `1`
+    pattern:  2, capture: 2 - property, start: (6, 22), end: (6, 25), text: `val`
+    pattern:  0, capture: 0 - string, start: (6, 26), end: (6, 30), text: `"$2"`
+    pattern:  8, capture: 7 - operator, start: (6, 27), end: (6, 28), text: `$`
+    pattern:  2, capture: 2 - property, start: (6, 28), end: (6, 29), text: `2`
+    pattern:  1, capture: 1 - function, start: (6, 32), end: (6, 37), text: `shift`
+    pattern:  3, capture: 3 - keyword, start: (6, 41), end: (6, 43), text: `do`
+    pattern:  1, capture: 1 - function, start: (7, 2), end: (7, 8), text: `printf`
+    pattern:  0, capture: 0 - string, start: (7, 9), end: (7, 20), text: `"%s (%s)\n"`
+    pattern:  0, capture: 0 - string, start: (7, 21), end: (7, 27), text: `"$val"`
+    pattern:  8, capture: 7 - operator, start: (7, 22), end: (7, 23), text: `$`
+    pattern:  2, capture: 2 - property, start: (7, 23), end: (7, 26), text: `val`
+    pattern:  0, capture: 0 - string, start: (7, 28), end: (7, 35), text: `"$name"`
+    pattern:  8, capture: 7 - operator, start: (7, 29), end: (7, 30), text: `$`
+    pattern:  2, capture: 2 - property, start: (7, 30), end: (7, 34), text: `name`
+    pattern:  3, capture: 3 - keyword, start: (8, 0), end: (8, 4), text: `done`
+corpus/statements.txt/003
+    pattern:  3, capture: 3 - keyword, start: (1, 0), end: (1, 5), text: `until`
+    pattern:  1, capture: 1 - function, start: (1, 6), end: (1, 15), text: `something`
+    pattern:  3, capture: 3 - keyword, start: (1, 25), end: (1, 27), text: `do`
+    pattern:  1, capture: 1 - function, start: (2, 2), end: (2, 6), text: `echo`
+    pattern:  1, capture: 1 - function, start: (3, 2), end: (3, 6), text: `echo`
+    pattern:  3, capture: 3 - keyword, start: (4, 0), end: (4, 4), text: `done`
+corpus/statements.txt/004
+    pattern:  3, capture: 3 - keyword, start: (1, 0), end: (1, 5), text: `while`
+    pattern:  1, capture: 1 - function, start: (1, 6), end: (1, 10), text: `read`
+    pattern:  3, capture: 3 - keyword, start: (1, 17), end: (1, 19), text: `do`
+    pattern:  1, capture: 1 - function, start: (2, 2), end: (2, 6), text: `echo`
+    pattern:  8, capture: 7 - operator, start: (2, 7), end: (2, 8), text: `$`
+    pattern:  2, capture: 2 - property, start: (2, 8), end: (2, 12), text: `line`
+    pattern:  3, capture: 3 - keyword, start: (3, 0), end: (3, 4), text: `done`
+    pattern:  8, capture: 7 - operator, start: (3, 5), end: (3, 6), text: `<`
+    pattern:  7, capture: 6 - embedded, start: (3, 7), end: (3, 18), text: `<(cat file)`
+    pattern:  1, capture: 1 - function, start: (3, 9), end: (3, 12), text: `cat`
+corpus/statements.txt/005
+    pattern:  3, capture: 3 - keyword, start: (1, 0), end: (1, 3), text: `for`
+    pattern:  2, capture: 2 - property, start: (1, 4), end: (1, 5), text: `a`
+    pattern:  3, capture: 3 - keyword, start: (1, 6), end: (1, 8), text: `in`
+    pattern:  7, capture: 6 - embedded, start: (1, 13), end: (1, 24), text: `$(seq 5 10)`
+    pattern:  1, capture: 1 - function, start: (1, 15), end: (1, 18), text: `seq`
+    pattern:  3, capture: 3 - keyword, start: (1, 26), end: (1, 28), text: `do`
+    pattern:  1, capture: 1 - function, start: (2, 2), end: (2, 6), text: `echo`
+    pattern:  8, capture: 7 - operator, start: (2, 7), end: (2, 8), text: `$`
+    pattern:  2, capture: 2 - property, start: (2, 8), end: (2, 9), text: `a`
+    pattern:  3, capture: 3 - keyword, start: (3, 0), end: (3, 4), text: `done`
+    pattern:  3, capture: 3 - keyword, start: (5, 0), end: (5, 3), text: `for`
+    pattern:  2, capture: 2 - property, start: (5, 4), end: (5, 7), text: `ARG`
+    pattern:  3, capture: 3 - keyword, start: (5, 9), end: (5, 11), text: `do`
+    pattern:  1, capture: 1 - function, start: (6, 2), end: (6, 6), text: `echo`
+    pattern:  8, capture: 7 - operator, start: (6, 7), end: (6, 8), text: `$`
+    pattern:  2, capture: 2 - property, start: (6, 8), end: (6, 11), text: `ARG`
+    pattern:  2, capture: 2 - property, start: (7, 2), end: (7, 5), text: `ARG`
+    pattern:  0, capture: 0 - string, start: (7, 6), end: (7, 8), text: `''`
+    pattern:  3, capture: 3 - keyword, start: (8, 0), end: (8, 4), text: `done`
+    pattern:  3, capture: 3 - keyword, start: (10, 0), end: (10, 3), text: `for`
+    pattern:  2, capture: 2 - property, start: (10, 4), end: (10, 5), text: `c`
+    pattern:  3, capture: 3 - keyword, start: (10, 6), end: (10, 8), text: `in`
+    pattern:  7, capture: 6 - embedded, start: (10, 9), end: (10, 14), text: `${=1}`
+    pattern:  2, capture: 2 - property, start: (10, 12), end: (10, 13), text: `1`
+    pattern:  3, capture: 3 - keyword, start: (10, 16), end: (10, 18), text: `do`
+    pattern:  1, capture: 1 - function, start: (11, 1), end: (11, 5), text: `echo`
+    pattern:  3, capture: 3 - keyword, start: (12, 0), end: (12, 4), text: `done`
+corpus/statements.txt/006
+    pattern:  3, capture: 3 - keyword, start: (1, 0), end: (1, 6), text: `select`
+    pattern:  2, capture: 2 - property, start: (1, 7), end: (1, 13), text: `choice`
+    pattern:  3, capture: 3 - keyword, start: (1, 14), end: (1, 16), text: `in`
+    pattern:  7, capture: 6 - embedded, start: (1, 21), end: (1, 26), text: `$(ls)`
+    pattern:  1, capture: 1 - function, start: (1, 23), end: (1, 25), text: `ls`
+    pattern:  3, capture: 3 - keyword, start: (1, 28), end: (1, 30), text: `do`
+    pattern:  1, capture: 1 - function, start: (2, 2), end: (2, 6), text: `echo`
+    pattern:  8, capture: 7 - operator, start: (2, 7), end: (2, 8), text: `$`
+    pattern:  2, capture: 2 - property, start: (2, 8), end: (2, 14), text: `choice`
+    pattern:  1, capture: 1 - function, start: (3, 2), end: (3, 7), text: `break`
+    pattern:  3, capture: 3 - keyword, start: (4, 0), end: (4, 4), text: `done`
+    pattern:  3, capture: 3 - keyword, start: (6, 0), end: (6, 6), text: `select`
+    pattern:  2, capture: 2 - property, start: (6, 7), end: (6, 10), text: `ARG`
+    pattern:  3, capture: 3 - keyword, start: (6, 12), end: (6, 14), text: `do`
+    pattern:  1, capture: 1 - function, start: (7, 2), end: (7, 6), text: `echo`
+    pattern:  8, capture: 7 - operator, start: (7, 7), end: (7, 8), text: `$`
+    pattern:  2, capture: 2 - property, start: (7, 8), end: (7, 11), text: `ARG`
+    pattern:  2, capture: 2 - property, start: (8, 2), end: (8, 5), text: `ARG`
+    pattern:  0, capture: 0 - string, start: (8, 6), end: (8, 8), text: `''`
+    pattern:  3, capture: 3 - keyword, start: (9, 0), end: (9, 4), text: `done`
+corpus/statements.txt/007
+    pattern:  3, capture: 3 - keyword, start: (1, 0), end: (1, 3), text: `for`
+    pattern:  2, capture: 2 - property, start: (1, 7), end: (1, 8), text: `c`
+    pattern:  3, capture: 3 - keyword, start: (2, 0), end: (2, 2), text: `do`
+    pattern:  1, capture: 1 - function, start: (3, 2), end: (3, 6), text: `echo`
+    pattern:  8, capture: 7 - operator, start: (3, 7), end: (3, 8), text: `$`
+    pattern:  2, capture: 2 - property, start: (3, 8), end: (3, 9), text: `c`
+    pattern:  3, capture: 3 - keyword, start: (4, 0), end: (4, 4), text: `done`
+    pattern:  3, capture: 3 - keyword, start: (6, 0), end: (6, 3), text: `for`
+    pattern:  2, capture: 2 - property, start: (6, 7), end: (6, 8), text: `c`
+    pattern:  1, capture: 1 - function, start: (7, 1), end: (7, 5), text: `echo`
+    pattern:  8, capture: 7 - operator, start: (7, 6), end: (7, 7), text: `$`
+    pattern:  2, capture: 2 - property, start: (7, 7), end: (7, 8), text: `c`
+    pattern:  3, capture: 3 - keyword, start: (10, 0), end: (10, 3), text: `for`
+    pattern:  3, capture: 3 - keyword, start: (11, 0), end: (11, 2), text: `do`
+    pattern:  1, capture: 1 - function, start: (12, 2), end: (12, 6), text: `echo`
+    pattern:  0, capture: 0 - string, start: (12, 7), end: (12, 16), text: `'forever'`
+    pattern:  3, capture: 3 - keyword, start: (13, 0), end: (13, 4), text: `done`
+    pattern:  3, capture: 3 - keyword, start: (15, 0), end: (15, 3), text: `for`
+    pattern:  2, capture: 2 - property, start: (15, 6), end: (15, 8), text: `cx`
+    pattern:  2, capture: 2 - property, start: (15, 14), end: (15, 15), text: `c`
+    pattern:  8, capture: 7 - operator, start: (15, 18), end: (15, 19), text: `$`
+    pattern:  2, capture: 2 - property, start: (15, 19), end: (15, 21), text: `cx`
+    pattern:  8, capture: 7 - operator, start: (15, 24), end: (15, 25), text: `$`
+    pattern:  2, capture: 2 - property, start: (15, 25), end: (15, 27), text: `pf`
+    pattern:  8, capture: 7 - operator, start: (15, 31), end: (15, 32), text: `<`
+    pattern:  8, capture: 7 - operator, start: (15, 33), end: (15, 34), text: `$`
+    pattern:  2, capture: 2 - property, start: (15, 34), end: (15, 36), text: `wc`
+    pattern:  8, capture: 7 - operator, start: (15, 39), end: (15, 40), text: `$`
+    pattern:  2, capture: 2 - property, start: (15, 40), end: (15, 41), text: `k`
+    pattern:  3, capture: 3 - keyword, start: (15, 47), end: (15, 49), text: `do`
+    pattern:  1, capture: 1 - function, start: (16, 2), end: (16, 6), text: `echo`
+    pattern:  0, capture: 0 - string, start: (16, 7), end: (16, 12), text: `"$cx"`
+    pattern:  8, capture: 7 - operator, start: (16, 8), end: (16, 9), text: `$`
+    pattern:  2, capture: 2 - property, start: (16, 9), end: (16, 11), text: `cx`
+    pattern:  3, capture: 3 - keyword, start: (17, 0), end: (17, 4), text: `done`
+    pattern:  3, capture: 3 - keyword, start: (19, 0), end: (19, 3), text: `for`
+    pattern:  2, capture: 2 - property, start: (19, 7), end: (19, 8), text: `i`
+    pattern:  3, capture: 3 - keyword, start: (19, 22), end: (19, 24), text: `do`
+    pattern:  1, capture: 1 - function, start: (19, 25), end: (19, 29), text: `echo`
+    pattern:  8, capture: 7 - operator, start: (19, 30), end: (19, 31), text: `$`
+    pattern:  2, capture: 2 - property, start: (19, 31), end: (19, 32), text: `i`
+    pattern:  3, capture: 3 - keyword, start: (19, 34), end: (19, 36), text: `if`
+    pattern:  8, capture: 7 - operator, start: (19, 40), end: (19, 41), text: `$`
+    pattern:  2, capture: 2 - property, start: (19, 41), end: (19, 42), text: `i`
+    pattern:  3, capture: 3 - keyword, start: (19, 52), end: (19, 56), text: `then`
+    pattern:  1, capture: 1 - function, start: (19, 57), end: (19, 62), text: `break`
+    pattern:  3, capture: 3 - keyword, start: (19, 64), end: (19, 66), text: `fi`
+    pattern:  3, capture: 3 - keyword, start: (19, 68), end: (19, 72), text: `done`
+    pattern:  4, capture: 4 - comment, start: (21, 0), end: (21, 21), text: `# added post-bash-4.2`
+    pattern:  3, capture: 3 - keyword, start: (22, 0), end: (22, 3), text: `for`
+    pattern:  2, capture: 2 - property, start: (22, 7), end: (22, 8), text: `i`
+    pattern:  2, capture: 2 - property, start: (22, 11), end: (22, 12), text: `j`
+    pattern:  2, capture: 2 - property, start: (22, 15), end: (22, 16), text: `k`
+    pattern:  7, capture: 6 - embedded, start: (22, 41), end: (22, 78), text: `$( ((i%9)) || printf " " >&2; echo 0)`
+    pattern:  2, capture: 2 - property, start: (22, 46), end: (22, 47), text: `i`
+    pattern:  1, capture: 1 - function, start: (22, 55), end: (22, 61), text: `printf`
+    pattern:  0, capture: 0 - string, start: (22, 62), end: (22, 65), text: `" "`
+    pattern:  1, capture: 1 - function, start: (22, 71), end: (22, 75), text: `echo`
+    pattern:  3, capture: 3 - keyword, start: (23, 0), end: (23, 2), text: `do`
+    pattern:  1, capture: 1 - function, start: (24, 0), end: (24, 6), text: `printf`
+    pattern:  0, capture: 0 - string, start: (24, 7), end: (24, 11), text: `"$i"`
+    pattern:  8, capture: 7 - operator, start: (24, 8), end: (24, 9), text: `$`
+    pattern:  2, capture: 2 - property, start: (24, 9), end: (24, 10), text: `i`
+    pattern:  3, capture: 3 - keyword, start: (25, 0), end: (25, 4), text: `done`
+    pattern:  1, capture: 1 - function, start: (27, 0), end: (27, 4), text: `echo`
+    pattern:  3, capture: 3 - keyword, start: (29, 2), end: (29, 5), text: `for`
+    pattern:  2, capture: 2 - property, start: (29, 9), end: (29, 10), text: `i`
+    pattern:  2, capture: 2 - property, start: (29, 13), end: (29, 14), text: `j`
+    pattern:  2, capture: 2 - property, start: (29, 17), end: (29, 18), text: `k`
+    pattern:  7, capture: 6 - embedded, start: (29, 43), end: (29, 80), text: `$( ((i%9)) || printf " " >&2; echo 0)`
+    pattern:  2, capture: 2 - property, start: (29, 48), end: (29, 49), text: `i`
+    pattern:  1, capture: 1 - function, start: (29, 57), end: (29, 63), text: `printf`
+    pattern:  0, capture: 0 - string, start: (29, 64), end: (29, 67), text: `" "`
+    pattern:  1, capture: 1 - function, start: (29, 73), end: (29, 77), text: `echo`
+    pattern:  3, capture: 3 - keyword, start: (30, 0), end: (30, 2), text: `do`
+    pattern:  1, capture: 1 - function, start: (31, 0), end: (31, 6), text: `printf`
+    pattern:  0, capture: 0 - string, start: (31, 7), end: (31, 11), text: `"$i"`
+    pattern:  8, capture: 7 - operator, start: (31, 8), end: (31, 9), text: `$`
+    pattern:  2, capture: 2 - property, start: (31, 9), end: (31, 10), text: `i`
+    pattern:  3, capture: 3 - keyword, start: (32, 0), end: (32, 4), text: `done`
+corpus/statements.txt/008
+    pattern:  3, capture: 3 - keyword, start: (1, 0), end: (1, 2), text: `if`
+    pattern:  1, capture: 1 - function, start: (1, 3), end: (1, 6), text: `cat`
+    pattern:  8, capture: 7 - operator, start: (1, 17), end: (1, 18), text: `|`
+    pattern:  1, capture: 1 - function, start: (1, 19), end: (1, 23), text: `grep`
+    pattern:  9, capture: 8 - constant, start: (1, 24), end: (1, 26), text: `-v`
+    pattern:  3, capture: 3 - keyword, start: (1, 31), end: (1, 35), text: `then`
+    pattern:  1, capture: 1 - function, start: (2, 2), end: (2, 6), text: `echo`
+    pattern:  3, capture: 3 - keyword, start: (3, 0), end: (3, 4), text: `elif`
+    pattern:  1, capture: 1 - function, start: (3, 5), end: (3, 8), text: `cat`
+    pattern:  8, capture: 7 - operator, start: (3, 20), end: (3, 21), text: `|`
+    pattern:  1, capture: 1 - function, start: (3, 22), end: (3, 26), text: `grep`
+    pattern:  9, capture: 8 - constant, start: (3, 27), end: (3, 29), text: `-v`
+    pattern:  3, capture: 3 - keyword, start: (3, 34), end: (3, 38), text: `then`
+    pattern:  1, capture: 1 - function, start: (4, 2), end: (4, 6), text: `echo`
+    pattern:  3, capture: 3 - keyword, start: (5, 0), end: (5, 4), text: `else`
+    pattern:  1, capture: 1 - function, start: (6, 2), end: (6, 6), text: `exit`
+    pattern:  3, capture: 3 - keyword, start: (7, 0), end: (7, 2), text: `fi`
+corpus/statements.txt/009
+    pattern:  3, capture: 3 - keyword, start: (1, 0), end: (1, 2), text: `if`
+    pattern:  0, capture: 0 - string, start: (1, 5), end: (1, 15), text: `"$(uname)"`
+    pattern:  7, capture: 6 - embedded, start: (1, 6), end: (1, 14), text: `$(uname)`
+    pattern:  1, capture: 1 - function, start: (1, 8), end: (1, 13), text: `uname`
+    pattern:  0, capture: 0 - string, start: (1, 19), end: (1, 27), text: `'Darwin'`
+    pattern:  3, capture: 3 - keyword, start: (1, 31), end: (1, 35), text: `then`
+    pattern:  1, capture: 1 - function, start: (2, 2), end: (2, 6), text: `echo`
+    pattern:  3, capture: 3 - keyword, start: (3, 0), end: (3, 2), text: `fi`
+    pattern:  3, capture: 3 - keyword, start: (5, 0), end: (5, 2), text: `if`
+    pattern:  3, capture: 3 - keyword, start: (5, 15), end: (5, 19), text: `then`
+    pattern:  1, capture: 1 - function, start: (6, 2), end: (6, 6), text: `echo`
+    pattern:  3, capture: 3 - keyword, start: (7, 0), end: (7, 2), text: `fi`
+    pattern:  8, capture: 7 - operator, start: (9, 22), end: (9, 24), text: `&&`
+    pattern:  1, capture: 1 - function, start: (9, 25), end: (9, 29), text: `echo`
+    pattern:  8, capture: 7 - operator, start: (10, 22), end: (10, 24), text: `&&`
+    pattern:  1, capture: 1 - function, start: (10, 25), end: (10, 29), text: `echo`
+corpus/statements.txt/010
+    pattern:  3, capture: 3 - keyword, start: (1, 0), end: (1, 2), text: `if`
+    pattern:  1, capture: 1 - function, start: (1, 5), end: (1, 12), text: `command`
+    pattern:  9, capture: 8 - constant, start: (1, 13), end: (1, 15), text: `-v`
+    pattern:  3, capture: 3 - keyword, start: (1, 22), end: (1, 26), text: `then`
+    pattern:  1, capture: 1 - function, start: (2, 2), end: (2, 6), text: `echo`
+    pattern:  0, capture: 0 - string, start: (2, 7), end: (2, 14), text: `'hello'`
+    pattern:  3, capture: 3 - keyword, start: (3, 0), end: (3, 2), text: `fi`
+corpus/statements.txt/011
+    pattern:  3, capture: 3 - keyword, start: (1, 0), end: (1, 2), text: `if`
+    pattern:  1, capture: 1 - function, start: (1, 3), end: (1, 10), text: `command`
+    pattern:  9, capture: 8 - constant, start: (1, 11), end: (1, 13), text: `-v`
+    pattern:  3, capture: 3 - keyword, start: (1, 20), end: (1, 24), text: `then`
+    pattern:  1, capture: 1 - function, start: (2, 2), end: (2, 6), text: `echo`
+    pattern:  0, capture: 0 - string, start: (2, 7), end: (2, 14), text: `'hello'`
+    pattern:  3, capture: 3 - keyword, start: (3, 0), end: (3, 2), text: `fi`
+corpus/statements.txt/012
+    pattern:  3, capture: 3 - keyword, start: (1, 0), end: (1, 2), text: `if`
+    pattern:  2, capture: 2 - property, start: (1, 3), end: (1, 9), text: `result`
+    pattern:  7, capture: 6 - embedded, start: (1, 10), end: (1, 25), text: `$(echo 'hello')`
+    pattern:  1, capture: 1 - function, start: (1, 12), end: (1, 16), text: `echo`
+    pattern:  0, capture: 0 - string, start: (1, 17), end: (1, 24), text: `'hello'`
+    pattern:  3, capture: 3 - keyword, start: (1, 27), end: (1, 31), text: `then`
+    pattern:  1, capture: 1 - function, start: (2, 2), end: (2, 6), text: `echo`
+    pattern:  0, capture: 0 - string, start: (2, 7), end: (2, 14), text: `'hello'`
+    pattern:  3, capture: 3 - keyword, start: (3, 0), end: (3, 2), text: `fi`
+corpus/statements.txt/013
+    pattern:  3, capture: 3 - keyword, start: (1, 0), end: (1, 2), text: `if`
+    pattern:  2, capture: 2 - property, start: (1, 5), end: (1, 11), text: `result`
+    pattern:  7, capture: 6 - embedded, start: (1, 12), end: (1, 27), text: `$(echo 'hello')`
+    pattern:  1, capture: 1 - function, start: (1, 14), end: (1, 18), text: `echo`
+    pattern:  0, capture: 0 - string, start: (1, 19), end: (1, 26), text: `'hello'`
+    pattern:  3, capture: 3 - keyword, start: (1, 29), end: (1, 33), text: `then`
+    pattern:  1, capture: 1 - function, start: (2, 2), end: (2, 6), text: `echo`
+    pattern:  0, capture: 0 - string, start: (2, 7), end: (2, 14), text: `'hello'`
+    pattern:  3, capture: 3 - keyword, start: (3, 0), end: (3, 2), text: `fi`
+corpus/statements.txt/014
+    pattern:  3, capture: 3 - keyword, start: (1, 0), end: (1, 2), text: `if`
+    pattern:  2, capture: 2 - property, start: (1, 3), end: (1, 6), text: `foo`
+    pattern:  3, capture: 3 - keyword, start: (1, 10), end: (1, 14), text: `then`
+    pattern:  1, capture: 1 - function, start: (2, 2), end: (2, 6), text: `echo`
+    pattern:  0, capture: 0 - string, start: (2, 7), end: (2, 14), text: `'hello'`
+    pattern:  3, capture: 3 - keyword, start: (3, 0), end: (3, 2), text: `fi`
+corpus/statements.txt/015
+    pattern:  3, capture: 3 - keyword, start: (1, 0), end: (1, 2), text: `if`
+    pattern:  2, capture: 2 - property, start: (1, 5), end: (1, 8), text: `foo`
+    pattern:  3, capture: 3 - keyword, start: (1, 12), end: (1, 16), text: `then`
+    pattern:  1, capture: 1 - function, start: (2, 2), end: (2, 6), text: `echo`
+    pattern:  0, capture: 0 - string, start: (2, 7), end: (2, 14), text: `'hello'`
+    pattern:  3, capture: 3 - keyword, start: (3, 0), end: (3, 2), text: `fi`
+corpus/statements.txt/016
+    pattern:  3, capture: 3 - keyword, start: (1, 0), end: (1, 4), text: `case`
+    pattern:  0, capture: 0 - string, start: (1, 5), end: (1, 10), text: `"opt"`
+    pattern:  3, capture: 3 - keyword, start: (1, 11), end: (1, 13), text: `in`
+    pattern:  1, capture: 1 - function, start: (3, 4), end: (3, 8), text: `echo`
+    pattern:  1, capture: 1 - function, start: (7, 4), end: (7, 8), text: `echo`
+    pattern:  1, capture: 1 - function, start: (11, 4), end: (11, 8), text: `echo`
+    pattern:  3, capture: 3 - keyword, start: (12, 0), end: (12, 4), text: `esac`
+    pattern:  3, capture: 3 - keyword, start: (14, 0), end: (14, 4), text: `case`
+    pattern:  0, capture: 0 - string, start: (14, 5), end: (14, 10), text: `"opt"`
+    pattern:  3, capture: 3 - keyword, start: (14, 11), end: (14, 13), text: `in`
+    pattern:  1, capture: 1 - function, start: (16, 4), end: (16, 8), text: `echo`
+    pattern:  1, capture: 1 - function, start: (20, 4), end: (20, 8), text: `echo`
+    pattern:  1, capture: 1 - function, start: (24, 4), end: (24, 8), text: `echo`
+    pattern:  3, capture: 3 - keyword, start: (25, 0), end: (25, 4), text: `esac`
+    pattern:  3, capture: 3 - keyword, start: (27, 0), end: (27, 4), text: `case`
+    pattern:  0, capture: 0 - string, start: (27, 5), end: (27, 9), text: `"$Z"`
+    pattern:  8, capture: 7 - operator, start: (27, 6), end: (27, 7), text: `$`
+    pattern:  2, capture: 2 - property, start: (27, 7), end: (27, 8), text: `Z`
+    pattern:  3, capture: 3 - keyword, start: (27, 10), end: (27, 12), text: `in`
+    pattern:  8, capture: 7 - operator, start: (28, 5), end: (28, 6), text: `|`
+    pattern:  1, capture: 1 - function, start: (28, 11), end: (28, 13), text: `ef`
+    pattern:  3, capture: 3 - keyword, start: (29, 0), end: (29, 4), text: `esac`
+    pattern:  3, capture: 3 - keyword, start: (31, 0), end: (31, 4), text: `case`
+    pattern:  8, capture: 7 - operator, start: (31, 5), end: (31, 6), text: `$`
+    pattern:  2, capture: 2 - property, start: (31, 6), end: (31, 10), text: `dest`
+    pattern:  3, capture: 3 - keyword, start: (31, 11), end: (31, 13), text: `in`
+    pattern:  1, capture: 1 - function, start: (33, 4), end: (33, 8), text: `exit`
+    pattern:  8, capture: 7 - operator, start: (33, 9), end: (33, 10), text: `$`
+    pattern:  3, capture: 3 - keyword, start: (35, 0), end: (35, 4), text: `esac`
+    pattern:  3, capture: 3 - keyword, start: (37, 0), end: (37, 4), text: `case`
+    pattern:  3, capture: 3 - keyword, start: (37, 7), end: (37, 9), text: `in`
+    pattern:  1, capture: 1 - function, start: (37, 13), end: (37, 17), text: `echo`
+    pattern:  3, capture: 3 - keyword, start: (37, 26), end: (37, 30), text: `esac`
+    pattern:  3, capture: 3 - keyword, start: (39, 0), end: (39, 4), text: `case`
+    pattern:  3, capture: 3 - keyword, start: (39, 9), end: (39, 11), text: `in`
+    pattern:  1, capture: 1 - function, start: (40, 12), end: (40, 13), text: `:`
+    pattern:  3, capture: 3 - keyword, start: (41, 0), end: (41, 4), text: `esac`
+    pattern:  3, capture: 3 - keyword, start: (43, 0), end: (43, 4), text: `case`
+    pattern:  0, capture: 0 - string, start: (43, 5), end: (43, 11), text: `"$arg"`
+    pattern:  8, capture: 7 - operator, start: (43, 6), end: (43, 7), text: `$`
+    pattern:  2, capture: 2 - property, start: (43, 7), end: (43, 10), text: `arg`
+    pattern:  3, capture: 3 - keyword, start: (43, 12), end: (43, 14), text: `in`
+    pattern:  1, capture: 1 - function, start: (44, 19), end: (44, 23), text: `echo`
+    pattern:  0, capture: 0 - string, start: (44, 24), end: (44, 30), text: `"$arg"`
+    pattern:  8, capture: 7 - operator, start: (44, 25), end: (44, 26), text: `$`
+    pattern:  2, capture: 2 - property, start: (44, 26), end: (44, 29), text: `arg`
+    pattern:  3, capture: 3 - keyword, start: (45, 0), end: (45, 4), text: `esac`
+    pattern:  3, capture: 3 - keyword, start: (47, 0), end: (47, 4), text: `case`
+    pattern:  7, capture: 6 - embedded, start: (47, 5), end: (47, 12), text: `${lang}`
+    pattern:  2, capture: 2 - property, start: (47, 7), end: (47, 11), text: `lang`
+    pattern:  3, capture: 3 - keyword, start: (47, 13), end: (47, 15), text: `in`
+    pattern:  8, capture: 7 - operator, start: (48, 15), end: (48, 16), text: `|`
+    pattern:  8, capture: 7 - operator, start: (49, 15), end: (49, 16), text: `|`
+    pattern:  7, capture: 6 - embedded, start: (50, 1), end: (50, 6), text: `${PN}`
+    pattern:  2, capture: 2 - property, start: (50, 3), end: (50, 5), text: `PN`
+    pattern:  1, capture: 1 - function, start: (51, 3), end: (51, 5), text: `rm`
+    pattern:  9, capture: 8 - constant, start: (51, 6), end: (51, 8), text: `-r`
+    pattern:  7, capture: 6 - embedded, start: (51, 9), end: (51, 16), text: `${lang}`
+    pattern:  2, capture: 2 - property, start: (51, 11), end: (51, 15), text: `lang`
+    pattern:  1, capture: 1 - function, start: (51, 20), end: (51, 23), text: `die`
+    pattern:  3, capture: 3 - keyword, start: (52, 0), end: (52, 4), text: `esac`
+corpus/statements.txt/017
+    pattern:  3, capture: 3 - keyword, start: (1, 0), end: (1, 2), text: `if`
+    pattern:  0, capture: 0 - string, start: (1, 6), end: (1, 17), text: `"$lsb_dist"`
+    pattern:  8, capture: 7 - operator, start: (1, 7), end: (1, 8), text: `$`
+    pattern:  2, capture: 2 - property, start: (1, 8), end: (1, 16), text: `lsb_dist`
+    pattern:  0, capture: 0 - string, start: (1, 21), end: (1, 29), text: `'Ubuntu'`
+    pattern:  7, capture: 6 - embedded, start: (1, 33), end: (1, 61), text: `$(ver_to_int "$lsb_release")`
+    pattern:  1, capture: 1 - function, start: (1, 35), end: (1, 45), text: `ver_to_int`
+    pattern:  0, capture: 0 - string, start: (1, 46), end: (1, 60), text: `"$lsb_release"`
+    pattern:  8, capture: 7 - operator, start: (1, 47), end: (1, 48), text: `$`
+    pattern:  2, capture: 2 - property, start: (1, 48), end: (1, 59), text: `lsb_release`
+    pattern:  8, capture: 7 - operator, start: (1, 62), end: (1, 63), text: `<`
+    pattern:  7, capture: 6 - embedded, start: (1, 64), end: (1, 85), text: `$(ver_to_int '14.04')`
+    pattern:  1, capture: 1 - function, start: (1, 66), end: (1, 76), text: `ver_to_int`
+    pattern:  0, capture: 0 - string, start: (1, 77), end: (1, 84), text: `'14.04'`
+    pattern:  3, capture: 3 - keyword, start: (1, 90), end: (1, 94), text: `then`
+    pattern:  1, capture: 1 - function, start: (2, 1), end: (2, 7), text: `return`
+    pattern:  3, capture: 3 - keyword, start: (3, 0), end: (3, 2), text: `fi`
+    pattern:  7, capture: 6 - embedded, start: (5, 3), end: (5, 8), text: `${PV}`
+    pattern:  2, capture: 2 - property, start: (5, 5), end: (5, 7), text: `PV`
+    pattern:  7, capture: 6 - embedded, start: (5, 12), end: (5, 105), text: `$(sed -n -e 's/^Version: //p' "${ED}/usr/$(get_libdir)/pkgconfig/tss2-tcti-tabrmd.pc" || die)`
+    pattern:  1, capture: 1 - function, start: (5, 14), end: (5, 17), text: `sed`
+    pattern:  9, capture: 8 - constant, start: (5, 18), end: (5, 20), text: `-n`
+    pattern:  9, capture: 8 - constant, start: (5, 21), end: (5, 23), text: `-e`
+    pattern:  0, capture: 0 - string, start: (5, 24), end: (5, 41), text: `'s/^Version: //p'`
+    pattern:  0, capture: 0 - string, start: (5, 42), end: (5, 97), text: `"${ED}/usr/$(get_libdir)/pkgconfig/tss2-tcti-tabrmd.pc"`
+    pattern:  7, capture: 6 - embedded, start: (5, 43), end: (5, 48), text: `${ED}`
+    pattern:  2, capture: 2 - property, start: (5, 45), end: (5, 47), text: `ED`
+    pattern:  7, capture: 6 - embedded, start: (5, 53), end: (5, 66), text: `$(get_libdir)`
+    pattern:  1, capture: 1 - function, start: (5, 55), end: (5, 65), text: `get_libdir`
+    pattern:  1, capture: 1 - function, start: (5, 101), end: (5, 104), text: `die`
+    pattern:  7, capture: 6 - embedded, start: (7, 3), end: (7, 7), text: `${f}`
+    pattern:  2, capture: 2 - property, start: (7, 5), end: (7, 6), text: `f`
+    pattern:  0, capture: 0 - string, start: (9, 3), end: (9, 18), text: `"${MY_LOCALES}"`
+    pattern:  7, capture: 6 - embedded, start: (9, 4), end: (9, 17), text: `${MY_LOCALES}`
+    pattern:  2, capture: 2 - property, start: (9, 6), end: (9, 16), text: `MY_LOCALES`
+    pattern:  7, capture: 6 - embedded, start: (11, 3), end: (11, 63), text: `$(LC_ALL=C $(tc-getCC) ${LDFLAGS} -Wl,--version 2>/dev/null)`
+    pattern:  2, capture: 2 - property, start: (11, 5), end: (11, 11), text: `LC_ALL`
+    pattern:  1, capture: 1 - function, start: (11, 14), end: (11, 25), text: `$(tc-getCC)`
+    pattern:  7, capture: 6 - embedded, start: (11, 14), end: (11, 25), text: `$(tc-getCC)`
+    pattern:  1, capture: 1 - function, start: (11, 16), end: (11, 24), text: `tc-getCC`
+    pattern:  7, capture: 6 - embedded, start: (11, 26), end: (11, 36), text: `${LDFLAGS}`
+    pattern:  2, capture: 2 - property, start: (11, 28), end: (11, 35), text: `LDFLAGS`
+    pattern:  9, capture: 8 - constant, start: (11, 37), end: (11, 50), text: `-Wl,--version`
+    pattern:  6, capture: 5 - number, start: (11, 51), end: (11, 52), text: `2`
+    pattern:  8, capture: 7 - operator, start: (11, 52), end: (11, 53), text: `>`
+    pattern:  0, capture: 0 - string, start: (13, 6), end: (13, 54), text: `"${EROOT}/usr/share/php/.packagexml/${MY_P}.xml"`
+    pattern:  7, capture: 6 - embedded, start: (13, 7), end: (13, 15), text: `${EROOT}`
+    pattern:  2, capture: 2 - property, start: (13, 9), end: (13, 14), text: `EROOT`
+    pattern:  7, capture: 6 - embedded, start: (13, 42), end: (13, 49), text: `${MY_P}`
+    pattern:  2, capture: 2 - property, start: (13, 44), end: (13, 48), text: `MY_P`
+    pattern:  8, capture: 7 - operator, start: (13, 55), end: (13, 57), text: `&&`
+    pattern:  0, capture: 0 - string, start: (14, 4), end: (14, 30), text: `"${EROOT}/usr/bin/peardev"`
+    pattern:  7, capture: 6 - embedded, start: (14, 5), end: (14, 13), text: `${EROOT}`
+    pattern:  2, capture: 2 - property, start: (14, 7), end: (14, 12), text: `EROOT`
+    pattern:  7, capture: 6 - embedded, start: (16, 3), end: (16, 10), text: `${test}`
+    pattern:  2, capture: 2 - property, start: (16, 5), end: (16, 9), text: `test`
+    pattern:  7, capture: 6 - embedded, start: (16, 16), end: (16, 45), text: `$(IFS='|'; echo "${skip[*]}")`
+    pattern:  2, capture: 2 - property, start: (16, 18), end: (16, 21), text: `IFS`
+    pattern:  0, capture: 0 - string, start: (16, 22), end: (16, 25), text: `'|'`
+    pattern:  1, capture: 1 - function, start: (16, 27), end: (16, 31), text: `echo`
+    pattern:  0, capture: 0 - string, start: (16, 32), end: (16, 44), text: `"${skip[*]}"`
+    pattern:  7, capture: 6 - embedded, start: (16, 33), end: (16, 43), text: `${skip[*]}`
+    pattern:  2, capture: 2 - property, start: (16, 35), end: (16, 39), text: `skip`
+    pattern:  7, capture: 6 - embedded, start: (18, 3), end: (18, 13), text: `${SRC_URI}`
+    pattern:  2, capture: 2 - property, start: (18, 5), end: (18, 12), text: `SRC_URI`
+    pattern:  7, capture: 6 - embedded, start: (18, 19), end: (18, 23), text: `${a}`
+    pattern:  2, capture: 2 - property, start: (18, 21), end: (18, 22), text: `a`
+    pattern:  7, capture: 6 - embedded, start: (22, 3), end: (22, 7), text: `${1}`
+    pattern:  2, capture: 2 - property, start: (22, 5), end: (22, 6), text: `1`
+corpus/statements.txt/018
+    pattern:  3, capture: 3 - keyword, start: (1, 0), end: (1, 2), text: `if`
+    pattern:  8, capture: 7 - operator, start: (1, 8), end: (1, 9), text: `<`
+    pattern:  3, capture: 3 - keyword, start: (1, 24), end: (1, 28), text: `then`
+    pattern:  1, capture: 1 - function, start: (2, 1), end: (2, 7), text: `return`
+    pattern:  3, capture: 3 - keyword, start: (3, 0), end: (3, 2), text: `fi`
+corpus/statements.txt/019
+    pattern:  1, capture: 1 - function, start: (1, 0), end: (1, 20), text: `$((n < 10 ? n : 10))`
+    pattern:  2, capture: 2 - property, start: (1, 3), end: (1, 4), text: `n`
+    pattern:  8, capture: 7 - operator, start: (1, 5), end: (1, 6), text: `<`
+    pattern:  2, capture: 2 - property, start: (1, 12), end: (1, 13), text: `n`
+    pattern:  1, capture: 1 - function, start: (2, 0), end: (2, 22), text: `$(($n < 10 ? $n : 10))`
+    pattern:  8, capture: 7 - operator, start: (2, 3), end: (2, 4), text: `$`
+    pattern:  2, capture: 2 - property, start: (2, 4), end: (2, 5), text: `n`
+    pattern:  8, capture: 7 - operator, start: (2, 6), end: (2, 7), text: `<`
+    pattern:  8, capture: 7 - operator, start: (2, 13), end: (2, 14), text: `$`
+    pattern:  2, capture: 2 - property, start: (2, 14), end: (2, 15), text: `n`
+    pattern:  1, capture: 1 - function, start: (3, 0), end: (3, 26), text: `$((${n} < 10 ? ${n} : 10))`
+    pattern:  7, capture: 6 - embedded, start: (3, 3), end: (3, 7), text: `${n}`
+    pattern:  2, capture: 2 - property, start: (3, 5), end: (3, 6), text: `n`
+    pattern:  8, capture: 7 - operator, start: (3, 8), end: (3, 9), text: `<`
+    pattern:  7, capture: 6 - embedded, start: (3, 15), end: (3, 19), text: `${n}`
+    pattern:  2, capture: 2 - property, start: (3, 17), end: (3, 18), text: `n`
+corpus/statements.txt/020
+    pattern:  0, capture: 0 - string, start: (1, 3), end: (1, 10), text: `"35d8b"`
+    pattern:  8, capture: 7 - operator, start: (2, 3), end: (2, 4), text: `$`
+    pattern:  2, capture: 2 - property, start: (2, 4), end: (2, 7), text: `CMD`
+    pattern:  0, capture: 0 - string, start: (3, 5), end: (3, 26), text: `" ${completions[*]} "`
+    pattern:  7, capture: 6 - embedded, start: (3, 6), end: (3, 24), text: ` ${completions[*]}`
+    pattern:  2, capture: 2 - property, start: (3, 9), end: (3, 20), text: `completions`
+    pattern:  0, capture: 0 - string, start: (3, 30), end: (3, 44), text: `" $alias_cmd "`
+    pattern:  8, capture: 7 - operator, start: (3, 31), end: (3, 33), text: ` $`
+    pattern:  2, capture: 2 - property, start: (3, 33), end: (3, 42), text: `alias_cmd`
+    pattern:  0, capture: 0 - string, start: (4, 5), end: (4, 9), text: `"$a"`
+    pattern:  8, capture: 7 - operator, start: (4, 6), end: (4, 7), text: `$`
+    pattern:  2, capture: 2 - property, start: (4, 7), end: (4, 8), text: `a`
+    pattern:  0, capture: 0 - string, start: (5, 3), end: (5, 7), text: `"$1"`
+    pattern:  8, capture: 7 - operator, start: (5, 4), end: (5, 5), text: `$`
+    pattern:  2, capture: 2 - property, start: (5, 5), end: (5, 6), text: `1`
+    pattern:  0, capture: 0 - string, start: (6, 3), end: (6, 7), text: `"$1"`
+    pattern:  8, capture: 7 - operator, start: (6, 4), end: (6, 5), text: `$`
+    pattern:  2, capture: 2 - property, start: (6, 5), end: (6, 6), text: `1`
+    pattern:  7, capture: 6 - embedded, start: (7, 3), end: (7, 10), text: `${var1}`
+    pattern:  2, capture: 2 - property, start: (7, 5), end: (7, 9), text: `var1`
+    pattern:  7, capture: 6 - embedded, start: (7, 15), end: (7, 22), text: `${var2}`
+    pattern:  2, capture: 2 - property, start: (7, 17), end: (7, 21), text: `var2`
+    pattern:  0, capture: 0 - string, start: (8, 3), end: (8, 12), text: `"$server"`
+    pattern:  8, capture: 7 - operator, start: (8, 4), end: (8, 5), text: `$`
+    pattern:  2, capture: 2 - property, start: (8, 5), end: (8, 11), text: `server`
+    pattern:  0, capture: 0 - string, start: (9, 3), end: (9, 18), text: `"$primary_wins"`
+    pattern:  8, capture: 7 - operator, start: (9, 4), end: (9, 5), text: `$`
+    pattern:  2, capture: 2 - property, start: (9, 5), end: (9, 17), text: `primary_wins`
+    pattern:  7, capture: 6 - embedded, start: (10, 6), end: (10, 10), text: `${x}`
+    pattern:  2, capture: 2 - property, start: (10, 8), end: (10, 9), text: `x`
+    pattern:  8, capture: 7 - operator, start: (10, 11), end: (10, 13), text: `&&`
+    pattern:  7, capture: 6 - embedded, start: (10, 14), end: (10, 37), text: `$(od -t x1 -N 4 "${x}")`
+    pattern:  1, capture: 1 - function, start: (10, 16), end: (10, 18), text: `od`
+    pattern:  9, capture: 8 - constant, start: (10, 19), end: (10, 21), text: `-t`
+    pattern:  9, capture: 8 - constant, start: (10, 25), end: (10, 27), text: `-N`
+    pattern:  0, capture: 0 - string, start: (10, 30), end: (10, 36), text: `"${x}"`
+    pattern:  7, capture: 6 - embedded, start: (10, 31), end: (10, 35), text: `${x}`
+    pattern:  2, capture: 2 - property, start: (10, 33), end: (10, 34), text: `x`
+    pattern:  0, capture: 0 - string, start: (10, 42), end: (10, 55), text: `"7f 45 4c 46"`
+    pattern:  7, capture: 6 - embedded, start: (11, 3), end: (11, 8), text: `${PV}`
+    pattern:  2, capture: 2 - property, start: (11, 5), end: (11, 7), text: `PV`
+    pattern:  8, capture: 7 - operator, start: (12, 3), end: (12, 4), text: `$`
+    pattern:  2, capture: 2 - property, start: (12, 4), end: (12, 5), text: `1`
+    pattern:  0, capture: 0 - string, start: (13, 3), end: (13, 28), text: `" ${REPLACING_VERSIONS} "`
+    pattern:  7, capture: 6 - embedded, start: (13, 4), end: (13, 26), text: ` ${REPLACING_VERSIONS}`
+    pattern:  2, capture: 2 - property, start: (13, 7), end: (13, 25), text: `REPLACING_VERSIONS`
+    pattern:  7, capture: 6 - embedded, start: (13, 35), end: (13, 41), text: `${PVR}`
+    pattern:  2, capture: 2 - property, start: (13, 37), end: (13, 40), text: `PVR`
+    pattern:  7, capture: 6 - embedded, start: (14, 3), end: (14, 10), text: `${file}`
+    pattern:  2, capture: 2 - property, start: (14, 5), end: (14, 9), text: `file`
+    pattern:  7, capture: 6 - embedded, start: (14, 17), end: (14, 37), text: `${GENTOO_PATCH_NAME}`
+    pattern:  2, capture: 2 - property, start: (14, 19), end: (14, 36), text: `GENTOO_PATCH_NAME`
+    pattern:  8, capture: 7 - operator, start: (15, 3), end: (15, 4), text: `$`
+    pattern:  2, capture: 2 - property, start: (15, 4), end: (15, 16), text: `RUBY_TARGETS`
+    pattern:  7, capture: 6 - embedded, start: (15, 21), end: (15, 71), text: `$( eselect ruby show | awk 'NR==2' | tr  -d ' '  )`
+    pattern:  1, capture: 1 - function, start: (15, 24), end: (15, 31), text: `eselect`
+    pattern:  8, capture: 7 - operator, start: (15, 42), end: (15, 43), text: `|`
+    pattern:  1, capture: 1 - function, start: (15, 44), end: (15, 47), text: `awk`
+    pattern:  0, capture: 0 - string, start: (15, 48), end: (15, 55), text: `'NR==2'`
+    pattern:  8, capture: 7 - operator, start: (15, 56), end: (15, 57), text: `|`
+    pattern:  1, capture: 1 - function, start: (15, 58), end: (15, 60), text: `tr`
+    pattern:  9, capture: 8 - constant, start: (15, 62), end: (15, 64), text: `-d`
+    pattern:  0, capture: 0 - string, start: (15, 65), end: (15, 68), text: `' '`
+    pattern:  0, capture: 0 - string, start: (16, 3), end: (16, 17), text: `" ${m[0]##*/}"`
+    pattern:  7, capture: 6 - embedded, start: (16, 4), end: (16, 16), text: ` ${m[0]##*/}`
+    pattern:  2, capture: 2 - property, start: (16, 7), end: (16, 8), text: `m`
+    pattern:  0, capture: 0 - string, start: (17, 3), end: (17, 14), text: `' boop xyz'`
+    pattern:  8, capture: 7 - operator, start: (18, 3), end: (18, 4), text: `$`
+    pattern:  2, capture: 2 - property, start: (18, 4), end: (18, 5), text: `b`
+corpus/statements.txt/021
+    pattern:  7, capture: 6 - embedded, start: (1, 3), end: (1, 10), text: `${test}`
+    pattern:  2, capture: 2 - property, start: (1, 5), end: (1, 9), text: `test`
+    pattern:  7, capture: 6 - embedded, start: (1, 16), end: (1, 45), text: `$(IFS='|'; echo "${skip[*]}")`
+    pattern:  2, capture: 2 - property, start: (1, 18), end: (1, 21), text: `IFS`
+    pattern:  0, capture: 0 - string, start: (1, 22), end: (1, 25), text: `'|'`
+    pattern:  1, capture: 1 - function, start: (1, 27), end: (1, 31), text: `echo`
+    pattern:  0, capture: 0 - string, start: (1, 32), end: (1, 44), text: `"${skip[*]}"`
+    pattern:  7, capture: 6 - embedded, start: (1, 33), end: (1, 43), text: `${skip[*]}`
+    pattern:  2, capture: 2 - property, start: (1, 35), end: (1, 39), text: `skip`
+    pattern:  3, capture: 3 - keyword, start: (3, 0), end: (3, 4), text: `case`
+    pattern:  7, capture: 6 - embedded, start: (3, 5), end: (3, 11), text: `${out}`
+    pattern:  2, capture: 2 - property, start: (3, 7), end: (3, 10), text: `out`
+    pattern:  3, capture: 3 - keyword, start: (3, 12), end: (3, 14), text: `in`
+    pattern:  0, capture: 0 - string, start: (4, 1), end: (4, 16), text: `"not supported"`
+    pattern:  8, capture: 7 - operator, start: (4, 17), end: (4, 18), text: `|`
+    pattern:  0, capture: 0 - string, start: (5, 1), end: (5, 26), text: `"operation not supported"`
+    pattern:  3, capture: 3 - keyword, start: (7, 0), end: (7, 4), text: `esac`
+    pattern:  3, capture: 3 - keyword, start: (9, 0), end: (9, 4), text: `case`
+    pattern:  8, capture: 7 - operator, start: (9, 5), end: (9, 6), text: `$`
+    pattern:  2, capture: 2 - property, start: (9, 6), end: (9, 7), text: `1`
+    pattern:  3, capture: 3 - keyword, start: (9, 8), end: (9, 10), text: `in`
+    pattern:  2, capture: 2 - property, start: (11, 1), end: (11, 6), text: `owner`
+    pattern:  8, capture: 7 - operator, start: (11, 7), end: (11, 8), text: `$`
+    pattern:  2, capture: 2 - property, start: (11, 8), end: (11, 9), text: `2`
+    pattern:  1, capture: 1 - function, start: (12, 1), end: (12, 6), text: `shift`
+    pattern:  3, capture: 3 - keyword, start: (15, 0), end: (15, 4), text: `esac`
+corpus/statements.txt/022
+    pattern:  1, capture: 1 - function, start: (2, 2), end: (2, 16), text: `./start-server`
+    pattern:  9, capture: 8 - constant, start: (2, 17), end: (2, 26), text: `--port=80`
+    pattern:  1, capture: 1 - function, start: (5, 0), end: (5, 4), text: `time`
+    pattern:  1, capture: 1 - function, start: (5, 7), end: (5, 9), text: `cd`
+    pattern:  8, capture: 7 - operator, start: (5, 16), end: (5, 18), text: `&&`
+    pattern:  1, capture: 1 - function, start: (5, 19), end: (5, 21), text: `sh`
+corpus/statements.txt/023
+    pattern:  5, capture: 1 - function, start: (1, 0), end: (1, 12), text: `do_something`
+    pattern:  1, capture: 1 - function, start: (2, 2), end: (2, 6), text: `echo`
+    pattern:  5, capture: 1 - function, start: (5, 0), end: (5, 20), text: `run_subshell_command`
+    pattern:  1, capture: 1 - function, start: (6, 2), end: (6, 6), text: `true`
+    pattern:  5, capture: 1 - function, start: (9, 0), end: (9, 16), text: `run_test_command`
+    pattern:  3, capture: 3 - keyword, start: (11, 0), end: (11, 8), text: `function`
+    pattern:  5, capture: 1 - function, start: (11, 9), end: (11, 26), text: `do_something_else`
+    pattern:  1, capture: 1 - function, start: (12, 2), end: (12, 3), text: `a`
+    pattern:  8, capture: 7 - operator, start: (12, 4), end: (12, 5), text: `|`
+    pattern:  1, capture: 1 - function, start: (12, 6), end: (12, 11), text: `xargs`
+    pattern:  9, capture: 8 - constant, start: (12, 12), end: (12, 16), text: `-I{}`
+    pattern:  9, capture: 8 - constant, start: (12, 29), end: (12, 34), text: `-type`
+    pattern:  3, capture: 3 - keyword, start: (15, 0), end: (15, 8), text: `function`
+    pattern:  5, capture: 1 - function, start: (15, 9), end: (15, 29), text: `do_yet_another_thing`
+    pattern:  1, capture: 1 - function, start: (16, 2), end: (16, 6), text: `echo`
+    pattern:  6, capture: 5 - number, start: (17, 2), end: (17, 3), text: `2`
+    pattern:  5, capture: 1 - function, start: (19, 0), end: (19, 10), text: `do_nothing`
+    pattern:  1, capture: 1 - function, start: (19, 15), end: (19, 21), text: `return`
+    pattern:  5, capture: 1 - function, start: (21, 0), end: (21, 8), text: `foo::bar`
+    pattern:  1, capture: 1 - function, start: (22, 2), end: (22, 6), text: `echo`
+    pattern:  5, capture: 1 - function, start: (25, 0), end: (25, 8), text: `foo::baz`
+    pattern:  1, capture: 1 - function, start: (26, 2), end: (26, 6), text: `echo`
+    pattern:  5, capture: 1 - function, start: (29, 0), end: (29, 6), text: `assert`
+    pattern:  3, capture: 3 - keyword, start: (30, 2), end: (30, 4), text: `if`
+    pattern:  1, capture: 1 - function, start: (30, 7), end: (30, 9), text: `$1`
+    pattern:  8, capture: 7 - operator, start: (30, 7), end: (30, 8), text: `$`
+    pattern:  2, capture: 2 - property, start: (30, 8), end: (30, 9), text: `1`
+    pattern:  3, capture: 3 - keyword, start: (30, 11), end: (30, 15), text: `then`
+    pattern:  1, capture: 1 - function, start: (31, 4), end: (31, 10), text: `return`
+    pattern:  3, capture: 3 - keyword, start: (32, 2), end: (32, 4), text: `fi`
+corpus/statements.txt/024
+    pattern:  2, capture: 2 - property, start: (1, 8), end: (1, 12), text: `var1`
+    pattern:  2, capture: 2 - property, start: (2, 14), end: (2, 18), text: `var2`
+    pattern:  2, capture: 2 - property, start: (2, 22), end: (2, 26), text: `var3`
+corpus/statements.txt/025
+    pattern:  2, capture: 2 - property, start: (1, 9), end: (1, 13), text: `var1`
+    pattern:  2, capture: 2 - property, start: (2, 9), end: (2, 13), text: `var2`
+corpus/statements.txt/026
+    pattern:  2, capture: 2 - property, start: (1, 6), end: (1, 7), text: `a`
+    pattern:  2, capture: 2 - property, start: (1, 11), end: (1, 12), text: `b`
+    pattern:  2, capture: 2 - property, start: (2, 9), end: (2, 10), text: `c`
+    pattern:  2, capture: 2 - property, start: (3, 6), end: (3, 9), text: `var`
+corpus/statements.txt/027
+    pattern:  3, capture: 3 - keyword, start: (1, 0), end: (1, 6), text: `export`
+    pattern:  2, capture: 2 - property, start: (1, 7), end: (1, 11), text: `PATH`
+    pattern:  3, capture: 3 - keyword, start: (2, 0), end: (2, 6), text: `export`
+    pattern:  2, capture: 2 - property, start: (2, 7), end: (2, 13), text: `FOOBAR`
+    pattern:  2, capture: 2 - property, start: (2, 14), end: (2, 18), text: `PATH`
+    pattern:  0, capture: 0 - string, start: (2, 19), end: (2, 42), text: `"$PATH:/usr/foobar/bin"`
+    pattern:  8, capture: 7 - operator, start: (2, 20), end: (2, 21), text: `$`
+    pattern:  2, capture: 2 - property, start: (2, 21), end: (2, 25), text: `PATH`
+    pattern:  3, capture: 3 - keyword, start: (3, 0), end: (3, 6), text: `export`
+    pattern:  8, capture: 7 - operator, start: (3, 7), end: (3, 8), text: `$`
+    pattern:  2, capture: 2 - property, start: (3, 8), end: (3, 11), text: `FOO`
+    pattern:  8, capture: 7 - operator, start: (3, 12), end: (3, 13), text: `$`
+    pattern:  2, capture: 2 - property, start: (3, 13), end: (3, 16), text: `BAR`
+corpus/statements.txt/028
+    pattern:  2, capture: 2 - property, start: (1, 0), end: (1, 5), text: `_path`
+    pattern:  7, capture: 6 - embedded, start: (1, 6), end: (6, 1), text: `$(
+  while statement; do
+    cd ".."
+  done;
+  echo $PWD
+)`
+    pattern:  3, capture: 3 - keyword, start: (2, 2), end: (2, 7), text: `while`
+    pattern:  1, capture: 1 - function, start: (2, 8), end: (2, 17), text: `statement`
+    pattern:  3, capture: 3 - keyword, start: (2, 19), end: (2, 21), text: `do`
+    pattern:  1, capture: 1 - function, start: (3, 4), end: (3, 6), text: `cd`
+    pattern:  0, capture: 0 - string, start: (3, 7), end: (3, 11), text: `".."`
+    pattern:  3, capture: 3 - keyword, start: (4, 2), end: (4, 6), text: `done`
+    pattern:  1, capture: 1 - function, start: (5, 2), end: (5, 6), text: `echo`
+    pattern:  8, capture: 7 - operator, start: (5, 7), end: (5, 8), text: `$`
+    pattern:  2, capture: 2 - property, start: (5, 8), end: (5, 11), text: `PWD`
+corpus/statements.txt/029
+    pattern:  1, capture: 1 - function, start: (1, 0), end: (1, 27), text: `$(eval echo $`echo ${foo}`)`
+    pattern:  7, capture: 6 - embedded, start: (1, 0), end: (1, 27), text: `$(eval echo $`echo ${foo}`)`
+    pattern:  1, capture: 1 - function, start: (1, 2), end: (1, 6), text: `eval`
+    pattern:  7, capture: 6 - embedded, start: (1, 12), end: (1, 26), text: `$`echo ${foo}``
+    pattern:  1, capture: 1 - function, start: (1, 14), end: (1, 18), text: `echo`
+    pattern:  7, capture: 6 - embedded, start: (1, 19), end: (1, 25), text: `${foo}`
+    pattern:  2, capture: 2 - property, start: (1, 21), end: (1, 24), text: `foo`
+corpus/statements.txt/030
+    pattern:  3, capture: 3 - keyword, start: (1, 0), end: (1, 6), text: `export`
+    pattern:  0, capture: 0 - string, start: (1, 7), end: (1, 60), text: `"$(echo ${key} | tr [:lower:] [:upper:])=${p_key#*=}"`
+    pattern:  7, capture: 6 - embedded, start: (1, 8), end: (1, 47), text: `$(echo ${key} | tr [:lower:] [:upper:])`
+    pattern:  1, capture: 1 - function, start: (1, 10), end: (1, 14), text: `echo`
+    pattern:  7, capture: 6 - embedded, start: (1, 15), end: (1, 21), text: `${key}`
+    pattern:  2, capture: 2 - property, start: (1, 17), end: (1, 20), text: `key`
+    pattern:  8, capture: 7 - operator, start: (1, 22), end: (1, 23), text: `|`
+    pattern:  1, capture: 1 - function, start: (1, 24), end: (1, 26), text: `tr`
+    pattern:  7, capture: 6 - embedded, start: (1, 48), end: (1, 59), text: `${p_key#*=}`
+    pattern:  2, capture: 2 - property, start: (1, 50), end: (1, 55), text: `p_key`
+corpus/statements.txt/031
+    pattern:  3, capture: 3 - keyword, start: (1, 0), end: (1, 5), text: `unset`
+    pattern:  2, capture: 2 - property, start: (1, 6), end: (1, 7), text: `A`
+    pattern:  3, capture: 3 - keyword, start: (2, 0), end: (2, 5), text: `unset`
+    pattern:  0, capture: 0 - string, start: (2, 6), end: (2, 22), text: `"$variable_name"`
+    pattern:  8, capture: 7 - operator, start: (2, 7), end: (2, 8), text: `$`
+    pattern:  2, capture: 2 - property, start: (2, 8), end: (2, 21), text: `variable_name`
+    pattern:  2, capture: 2 - property, start: (3, 12), end: (3, 15), text: `ONE`
+    pattern:  2, capture: 2 - property, start: (3, 16), end: (3, 19), text: `TWO`
+corpus/statements.txt/032
+    pattern:  5, capture: 1 - function, start: (1, 0), end: (1, 1), text: `a`
+    pattern:  1, capture: 1 - function, start: (2, 4), end: (2, 6), text: `ls`
+    pattern:  1, capture: 1 - function, start: (2, 12), end: (2, 16), text: `echo`
+    pattern:  0, capture: 0 - string, start: (2, 17), end: (2, 20), text: `"b"`
+    pattern:  1, capture: 1 - function, start: (2, 22), end: (2, 28), text: `return`
+    pattern:  1, capture: 1 - function, start: (3, 4), end: (3, 8), text: `echo`
+    pattern:  1, capture: 1 - function, start: (6, 2), end: (6, 6), text: `echo`
+    pattern:  0, capture: 0 - string, start: (6, 7), end: (6, 10), text: `"a"`
+    pattern:  1, capture: 1 - function, start: (7, 2), end: (7, 6), text: `echo`
+    pattern:  0, capture: 0 - string, start: (7, 7), end: (7, 10), text: `"b"`
+corpus/statements.txt/033
+    pattern:  3, capture: 3 - keyword, start: (1, 0), end: (1, 2), text: `if`
+    pattern:  1, capture: 1 - function, start: (1, 4), end: (1, 8), text: `echo`
+    pattern:  8, capture: 7 - operator, start: (1, 9), end: (1, 10), text: `$`
+    pattern:  2, capture: 2 - property, start: (1, 10), end: (1, 17), text: `BASHPID`
+    pattern:  1, capture: 1 - function, start: (1, 19), end: (1, 23), text: `true`
+    pattern:  3, capture: 3 - keyword, start: (1, 26), end: (1, 30), text: `then`
+    pattern:  1, capture: 1 - function, start: (1, 31), end: (1, 35), text: `echo`
+    pattern:  8, capture: 7 - operator, start: (1, 36), end: (1, 37), text: `$`
+    pattern:  2, capture: 2 - property, start: (1, 37), end: (1, 44), text: `BASHPID`
+    pattern:  3, capture: 3 - keyword, start: (1, 46), end: (1, 48), text: `fi`
+corpus/statements.txt/034
+    pattern:  3, capture: 3 - keyword, start: (1, 0), end: (1, 5), text: `while`
+    pattern:  1, capture: 1 - function, start: (1, 7), end: (1, 11), text: `echo`
+    pattern:  8, capture: 7 - operator, start: (1, 12), end: (1, 13), text: `$`
+    pattern:  2, capture: 2 - property, start: (1, 13), end: (1, 20), text: `BASHPID`
+    pattern:  1, capture: 1 - function, start: (1, 22), end: (1, 26), text: `true`
+    pattern:  3, capture: 3 - keyword, start: (1, 29), end: (1, 31), text: `do`
+    pattern:  1, capture: 1 - function, start: (1, 32), end: (1, 36), text: `echo`
+    pattern:  8, capture: 7 - operator, start: (1, 37), end: (1, 38), text: `$`
+    pattern:  2, capture: 2 - property, start: (1, 38), end: (1, 45), text: `BASHPID`
+    pattern:  1, capture: 1 - function, start: (1, 47), end: (1, 52), text: `break`
+    pattern:  3, capture: 3 - keyword, start: (1, 54), end: (1, 58), text: `done`

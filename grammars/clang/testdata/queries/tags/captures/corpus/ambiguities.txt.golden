@@ -1,0 +1,19 @@
+corpus/ambiguities.txt/000
+    pattern:  2, capture: 2 - definition.function, start: (5, 4), end: (5, 10), text: `main()`
+    pattern:  2, capture: 0 - name, start: (5, 4), end: (5, 8), text: `main`
+    pattern:  2, capture: 2 - definition.function, start: (7, 7), end: (7, 14), text: `b(T2 a)`
+    pattern:  2, capture: 0 - name, start: (7, 7), end: (7, 8), text: `b`
+corpus/ambiguities.txt/001
+    pattern:  2, capture: 2 - definition.function, start: (5, 4), end: (5, 10), text: `main()`
+    pattern:  2, capture: 0 - name, start: (5, 4), end: (5, 8), text: `main`
+corpus/ambiguities.txt/002
+corpus/ambiguities.txt/003
+    pattern:  2, capture: 2 - definition.function, start: (1, 4), end: (1, 10), text: `main()`
+    pattern:  2, capture: 0 - name, start: (1, 4), end: (1, 8), text: `main`
+corpus/ambiguities.txt/004
+    pattern:  2, capture: 2 - definition.function, start: (1, 4), end: (1, 10), text: `main()`
+    pattern:  2, capture: 0 - name, start: (1, 4), end: (1, 8), text: `main`
+corpus/ambiguities.txt/005
+    pattern:  2, capture: 2 - definition.function, start: (1, 4), end: (1, 10), text: `main()`
+    pattern:  2, capture: 0 - name, start: (1, 4), end: (1, 8), text: `main`
+corpus/ambiguities.txt/006

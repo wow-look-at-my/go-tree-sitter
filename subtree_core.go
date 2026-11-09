@@ -1,3 +1,5 @@
+// subtree_core.go holds the subtree core code.
+
 package treesitter
 
 import "bytes"

@@ -1,0 +1,647 @@
+examples/install.sh
+    pattern:  4, capture: 4 - comment, start: (0, 0), end: (0, 9), text: `#!/bin/sh`
+    pattern:  4, capture: 4 - comment, start: (2, 0), end: (2, 33), text: `# A word about this shell script:`
+    pattern:  4, capture: 4 - comment, start: (3, 0), end: (3, 1), text: `#`
+    pattern:  4, capture: 4 - comment, start: (4, 0), end: (4, 57), text: `# It must work everywhere, including on systems that lack`
+    pattern:  4, capture: 4 - comment, start: (5, 0), end: (5, 57), text: `# a /bin/bash, map 'sh' to ksh, ksh97, bash, ash, or zsh,`
+    pattern:  4, capture: 4 - comment, start: (6, 0), end: (6, 53), text: `# and potentially have either a posix shell or bourne`
+    pattern:  4, capture: 4 - comment, start: (7, 0), end: (7, 26), text: `# shell living at /bin/sh.`
+    pattern:  4, capture: 4 - comment, start: (8, 0), end: (8, 1), text: `#`
+    pattern:  4, capture: 4 - comment, start: (9, 0), end: (9, 62), text: `# See this helpful document on writing portable shell scripts:`
+    pattern:  4, capture: 4 - comment, start: (10, 0), end: (10, 64), text: `# http://www.gnu.org/s/hello/manual/autoconf/Portable-Shell.html`
+    pattern:  4, capture: 4 - comment, start: (11, 0), end: (11, 1), text: `#`
+    pattern:  4, capture: 4 - comment, start: (12, 0), end: (12, 50), text: `# The only shell it won't ever work on is cmd.exe.`
+    pattern:  3, capture: 3 - keyword, start: (14, 0), end: (14, 2), text: `if`
+    pattern:  0, capture: 0 - string, start: (14, 5), end: (14, 10), text: `"x$0"`
+    pattern:  8, capture: 7 - operator, start: (14, 7), end: (14, 8), text: `$`
+    pattern:  2, capture: 2 - property, start: (14, 8), end: (14, 9), text: `0`
+    pattern:  0, capture: 0 - string, start: (14, 13), end: (14, 18), text: `"xsh"`
+    pattern:  3, capture: 3 - keyword, start: (14, 22), end: (14, 26), text: `then`
+    pattern:  4, capture: 4 - comment, start: (15, 2), end: (15, 20), text: `# run as curl | sh`
+    pattern:  4, capture: 4 - comment, start: (16, 2), end: (16, 55), text: `# on some systems, you can just do cat>npm-install.sh`
+    pattern:  4, capture: 4 - comment, start: (17, 2), end: (17, 63), text: `# which is a bit cuter.  But on others, &1 is already closed,`
+    pattern:  4, capture: 4 - comment, start: (18, 2), end: (18, 56), text: `# so catting to another script file won't do anything.`
+    pattern:  4, capture: 4 - comment, start: (19, 2), end: (19, 48), text: `# Follow Location: headers, and fail on errors`
+    pattern:  1, capture: 1 - function, start: (20, 2), end: (20, 6), text: `curl`
+    pattern:  9, capture: 8 - constant, start: (20, 7), end: (20, 9), text: `-f`
+    pattern:  9, capture: 8 - constant, start: (20, 10), end: (20, 12), text: `-L`
+    pattern:  9, capture: 8 - constant, start: (20, 13), end: (20, 15), text: `-s`
+    pattern:  8, capture: 7 - operator, start: (20, 49), end: (20, 50), text: `>`
+    pattern:  8, capture: 7 - operator, start: (20, 63), end: (20, 64), text: `$`
+    pattern:  2, capture: 2 - property, start: (21, 2), end: (21, 5), text: `ret`
+    pattern:  8, capture: 7 - operator, start: (21, 6), end: (21, 7), text: `$`
+    pattern:  3, capture: 3 - keyword, start: (22, 2), end: (22, 4), text: `if`
+    pattern:  8, capture: 7 - operator, start: (22, 7), end: (22, 8), text: `$`
+    pattern:  2, capture: 2 - property, start: (22, 8), end: (22, 11), text: `ret`
+    pattern:  3, capture: 3 - keyword, start: (22, 21), end: (22, 25), text: `then`
+    pattern:  1, capture: 1 - function, start: (23, 5), end: (23, 9), text: `exit`
+    pattern:  3, capture: 3 - keyword, start: (24, 2), end: (24, 6), text: `else`
+    pattern:  1, capture: 1 - function, start: (25, 4), end: (25, 6), text: `rm`
+    pattern:  8, capture: 7 - operator, start: (25, 19), end: (25, 20), text: `$`
+    pattern:  1, capture: 1 - function, start: (26, 4), end: (26, 8), text: `echo`
+    pattern:  0, capture: 0 - string, start: (26, 9), end: (26, 36), text: `"Failed to download script"`
+    pattern:  1, capture: 1 - function, start: (27, 4), end: (27, 8), text: `exit`
+    pattern:  8, capture: 7 - operator, start: (27, 9), end: (27, 10), text: `$`
+    pattern:  2, capture: 2 - property, start: (27, 10), end: (27, 13), text: `ret`
+    pattern:  3, capture: 3 - keyword, start: (28, 2), end: (28, 4), text: `fi`
+    pattern:  1, capture: 1 - function, start: (29, 2), end: (29, 4), text: `sh`
+    pattern:  8, capture: 7 - operator, start: (29, 17), end: (29, 18), text: `$`
+    pattern:  2, capture: 2 - property, start: (30, 2), end: (30, 5), text: `ret`
+    pattern:  8, capture: 7 - operator, start: (30, 6), end: (30, 7), text: `$`
+    pattern:  1, capture: 1 - function, start: (31, 2), end: (31, 4), text: `rm`
+    pattern:  8, capture: 7 - operator, start: (31, 17), end: (31, 18), text: `$`
+    pattern:  1, capture: 1 - function, start: (32, 2), end: (32, 6), text: `exit`
+    pattern:  8, capture: 7 - operator, start: (32, 7), end: (32, 8), text: `$`
+    pattern:  2, capture: 2 - property, start: (32, 8), end: (32, 11), text: `ret`
+    pattern:  3, capture: 3 - keyword, start: (33, 0), end: (33, 2), text: `fi`
+    pattern:  4, capture: 4 - comment, start: (35, 0), end: (35, 54), text: `# See what "npm_config_*" things there are in the env,`
+    pattern:  4, capture: 4 - comment, start: (36, 0), end: (36, 26), text: `# and make them permanent.`
+    pattern:  4, capture: 4 - comment, start: (37, 0), end: (37, 42), text: `# If this fails, it's not such a big deal.`
+    pattern:  2, capture: 2 - property, start: (38, 0), end: (38, 10), text: `configures`
+    pattern:  0, capture: 0 - string, start: (38, 11), end: (38, 68), text: `"`env | grep 'npm_config_' | sed -e 's|^npm_config_||g'`"`
+    pattern:  7, capture: 6 - embedded, start: (38, 12), end: (38, 67), text: ``env | grep 'npm_config_' | sed -e 's|^npm_config_||g'``
+    pattern:  1, capture: 1 - function, start: (38, 13), end: (38, 16), text: `env`
+    pattern:  8, capture: 7 - operator, start: (38, 17), end: (38, 18), text: `|`
+    pattern:  1, capture: 1 - function, start: (38, 19), end: (38, 23), text: `grep`
+    pattern:  0, capture: 0 - string, start: (38, 24), end: (38, 37), text: `'npm_config_'`
+    pattern:  8, capture: 7 - operator, start: (38, 38), end: (38, 39), text: `|`
+    pattern:  1, capture: 1 - function, start: (38, 40), end: (38, 43), text: `sed`
+    pattern:  9, capture: 8 - constant, start: (38, 44), end: (38, 46), text: `-e`
+    pattern:  0, capture: 0 - string, start: (38, 47), end: (38, 66), text: `'s|^npm_config_||g'`
+    pattern:  2, capture: 2 - property, start: (40, 0), end: (40, 19), text: `npm_config_loglevel`
+    pattern:  0, capture: 0 - string, start: (40, 20), end: (40, 27), text: `"error"`
+    pattern:  3, capture: 3 - keyword, start: (41, 0), end: (41, 2), text: `if`
+    pattern:  0, capture: 0 - string, start: (41, 5), end: (41, 18), text: `"x$npm_debug"`
+    pattern:  8, capture: 7 - operator, start: (41, 7), end: (41, 8), text: `$`
+    pattern:  2, capture: 2 - property, start: (41, 8), end: (41, 17), text: `npm_debug`
+    pattern:  0, capture: 0 - string, start: (41, 21), end: (41, 24), text: `"x"`
+    pattern:  3, capture: 3 - keyword, start: (41, 28), end: (41, 32), text: `then`
+    pattern:  1, capture: 1 - function, start: (42, 3), end: (42, 7), text: `exit`
+    pattern:  3, capture: 3 - keyword, start: (43, 0), end: (43, 4), text: `else`
+    pattern:  1, capture: 1 - function, start: (44, 2), end: (44, 6), text: `echo`
+    pattern:  0, capture: 0 - string, start: (44, 7), end: (44, 31), text: `"Running in debug mode."`
+    pattern:  1, capture: 1 - function, start: (45, 2), end: (45, 6), text: `echo`
+    pattern:  0, capture: 0 - string, start: (45, 7), end: (45, 45), text: `"Note that this requires bash or zsh."`
+    pattern:  1, capture: 1 - function, start: (46, 2), end: (46, 5), text: `set`
+    pattern:  9, capture: 8 - constant, start: (46, 6), end: (46, 8), text: `-o`
+    pattern:  1, capture: 1 - function, start: (47, 2), end: (47, 5), text: `set`
+    pattern:  9, capture: 8 - constant, start: (47, 6), end: (47, 8), text: `-o`
+    pattern:  2, capture: 2 - property, start: (48, 2), end: (48, 21), text: `npm_config_loglevel`
+    pattern:  0, capture: 0 - string, start: (48, 22), end: (48, 31), text: `"verbose"`
+    pattern:  3, capture: 3 - keyword, start: (49, 0), end: (49, 2), text: `fi`
+    pattern:  3, capture: 3 - keyword, start: (50, 0), end: (50, 6), text: `export`
+    pattern:  2, capture: 2 - property, start: (50, 7), end: (50, 26), text: `npm_config_loglevel`
+    pattern:  4, capture: 4 - comment, start: (52, 0), end: (52, 28), text: `# make sure that node exists`
+    pattern:  2, capture: 2 - property, start: (53, 0), end: (53, 4), text: `node`
+    pattern:  7, capture: 6 - embedded, start: (53, 5), end: (53, 22), text: ``which node 2>&1``
+    pattern:  1, capture: 1 - function, start: (53, 6), end: (53, 11), text: `which`
+    pattern:  6, capture: 5 - number, start: (53, 17), end: (53, 18), text: `2`
+    pattern:  2, capture: 2 - property, start: (54, 0), end: (54, 3), text: `ret`
+    pattern:  8, capture: 7 - operator, start: (54, 4), end: (54, 5), text: `$`
+    pattern:  3, capture: 3 - keyword, start: (55, 0), end: (55, 2), text: `if`
+    pattern:  8, capture: 7 - operator, start: (55, 5), end: (55, 6), text: `$`
+    pattern:  2, capture: 2 - property, start: (55, 6), end: (55, 9), text: `ret`
+    pattern:  8, capture: 7 - operator, start: (55, 18), end: (55, 20), text: `&&`
+    pattern:  0, capture: 0 - string, start: (55, 26), end: (55, 33), text: `"$node"`
+    pattern:  8, capture: 7 - operator, start: (55, 27), end: (55, 28), text: `$`
+    pattern:  2, capture: 2 - property, start: (55, 28), end: (55, 32), text: `node`
+    pattern:  3, capture: 3 - keyword, start: (55, 37), end: (55, 41), text: `then`
+    pattern:  1, capture: 1 - function, start: (56, 3), end: (56, 7), text: `exit`
+    pattern:  3, capture: 3 - keyword, start: (57, 0), end: (57, 4), text: `else`
+    pattern:  1, capture: 1 - function, start: (58, 2), end: (58, 6), text: `echo`
+    pattern:  0, capture: 0 - string, start: (58, 7), end: (58, 49), text: `"npm cannot be installed without node.js."`
+    pattern:  1, capture: 1 - function, start: (59, 2), end: (59, 6), text: `echo`
+    pattern:  0, capture: 0 - string, start: (59, 7), end: (59, 48), text: `"Install node first, and then try again."`
+    pattern:  1, capture: 1 - function, start: (60, 2), end: (60, 6), text: `echo`
+    pattern:  0, capture: 0 - string, start: (60, 7), end: (60, 9), text: `""`
+    pattern:  1, capture: 1 - function, start: (61, 2), end: (61, 6), text: `echo`
+    pattern:  0, capture: 0 - string, start: (61, 7), end: (61, 54), text: `"Maybe node is installed, but not in the PATH?"`
+    pattern:  1, capture: 1 - function, start: (62, 2), end: (62, 6), text: `echo`
+    pattern:  0, capture: 0 - string, start: (62, 7), end: (62, 51), text: `"Note that running as sudo can change envs."`
+    pattern:  1, capture: 1 - function, start: (63, 2), end: (63, 6), text: `echo`
+    pattern:  0, capture: 0 - string, start: (63, 7), end: (63, 9), text: `""`
+    pattern:  1, capture: 1 - function, start: (64, 2), end: (64, 6), text: `echo`
+    pattern:  0, capture: 0 - string, start: (64, 7), end: (64, 19), text: `"PATH=$PATH"`
+    pattern:  8, capture: 7 - operator, start: (64, 13), end: (64, 14), text: `$`
+    pattern:  2, capture: 2 - property, start: (64, 14), end: (64, 18), text: `PATH`
+    pattern:  1, capture: 1 - function, start: (65, 2), end: (65, 6), text: `exit`
+    pattern:  8, capture: 7 - operator, start: (65, 7), end: (65, 8), text: `$`
+    pattern:  2, capture: 2 - property, start: (65, 8), end: (65, 11), text: `ret`
+    pattern:  3, capture: 3 - keyword, start: (66, 0), end: (66, 2), text: `fi`
+    pattern:  4, capture: 4 - comment, start: (68, 0), end: (68, 18), text: `# set the temp dir`
+    pattern:  2, capture: 2 - property, start: (69, 0), end: (69, 3), text: `TMP`
+    pattern:  0, capture: 0 - string, start: (69, 4), end: (69, 15), text: `"${TMPDIR}"`
+    pattern:  7, capture: 6 - embedded, start: (69, 5), end: (69, 14), text: `${TMPDIR}`
+    pattern:  2, capture: 2 - property, start: (69, 7), end: (69, 13), text: `TMPDIR`
+    pattern:  3, capture: 3 - keyword, start: (70, 0), end: (70, 2), text: `if`
+    pattern:  0, capture: 0 - string, start: (70, 5), end: (70, 12), text: `"x$TMP"`
+    pattern:  8, capture: 7 - operator, start: (70, 7), end: (70, 8), text: `$`
+    pattern:  2, capture: 2 - property, start: (70, 8), end: (70, 11), text: `TMP`
+    pattern:  0, capture: 0 - string, start: (70, 15), end: (70, 18), text: `"x"`
+    pattern:  3, capture: 3 - keyword, start: (70, 22), end: (70, 26), text: `then`
+    pattern:  2, capture: 2 - property, start: (71, 2), end: (71, 5), text: `TMP`
+    pattern:  0, capture: 0 - string, start: (71, 6), end: (71, 12), text: `"/tmp"`
+    pattern:  3, capture: 3 - keyword, start: (72, 0), end: (72, 2), text: `fi`
+    pattern:  2, capture: 2 - property, start: (73, 0), end: (73, 3), text: `TMP`
+    pattern:  0, capture: 0 - string, start: (73, 4), end: (73, 19), text: `"${TMP}/npm.$$"`
+    pattern:  7, capture: 6 - embedded, start: (73, 5), end: (73, 11), text: `${TMP}`
+    pattern:  2, capture: 2 - property, start: (73, 7), end: (73, 10), text: `TMP`
+    pattern:  8, capture: 7 - operator, start: (73, 16), end: (73, 17), text: `$`
+    pattern:  1, capture: 1 - function, start: (74, 0), end: (74, 2), text: `rm`
+    pattern:  9, capture: 8 - constant, start: (74, 3), end: (74, 6), text: `-rf`
+    pattern:  0, capture: 0 - string, start: (74, 7), end: (74, 13), text: `"$TMP"`
+    pattern:  8, capture: 7 - operator, start: (74, 8), end: (74, 9), text: `$`
+    pattern:  2, capture: 2 - property, start: (74, 9), end: (74, 12), text: `TMP`
+    pattern:  1, capture: 1 - function, start: (74, 17), end: (74, 21), text: `true`
+    pattern:  1, capture: 1 - function, start: (75, 0), end: (75, 5), text: `mkdir`
+    pattern:  0, capture: 0 - string, start: (75, 6), end: (75, 12), text: `"$TMP"`
+    pattern:  8, capture: 7 - operator, start: (75, 7), end: (75, 8), text: `$`
+    pattern:  2, capture: 2 - property, start: (75, 8), end: (75, 11), text: `TMP`
+    pattern:  3, capture: 3 - keyword, start: (76, 0), end: (76, 2), text: `if`
+    pattern:  8, capture: 7 - operator, start: (76, 5), end: (76, 6), text: `$`
+    pattern:  3, capture: 3 - keyword, start: (76, 17), end: (76, 21), text: `then`
+    pattern:  1, capture: 1 - function, start: (77, 2), end: (77, 6), text: `echo`
+    pattern:  0, capture: 0 - string, start: (77, 7), end: (77, 29), text: `"failed to mkdir $TMP"`
+    pattern:  8, capture: 7 - operator, start: (77, 24), end: (77, 25), text: `$`
+    pattern:  2, capture: 2 - property, start: (77, 25), end: (77, 28), text: `TMP`
+    pattern:  1, capture: 1 - function, start: (78, 2), end: (78, 6), text: `exit`
+    pattern:  3, capture: 3 - keyword, start: (79, 0), end: (79, 2), text: `fi`
+    pattern:  2, capture: 2 - property, start: (81, 0), end: (81, 4), text: `BACK`
+    pattern:  0, capture: 0 - string, start: (81, 5), end: (81, 11), text: `"$PWD"`
+    pattern:  8, capture: 7 - operator, start: (81, 6), end: (81, 7), text: `$`
+    pattern:  2, capture: 2 - property, start: (81, 7), end: (81, 10), text: `PWD`
+    pattern:  2, capture: 2 - property, start: (83, 0), end: (83, 3), text: `ret`
+    pattern:  2, capture: 2 - property, start: (84, 0), end: (84, 3), text: `tar`
+    pattern:  0, capture: 0 - string, start: (84, 4), end: (84, 12), text: `"${TAR}"`
+    pattern:  7, capture: 6 - embedded, start: (84, 5), end: (84, 11), text: `${TAR}`
+    pattern:  2, capture: 2 - property, start: (84, 7), end: (84, 10), text: `TAR`
+    pattern:  3, capture: 3 - keyword, start: (85, 0), end: (85, 2), text: `if`
+    pattern:  0, capture: 0 - string, start: (85, 8), end: (85, 14), text: `"$tar"`
+    pattern:  8, capture: 7 - operator, start: (85, 9), end: (85, 10), text: `$`
+    pattern:  2, capture: 2 - property, start: (85, 10), end: (85, 13), text: `tar`
+    pattern:  3, capture: 3 - keyword, start: (85, 18), end: (85, 22), text: `then`
+    pattern:  2, capture: 2 - property, start: (86, 2), end: (86, 5), text: `tar`
+    pattern:  0, capture: 0 - string, start: (86, 6), end: (86, 25), text: `"${npm_config_tar}"`
+    pattern:  7, capture: 6 - embedded, start: (86, 7), end: (86, 24), text: `${npm_config_tar}`
+    pattern:  2, capture: 2 - property, start: (86, 9), end: (86, 23), text: `npm_config_tar`
+    pattern:  3, capture: 3 - keyword, start: (87, 0), end: (87, 2), text: `fi`
+    pattern:  3, capture: 3 - keyword, start: (88, 0), end: (88, 2), text: `if`
+    pattern:  0, capture: 0 - string, start: (88, 8), end: (88, 14), text: `"$tar"`
+    pattern:  8, capture: 7 - operator, start: (88, 9), end: (88, 10), text: `$`
+    pattern:  2, capture: 2 - property, start: (88, 10), end: (88, 13), text: `tar`
+    pattern:  3, capture: 3 - keyword, start: (88, 18), end: (88, 22), text: `then`
+    pattern:  2, capture: 2 - property, start: (89, 2), end: (89, 5), text: `tar`
+    pattern:  7, capture: 6 - embedded, start: (89, 6), end: (89, 22), text: ``which tar 2>&1``
+    pattern:  1, capture: 1 - function, start: (89, 7), end: (89, 12), text: `which`
+    pattern:  6, capture: 5 - number, start: (89, 17), end: (89, 18), text: `2`
+    pattern:  2, capture: 2 - property, start: (90, 2), end: (90, 5), text: `ret`
+    pattern:  8, capture: 7 - operator, start: (90, 6), end: (90, 7), text: `$`
+    pattern:  3, capture: 3 - keyword, start: (91, 0), end: (91, 2), text: `fi`
+    pattern:  3, capture: 3 - keyword, start: (93, 0), end: (93, 2), text: `if`
+    pattern:  8, capture: 7 - operator, start: (93, 5), end: (93, 6), text: `$`
+    pattern:  2, capture: 2 - property, start: (93, 6), end: (93, 9), text: `ret`
+    pattern:  8, capture: 7 - operator, start: (93, 18), end: (93, 20), text: `&&`
+    pattern:  0, capture: 0 - string, start: (93, 26), end: (93, 32), text: `"$tar"`
+    pattern:  8, capture: 7 - operator, start: (93, 27), end: (93, 28), text: `$`
+    pattern:  2, capture: 2 - property, start: (93, 28), end: (93, 31), text: `tar`
+    pattern:  3, capture: 3 - keyword, start: (93, 36), end: (93, 40), text: `then`
+    pattern:  1, capture: 1 - function, start: (94, 2), end: (94, 6), text: `echo`
+    pattern:  0, capture: 0 - string, start: (94, 7), end: (94, 17), text: `"tar=$tar"`
+    pattern:  8, capture: 7 - operator, start: (94, 12), end: (94, 13), text: `$`
+    pattern:  2, capture: 2 - property, start: (94, 13), end: (94, 16), text: `tar`
+    pattern:  1, capture: 1 - function, start: (95, 2), end: (95, 6), text: `echo`
+    pattern:  0, capture: 0 - string, start: (95, 7), end: (95, 17), text: `"version:"`
+    pattern:  1, capture: 1 - function, start: (96, 2), end: (96, 6), text: `$tar`
+    pattern:  8, capture: 7 - operator, start: (96, 2), end: (96, 3), text: `$`
+    pattern:  2, capture: 2 - property, start: (96, 3), end: (96, 6), text: `tar`
+    pattern:  9, capture: 8 - constant, start: (96, 7), end: (96, 16), text: `--version`
+    pattern:  2, capture: 2 - property, start: (97, 2), end: (97, 5), text: `ret`
+    pattern:  8, capture: 7 - operator, start: (97, 6), end: (97, 7), text: `$`
+    pattern:  3, capture: 3 - keyword, start: (98, 0), end: (98, 2), text: `fi`
+    pattern:  3, capture: 3 - keyword, start: (100, 0), end: (100, 2), text: `if`
+    pattern:  8, capture: 7 - operator, start: (100, 5), end: (100, 6), text: `$`
+    pattern:  2, capture: 2 - property, start: (100, 6), end: (100, 9), text: `ret`
+    pattern:  3, capture: 3 - keyword, start: (100, 19), end: (100, 23), text: `then`
+    pattern:  1, capture: 1 - function, start: (101, 3), end: (101, 7), text: `exit`
+    pattern:  3, capture: 3 - keyword, start: (102, 0), end: (102, 4), text: `else`
+    pattern:  1, capture: 1 - function, start: (103, 2), end: (103, 6), text: `echo`
+    pattern:  0, capture: 0 - string, start: (103, 7), end: (103, 39), text: `"No suitable tar program found."`
+    pattern:  1, capture: 1 - function, start: (104, 2), end: (104, 6), text: `exit`
+    pattern:  3, capture: 3 - keyword, start: (105, 0), end: (105, 2), text: `fi`
+    pattern:  4, capture: 4 - comment, start: (109, 0), end: (109, 29), text: `# Try to find a suitable make`
+    pattern:  4, capture: 4 - comment, start: (110, 0), end: (110, 47), text: `# If the MAKE environment var is set, use that.`
+    pattern:  4, capture: 4 - comment, start: (111, 0), end: (111, 46), text: `# otherwise, try to find gmake, and then make.`
+    pattern:  4, capture: 4 - comment, start: (112, 0), end: (112, 64), text: `# If no make is found, then just execute the necessary commands.`
+    pattern:  4, capture: 4 - comment, start: (114, 0), end: (114, 70), text: `# XXX For some reason, make is building all the docs every time.  This`
+    pattern:  4, capture: 4 - comment, start: (115, 0), end: (115, 61), text: `# is an annoying source of bugs. Figure out why this happens.`
+    pattern:  2, capture: 2 - property, start: (116, 0), end: (116, 4), text: `MAKE`
+    pattern:  3, capture: 3 - keyword, start: (118, 0), end: (118, 2), text: `if`
+    pattern:  0, capture: 0 - string, start: (118, 5), end: (118, 13), text: `"x$MAKE"`
+    pattern:  8, capture: 7 - operator, start: (118, 7), end: (118, 8), text: `$`
+    pattern:  2, capture: 2 - property, start: (118, 8), end: (118, 12), text: `MAKE`
+    pattern:  0, capture: 0 - string, start: (118, 16), end: (118, 19), text: `"x"`
+    pattern:  3, capture: 3 - keyword, start: (118, 23), end: (118, 27), text: `then`
+    pattern:  2, capture: 2 - property, start: (119, 2), end: (119, 6), text: `make`
+    pattern:  7, capture: 6 - embedded, start: (119, 7), end: (119, 25), text: ``which gmake 2>&1``
+    pattern:  1, capture: 1 - function, start: (119, 8), end: (119, 13), text: `which`
+    pattern:  6, capture: 5 - number, start: (119, 20), end: (119, 21), text: `2`
+    pattern:  3, capture: 3 - keyword, start: (120, 2), end: (120, 4), text: `if`
+    pattern:  8, capture: 7 - operator, start: (120, 7), end: (120, 8), text: `$`
+    pattern:  8, capture: 7 - operator, start: (120, 18), end: (120, 20), text: `&&`
+    pattern:  0, capture: 0 - string, start: (120, 26), end: (120, 33), text: `"$make"`
+    pattern:  8, capture: 7 - operator, start: (120, 27), end: (120, 28), text: `$`
+    pattern:  2, capture: 2 - property, start: (120, 28), end: (120, 32), text: `make`
+    pattern:  3, capture: 3 - keyword, start: (120, 37), end: (120, 41), text: `then`
+    pattern:  1, capture: 1 - function, start: (121, 5), end: (121, 9), text: `exit`
+    pattern:  3, capture: 3 - keyword, start: (122, 2), end: (122, 6), text: `else`
+    pattern:  2, capture: 2 - property, start: (123, 4), end: (123, 8), text: `make`
+    pattern:  7, capture: 6 - embedded, start: (123, 9), end: (123, 26), text: ``which make 2>&1``
+    pattern:  1, capture: 1 - function, start: (123, 10), end: (123, 15), text: `which`
+    pattern:  6, capture: 5 - number, start: (123, 21), end: (123, 22), text: `2`
+    pattern:  3, capture: 3 - keyword, start: (124, 4), end: (124, 6), text: `if`
+    pattern:  8, capture: 7 - operator, start: (124, 9), end: (124, 10), text: `$`
+    pattern:  8, capture: 7 - operator, start: (124, 20), end: (124, 22), text: `&&`
+    pattern:  0, capture: 0 - string, start: (124, 28), end: (124, 35), text: `"$make"`
+    pattern:  8, capture: 7 - operator, start: (124, 29), end: (124, 30), text: `$`
+    pattern:  2, capture: 2 - property, start: (124, 30), end: (124, 34), text: `make`
+    pattern:  3, capture: 3 - keyword, start: (124, 39), end: (124, 43), text: `then`
+    pattern:  1, capture: 1 - function, start: (125, 7), end: (125, 11), text: `exit`
+    pattern:  3, capture: 3 - keyword, start: (126, 4), end: (126, 8), text: `else`
+    pattern:  2, capture: 2 - property, start: (127, 6), end: (127, 10), text: `make`
+    pattern:  3, capture: 3 - keyword, start: (128, 4), end: (128, 6), text: `fi`
+    pattern:  3, capture: 3 - keyword, start: (129, 2), end: (129, 4), text: `fi`
+    pattern:  3, capture: 3 - keyword, start: (130, 0), end: (130, 4), text: `else`
+    pattern:  2, capture: 2 - property, start: (131, 2), end: (131, 6), text: `make`
+    pattern:  0, capture: 0 - string, start: (131, 7), end: (131, 14), text: `"$MAKE"`
+    pattern:  8, capture: 7 - operator, start: (131, 8), end: (131, 9), text: `$`
+    pattern:  2, capture: 2 - property, start: (131, 9), end: (131, 13), text: `MAKE`
+    pattern:  3, capture: 3 - keyword, start: (132, 0), end: (132, 2), text: `fi`
+    pattern:  3, capture: 3 - keyword, start: (134, 0), end: (134, 2), text: `if`
+    pattern:  0, capture: 0 - string, start: (134, 8), end: (134, 15), text: `"$make"`
+    pattern:  8, capture: 7 - operator, start: (134, 9), end: (134, 10), text: `$`
+    pattern:  2, capture: 2 - property, start: (134, 10), end: (134, 14), text: `make`
+    pattern:  3, capture: 3 - keyword, start: (134, 19), end: (134, 23), text: `then`
+    pattern:  1, capture: 1 - function, start: (135, 3), end: (135, 7), text: `exit`
+    pattern:  3, capture: 3 - keyword, start: (136, 0), end: (136, 4), text: `else`
+    pattern:  4, capture: 4 - comment, start: (137, 2), end: (137, 54), text: `# echo "Installing without make. This may fail." >&2`
+    pattern:  2, capture: 2 - property, start: (138, 2), end: (138, 6), text: `make`
+    pattern:  3, capture: 3 - keyword, start: (139, 0), end: (139, 2), text: `fi`
+    pattern:  4, capture: 4 - comment, start: (141, 0), end: (141, 50), text: `# If there's no bash, then don't even try to clean`
+    pattern:  3, capture: 3 - keyword, start: (142, 0), end: (142, 2), text: `if`
+    pattern:  0, capture: 0 - string, start: (142, 8), end: (142, 19), text: `"/bin/bash"`
+    pattern:  3, capture: 3 - keyword, start: (142, 23), end: (142, 27), text: `then`
+    pattern:  1, capture: 1 - function, start: (143, 3), end: (143, 7), text: `exit`
+    pattern:  3, capture: 3 - keyword, start: (144, 0), end: (144, 4), text: `else`
+    pattern:  2, capture: 2 - property, start: (145, 2), end: (145, 7), text: `clean`
+    pattern:  0, capture: 0 - string, start: (145, 8), end: (145, 12), text: `"no"`
+    pattern:  3, capture: 3 - keyword, start: (146, 0), end: (146, 2), text: `fi`
+    pattern:  2, capture: 2 - property, start: (148, 0), end: (148, 12), text: `node_version`
+    pattern:  7, capture: 6 - embedded, start: (148, 13), end: (148, 37), text: ``"$node" --version 2>&1``
+    pattern:  1, capture: 1 - function, start: (148, 14), end: (148, 21), text: `"$node"`
+    pattern:  0, capture: 0 - string, start: (148, 14), end: (148, 21), text: `"$node"`
+    pattern:  8, capture: 7 - operator, start: (148, 15), end: (148, 16), text: `$`
+    pattern:  2, capture: 2 - property, start: (148, 16), end: (148, 20), text: `node`
+    pattern:  9, capture: 8 - constant, start: (148, 22), end: (148, 31), text: `--version`
+    pattern:  6, capture: 5 - number, start: (148, 32), end: (148, 33), text: `2`
+    pattern:  2, capture: 2 - property, start: (149, 0), end: (149, 3), text: `ret`
+    pattern:  8, capture: 7 - operator, start: (149, 4), end: (149, 5), text: `$`
+    pattern:  3, capture: 3 - keyword, start: (150, 0), end: (150, 2), text: `if`
+    pattern:  8, capture: 7 - operator, start: (150, 5), end: (150, 6), text: `$`
+    pattern:  2, capture: 2 - property, start: (150, 6), end: (150, 9), text: `ret`
+    pattern:  3, capture: 3 - keyword, start: (150, 19), end: (150, 23), text: `then`
+    pattern:  1, capture: 1 - function, start: (151, 2), end: (151, 6), text: `echo`
+    pattern:  0, capture: 0 - string, start: (151, 7), end: (151, 43), text: `"You need node to run this program."`
+    pattern:  1, capture: 1 - function, start: (152, 2), end: (152, 6), text: `echo`
+    pattern:  0, capture: 0 - string, start: (152, 7), end: (152, 46), text: `"node --version reports: $node_version"`
+    pattern:  8, capture: 7 - operator, start: (152, 32), end: (152, 33), text: `$`
+    pattern:  2, capture: 2 - property, start: (152, 33), end: (152, 45), text: `node_version`
+    pattern:  1, capture: 1 - function, start: (153, 2), end: (153, 6), text: `echo`
+    pattern:  0, capture: 0 - string, start: (153, 7), end: (153, 30), text: `"with exit code = $ret"`
+    pattern:  8, capture: 7 - operator, start: (153, 25), end: (153, 26), text: `$`
+    pattern:  2, capture: 2 - property, start: (153, 26), end: (153, 29), text: `ret`
+    pattern:  1, capture: 1 - function, start: (154, 2), end: (154, 6), text: `echo`
+    pattern:  0, capture: 0 - string, start: (154, 7), end: (154, 47), text: `"Please install node before continuing."`
+    pattern:  1, capture: 1 - function, start: (155, 2), end: (155, 6), text: `exit`
+    pattern:  8, capture: 7 - operator, start: (155, 7), end: (155, 8), text: `$`
+    pattern:  2, capture: 2 - property, start: (155, 8), end: (155, 11), text: `ret`
+    pattern:  3, capture: 3 - keyword, start: (156, 0), end: (156, 2), text: `fi`
+    pattern:  2, capture: 2 - property, start: (158, 0), end: (158, 1), text: `t`
+    pattern:  0, capture: 0 - string, start: (158, 2), end: (158, 18), text: `"${npm_install}"`
+    pattern:  7, capture: 6 - embedded, start: (158, 3), end: (158, 17), text: `${npm_install}`
+    pattern:  2, capture: 2 - property, start: (158, 5), end: (158, 16), text: `npm_install`
+    pattern:  3, capture: 3 - keyword, start: (159, 0), end: (159, 2), text: `if`
+    pattern:  0, capture: 0 - string, start: (159, 8), end: (159, 12), text: `"$t"`
+    pattern:  8, capture: 7 - operator, start: (159, 9), end: (159, 10), text: `$`
+    pattern:  2, capture: 2 - property, start: (159, 10), end: (159, 11), text: `t`
+    pattern:  3, capture: 3 - keyword, start: (159, 16), end: (159, 20), text: `then`
+    pattern:  4, capture: 4 - comment, start: (160, 2), end: (160, 33), text: `# switch based on node version.`
+    pattern:  4, capture: 4 - comment, start: (161, 2), end: (161, 65), text: `# note that we can only use strict sh-compatible patterns here.`
+    pattern:  3, capture: 3 - keyword, start: (162, 2), end: (162, 6), text: `case`
+    pattern:  8, capture: 7 - operator, start: (162, 7), end: (162, 8), text: `$`
+    pattern:  2, capture: 2 - property, start: (162, 8), end: (162, 20), text: `node_version`
+    pattern:  3, capture: 3 - keyword, start: (162, 21), end: (162, 23), text: `in`
+    pattern:  8, capture: 7 - operator, start: (163, 19), end: (163, 20), text: `|`
+    pattern:  1, capture: 1 - function, start: (164, 6), end: (164, 10), text: `echo`
+    pattern:  0, capture: 0 - string, start: (164, 11), end: (164, 65), text: `"You are using an outdated and unsupported version of"`
+    pattern:  1, capture: 1 - function, start: (165, 6), end: (165, 10), text: `echo`
+    pattern:  0, capture: 0 - string, start: (165, 11), end: (165, 69), text: `"node ($node_version).  Please update node and try again."`
+    pattern:  8, capture: 7 - operator, start: (165, 18), end: (165, 19), text: `$`
+    pattern:  2, capture: 2 - property, start: (165, 19), end: (165, 31), text: `node_version`
+    pattern:  1, capture: 1 - function, start: (166, 6), end: (166, 10), text: `exit`
+    pattern:  1, capture: 1 - function, start: (169, 6), end: (169, 10), text: `echo`
+    pattern:  0, capture: 0 - string, start: (169, 11), end: (169, 31), text: `"install npm@latest"`
+    pattern:  2, capture: 2 - property, start: (170, 6), end: (170, 7), text: `t`
+    pattern:  0, capture: 0 - string, start: (170, 8), end: (170, 16), text: `"latest"`
+    pattern:  3, capture: 3 - keyword, start: (172, 2), end: (172, 6), text: `esac`
+    pattern:  3, capture: 3 - keyword, start: (173, 0), end: (173, 2), text: `fi`
+    pattern:  4, capture: 4 - comment, start: (175, 0), end: (175, 60), text: `# need to echo "" after, because Posix sed doesn't treat EOF`
+    pattern:  4, capture: 4 - comment, start: (176, 0), end: (176, 28), text: `# as an implied end of line.`
+    pattern:  2, capture: 2 - property, start: (177, 0), end: (177, 3), text: `url`
+    pattern:  7, capture: 6 - embedded, start: (177, 4), end: (179, 25), text: ``(curl -SsL https://registry.npmjs.org/npm/$t; echo "") \
+     | sed -e 's/^.*tarball":"//' \
+     | sed -e 's/".*$//'``
+    pattern:  1, capture: 1 - function, start: (177, 6), end: (177, 10), text: `curl`
+    pattern:  9, capture: 8 - constant, start: (177, 11), end: (177, 15), text: `-SsL`
+    pattern:  8, capture: 7 - operator, start: (177, 47), end: (177, 48), text: `$`
+    pattern:  2, capture: 2 - property, start: (177, 48), end: (177, 49), text: `t`
+    pattern:  1, capture: 1 - function, start: (177, 51), end: (177, 55), text: `echo`
+    pattern:  0, capture: 0 - string, start: (177, 56), end: (177, 58), text: `""`
+    pattern:  8, capture: 7 - operator, start: (178, 5), end: (178, 6), text: `|`
+    pattern:  1, capture: 1 - function, start: (178, 7), end: (178, 10), text: `sed`
+    pattern:  9, capture: 8 - constant, start: (178, 11), end: (178, 13), text: `-e`
+    pattern:  0, capture: 0 - string, start: (178, 14), end: (178, 33), text: `'s/^.*tarball":"//'`
+    pattern:  8, capture: 7 - operator, start: (179, 5), end: (179, 6), text: `|`
+    pattern:  1, capture: 1 - function, start: (179, 7), end: (179, 10), text: `sed`
+    pattern:  9, capture: 8 - constant, start: (179, 11), end: (179, 13), text: `-e`
+    pattern:  0, capture: 0 - string, start: (179, 14), end: (179, 24), text: `'s/".*$//'`
+    pattern:  2, capture: 2 - property, start: (181, 0), end: (181, 3), text: `ret`
+    pattern:  8, capture: 7 - operator, start: (181, 4), end: (181, 5), text: `$`
+    pattern:  3, capture: 3 - keyword, start: (182, 0), end: (182, 2), text: `if`
+    pattern:  0, capture: 0 - string, start: (182, 5), end: (182, 12), text: `"x$url"`
+    pattern:  8, capture: 7 - operator, start: (182, 7), end: (182, 8), text: `$`
+    pattern:  2, capture: 2 - property, start: (182, 8), end: (182, 11), text: `url`
+    pattern:  0, capture: 0 - string, start: (182, 15), end: (182, 18), text: `"x"`
+    pattern:  3, capture: 3 - keyword, start: (182, 22), end: (182, 26), text: `then`
+    pattern:  2, capture: 2 - property, start: (183, 2), end: (183, 5), text: `ret`
+    pattern:  4, capture: 4 - comment, start: (184, 2), end: (184, 34), text: `# try without the -e arg to sed.`
+    pattern:  2, capture: 2 - property, start: (185, 2), end: (185, 5), text: `url`
+    pattern:  7, capture: 6 - embedded, start: (185, 6), end: (187, 24), text: ``(curl -SsL https://registry.npmjs.org/npm/$t; echo "") \
+       | sed 's/^.*tarball":"//' \
+       | sed 's/".*$//'``
+    pattern:  1, capture: 1 - function, start: (185, 8), end: (185, 12), text: `curl`
+    pattern:  9, capture: 8 - constant, start: (185, 13), end: (185, 17), text: `-SsL`
+    pattern:  8, capture: 7 - operator, start: (185, 49), end: (185, 50), text: `$`
+    pattern:  2, capture: 2 - property, start: (185, 50), end: (185, 51), text: `t`
+    pattern:  1, capture: 1 - function, start: (185, 53), end: (185, 57), text: `echo`
+    pattern:  0, capture: 0 - string, start: (185, 58), end: (185, 60), text: `""`
+    pattern:  8, capture: 7 - operator, start: (186, 7), end: (186, 8), text: `|`
+    pattern:  1, capture: 1 - function, start: (186, 9), end: (186, 12), text: `sed`
+    pattern:  0, capture: 0 - string, start: (186, 13), end: (186, 32), text: `'s/^.*tarball":"//'`
+    pattern:  8, capture: 7 - operator, start: (187, 7), end: (187, 8), text: `|`
+    pattern:  1, capture: 1 - function, start: (187, 9), end: (187, 12), text: `sed`
+    pattern:  0, capture: 0 - string, start: (187, 13), end: (187, 23), text: `'s/".*$//'`
+    pattern:  2, capture: 2 - property, start: (188, 2), end: (188, 5), text: `ret`
+    pattern:  8, capture: 7 - operator, start: (188, 6), end: (188, 7), text: `$`
+    pattern:  3, capture: 3 - keyword, start: (189, 2), end: (189, 4), text: `if`
+    pattern:  0, capture: 0 - string, start: (189, 7), end: (189, 14), text: `"x$url"`
+    pattern:  8, capture: 7 - operator, start: (189, 9), end: (189, 10), text: `$`
+    pattern:  2, capture: 2 - property, start: (189, 10), end: (189, 13), text: `url`
+    pattern:  0, capture: 0 - string, start: (189, 17), end: (189, 20), text: `"x"`
+    pattern:  3, capture: 3 - keyword, start: (189, 24), end: (189, 28), text: `then`
+    pattern:  2, capture: 2 - property, start: (190, 4), end: (190, 7), text: `ret`
+    pattern:  3, capture: 3 - keyword, start: (191, 2), end: (191, 4), text: `fi`
+    pattern:  3, capture: 3 - keyword, start: (192, 0), end: (192, 2), text: `fi`
+    pattern:  3, capture: 3 - keyword, start: (193, 0), end: (193, 2), text: `if`
+    pattern:  8, capture: 7 - operator, start: (193, 5), end: (193, 6), text: `$`
+    pattern:  2, capture: 2 - property, start: (193, 6), end: (193, 9), text: `ret`
+    pattern:  3, capture: 3 - keyword, start: (193, 19), end: (193, 23), text: `then`
+    pattern:  1, capture: 1 - function, start: (194, 2), end: (194, 6), text: `echo`
+    pattern:  0, capture: 0 - string, start: (194, 7), end: (194, 45), text: `"Failed to get tarball url for npm/$t"`
+    pattern:  8, capture: 7 - operator, start: (194, 42), end: (194, 43), text: `$`
+    pattern:  2, capture: 2 - property, start: (194, 43), end: (194, 44), text: `t`
+    pattern:  1, capture: 1 - function, start: (195, 2), end: (195, 6), text: `exit`
+    pattern:  8, capture: 7 - operator, start: (195, 7), end: (195, 8), text: `$`
+    pattern:  2, capture: 2 - property, start: (195, 8), end: (195, 11), text: `ret`
+    pattern:  3, capture: 3 - keyword, start: (196, 0), end: (196, 2), text: `fi`
+    pattern:  1, capture: 1 - function, start: (199, 0), end: (199, 4), text: `echo`
+    pattern:  0, capture: 0 - string, start: (199, 5), end: (199, 21), text: `"fetching: $url"`
+    pattern:  8, capture: 7 - operator, start: (199, 16), end: (199, 17), text: `$`
+    pattern:  2, capture: 2 - property, start: (199, 17), end: (199, 20), text: `url`
+    pattern:  1, capture: 1 - function, start: (201, 0), end: (201, 2), text: `cd`
+    pattern:  0, capture: 0 - string, start: (201, 3), end: (201, 9), text: `"$TMP"`
+    pattern:  8, capture: 7 - operator, start: (201, 4), end: (201, 5), text: `$`
+    pattern:  2, capture: 2 - property, start: (201, 5), end: (201, 8), text: `TMP`
+    pattern:  8, capture: 7 - operator, start: (202, 2), end: (202, 4), text: `&&`
+    pattern:  1, capture: 1 - function, start: (202, 5), end: (202, 9), text: `curl`
+    pattern:  9, capture: 8 - constant, start: (202, 10), end: (202, 14), text: `-SsL`
+    pattern:  0, capture: 0 - string, start: (202, 15), end: (202, 21), text: `"$url"`
+    pattern:  8, capture: 7 - operator, start: (202, 16), end: (202, 17), text: `$`
+    pattern:  2, capture: 2 - property, start: (202, 17), end: (202, 20), text: `url`
+    pattern:  8, capture: 7 - operator, start: (203, 5), end: (203, 6), text: `|`
+    pattern:  1, capture: 1 - function, start: (203, 7), end: (203, 11), text: `$tar`
+    pattern:  8, capture: 7 - operator, start: (203, 7), end: (203, 8), text: `$`
+    pattern:  2, capture: 2 - property, start: (203, 8), end: (203, 11), text: `tar`
+    pattern:  9, capture: 8 - constant, start: (203, 12), end: (203, 16), text: `-xzf`
+    pattern:  9, capture: 8 - constant, start: (203, 17), end: (203, 18), text: `-`
+    pattern:  8, capture: 7 - operator, start: (204, 2), end: (204, 4), text: `&&`
+    pattern:  1, capture: 1 - function, start: (204, 5), end: (204, 7), text: `cd`
+    pattern:  0, capture: 0 - string, start: (204, 8), end: (204, 14), text: `"$TMP"`
+    pattern:  8, capture: 7 - operator, start: (204, 9), end: (204, 10), text: `$`
+    pattern:  2, capture: 2 - property, start: (204, 10), end: (204, 13), text: `TMP`
+    pattern:  8, capture: 7 - operator, start: (205, 2), end: (205, 4), text: `&&`
+    pattern:  2, capture: 2 - property, start: (205, 6), end: (205, 9), text: `ver`
+    pattern:  7, capture: 6 - embedded, start: (205, 10), end: (205, 65), text: ``"$node" bin/read-package-json.js package.json version``
+    pattern:  1, capture: 1 - function, start: (205, 11), end: (205, 18), text: `"$node"`
+    pattern:  0, capture: 0 - string, start: (205, 11), end: (205, 18), text: `"$node"`
+    pattern:  8, capture: 7 - operator, start: (205, 12), end: (205, 13), text: `$`
+    pattern:  2, capture: 2 - property, start: (205, 13), end: (205, 17), text: `node`
+    pattern:  2, capture: 2 - property, start: (206, 6), end: (206, 13), text: `isnpm10`
+    pattern:  3, capture: 3 - keyword, start: (207, 6), end: (207, 8), text: `if`
+    pattern:  8, capture: 7 - operator, start: (207, 11), end: (207, 12), text: `$`
+    pattern:  2, capture: 2 - property, start: (207, 12), end: (207, 15), text: `ret`
+    pattern:  3, capture: 3 - keyword, start: (207, 25), end: (207, 29), text: `then`
+    pattern:  3, capture: 3 - keyword, start: (208, 8), end: (208, 10), text: `if`
+    pattern:  3, capture: 3 - keyword, start: (208, 32), end: (208, 36), text: `then`
+    pattern:  3, capture: 3 - keyword, start: (209, 10), end: (209, 12), text: `if`
+    pattern:  1, capture: 1 - function, start: (209, 13), end: (209, 20), text: `"$node"`
+    pattern:  0, capture: 0 - string, start: (209, 13), end: (209, 20), text: `"$node"`
+    pattern:  8, capture: 7 - operator, start: (209, 14), end: (209, 15), text: `$`
+    pattern:  2, capture: 2 - property, start: (209, 15), end: (209, 19), text: `node`
+    pattern:  9, capture: 8 - constant, start: (209, 52), end: (209, 54), text: `-v`
+    pattern:  0, capture: 0 - string, start: (209, 55), end: (209, 61), text: `"$ver"`
+    pattern:  8, capture: 7 - operator, start: (209, 56), end: (209, 57), text: `$`
+    pattern:  2, capture: 2 - property, start: (209, 57), end: (209, 60), text: `ver`
+    pattern:  9, capture: 8 - constant, start: (209, 62), end: (209, 64), text: `-r`
+    pattern:  0, capture: 0 - string, start: (209, 65), end: (209, 68), text: `"1"`
+    pattern:  3, capture: 3 - keyword, start: (210, 10), end: (210, 14), text: `then`
+    pattern:  2, capture: 2 - property, start: (211, 12), end: (211, 19), text: `isnpm10`
+    pattern:  3, capture: 3 - keyword, start: (212, 10), end: (212, 12), text: `fi`
+    pattern:  3, capture: 3 - keyword, start: (213, 8), end: (213, 12), text: `else`
+    pattern:  3, capture: 3 - keyword, start: (214, 10), end: (214, 12), text: `if`
+    pattern:  1, capture: 1 - function, start: (214, 13), end: (214, 20), text: `"$node"`
+    pattern:  0, capture: 0 - string, start: (214, 13), end: (214, 20), text: `"$node"`
+    pattern:  8, capture: 7 - operator, start: (214, 14), end: (214, 15), text: `$`
+    pattern:  2, capture: 2 - property, start: (214, 15), end: (214, 19), text: `node`
+    pattern:  9, capture: 8 - constant, start: (214, 32), end: (214, 34), text: `-v`
+    pattern:  0, capture: 0 - string, start: (214, 35), end: (214, 41), text: `"$ver"`
+    pattern:  8, capture: 7 - operator, start: (214, 36), end: (214, 37), text: `$`
+    pattern:  2, capture: 2 - property, start: (214, 37), end: (214, 40), text: `ver`
+    pattern:  9, capture: 8 - constant, start: (214, 42), end: (214, 44), text: `-r`
+    pattern:  0, capture: 0 - string, start: (214, 45), end: (214, 52), text: `">=1.0"`
+    pattern:  3, capture: 3 - keyword, start: (214, 54), end: (214, 58), text: `then`
+    pattern:  2, capture: 2 - property, start: (215, 12), end: (215, 19), text: `isnpm10`
+    pattern:  3, capture: 3 - keyword, start: (216, 10), end: (216, 12), text: `fi`
+    pattern:  3, capture: 3 - keyword, start: (217, 8), end: (217, 10), text: `fi`
+    pattern:  3, capture: 3 - keyword, start: (218, 6), end: (218, 8), text: `fi`
+    pattern:  2, capture: 2 - property, start: (220, 6), end: (220, 9), text: `ret`
+    pattern:  3, capture: 3 - keyword, start: (221, 6), end: (221, 8), text: `if`
+    pattern:  8, capture: 7 - operator, start: (221, 11), end: (221, 12), text: `$`
+    pattern:  2, capture: 2 - property, start: (221, 12), end: (221, 19), text: `isnpm10`
+    pattern:  8, capture: 7 - operator, start: (221, 28), end: (221, 30), text: `&&`
+    pattern:  0, capture: 0 - string, start: (221, 36), end: (221, 58), text: `"scripts/clean-old.sh"`
+    pattern:  3, capture: 3 - keyword, start: (221, 62), end: (221, 66), text: `then`
+    pattern:  3, capture: 3 - keyword, start: (222, 8), end: (222, 10), text: `if`
+    pattern:  0, capture: 0 - string, start: (222, 13), end: (222, 26), text: `"x$skipclean"`
+    pattern:  8, capture: 7 - operator, start: (222, 15), end: (222, 16), text: `$`
+    pattern:  2, capture: 2 - property, start: (222, 16), end: (222, 25), text: `skipclean`
+    pattern:  0, capture: 0 - string, start: (222, 29), end: (222, 32), text: `"x"`
+    pattern:  3, capture: 3 - keyword, start: (222, 36), end: (222, 40), text: `then`
+    pattern:  1, capture: 1 - function, start: (223, 11), end: (223, 15), text: `exit`
+    pattern:  3, capture: 3 - keyword, start: (224, 8), end: (224, 12), text: `else`
+    pattern:  2, capture: 2 - property, start: (225, 10), end: (225, 15), text: `clean`
+    pattern:  3, capture: 3 - keyword, start: (226, 8), end: (226, 10), text: `fi`
+    pattern:  3, capture: 3 - keyword, start: (227, 8), end: (227, 10), text: `if`
+    pattern:  0, capture: 0 - string, start: (227, 13), end: (227, 22), text: `"x$clean"`
+    pattern:  8, capture: 7 - operator, start: (227, 15), end: (227, 16), text: `$`
+    pattern:  2, capture: 2 - property, start: (227, 16), end: (227, 21), text: `clean`
+    pattern:  0, capture: 0 - string, start: (227, 25), end: (227, 30), text: `"xno"`
+    pattern:  0, capture: 0 - string, start: (228, 17), end: (228, 26), text: `"x$clean"`
+    pattern:  8, capture: 7 - operator, start: (228, 19), end: (228, 20), text: `$`
+    pattern:  2, capture: 2 - property, start: (228, 20), end: (228, 25), text: `clean`
+    pattern:  0, capture: 0 - string, start: (228, 29), end: (228, 33), text: `"xn"`
+    pattern:  3, capture: 3 - keyword, start: (228, 37), end: (228, 41), text: `then`
+    pattern:  1, capture: 1 - function, start: (229, 10), end: (229, 14), text: `echo`
+    pattern:  0, capture: 0 - string, start: (229, 15), end: (229, 41), text: `"Skipping 0.x cruft clean"`
+    pattern:  2, capture: 2 - property, start: (230, 10), end: (230, 13), text: `ret`
+    pattern:  3, capture: 3 - keyword, start: (231, 8), end: (231, 12), text: `elif`
+    pattern:  0, capture: 0 - string, start: (231, 15), end: (231, 24), text: `"x$clean"`
+    pattern:  8, capture: 7 - operator, start: (231, 17), end: (231, 18), text: `$`
+    pattern:  2, capture: 2 - property, start: (231, 18), end: (231, 23), text: `clean`
+    pattern:  0, capture: 0 - string, start: (231, 27), end: (231, 31), text: `"xy"`
+    pattern:  0, capture: 0 - string, start: (231, 39), end: (231, 48), text: `"x$clean"`
+    pattern:  8, capture: 7 - operator, start: (231, 41), end: (231, 42), text: `$`
+    pattern:  2, capture: 2 - property, start: (231, 42), end: (231, 47), text: `clean`
+    pattern:  0, capture: 0 - string, start: (231, 51), end: (231, 57), text: `"xyes"`
+    pattern:  3, capture: 3 - keyword, start: (231, 61), end: (231, 65), text: `then`
+    pattern:  2, capture: 2 - property, start: (232, 10), end: (232, 14), text: `NODE`
+    pattern:  0, capture: 0 - string, start: (232, 15), end: (232, 22), text: `"$node"`
+    pattern:  8, capture: 7 - operator, start: (232, 16), end: (232, 17), text: `$`
+    pattern:  2, capture: 2 - property, start: (232, 17), end: (232, 21), text: `node`
+    pattern:  1, capture: 1 - function, start: (232, 23), end: (232, 32), text: `/bin/bash`
+    pattern:  0, capture: 0 - string, start: (232, 33), end: (232, 55), text: `"scripts/clean-old.sh"`
+    pattern:  0, capture: 0 - string, start: (232, 56), end: (232, 60), text: `"-y"`
+    pattern:  2, capture: 2 - property, start: (233, 10), end: (233, 13), text: `ret`
+    pattern:  8, capture: 7 - operator, start: (233, 14), end: (233, 15), text: `$`
+    pattern:  3, capture: 3 - keyword, start: (234, 8), end: (234, 12), text: `else`
+    pattern:  2, capture: 2 - property, start: (235, 10), end: (235, 14), text: `NODE`
+    pattern:  0, capture: 0 - string, start: (235, 15), end: (235, 22), text: `"$node"`
+    pattern:  8, capture: 7 - operator, start: (235, 16), end: (235, 17), text: `$`
+    pattern:  2, capture: 2 - property, start: (235, 17), end: (235, 21), text: `node`
+    pattern:  1, capture: 1 - function, start: (235, 23), end: (235, 32), text: `/bin/bash`
+    pattern:  0, capture: 0 - string, start: (235, 33), end: (235, 55), text: `"scripts/clean-old.sh"`
+    pattern:  8, capture: 7 - operator, start: (235, 56), end: (235, 57), text: `<`
+    pattern:  2, capture: 2 - property, start: (236, 10), end: (236, 13), text: `ret`
+    pattern:  8, capture: 7 - operator, start: (236, 14), end: (236, 15), text: `$`
+    pattern:  3, capture: 3 - keyword, start: (237, 8), end: (237, 10), text: `fi`
+    pattern:  3, capture: 3 - keyword, start: (238, 6), end: (238, 8), text: `fi`
+    pattern:  3, capture: 3 - keyword, start: (240, 6), end: (240, 8), text: `if`
+    pattern:  8, capture: 7 - operator, start: (240, 11), end: (240, 12), text: `$`
+    pattern:  2, capture: 2 - property, start: (240, 12), end: (240, 15), text: `ret`
+    pattern:  3, capture: 3 - keyword, start: (240, 25), end: (240, 29), text: `then`
+    pattern:  1, capture: 1 - function, start: (241, 8), end: (241, 12), text: `echo`
+    pattern:  0, capture: 0 - string, start: (241, 13), end: (241, 45), text: `"Aborted 0.x cleanup.  Exiting."`
+    pattern:  1, capture: 1 - function, start: (242, 8), end: (242, 12), text: `exit`
+    pattern:  8, capture: 7 - operator, start: (242, 13), end: (242, 14), text: `$`
+    pattern:  2, capture: 2 - property, start: (242, 14), end: (242, 17), text: `ret`
+    pattern:  3, capture: 3 - keyword, start: (243, 6), end: (243, 8), text: `fi`
+    pattern:  8, capture: 7 - operator, start: (244, 2), end: (244, 4), text: `&&`
+    pattern:  3, capture: 3 - keyword, start: (244, 6), end: (244, 8), text: `if`
+    pattern:  0, capture: 0 - string, start: (244, 11), end: (244, 25), text: `"x$configures"`
+    pattern:  8, capture: 7 - operator, start: (244, 13), end: (244, 14), text: `$`
+    pattern:  2, capture: 2 - property, start: (244, 14), end: (244, 24), text: `configures`
+    pattern:  0, capture: 0 - string, start: (244, 28), end: (244, 31), text: `"x"`
+    pattern:  3, capture: 3 - keyword, start: (244, 35), end: (244, 39), text: `then`
+    pattern:  1, capture: 1 - function, start: (245, 9), end: (245, 13), text: `exit`
+    pattern:  3, capture: 3 - keyword, start: (246, 6), end: (246, 10), text: `else`
+    pattern:  1, capture: 1 - function, start: (247, 8), end: (247, 12), text: `echo`
+    pattern:  0, capture: 0 - string, start: (247, 13), end: (247, 38), text: `"./configure $configures"`
+    pattern:  8, capture: 7 - operator, start: (247, 26), end: (247, 27), text: `$`
+    pattern:  2, capture: 2 - property, start: (247, 27), end: (247, 37), text: `configures`
+    pattern:  1, capture: 1 - function, start: (248, 8), end: (248, 12), text: `echo`
+    pattern:  0, capture: 0 - string, start: (248, 13), end: (248, 26), text: `"$configures"`
+    pattern:  8, capture: 7 - operator, start: (248, 14), end: (248, 15), text: `$`
+    pattern:  2, capture: 2 - property, start: (248, 15), end: (248, 25), text: `configures`
+    pattern:  8, capture: 7 - operator, start: (248, 27), end: (248, 28), text: `>`
+    pattern:  3, capture: 3 - keyword, start: (249, 6), end: (249, 8), text: `fi`
+    pattern:  8, capture: 7 - operator, start: (250, 2), end: (250, 4), text: `&&`
+    pattern:  3, capture: 3 - keyword, start: (250, 6), end: (250, 8), text: `if`
+    pattern:  0, capture: 0 - string, start: (250, 11), end: (250, 18), text: `"$make"`
+    pattern:  8, capture: 7 - operator, start: (250, 12), end: (250, 13), text: `$`
+    pattern:  2, capture: 2 - property, start: (250, 13), end: (250, 17), text: `make`
+    pattern:  0, capture: 0 - string, start: (250, 21), end: (250, 29), text: `"NOMAKE"`
+    pattern:  3, capture: 3 - keyword, start: (250, 33), end: (250, 37), text: `then`
+    pattern:  1, capture: 1 - function, start: (251, 9), end: (251, 13), text: `exit`
+    pattern:  3, capture: 3 - keyword, start: (252, 6), end: (252, 10), text: `elif`
+    pattern:  1, capture: 1 - function, start: (252, 11), end: (252, 18), text: `"$make"`
+    pattern:  0, capture: 0 - string, start: (252, 11), end: (252, 18), text: `"$make"`
+    pattern:  8, capture: 7 - operator, start: (252, 12), end: (252, 13), text: `$`
+    pattern:  2, capture: 2 - property, start: (252, 13), end: (252, 17), text: `make`
+    pattern:  3, capture: 3 - keyword, start: (252, 38), end: (252, 42), text: `then`
+    pattern:  1, capture: 1 - function, start: (253, 9), end: (253, 13), text: `exit`
+    pattern:  3, capture: 3 - keyword, start: (254, 6), end: (254, 10), text: `else`
+    pattern:  2, capture: 2 - property, start: (255, 8), end: (255, 12), text: `make`
+    pattern:  0, capture: 0 - string, start: (255, 13), end: (255, 21), text: `"NOMAKE"`
+    pattern:  3, capture: 3 - keyword, start: (256, 6), end: (256, 8), text: `fi`
+    pattern:  3, capture: 3 - keyword, start: (257, 6), end: (257, 8), text: `if`
+    pattern:  0, capture: 0 - string, start: (257, 11), end: (257, 18), text: `"$make"`
+    pattern:  8, capture: 7 - operator, start: (257, 12), end: (257, 13), text: `$`
+    pattern:  2, capture: 2 - property, start: (257, 13), end: (257, 17), text: `make`
+    pattern:  0, capture: 0 - string, start: (257, 21), end: (257, 29), text: `"NOMAKE"`
+    pattern:  3, capture: 3 - keyword, start: (257, 33), end: (257, 37), text: `then`
+    pattern:  1, capture: 1 - function, start: (258, 8), end: (258, 15), text: `"$node"`
+    pattern:  0, capture: 0 - string, start: (258, 8), end: (258, 15), text: `"$node"`
+    pattern:  8, capture: 7 - operator, start: (258, 9), end: (258, 10), text: `$`
+    pattern:  2, capture: 2 - property, start: (258, 10), end: (258, 14), text: `node`
+    pattern:  9, capture: 8 - constant, start: (258, 30), end: (258, 33), text: `-gf`
+    pattern:  1, capture: 1 - function, start: (259, 8), end: (259, 15), text: `"$node"`
+    pattern:  0, capture: 0 - string, start: (259, 8), end: (259, 15), text: `"$node"`
+    pattern:  8, capture: 7 - operator, start: (259, 9), end: (259, 10), text: `$`
+    pattern:  2, capture: 2 - property, start: (259, 10), end: (259, 14), text: `node`
+    pattern:  9, capture: 8 - constant, start: (259, 31), end: (259, 34), text: `-gf`
+    pattern:  3, capture: 3 - keyword, start: (260, 6), end: (260, 8), text: `fi`
+    pattern:  8, capture: 7 - operator, start: (261, 2), end: (261, 4), text: `&&`
+    pattern:  1, capture: 1 - function, start: (261, 5), end: (261, 7), text: `cd`
+    pattern:  0, capture: 0 - string, start: (261, 8), end: (261, 15), text: `"$BACK"`
+    pattern:  8, capture: 7 - operator, start: (261, 9), end: (261, 10), text: `$`
+    pattern:  2, capture: 2 - property, start: (261, 10), end: (261, 14), text: `BACK`
+    pattern:  8, capture: 7 - operator, start: (262, 2), end: (262, 4), text: `&&`
+    pattern:  1, capture: 1 - function, start: (262, 5), end: (262, 7), text: `rm`
+    pattern:  9, capture: 8 - constant, start: (262, 8), end: (262, 11), text: `-rf`
+    pattern:  0, capture: 0 - string, start: (262, 12), end: (262, 18), text: `"$TMP"`
+    pattern:  8, capture: 7 - operator, start: (262, 13), end: (262, 14), text: `$`
+    pattern:  2, capture: 2 - property, start: (262, 14), end: (262, 17), text: `TMP`
+    pattern:  8, capture: 7 - operator, start: (263, 2), end: (263, 4), text: `&&`
+    pattern:  1, capture: 1 - function, start: (263, 5), end: (263, 9), text: `echo`
+    pattern:  0, capture: 0 - string, start: (263, 10), end: (263, 21), text: `"It worked"`
+    pattern:  2, capture: 2 - property, start: (265, 0), end: (265, 3), text: `ret`
+    pattern:  8, capture: 7 - operator, start: (265, 4), end: (265, 5), text: `$`
+    pattern:  3, capture: 3 - keyword, start: (266, 0), end: (266, 2), text: `if`
+    pattern:  8, capture: 7 - operator, start: (266, 5), end: (266, 6), text: `$`
+    pattern:  2, capture: 2 - property, start: (266, 6), end: (266, 9), text: `ret`
+    pattern:  3, capture: 3 - keyword, start: (266, 19), end: (266, 23), text: `then`
+    pattern:  1, capture: 1 - function, start: (267, 2), end: (267, 6), text: `echo`
+    pattern:  0, capture: 0 - string, start: (267, 7), end: (267, 18), text: `"It failed"`
+    pattern:  3, capture: 3 - keyword, start: (268, 0), end: (268, 2), text: `fi`
+    pattern:  1, capture: 1 - function, start: (269, 0), end: (269, 4), text: `exit`
+    pattern:  8, capture: 7 - operator, start: (269, 5), end: (269, 6), text: `$`
+    pattern:  2, capture: 2 - property, start: (269, 6), end: (269, 9), text: `ret`
