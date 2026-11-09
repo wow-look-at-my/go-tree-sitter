@@ -78,3 +78,11 @@ go-toolchain
 ```
 
 A checkout without the submodules fails the corpus tests loudly rather than reporting a green over zero cases.
+
+Each grammar's bundled queries also run against its samples, its small examples and its corpus inputs. The output must match `tree-sitter query` 0.27.2 byte for byte. The goldens live in `grammars/*/testdata/queries`, and `internal/querygoldens` describes their layout. To record them again:
+
+```sh
+TS_GOLDENS_RECORD=1 TS_GOLDENS_CLI=/path/to/tree-sitter go-toolchain
+```
+
+`ts-goldens query -lang all -cli /path/to/tree-sitter` does the same from a built binary.

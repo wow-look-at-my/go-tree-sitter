@@ -1,5 +1,7 @@
 package treesitter_test
 
+import _ "embed"
+
 import (
 	"strings"
 	"testing"
@@ -138,15 +140,7 @@ func TestQueryMatchesWithAlternativesAtRoot(t *testing.T) {
 			"return"
 		] @keyword
 	`)
-	assertQueryMatches(t, language, query, `
-		function a(b, c, d) {
-			if (b) {
-				return c;
-			} else {
-				throw d;
-			}
-		}
-	`, []matchResult{
+	assertQueryMatches(t, language, query, testQueryMatchesWithAlternativesAtRootCpp, []matchResult{
 		m(0, "keyword", "function"),
 		m(0, "keyword", "if"),
 		m(0, "keyword", "return"),
@@ -239,21 +233,8 @@ func TestQuerySiblingPatternsDontMatchChildrenOfAnError(t *testing.T) {
 		("<" @first "<" @second)
 	`)
 
-	// Most of the document is an ERROR. A non-rooted pattern must not match
-	// the direct children of an ERROR node.
-	source := `
-            fn a() {}
-
-            <<<<<<<<<< add pub b fn () {}
-            // comment 1
-            pub fn b() {
-            /* comment 2 */
-            ==========
-            pub fn c() {
-            // comment 3
-            >>>>>>>>>> add pub c fn () {}
-            }
-        `
+	// Most of the document is an ERROR. A non-rooted pattern must not match the direct children of an ERROR node.
+	source := testQuerySiblingPatternsDontMatchChildrenOfAnErrorRs
 	tree := parseSource(t, language, source)
 	cursor := ts.NewQueryCursor()
 	require.Equal(t, []matchResult{
@@ -308,15 +289,7 @@ func TestRepetitionsBeforeWithAlternatives(t *testing.T) {
 			]
 		)
 	`)
-	assertQueryMatches(t, language, query, `
-		// a
-		// b
-		fn c() {}
-
-		// d
-		// e
-		impl F {}
-	`, []matchResult{
+	assertQueryMatches(t, language, query, testRepetitionsBeforeWithAlternativesRs, []matchResult{
 		m(0, "comment", "// a", "comment", "// b", "name", "c"),
 		m(0, "comment", "// d", "comment", "// e", "name", "F"),
 	})
@@ -472,7 +445,8 @@ const nextCaptureQuery = `(function_declaration name: (identifier) @function)
 	(member_expression property: (property_identifier) @property)
 	((identifier) @variable)`
 
-const nextCaptureSource = "function func() {\n  foo.bar.baz()\n}\n"
+//go:embed testdata/next-capture-source.cpp
+var nextCaptureSource string
 
 // Upstream: test_query_cursor_next_capture_with_byte_range.
 // Rewritten from Python to JavaScript.
@@ -529,3 +503,12 @@ func TestQueryMatchesWithUnrootedPatternsIntersectingByteRange(t *testing.T) {
 		m(0, "left", "{", "right", "}"),
 	}, collectMatches(cursor, query, tree.RootNode(), source))
 }
+
+//go:embed testdata/test-query-matches-with-alternatives-at-root.cpp
+var testQueryMatchesWithAlternativesAtRootCpp string
+
+//go:embed testdata/test-query-sibling-patterns-dont-match-children-of-an-error.rs
+var testQuerySiblingPatternsDontMatchChildrenOfAnErrorRs string
+
+//go:embed testdata/test-repetitions-before-with-alternatives.rs
+var testRepetitionsBeforeWithAlternativesRs string

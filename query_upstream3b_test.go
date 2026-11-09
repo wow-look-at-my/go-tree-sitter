@@ -1,5 +1,7 @@
 package treesitter_test
 
+import _ "embed"
+
 import (
 	"encoding/json"
 	"strconv"
@@ -553,7 +555,7 @@ func TestQueryExecutionWithPointsCausingUnderflow(t *testing.T) {
 	parser := ts.NewParser()
 	require.True(t, parser.SetLanguage(language))
 
-	code := "fn main() {\n    println!(\"{:?}\", foo());\n}"
+	code := testQueryExecutionWithPointsCausingUnderflowRs
 	require.True(t, parser.SetIncludedRanges([]ts.Range{{
 		StartByte:  24,
 		EndByte:    39,
@@ -588,7 +590,7 @@ func TestQueryExecutionWithPointsCausingUnderflow(t *testing.T) {
 // tuple_expression has the same children, with an optional trailing comma.
 func TestWildcardBehaviorBeforeAnchor(t *testing.T) {
 	language := queryLanguage(t, "rust")
-	source := "fn f() {\n    (a, b);\n    (c, d,);\n}\n"
+	source := testWildcardBehaviorBeforeAnchorRs
 
 	// This query targets any named node right before a closing parenthesis.
 	query := p3MustQuery(t, language, `(tuple_expression (_) @last . ")" .) @match`)
@@ -608,7 +610,7 @@ func TestWildcardBehaviorBeforeAnchor(t *testing.T) {
 // test_pattern_alternatives_follow_last_child_constraint
 func TestPatternAlternativesFollowLastChildConstraint(t *testing.T) {
 	language := queryLanguage(t, "rust")
-	code := "\nfn f() {\n    if a {} // <- should NOT match\n    if b {}\n}"
+	code := testPatternAlternativesFollowLastChildConstraintRs
 	tree := parseSource(t, language, code)
 	cursor := ts.NewQueryCursor()
 
@@ -637,14 +639,14 @@ func TestPatternAlternativesFollowLastChildConstraint(t *testing.T) {
 // test_wildcard_parent_allows_fallible_child_patterns
 func TestWildcardParentAllowsFallibleChildPatterns(t *testing.T) {
 	language := queryLanguage(t, "javascript")
-	source := "\nfunction foo() {\n    \"bar\"\n}\n    "
+	source := testWildcardParentAllowsFallibleChildPatternsCpp
 	query := p3MustQuery(t, language, `(function_declaration
           (_
             (expression_statement)
           )
         ) @part`)
 	assertQueryMatches(t, language, query, source, []matchResult{
-		m(0, "part", "function foo() {\n    \"bar\"\n}"),
+		m(0, "part", testWildcardParentAllowsFallibleChildPatternsCpp2),
 	})
 }
 
@@ -687,3 +689,18 @@ func TestLastChildAnchorLooksPastHiddenNode(t *testing.T) {
 	query := p3MustQuery(t, language, "(translation_unit (_) @last .)")
 	assertQueryMatches(t, language, query, "enum E { A };\nint x;\nint y;\n", []matchResult{m(0, "last", "int y;")})
 }
+
+//go:embed testdata/test-query-execution-with-points-causing-underflow.rs
+var testQueryExecutionWithPointsCausingUnderflowRs string
+
+//go:embed testdata/test-wildcard-behavior-before-anchor.rs
+var testWildcardBehaviorBeforeAnchorRs string
+
+//go:embed testdata/test-pattern-alternatives-follow-last-child-constraint.rs
+var testPatternAlternativesFollowLastChildConstraintRs string
+
+//go:embed testdata/test-wildcard-parent-allows-fallible-child-patterns.cpp
+var testWildcardParentAllowsFallibleChildPatternsCpp string
+
+//go:embed testdata/test-wildcard-parent-allows-fallible-child-patterns-2.cpp
+var testWildcardParentAllowsFallibleChildPatternsCpp2 string

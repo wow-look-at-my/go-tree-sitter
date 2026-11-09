@@ -1,5 +1,7 @@
 package treesitter_test
 
+import _ "embed"
+
 import (
 	"strings"
 	"testing"
@@ -74,15 +76,7 @@ func TestQueryCapturesWithinByteRangeAssignedAfterIterating(t *testing.T) {
 			body: _ @fallible_fn_body)
 		 (#eq? @result "Result"))
 	`)
-	source := `
-        mod m1 {
-            mod m2 {
-                fn f1() -> Option<()> { Some(()) }
-            }
-            fn f2() -> Result<()> { Ok(()) }
-            fn f3() {}
-        }
-        `
+	source := testQueryCapturesWithinByteRangeAssignedAfterIteratingRs
 	tree := parseSource(t, language, source)
 	cursor := ts.NewQueryCursor()
 
@@ -120,21 +114,7 @@ func TestQueryMatchesWithinRangeOfLongRepetition(t *testing.T) {
 	query := mustQuery(t, language, `
 		(function_item name: (identifier) @fn-name)
 	`)
-	source := unindent(`
-		fn zero() {}
-		fn one() {}
-		fn two() {}
-		fn three() {}
-		fn four() {}
-		fn five() {}
-		fn six() {}
-		fn seven() {}
-		fn eight() {}
-		fn nine() {}
-		fn ten() {}
-		fn eleven() {}
-		fn twelve() {}
-	`)
+	source := unindent(testQueryMatchesWithinRangeOfLongRepetitionRs)
 	tree := parseSource(t, language, source)
 	cursor := ts.NewQueryCursor()
 	cursor.SetPointRange(ts.Point{Row: 8, Column: 0}, ts.Point{Row: 20, Column: 0})
@@ -416,7 +396,8 @@ func TestQueryMatchesWithDeeplyNestedPatternsWithFields(t *testing.T) {
 	})
 }
 
-const includeSource = "#include <foo>\n#include <bar>\n#include <baz>\n\n// comment"
+//go:embed testdata/include-source.c
+var includeSource string
 
 // Upstream: test_query_alternation_with_inner_quantifier.
 func TestQueryAlternationWithInnerQuantifier(t *testing.T) {
@@ -505,10 +486,14 @@ func TestQueryMatchesWithAlternationsAndPredicates(t *testing.T) {
 			(#eq? @def.b @ref.b )
 		)
 	`)
-	assertQueryMatches(t, language, query, `
-		function test() {
-			let a = "foo";
-			f(null, b);
-		}
-	`, []matchResult{})
+	assertQueryMatches(t, language, query, testQueryMatchesWithAlternationsAndPredicatesJs, []matchResult{})
 }
+
+//go:embed testdata/test-query-captures-within-byte-range-assigned-after-iterating.rs
+var testQueryCapturesWithinByteRangeAssignedAfterIteratingRs string
+
+//go:embed testdata/test-query-matches-within-range-of-long-repetition.rs
+var testQueryMatchesWithinRangeOfLongRepetitionRs string
+
+//go:embed testdata/test-query-matches-with-alternations-and-predicates.js
+var testQueryMatchesWithAlternationsAndPredicatesJs string

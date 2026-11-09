@@ -1,5 +1,7 @@
 package treesitter_test
 
+import _ "embed"
+
 import (
 	"fmt"
 	"strings"
@@ -58,16 +60,7 @@ func TestQueryCapturesBasic(t *testing.T) {
 		":" @delimiter
 		"=" @operator
 	`)
-	source := `
-          a({
-            bc: function de() {
-              const fg = function hi() {}
-            },
-            jk: function lm() {
-              const no = function pq() {}
-            },
-          });
-        `
+	source := testQueryCapturesBasicJs
 	tree := parseSource(t, language, source)
 	cursor := ts.NewQueryCursor()
 
@@ -496,3 +489,6 @@ func TestQueryCapturesWithMatchesRemovedBeforeTheyFinish(t *testing.T) {
 	require.Equal(t, []string{"*"},
 		capturedTextsRemovingOn(cursor, query, tree, source, "as"))
 }
+
+//go:embed testdata/test-query-captures-basic.js
+var testQueryCapturesBasicJs string
