@@ -43,7 +43,7 @@ func main() {
 }
 ```
 
-`Node` also carries `NamedChild`, `Parent`, `NextSibling`, `ChildByFieldName`, and byte and point ranges. `Tree.Walk` returns a cursor for a full traversal.
+`Tree.Walk` returns a cursor for a full traversal.
 
 ## Status
 
