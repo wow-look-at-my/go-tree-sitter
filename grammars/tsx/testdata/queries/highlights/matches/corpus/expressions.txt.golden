@@ -1,0 +1,94 @@
+corpus/expressions.txt/000
+  pattern: 2
+    capture: 0 - type, start: (2, 0), end: (2, 1), text: `T`
+  pattern: 0
+    capture: 0 - type, start: (2, 16), end: (2, 17), text: `T`
+  pattern: 0
+    capture: 0 - type, start: (2, 20), end: (2, 21), text: `T`
+  pattern: 2
+    capture: 0 - type, start: (3, 0), end: (3, 1), text: `T`
+  pattern: 0
+    capture: 0 - type, start: (3, 16), end: (3, 17), text: `T`
+  pattern: 0
+    capture: 0 - type, start: (3, 20), end: (3, 21), text: `T`
+  pattern: 0
+    capture: 0 - type, start: (3, 32), end: (3, 33), text: `G`
+  pattern: 0
+    capture: 0 - type, start: (3, 36), end: (3, 37), text: `G`
+corpus/expressions.txt/001
+  pattern: 6
+    capture: 4 - keyword, start: (1, 2), end: (1, 11), text: `satisfies`
+  pattern: 2
+    capture: 0 - type, start: (2, 0), end: (2, 1), text: `T`
+  pattern: 6
+    capture: 4 - keyword, start: (2, 2), end: (2, 11), text: `satisfies`
+  pattern: 0
+    capture: 0 - type, start: (2, 23), end: (2, 24), text: `T`
+  pattern: 0
+    capture: 0 - type, start: (2, 27), end: (2, 28), text: `T`
+  pattern: 2
+    capture: 0 - type, start: (3, 0), end: (3, 1), text: `T`
+  pattern: 6
+    capture: 4 - keyword, start: (3, 2), end: (3, 11), text: `satisfies`
+  pattern: 0
+    capture: 0 - type, start: (3, 23), end: (3, 24), text: `T`
+  pattern: 0
+    capture: 0 - type, start: (3, 27), end: (3, 28), text: `T`
+  pattern: 0
+    capture: 0 - type, start: (3, 39), end: (3, 40), text: `G`
+  pattern: 0
+    capture: 0 - type, start: (3, 43), end: (3, 44), text: `G`
+corpus/expressions.txt/002
+corpus/expressions.txt/003
+corpus/expressions.txt/004
+corpus/expressions.txt/005
+corpus/expressions.txt/006
+corpus/expressions.txt/007
+corpus/expressions.txt/008
+corpus/expressions.txt/009
+corpus/expressions.txt/010
+  pattern: 0
+    capture: 0 - type, start: (1, 2), end: (1, 3), text: `T`
+  pattern: 3
+    capture: 2 - punctuation.bracket, start: (1, 1), end: (1, 2), text: `<`
+    capture: 2 - punctuation.bracket, start: (1, 3), end: (1, 4), text: `>`
+corpus/expressions.txt/011
+  pattern: 0
+    capture: 0 - type, start: (1, 30), end: (1, 36), text: `Hammer`
+  pattern: 3
+    capture: 2 - punctuation.bracket, start: (1, 29), end: (1, 30), text: `<`
+    capture: 2 - punctuation.bracket, start: (1, 36), end: (1, 37), text: `>`
+  pattern: 1
+    capture: 1 - type.builtin, start: (2, 30), end: (2, 36), text: `string`
+  pattern: 3
+    capture: 2 - punctuation.bracket, start: (2, 29), end: (2, 30), text: `<`
+    capture: 2 - punctuation.bracket, start: (2, 36), end: (2, 37), text: `>`
+  pattern: 2
+    capture: 0 - type, start: (3, 6), end: (3, 14), text: `ErrorMap`
+  pattern: 2
+    capture: 0 - type, start: (3, 17), end: (3, 20), text: `Map`
+  pattern: 1
+    capture: 1 - type.builtin, start: (3, 21), end: (3, 27), text: `string`
+  pattern: 0
+    capture: 0 - type, start: (3, 29), end: (3, 34), text: `Error`
+  pattern: 3
+    capture: 2 - punctuation.bracket, start: (3, 20), end: (3, 21), text: `<`
+    capture: 2 - punctuation.bracket, start: (3, 34), end: (3, 35), text: `>`
+corpus/expressions.txt/013
+  pattern: 2
+    capture: 0 - type, start: (1, 1), end: (1, 8), text: `Element`
+  pattern: 0
+    capture: 0 - type, start: (1, 9), end: (1, 10), text: `T`
+  pattern: 3
+    capture: 2 - punctuation.bracket, start: (1, 8), end: (1, 9), text: `<`
+    capture: 2 - punctuation.bracket, start: (1, 10), end: (1, 11), text: `>`
+  pattern: 2
+    capture: 0 - type, start: (1, 16), end: (1, 23), text: `Element`
+  pattern: 2
+    capture: 0 - type, start: (2, 1), end: (2, 8), text: `Element`
+  pattern: 0
+    capture: 0 - type, start: (2, 9), end: (2, 10), text: `T`
+  pattern: 3
+    capture: 2 - punctuation.bracket, start: (2, 8), end: (2, 9), text: `<`
+    capture: 2 - punctuation.bracket, start: (2, 10), end: (2, 11), text: `>`
+corpus/expressions.txt/014

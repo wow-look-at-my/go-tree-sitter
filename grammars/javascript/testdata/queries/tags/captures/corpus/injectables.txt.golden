@@ -1,0 +1,7 @@
+corpus/injectables.txt/000
+    pattern:  2, capture: 0 - doc, start: (1, 0), end: (3, 3), text: `/*
+ * @return {void}
+ */`
+    pattern:  2, capture: 4 - definition.function, start: (4, 0), end: (4, 17), text: `function foo() {}`
+    pattern:  2, capture: 1 - name, start: (4, 9), end: (4, 12), text: `foo`
+corpus/injectables.txt/001

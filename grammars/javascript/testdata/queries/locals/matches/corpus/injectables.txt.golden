@@ -1,0 +1,16 @@
+corpus/injectables.txt/000
+  pattern: 0
+    capture: 0 - local.scope, start: (4, 0), end: (4, 17), text: `function foo() {}`
+  pattern: 3
+    capture: 2 - local.reference, start: (4, 9), end: (4, 12), text: `foo`
+  pattern: 0
+    capture: 0 - local.scope, start: (4, 15), end: (4, 17), text: `{}`
+corpus/injectables.txt/001
+  pattern: 2
+    capture: 1 - local.definition, start: (1, 6), end: (1, 9), text: `foo`
+  pattern: 3
+    capture: 2 - local.reference, start: (1, 6), end: (1, 9), text: `foo`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 1), end: (3, 4), text: `div`
+  pattern: 3
+    capture: 2 - local.reference, start: (3, 14), end: (3, 17), text: `div`

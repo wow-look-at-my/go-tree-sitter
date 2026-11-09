@@ -1,0 +1,95 @@
+corpus/types.txt/000
+corpus/types.txt/001
+corpus/types.txt/002
+corpus/types.txt/003
+  pattern: 0
+    capture: 0 - local.definition, start: (2, 3), end: (2, 9), text: `string`
+corpus/types.txt/004
+corpus/types.txt/005
+  pattern: 0
+    capture: 0 - local.definition, start: (3, 3), end: (3, 9), text: `string`
+corpus/types.txt/006
+corpus/types.txt/007
+corpus/types.txt/008
+  pattern: 0
+    capture: 0 - local.definition, start: (1, 8), end: (1, 14), text: `result`
+  pattern: 1
+    capture: 0 - local.definition, start: (2, 28), end: (2, 32), text: `size`
+corpus/types.txt/009
+corpus/types.txt/010
+  pattern: 0
+    capture: 0 - local.definition, start: (1, 24), end: (1, 26), text: `p1`
+  pattern: 0
+    capture: 0 - local.definition, start: (1, 28), end: (1, 30), text: `p2`
+corpus/types.txt/011
+corpus/types.txt/012
+corpus/types.txt/013
+corpus/types.txt/014
+corpus/types.txt/015
+corpus/types.txt/016
+corpus/types.txt/017
+corpus/types.txt/018
+corpus/types.txt/019
+  pattern: 0
+    capture: 0 - local.definition, start: (18, 6), end: (18, 9), text: `key`
+corpus/types.txt/020
+corpus/types.txt/021
+corpus/types.txt/022
+corpus/types.txt/023
+corpus/types.txt/024
+corpus/types.txt/025
+corpus/types.txt/026
+corpus/types.txt/027
+corpus/types.txt/028
+  pattern: 0
+    capture: 0 - local.definition, start: (1, 12), end: (1, 18), text: `string`
+  pattern: 0
+    capture: 0 - local.definition, start: (1, 28), end: (1, 33), text: `query`
+corpus/types.txt/029
+corpus/types.txt/030
+corpus/types.txt/031
+corpus/types.txt/032
+corpus/types.txt/033
+  pattern: 0
+    capture: 0 - local.definition, start: (1, 11), end: (1, 12), text: `x`
+corpus/types.txt/034
+  pattern: 0
+    capture: 0 - local.definition, start: (1, 11), end: (1, 12), text: `x`
+  pattern: 0
+    capture: 0 - local.definition, start: (8, 13), end: (8, 14), text: `t`
+corpus/types.txt/035
+  pattern: 0
+    capture: 0 - local.definition, start: (1, 18), end: (1, 19), text: `x`
+  pattern: 0
+    capture: 0 - local.definition, start: (2, 18), end: (2, 19), text: `x`
+corpus/types.txt/036
+  pattern: 0
+    capture: 0 - local.definition, start: (1, 16), end: (1, 19), text: `pet`
+  pattern: 0
+    capture: 0 - local.definition, start: (4, 16), end: (4, 22), text: `object`
+corpus/types.txt/037
+corpus/types.txt/038
+  pattern: 0
+    capture: 0 - local.definition, start: (10, 10), end: (10, 11), text: `a`
+  pattern: 1
+    capture: 0 - local.definition, start: (10, 16), end: (10, 17), text: `b`
+corpus/types.txt/039
+  pattern: 0
+    capture: 0 - local.definition, start: (3, 20), end: (3, 21), text: `t`
+  pattern: 0
+    capture: 0 - local.definition, start: (3, 60), end: (3, 61), text: `t`
+  pattern: 0
+    capture: 0 - local.definition, start: (4, 19), end: (4, 20), text: `t`
+  pattern: 0
+    capture: 0 - local.definition, start: (4, 57), end: (4, 58), text: `t`
+corpus/types.txt/040
+corpus/types.txt/041
+corpus/types.txt/042
+corpus/types.txt/043
+corpus/types.txt/044
+corpus/types.txt/045
+corpus/types.txt/046
+corpus/types.txt/047
+corpus/types.txt/048
+corpus/types.txt/049
+corpus/types.txt/050

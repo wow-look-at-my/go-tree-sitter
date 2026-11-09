@@ -1,0 +1,5 @@
+corpus/injectables.txt/000
+    pattern:  2, capture: 1 - injection.content, start: (1, 0), end: (3, 3), text: `/*
+ * @return {void}
+ */`
+corpus/injectables.txt/001

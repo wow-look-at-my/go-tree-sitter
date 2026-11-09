@@ -482,20 +482,22 @@ func NewQuery(language *Language, source string) (*Query, error) {
 // an error type and offset: a row. A column, and a message that quotes the
 // offending name or points at the offending line.
 func newQueryError(source string, kind QueryErrorKind, offset int) *QueryError {
+	// The lines come as Rust's str::lines yields them: split at `\n`.
+	lines := strings.Split(source, "\n")
+	if lines[len(lines)-1] == "" {
+		lines = lines[:len(lines)-1]
+	}
 	lineStart := 0
 	row := 0
 	lineContainingError := ""
 	hasLine := false
-	for _, line := range strings.SplitAfter(source, "\n") {
-		if line == "" {
-			continue
+	for i, line := range lines {
+		if i < len(lines)-1 || strings.HasSuffix(source, "\n") {
+			line = strings.TrimSuffix(line, "\r")
 		}
-		lineEnd := lineStart + len(line)
-		if !strings.HasSuffix(line, "\n") {
-			lineEnd++
-		}
+		lineEnd := lineStart + len(line) + 1
 		if lineEnd > offset {
-			lineContainingError = strings.TrimSuffix(line, "\n")
+			lineContainingError = line
 			hasLine = true
 			break
 		}

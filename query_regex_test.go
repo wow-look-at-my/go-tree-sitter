@@ -124,5 +124,5 @@ func TestRegexSyntaxDivergencesAreRecorded(t *testing.T) {
 	// Go reads `\b{start}` as a word boundary and then the literal text `{start}`.
 	re = regexp.MustCompile(`\b{start}a`)
 	require.False(t, re.MatchString("a"))
-	require.True(t, re.MatchString("{start}a"))
+	require.True(t, re.MatchString("x{start}a"))
 }

@@ -1,0 +1,62 @@
+corpus/semicolon_insertion.txt/000
+  pattern: 7
+    capture: 5 - reference.call, start: (3, 2), end: (3, 5), text: `d()`
+    capture: 1 - name, start: (3, 2), end: (3, 3), text: `d`
+  pattern: 7
+    capture: 5 - reference.call, start: (4, 2), end: (4, 5), text: `e()`
+    capture: 1 - name, start: (4, 2), end: (4, 3), text: `e`
+corpus/semicolon_insertion.txt/001
+  pattern: 7
+    capture: 5 - reference.call, start: (2, 2), end: (2, 5), text: `d()`
+    capture: 1 - name, start: (2, 2), end: (2, 3), text: `d`
+  pattern: 7
+    capture: 5 - reference.call, start: (6, 2), end: (6, 5), text: `d()`
+    capture: 1 - name, start: (6, 2), end: (6, 3), text: `d`
+corpus/semicolon_insertion.txt/002
+corpus/semicolon_insertion.txt/003
+  pattern: 2
+    capture: 4 - definition.function, start: (1, 2), end: (1, 17), text: `function x() {}`
+    capture: 1 - name, start: (1, 11), end: (1, 12), text: `x`
+corpus/semicolon_insertion.txt/004
+corpus/semicolon_insertion.txt/005
+corpus/semicolon_insertion.txt/006
+corpus/semicolon_insertion.txt/007
+  pattern: 2
+    capture: 4 - definition.function, start: (1, 0), end: (1, 16), text: `function a() {b}`
+    capture: 1 - name, start: (1, 9), end: (1, 10), text: `a`
+  pattern: 2
+    capture: 4 - definition.function, start: (2, 0), end: (2, 23), text: `function c() {return d}`
+    capture: 1 - name, start: (2, 9), end: (2, 10), text: `c`
+corpus/semicolon_insertion.txt/008
+  pattern: 9
+    capture: 6 - reference.class, start: (1, 8), end: (1, 15), text: `new A()`
+    capture: 1 - name, start: (1, 12), end: (1, 13), text: `A`
+  pattern: 8
+    capture: 1 - name, start: (2, 3), end: (2, 4), text: `b`
+    capture: 5 - reference.call, start: (2, 4), end: (2, 14), text: `({c: 'd'})`
+  pattern: 8
+    capture: 1 - name, start: (3, 3), end: (3, 4), text: `e`
+    capture: 5 - reference.call, start: (3, 4), end: (3, 6), text: `()`
+corpus/semicolon_insertion.txt/009
+corpus/semicolon_insertion.txt/010
+  pattern: 2
+    capture: 4 - definition.function, start: (1, 0), end: (1, 70), text: `function a () { function b () {} function *c () {} class D {} return }`
+    capture: 1 - name, start: (1, 9), end: (1, 10), text: `a`
+  pattern: 2
+    capture: 4 - definition.function, start: (1, 16), end: (1, 32), text: `function b () {}`
+    capture: 1 - name, start: (1, 25), end: (1, 26), text: `b`
+  pattern: 2
+    capture: 4 - definition.function, start: (1, 33), end: (1, 50), text: `function *c () {}`
+    capture: 1 - name, start: (1, 43), end: (1, 44), text: `c`
+  pattern: 1
+    capture: 3 - definition.class, start: (1, 51), end: (1, 61), text: `class D {}`
+    capture: 1 - name, start: (1, 57), end: (1, 58), text: `D`
+corpus/semicolon_insertion.txt/011
+  pattern: 1
+    capture: 0 - doc, start: (12, 0), end: (12, 18), text: `/* back to back */`
+    capture: 0 - doc, start: (12, 18), end: (12, 32), text: `/* comments */`
+    capture: definition.class, start: (14, 0), end: (16, 1)
+    capture: 1 - name, start: (14, 6), end: (14, 7), text: `C`
+  pattern: 0
+    capture: 2 - definition.method, start: (15, 2), end: (15, 24), text: `method/*comment*/() {}`
+    capture: 1 - name, start: (15, 2), end: (15, 8), text: `method`

@@ -1,0 +1,11 @@
+corpus/destructuring.txt/000
+corpus/destructuring.txt/001
+    pattern:  0, capture: 0 - variable.parameter, start: (1, 13), end: (1, 14), text: `b`
+    pattern:  0, capture: 0 - variable.parameter, start: (1, 16), end: (1, 17), text: `c`
+    pattern:  0, capture: 0 - variable.parameter, start: (1, 21), end: (1, 22), text: `d`
+corpus/destructuring.txt/002
+corpus/destructuring.txt/003
+    pattern:  0, capture: 0 - variable.parameter, start: (3, 24), end: (3, 25), text: `c`
+corpus/destructuring.txt/004
+    pattern:  0, capture: 0 - variable.parameter, start: (2, 15), end: (2, 16), text: `a`
+    pattern:  0, capture: 0 - variable.parameter, start: (2, 34), end: (2, 35), text: `c`

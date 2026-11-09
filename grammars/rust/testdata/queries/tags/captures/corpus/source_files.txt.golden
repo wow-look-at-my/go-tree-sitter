@@ -1,0 +1,16 @@
+corpus/source_files.txt/000
+corpus/source_files.txt/001
+corpus/source_files.txt/002
+corpus/source_files.txt/003
+corpus/source_files.txt/004
+corpus/source_files.txt/005
+corpus/source_files.txt/006
+corpus/source_files.txt/007
+corpus/source_files.txt/008
+corpus/source_files.txt/009
+corpus/source_files.txt/010
+    pattern:  5, capture: 3 - definition.function, start: (2, 0), end: (2, 12), text: `fn main() {}`
+    pattern:  5, capture: 0 - name, start: (2, 3), end: (2, 7), text: `main`
+corpus/source_files.txt/011
+    pattern:  5, capture: 3 - definition.function, start: (2, 0), end: (2, 12), text: `fn main() {}`
+    pattern:  5, capture: 0 - name, start: (2, 3), end: (2, 7), text: `main`

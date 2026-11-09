@@ -1,0 +1,38 @@
+corpus/statements.txt/000
+corpus/statements.txt/001
+corpus/statements.txt/002
+  pattern: 0
+    capture: 0 - variable.parameter, start: (13, 18), end: (13, 19), text: `m`
+corpus/statements.txt/003
+corpus/statements.txt/004
+corpus/statements.txt/005
+corpus/statements.txt/006
+corpus/statements.txt/007
+corpus/statements.txt/008
+corpus/statements.txt/009
+corpus/statements.txt/010
+corpus/statements.txt/011
+corpus/statements.txt/012
+corpus/statements.txt/013
+corpus/statements.txt/014
+corpus/statements.txt/015
+corpus/statements.txt/016
+corpus/statements.txt/017
+corpus/statements.txt/018
+corpus/statements.txt/019
+corpus/statements.txt/020
+  pattern: 0
+    capture: 0 - variable.parameter, start: (7, 16), end: (7, 17), text: `x`
+corpus/statements.txt/021
+corpus/statements.txt/022
+corpus/statements.txt/023
+corpus/statements.txt/024
+corpus/statements.txt/025
+corpus/statements.txt/026
+corpus/statements.txt/027
+corpus/statements.txt/028
+corpus/statements.txt/029
+corpus/statements.txt/030
+corpus/statements.txt/031
+corpus/statements.txt/032
+corpus/statements.txt/033

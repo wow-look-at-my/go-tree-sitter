@@ -1,0 +1,17 @@
+corpus/literals.txt/000
+corpus/literals.txt/001
+    pattern:  2, capture: 1 - local.definition, start: (1, 6), end: (1, 16), text: `últimaVez`
+    pattern:  3, capture: 2 - local.reference, start: (1, 6), end: (1, 16), text: `últimaVez`
+corpus/literals.txt/002
+corpus/literals.txt/003
+corpus/literals.txt/004
+corpus/literals.txt/005
+    pattern:  3, capture: 2 - local.reference, start: (1, 1), end: (1, 8), text: `Element`
+    pattern:  3, capture: 2 - local.reference, start: (2, 29), end: (2, 36), text: `Element`
+    pattern:  3, capture: 2 - local.reference, start: (4, 1), end: (4, 8), text: `Element`
+    pattern:  3, capture: 2 - local.reference, start: (5, 29), end: (5, 36), text: `Element`
+corpus/literals.txt/006
+    pattern:  3, capture: 2 - local.reference, start: (1, 1), end: (1, 2), text: `a`
+    pattern:  3, capture: 2 - local.reference, start: (1, 19), end: (1, 20), text: `a`
+    pattern:  3, capture: 2 - local.reference, start: (3, 1), end: (3, 5), text: `abbr`
+    pattern:  3, capture: 2 - local.reference, start: (3, 37), end: (3, 41), text: `abbr`

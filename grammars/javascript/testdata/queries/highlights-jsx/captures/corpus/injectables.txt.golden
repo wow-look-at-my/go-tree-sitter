@@ -1,0 +1,8 @@
+corpus/injectables.txt/000
+corpus/injectables.txt/001
+    pattern:  4, capture: 2 - punctuation.bracket, start: (3, 0), end: (3, 1), text: `<`
+    pattern:  0, capture: 0 - tag, start: (3, 1), end: (3, 4), text: `div`
+    pattern:  4, capture: 2 - punctuation.bracket, start: (3, 4), end: (3, 5), text: `>`
+    pattern:  5, capture: 2 - punctuation.bracket, start: (3, 12), end: (3, 14), text: `</`
+    pattern:  1, capture: 0 - tag, start: (3, 14), end: (3, 17), text: `div`
+    pattern:  5, capture: 2 - punctuation.bracket, start: (3, 17), end: (3, 18), text: `>`
