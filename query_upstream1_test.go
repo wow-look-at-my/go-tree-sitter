@@ -1,5 +1,7 @@
 package treesitter_test
 
+import _ "embed"
+
 import (
 	"strings"
 	"testing"
@@ -417,11 +419,7 @@ func TestQueryMatchesWithMultiplePatternsDifferentRoots(t *testing.T) {
                 (call_expression function:(identifier) @fn-ref)
             `)
 
-	assertQueryMatches(t, language, query, `
-            function f1() {
-                f2(f3());
-            }
-            `,
+	assertQueryMatches(t, language, query, testQueryMatchesWithMultiplePatternsDifferentRootsCpp,
 		[]matchResult{
 			m(0, "fn-def", "f1"),
 			m(1, "fn-ref", "f2"),
@@ -558,18 +556,7 @@ func TestQueryMatchesCapturingMissingNodes(t *testing.T) {
             (MISSING identifier) @missing-ident
             (MISSING) @missing-anything`)
 
-	assertQueryMatches(t, language, query, `
-            int main() {
-              if (a.) {
-              //    ^ MISSING field_identifier here
-                b();
-                c();
-
-                if (*) d();
-                //   ^ MISSING identifier here
-              }
-            }
-            `,
+	assertQueryMatches(t, language, query, testQueryMatchesCapturingMissingNodesCpp,
 		[]matchResult{
 			m(0, "missing-field-ident", ""),
 			m(2, "missing-anything", ""),
@@ -602,3 +589,9 @@ func TestQueryMatchesWithExtraChildren(t *testing.T) {
 			m(1, "comment_in_args", "// not-top-level"),
 		})
 }
+
+//go:embed testdata/test-query-matches-with-multiple-patterns-different-roots.cpp
+var testQueryMatchesWithMultiplePatternsDifferentRootsCpp string
+
+//go:embed testdata/test-query-matches-capturing-missing-nodes.cpp
+var testQueryMatchesCapturingMissingNodesCpp string

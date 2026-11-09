@@ -1,5 +1,7 @@
 package treesitter_test
 
+import _ "embed"
+
 import (
 	"strings"
 	"testing"
@@ -187,11 +189,11 @@ func TestQueryMatchesWithAnchorsOnBothSidesOfZeroQuantifier(t *testing.T) {
 		"(program (lexical_declaration) @a . (comment)* . (function_declaration) @b)")
 
 	assertQueryMatches(t, language, query,
-		"\nconst a = 1;\nconst b = 2;\nfunction foo() {}\n",
+		testQueryMatchesWithAnchorsOnBothSidesOfZeroQuantifierJs,
 		[]matchResult{m(0, "a", "const b = 2;", "b", "function foo() {}")})
 
 	assertQueryMatches(t, language, query,
-		"\nconst b = 2;\n// c\nfunction foo() {}\n",
+		testQueryMatchesWithAnchorsOnBothSidesOfZeroQuantifierJs2,
 		[]matchResult{m(0, "a", "const b = 2;", "b", "function foo() {}")})
 }
 
@@ -261,17 +263,7 @@ func TestQueryMatchesWithNegatedFields(t *testing.T) {
                 (_) @export_child .)
             `)
 
-	assertQueryMatches(t, language, query, `
-            import {a as b, c} from 'p1';
-            export {g, h as i} from 'p2';
-
-            @foo
-            export default 1;
-
-            export var j = 1;
-
-            export default k;
-            `,
+	assertQueryMatches(t, language, query, testQueryMatchesWithNegatedFieldsJs,
 		[]matchResult{
 			m(0, "import_name", "c"),
 			m(1, "export_name", "g"),
@@ -346,12 +338,7 @@ func TestQueryMatchesOptionalCaptureBeforeUncapturedRequiredSibling(t *testing.T
 	language := queryLanguage(t, "rust")
 	query := p1MustQuery(t, language, "(block (line_comment)? @doc (line_comment))")
 
-	assertQueryMatches(t, language, query, `
-            fn f() {
-                // a
-                // b
-            }
-            `,
+	assertQueryMatches(t, language, query, testQueryMatchesOptionalCaptureBeforeUncapturedRequiredSiblingRs,
 		[]matchResult{m(0, "doc", "// a")})
 }
 
@@ -373,15 +360,7 @@ func TestQueryMatchesWithTopLevelRepetitions(t *testing.T) {
             (comment)+ @doc
             `)
 
-	assertQueryMatches(t, language, query, `
-            // a
-            // b
-            // c
-
-            d()
-
-            // e
-            `,
+	assertQueryMatches(t, language, query, testQueryMatchesWithTopLevelRepetitionsSh,
 		[]matchResult{
 			m(0, "doc", "// a", "doc", "// b", "doc", "// c"),
 			m(0, "doc", "// e"),
@@ -393,17 +372,7 @@ func TestQueryMatchesWithNonTerminalRepetitionsWithinRoot(t *testing.T) {
 	language := queryLanguage(t, "javascript")
 	query := p1MustQuery(t, language, "(_ (expression_statement (identifier) @id)+)")
 
-	assertQueryMatches(t, language, query, `
-            function f() {
-                d;
-                e;
-                f;
-                g;
-            }
-            a;
-            b;
-            c;
-            `,
+	assertQueryMatches(t, language, query, testQueryMatchesWithNonTerminalRepetitionsWithinRootCpp,
 		[]matchResult{
 			m(0, "id", "d", "id", "e", "id", "f", "id", "g"),
 			m(0, "id", "a", "id", "b", "id", "c"),
@@ -488,26 +457,7 @@ func TestQueryMatchesWithLeadingZeroOrMoreRepeatedLeafNodes(t *testing.T) {
             )
             `)
 
-	assertQueryMatches(t, language, query, `
-            function a() {
-                // one
-                var b;
-
-                function c() {}
-
-                // two
-                // three
-                var d;
-
-                // four
-                // five
-                function e() {
-
-                }
-            }
-
-            // six
-            `,
+	assertQueryMatches(t, language, query, testQueryMatchesWithLeadingZeroOrMoreRepeatedLeafNodesJs,
 		[]matchResult{
 			m(0, "name", "a"),
 			m(0, "name", "c"),
@@ -526,13 +476,7 @@ func TestMatchesWithAnchorSiblingInsideParent(t *testing.T) {
                     name: (identifier) @name)
             )`)
 
-	assertQueryMatches(t, language, query, `
-            // A
-            fn a() {}
-
-            // B
-            fn b() {}
-            `,
+	assertQueryMatches(t, language, query, testMatchesWithAnchorSiblingInsideParentRs,
 		[]matchResult{m(0, "name", "a"), m(0, "name", "b")})
 }
 
@@ -547,13 +491,7 @@ func TestMatchesWithAnchorSiblingWithQuantifierInsideParent(t *testing.T) {
                     name: (identifier) @name)
             )`)
 
-	assertQueryMatches(t, language, query, `
-            // A
-            fn a() {}
-
-            // B
-            fn b() {}
-            `,
+	assertQueryMatches(t, language, query, testMatchesWithAnchorSiblingWithQuantifierInsideParentRs,
 		[]matchResult{m(0, "name", "a"), m(0, "name", "b")})
 }
 
@@ -568,13 +506,7 @@ func TestMatchesWithAnchorSiblingWithQuantifierCapturedInsideParent(t *testing.T
                     name: (identifier) @name)
             )`)
 
-	assertQueryMatches(t, language, query, `
-            // A
-            fn a() {}
-
-            // B
-            fn b() {}
-            `,
+	assertQueryMatches(t, language, query, testMatchesWithAnchorSiblingWithQuantifierCapturedInsideParentRs,
 		[]matchResult{
 			m(0, "doc", "// A", "name", "a"),
 			m(0, "doc", "// B", "name", "b"),
@@ -676,3 +608,33 @@ func TestQueryMatchesWithRepeatedInternalNodes(t *testing.T) {
             `,
 		[]matchResult{m(0, "deco", "c", "deco", "d", "name", "e")})
 }
+
+//go:embed testdata/test-query-matches-with-anchors-on-both-sides-of-zero-quantifier.js
+var testQueryMatchesWithAnchorsOnBothSidesOfZeroQuantifierJs string
+
+//go:embed testdata/test-query-matches-with-anchors-on-both-sides-of-zero-quantifier-2.js
+var testQueryMatchesWithAnchorsOnBothSidesOfZeroQuantifierJs2 string
+
+//go:embed testdata/test-query-matches-with-negated-fields.js
+var testQueryMatchesWithNegatedFieldsJs string
+
+//go:embed testdata/test-query-matches-optional-capture-before-uncaptured-required-sibling.rs
+var testQueryMatchesOptionalCaptureBeforeUncapturedRequiredSiblingRs string
+
+//go:embed testdata/test-query-matches-with-top-level-repetitions.sh
+var testQueryMatchesWithTopLevelRepetitionsSh string
+
+//go:embed testdata/test-query-matches-with-non-terminal-repetitions-within-root.cpp
+var testQueryMatchesWithNonTerminalRepetitionsWithinRootCpp string
+
+//go:embed testdata/test-query-matches-with-leading-zero-or-more-repeated-leaf-nodes.js
+var testQueryMatchesWithLeadingZeroOrMoreRepeatedLeafNodesJs string
+
+//go:embed testdata/test-matches-with-anchor-sibling-inside-parent.rs
+var testMatchesWithAnchorSiblingInsideParentRs string
+
+//go:embed testdata/test-matches-with-anchor-sibling-with-quantifier-inside-parent.rs
+var testMatchesWithAnchorSiblingWithQuantifierInsideParentRs string
+
+//go:embed testdata/test-matches-with-anchor-sibling-with-quantifier-captured-inside-parent.rs
+var testMatchesWithAnchorSiblingWithQuantifierCapturedInsideParentRs string
