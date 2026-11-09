@@ -1,0 +1,95 @@
+corpus/types.txt/000
+  pattern: 3
+    capture: 1 - definition.class, start: (1, 0), end: (1, 12), text: `type A = ();`
+    capture: 0 - name, start: (1, 5), end: (1, 6), text: `A`
+corpus/types.txt/001
+  pattern: 3
+    capture: 1 - definition.class, start: (1, 0), end: (1, 23), text: `type A = (i32, String);`
+    capture: 0 - name, start: (1, 5), end: (1, 6), text: `A`
+corpus/types.txt/002
+  pattern: 3
+    capture: 1 - definition.class, start: (1, 0), end: (1, 12), text: `type A = &B;`
+    capture: 0 - name, start: (1, 5), end: (1, 6), text: `A`
+  pattern: 3
+    capture: 1 - definition.class, start: (2, 0), end: (2, 17), text: `type C = &'a str;`
+    capture: 0 - name, start: (2, 5), end: (2, 6), text: `C`
+  pattern: 3
+    capture: 1 - definition.class, start: (3, 0), end: (3, 21), text: `type D = &'a mut str;`
+    capture: 0 - name, start: (3, 5), end: (3, 6), text: `D`
+corpus/types.txt/003
+  pattern: 3
+    capture: 1 - definition.class, start: (1, 0), end: (1, 16), text: `type A = *mut B;`
+    capture: 0 - name, start: (1, 5), end: (1, 6), text: `A`
+  pattern: 3
+    capture: 1 - definition.class, start: (2, 0), end: (2, 20), text: `type C = *const str;`
+    capture: 0 - name, start: (2, 5), end: (2, 6), text: `C`
+corpus/types.txt/004
+  pattern: 3
+    capture: 1 - definition.class, start: (1, 0), end: (1, 14), text: `type A = B<C>;`
+    capture: 0 - name, start: (1, 5), end: (1, 6), text: `A`
+  pattern: 3
+    capture: 1 - definition.class, start: (2, 0), end: (2, 19), text: `type D = E<F, str>;`
+    capture: 0 - name, start: (2, 5), end: (2, 6), text: `D`
+  pattern: 3
+    capture: 1 - definition.class, start: (3, 0), end: (3, 18), text: `type G = H<'a, I>;`
+    capture: 0 - name, start: (3, 5), end: (3, 6), text: `G`
+  pattern: 3
+    capture: 1 - definition.class, start: (4, 0), end: (4, 16), text: `type J = H<K=L>;`
+    capture: 0 - name, start: (4, 5), end: (4, 6), text: `J`
+corpus/types.txt/005
+  pattern: 3
+    capture: 1 - definition.class, start: (1, 0), end: (1, 14), text: `type A = B::C;`
+    capture: 0 - name, start: (1, 5), end: (1, 6), text: `A`
+  pattern: 3
+    capture: 1 - definition.class, start: (2, 0), end: (2, 17), text: `type D = E::F::G;`
+    capture: 0 - name, start: (2, 5), end: (2, 6), text: `D`
+  pattern: 3
+    capture: 1 - definition.class, start: (3, 0), end: (3, 17), text: `type H = I::J<K>;`
+    capture: 0 - name, start: (3, 5), end: (3, 6), text: `H`
+  pattern: 3
+    capture: 1 - definition.class, start: (4, 0), end: (4, 17), text: `type L = M<N>::O;`
+    capture: 0 - name, start: (4, 5), end: (4, 6), text: `L`
+corpus/types.txt/006
+  pattern: 3
+    capture: 1 - definition.class, start: (1, 0), end: (1, 16), text: `type A = [B; 4];`
+    capture: 0 - name, start: (1, 5), end: (1, 6), text: `A`
+  pattern: 3
+    capture: 1 - definition.class, start: (2, 0), end: (2, 14), text: `type C = &[D];`
+    capture: 0 - name, start: (2, 5), end: (2, 6), text: `C`
+corpus/types.txt/007
+  pattern: 5
+    capture: 3 - definition.function, start: (1, 0), end: (1, 48), text: `fn high_order1(value: i32, f: fn(i32)) -> i32 {}`
+    capture: 0 - name, start: (1, 3), end: (1, 14), text: `high_order1`
+  pattern: 5
+    capture: definition.function, start: (3, 0), end: (5, 1)
+    capture: 0 - name, start: (3, 3), end: (3, 14), text: `high_order2`
+  pattern: 9
+    capture: 7 - reference.call, start: (4, 4), end: (4, 12), text: `f(value)`
+    capture: 0 - name, start: (4, 4), end: (4, 5), text: `f`
+  pattern: 5
+    capture: definition.function, start: (7, 0), end: (9, 1)
+    capture: 0 - name, start: (7, 3), end: (7, 14), text: `high_order3`
+  pattern: 9
+    capture: 7 - reference.call, start: (8, 4), end: (8, 12), text: `f(value)`
+    capture: 0 - name, start: (8, 4), end: (8, 5), text: `f`
+  pattern: 3
+    capture: 1 - definition.class, start: (11, 0), end: (11, 62), text: `type F = for<'a, 'b> fn(x: &'a A, y: &'a mut B<'i, 't>,) -> C;`
+    capture: 0 - name, start: (11, 5), end: (11, 6), text: `F`
+corpus/types.txt/008
+  pattern: 3
+    capture: 1 - definition.class, start: (1, 0), end: (1, 36), text: `type a = extern "C" fn(*mut c_void);`
+    capture: 0 - name, start: (1, 5), end: (1, 6), text: `a`
+  pattern: 3
+    capture: 1 - definition.class, start: (2, 0), end: (2, 47), text: `type b = unsafe extern "C" fn() -> *mut c_void;`
+    capture: 0 - name, start: (2, 5), end: (2, 6), text: `b`
+corpus/types.txt/009
+  pattern: 3
+    capture: 1 - definition.class, start: (1, 0), end: (1, 29), text: `type a = Box<Something + 'a>;`
+    capture: 0 - name, start: (1, 5), end: (1, 6), text: `a`
+  pattern: 3
+    capture: 1 - definition.class, start: (2, 0), end: (2, 27), text: `type b = Rc<dyn Something>;`
+    capture: 0 - name, start: (2, 5), end: (2, 6), text: `b`
+  pattern: 3
+    capture: 1 - definition.class, start: (3, 0), end: (3, 29), text: `type c = A<&dyn Fn(&B) -> C>;`
+    capture: 0 - name, start: (3, 5), end: (3, 6), text: `c`
+corpus/types.txt/010

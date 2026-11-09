@@ -1,0 +1,27 @@
+examples/rule.cc
+  pattern: 4
+    capture: 4 - definition.method, start: (10, 0), end: (10, 29), text: `Rule::Rule(const Rule &other)`
+    capture: 3 - local.scope, start: (10, 0), end: (10, 4), text: `Rule`
+    capture: 0 - name, start: (10, 6), end: (10, 10), text: `Rule`
+  pattern: 4
+    capture: 4 - definition.method, start: (14, 0), end: (14, 33), text: `Rule::Rule(Rule &&other) noexcept`
+    capture: 3 - local.scope, start: (14, 0), end: (14, 4), text: `Rule`
+    capture: 0 - name, start: (14, 6), end: (14, 10), text: `Rule`
+  pattern: 2
+    capture: 2 - definition.function, start: (18, 12), end: (18, 37), text: `destroy_value(Rule *rule)`
+    capture: 0 - name, start: (18, 12), end: (18, 25), text: `destroy_value`
+  pattern: 2
+    capture: 2 - definition.function, start: (143, 19), end: (143, 88), text: `add_choice_element(std::vector<Rule> *elements, const Rule &new_rule)`
+    capture: 0 - name, start: (143, 19), end: (143, 37), text: `add_choice_element`
+  pattern: 4
+    capture: 4 - definition.method, start: (160, 5), end: (160, 44), text: `Rule::choice(const vector<Rule> &rules)`
+    capture: 3 - local.scope, start: (160, 5), end: (160, 9), text: `Rule`
+    capture: 0 - name, start: (160, 11), end: (160, 17), text: `choice`
+  pattern: 4
+    capture: 4 - definition.method, start: (168, 5), end: (168, 35), text: `Rule::repeat(const Rule &rule)`
+    capture: 3 - local.scope, start: (168, 5), end: (168, 9), text: `Rule`
+    capture: 0 - name, start: (168, 11), end: (168, 17), text: `repeat`
+  pattern: 4
+    capture: 4 - definition.method, start: (172, 5), end: (172, 41), text: `Rule::seq(const vector<Rule> &rules)`
+    capture: 3 - local.scope, start: (172, 5), end: (172, 9), text: `Rule`
+    capture: 0 - name, start: (172, 11), end: (172, 14), text: `seq`

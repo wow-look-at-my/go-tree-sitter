@@ -1,0 +1,3 @@
+samples/tree-sitter-rust/test/corpus/declarations.txt
+    pattern:  0, capture: 0 - injection.content, start: (70, 12), end: (70, 30), text: `("Got: {}", slice)`
+    pattern:  0, capture: 0 - injection.content, start: (1351, 20), end: (1351, 34), text: `("foo-doc.md")`

@@ -1,0 +1,381 @@
+examples/test.sh
+  pattern: 4
+    capture: 4 - comment, start: (0, 0), end: (0, 19), text: `#!/usr/bin/env bash`
+  pattern: 1
+    capture: 1 - function, start: (2, 0), end: (2, 3), text: `set`
+  pattern: 9
+    capture: 8 - constant, start: (2, 4), end: (2, 6), text: `-e`
+  pattern: 3
+    capture: 3 - keyword, start: (4, 0), end: (4, 8), text: `function`
+  pattern: 5
+    capture: 1 - function, start: (4, 9), end: (4, 14), text: `usage`
+  pattern: 1
+    capture: 1 - function, start: (5, 2), end: (5, 5), text: `cat`
+  pattern: 0
+    capture: 0 - string, start: (5, 9), end: (5, 12), text: `EOF`
+  pattern: 0
+    capture: string, start: (6, 0), end: (31, 0)
+  pattern: 2
+    capture: 2 - property, start: (34, 0), end: (34, 7), text: `profile`
+  pattern: 2
+    capture: 2 - property, start: (35, 0), end: (35, 10), text: `leak_check`
+  pattern: 2
+    capture: 2 - property, start: (36, 0), end: (36, 4), text: `mode`
+  pattern: 2
+    capture: 2 - property, start: (37, 0), end: (37, 7), text: `verbose`
+  pattern: 2
+    capture: 2 - property, start: (38, 0), end: (38, 4), text: `args`
+  pattern: 2
+    capture: 2 - property, start: (39, 0), end: (39, 6), text: `target`
+  pattern: 3
+    capture: 3 - keyword, start: (40, 0), end: (40, 6), text: `export`
+  pattern: 2
+    capture: 2 - property, start: (40, 7), end: (40, 16), text: `BUILDTYPE`
+  pattern: 2
+    capture: 2 - property, start: (41, 0), end: (41, 3), text: `cmd`
+  pattern: 0
+    capture: 0 - string, start: (41, 4), end: (41, 32), text: `"out/${BUILDTYPE}/${target}"`
+  pattern: 7
+    capture: 6 - embedded, start: (41, 9), end: (41, 21), text: `${BUILDTYPE}`
+  pattern: 2
+    capture: 2 - property, start: (41, 11), end: (41, 20), text: `BUILDTYPE`
+  pattern: 7
+    capture: 6 - embedded, start: (41, 22), end: (41, 31), text: `${target}`
+  pattern: 2
+    capture: 2 - property, start: (41, 24), end: (41, 30), text: `target`
+  pattern: 2
+    capture: 2 - property, start: (42, 0), end: (42, 14), text: `run_scan_build`
+  pattern: 3
+    capture: 3 - keyword, start: (44, 0), end: (44, 2), text: `if`
+  pattern: 0
+    capture: 0 - string, start: (44, 5), end: (44, 18), text: `"$(uname -s)"`
+  pattern: 7
+    capture: 6 - embedded, start: (44, 6), end: (44, 17), text: `$(uname -s)`
+  pattern: 1
+    capture: 1 - function, start: (44, 8), end: (44, 13), text: `uname`
+  pattern: 9
+    capture: 8 - constant, start: (44, 14), end: (44, 16), text: `-s`
+  pattern: 0
+    capture: 0 - string, start: (44, 22), end: (44, 30), text: `"Darwin"`
+  pattern: 3
+    capture: 3 - keyword, start: (44, 34), end: (44, 38), text: `then`
+  pattern: 3
+    capture: 3 - keyword, start: (45, 2), end: (45, 8), text: `export`
+  pattern: 2
+    capture: 2 - property, start: (45, 9), end: (45, 13), text: `LINK`
+  pattern: 0
+    capture: 0 - string, start: (45, 14), end: (45, 42), text: `"clang++ -fsanitize=address"`
+  pattern: 3
+    capture: 3 - keyword, start: (46, 0), end: (46, 2), text: `fi`
+  pattern: 3
+    capture: 3 - keyword, start: (48, 0), end: (48, 5), text: `while`
+  pattern: 1
+    capture: 1 - function, start: (48, 6), end: (48, 13), text: `getopts`
+  pattern: 0
+    capture: 0 - string, start: (48, 14), end: (48, 28), text: `"bdf:s:gGhpvS"`
+  pattern: 3
+    capture: 3 - keyword, start: (48, 37), end: (48, 39), text: `do`
+  pattern: 3
+    capture: 3 - keyword, start: (49, 2), end: (49, 6), text: `case`
+  pattern: 7
+    capture: 6 - embedded, start: (49, 7), end: (49, 16), text: `${option}`
+  pattern: 2
+    capture: 2 - property, start: (49, 9), end: (49, 15), text: `option`
+  pattern: 3
+    capture: 3 - keyword, start: (49, 17), end: (49, 19), text: `in`
+  pattern: 1
+    capture: 1 - function, start: (51, 6), end: (51, 11), text: `usage`
+  pattern: 1
+    capture: 1 - function, start: (52, 6), end: (52, 10), text: `exit`
+  pattern: 2
+    capture: 2 - property, start: (55, 6), end: (55, 10), text: `mode`
+  pattern: 2
+    capture: 2 - property, start: (58, 6), end: (58, 10), text: `mode`
+  pattern: 2
+    capture: 2 - property, start: (61, 6), end: (61, 10), text: `mode`
+  pattern: 2
+    capture: 2 - property, start: (62, 6), end: (62, 16), text: `leak_check`
+  pattern: 2
+    capture: 2 - property, start: (65, 6), end: (65, 13), text: `profile`
+  pattern: 2
+    capture: 2 - property, start: (68, 6), end: (68, 10), text: `args`
+  pattern: 0
+    capture: 0 - string, start: (68, 13), end: (68, 31), text: `"--only=${OPTARG}"`
+  pattern: 7
+    capture: 6 - embedded, start: (68, 21), end: (68, 30), text: `${OPTARG}`
+  pattern: 2
+    capture: 2 - property, start: (68, 23), end: (68, 29), text: `OPTARG`
+  pattern: 2
+    capture: 2 - property, start: (71, 6), end: (71, 13), text: `verbose`
+  pattern: 3
+    capture: 3 - keyword, start: (74, 6), end: (74, 12), text: `export`
+  pattern: 2
+    capture: 2 - property, start: (74, 13), end: (74, 29), text: `TREE_SITTER_SEED`
+  pattern: 7
+    capture: 6 - embedded, start: (74, 30), end: (74, 39), text: `${OPTARG}`
+  pattern: 2
+    capture: 2 - property, start: (74, 32), end: (74, 38), text: `OPTARG`
+  pattern: 2
+    capture: 2 - property, start: (77, 6), end: (77, 10), text: `mode`
+  pattern: 2
+    capture: 2 - property, start: (80, 6), end: (80, 20), text: `run_scan_build`
+  pattern: 3
+    capture: 3 - keyword, start: (82, 2), end: (82, 6), text: `esac`
+  pattern: 3
+    capture: 3 - keyword, start: (83, 0), end: (83, 4), text: `done`
+  pattern: 3
+    capture: 3 - keyword, start: (85, 0), end: (85, 2), text: `if`
+  pattern: 8
+    capture: 7 - operator, start: (85, 9), end: (85, 10), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (85, 10), end: (85, 17), text: `verbose`
+  pattern: 3
+    capture: 3 - keyword, start: (85, 22), end: (85, 26), text: `then`
+  pattern: 2
+    capture: 2 - property, start: (86, 2), end: (86, 6), text: `args`
+  pattern: 0
+    capture: 0 - string, start: (86, 9), end: (86, 26), text: `"--reporter=spec"`
+  pattern: 3
+    capture: 3 - keyword, start: (87, 0), end: (87, 4), text: `else`
+  pattern: 2
+    capture: 2 - property, start: (88, 2), end: (88, 6), text: `args`
+  pattern: 0
+    capture: 0 - string, start: (88, 9), end: (88, 32), text: `"--reporter=singleline"`
+  pattern: 3
+    capture: 3 - keyword, start: (89, 0), end: (89, 2), text: `fi`
+  pattern: 3
+    capture: 3 - keyword, start: (91, 0), end: (91, 2), text: `if`
+  pattern: 0
+    capture: 0 - string, start: (91, 9), end: (91, 26), text: `"$run_scan_build"`
+  pattern: 8
+    capture: 7 - operator, start: (91, 10), end: (91, 11), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (91, 11), end: (91, 25), text: `run_scan_build`
+  pattern: 3
+    capture: 3 - keyword, start: (91, 31), end: (91, 35), text: `then`
+  pattern: 1
+    capture: 1 - function, start: (92, 2), end: (92, 3), text: `.`
+  pattern: 1
+    capture: 1 - function, start: (93, 2), end: (93, 12), text: `scan_build`
+  pattern: 9
+    capture: 8 - constant, start: (93, 18), end: (93, 21), text: `-j2`
+  pattern: 8
+    capture: 7 - operator, start: (93, 22), end: (93, 23), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (93, 23), end: (93, 29), text: `target`
+  pattern: 3
+    capture: 3 - keyword, start: (94, 0), end: (94, 4), text: `else`
+  pattern: 1
+    capture: 1 - function, start: (95, 2), end: (95, 6), text: `make`
+  pattern: 9
+    capture: 8 - constant, start: (95, 7), end: (95, 10), text: `-j2`
+  pattern: 8
+    capture: 7 - operator, start: (95, 11), end: (95, 12), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (95, 12), end: (95, 18), text: `target`
+  pattern: 3
+    capture: 3 - keyword, start: (96, 0), end: (96, 2), text: `fi`
+  pattern: 2
+    capture: 2 - property, start: (97, 0), end: (97, 4), text: `args`
+  pattern: 7
+    capture: 6 - embedded, start: (97, 5), end: (97, 16), text: `${args:-""}`
+  pattern: 2
+    capture: 2 - property, start: (97, 7), end: (97, 11), text: `args`
+  pattern: 0
+    capture: 0 - string, start: (97, 13), end: (97, 15), text: `""`
+  pattern: 3
+    capture: 3 - keyword, start: (99, 0), end: (99, 2), text: `if`
+  pattern: 8
+    capture: 7 - operator, start: (99, 9), end: (99, 10), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (99, 10), end: (99, 17), text: `profile`
+  pattern: 3
+    capture: 3 - keyword, start: (99, 22), end: (99, 26), text: `then`
+  pattern: 3
+    capture: 3 - keyword, start: (100, 2), end: (100, 8), text: `export`
+  pattern: 2
+    capture: 2 - property, start: (100, 9), end: (100, 19), text: `CPUPROFILE`
+  pattern: 7
+    capture: 6 - embedded, start: (100, 25), end: (100, 34), text: `${target}`
+  pattern: 2
+    capture: 2 - property, start: (100, 27), end: (100, 33), text: `target`
+  pattern: 7
+    capture: 6 - embedded, start: (100, 35), end: (100, 48), text: `$(date '+%s')`
+  pattern: 1
+    capture: 1 - function, start: (100, 37), end: (100, 41), text: `date`
+  pattern: 0
+    capture: 0 - string, start: (100, 42), end: (100, 47), text: `'+%s'`
+  pattern: 3
+    capture: 3 - keyword, start: (101, 0), end: (101, 2), text: `fi`
+  pattern: 3
+    capture: 3 - keyword, start: (103, 0), end: (103, 4), text: `case`
+  pattern: 7
+    capture: 6 - embedded, start: (103, 5), end: (103, 12), text: `${mode}`
+  pattern: 2
+    capture: 2 - property, start: (103, 7), end: (103, 11), text: `mode`
+  pattern: 3
+    capture: 3 - keyword, start: (103, 13), end: (103, 15), text: `in`
+  pattern: 1
+    capture: 1 - function, start: (105, 4), end: (105, 12), text: `valgrind`
+  pattern: 9
+    capture: 8 - constant, start: (106, 6), end: (106, 48), text: `--suppressions=./script/util/valgrind.supp`
+  pattern: 9
+    capture: 8 - constant, start: (107, 6), end: (107, 20), text: `--dsymutil=yes`
+  pattern: 9
+    capture: 8 - constant, start: (108, 6), end: (108, 32), text: `--leak-check=${leak_check}`
+  pattern: 7
+    capture: 6 - embedded, start: (108, 19), end: (108, 32), text: `${leak_check}`
+  pattern: 2
+    capture: 2 - property, start: (108, 21), end: (108, 31), text: `leak_check`
+  pattern: 8
+    capture: 7 - operator, start: (109, 6), end: (109, 7), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (109, 7), end: (109, 10), text: `cmd`
+  pattern: 0
+    capture: 0 - string, start: (109, 11), end: (109, 23), text: `"${args[@]}"`
+  pattern: 7
+    capture: 6 - embedded, start: (109, 12), end: (109, 22), text: `${args[@]}`
+  pattern: 2
+    capture: 2 - property, start: (109, 14), end: (109, 18), text: `args`
+  pattern: 6
+    capture: 5 - number, start: (109, 24), end: (109, 25), text: `2`
+  pattern: 8
+    capture: 7 - operator, start: (109, 29), end: (109, 30), text: `|`
+  pattern: 1
+    capture: 1 - function, start: (110, 6), end: (110, 10), text: `grep`
+  pattern: 9
+    capture: 8 - constant, start: (110, 11), end: (110, 18), text: `--color`
+  pattern: 9
+    capture: 8 - constant, start: (110, 19), end: (110, 21), text: `-E`
+  pattern: 0
+    capture: 0 - string, start: (110, 22), end: (110, 43), text: `'\w+_tests?.cc:\d+|$'`
+  pattern: 3
+    capture: 3 - keyword, start: (114, 4), end: (114, 6), text: `if`
+  pattern: 1
+    capture: 1 - function, start: (114, 7), end: (114, 12), text: `which`
+  pattern: 9
+    capture: 8 - constant, start: (114, 13), end: (114, 15), text: `-s`
+  pattern: 3
+    capture: 3 - keyword, start: (114, 22), end: (114, 26), text: `then`
+  pattern: 1
+    capture: 1 - function, start: (115, 6), end: (115, 10), text: `lldb`
+  pattern: 8
+    capture: 7 - operator, start: (115, 11), end: (115, 12), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (115, 12), end: (115, 15), text: `cmd`
+  pattern: 9
+    capture: 8 - constant, start: (115, 16), end: (115, 18), text: `--`
+  pattern: 0
+    capture: 0 - string, start: (115, 19), end: (115, 31), text: `"${args[@]}"`
+  pattern: 7
+    capture: 6 - embedded, start: (115, 20), end: (115, 30), text: `${args[@]}`
+  pattern: 2
+    capture: 2 - property, start: (115, 22), end: (115, 26), text: `args`
+  pattern: 3
+    capture: 3 - keyword, start: (116, 4), end: (116, 8), text: `elif`
+  pattern: 1
+    capture: 1 - function, start: (116, 9), end: (116, 14), text: `which`
+  pattern: 9
+    capture: 8 - constant, start: (116, 15), end: (116, 17), text: `-s`
+  pattern: 3
+    capture: 3 - keyword, start: (116, 23), end: (116, 27), text: `then`
+  pattern: 1
+    capture: 1 - function, start: (117, 6), end: (117, 9), text: `gdb`
+  pattern: 8
+    capture: 7 - operator, start: (117, 10), end: (117, 11), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (117, 11), end: (117, 14), text: `cmd`
+  pattern: 9
+    capture: 8 - constant, start: (117, 15), end: (117, 17), text: `--`
+  pattern: 0
+    capture: 0 - string, start: (117, 18), end: (117, 30), text: `"${args[@]}"`
+  pattern: 7
+    capture: 6 - embedded, start: (117, 19), end: (117, 29), text: `${args[@]}`
+  pattern: 2
+    capture: 2 - property, start: (117, 21), end: (117, 25), text: `args`
+  pattern: 3
+    capture: 3 - keyword, start: (118, 4), end: (118, 8), text: `else`
+  pattern: 1
+    capture: 1 - function, start: (119, 6), end: (119, 10), text: `echo`
+  pattern: 0
+    capture: 0 - string, start: (119, 11), end: (119, 30), text: `"No debugger found"`
+  pattern: 1
+    capture: 1 - function, start: (120, 6), end: (120, 10), text: `exit`
+  pattern: 3
+    capture: 3 - keyword, start: (121, 4), end: (121, 6), text: `fi`
+  pattern: 1
+    capture: 1 - function, start: (125, 4), end: (125, 8), text: `echo`
+  pattern: 0
+    capture: 0 - string, start: (125, 9), end: (125, 82), text: `"<!DOCTYPE html><style>svg { width: 100%; margin-bottom: 20px; }</style>"`
+  pattern: 8
+    capture: 7 - operator, start: (125, 83), end: (125, 84), text: `>`
+  pattern: 1
+    capture: 1 - function, start: (126, 4), end: (126, 8), text: `$cmd`
+  pattern: 8
+    capture: 7 - operator, start: (126, 4), end: (126, 5), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (126, 5), end: (126, 8), text: `cmd`
+  pattern: 0
+    capture: 0 - string, start: (126, 9), end: (126, 21), text: `"${args[@]}"`
+  pattern: 7
+    capture: 6 - embedded, start: (126, 10), end: (126, 20), text: `${args[@]}`
+  pattern: 2
+    capture: 2 - property, start: (126, 12), end: (126, 16), text: `args`
+  pattern: 6
+    capture: 5 - number, start: (126, 22), end: (126, 23), text: `2`
+  pattern: 8
+    capture: 7 - operator, start: (126, 23), end: (126, 24), text: `>`
+  pattern: 7
+    capture: 6 - embedded, start: (126, 25), end: (126, 80), text: `>(grep -v 'Assertion failed' | dot -Tsvg >> index.html)`
+  pattern: 1
+    capture: 1 - function, start: (126, 27), end: (126, 31), text: `grep`
+  pattern: 9
+    capture: 8 - constant, start: (126, 32), end: (126, 34), text: `-v`
+  pattern: 0
+    capture: 0 - string, start: (126, 35), end: (126, 53), text: `'Assertion failed'`
+  pattern: 8
+    capture: 7 - operator, start: (126, 54), end: (126, 55), text: `|`
+  pattern: 1
+    capture: 1 - function, start: (126, 56), end: (126, 59), text: `dot`
+  pattern: 9
+    capture: 8 - constant, start: (126, 60), end: (126, 65), text: `-Tsvg`
+  pattern: 8
+    capture: 7 - operator, start: (126, 66), end: (126, 68), text: `>>`
+  pattern: 1
+    capture: 1 - function, start: (127, 4), end: (127, 8), text: `echo`
+  pattern: 0
+    capture: 0 - string, start: (127, 9), end: (127, 27), text: `"Wrote index.html"`
+  pattern: 1
+    capture: 1 - function, start: (131, 4), end: (131, 8), text: `time`
+  pattern: 8
+    capture: 7 - operator, start: (131, 9), end: (131, 10), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (131, 10), end: (131, 13), text: `cmd`
+  pattern: 0
+    capture: 0 - string, start: (131, 14), end: (131, 26), text: `"${args[@]}"`
+  pattern: 7
+    capture: 6 - embedded, start: (131, 15), end: (131, 25), text: `${args[@]}`
+  pattern: 2
+    capture: 2 - property, start: (131, 17), end: (131, 21), text: `args`
+  pattern: 3
+    capture: 3 - keyword, start: (133, 0), end: (133, 4), text: `esac`
+  pattern: 3
+    capture: 3 - keyword, start: (135, 0), end: (135, 2), text: `if`
+  pattern: 8
+    capture: 7 - operator, start: (135, 9), end: (135, 10), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (135, 10), end: (135, 17), text: `profile`
+  pattern: 3
+    capture: 3 - keyword, start: (135, 22), end: (135, 26), text: `then`
+  pattern: 1
+    capture: 1 - function, start: (136, 2), end: (136, 7), text: `pprof`
+  pattern: 8
+    capture: 7 - operator, start: (136, 8), end: (136, 9), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (136, 9), end: (136, 12), text: `cmd`
+  pattern: 8
+    capture: 7 - operator, start: (136, 13), end: (136, 14), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (136, 14), end: (136, 24), text: `CPUPROFILE`
+  pattern: 3
+    capture: 3 - keyword, start: (137, 0), end: (137, 2), text: `fi`

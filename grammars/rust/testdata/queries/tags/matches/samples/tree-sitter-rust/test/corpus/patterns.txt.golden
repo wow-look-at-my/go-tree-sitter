@@ -1,0 +1,766 @@
+samples/tree-sitter-rust/test/corpus/patterns.txt
+  pattern: 9
+    capture: reference.call, start: (11, 1), end: (30, 33)
+    capture: 0 - name, start: (11, 1), end: (11, 12), text: `source_file`
+  pattern: 9
+    capture: reference.call, start: (12, 3), end: (30, 32)
+    capture: 0 - name, start: (12, 3), end: (12, 23), text: `expression_statement`
+  pattern: 9
+    capture: reference.call, start: (13, 5), end: (14, 18)
+    capture: 0 - name, start: (13, 5), end: (13, 21), text: `match_expression`
+  pattern: 9
+    capture: reference.call, start: (15, 7), end: (22, 30)
+    capture: 0 - name, start: (15, 7), end: (15, 18), text: `match_block`
+  pattern: 9
+    capture: reference.call, start: (16, 9), end: (20, 28)
+    capture: 0 - name, start: (16, 9), end: (16, 18), text: `match_arm`
+  pattern: 9
+    capture: reference.call, start: (17, 11), end: (20, 27)
+    capture: 0 - name, start: (17, 11), end: (17, 24), text: `match_pattern`
+  pattern: 9
+    capture: reference.call, start: (18, 13), end: (19, 26)
+    capture: 0 - name, start: (18, 13), end: (18, 33), text: `tuple_struct_pattern`
+  pattern: 9
+    capture: reference.call, start: (21, 11), end: (22, 28)
+    capture: 0 - name, start: (21, 11), end: (21, 25), text: `string_literal`
+  pattern: 9
+    capture: reference.call, start: (23, 9), end: (28, 31)
+    capture: 0 - name, start: (23, 9), end: (23, 18), text: `match_arm`
+  pattern: 9
+    capture: reference.call, start: (24, 11), end: (28, 30)
+    capture: 0 - name, start: (24, 11), end: (24, 24), text: `match_pattern`
+  pattern: 9
+    capture: reference.call, start: (25, 13), end: (28, 29)
+    capture: 0 - name, start: (25, 13), end: (25, 33), text: `tuple_struct_pattern`
+  pattern: 9
+    capture: reference.call, start: (26, 15), end: (27, 28)
+    capture: 0 - name, start: (26, 15), end: (26, 32), text: `scoped_identifier`
+  pattern: 9
+    capture: reference.call, start: (29, 11), end: (30, 28)
+    capture: 0 - name, start: (29, 11), end: (29, 25), text: `string_literal`
+  pattern: 9
+    capture: reference.call, start: (44, 1), end: (70, 26)
+    capture: 0 - name, start: (44, 1), end: (44, 12), text: `source_file`
+  pattern: 9
+    capture: reference.call, start: (45, 3), end: (70, 25)
+    capture: 0 - name, start: (45, 3), end: (45, 23), text: `expression_statement`
+  pattern: 9
+    capture: reference.call, start: (46, 5), end: (47, 18)
+    capture: 0 - name, start: (46, 5), end: (46, 21), text: `match_expression`
+  pattern: 9
+    capture: reference.call, start: (48, 7), end: (57, 31)
+    capture: 0 - name, start: (48, 7), end: (48, 18), text: `match_block`
+  pattern: 9
+    capture: reference.call, start: (49, 9), end: (54, 31)
+    capture: 0 - name, start: (49, 9), end: (49, 18), text: `match_arm`
+  pattern: 9
+    capture: reference.call, start: (50, 11), end: (54, 30)
+    capture: 0 - name, start: (50, 11), end: (50, 24), text: `match_pattern`
+  pattern: 9
+    capture: reference.call, start: (51, 13), end: (52, 26)
+    capture: 0 - name, start: (51, 13), end: (51, 33), text: `tuple_struct_pattern`
+  pattern: 9
+    capture: reference.call, start: (53, 15), end: (54, 28)
+    capture: 0 - name, start: (53, 15), end: (53, 26), text: `ref_pattern`
+  pattern: 9
+    capture: reference.call, start: (55, 11), end: (56, 24)
+    capture: 0 - name, start: (55, 11), end: (55, 27), text: `field_expression`
+  pattern: 9
+    capture: reference.call, start: (58, 9), end: (63, 31)
+    capture: 0 - name, start: (58, 9), end: (58, 18), text: `match_arm`
+  pattern: 9
+    capture: reference.call, start: (59, 11), end: (63, 30)
+    capture: 0 - name, start: (59, 11), end: (59, 24), text: `match_pattern`
+  pattern: 9
+    capture: reference.call, start: (60, 13), end: (63, 29)
+    capture: 0 - name, start: (60, 13), end: (60, 24), text: `ref_pattern`
+  pattern: 9
+    capture: reference.call, start: (61, 15), end: (62, 35)
+    capture: 0 - name, start: (61, 15), end: (61, 26), text: `mut_pattern`
+  pattern: 9
+    capture: reference.call, start: (65, 9), end: (69, 28)
+    capture: 0 - name, start: (65, 9), end: (65, 18), text: `match_arm`
+  pattern: 9
+    capture: reference.call, start: (66, 11), end: (69, 27)
+    capture: 0 - name, start: (66, 11), end: (66, 24), text: `match_pattern`
+  pattern: 9
+    capture: reference.call, start: (67, 13), end: (68, 33)
+    capture: 0 - name, start: (67, 13), end: (67, 30), text: `reference_pattern`
+  pattern: 11
+    capture: 7 - reference.call, start: (82, 34), end: (82, 49), text: `println!("{x}")`
+    capture: 0 - name, start: (82, 34), end: (82, 41), text: `println`
+  pattern: 9
+    capture: reference.call, start: (87, 1), end: (119, 29)
+    capture: 0 - name, start: (87, 1), end: (87, 12), text: `source_file`
+  pattern: 9
+    capture: reference.call, start: (88, 3), end: (119, 28)
+    capture: 0 - name, start: (88, 3), end: (88, 23), text: `expression_statement`
+  pattern: 9
+    capture: reference.call, start: (89, 5), end: (90, 18)
+    capture: 0 - name, start: (89, 5), end: (89, 21), text: `match_expression`
+  pattern: 9
+    capture: reference.call, start: (91, 7), end: (106, 26)
+    capture: 0 - name, start: (91, 7), end: (91, 18), text: `match_block`
+  pattern: 9
+    capture: reference.call, start: (92, 9), end: (102, 33)
+    capture: 0 - name, start: (92, 9), end: (92, 18), text: `match_arm`
+  pattern: 9
+    capture: reference.call, start: (93, 11), end: (99, 46)
+    capture: 0 - name, start: (93, 11), end: (93, 24), text: `match_pattern`
+  pattern: 9
+    capture: reference.call, start: (94, 13), end: (95, 31)
+    capture: 0 - name, start: (94, 13), end: (94, 27), text: `struct_pattern`
+  pattern: 9
+    capture: reference.call, start: (96, 15), end: (97, 44)
+    capture: 0 - name, start: (96, 15), end: (96, 28), text: `field_pattern`
+  pattern: 9
+    capture: reference.call, start: (98, 15), end: (99, 44)
+    capture: 0 - name, start: (98, 15), end: (98, 28), text: `field_pattern`
+  pattern: 9
+    capture: reference.call, start: (100, 13), end: (101, 26)
+    capture: 0 - name, start: (100, 13), end: (100, 30), text: `binary_expression`
+  pattern: 9
+    capture: reference.call, start: (103, 11), end: (105, 31)
+    capture: 0 - name, start: (103, 11), end: (103, 27), text: `tuple_expression`
+  pattern: 9
+    capture: reference.call, start: (104, 13), end: (105, 30)
+    capture: 0 - name, start: (104, 13), end: (104, 27), text: `string_literal`
+  pattern: 9
+    capture: reference.call, start: (107, 9), end: (115, 37)
+    capture: 0 - name, start: (107, 9), end: (107, 18), text: `match_arm`
+  pattern: 9
+    capture: reference.call, start: (108, 11), end: (115, 36)
+    capture: 0 - name, start: (108, 11), end: (108, 24), text: `match_pattern`
+  pattern: 9
+    capture: reference.call, start: (109, 13), end: (110, 31)
+    capture: 0 - name, start: (109, 13), end: (109, 27), text: `struct_pattern`
+  pattern: 9
+    capture: reference.call, start: (111, 15), end: (112, 34)
+    capture: 0 - name, start: (111, 15), end: (111, 28), text: `field_pattern`
+  pattern: 9
+    capture: reference.call, start: (114, 15), end: (115, 34)
+    capture: 0 - name, start: (114, 15), end: (114, 28), text: `field_pattern`
+  pattern: 9
+    capture: reference.call, start: (116, 11), end: (118, 31)
+    capture: 0 - name, start: (116, 11), end: (116, 27), text: `tuple_expression`
+  pattern: 9
+    capture: reference.call, start: (117, 13), end: (118, 30)
+    capture: 0 - name, start: (117, 13), end: (117, 27), text: `string_literal`
+  pattern: 9
+    capture: reference.call, start: (120, 3), end: (140, 38)
+    capture: 0 - name, start: (120, 3), end: (120, 23), text: `expression_statement`
+  pattern: 9
+    capture: reference.call, start: (121, 5), end: (122, 18)
+    capture: 0 - name, start: (121, 5), end: (121, 21), text: `match_expression`
+  pattern: 9
+    capture: reference.call, start: (123, 7), end: (140, 36)
+    capture: 0 - name, start: (123, 7), end: (123, 18), text: `match_block`
+  pattern: 9
+    capture: reference.call, start: (124, 9), end: (135, 31)
+    capture: 0 - name, start: (124, 9), end: (124, 18), text: `match_arm`
+  pattern: 9
+    capture: reference.call, start: (125, 11), end: (135, 30)
+    capture: 0 - name, start: (125, 11), end: (125, 24), text: `match_pattern`
+  pattern: 9
+    capture: reference.call, start: (126, 13), end: (129, 29)
+    capture: 0 - name, start: (126, 13), end: (126, 33), text: `tuple_struct_pattern`
+  pattern: 9
+    capture: reference.call, start: (127, 15), end: (128, 28)
+    capture: 0 - name, start: (127, 15), end: (127, 32), text: `scoped_identifier`
+  pattern: 9
+    capture: reference.call, start: (130, 15), end: (134, 38)
+    capture: 0 - name, start: (130, 15), end: (130, 35), text: `tuple_struct_pattern`
+  pattern: 9
+    capture: reference.call, start: (131, 17), end: (132, 35)
+    capture: 0 - name, start: (131, 17), end: (131, 29), text: `generic_type`
+  pattern: 9
+    capture: reference.call, start: (133, 19), end: (134, 36)
+    capture: 0 - name, start: (133, 19), end: (133, 33), text: `type_arguments`
+  pattern: 9
+    capture: reference.call, start: (136, 11), end: (137, 24)
+    capture: 0 - name, start: (136, 11), end: (136, 27), text: `macro_invocation`
+  pattern: 9
+    capture: reference.call, start: (138, 13), end: (140, 33)
+    capture: 0 - name, start: (138, 13), end: (138, 23), text: `token_tree`
+  pattern: 9
+    capture: reference.call, start: (139, 15), end: (140, 32)
+    capture: 0 - name, start: (139, 15), end: (139, 29), text: `string_literal`
+  pattern: 9
+    capture: reference.call, start: (154, 1), end: (181, 26)
+    capture: 0 - name, start: (154, 1), end: (154, 12), text: `source_file`
+  pattern: 9
+    capture: reference.call, start: (155, 3), end: (181, 25)
+    capture: 0 - name, start: (155, 3), end: (155, 23), text: `expression_statement`
+  pattern: 9
+    capture: reference.call, start: (156, 5), end: (157, 18)
+    capture: 0 - name, start: (156, 5), end: (156, 21), text: `match_expression`
+  pattern: 9
+    capture: reference.call, start: (158, 7), end: (164, 23)
+    capture: 0 - name, start: (158, 7), end: (158, 18), text: `match_block`
+  pattern: 9
+    capture: reference.call, start: (159, 9), end: (163, 41)
+    capture: 0 - name, start: (159, 9), end: (159, 18), text: `match_arm`
+  pattern: 9
+    capture: reference.call, start: (160, 11), end: (163, 40)
+    capture: 0 - name, start: (160, 11), end: (160, 24), text: `match_pattern`
+  pattern: 9
+    capture: reference.call, start: (161, 13), end: (162, 26)
+    capture: 0 - name, start: (161, 13), end: (161, 26), text: `tuple_pattern`
+  pattern: 9
+    capture: reference.call, start: (165, 9), end: (169, 41)
+    capture: 0 - name, start: (165, 9), end: (165, 18), text: `match_arm`
+  pattern: 9
+    capture: reference.call, start: (166, 11), end: (169, 40)
+    capture: 0 - name, start: (166, 11), end: (166, 24), text: `match_pattern`
+  pattern: 9
+    capture: reference.call, start: (167, 13), end: (168, 26)
+    capture: 0 - name, start: (167, 13), end: (167, 33), text: `tuple_struct_pattern`
+  pattern: 9
+    capture: reference.call, start: (171, 9), end: (180, 41)
+    capture: 0 - name, start: (171, 9), end: (171, 18), text: `match_arm`
+  pattern: 9
+    capture: reference.call, start: (172, 11), end: (180, 40)
+    capture: 0 - name, start: (172, 11), end: (172, 24), text: `match_pattern`
+  pattern: 9
+    capture: reference.call, start: (173, 13), end: (176, 34)
+    capture: 0 - name, start: (173, 13), end: (173, 27), text: `struct_pattern`
+  pattern: 9
+    capture: reference.call, start: (174, 15), end: (175, 28)
+    capture: 0 - name, start: (174, 15), end: (174, 37), text: `scoped_type_identifier`
+  pattern: 9
+    capture: reference.call, start: (177, 15), end: (178, 34)
+    capture: 0 - name, start: (177, 15), end: (177, 28), text: `field_pattern`
+  pattern: 9
+    capture: reference.call, start: (207, 1), end: (273, 33)
+    capture: 0 - name, start: (207, 1), end: (207, 12), text: `source_file`
+  pattern: 9
+    capture: reference.call, start: (208, 3), end: (273, 32)
+    capture: 0 - name, start: (208, 3), end: (208, 23), text: `expression_statement`
+  pattern: 9
+    capture: reference.call, start: (209, 5), end: (210, 25)
+    capture: 0 - name, start: (209, 5), end: (209, 21), text: `match_expression`
+  pattern: 9
+    capture: reference.call, start: (211, 13), end: (224, 30)
+    capture: 0 - name, start: (211, 13), end: (211, 24), text: `match_block`
+  pattern: 9
+    capture: reference.call, start: (212, 9), end: (223, 47)
+    capture: 0 - name, start: (212, 9), end: (212, 18), text: `match_arm`
+  pattern: 9
+    capture: reference.call, start: (213, 20), end: (223, 46)
+    capture: 0 - name, start: (213, 20), end: (213, 33), text: `match_pattern`
+  pattern: 9
+    capture: reference.call, start: (214, 13), end: (218, 38)
+    capture: 0 - name, start: (214, 13), end: (214, 23), text: `or_pattern`
+  pattern: 9
+    capture: reference.call, start: (215, 15), end: (216, 28)
+    capture: 0 - name, start: (215, 15), end: (215, 31), text: `captured_pattern`
+  pattern: 9
+    capture: reference.call, start: (217, 17), end: (218, 36)
+    capture: 0 - name, start: (217, 17), end: (217, 37), text: `tuple_struct_pattern`
+  pattern: 9
+    capture: reference.call, start: (219, 15), end: (220, 28)
+    capture: 0 - name, start: (219, 15), end: (219, 31), text: `captured_pattern`
+  pattern: 9
+    capture: reference.call, start: (221, 17), end: (222, 36)
+    capture: 0 - name, start: (221, 17), end: (221, 37), text: `tuple_struct_pattern`
+  pattern: 9
+    capture: reference.call, start: (225, 9), end: (231, 43)
+    capture: 0 - name, start: (225, 9), end: (225, 18), text: `match_arm`
+  pattern: 9
+    capture: reference.call, start: (226, 20), end: (231, 42)
+    capture: 0 - name, start: (226, 20), end: (226, 33), text: `match_pattern`
+  pattern: 9
+    capture: reference.call, start: (227, 13), end: (228, 26)
+    capture: 0 - name, start: (227, 13), end: (227, 29), text: `captured_pattern`
+  pattern: 9
+    capture: reference.call, start: (229, 15), end: (230, 39)
+    capture: 0 - name, start: (229, 15), end: (229, 28), text: `range_pattern`
+  pattern: 9
+    capture: reference.call, start: (233, 9), end: (239, 43)
+    capture: 0 - name, start: (233, 9), end: (233, 18), text: `match_arm`
+  pattern: 9
+    capture: reference.call, start: (234, 20), end: (239, 42)
+    capture: 0 - name, start: (234, 20), end: (234, 33), text: `match_pattern`
+  pattern: 9
+    capture: reference.call, start: (235, 13), end: (236, 32)
+    capture: 0 - name, start: (235, 13), end: (235, 33), text: `tuple_struct_pattern`
+  pattern: 9
+    capture: reference.call, start: (237, 15), end: (238, 39)
+    capture: 0 - name, start: (237, 15), end: (237, 28), text: `range_pattern`
+  pattern: 9
+    capture: reference.call, start: (241, 9), end: (247, 38)
+    capture: 0 - name, start: (241, 9), end: (241, 18), text: `match_arm`
+  pattern: 9
+    capture: reference.call, start: (242, 20), end: (247, 37)
+    capture: 0 - name, start: (242, 20), end: (242, 33), text: `match_pattern`
+  pattern: 9
+    capture: reference.call, start: (243, 13), end: (244, 26)
+    capture: 0 - name, start: (243, 13), end: (243, 29), text: `captured_pattern`
+  pattern: 9
+    capture: reference.call, start: (245, 15), end: (246, 34)
+    capture: 0 - name, start: (245, 15), end: (245, 28), text: `range_pattern`
+  pattern: 9
+    capture: reference.call, start: (249, 9), end: (255, 38)
+    capture: 0 - name, start: (249, 9), end: (249, 18), text: `match_arm`
+  pattern: 9
+    capture: reference.call, start: (250, 20), end: (255, 37)
+    capture: 0 - name, start: (250, 20), end: (250, 33), text: `match_pattern`
+  pattern: 9
+    capture: reference.call, start: (251, 13), end: (252, 26)
+    capture: 0 - name, start: (251, 13), end: (251, 29), text: `captured_pattern`
+  pattern: 9
+    capture: reference.call, start: (253, 15), end: (254, 34)
+    capture: 0 - name, start: (253, 15), end: (253, 28), text: `range_pattern`
+  pattern: 9
+    capture: reference.call, start: (257, 9), end: (260, 34)
+    capture: 0 - name, start: (257, 9), end: (257, 18), text: `match_arm`
+  pattern: 9
+    capture: reference.call, start: (258, 20), end: (260, 33)
+    capture: 0 - name, start: (258, 20), end: (258, 33), text: `match_pattern`
+  pattern: 9
+    capture: reference.call, start: (259, 13), end: (260, 32)
+    capture: 0 - name, start: (259, 13), end: (259, 26), text: `range_pattern`
+  pattern: 9
+    capture: reference.call, start: (262, 9), end: (265, 35)
+    capture: 0 - name, start: (262, 9), end: (262, 18), text: `match_arm`
+  pattern: 9
+    capture: reference.call, start: (263, 20), end: (265, 34)
+    capture: 0 - name, start: (263, 20), end: (263, 33), text: `match_pattern`
+  pattern: 9
+    capture: reference.call, start: (264, 13), end: (265, 33)
+    capture: 0 - name, start: (264, 13), end: (264, 26), text: `range_pattern`
+  pattern: 9
+    capture: reference.call, start: (267, 9), end: (272, 43)
+    capture: 0 - name, start: (267, 9), end: (267, 18), text: `match_arm`
+  pattern: 9
+    capture: reference.call, start: (268, 20), end: (272, 42)
+    capture: 0 - name, start: (268, 20), end: (268, 33), text: `match_pattern`
+  pattern: 9
+    capture: reference.call, start: (269, 13), end: (270, 26)
+    capture: 0 - name, start: (269, 13), end: (269, 29), text: `captured_pattern`
+  pattern: 9
+    capture: reference.call, start: (271, 15), end: (272, 40)
+    capture: 0 - name, start: (271, 15), end: (271, 28), text: `range_pattern`
+  pattern: 9
+    capture: reference.call, start: (274, 3), end: (292, 37)
+    capture: 0 - name, start: (274, 3), end: (274, 23), text: `expression_statement`
+  pattern: 9
+    capture: reference.call, start: (275, 5), end: (276, 25)
+    capture: 0 - name, start: (275, 5), end: (275, 21), text: `match_expression`
+  pattern: 9
+    capture: reference.call, start: (277, 13), end: (289, 35)
+    capture: 0 - name, start: (277, 13), end: (277, 24), text: `match_block`
+  pattern: 9
+    capture: reference.call, start: (278, 9), end: (288, 35)
+    capture: 0 - name, start: (278, 9), end: (278, 18), text: `match_arm`
+  pattern: 9
+    capture: reference.call, start: (279, 20), end: (288, 34)
+    capture: 0 - name, start: (279, 20), end: (279, 33), text: `match_pattern`
+  pattern: 9
+    capture: reference.call, start: (280, 13), end: (286, 36)
+    capture: 0 - name, start: (280, 13), end: (280, 23), text: `or_pattern`
+  pattern: 9
+    capture: reference.call, start: (281, 15), end: (284, 38)
+    capture: 0 - name, start: (281, 15), end: (281, 25), text: `or_pattern`
+  pattern: 9
+    capture: reference.call, start: (282, 17), end: (284, 37)
+    capture: 0 - name, start: (282, 17), end: (282, 27), text: `or_pattern`
+  pattern: 9
+    capture: reference.call, start: (283, 19), end: (284, 36)
+    capture: 0 - name, start: (283, 19), end: (283, 33), text: `string_literal`
+  pattern: 9
+    capture: reference.call, start: (285, 17), end: (286, 34)
+    capture: 0 - name, start: (285, 17), end: (285, 31), text: `string_literal`
+  pattern: 9
+    capture: reference.call, start: (287, 15), end: (288, 32)
+    capture: 0 - name, start: (287, 15), end: (287, 29), text: `string_literal`
+  pattern: 9
+    capture: reference.call, start: (290, 9), end: (291, 34)
+    capture: 0 - name, start: (290, 9), end: (290, 18), text: `match_arm`
+  pattern: 9
+    capture: 7 - reference.call, start: (299, 4), end: (299, 20), text: `do_stuff_with(x)`
+    capture: 0 - name, start: (299, 4), end: (299, 17), text: `do_stuff_with`
+  pattern: 9
+    capture: 7 - reference.call, start: (303, 4), end: (303, 20), text: `do_stuff_with(x)`
+    capture: 0 - name, start: (303, 4), end: (303, 17), text: `do_stuff_with`
+  pattern: 10
+    capture: 7 - reference.call, start: (306, 29), end: (306, 52), text: `slice.binary_search(&x)`
+    capture: 0 - name, start: (306, 35), end: (306, 48), text: `binary_search`
+  pattern: 9
+    capture: 7 - reference.call, start: (310, 21), end: (310, 37), text: `binary_search(x)`
+    capture: 0 - name, start: (310, 21), end: (310, 34), text: `binary_search`
+  pattern: 9
+    capture: 7 - reference.call, start: (314, 19), end: (314, 25), text: `expr()`
+    capture: 0 - name, start: (314, 19), end: (314, 23), text: `expr`
+  pattern: 5
+    capture: 3 - definition.function, start: (318, 0), end: (318, 26), text: `fn foo((1 | 2 | 3): u8) {}`
+    capture: 0 - name, start: (318, 3), end: (318, 6), text: `foo`
+  pattern: 11
+    capture: 7 - reference.call, start: (320, 7), end: (320, 11), text: `x!()`
+    capture: 0 - name, start: (320, 7), end: (320, 8), text: `x`
+  pattern: 11
+    capture: 7 - reference.call, start: (320, 14), end: (320, 18), text: `y!()`
+    capture: 0 - name, start: (320, 14), end: (320, 15), text: `y`
+  pattern: 9
+    capture: reference.call, start: (324, 1), end: (341, 32)
+    capture: 0 - name, start: (324, 1), end: (324, 12), text: `source_file`
+  pattern: 9
+    capture: reference.call, start: (325, 3), end: (341, 31)
+    capture: 0 - name, start: (325, 3), end: (325, 23), text: `expression_statement`
+  pattern: 9
+    capture: reference.call, start: (326, 5), end: (335, 28)
+    capture: 0 - name, start: (326, 5), end: (326, 18), text: `if_expression`
+  pattern: 9
+    capture: reference.call, start: (327, 18), end: (334, 26)
+    capture: 0 - name, start: (327, 18), end: (327, 31), text: `let_condition`
+  pattern: 9
+    capture: reference.call, start: (328, 18), end: (331, 25)
+    capture: 0 - name, start: (328, 18), end: (328, 28), text: `or_pattern`
+  pattern: 9
+    capture: reference.call, start: (329, 11), end: (330, 30)
+    capture: 0 - name, start: (329, 11), end: (329, 31), text: `tuple_struct_pattern`
+  pattern: 9
+    capture: reference.call, start: (332, 11), end: (333, 30)
+    capture: 0 - name, start: (332, 11), end: (332, 31), text: `tuple_struct_pattern`
+  pattern: 9
+    capture: reference.call, start: (336, 20), end: (341, 29)
+    capture: 0 - name, start: (336, 20), end: (336, 25), text: `block`
+  pattern: 9
+    capture: reference.call, start: (337, 9), end: (341, 28)
+    capture: 0 - name, start: (337, 9), end: (337, 29), text: `expression_statement`
+  pattern: 9
+    capture: reference.call, start: (338, 11), end: (339, 34)
+    capture: 0 - name, start: (338, 11), end: (338, 26), text: `call_expression`
+  pattern: 9
+    capture: reference.call, start: (340, 24), end: (341, 26)
+    capture: 0 - name, start: (340, 24), end: (340, 33), text: `arguments`
+  pattern: 9
+    capture: reference.call, start: (342, 3), end: (358, 31)
+    capture: 0 - name, start: (342, 3), end: (342, 23), text: `expression_statement`
+  pattern: 9
+    capture: reference.call, start: (343, 5), end: (352, 28)
+    capture: 0 - name, start: (343, 5), end: (343, 21), text: `while_expression`
+  pattern: 9
+    capture: reference.call, start: (344, 18), end: (351, 26)
+    capture: 0 - name, start: (344, 18), end: (344, 31), text: `let_condition`
+  pattern: 9
+    capture: reference.call, start: (345, 18), end: (348, 25)
+    capture: 0 - name, start: (345, 18), end: (345, 28), text: `or_pattern`
+  pattern: 9
+    capture: reference.call, start: (346, 11), end: (347, 30)
+    capture: 0 - name, start: (346, 11), end: (346, 31), text: `tuple_struct_pattern`
+  pattern: 9
+    capture: reference.call, start: (349, 11), end: (350, 30)
+    capture: 0 - name, start: (349, 11), end: (349, 31), text: `tuple_struct_pattern`
+  pattern: 9
+    capture: reference.call, start: (353, 13), end: (358, 29)
+    capture: 0 - name, start: (353, 13), end: (353, 18), text: `block`
+  pattern: 9
+    capture: reference.call, start: (354, 9), end: (358, 28)
+    capture: 0 - name, start: (354, 9), end: (354, 29), text: `expression_statement`
+  pattern: 9
+    capture: reference.call, start: (355, 11), end: (356, 34)
+    capture: 0 - name, start: (355, 11), end: (355, 26), text: `call_expression`
+  pattern: 9
+    capture: reference.call, start: (357, 24), end: (358, 26)
+    capture: 0 - name, start: (357, 24), end: (357, 33), text: `arguments`
+  pattern: 9
+    capture: reference.call, start: (359, 3), end: (366, 22)
+    capture: 0 - name, start: (359, 3), end: (359, 18), text: `let_declaration`
+  pattern: 9
+    capture: reference.call, start: (360, 14), end: (363, 21)
+    capture: 0 - name, start: (360, 14), end: (360, 24), text: `or_pattern`
+  pattern: 9
+    capture: reference.call, start: (361, 7), end: (362, 26)
+    capture: 0 - name, start: (361, 7), end: (361, 27), text: `tuple_struct_pattern`
+  pattern: 9
+    capture: reference.call, start: (364, 7), end: (365, 26)
+    capture: 0 - name, start: (364, 7), end: (364, 27), text: `tuple_struct_pattern`
+  pattern: 9
+    capture: reference.call, start: (367, 12), end: (370, 34)
+    capture: 0 - name, start: (367, 12), end: (367, 27), text: `call_expression`
+  pattern: 9
+    capture: reference.call, start: (368, 17), end: (369, 27)
+    capture: 0 - name, start: (368, 17), end: (368, 33), text: `field_expression`
+  pattern: 9
+    capture: reference.call, start: (371, 18), end: (373, 30)
+    capture: 0 - name, start: (371, 18), end: (371, 27), text: `arguments`
+  pattern: 9
+    capture: reference.call, start: (372, 9), end: (373, 29)
+    capture: 0 - name, start: (372, 9), end: (372, 29), text: `reference_expression`
+  pattern: 9
+    capture: reference.call, start: (374, 3), end: (381, 20)
+    capture: 0 - name, start: (374, 3), end: (374, 23), text: `expression_statement`
+  pattern: 9
+    capture: reference.call, start: (375, 5), end: (379, 21)
+    capture: 0 - name, start: (375, 5), end: (375, 19), text: `for_expression`
+  pattern: 9
+    capture: reference.call, start: (376, 16), end: (378, 23)
+    capture: 0 - name, start: (376, 16), end: (376, 26), text: `or_pattern`
+  pattern: 9
+    capture: reference.call, start: (377, 9), end: (378, 22)
+    capture: 0 - name, start: (377, 9), end: (377, 20), text: `ref_pattern`
+  pattern: 9
+    capture: reference.call, start: (382, 3), end: (389, 22)
+    capture: 0 - name, start: (382, 3), end: (382, 18), text: `let_declaration`
+  pattern: 9
+    capture: reference.call, start: (383, 14), end: (386, 21)
+    capture: 0 - name, start: (383, 14), end: (383, 24), text: `or_pattern`
+  pattern: 9
+    capture: reference.call, start: (384, 7), end: (385, 26)
+    capture: 0 - name, start: (384, 7), end: (384, 27), text: `tuple_struct_pattern`
+  pattern: 9
+    capture: reference.call, start: (387, 7), end: (388, 26)
+    capture: 0 - name, start: (387, 7), end: (387, 27), text: `tuple_struct_pattern`
+  pattern: 9
+    capture: reference.call, start: (390, 12), end: (391, 28)
+    capture: 0 - name, start: (390, 12), end: (390, 27), text: `call_expression`
+  pattern: 9
+    capture: reference.call, start: (392, 18), end: (393, 20)
+    capture: 0 - name, start: (392, 18), end: (392, 27), text: `arguments`
+  pattern: 9
+    capture: reference.call, start: (394, 3), end: (402, 20)
+    capture: 0 - name, start: (394, 3), end: (394, 23), text: `expression_statement`
+  pattern: 9
+    capture: reference.call, start: (395, 5), end: (400, 21)
+    capture: 0 - name, start: (395, 5), end: (395, 19), text: `for_expression`
+  pattern: 9
+    capture: reference.call, start: (396, 16), end: (399, 23)
+    capture: 0 - name, start: (396, 16), end: (396, 26), text: `or_pattern`
+  pattern: 9
+    capture: reference.call, start: (397, 9), end: (398, 22)
+    capture: 0 - name, start: (397, 9), end: (397, 19), text: `or_pattern`
+  pattern: 9
+    capture: reference.call, start: (403, 3), end: (416, 32)
+    capture: 0 - name, start: (403, 3), end: (403, 23), text: `expression_statement`
+  pattern: 9
+    capture: reference.call, start: (404, 5), end: (413, 30)
+    capture: 0 - name, start: (404, 5), end: (404, 23), text: `closure_expression`
+  pattern: 9
+    capture: reference.call, start: (405, 19), end: (413, 29)
+    capture: 0 - name, start: (405, 19), end: (405, 37), text: `closure_parameters`
+  pattern: 9
+    capture: reference.call, start: (406, 9), end: (413, 28)
+    capture: 0 - name, start: (406, 9), end: (406, 22), text: `tuple_pattern`
+  pattern: 9
+    capture: reference.call, start: (407, 11), end: (410, 27)
+    capture: 0 - name, start: (407, 11), end: (407, 21), text: `or_pattern`
+  pattern: 9
+    capture: reference.call, start: (408, 13), end: (409, 32)
+    capture: 0 - name, start: (408, 13), end: (408, 33), text: `tuple_struct_pattern`
+  pattern: 9
+    capture: reference.call, start: (411, 13), end: (412, 32)
+    capture: 0 - name, start: (411, 13), end: (411, 33), text: `tuple_struct_pattern`
+  pattern: 9
+    capture: reference.call, start: (414, 13), end: (415, 30)
+    capture: 0 - name, start: (414, 13), end: (414, 28), text: `call_expression`
+  pattern: 9
+    capture: reference.call, start: (417, 3), end: (428, 31)
+    capture: 0 - name, start: (417, 3), end: (417, 18), text: `let_declaration`
+  pattern: 9
+    capture: reference.call, start: (418, 14), end: (428, 30)
+    capture: 0 - name, start: (418, 14), end: (418, 25), text: `ref_pattern`
+  pattern: 9
+    capture: reference.call, start: (419, 7), end: (420, 27)
+    capture: 0 - name, start: (419, 7), end: (419, 18), text: `mut_pattern`
+  pattern: 9
+    capture: reference.call, start: (421, 9), end: (422, 22)
+    capture: 0 - name, start: (421, 9), end: (421, 25), text: `captured_pattern`
+  pattern: 9
+    capture: reference.call, start: (423, 11), end: (428, 27)
+    capture: 0 - name, start: (423, 11), end: (423, 24), text: `tuple_pattern`
+  pattern: 9
+    capture: reference.call, start: (424, 13), end: (427, 29)
+    capture: 0 - name, start: (424, 13), end: (424, 23), text: `or_pattern`
+  pattern: 9
+    capture: reference.call, start: (425, 15), end: (426, 28)
+    capture: 0 - name, start: (425, 15), end: (425, 25), text: `or_pattern`
+  pattern: 9
+    capture: reference.call, start: (429, 3), end: (430, 22)
+    capture: 0 - name, start: (429, 3), end: (429, 16), text: `function_item`
+  pattern: 9
+    capture: reference.call, start: (431, 17), end: (439, 31)
+    capture: 0 - name, start: (431, 17), end: (431, 27), text: `parameters`
+  pattern: 9
+    capture: reference.call, start: (432, 7), end: (438, 31)
+    capture: 0 - name, start: (432, 7), end: (432, 16), text: `parameter`
+  pattern: 9
+    capture: reference.call, start: (433, 18), end: (438, 30)
+    capture: 0 - name, start: (433, 18), end: (433, 31), text: `tuple_pattern`
+  pattern: 9
+    capture: reference.call, start: (434, 11), end: (437, 32)
+    capture: 0 - name, start: (434, 11), end: (434, 21), text: `or_pattern`
+  pattern: 9
+    capture: reference.call, start: (435, 13), end: (436, 31)
+    capture: 0 - name, start: (435, 13), end: (435, 23), text: `or_pattern`
+  pattern: 9
+    capture: reference.call, start: (441, 3), end: (452, 27)
+    capture: 0 - name, start: (441, 3), end: (441, 23), text: `expression_statement`
+  pattern: 9
+    capture: reference.call, start: (442, 5), end: (451, 33)
+    capture: 0 - name, start: (442, 5), end: (442, 18), text: `if_expression`
+  pattern: 9
+    capture: reference.call, start: (443, 18), end: (450, 26)
+    capture: 0 - name, start: (443, 18), end: (443, 31), text: `let_condition`
+  pattern: 9
+    capture: reference.call, start: (444, 18), end: (447, 25)
+    capture: 0 - name, start: (444, 18), end: (444, 28), text: `or_pattern`
+  pattern: 9
+    capture: reference.call, start: (445, 11), end: (446, 31)
+    capture: 0 - name, start: (445, 11), end: (445, 27), text: `macro_invocation`
+  pattern: 9
+    capture: reference.call, start: (448, 11), end: (449, 31)
+    capture: 0 - name, start: (448, 11), end: (448, 27), text: `macro_invocation`
+  pattern: 9
+    capture: 7 - reference.call, start: (458, 3), end: (458, 14), text: `foo(x: i32)`
+    capture: 0 - name, start: (458, 3), end: (458, 6), text: `foo`
+  pattern: 10
+    capture: 7 - reference.call, start: (459, 22), end: (459, 30), text: `3.pow(3)`
+    capture: 0 - name, start: (459, 24), end: (459, 27), text: `pow`
+  pattern: 11
+    capture: 7 - reference.call, start: (461, 16), end: (461, 39), text: `println!("three cubed")`
+    capture: 0 - name, start: (461, 16), end: (461, 23), text: `println`
+  pattern: 5
+    capture: definition.function, start: (466, 0), end: (471, 1)
+    capture: 0 - name, start: (466, 3), end: (466, 6), text: `foo`
+  pattern: 10
+    capture: 7 - reference.call, start: (468, 16), end: (468, 24), text: `3.pow(3)`
+    capture: 0 - name, start: (468, 18), end: (468, 21), text: `pow`
+  pattern: 11
+    capture: 7 - reference.call, start: (468, 30), end: (468, 53), text: `println!("three cubed")`
+    capture: 0 - name, start: (468, 30), end: (468, 37), text: `println`
+  pattern: 9
+    capture: reference.call, start: (475, 1), end: (506, 34)
+    capture: 0 - name, start: (475, 1), end: (475, 12), text: `source_file`
+  pattern: 9
+    capture: reference.call, start: (476, 3), end: (477, 22)
+    capture: 0 - name, start: (476, 3), end: (476, 16), text: `function_item`
+  pattern: 9
+    capture: reference.call, start: (478, 17), end: (481, 31)
+    capture: 0 - name, start: (478, 17), end: (478, 27), text: `parameters`
+  pattern: 9
+    capture: reference.call, start: (479, 7), end: (480, 29)
+    capture: 0 - name, start: (479, 7), end: (479, 16), text: `parameter`
+  pattern: 9
+    capture: reference.call, start: (482, 11), end: (491, 32)
+    capture: 0 - name, start: (482, 11), end: (482, 16), text: `block`
+  pattern: 9
+    capture: reference.call, start: (483, 7), end: (484, 26)
+    capture: 0 - name, start: (483, 7), end: (483, 17), text: `const_item`
+  pattern: 9
+    capture: reference.call, start: (486, 16), end: (489, 38)
+    capture: 0 - name, start: (486, 16), end: (486, 31), text: `call_expression`
+  pattern: 9
+    capture: reference.call, start: (487, 21), end: (488, 36)
+    capture: 0 - name, start: (487, 21), end: (487, 37), text: `field_expression`
+  pattern: 9
+    capture: reference.call, start: (490, 22), end: (491, 29)
+    capture: 0 - name, start: (490, 22), end: (490, 31), text: `arguments`
+  pattern: 9
+    capture: reference.call, start: (492, 7), end: (506, 31)
+    capture: 0 - name, start: (492, 7), end: (492, 27), text: `expression_statement`
+  pattern: 9
+    capture: reference.call, start: (493, 9), end: (494, 29)
+    capture: 0 - name, start: (493, 9), end: (493, 25), text: `match_expression`
+  pattern: 9
+    capture: reference.call, start: (495, 17), end: (503, 40)
+    capture: 0 - name, start: (495, 17), end: (495, 28), text: `match_block`
+  pattern: 9
+    capture: reference.call, start: (496, 13), end: (498, 29)
+    capture: 0 - name, start: (496, 13), end: (496, 22), text: `match_arm`
+  pattern: 9
+    capture: reference.call, start: (497, 24), end: (498, 28)
+    capture: 0 - name, start: (497, 24), end: (497, 37), text: `match_pattern`
+  pattern: 9
+    capture: reference.call, start: (499, 22), end: (500, 35)
+    capture: 0 - name, start: (499, 22), end: (499, 38), text: `macro_invocation`
+  pattern: 9
+    capture: reference.call, start: (501, 17), end: (503, 37)
+    capture: 0 - name, start: (501, 17), end: (501, 27), text: `token_tree`
+  pattern: 9
+    capture: reference.call, start: (502, 19), end: (503, 36)
+    capture: 0 - name, start: (502, 19), end: (502, 33), text: `string_literal`
+  pattern: 9
+    capture: reference.call, start: (504, 13), end: (505, 38)
+    capture: 0 - name, start: (504, 13), end: (504, 22), text: `match_arm`
+  pattern: 9
+    capture: reference.call, start: (507, 3), end: (508, 22)
+    capture: 0 - name, start: (507, 3), end: (507, 16), text: `function_item`
+  pattern: 9
+    capture: reference.call, start: (509, 17), end: (512, 31)
+    capture: 0 - name, start: (509, 17), end: (509, 27), text: `parameters`
+  pattern: 9
+    capture: reference.call, start: (510, 7), end: (511, 29)
+    capture: 0 - name, start: (510, 7), end: (510, 16), text: `parameter`
+  pattern: 9
+    capture: reference.call, start: (513, 11), end: (535, 32)
+    capture: 0 - name, start: (513, 11), end: (513, 16), text: `block`
+  pattern: 9
+    capture: reference.call, start: (514, 7), end: (535, 31)
+    capture: 0 - name, start: (514, 7), end: (514, 27), text: `expression_statement`
+  pattern: 9
+    capture: reference.call, start: (515, 9), end: (516, 29)
+    capture: 0 - name, start: (515, 9), end: (515, 25), text: `match_expression`
+  pattern: 9
+    capture: reference.call, start: (517, 17), end: (532, 40)
+    capture: 0 - name, start: (517, 17), end: (517, 28), text: `match_block`
+  pattern: 9
+    capture: reference.call, start: (518, 13), end: (527, 46)
+    capture: 0 - name, start: (518, 13), end: (518, 22), text: `match_arm`
+  pattern: 9
+    capture: reference.call, start: (519, 24), end: (527, 45)
+    capture: 0 - name, start: (519, 24), end: (519, 37), text: `match_pattern`
+  pattern: 9
+    capture: reference.call, start: (520, 17), end: (527, 44)
+    capture: 0 - name, start: (520, 17), end: (520, 28), text: `const_block`
+  pattern: 9
+    capture: reference.call, start: (521, 25), end: (527, 43)
+    capture: 0 - name, start: (521, 25), end: (521, 30), text: `block`
+  pattern: 9
+    capture: reference.call, start: (522, 21), end: (525, 50)
+    capture: 0 - name, start: (522, 21), end: (522, 36), text: `call_expression`
+  pattern: 9
+    capture: reference.call, start: (523, 33), end: (524, 48)
+    capture: 0 - name, start: (523, 33), end: (523, 49), text: `field_expression`
+  pattern: 9
+    capture: reference.call, start: (526, 34), end: (527, 41)
+    capture: 0 - name, start: (526, 34), end: (526, 43), text: `arguments`
+  pattern: 9
+    capture: reference.call, start: (528, 22), end: (529, 35)
+    capture: 0 - name, start: (528, 22), end: (528, 38), text: `macro_invocation`
+  pattern: 9
+    capture: reference.call, start: (530, 17), end: (532, 37)
+    capture: 0 - name, start: (530, 17), end: (530, 27), text: `token_tree`
+  pattern: 9
+    capture: reference.call, start: (531, 19), end: (532, 36)
+    capture: 0 - name, start: (531, 19), end: (531, 33), text: `string_literal`
+  pattern: 9
+    capture: reference.call, start: (533, 13), end: (534, 38)
+    capture: 0 - name, start: (533, 13), end: (533, 22), text: `match_arm`
+  pattern: 9
+    capture: reference.call, start: (548, 1), end: (562, 31)
+    capture: 0 - name, start: (548, 1), end: (548, 12), text: `source_file`
+  pattern: 9
+    capture: reference.call, start: (549, 3), end: (562, 30)
+    capture: 0 - name, start: (549, 3), end: (549, 23), text: `expression_statement`
+  pattern: 9
+    capture: reference.call, start: (550, 5), end: (551, 18)
+    capture: 0 - name, start: (550, 5), end: (550, 21), text: `match_expression`
+  pattern: 9
+    capture: reference.call, start: (552, 7), end: (559, 28)
+    capture: 0 - name, start: (552, 7), end: (552, 18), text: `match_block`
+  pattern: 9
+    capture: reference.call, start: (553, 9), end: (558, 36)
+    capture: 0 - name, start: (553, 9), end: (553, 18), text: `match_arm`
+  pattern: 9
+    capture: reference.call, start: (554, 11), end: (558, 35)
+    capture: 0 - name, start: (554, 11), end: (554, 24), text: `match_pattern`
+  pattern: 9
+    capture: reference.call, start: (555, 13), end: (556, 26)
+    capture: 0 - name, start: (555, 13), end: (555, 28), text: `generic_pattern`
+  pattern: 9
+    capture: reference.call, start: (557, 15), end: (558, 33)
+    capture: 0 - name, start: (557, 15), end: (557, 29), text: `type_arguments`
+  pattern: 9
+    capture: reference.call, start: (560, 9), end: (561, 25)
+    capture: 0 - name, start: (560, 9), end: (560, 18), text: `match_arm`

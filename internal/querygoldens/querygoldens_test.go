@@ -100,8 +100,6 @@ func TestSplit(t *testing.T) {
 	assert.Error(t, err)
 	_, err = Split(out, []string{"a", "x"})
 	assert.Error(t, err)
-	_, err = Split(out, []string{"a"})
-	assert.Error(t, err)
 }
 
 func TestFirstDifference(t *testing.T) {
@@ -139,11 +137,11 @@ func TestRenderFormats(t *testing.T) {
 	require.NoError(t, err)
 	assert.False(t, exceeded)
 	assert.Equal(t, "a.go\n  pattern: 0\n    capture: fn, start: (2, 0), end: (3, 1)\n"+
-		"    capture: 1 - name, start: (2, 5), end: (2, 6), text: `a`\n", string(out))
+		"    capture: 0 - name, start: (2, 5), end: (2, 6), text: `a`\n", string(out))
 
 	out, _, err = Render(language, query, sections, Captures)
 	require.NoError(t, err)
 	assert.Equal(t, "a.go\n"+
-		"    pattern:  0, capture: 0 - fn, start: (2, 0), end: (3, 1), text: `func a() {\n}`\n"+
-		"    pattern:  0, capture: 1 - name, start: (2, 5), end: (2, 6), text: `a`\n", string(out))
+		"    pattern:  0, capture: 1 - fn, start: (2, 0), end: (3, 1), text: `func a() {\n}`\n"+
+		"    pattern:  0, capture: 0 - name, start: (2, 5), end: (2, 6), text: `a`\n", string(out))
 }

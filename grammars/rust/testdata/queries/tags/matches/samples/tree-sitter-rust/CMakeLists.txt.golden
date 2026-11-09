@@ -1,0 +1,34 @@
+samples/tree-sitter-rust/CMakeLists.txt
+  pattern: 9
+    capture: 7 - reference.call, start: (0, 0), end: (0, 36), text: `cmake_minimum_required(VERSION 3.13)`
+    capture: 0 - name, start: (0, 0), end: (0, 22), text: `cmake_minimum_required`
+  pattern: 9
+    capture: 7 - reference.call, start: (17, 0), end: (17, 63), text: `find_program(TREE_SITTER_CLI tree-sitter DOC "Tree-sitter CLI")`
+    capture: 0 - name, start: (17, 0), end: (17, 12), text: `find_program`
+  pattern: 9
+    capture: reference.call, start: (19, 0), end: (24, 49)
+    capture: 0 - name, start: (19, 0), end: (19, 18), text: `add_custom_command`
+  pattern: 9
+    capture: 7 - reference.call, start: (30, 0), end: (30, 56), text: `target_include_directories(tree-sitter-rust PRIVATE src)`
+    capture: 0 - name, start: (30, 0), end: (30, 26), text: `target_include_directories`
+  pattern: 9
+    capture: reference.call, start: (36, 0), end: (41, 39)
+    capture: 0 - name, start: (36, 0), end: (36, 21), text: `set_target_properties`
+  pattern: 9
+    capture: reference.call, start: (43, 0), end: (44, 71)
+    capture: 0 - name, start: (43, 0), end: (43, 14), text: `configure_file`
+  pattern: 9
+    capture: 7 - reference.call, start: (46, 0), end: (46, 23), text: `include(GNUInstallDirs)`
+    capture: 0 - name, start: (46, 0), end: (46, 7), text: `include`
+  pattern: 9
+    capture: reference.call, start: (48, 0), end: (49, 62)
+    capture: 0 - name, start: (48, 0), end: (48, 7), text: `install`
+  pattern: 9
+    capture: reference.call, start: (50, 0), end: (51, 61)
+    capture: 0 - name, start: (50, 0), end: (50, 7), text: `install`
+  pattern: 9
+    capture: reference.call, start: (52, 0), end: (53, 54)
+    capture: 0 - name, start: (52, 0), end: (52, 7), text: `install`
+  pattern: 9
+    capture: reference.call, start: (55, 0), end: (57, 45)
+    capture: 0 - name, start: (55, 0), end: (55, 17), text: `add_custom_target`

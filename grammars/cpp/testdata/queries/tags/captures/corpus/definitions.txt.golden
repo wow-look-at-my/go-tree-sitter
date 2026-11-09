@@ -1,0 +1,61 @@
+corpus/definitions.txt/000
+    pattern:  4, capture: 4 - definition.method, start: (1, 4), end: (1, 12), text: `T::foo()`
+    pattern:  4, capture: 3 - local.scope, start: (1, 4), end: (1, 5), text: `T`
+    pattern:  4, capture: 0 - name, start: (1, 7), end: (1, 10), text: `foo`
+    pattern:  4, capture: 4 - definition.method, start: (2, 4), end: (2, 18), text: `T::foo() const`
+    pattern:  4, capture: 3 - local.scope, start: (2, 4), end: (2, 5), text: `T`
+    pattern:  4, capture: 0 - name, start: (2, 7), end: (2, 10), text: `foo`
+corpus/definitions.txt/001
+    pattern:  4, capture: 4 - definition.method, start: (1, 0), end: (1, 6), text: `T::T()`
+    pattern:  4, capture: 3 - local.scope, start: (1, 0), end: (1, 1), text: `T`
+    pattern:  4, capture: 0 - name, start: (1, 3), end: (1, 4), text: `T`
+    pattern:  4, capture: 4 - definition.method, start: (3, 0), end: (3, 6), text: `T::T()`
+    pattern:  4, capture: 3 - local.scope, start: (3, 0), end: (3, 1), text: `T`
+    pattern:  4, capture: 0 - name, start: (3, 3), end: (3, 4), text: `T`
+    pattern:  4, capture: 4 - definition.method, start: (7, 0), end: (7, 6), text: `T::T()`
+    pattern:  4, capture: 3 - local.scope, start: (7, 0), end: (7, 1), text: `T`
+    pattern:  4, capture: 0 - name, start: (7, 3), end: (7, 4), text: `T`
+    pattern:  4, capture: 4 - definition.method, start: (9, 0), end: (9, 6), text: `T::T()`
+    pattern:  4, capture: 3 - local.scope, start: (9, 0), end: (9, 1), text: `T`
+    pattern:  4, capture: 0 - name, start: (9, 3), end: (9, 4), text: `T`
+corpus/definitions.txt/002
+    pattern:  7, capture: 1 - definition.class, start: (1, 0), end: (6, 1), text: `class C {
+  explicit C(int f) : f_(f) {}
+
+ private:
+  int f_;
+}`
+    pattern:  7, capture: 0 - name, start: (1, 6), end: (1, 7), text: `C`
+    pattern:  2, capture: 2 - definition.function, start: (2, 11), end: (2, 19), text: `C(int f)`
+    pattern:  2, capture: 0 - name, start: (2, 11), end: (2, 12), text: `C`
+corpus/definitions.txt/003
+    pattern:  7, capture: 1 - definition.class, start: (1, 0), end: (4, 1), text: `class C {
+  explicit C(int f);
+  explicit(true) C(long f);
+}`
+    pattern:  7, capture: 0 - name, start: (1, 6), end: (1, 7), text: `C`
+    pattern:  2, capture: 2 - definition.function, start: (2, 11), end: (2, 19), text: `C(int f)`
+    pattern:  2, capture: 0 - name, start: (2, 11), end: (2, 12), text: `C`
+    pattern:  2, capture: 2 - definition.function, start: (3, 17), end: (3, 26), text: `C(long f)`
+    pattern:  2, capture: 0 - name, start: (3, 17), end: (3, 18), text: `C`
+corpus/definitions.txt/004
+    pattern:  7, capture: 1 - definition.class, start: (1, 0), end: (8, 1), text: `class A : public B {
+  A() = default;
+  A(A &&) = delete;
+  void f() = delete;
+  A& operator=(const A&) = default;
+  A& operator=(A&&) = delete;
+  ~A() = 0;
+}`
+    pattern:  7, capture: 0 - name, start: (1, 6), end: (1, 7), text: `A`
+    pattern:  2, capture: 2 - definition.function, start: (2, 2), end: (2, 5), text: `A()`
+    pattern:  2, capture: 0 - name, start: (2, 2), end: (2, 3), text: `A`
+    pattern:  2, capture: 2 - definition.function, start: (3, 2), end: (3, 9), text: `A(A &&)`
+    pattern:  2, capture: 0 - name, start: (3, 2), end: (3, 3), text: `A`
+    pattern:  3, capture: 2 - definition.function, start: (4, 7), end: (4, 10), text: `f()`
+    pattern:  3, capture: 0 - name, start: (4, 7), end: (4, 8), text: `f`
+corpus/definitions.txt/005
+corpus/definitions.txt/006
+    pattern:  2, capture: 2 - definition.function, start: (1, 5), end: (1, 10), text: `foo()`
+    pattern:  2, capture: 0 - name, start: (1, 5), end: (1, 8), text: `foo`
+corpus/definitions.txt/007

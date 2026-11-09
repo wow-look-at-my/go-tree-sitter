@@ -1,0 +1,303 @@
+examples/doc-build.sh
+    pattern:  4, capture: 4 - comment, start: (0, 0), end: (0, 19), text: `#!/usr/bin/env bash`
+    pattern:  3, capture: 3 - keyword, start: (2, 0), end: (2, 2), text: `if`
+    pattern:  8, capture: 7 - operator, start: (2, 6), end: (2, 7), text: `$`
+    pattern:  2, capture: 2 - property, start: (2, 7), end: (2, 12), text: `DEBUG`
+    pattern:  0, capture: 0 - string, start: (2, 16), end: (2, 18), text: `""`
+    pattern:  3, capture: 3 - keyword, start: (2, 23), end: (2, 27), text: `then`
+    pattern:  1, capture: 1 - function, start: (3, 2), end: (3, 5), text: `set`
+    pattern:  9, capture: 8 - constant, start: (3, 6), end: (3, 8), text: `-x`
+    pattern:  3, capture: 3 - keyword, start: (4, 0), end: (4, 2), text: `fi`
+    pattern:  1, capture: 1 - function, start: (5, 0), end: (5, 3), text: `set`
+    pattern:  9, capture: 8 - constant, start: (5, 4), end: (5, 6), text: `-o`
+    pattern:  1, capture: 1 - function, start: (6, 0), end: (6, 3), text: `set`
+    pattern:  9, capture: 8 - constant, start: (6, 4), end: (6, 6), text: `-o`
+    pattern:  3, capture: 3 - keyword, start: (8, 0), end: (8, 2), text: `if`
+    pattern:  3, capture: 3 - keyword, start: (8, 42), end: (8, 46), text: `then`
+    pattern:  2, capture: 2 - property, start: (9, 2), end: (9, 4), text: `ps`
+    pattern:  3, capture: 3 - keyword, start: (10, 2), end: (10, 4), text: `if`
+    pattern:  3, capture: 3 - keyword, start: (10, 34), end: (10, 38), text: `then`
+    pattern:  2, capture: 2 - property, start: (11, 4), end: (11, 7), text: `pid`
+    pattern:  7, capture: 6 - embedded, start: (11, 8), end: (11, 35), text: `$(cat .building_marked-man)`
+    pattern:  1, capture: 1 - function, start: (11, 10), end: (11, 13), text: `cat`
+    pattern:  2, capture: 2 - property, start: (12, 4), end: (12, 6), text: `ps`
+    pattern:  7, capture: 6 - embedded, start: (12, 7), end: (12, 40), text: `$(ps -p $pid | grep $pid | wc -l)`
+    pattern:  1, capture: 1 - function, start: (12, 9), end: (12, 11), text: `ps`
+    pattern:  9, capture: 8 - constant, start: (12, 12), end: (12, 14), text: `-p`
+    pattern:  8, capture: 7 - operator, start: (12, 15), end: (12, 16), text: `$`
+    pattern:  2, capture: 2 - property, start: (12, 16), end: (12, 19), text: `pid`
+    pattern:  8, capture: 7 - operator, start: (12, 20), end: (12, 21), text: `|`
+    pattern:  1, capture: 1 - function, start: (12, 22), end: (12, 26), text: `grep`
+    pattern:  8, capture: 7 - operator, start: (12, 27), end: (12, 28), text: `$`
+    pattern:  2, capture: 2 - property, start: (12, 28), end: (12, 31), text: `pid`
+    pattern:  8, capture: 7 - operator, start: (12, 32), end: (12, 33), text: `|`
+    pattern:  1, capture: 1 - function, start: (12, 34), end: (12, 36), text: `wc`
+    pattern:  9, capture: 8 - constant, start: (12, 37), end: (12, 39), text: `-l`
+    pattern:  1, capture: 1 - function, start: (12, 44), end: (12, 48), text: `true`
+    pattern:  3, capture: 3 - keyword, start: (13, 2), end: (13, 4), text: `fi`
+    pattern:  3, capture: 3 - keyword, start: (15, 2), end: (15, 4), text: `if`
+    pattern:  8, capture: 7 - operator, start: (15, 33), end: (15, 35), text: `&&`
+    pattern:  8, capture: 7 - operator, start: (15, 38), end: (15, 39), text: `$`
+    pattern:  2, capture: 2 - property, start: (15, 39), end: (15, 41), text: `ps`
+    pattern:  3, capture: 3 - keyword, start: (15, 50), end: (15, 54), text: `then`
+    pattern:  3, capture: 3 - keyword, start: (16, 4), end: (16, 9), text: `while`
+    pattern:  3, capture: 3 - keyword, start: (16, 39), end: (16, 41), text: `do`
+    pattern:  1, capture: 1 - function, start: (17, 6), end: (17, 11), text: `sleep`
+    pattern:  3, capture: 3 - keyword, start: (18, 4), end: (18, 8), text: `done`
+    pattern:  3, capture: 3 - keyword, start: (19, 2), end: (19, 6), text: `else`
+    pattern:  4, capture: 4 - comment, start: (20, 4), end: (20, 76), text: `# a race to see which make process will be the one to install marked-man`
+    pattern:  1, capture: 1 - function, start: (21, 4), end: (21, 8), text: `echo`
+    pattern:  8, capture: 7 - operator, start: (21, 9), end: (21, 10), text: `$`
+    pattern:  8, capture: 7 - operator, start: (21, 12), end: (21, 13), text: `>`
+    pattern:  1, capture: 1 - function, start: (22, 4), end: (22, 9), text: `sleep`
+    pattern:  3, capture: 3 - keyword, start: (23, 4), end: (23, 6), text: `if`
+    pattern:  7, capture: 6 - embedded, start: (23, 9), end: (23, 36), text: `$(cat .building_marked-man)`
+    pattern:  1, capture: 1 - function, start: (23, 11), end: (23, 14), text: `cat`
+    pattern:  8, capture: 7 - operator, start: (23, 40), end: (23, 41), text: `$`
+    pattern:  3, capture: 3 - keyword, start: (23, 46), end: (23, 50), text: `then`
+    pattern:  1, capture: 1 - function, start: (24, 6), end: (24, 10), text: `make`
+    pattern:  1, capture: 1 - function, start: (25, 6), end: (25, 8), text: `rm`
+    pattern:  3, capture: 3 - keyword, start: (26, 4), end: (26, 8), text: `else`
+    pattern:  3, capture: 3 - keyword, start: (27, 6), end: (27, 11), text: `while`
+    pattern:  3, capture: 3 - keyword, start: (27, 41), end: (27, 43), text: `do`
+    pattern:  1, capture: 1 - function, start: (28, 8), end: (28, 13), text: `sleep`
+    pattern:  3, capture: 3 - keyword, start: (29, 6), end: (29, 10), text: `done`
+    pattern:  3, capture: 3 - keyword, start: (30, 4), end: (30, 6), text: `fi`
+    pattern:  3, capture: 3 - keyword, start: (31, 2), end: (31, 4), text: `fi`
+    pattern:  3, capture: 3 - keyword, start: (32, 0), end: (32, 2), text: `fi`
+    pattern:  3, capture: 3 - keyword, start: (34, 0), end: (34, 2), text: `if`
+    pattern:  3, capture: 3 - keyword, start: (34, 38), end: (34, 42), text: `then`
+    pattern:  2, capture: 2 - property, start: (35, 2), end: (35, 4), text: `ps`
+    pattern:  3, capture: 3 - keyword, start: (36, 2), end: (36, 4), text: `if`
+    pattern:  3, capture: 3 - keyword, start: (36, 30), end: (36, 34), text: `then`
+    pattern:  2, capture: 2 - property, start: (37, 4), end: (37, 7), text: `pid`
+    pattern:  7, capture: 6 - embedded, start: (37, 8), end: (37, 31), text: `$(cat .building_marked)`
+    pattern:  1, capture: 1 - function, start: (37, 10), end: (37, 13), text: `cat`
+    pattern:  2, capture: 2 - property, start: (38, 4), end: (38, 6), text: `ps`
+    pattern:  7, capture: 6 - embedded, start: (38, 7), end: (38, 40), text: `$(ps -p $pid | grep $pid | wc -l)`
+    pattern:  1, capture: 1 - function, start: (38, 9), end: (38, 11), text: `ps`
+    pattern:  9, capture: 8 - constant, start: (38, 12), end: (38, 14), text: `-p`
+    pattern:  8, capture: 7 - operator, start: (38, 15), end: (38, 16), text: `$`
+    pattern:  2, capture: 2 - property, start: (38, 16), end: (38, 19), text: `pid`
+    pattern:  8, capture: 7 - operator, start: (38, 20), end: (38, 21), text: `|`
+    pattern:  1, capture: 1 - function, start: (38, 22), end: (38, 26), text: `grep`
+    pattern:  8, capture: 7 - operator, start: (38, 27), end: (38, 28), text: `$`
+    pattern:  2, capture: 2 - property, start: (38, 28), end: (38, 31), text: `pid`
+    pattern:  8, capture: 7 - operator, start: (38, 32), end: (38, 33), text: `|`
+    pattern:  1, capture: 1 - function, start: (38, 34), end: (38, 36), text: `wc`
+    pattern:  9, capture: 8 - constant, start: (38, 37), end: (38, 39), text: `-l`
+    pattern:  1, capture: 1 - function, start: (38, 44), end: (38, 48), text: `true`
+    pattern:  3, capture: 3 - keyword, start: (39, 2), end: (39, 4), text: `fi`
+    pattern:  3, capture: 3 - keyword, start: (41, 2), end: (41, 4), text: `if`
+    pattern:  8, capture: 7 - operator, start: (41, 29), end: (41, 31), text: `&&`
+    pattern:  8, capture: 7 - operator, start: (41, 34), end: (41, 35), text: `$`
+    pattern:  2, capture: 2 - property, start: (41, 35), end: (41, 37), text: `ps`
+    pattern:  3, capture: 3 - keyword, start: (41, 46), end: (41, 50), text: `then`
+    pattern:  3, capture: 3 - keyword, start: (42, 4), end: (42, 9), text: `while`
+    pattern:  3, capture: 3 - keyword, start: (42, 35), end: (42, 37), text: `do`
+    pattern:  1, capture: 1 - function, start: (43, 6), end: (43, 11), text: `sleep`
+    pattern:  3, capture: 3 - keyword, start: (44, 4), end: (44, 8), text: `done`
+    pattern:  3, capture: 3 - keyword, start: (45, 2), end: (45, 6), text: `else`
+    pattern:  4, capture: 4 - comment, start: (46, 4), end: (46, 72), text: `# a race to see which make process will be the one to install marked`
+    pattern:  1, capture: 1 - function, start: (47, 4), end: (47, 8), text: `echo`
+    pattern:  8, capture: 7 - operator, start: (47, 9), end: (47, 10), text: `$`
+    pattern:  8, capture: 7 - operator, start: (47, 12), end: (47, 13), text: `>`
+    pattern:  1, capture: 1 - function, start: (48, 4), end: (48, 9), text: `sleep`
+    pattern:  3, capture: 3 - keyword, start: (49, 4), end: (49, 6), text: `if`
+    pattern:  7, capture: 6 - embedded, start: (49, 9), end: (49, 32), text: `$(cat .building_marked)`
+    pattern:  1, capture: 1 - function, start: (49, 11), end: (49, 14), text: `cat`
+    pattern:  8, capture: 7 - operator, start: (49, 36), end: (49, 37), text: `$`
+    pattern:  3, capture: 3 - keyword, start: (49, 42), end: (49, 46), text: `then`
+    pattern:  1, capture: 1 - function, start: (50, 6), end: (50, 10), text: `make`
+    pattern:  1, capture: 1 - function, start: (51, 6), end: (51, 8), text: `rm`
+    pattern:  3, capture: 3 - keyword, start: (52, 4), end: (52, 8), text: `else`
+    pattern:  3, capture: 3 - keyword, start: (53, 6), end: (53, 11), text: `while`
+    pattern:  3, capture: 3 - keyword, start: (53, 37), end: (53, 39), text: `do`
+    pattern:  1, capture: 1 - function, start: (54, 8), end: (54, 13), text: `sleep`
+    pattern:  3, capture: 3 - keyword, start: (55, 6), end: (55, 10), text: `done`
+    pattern:  3, capture: 3 - keyword, start: (56, 4), end: (56, 6), text: `fi`
+    pattern:  3, capture: 3 - keyword, start: (57, 2), end: (57, 4), text: `fi`
+    pattern:  3, capture: 3 - keyword, start: (58, 0), end: (58, 2), text: `fi`
+    pattern:  2, capture: 2 - property, start: (60, 0), end: (60, 3), text: `src`
+    pattern:  8, capture: 7 - operator, start: (60, 4), end: (60, 5), text: `$`
+    pattern:  2, capture: 2 - property, start: (60, 5), end: (60, 6), text: `1`
+    pattern:  2, capture: 2 - property, start: (61, 0), end: (61, 4), text: `dest`
+    pattern:  8, capture: 7 - operator, start: (61, 5), end: (61, 6), text: `$`
+    pattern:  2, capture: 2 - property, start: (61, 6), end: (61, 7), text: `2`
+    pattern:  2, capture: 2 - property, start: (62, 0), end: (62, 4), text: `name`
+    pattern:  7, capture: 6 - embedded, start: (62, 5), end: (62, 26), text: `$(basename ${src%.*})`
+    pattern:  1, capture: 1 - function, start: (62, 7), end: (62, 15), text: `basename`
+    pattern:  7, capture: 6 - embedded, start: (62, 16), end: (62, 25), text: `${src%.*}`
+    pattern:  2, capture: 2 - property, start: (62, 18), end: (62, 21), text: `src`
+    pattern:  2, capture: 2 - property, start: (63, 0), end: (63, 4), text: `date`
+    pattern:  7, capture: 6 - embedded, start: (63, 5), end: (63, 36), text: `$(date -u +'%Y-%m-%d %H:%M:%S')`
+    pattern:  1, capture: 1 - function, start: (63, 7), end: (63, 11), text: `date`
+    pattern:  9, capture: 8 - constant, start: (63, 12), end: (63, 14), text: `-u`
+    pattern:  0, capture: 0 - string, start: (63, 16), end: (63, 35), text: `'%Y-%m-%d %H:%M:%S'`
+    pattern:  2, capture: 2 - property, start: (64, 0), end: (64, 7), text: `version`
+    pattern:  7, capture: 6 - embedded, start: (64, 8), end: (64, 25), text: `$(node cli.js -v)`
+    pattern:  1, capture: 1 - function, start: (64, 10), end: (64, 14), text: `node`
+    pattern:  9, capture: 8 - constant, start: (64, 22), end: (64, 24), text: `-v`
+    pattern:  1, capture: 1 - function, start: (66, 0), end: (66, 5), text: `mkdir`
+    pattern:  9, capture: 8 - constant, start: (66, 6), end: (66, 8), text: `-p`
+    pattern:  7, capture: 6 - embedded, start: (66, 9), end: (66, 25), text: `$(dirname $dest)`
+    pattern:  1, capture: 1 - function, start: (66, 11), end: (66, 18), text: `dirname`
+    pattern:  8, capture: 7 - operator, start: (66, 19), end: (66, 20), text: `$`
+    pattern:  2, capture: 2 - property, start: (66, 20), end: (66, 24), text: `dest`
+    pattern:  5, capture: 1 - function, start: (68, 0), end: (68, 19), text: `html_replace_tokens`
+    pattern:  2, capture: 2 - property, start: (69, 7), end: (69, 10), text: `url`
+    pattern:  8, capture: 7 - operator, start: (69, 11), end: (69, 12), text: `$`
+    pattern:  2, capture: 2 - property, start: (69, 12), end: (69, 13), text: `1`
+    pattern:  1, capture: 1 - function, start: (70, 1), end: (70, 4), text: `sed`
+    pattern:  0, capture: 0 - string, start: (70, 5), end: (70, 23), text: `"s|@NAME@|$name|g"`
+    pattern:  8, capture: 7 - operator, start: (70, 15), end: (70, 16), text: `$`
+    pattern:  2, capture: 2 - property, start: (70, 16), end: (70, 20), text: `name`
+    pattern:  8, capture: 7 - operator, start: (71, 1), end: (71, 2), text: `|`
+    pattern:  1, capture: 1 - function, start: (71, 3), end: (71, 6), text: `sed`
+    pattern:  0, capture: 0 - string, start: (71, 7), end: (71, 25), text: `"s|@DATE@|$date|g"`
+    pattern:  8, capture: 7 - operator, start: (71, 17), end: (71, 18), text: `$`
+    pattern:  2, capture: 2 - property, start: (71, 18), end: (71, 22), text: `date`
+    pattern:  8, capture: 7 - operator, start: (72, 1), end: (72, 2), text: `|`
+    pattern:  1, capture: 1 - function, start: (72, 3), end: (72, 6), text: `sed`
+    pattern:  0, capture: 0 - string, start: (72, 7), end: (72, 23), text: `"s|@URL@|$url|g"`
+    pattern:  8, capture: 7 - operator, start: (72, 16), end: (72, 17), text: `$`
+    pattern:  2, capture: 2 - property, start: (72, 17), end: (72, 20), text: `url`
+    pattern:  8, capture: 7 - operator, start: (73, 1), end: (73, 2), text: `|`
+    pattern:  1, capture: 1 - function, start: (73, 3), end: (73, 6), text: `sed`
+    pattern:  0, capture: 0 - string, start: (73, 7), end: (73, 31), text: `"s|@VERSION@|$version|g"`
+    pattern:  8, capture: 7 - operator, start: (73, 20), end: (73, 21), text: `$`
+    pattern:  2, capture: 2 - property, start: (73, 21), end: (73, 28), text: `version`
+    pattern:  8, capture: 7 - operator, start: (74, 1), end: (74, 2), text: `|`
+    pattern:  1, capture: 1 - function, start: (74, 3), end: (74, 7), text: `perl`
+    pattern:  9, capture: 8 - constant, start: (74, 8), end: (74, 10), text: `-p`
+    pattern:  9, capture: 8 - constant, start: (74, 11), end: (74, 13), text: `-e`
+    pattern:  0, capture: 0 - string, start: (74, 14), end: (74, 87), text: `'s/<h1([^>]*)>([^\(]*\([0-9]\)) -- (.*?)<\/h1>/<h1>\2<\/h1> <p>\3<\/p>/g'`
+    pattern:  8, capture: 7 - operator, start: (75, 1), end: (75, 2), text: `|`
+    pattern:  1, capture: 1 - function, start: (75, 3), end: (75, 7), text: `perl`
+    pattern:  9, capture: 8 - constant, start: (75, 8), end: (75, 10), text: `-p`
+    pattern:  9, capture: 8 - constant, start: (75, 11), end: (75, 13), text: `-e`
+    pattern:  0, capture: 0 - string, start: (75, 14), end: (75, 31), text: `'s/npm-npm/npm/g'`
+    pattern:  8, capture: 7 - operator, start: (76, 1), end: (76, 2), text: `|`
+    pattern:  1, capture: 1 - function, start: (76, 3), end: (76, 7), text: `perl`
+    pattern:  9, capture: 8 - constant, start: (76, 8), end: (76, 10), text: `-p`
+    pattern:  9, capture: 8 - constant, start: (76, 11), end: (76, 13), text: `-e`
+    pattern:  0, capture: 0 - string, start: (76, 14), end: (76, 107), text: `'s/([^"-])(npm-)?README(?!\.html)(\(1\))?/\1<a href="..\/..\/doc\/README.html">README<\/a>/g'`
+    pattern:  8, capture: 7 - operator, start: (77, 1), end: (77, 2), text: `|`
+    pattern:  1, capture: 1 - function, start: (77, 3), end: (77, 7), text: `perl`
+    pattern:  9, capture: 8 - constant, start: (77, 8), end: (77, 10), text: `-p`
+    pattern:  9, capture: 8 - constant, start: (77, 11), end: (77, 13), text: `-e`
+    pattern:  0, capture: 0 - string, start: (77, 14), end: (77, 97), text: `'s/<title><a href="[^"]+README.html">README<\/a><\/title>/<title>README<\/title>/g'`
+    pattern:  8, capture: 7 - operator, start: (78, 1), end: (78, 2), text: `|`
+    pattern:  1, capture: 1 - function, start: (78, 3), end: (78, 7), text: `perl`
+    pattern:  9, capture: 8 - constant, start: (78, 8), end: (78, 10), text: `-p`
+    pattern:  9, capture: 8 - constant, start: (78, 11), end: (78, 13), text: `-e`
+    pattern:  0, capture: 0 - string, start: (78, 14), end: (78, 83), text: `'s/([^"-])([^\(> ]+)(\(1\))/\1<a href="..\/cli\/\2.html">\2\3<\/a>/g'`
+    pattern:  8, capture: 7 - operator, start: (79, 1), end: (79, 2), text: `|`
+    pattern:  1, capture: 1 - function, start: (79, 3), end: (79, 7), text: `perl`
+    pattern:  9, capture: 8 - constant, start: (79, 8), end: (79, 10), text: `-p`
+    pattern:  9, capture: 8 - constant, start: (79, 11), end: (79, 13), text: `-e`
+    pattern:  0, capture: 0 - string, start: (79, 14), end: (79, 83), text: `'s/([^"-])([^\(> ]+)(\(3\))/\1<a href="..\/api\/\2.html">\2\3<\/a>/g'`
+    pattern:  8, capture: 7 - operator, start: (80, 1), end: (80, 2), text: `|`
+    pattern:  1, capture: 1 - function, start: (80, 3), end: (80, 7), text: `perl`
+    pattern:  9, capture: 8 - constant, start: (80, 8), end: (80, 10), text: `-p`
+    pattern:  9, capture: 8 - constant, start: (80, 11), end: (80, 13), text: `-e`
+    pattern:  0, capture: 0 - string, start: (80, 14), end: (80, 85), text: `'s/([^"-])([^\(> ]+)(\(5\))/\1<a href="..\/files\/\2.html">\2\3<\/a>/g'`
+    pattern:  8, capture: 7 - operator, start: (81, 1), end: (81, 2), text: `|`
+    pattern:  1, capture: 1 - function, start: (81, 3), end: (81, 7), text: `perl`
+    pattern:  9, capture: 8 - constant, start: (81, 8), end: (81, 10), text: `-p`
+    pattern:  9, capture: 8 - constant, start: (81, 11), end: (81, 13), text: `-e`
+    pattern:  0, capture: 0 - string, start: (81, 14), end: (81, 84), text: `'s/([^"-])([^\(> ]+)(\(7\))/\1<a href="..\/misc\/\2.html">\2\3<\/a>/g'`
+    pattern:  8, capture: 7 - operator, start: (82, 1), end: (82, 2), text: `|`
+    pattern:  1, capture: 1 - function, start: (82, 3), end: (82, 7), text: `perl`
+    pattern:  9, capture: 8 - constant, start: (82, 8), end: (82, 10), text: `-p`
+    pattern:  9, capture: 8 - constant, start: (82, 11), end: (82, 13), text: `-e`
+    pattern:  0, capture: 0 - string, start: (82, 14), end: (82, 53), text: `'s/\([1357]\)<\/a><\/h1>/<\/a><\/h1>/g'`
+    pattern:  8, capture: 7 - operator, start: (83, 1), end: (83, 2), text: `|`
+    pattern:  3, capture: 3 - keyword, start: (83, 4), end: (83, 6), text: `if`
+    pattern:  7, capture: 6 - embedded, start: (83, 9), end: (83, 37), text: `$(basename $(dirname $dest))`
+    pattern:  1, capture: 1 - function, start: (83, 11), end: (83, 19), text: `basename`
+    pattern:  7, capture: 6 - embedded, start: (83, 20), end: (83, 36), text: `$(dirname $dest)`
+    pattern:  1, capture: 1 - function, start: (83, 22), end: (83, 29), text: `dirname`
+    pattern:  8, capture: 7 - operator, start: (83, 30), end: (83, 31), text: `$`
+    pattern:  2, capture: 2 - property, start: (83, 31), end: (83, 35), text: `dest`
+    pattern:  0, capture: 0 - string, start: (83, 41), end: (83, 46), text: `"doc"`
+    pattern:  3, capture: 3 - keyword, start: (83, 50), end: (83, 54), text: `then`
+    pattern:  1, capture: 1 - function, start: (84, 3), end: (84, 7), text: `perl`
+    pattern:  9, capture: 8 - constant, start: (84, 8), end: (84, 10), text: `-p`
+    pattern:  9, capture: 8 - constant, start: (84, 11), end: (84, 13), text: `-e`
+    pattern:  0, capture: 0 - string, start: (84, 14), end: (84, 41), text: `'s/ href="\.\.\// href="/g'`
+    pattern:  3, capture: 3 - keyword, start: (85, 2), end: (85, 6), text: `else`
+    pattern:  1, capture: 1 - function, start: (86, 3), end: (86, 6), text: `cat`
+    pattern:  3, capture: 3 - keyword, start: (87, 2), end: (87, 4), text: `fi`
+    pattern:  5, capture: 1 - function, start: (90, 0), end: (90, 18), text: `man_replace_tokens`
+    pattern:  1, capture: 1 - function, start: (91, 1), end: (91, 4), text: `sed`
+    pattern:  0, capture: 0 - string, start: (91, 5), end: (91, 29), text: `"s|@VERSION@|$version|g"`
+    pattern:  8, capture: 7 - operator, start: (91, 18), end: (91, 19), text: `$`
+    pattern:  2, capture: 2 - property, start: (91, 19), end: (91, 26), text: `version`
+    pattern:  8, capture: 7 - operator, start: (92, 1), end: (92, 2), text: `|`
+    pattern:  1, capture: 1 - function, start: (92, 3), end: (92, 7), text: `perl`
+    pattern:  9, capture: 8 - constant, start: (92, 8), end: (92, 10), text: `-p`
+    pattern:  9, capture: 8 - constant, start: (92, 11), end: (92, 13), text: `-e`
+    pattern:  0, capture: 0 - string, start: (92, 14), end: (92, 63), text: `'s/(npm\\-)?([a-zA-Z\\\.\-]*)\(1\)/npm help \2/g'`
+    pattern:  8, capture: 7 - operator, start: (93, 1), end: (93, 2), text: `|`
+    pattern:  1, capture: 1 - function, start: (93, 3), end: (93, 7), text: `perl`
+    pattern:  9, capture: 8 - constant, start: (93, 8), end: (93, 10), text: `-p`
+    pattern:  9, capture: 8 - constant, start: (93, 11), end: (93, 13), text: `-e`
+    pattern:  0, capture: 0 - string, start: (93, 14), end: (93, 71), text: `'s/(npm\\-)?([a-zA-Z\\\.\-]*)\(([57])\)/npm help \3 \2/g'`
+    pattern:  8, capture: 7 - operator, start: (94, 1), end: (94, 2), text: `|`
+    pattern:  1, capture: 1 - function, start: (94, 3), end: (94, 7), text: `perl`
+    pattern:  9, capture: 8 - constant, start: (94, 8), end: (94, 10), text: `-p`
+    pattern:  9, capture: 8 - constant, start: (94, 11), end: (94, 13), text: `-e`
+    pattern:  0, capture: 0 - string, start: (94, 14), end: (94, 66), text: `'s/(npm\\-)?([a-zA-Z\\\.\-]*)\(3\)/npm apihelp \2/g'`
+    pattern:  8, capture: 7 - operator, start: (95, 1), end: (95, 2), text: `|`
+    pattern:  1, capture: 1 - function, start: (95, 3), end: (95, 7), text: `perl`
+    pattern:  9, capture: 8 - constant, start: (95, 8), end: (95, 10), text: `-p`
+    pattern:  9, capture: 8 - constant, start: (95, 11), end: (95, 13), text: `-e`
+    pattern:  0, capture: 0 - string, start: (95, 14), end: (95, 41), text: `'s/npm\(1\)/npm help npm/g'`
+    pattern:  8, capture: 7 - operator, start: (96, 1), end: (96, 2), text: `|`
+    pattern:  1, capture: 1 - function, start: (96, 3), end: (96, 7), text: `perl`
+    pattern:  9, capture: 8 - constant, start: (96, 8), end: (96, 10), text: `-p`
+    pattern:  9, capture: 8 - constant, start: (96, 11), end: (96, 13), text: `-e`
+    pattern:  0, capture: 0 - string, start: (96, 14), end: (96, 44), text: `'s/npm\(3\)/npm apihelp npm/g'`
+    pattern:  3, capture: 3 - keyword, start: (99, 0), end: (99, 4), text: `case`
+    pattern:  8, capture: 7 - operator, start: (99, 5), end: (99, 6), text: `$`
+    pattern:  2, capture: 2 - property, start: (99, 6), end: (99, 10), text: `dest`
+    pattern:  3, capture: 3 - keyword, start: (99, 11), end: (99, 13), text: `in`
+    pattern:  1, capture: 1 - function, start: (101, 4), end: (101, 34), text: `./node_modules/.bin/marked-man`
+    pattern:  9, capture: 8 - constant, start: (101, 35), end: (101, 41), text: `--roff`
+    pattern:  8, capture: 7 - operator, start: (101, 42), end: (101, 43), text: `$`
+    pattern:  2, capture: 2 - property, start: (101, 43), end: (101, 46), text: `src`
+    pattern:  8, capture: 7 - operator, start: (102, 4), end: (102, 5), text: `|`
+    pattern:  1, capture: 1 - function, start: (102, 6), end: (102, 24), text: `man_replace_tokens`
+    pattern:  8, capture: 7 - operator, start: (102, 25), end: (102, 26), text: `>`
+    pattern:  8, capture: 7 - operator, start: (102, 27), end: (102, 28), text: `$`
+    pattern:  2, capture: 2 - property, start: (102, 28), end: (102, 32), text: `dest`
+    pattern:  1, capture: 1 - function, start: (103, 4), end: (103, 8), text: `exit`
+    pattern:  8, capture: 7 - operator, start: (103, 9), end: (103, 10), text: `$`
+    pattern:  2, capture: 2 - property, start: (106, 4), end: (106, 7), text: `url`
+    pattern:  7, capture: 6 - embedded, start: (106, 8), end: (106, 23), text: `${dest/html\//}`
+    pattern:  2, capture: 2 - property, start: (106, 10), end: (106, 14), text: `dest`
+    pattern:  1, capture: 1 - function, start: (107, 5), end: (107, 8), text: `cat`
+    pattern:  8, capture: 7 - operator, start: (107, 27), end: (107, 29), text: `&&`
+    pattern:  1, capture: 1 - function, start: (108, 5), end: (108, 8), text: `cat`
+    pattern:  8, capture: 7 - operator, start: (108, 9), end: (108, 10), text: `$`
+    pattern:  2, capture: 2 - property, start: (108, 10), end: (108, 13), text: `src`
+    pattern:  8, capture: 7 - operator, start: (108, 14), end: (108, 15), text: `|`
+    pattern:  1, capture: 1 - function, start: (108, 16), end: (108, 42), text: `./node_modules/.bin/marked`
+    pattern:  8, capture: 7 - operator, start: (108, 43), end: (108, 45), text: `&&`
+    pattern:  1, capture: 1 - function, start: (109, 5), end: (109, 8), text: `cat`
+    pattern:  8, capture: 7 - operator, start: (110, 4), end: (110, 5), text: `|`
+    pattern:  1, capture: 1 - function, start: (110, 6), end: (110, 25), text: `html_replace_tokens`
+    pattern:  8, capture: 7 - operator, start: (110, 26), end: (110, 27), text: `$`
+    pattern:  2, capture: 2 - property, start: (110, 27), end: (110, 30), text: `url`
+    pattern:  8, capture: 7 - operator, start: (111, 4), end: (111, 5), text: `>`
+    pattern:  8, capture: 7 - operator, start: (111, 6), end: (111, 7), text: `$`
+    pattern:  2, capture: 2 - property, start: (111, 7), end: (111, 11), text: `dest`
+    pattern:  1, capture: 1 - function, start: (112, 4), end: (112, 8), text: `exit`
+    pattern:  8, capture: 7 - operator, start: (112, 9), end: (112, 10), text: `$`
+    pattern:  1, capture: 1 - function, start: (115, 4), end: (115, 8), text: `echo`
+    pattern:  0, capture: 0 - string, start: (115, 9), end: (115, 42), text: `"Invalid destination type: $dest"`
+    pattern:  8, capture: 7 - operator, start: (115, 36), end: (115, 37), text: `$`
+    pattern:  2, capture: 2 - property, start: (115, 37), end: (115, 41), text: `dest`
+    pattern:  1, capture: 1 - function, start: (116, 4), end: (116, 8), text: `exit`
+    pattern:  3, capture: 3 - keyword, start: (118, 0), end: (118, 4), text: `esac`

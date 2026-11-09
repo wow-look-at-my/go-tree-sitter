@@ -1,0 +1,26 @@
+corpus/modules.txt/000
+corpus/modules.txt/001
+corpus/modules.txt/002
+corpus/modules.txt/003
+corpus/modules.txt/004
+corpus/modules.txt/005
+corpus/modules.txt/006
+corpus/modules.txt/007
+corpus/modules.txt/008
+corpus/modules.txt/009
+corpus/modules.txt/010
+    pattern:  2, capture: 2 - definition.function, start: (3, 19), end: (3, 26), text: `hello()`
+    pattern:  2, capture: 0 - name, start: (3, 19), end: (3, 24), text: `hello`
+    pattern:  2, capture: 2 - definition.function, start: (5, 12), end: (5, 19), text: `world()`
+    pattern:  2, capture: 0 - name, start: (5, 12), end: (5, 17), text: `world`
+    pattern:  2, capture: 2 - definition.function, start: (8, 6), end: (8, 11), text: `one()`
+    pattern:  2, capture: 0 - name, start: (8, 6), end: (8, 9), text: `one`
+    pattern:  2, capture: 2 - definition.function, start: (9, 6), end: (9, 12), text: `zero()`
+    pattern:  2, capture: 0 - name, start: (9, 6), end: (9, 10), text: `zero`
+    pattern:  2, capture: 2 - definition.function, start: (13, 12), end: (13, 21), text: `english()`
+    pattern:  2, capture: 0 - name, start: (13, 12), end: (13, 19), text: `english`
+    pattern:  2, capture: 2 - definition.function, start: (14, 12), end: (14, 20), text: `french()`
+    pattern:  2, capture: 0 - name, start: (14, 12), end: (14, 18), text: `french`
+corpus/modules.txt/011
+    pattern:  7, capture: 1 - definition.class, start: (15, 0), end: (15, 9), text: `class Foo`
+    pattern:  7, capture: 0 - name, start: (15, 6), end: (15, 9), text: `Foo`

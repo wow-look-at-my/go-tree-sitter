@@ -1,0 +1,39 @@
+samples/tree-sitter-rust/CMakeLists.txt
+    pattern:  9, capture: 7 - reference.call, start: (0, 0), end: (0, 36), text: `cmake_minimum_required(VERSION 3.13)`
+    pattern:  9, capture: 0 - name, start: (0, 0), end: (0, 22), text: `cmake_minimum_required`
+    pattern:  9, capture: 7 - reference.call, start: (17, 0), end: (17, 63), text: `find_program(TREE_SITTER_CLI tree-sitter DOC "Tree-sitter CLI")`
+    pattern:  9, capture: 0 - name, start: (17, 0), end: (17, 12), text: `find_program`
+    pattern:  9, capture: 7 - reference.call, start: (19, 0), end: (24, 49), text: `add_custom_command(OUTPUT "${CMAKE_CURRENT_SOURCE_DIR}/src/parser.c"
+                   DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/src/grammar.json"
+                   COMMAND "${TREE_SITTER_CLI}" generate src/grammar.json
+                            --abi=${TREE_SITTER_ABI_VERSION}
+                   WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
+                   COMMENT "Generating parser.c")`
+    pattern:  9, capture: 0 - name, start: (19, 0), end: (19, 18), text: `add_custom_command`
+    pattern:  9, capture: 7 - reference.call, start: (30, 0), end: (30, 56), text: `target_include_directories(tree-sitter-rust PRIVATE src)`
+    pattern:  9, capture: 0 - name, start: (30, 0), end: (30, 26), text: `target_include_directories`
+    pattern:  9, capture: 7 - reference.call, start: (36, 0), end: (41, 39), text: `set_target_properties(tree-sitter-rust
+                      PROPERTIES
+                      C_STANDARD 11
+                      POSITION_INDEPENDENT_CODE ON
+                      SOVERSION "${TREE_SITTER_ABI_VERSION}.${PROJECT_VERSION_MAJOR}"
+                      DEFINE_SYMBOL "")`
+    pattern:  9, capture: 0 - name, start: (36, 0), end: (36, 21), text: `set_target_properties`
+    pattern:  9, capture: 7 - reference.call, start: (43, 0), end: (44, 71), text: `configure_file(bindings/c/tree-sitter-rust.pc.in
+               "${CMAKE_CURRENT_BINARY_DIR}/tree-sitter-rust.pc" @ONLY)`
+    pattern:  9, capture: 0 - name, start: (43, 0), end: (43, 14), text: `configure_file`
+    pattern:  9, capture: 7 - reference.call, start: (46, 0), end: (46, 23), text: `include(GNUInstallDirs)`
+    pattern:  9, capture: 0 - name, start: (46, 0), end: (46, 7), text: `include`
+    pattern:  9, capture: 7 - reference.call, start: (48, 0), end: (49, 62), text: `install(FILES bindings/c/tree-sitter-rust.h
+        DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/tree_sitter")`
+    pattern:  9, capture: 0 - name, start: (48, 0), end: (48, 7), text: `install`
+    pattern:  9, capture: 7 - reference.call, start: (50, 0), end: (51, 61), text: `install(FILES "${CMAKE_CURRENT_BINARY_DIR}/tree-sitter-rust.pc"
+        DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/pkgconfig")`
+    pattern:  9, capture: 0 - name, start: (50, 0), end: (50, 7), text: `install`
+    pattern:  9, capture: 7 - reference.call, start: (52, 0), end: (53, 54), text: `install(TARGETS tree-sitter-rust
+        LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}")`
+    pattern:  9, capture: 0 - name, start: (52, 0), end: (52, 7), text: `install`
+    pattern:  9, capture: 7 - reference.call, start: (55, 0), end: (57, 45), text: `add_custom_target(ts-test "${TREE_SITTER_CLI}" test
+                  WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
+                  COMMENT "tree-sitter test")`
+    pattern:  9, capture: 0 - name, start: (55, 0), end: (55, 17), text: `add_custom_target`

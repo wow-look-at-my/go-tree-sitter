@@ -1,0 +1,6 @@
+samples/tree-sitter-rust/test/corpus/patterns.txt
+    pattern:  0, capture: 0 - injection.content, start: (82, 42), end: (82, 49), text: `("{x}")`
+    pattern:  0, capture: 0 - injection.content, start: (320, 9), end: (320, 11), text: `()`
+    pattern:  0, capture: 0 - injection.content, start: (320, 16), end: (320, 18), text: `()`
+    pattern:  0, capture: 0 - injection.content, start: (461, 24), end: (461, 39), text: `("three cubed")`
+    pattern:  0, capture: 0 - injection.content, start: (468, 38), end: (468, 53), text: `("three cubed")`

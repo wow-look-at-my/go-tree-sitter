@@ -1,0 +1,17 @@
+corpus/c/types.txt/000
+corpus/c/types.txt/001
+  pattern: 2
+    capture: 2 - definition.function, start: (1, 5), end: (1, 16), text: `f(unsigned)`
+    capture: 0 - name, start: (1, 5), end: (1, 6), text: `f`
+  pattern: 2
+    capture: 2 - definition.function, start: (2, 5), end: (2, 20), text: `f(unsigned int)`
+    capture: 0 - name, start: (2, 5), end: (2, 6), text: `f`
+  pattern: 2
+    capture: 2 - definition.function, start: (3, 5), end: (3, 23), text: `f(signed long int)`
+    capture: 0 - name, start: (3, 5), end: (3, 6), text: `f`
+  pattern: 2
+    capture: 2 - definition.function, start: (4, 5), end: (4, 19), text: `f(unsigned v1)`
+    capture: 0 - name, start: (4, 5), end: (4, 6), text: `f`
+  pattern: 2
+    capture: 2 - definition.function, start: (5, 5), end: (5, 24), text: `f(unsigned long v2)`
+    capture: 0 - name, start: (5, 5), end: (5, 6), text: `f`

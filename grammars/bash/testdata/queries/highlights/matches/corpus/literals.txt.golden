@@ -1,0 +1,1317 @@
+corpus/literals.txt/000
+  pattern: 1
+    capture: 1 - function, start: (1, 0), end: (1, 4), text: `echo`
+  pattern: 1
+    capture: 1 - function, start: (2, 0), end: (2, 4), text: `echo`
+corpus/literals.txt/001
+  pattern: 1
+    capture: 1 - function, start: (1, 0), end: (1, 4), text: `echo`
+  pattern: 1
+    capture: 1 - function, start: (2, 0), end: (2, 4), text: `echo`
+  pattern: 1
+    capture: 1 - function, start: (3, 0), end: (3, 4), text: `echo`
+corpus/literals.txt/002
+  pattern: 1
+    capture: 1 - function, start: (1, 0), end: (1, 4), text: `echo`
+  pattern: 8
+    capture: 7 - operator, start: (1, 5), end: (1, 6), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (1, 6), end: (1, 9), text: `abc`
+corpus/literals.txt/003
+  pattern: 1
+    capture: 1 - function, start: (1, 0), end: (1, 4), text: `echo`
+  pattern: 8
+    capture: 7 - operator, start: (1, 5), end: (1, 6), text: `$`
+  pattern: 8
+    capture: 7 - operator, start: (1, 8), end: (1, 9), text: `$`
+  pattern: 8
+    capture: 7 - operator, start: (1, 11), end: (1, 12), text: `$`
+  pattern: 8
+    capture: 7 - operator, start: (1, 14), end: (1, 15), text: `$`
+corpus/literals.txt/004
+  pattern: 1
+    capture: 1 - function, start: (1, 0), end: (1, 4), text: `echo`
+  pattern: 7
+    capture: 6 - embedded, start: (1, 5), end: (1, 8), text: `${}`
+  pattern: 1
+    capture: 1 - function, start: (2, 0), end: (2, 4), text: `echo`
+  pattern: 7
+    capture: 6 - embedded, start: (2, 5), end: (2, 9), text: `${#}`
+  pattern: 1
+    capture: 1 - function, start: (3, 0), end: (3, 4), text: `echo`
+  pattern: 7
+    capture: 6 - embedded, start: (3, 5), end: (3, 15), text: `${var1#*#}`
+  pattern: 2
+    capture: 2 - property, start: (3, 7), end: (3, 11), text: `var1`
+  pattern: 1
+    capture: 1 - function, start: (4, 0), end: (4, 4), text: `echo`
+  pattern: 7
+    capture: 6 - embedded, start: (4, 5), end: (4, 12), text: `${!abc}`
+  pattern: 2
+    capture: 2 - property, start: (4, 8), end: (4, 11), text: `abc`
+  pattern: 1
+    capture: 1 - function, start: (5, 0), end: (5, 4), text: `echo`
+  pattern: 7
+    capture: 6 - embedded, start: (5, 5), end: (5, 11), text: `${abc}`
+  pattern: 2
+    capture: 2 - property, start: (5, 7), end: (5, 10), text: `abc`
+  pattern: 1
+    capture: 1 - function, start: (6, 0), end: (6, 4), text: `echo`
+  pattern: 7
+    capture: 6 - embedded, start: (6, 5), end: (6, 16), text: `${abc:-def}`
+  pattern: 2
+    capture: 2 - property, start: (6, 7), end: (6, 10), text: `abc`
+  pattern: 1
+    capture: 1 - function, start: (7, 0), end: (7, 4), text: `echo`
+  pattern: 7
+    capture: 6 - embedded, start: (7, 5), end: (7, 16), text: `${abc:+ghi}`
+  pattern: 2
+    capture: 2 - property, start: (7, 7), end: (7, 10), text: `abc`
+  pattern: 1
+    capture: 1 - function, start: (8, 0), end: (8, 4), text: `echo`
+  pattern: 7
+    capture: 6 - embedded, start: (8, 5), end: (8, 14), text: `${abc:- }`
+  pattern: 2
+    capture: 2 - property, start: (8, 7), end: (8, 10), text: `abc`
+  pattern: 1
+    capture: 1 - function, start: (9, 0), end: (9, 4), text: `echo`
+  pattern: 7
+    capture: embedded, start: (9, 5), end: (10, 1)
+  pattern: 2
+    capture: 2 - property, start: (9, 7), end: (9, 10), text: `abc`
+  pattern: 1
+    capture: 1 - function, start: (11, 0), end: (11, 4), text: `echo`
+  pattern: 7
+    capture: 6 - embedded, start: (11, 5), end: (11, 13), text: `${abc,?}`
+  pattern: 2
+    capture: 2 - property, start: (11, 7), end: (11, 10), text: `abc`
+  pattern: 1
+    capture: 1 - function, start: (12, 0), end: (12, 4), text: `echo`
+  pattern: 7
+    capture: 6 - embedded, start: (12, 5), end: (12, 14), text: `${abc^^b}`
+  pattern: 2
+    capture: 2 - property, start: (12, 7), end: (12, 10), text: `abc`
+  pattern: 1
+    capture: 1 - function, start: (13, 0), end: (13, 4), text: `echo`
+  pattern: 7
+    capture: 6 - embedded, start: (13, 5), end: (13, 13), text: `${abc@U}`
+  pattern: 2
+    capture: 2 - property, start: (13, 7), end: (13, 10), text: `abc`
+  pattern: 1
+    capture: 1 - function, start: (14, 0), end: (14, 4), text: `echo`
+  pattern: 7
+    capture: 6 - embedded, start: (14, 5), end: (14, 20), text: `${abc:- -quiet}`
+  pattern: 2
+    capture: 2 - property, start: (14, 7), end: (14, 10), text: `abc`
+corpus/literals.txt/005
+  pattern: 2
+    capture: 2 - property, start: (1, 0), end: (1, 1), text: `A`
+  pattern: 0
+    capture: 0 - string, start: (1, 2), end: (1, 13), text: `"${B[0]# }"`
+  pattern: 7
+    capture: 6 - embedded, start: (1, 3), end: (1, 12), text: `${B[0]# }`
+  pattern: 2
+    capture: 2 - property, start: (1, 5), end: (1, 6), text: `B`
+  pattern: 2
+    capture: 2 - property, start: (2, 0), end: (2, 1), text: `C`
+  pattern: 0
+    capture: 0 - string, start: (2, 2), end: (2, 16), text: `"${D/#* -E /}"`
+  pattern: 7
+    capture: 6 - embedded, start: (2, 3), end: (2, 15), text: `${D/#* -E /}`
+  pattern: 2
+    capture: 2 - property, start: (2, 5), end: (2, 6), text: `D`
+  pattern: 2
+    capture: 2 - property, start: (3, 0), end: (3, 1), text: `F`
+  pattern: 0
+    capture: 0 - string, start: (3, 2), end: (3, 12), text: `"${G%% *}"`
+  pattern: 7
+    capture: 6 - embedded, start: (3, 3), end: (3, 11), text: `${G%% *}`
+  pattern: 2
+    capture: 2 - property, start: (3, 5), end: (3, 6), text: `G`
+  pattern: 2
+    capture: 2 - property, start: (4, 0), end: (4, 1), text: `H`
+  pattern: 0
+    capture: 0 - string, start: (4, 2), end: (4, 11), text: `"${I#*;}"`
+  pattern: 7
+    capture: 6 - embedded, start: (4, 3), end: (4, 10), text: `${I#*;}`
+  pattern: 2
+    capture: 2 - property, start: (4, 5), end: (4, 6), text: `I`
+  pattern: 2
+    capture: 2 - property, start: (5, 0), end: (5, 1), text: `J`
+  pattern: 0
+    capture: 0 - string, start: (5, 2), end: (5, 12), text: `"${K##*;}"`
+  pattern: 7
+    capture: 6 - embedded, start: (5, 3), end: (5, 11), text: `${K##*;}`
+  pattern: 2
+    capture: 2 - property, start: (5, 5), end: (5, 6), text: `K`
+  pattern: 2
+    capture: 2 - property, start: (6, 0), end: (6, 1), text: `L`
+  pattern: 0
+    capture: 0 - string, start: (6, 2), end: (6, 11), text: `"${M%;*}"`
+  pattern: 7
+    capture: 6 - embedded, start: (6, 3), end: (6, 10), text: `${M%;*}`
+  pattern: 2
+    capture: 2 - property, start: (6, 5), end: (6, 6), text: `M`
+  pattern: 2
+    capture: 2 - property, start: (7, 0), end: (7, 1), text: `N`
+  pattern: 0
+    capture: 0 - string, start: (7, 2), end: (7, 12), text: `"${O%%;*}"`
+  pattern: 7
+    capture: 6 - embedded, start: (7, 3), end: (7, 11), text: `${O%%;*}`
+  pattern: 2
+    capture: 2 - property, start: (7, 5), end: (7, 6), text: `O`
+  pattern: 2
+    capture: 2 - property, start: (8, 0), end: (8, 1), text: `P`
+  pattern: 0
+    capture: 0 - string, start: (8, 2), end: (8, 11), text: `"${Q%|*}"`
+  pattern: 7
+    capture: 6 - embedded, start: (8, 3), end: (8, 10), text: `${Q%|*}`
+  pattern: 2
+    capture: 2 - property, start: (8, 5), end: (8, 6), text: `Q`
+  pattern: 2
+    capture: 2 - property, start: (9, 0), end: (9, 1), text: `R`
+  pattern: 0
+    capture: 0 - string, start: (9, 2), end: (9, 11), text: `"${S%()}"`
+  pattern: 7
+    capture: 6 - embedded, start: (9, 3), end: (9, 10), text: `${S%()}`
+  pattern: 2
+    capture: 2 - property, start: (9, 5), end: (9, 6), text: `S`
+  pattern: 2
+    capture: 2 - property, start: (10, 0), end: (10, 1), text: `T`
+  pattern: 0
+    capture: 0 - string, start: (10, 2), end: (10, 10), text: `"${U%(}"`
+  pattern: 7
+    capture: 6 - embedded, start: (10, 3), end: (10, 9), text: `${U%(}`
+  pattern: 2
+    capture: 2 - property, start: (10, 5), end: (10, 6), text: `U`
+  pattern: 2
+    capture: 2 - property, start: (11, 0), end: (11, 1), text: `V`
+  pattern: 0
+    capture: 0 - string, start: (11, 2), end: (11, 10), text: `"${W%)}"`
+  pattern: 7
+    capture: 6 - embedded, start: (11, 3), end: (11, 9), text: `${W%)}`
+  pattern: 2
+    capture: 2 - property, start: (11, 5), end: (11, 6), text: `W`
+  pattern: 2
+    capture: 2 - property, start: (12, 0), end: (12, 1), text: `X`
+  pattern: 0
+    capture: 0 - string, start: (12, 2), end: (12, 10), text: `"${Y%<}"`
+  pattern: 7
+    capture: 6 - embedded, start: (12, 3), end: (12, 9), text: `${Y%<}`
+  pattern: 2
+    capture: 2 - property, start: (12, 5), end: (12, 6), text: `Y`
+  pattern: 2
+    capture: 2 - property, start: (13, 0), end: (13, 1), text: `Z`
+  pattern: 0
+    capture: 0 - string, start: (13, 2), end: (13, 13), text: `"${A#*<B>}"`
+  pattern: 7
+    capture: 6 - embedded, start: (13, 3), end: (13, 12), text: `${A#*<B>}`
+  pattern: 2
+    capture: 2 - property, start: (13, 5), end: (13, 6), text: `A`
+  pattern: 2
+    capture: 2 - property, start: (14, 0), end: (14, 1), text: `C`
+  pattern: 0
+    capture: 0 - string, start: (14, 2), end: (14, 14), text: `"${D%</E>*}"`
+  pattern: 7
+    capture: 6 - embedded, start: (14, 3), end: (14, 13), text: `${D%</E>*}`
+  pattern: 2
+    capture: 2 - property, start: (14, 5), end: (14, 6), text: `D`
+  pattern: 2
+    capture: 2 - property, start: (15, 0), end: (15, 1), text: `F`
+  pattern: 0
+    capture: 0 - string, start: (15, 2), end: (15, 9), text: `"${#!}"`
+  pattern: 7
+    capture: 6 - embedded, start: (15, 3), end: (15, 8), text: `${#!}`
+  pattern: 2
+    capture: 2 - property, start: (16, 0), end: (16, 1), text: `G`
+  pattern: 7
+    capture: 6 - embedded, start: (16, 2), end: (16, 11), text: `${H,,[I]}`
+  pattern: 2
+    capture: 2 - property, start: (16, 4), end: (16, 5), text: `H`
+  pattern: 2
+    capture: 2 - property, start: (17, 0), end: (17, 1), text: `J`
+  pattern: 7
+    capture: 6 - embedded, start: (17, 2), end: (17, 11), text: `${K^^[L]}`
+  pattern: 2
+    capture: 2 - property, start: (17, 4), end: (17, 5), text: `K`
+  pattern: 2
+    capture: 2 - property, start: (18, 0), end: (18, 1), text: `L`
+  pattern: 0
+    capture: 0 - string, start: (18, 2), end: (18, 15), text: `"${M/'N'*/O}"`
+  pattern: 7
+    capture: 6 - embedded, start: (18, 3), end: (18, 14), text: `${M/'N'*/O}`
+  pattern: 2
+    capture: 2 - property, start: (18, 5), end: (18, 6), text: `M`
+corpus/literals.txt/006
+  pattern: 1
+    capture: 1 - function, start: (1, 0), end: (1, 20), text: `${parameter-default}`
+  pattern: 7
+    capture: 6 - embedded, start: (1, 0), end: (1, 20), text: `${parameter-default}`
+  pattern: 2
+    capture: 2 - property, start: (1, 2), end: (1, 11), text: `parameter`
+  pattern: 1
+    capture: 1 - function, start: (2, 0), end: (2, 21), text: `${parameter:-default}`
+  pattern: 7
+    capture: 6 - embedded, start: (2, 0), end: (2, 21), text: `${parameter:-default}`
+  pattern: 2
+    capture: 2 - property, start: (2, 2), end: (2, 11), text: `parameter`
+  pattern: 1
+    capture: 1 - function, start: (3, 0), end: (3, 20), text: `${parameter=default}`
+  pattern: 7
+    capture: 6 - embedded, start: (3, 0), end: (3, 20), text: `${parameter=default}`
+  pattern: 2
+    capture: 2 - property, start: (3, 2), end: (3, 11), text: `parameter`
+  pattern: 1
+    capture: 1 - function, start: (4, 0), end: (4, 21), text: `${parameter:=default}`
+  pattern: 7
+    capture: 6 - embedded, start: (4, 0), end: (4, 21), text: `${parameter:=default}`
+  pattern: 2
+    capture: 2 - property, start: (4, 2), end: (4, 11), text: `parameter`
+  pattern: 1
+    capture: 1 - function, start: (5, 0), end: (5, 22), text: `${parameter+alt_value}`
+  pattern: 7
+    capture: 6 - embedded, start: (5, 0), end: (5, 22), text: `${parameter+alt_value}`
+  pattern: 2
+    capture: 2 - property, start: (5, 2), end: (5, 11), text: `parameter`
+  pattern: 1
+    capture: 1 - function, start: (6, 0), end: (6, 23), text: `${parameter:+alt_value}`
+  pattern: 7
+    capture: 6 - embedded, start: (6, 0), end: (6, 23), text: `${parameter:+alt_value}`
+  pattern: 2
+    capture: 2 - property, start: (6, 2), end: (6, 11), text: `parameter`
+  pattern: 1
+    capture: 1 - function, start: (7, 0), end: (7, 20), text: `${parameter?err_msg}`
+  pattern: 7
+    capture: 6 - embedded, start: (7, 0), end: (7, 20), text: `${parameter?err_msg}`
+  pattern: 2
+    capture: 2 - property, start: (7, 2), end: (7, 11), text: `parameter`
+  pattern: 1
+    capture: 1 - function, start: (8, 0), end: (8, 21), text: `${parameter:?err_msg}`
+  pattern: 7
+    capture: 6 - embedded, start: (8, 0), end: (8, 21), text: `${parameter:?err_msg}`
+  pattern: 2
+    capture: 2 - property, start: (8, 2), end: (8, 11), text: `parameter`
+  pattern: 1
+    capture: 1 - function, start: (9, 0), end: (9, 14), text: `${var%Pattern}`
+  pattern: 7
+    capture: 6 - embedded, start: (9, 0), end: (9, 14), text: `${var%Pattern}`
+  pattern: 2
+    capture: 2 - property, start: (9, 2), end: (9, 5), text: `var`
+  pattern: 1
+    capture: 1 - function, start: (10, 0), end: (10, 15), text: `${var%%Pattern}`
+  pattern: 7
+    capture: 6 - embedded, start: (10, 0), end: (10, 15), text: `${var%%Pattern}`
+  pattern: 2
+    capture: 2 - property, start: (10, 2), end: (10, 5), text: `var`
+  pattern: 1
+    capture: 1 - function, start: (11, 0), end: (11, 10), text: `${var:pos}`
+  pattern: 7
+    capture: 6 - embedded, start: (11, 0), end: (11, 10), text: `${var:pos}`
+  pattern: 2
+    capture: 2 - property, start: (11, 2), end: (11, 5), text: `var`
+  pattern: 2
+    capture: 2 - property, start: (11, 6), end: (11, 9), text: `pos`
+  pattern: 1
+    capture: 1 - function, start: (12, 0), end: (12, 14), text: `${var:pos:len}`
+  pattern: 7
+    capture: 6 - embedded, start: (12, 0), end: (12, 14), text: `${var:pos:len}`
+  pattern: 2
+    capture: 2 - property, start: (12, 2), end: (12, 5), text: `var`
+  pattern: 2
+    capture: 2 - property, start: (12, 6), end: (12, 9), text: `pos`
+  pattern: 2
+    capture: 2 - property, start: (12, 10), end: (12, 13), text: `len`
+  pattern: 1
+    capture: 1 - function, start: (13, 0), end: (13, 35), text: `${MATRIX:$(($RANDOM%${#MATRIX})):1}`
+  pattern: 7
+    capture: 6 - embedded, start: (13, 0), end: (13, 35), text: `${MATRIX:$(($RANDOM%${#MATRIX})):1}`
+  pattern: 2
+    capture: 2 - property, start: (13, 2), end: (13, 8), text: `MATRIX`
+  pattern: 8
+    capture: 7 - operator, start: (13, 12), end: (13, 13), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (13, 13), end: (13, 19), text: `RANDOM`
+  pattern: 7
+    capture: 6 - embedded, start: (13, 20), end: (13, 30), text: `${#MATRIX}`
+  pattern: 2
+    capture: 2 - property, start: (13, 23), end: (13, 29), text: `MATRIX`
+  pattern: 1
+    capture: 1 - function, start: (14, 0), end: (14, 61), text: `${PKG_CONFIG_LIBDIR:-${ESYSROOT}/usr/$(get_libdir)/pkgconfig}`
+  pattern: 7
+    capture: 6 - embedded, start: (14, 0), end: (14, 61), text: `${PKG_CONFIG_LIBDIR:-${ESYSROOT}/usr/$(get_libdir)/pkgconfig}`
+  pattern: 2
+    capture: 2 - property, start: (14, 2), end: (14, 19), text: `PKG_CONFIG_LIBDIR`
+  pattern: 7
+    capture: 6 - embedded, start: (14, 21), end: (14, 32), text: `${ESYSROOT}`
+  pattern: 2
+    capture: 2 - property, start: (14, 23), end: (14, 31), text: `ESYSROOT`
+  pattern: 7
+    capture: 6 - embedded, start: (14, 37), end: (14, 50), text: `$(get_libdir)`
+  pattern: 1
+    capture: 1 - function, start: (14, 39), end: (14, 49), text: `get_libdir`
+  pattern: 1
+    capture: 1 - function, start: (15, 0), end: (15, 37), text: `${ver_str::${#ver_str}-${#not_match}}`
+  pattern: 7
+    capture: 6 - embedded, start: (15, 0), end: (15, 37), text: `${ver_str::${#ver_str}-${#not_match}}`
+  pattern: 2
+    capture: 2 - property, start: (15, 2), end: (15, 9), text: `ver_str`
+  pattern: 7
+    capture: 6 - embedded, start: (15, 11), end: (15, 22), text: `${#ver_str}`
+  pattern: 2
+    capture: 2 - property, start: (15, 14), end: (15, 21), text: `ver_str`
+  pattern: 7
+    capture: 6 - embedded, start: (15, 23), end: (15, 36), text: `${#not_match}`
+  pattern: 2
+    capture: 2 - property, start: (15, 26), end: (15, 35), text: `not_match`
+  pattern: 1
+    capture: 1 - function, start: (16, 0), end: (16, 19), text: `${value#\{sd.cicd.}`
+  pattern: 7
+    capture: 6 - embedded, start: (16, 0), end: (16, 19), text: `${value#\{sd.cicd.}`
+  pattern: 2
+    capture: 2 - property, start: (16, 2), end: (16, 7), text: `value`
+corpus/literals.txt/007
+  pattern: 2
+    capture: 2 - property, start: (1, 0), end: (1, 1), text: `A`
+  pattern: 0
+    capture: 0 - string, start: (1, 2), end: (1, 14), text: `"${A:-$B/c}"`
+  pattern: 7
+    capture: 6 - embedded, start: (1, 3), end: (1, 13), text: `${A:-$B/c}`
+  pattern: 2
+    capture: 2 - property, start: (1, 5), end: (1, 6), text: `A`
+  pattern: 8
+    capture: 7 - operator, start: (1, 8), end: (1, 9), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (1, 9), end: (1, 10), text: `B`
+  pattern: 2
+    capture: 2 - property, start: (2, 0), end: (2, 1), text: `A`
+  pattern: 0
+    capture: 0 - string, start: (2, 2), end: (2, 14), text: `"${b=$c/$d}"`
+  pattern: 7
+    capture: 6 - embedded, start: (2, 3), end: (2, 13), text: `${b=$c/$d}`
+  pattern: 2
+    capture: 2 - property, start: (2, 5), end: (2, 6), text: `b`
+  pattern: 8
+    capture: 7 - operator, start: (2, 7), end: (2, 8), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (2, 8), end: (2, 9), text: `c`
+  pattern: 8
+    capture: 7 - operator, start: (2, 10), end: (2, 11), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (2, 11), end: (2, 12), text: `d`
+  pattern: 2
+    capture: 2 - property, start: (3, 0), end: (3, 5), text: `MY_PV`
+  pattern: 0
+    capture: 0 - string, start: (3, 6), end: (3, 29), text: `"${PV/_pre/$'\x7e'pre}"`
+  pattern: 7
+    capture: 6 - embedded, start: (3, 7), end: (3, 28), text: `${PV/_pre/$'\x7e'pre}`
+  pattern: 2
+    capture: 2 - property, start: (3, 9), end: (3, 11), text: `PV`
+corpus/literals.txt/008
+  pattern: 2
+    capture: 2 - property, start: (1, 0), end: (1, 1), text: `A`
+  pattern: 7
+    capture: 6 - embedded, start: (1, 2), end: (1, 17), text: `${B//:;;/$'\n'}`
+  pattern: 2
+    capture: 2 - property, start: (1, 4), end: (1, 5), text: `B`
+  pattern: 4
+    capture: 4 - comment, start: (3, 0), end: (3, 15), text: `# escaped space`
+  pattern: 2
+    capture: 2 - property, start: (4, 0), end: (4, 1), text: `C`
+  pattern: 7
+    capture: 6 - embedded, start: (4, 2), end: (4, 13), text: `${D/;\ *;|}`
+  pattern: 2
+    capture: 2 - property, start: (4, 4), end: (4, 5), text: `D`
+  pattern: 2
+    capture: 2 - property, start: (5, 0), end: (5, 7), text: `MOFILES`
+  pattern: 7
+    capture: 6 - embedded, start: (5, 8), end: (5, 26), text: `${LINGUAS// /.po }`
+  pattern: 2
+    capture: 2 - property, start: (5, 10), end: (5, 17), text: `LINGUAS`
+  pattern: 2
+    capture: 2 - property, start: (6, 0), end: (6, 4), text: `MY_P`
+  pattern: 0
+    capture: 0 - string, start: (6, 5), end: (6, 45), text: `"${PN/aspell/aspell"${ASPELL_VERSION}"}"`
+  pattern: 7
+    capture: 6 - embedded, start: (6, 6), end: (6, 44), text: `${PN/aspell/aspell"${ASPELL_VERSION}"}`
+  pattern: 2
+    capture: 2 - property, start: (6, 8), end: (6, 10), text: `PN`
+  pattern: 0
+    capture: 0 - string, start: (6, 24), end: (6, 43), text: `"${ASPELL_VERSION}"`
+  pattern: 7
+    capture: 6 - embedded, start: (6, 25), end: (6, 42), text: `${ASPELL_VERSION}`
+  pattern: 2
+    capture: 2 - property, start: (6, 27), end: (6, 41), text: `ASPELL_VERSION`
+  pattern: 2
+    capture: 2 - property, start: (7, 0), end: (7, 3), text: `pyc`
+  pattern: 7
+    capture: 6 - embedded, start: (7, 4), end: (7, 15), text: `${pyc//*\/}`
+  pattern: 2
+    capture: 2 - property, start: (7, 6), end: (7, 9), text: `pyc`
+  pattern: 1
+    capture: 1 - function, start: (8, 0), end: (8, 8), text: `${pv/\.}`
+  pattern: 7
+    capture: 6 - embedded, start: (8, 0), end: (8, 8), text: `${pv/\.}`
+  pattern: 2
+    capture: 2 - property, start: (8, 2), end: (8, 4), text: `pv`
+  pattern: 1
+    capture: 1 - function, start: (9, 0), end: (9, 32), text: `${new_test_cp//"${old_ver_cp}"/}`
+  pattern: 7
+    capture: 6 - embedded, start: (9, 0), end: (9, 32), text: `${new_test_cp//"${old_ver_cp}"/}`
+  pattern: 2
+    capture: 2 - property, start: (9, 2), end: (9, 13), text: `new_test_cp`
+  pattern: 0
+    capture: 0 - string, start: (9, 15), end: (9, 30), text: `"${old_ver_cp}"`
+  pattern: 7
+    capture: 6 - embedded, start: (9, 16), end: (9, 29), text: `${old_ver_cp}`
+  pattern: 2
+    capture: 2 - property, start: (9, 18), end: (9, 28), text: `old_ver_cp`
+  pattern: 1
+    capture: 1 - function, start: (10, 0), end: (10, 31), text: `${tests_to_run//"${classes}"\/}`
+  pattern: 7
+    capture: 6 - embedded, start: (10, 0), end: (10, 31), text: `${tests_to_run//"${classes}"\/}`
+  pattern: 2
+    capture: 2 - property, start: (10, 2), end: (10, 14), text: `tests_to_run`
+  pattern: 0
+    capture: 0 - string, start: (10, 16), end: (10, 28), text: `"${classes}"`
+  pattern: 7
+    capture: 6 - embedded, start: (10, 17), end: (10, 27), text: `${classes}`
+  pattern: 2
+    capture: 2 - property, start: (10, 19), end: (10, 26), text: `classes`
+  pattern: 1
+    capture: 1 - function, start: (11, 0), end: (11, 21), text: `${allarchives// /\\|}`
+  pattern: 7
+    capture: 6 - embedded, start: (11, 0), end: (11, 21), text: `${allarchives// /\\|}`
+  pattern: 2
+    capture: 2 - property, start: (11, 2), end: (11, 13), text: `allarchives`
+corpus/literals.txt/009
+  pattern: 1
+    capture: 1 - function, start: (1, 0), end: (1, 3), text: `cat`
+  pattern: 7
+    capture: 6 - embedded, start: (1, 4), end: (1, 10), text: `${BAR}`
+  pattern: 2
+    capture: 2 - property, start: (1, 6), end: (1, 9), text: `BAR`
+  pattern: 7
+    capture: 6 - embedded, start: (1, 11), end: (1, 21), text: `${ABC=def}`
+  pattern: 2
+    capture: 2 - property, start: (1, 13), end: (1, 16), text: `ABC`
+  pattern: 7
+    capture: 6 - embedded, start: (1, 22), end: (1, 33), text: `${GHI:?jkl}`
+  pattern: 2
+    capture: 2 - property, start: (1, 24), end: (1, 27), text: `GHI`
+  pattern: 0
+    capture: 0 - string, start: (2, 2), end: (2, 6), text: `"$a"`
+  pattern: 8
+    capture: 7 - operator, start: (2, 3), end: (2, 4), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (2, 4), end: (2, 5), text: `a`
+  pattern: 0
+    capture: 0 - string, start: (2, 10), end: (2, 21), text: `"${a#[Bc]}"`
+  pattern: 7
+    capture: 6 - embedded, start: (2, 11), end: (2, 20), text: `${a#[Bc]}`
+  pattern: 2
+    capture: 2 - property, start: (2, 13), end: (2, 14), text: `a`
+corpus/literals.txt/010
+  pattern: 1
+    capture: 1 - function, start: (1, 0), end: (1, 15), text: `${parameter:-1}`
+  pattern: 7
+    capture: 6 - embedded, start: (1, 0), end: (1, 15), text: `${parameter:-1}`
+  pattern: 2
+    capture: 2 - property, start: (1, 2), end: (1, 11), text: `parameter`
+  pattern: 1
+    capture: 1 - function, start: (3, 0), end: (3, 16), text: `${parameter: -1}`
+  pattern: 7
+    capture: 6 - embedded, start: (3, 0), end: (3, 16), text: `${parameter: -1}`
+  pattern: 2
+    capture: 2 - property, start: (3, 2), end: (3, 11), text: `parameter`
+  pattern: 1
+    capture: 1 - function, start: (5, 0), end: (5, 17), text: `${parameter:(-1)}`
+  pattern: 7
+    capture: 6 - embedded, start: (5, 0), end: (5, 17), text: `${parameter:(-1)}`
+  pattern: 2
+    capture: 2 - property, start: (5, 2), end: (5, 11), text: `parameter`
+  pattern: 1
+    capture: 1 - function, start: (7, 0), end: (7, 35), text: `${matrix:$(($random%${#matrix})):1}`
+  pattern: 7
+    capture: 6 - embedded, start: (7, 0), end: (7, 35), text: `${matrix:$(($random%${#matrix})):1}`
+  pattern: 2
+    capture: 2 - property, start: (7, 2), end: (7, 8), text: `matrix`
+  pattern: 8
+    capture: 7 - operator, start: (7, 12), end: (7, 13), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (7, 13), end: (7, 19), text: `random`
+  pattern: 7
+    capture: 6 - embedded, start: (7, 20), end: (7, 30), text: `${#matrix}`
+  pattern: 2
+    capture: 2 - property, start: (7, 23), end: (7, 29), text: `matrix`
+  pattern: 1
+    capture: 1 - function, start: (9, 0), end: (9, 34), text: `"${_component_to_single:${len}:2}"`
+  pattern: 0
+    capture: 0 - string, start: (9, 0), end: (9, 34), text: `"${_component_to_single:${len}:2}"`
+  pattern: 7
+    capture: 6 - embedded, start: (9, 1), end: (9, 33), text: `${_component_to_single:${len}:2}`
+  pattern: 2
+    capture: 2 - property, start: (9, 3), end: (9, 23), text: `_component_to_single`
+  pattern: 7
+    capture: 6 - embedded, start: (9, 24), end: (9, 30), text: `${len}`
+  pattern: 2
+    capture: 2 - property, start: (9, 26), end: (9, 29), text: `len`
+  pattern: 1
+    capture: 1 - function, start: (11, 0), end: (11, 11), text: `"${PN::-1}"`
+  pattern: 0
+    capture: 0 - string, start: (11, 0), end: (11, 11), text: `"${PN::-1}"`
+  pattern: 7
+    capture: 6 - embedded, start: (11, 1), end: (11, 10), text: `${PN::-1}`
+  pattern: 2
+    capture: 2 - property, start: (11, 3), end: (11, 5), text: `PN`
+  pattern: 1
+    capture: 1 - function, start: (13, 0), end: (13, 23), text: `${trarr:$(ver_cut 2):1}`
+  pattern: 7
+    capture: 6 - embedded, start: (13, 0), end: (13, 23), text: `${trarr:$(ver_cut 2):1}`
+  pattern: 2
+    capture: 2 - property, start: (13, 2), end: (13, 7), text: `trarr`
+  pattern: 7
+    capture: 6 - embedded, start: (13, 8), end: (13, 20), text: `$(ver_cut 2)`
+  pattern: 1
+    capture: 1 - function, start: (13, 10), end: (13, 17), text: `ver_cut`
+  pattern: 1
+    capture: 1 - function, start: (15, 0), end: (15, 28), text: `${comp[@]:start:end*2-start}`
+  pattern: 7
+    capture: 6 - embedded, start: (15, 0), end: (15, 28), text: `${comp[@]:start:end*2-start}`
+  pattern: 2
+    capture: 2 - property, start: (15, 2), end: (15, 6), text: `comp`
+  pattern: 2
+    capture: 2 - property, start: (15, 10), end: (15, 15), text: `start`
+  pattern: 2
+    capture: 2 - property, start: (15, 16), end: (15, 19), text: `end`
+  pattern: 2
+    capture: 2 - property, start: (15, 22), end: (15, 27), text: `start`
+corpus/literals.txt/011
+  pattern: 1
+    capture: 1 - function, start: (1, 0), end: (1, 20), text: `${parameter-default}`
+  pattern: 7
+    capture: 6 - embedded, start: (1, 0), end: (1, 20), text: `${parameter-default}`
+  pattern: 2
+    capture: 2 - property, start: (1, 2), end: (1, 11), text: `parameter`
+  pattern: 1
+    capture: 1 - function, start: (2, 0), end: (2, 21), text: `${parameter- default}`
+  pattern: 7
+    capture: 6 - embedded, start: (2, 0), end: (2, 21), text: `${parameter- default}`
+  pattern: 2
+    capture: 2 - property, start: (2, 2), end: (2, 11), text: `parameter`
+  pattern: 1
+    capture: 1 - function, start: (3, 0), end: (3, 14), text: `${!varprefix*}`
+  pattern: 7
+    capture: 6 - embedded, start: (3, 0), end: (3, 14), text: `${!varprefix*}`
+  pattern: 2
+    capture: 2 - property, start: (3, 3), end: (3, 12), text: `varprefix`
+  pattern: 1
+    capture: 1 - function, start: (4, 0), end: (4, 14), text: `${!varprefix@}`
+  pattern: 7
+    capture: 6 - embedded, start: (4, 0), end: (4, 14), text: `${!varprefix@}`
+  pattern: 2
+    capture: 2 - property, start: (4, 3), end: (4, 12), text: `varprefix`
+  pattern: 1
+    capture: 1 - function, start: (5, 0), end: (5, 14), text: `${parameter@U}`
+  pattern: 7
+    capture: 6 - embedded, start: (5, 0), end: (5, 14), text: `${parameter@U}`
+  pattern: 2
+    capture: 2 - property, start: (5, 2), end: (5, 11), text: `parameter`
+corpus/literals.txt/012
+  pattern: 1
+    capture: 1 - function, start: (1, 0), end: (1, 5), text: `${!#}`
+  pattern: 7
+    capture: 6 - embedded, start: (1, 0), end: (1, 5), text: `${!#}`
+  pattern: 1
+    capture: 1 - function, start: (2, 0), end: (2, 6), text: `${!# }`
+  pattern: 7
+    capture: 6 - embedded, start: (2, 0), end: (2, 6), text: `${!# }`
+  pattern: 1
+    capture: 1 - function, start: (3, 0), end: (3, 6), text: `${!##}`
+  pattern: 7
+    capture: 6 - embedded, start: (3, 0), end: (3, 6), text: `${!##}`
+  pattern: 1
+    capture: 1 - function, start: (4, 0), end: (4, 7), text: `${!## }`
+  pattern: 7
+    capture: 6 - embedded, start: (4, 0), end: (4, 7), text: `${!## }`
+  pattern: 1
+    capture: 1 - function, start: (5, 0), end: (5, 7), text: `${!##/}`
+  pattern: 7
+    capture: 6 - embedded, start: (5, 0), end: (5, 7), text: `${!##/}`
+  pattern: 4
+    capture: 4 - comment, start: (6, 0), end: (6, 17), text: `# here be dragons`
+  pattern: 1
+    capture: 1 - function, start: (7, 0), end: (7, 4), text: `echo`
+  pattern: 0
+    capture: 0 - string, start: (7, 5), end: (7, 80), text: `"${kw}? ( ${cond:+${cond}? (} ${baseuri}-${ver}-${kw}.${suff} ${cond:+) })"`
+  pattern: 7
+    capture: 6 - embedded, start: (7, 6), end: (7, 11), text: `${kw}`
+  pattern: 2
+    capture: 2 - property, start: (7, 8), end: (7, 10), text: `kw`
+  pattern: 7
+    capture: 6 - embedded, start: (7, 15), end: (7, 34), text: `${cond:+${cond}? (}`
+  pattern: 2
+    capture: 2 - property, start: (7, 17), end: (7, 21), text: `cond`
+  pattern: 7
+    capture: 6 - embedded, start: (7, 23), end: (7, 30), text: `${cond}`
+  pattern: 2
+    capture: 2 - property, start: (7, 25), end: (7, 29), text: `cond`
+  pattern: 7
+    capture: 6 - embedded, start: (7, 34), end: (7, 45), text: ` ${baseuri}`
+  pattern: 2
+    capture: 2 - property, start: (7, 37), end: (7, 44), text: `baseuri`
+  pattern: 7
+    capture: 6 - embedded, start: (7, 46), end: (7, 52), text: `${ver}`
+  pattern: 2
+    capture: 2 - property, start: (7, 48), end: (7, 51), text: `ver`
+  pattern: 7
+    capture: 6 - embedded, start: (7, 53), end: (7, 58), text: `${kw}`
+  pattern: 2
+    capture: 2 - property, start: (7, 55), end: (7, 57), text: `kw`
+  pattern: 7
+    capture: 6 - embedded, start: (7, 59), end: (7, 66), text: `${suff}`
+  pattern: 2
+    capture: 2 - property, start: (7, 61), end: (7, 65), text: `suff`
+  pattern: 7
+    capture: 6 - embedded, start: (7, 66), end: (7, 78), text: ` ${cond:+) }`
+  pattern: 2
+    capture: 2 - property, start: (7, 69), end: (7, 73), text: `cond`
+corpus/literals.txt/013
+  pattern: 1
+    capture: 1 - function, start: (1, 0), end: (1, 17), text: `${completions[*]}`
+  pattern: 7
+    capture: 6 - embedded, start: (1, 0), end: (1, 17), text: `${completions[*]}`
+  pattern: 2
+    capture: 2 - property, start: (1, 2), end: (1, 13), text: `completions`
+  pattern: 1
+    capture: 1 - function, start: (2, 0), end: (2, 5), text: `${=1}`
+  pattern: 7
+    capture: 6 - embedded, start: (2, 0), end: (2, 5), text: `${=1}`
+  pattern: 2
+    capture: 2 - property, start: (2, 3), end: (2, 4), text: `1`
+  pattern: 1
+    capture: 1 - function, start: (3, 0), end: (3, 5), text: `${2?}`
+  pattern: 7
+    capture: 6 - embedded, start: (3, 0), end: (3, 5), text: `${2?}`
+  pattern: 2
+    capture: 2 - property, start: (3, 2), end: (3, 3), text: `2`
+  pattern: 1
+    capture: 1 - function, start: (4, 0), end: (4, 11), text: `${p_key#*=}`
+  pattern: 7
+    capture: 6 - embedded, start: (4, 0), end: (4, 11), text: `${p_key#*=}`
+  pattern: 2
+    capture: 2 - property, start: (4, 2), end: (4, 7), text: `p_key`
+  pattern: 1
+    capture: 1 - function, start: (5, 0), end: (5, 9), text: `${abc:- }`
+  pattern: 7
+    capture: 6 - embedded, start: (5, 0), end: (5, 9), text: `${abc:- }`
+  pattern: 2
+    capture: 2 - property, start: (5, 2), end: (5, 5), text: `abc`
+  pattern: 1
+    capture: 1 - function, start: (6, 0), end: (6, 9), text: `${B[0]# }`
+  pattern: 7
+    capture: 6 - embedded, start: (6, 0), end: (6, 9), text: `${B[0]# }`
+  pattern: 2
+    capture: 2 - property, start: (6, 2), end: (6, 3), text: `B`
+  pattern: 1
+    capture: 1 - function, start: (7, 0), end: (7, 20), text: `${to_enables[0]##*/}`
+  pattern: 7
+    capture: 6 - embedded, start: (7, 0), end: (7, 20), text: `${to_enables[0]##*/}`
+  pattern: 2
+    capture: 2 - property, start: (7, 2), end: (7, 12), text: `to_enables`
+  pattern: 1
+    capture: 1 - function, start: (8, 0), end: (8, 4), text: `exec`
+  pattern: 0
+    capture: 0 - string, start: (8, 5), end: (8, 13), text: `"${0#-}"`
+  pattern: 7
+    capture: 6 - embedded, start: (8, 6), end: (8, 12), text: `${0#-}`
+  pattern: 2
+    capture: 2 - property, start: (8, 8), end: (8, 9), text: `0`
+  pattern: 9
+    capture: 8 - constant, start: (8, 14), end: (8, 22), text: `--rcfile`
+  pattern: 0
+    capture: 0 - string, start: (8, 23), end: (8, 60), text: `"${BASH_IT_BASHRC:-${HOME?}/.bashrc}"`
+  pattern: 7
+    capture: 6 - embedded, start: (8, 24), end: (8, 59), text: `${BASH_IT_BASHRC:-${HOME?}/.bashrc}`
+  pattern: 2
+    capture: 2 - property, start: (8, 26), end: (8, 40), text: `BASH_IT_BASHRC`
+  pattern: 7
+    capture: 6 - embedded, start: (8, 42), end: (8, 50), text: `${HOME?}`
+  pattern: 2
+    capture: 2 - property, start: (8, 44), end: (8, 48), text: `HOME`
+  pattern: 1
+    capture: 1 - function, start: (9, 0), end: (9, 5), text: `recho`
+  pattern: 0
+    capture: 0 - string, start: (9, 6), end: (9, 58), text: `"TDEFAULTS = ${selvecs:+-DSELECT_VECS=\"$selvecs\"}"`
+  pattern: 7
+    capture: 6 - embedded, start: (9, 19), end: (9, 57), text: `${selvecs:+-DSELECT_VECS=\"$selvecs\"}`
+  pattern: 2
+    capture: 2 - property, start: (9, 21), end: (9, 28), text: `selvecs`
+  pattern: 8
+    capture: 7 - operator, start: (9, 46), end: (9, 47), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (9, 47), end: (9, 54), text: `selvecs`
+  pattern: 2
+    capture: 2 - property, start: (10, 6), end: (10, 9), text: `msg`
+  pattern: 0
+    capture: 0 - string, start: (10, 10), end: (10, 45), text: `"${2:-command '$1' does not exist}"`
+  pattern: 7
+    capture: 6 - embedded, start: (10, 11), end: (10, 44), text: `${2:-command '$1' does not exist}`
+  pattern: 2
+    capture: 2 - property, start: (10, 13), end: (10, 14), text: `2`
+  pattern: 0
+    capture: 0 - string, start: (10, 24), end: (10, 28), text: `'$1'`
+  pattern: 1
+    capture: 1 - function, start: (11, 0), end: (11, 10), text: `${cdir:+#}`
+  pattern: 7
+    capture: 6 - embedded, start: (11, 0), end: (11, 10), text: `${cdir:+#}`
+  pattern: 2
+    capture: 2 - property, start: (11, 2), end: (11, 6), text: `cdir`
+  pattern: 1
+    capture: 1 - function, start: (12, 0), end: (12, 16), text: `${dict_langs:+;}`
+  pattern: 7
+    capture: 6 - embedded, start: (12, 0), end: (12, 16), text: `${dict_langs:+;}`
+  pattern: 2
+    capture: 2 - property, start: (12, 2), end: (12, 12), text: `dict_langs`
+  pattern: 1
+    capture: 1 - function, start: (13, 0), end: (13, 49), text: `${UTIL_LINUX_LIBC[@]/%/? ( sys-apps/util-linux )}`
+  pattern: 7
+    capture: 6 - embedded, start: (13, 0), end: (13, 49), text: `${UTIL_LINUX_LIBC[@]/%/? ( sys-apps/util-linux )}`
+  pattern: 2
+    capture: 2 - property, start: (13, 2), end: (13, 17), text: `UTIL_LINUX_LIBC`
+  pattern: 1
+    capture: 1 - function, start: (14, 0), end: (14, 15), text: `${id}${2+ ${2}}`
+  pattern: 7
+    capture: 6 - embedded, start: (14, 0), end: (14, 5), text: `${id}`
+  pattern: 2
+    capture: 2 - property, start: (14, 2), end: (14, 4), text: `id`
+  pattern: 7
+    capture: 6 - embedded, start: (14, 5), end: (14, 15), text: `${2+ ${2}}`
+  pattern: 2
+    capture: 2 - property, start: (14, 7), end: (14, 8), text: `2`
+  pattern: 7
+    capture: 6 - embedded, start: (14, 10), end: (14, 14), text: `${2}`
+  pattern: 2
+    capture: 2 - property, start: (14, 12), end: (14, 13), text: `2`
+  pattern: 1
+    capture: 1 - function, start: (15, 0), end: (15, 55), text: `${BRANDING_GCC_PKGVERSION/(/(Gentoo ${PVR}${extvers}, }`
+  pattern: 7
+    capture: 6 - embedded, start: (15, 0), end: (15, 55), text: `${BRANDING_GCC_PKGVERSION/(/(Gentoo ${PVR}${extvers}, }`
+  pattern: 2
+    capture: 2 - property, start: (15, 2), end: (15, 25), text: `BRANDING_GCC_PKGVERSION`
+  pattern: 7
+    capture: 6 - embedded, start: (15, 36), end: (15, 42), text: `${PVR}`
+  pattern: 2
+    capture: 2 - property, start: (15, 38), end: (15, 41), text: `PVR`
+  pattern: 7
+    capture: 6 - embedded, start: (15, 42), end: (15, 52), text: `${extvers}`
+  pattern: 2
+    capture: 2 - property, start: (15, 44), end: (15, 51), text: `extvers`
+  pattern: 4
+    capture: 4 - comment, start: (15, 56), end: (15, 83), text: `# look at that parenthesis!`
+  pattern: 1
+    capture: 1 - function, start: (16, 0), end: (16, 12), text: `some-command`
+  pattern: 7
+    capture: 6 - embedded, start: (16, 13), end: (16, 50), text: `${foo:+--arg <(printf '%s\n' "$foo")}`
+  pattern: 2
+    capture: 2 - property, start: (16, 15), end: (16, 18), text: `foo`
+  pattern: 7
+    capture: 6 - embedded, start: (16, 26), end: (16, 49), text: `<(printf '%s\n' "$foo")`
+  pattern: 1
+    capture: 1 - function, start: (16, 28), end: (16, 34), text: `printf`
+  pattern: 0
+    capture: 0 - string, start: (16, 35), end: (16, 41), text: `'%s\n'`
+  pattern: 0
+    capture: 0 - string, start: (16, 42), end: (16, 48), text: `"$foo"`
+  pattern: 8
+    capture: 7 - operator, start: (16, 43), end: (16, 44), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (16, 44), end: (16, 47), text: `foo`
+corpus/literals.txt/014
+  pattern: 2
+    capture: 2 - property, start: (1, 0), end: (1, 1), text: `A`
+  pattern: 7
+    capture: 6 - embedded, start: (1, 2), end: (1, 17), text: `${B//:;;/$'\n'}`
+  pattern: 2
+    capture: 2 - property, start: (1, 4), end: (1, 5), text: `B`
+  pattern: 2
+    capture: 2 - property, start: (2, 0), end: (2, 1), text: `C`
+  pattern: 0
+    capture: 0 - string, start: (2, 2), end: (2, 16), text: `"${D/#* -E /}"`
+  pattern: 7
+    capture: 6 - embedded, start: (2, 3), end: (2, 15), text: `${D/#* -E /}`
+  pattern: 2
+    capture: 2 - property, start: (2, 5), end: (2, 6), text: `D`
+  pattern: 2
+    capture: 2 - property, start: (3, 0), end: (3, 15), text: `BASH_IT_GIT_URL`
+  pattern: 0
+    capture: 0 - string, start: (3, 16), end: (3, 50), text: `"${BASH_IT_GIT_URL/git@/https://}"`
+  pattern: 7
+    capture: 6 - embedded, start: (3, 17), end: (3, 49), text: `${BASH_IT_GIT_URL/git@/https://}`
+  pattern: 2
+    capture: 2 - property, start: (3, 19), end: (3, 34), text: `BASH_IT_GIT_URL`
+  pattern: 1
+    capture: 1 - function, start: (4, 0), end: (4, 23), text: `10#${command_start##*.}`
+  pattern: 7
+    capture: 6 - embedded, start: (4, 3), end: (4, 23), text: `${command_start##*.}`
+  pattern: 2
+    capture: 2 - property, start: (4, 5), end: (4, 18), text: `command_start`
+  pattern: 1
+    capture: 1 - function, start: (5, 0), end: (5, 4), text: `echo`
+  pattern: 7
+    capture: 6 - embedded, start: (5, 5), end: (5, 37), text: `${LIB_DEPEND//\[static-libs(+)]}`
+  pattern: 2
+    capture: 2 - property, start: (5, 7), end: (5, 17), text: `LIB_DEPEND`
+  pattern: 1
+    capture: 1 - function, start: (6, 0), end: (6, 29), text: `${ALL_LLVM_TARGETS[@]/%/(-)?}`
+  pattern: 7
+    capture: 6 - embedded, start: (6, 0), end: (6, 29), text: `${ALL_LLVM_TARGETS[@]/%/(-)?}`
+  pattern: 2
+    capture: 2 - property, start: (6, 2), end: (6, 18), text: `ALL_LLVM_TARGETS`
+  pattern: 1
+    capture: 1 - function, start: (7, 0), end: (7, 10), text: `filterdiff`
+  pattern: 9
+    capture: 8 - constant, start: (7, 11), end: (7, 14), text: `-p1`
+  pattern: 7
+    capture: 6 - embedded, start: (7, 15), end: (7, 32), text: `${paths[@]/#/-i }`
+  pattern: 2
+    capture: 2 - property, start: (7, 17), end: (7, 22), text: `paths`
+  pattern: 1
+    capture: 1 - function, start: (8, 0), end: (8, 30), text: `${cflags//-O? /$(get-flag O) }`
+  pattern: 7
+    capture: 6 - embedded, start: (8, 0), end: (8, 30), text: `${cflags//-O? /$(get-flag O) }`
+  pattern: 2
+    capture: 2 - property, start: (8, 2), end: (8, 8), text: `cflags`
+  pattern: 7
+    capture: 6 - embedded, start: (8, 15), end: (8, 28), text: `$(get-flag O)`
+  pattern: 1
+    capture: 1 - function, start: (8, 17), end: (8, 25), text: `get-flag`
+  pattern: 2
+    capture: 2 - property, start: (9, 0), end: (9, 4), text: `curf`
+  pattern: 0
+    capture: 0 - string, start: (9, 5), end: (9, 30), text: `"${f%'-roff2html'*}.html"`
+  pattern: 7
+    capture: 6 - embedded, start: (9, 6), end: (9, 24), text: `${f%'-roff2html'*}`
+  pattern: 2
+    capture: 2 - property, start: (9, 8), end: (9, 9), text: `f`
+  pattern: 0
+    capture: 0 - string, start: (9, 10), end: (9, 22), text: `'-roff2html'`
+  pattern: 2
+    capture: 2 - property, start: (10, 0), end: (10, 4), text: `reff`
+  pattern: 0
+    capture: 0 - string, start: (10, 5), end: (10, 37), text: `"${f/'-roff2html'*/'-ref'}.html"`
+  pattern: 7
+    capture: 6 - embedded, start: (10, 6), end: (10, 31), text: `${f/'-roff2html'*/'-ref'}`
+  pattern: 2
+    capture: 2 - property, start: (10, 8), end: (10, 9), text: `f`
+  pattern: 0
+    capture: 0 - string, start: (10, 24), end: (10, 30), text: `'-ref'`
+corpus/literals.txt/015
+  pattern: 1
+    capture: 1 - function, start: (1, 0), end: (1, 4), text: `grep`
+  pattern: 7
+    capture: 6 - embedded, start: (1, 6), end: (1, 12), text: `${var}`
+  pattern: 2
+    capture: 2 - property, start: (1, 8), end: (1, 11), text: `var`
+  pattern: 8
+    capture: 7 - operator, start: (1, 12), end: (1, 13), text: `$`
+corpus/literals.txt/016
+  pattern: 1
+    capture: 1 - function, start: (1, 0), end: (1, 4), text: `echo`
+  pattern: 7
+    capture: 6 - embedded, start: (1, 5), end: (1, 14), text: ``echo hi``
+  pattern: 1
+    capture: 1 - function, start: (1, 6), end: (1, 10), text: `echo`
+  pattern: 1
+    capture: 1 - function, start: (2, 0), end: (2, 4), text: `echo`
+  pattern: 7
+    capture: 6 - embedded, start: (2, 5), end: (2, 26), text: ``echo hi; echo there``
+  pattern: 1
+    capture: 1 - function, start: (2, 6), end: (2, 10), text: `echo`
+  pattern: 1
+    capture: 1 - function, start: (2, 15), end: (2, 19), text: `echo`
+  pattern: 1
+    capture: 1 - function, start: (3, 0), end: (3, 4), text: `echo`
+  pattern: 7
+    capture: 6 - embedded, start: (3, 5), end: (3, 23), text: `$(echo $(echo hi))`
+  pattern: 1
+    capture: 1 - function, start: (3, 7), end: (3, 11), text: `echo`
+  pattern: 7
+    capture: 6 - embedded, start: (3, 12), end: (3, 22), text: `$(echo hi)`
+  pattern: 1
+    capture: 1 - function, start: (3, 14), end: (3, 18), text: `echo`
+  pattern: 1
+    capture: 1 - function, start: (4, 0), end: (4, 4), text: `echo`
+  pattern: 7
+    capture: 6 - embedded, start: (4, 5), end: (4, 19), text: `$(< some-file)`
+  pattern: 8
+    capture: 7 - operator, start: (4, 7), end: (4, 8), text: `<`
+  pattern: 4
+    capture: 4 - comment, start: (6, 0), end: (6, 35), text: `# both of these are concatenations!`
+  pattern: 1
+    capture: 1 - function, start: (7, 0), end: (7, 4), text: `echo`
+  pattern: 7
+    capture: 6 - embedded, start: (7, 5), end: (7, 21), text: ``echo otherword``
+  pattern: 1
+    capture: 1 - function, start: (7, 6), end: (7, 10), text: `echo`
+  pattern: 1
+    capture: 1 - function, start: (8, 0), end: (8, 4), text: `echo`
+  pattern: 7
+    capture: 6 - embedded, start: (8, 9), end: (8, 25), text: ``echo otherword``
+  pattern: 1
+    capture: 1 - function, start: (8, 10), end: (8, 14), text: `echo`
+corpus/literals.txt/017
+  pattern: 1
+    capture: 1 - function, start: (1, 0), end: (1, 2), text: `wc`
+  pattern: 9
+    capture: 8 - constant, start: (1, 3), end: (1, 5), text: `-c`
+  pattern: 7
+    capture: 6 - embedded, start: (1, 6), end: (1, 29), text: `<(echo abc && echo def)`
+  pattern: 1
+    capture: 1 - function, start: (1, 8), end: (1, 12), text: `echo`
+  pattern: 8
+    capture: 7 - operator, start: (1, 17), end: (1, 19), text: `&&`
+  pattern: 1
+    capture: 1 - function, start: (1, 20), end: (1, 24), text: `echo`
+  pattern: 1
+    capture: 1 - function, start: (2, 0), end: (2, 2), text: `wc`
+  pattern: 9
+    capture: 8 - constant, start: (2, 3), end: (2, 5), text: `-c`
+  pattern: 7
+    capture: 6 - embedded, start: (2, 6), end: (2, 27), text: `<(echo abc; echo def)`
+  pattern: 1
+    capture: 1 - function, start: (2, 8), end: (2, 12), text: `echo`
+  pattern: 1
+    capture: 1 - function, start: (2, 18), end: (2, 22), text: `echo`
+  pattern: 1
+    capture: 1 - function, start: (3, 0), end: (3, 4), text: `echo`
+  pattern: 8
+    capture: 7 - operator, start: (3, 9), end: (3, 10), text: `>`
+  pattern: 7
+    capture: 6 - embedded, start: (3, 11), end: (3, 19), text: `>(wc -c)`
+  pattern: 1
+    capture: 1 - function, start: (3, 13), end: (3, 15), text: `wc`
+  pattern: 9
+    capture: 8 - constant, start: (3, 16), end: (3, 18), text: `-c`
+corpus/literals.txt/018
+  pattern: 1
+    capture: 1 - function, start: (1, 0), end: (1, 4), text: `echo`
+  pattern: 0
+    capture: 0 - string, start: (1, 5), end: (1, 10), text: `'a b'`
+  pattern: 0
+    capture: 0 - string, start: (1, 11), end: (1, 16), text: `'c d'`
+corpus/literals.txt/019
+  pattern: 1
+    capture: 1 - function, start: (1, 0), end: (1, 4), text: `echo`
+  pattern: 0
+    capture: 0 - string, start: (1, 5), end: (1, 8), text: `"a"`
+  pattern: 0
+    capture: 0 - string, start: (1, 9), end: (1, 12), text: `"b"`
+  pattern: 1
+    capture: 1 - function, start: (2, 0), end: (2, 4), text: `echo`
+  pattern: 0
+    capture: 0 - string, start: (2, 5), end: (2, 15), text: `"a ${b} c"`
+  pattern: 7
+    capture: 6 - embedded, start: (2, 8), end: (2, 12), text: `${b}`
+  pattern: 2
+    capture: 2 - property, start: (2, 10), end: (2, 11), text: `b`
+  pattern: 0
+    capture: 0 - string, start: (2, 16), end: (2, 22), text: `"d $e"`
+  pattern: 8
+    capture: 7 - operator, start: (2, 19), end: (2, 20), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (2, 20), end: (2, 21), text: `e`
+  pattern: 1
+    capture: 1 - function, start: (3, 0), end: (3, 4), text: `echo`
+  pattern: 0
+    capture: 0 - string, start: (3, 5), end: (3, 11), text: `"(())"`
+corpus/literals.txt/020
+  pattern: 1
+    capture: 1 - function, start: (1, 0), end: (1, 4), text: `find`
+  pattern: 0
+    capture: 0 - string, start: (1, 5), end: (1, 22), text: `"`dirname $file`"`
+  pattern: 7
+    capture: 6 - embedded, start: (1, 6), end: (1, 21), text: ``dirname $file``
+  pattern: 1
+    capture: 1 - function, start: (1, 7), end: (1, 14), text: `dirname`
+  pattern: 8
+    capture: 7 - operator, start: (1, 15), end: (1, 16), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (1, 16), end: (1, 20), text: `file`
+  pattern: 9
+    capture: 8 - constant, start: (1, 23), end: (1, 28), text: `-name`
+  pattern: 0
+    capture: 0 - string, start: (1, 29), end: (1, 36), text: `"$base"`
+  pattern: 8
+    capture: 7 - operator, start: (1, 30), end: (1, 31), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (1, 31), end: (1, 35), text: `base`
+  pattern: 0
+    capture: 0 - string, start: (1, 36), end: (1, 39), text: `'*'`
+corpus/literals.txt/021
+  pattern: 1
+    capture: 1 - function, start: (1, 0), end: (1, 4), text: `echo`
+  pattern: 0
+    capture: 0 - string, start: (1, 5), end: (1, 34), text: `"\"The great escape\`\${var}"`
+corpus/literals.txt/022
+  pattern: 1
+    capture: 1 - function, start: (1, 0), end: (1, 4), text: `echo`
+  pattern: 0
+    capture: 0 - string, start: (1, 5), end: (1, 13), text: `"s/$/'/"`
+  pattern: 8
+    capture: 7 - operator, start: (1, 8), end: (1, 9), text: `$`
+  pattern: 1
+    capture: 1 - function, start: (2, 0), end: (2, 4), text: `echo`
+  pattern: 0
+    capture: 0 - string, start: (2, 5), end: (2, 8), text: `"#"`
+  pattern: 1
+    capture: 1 - function, start: (3, 0), end: (3, 4), text: `echo`
+  pattern: 0
+    capture: 0 - string, start: (3, 5), end: (3, 9), text: `"s$"`
+  pattern: 8
+    capture: 7 - operator, start: (3, 7), end: (3, 8), text: `$`
+corpus/literals.txt/023
+  pattern: 1
+    capture: 1 - function, start: (1, 0), end: (1, 4), text: `echo`
+corpus/literals.txt/024
+  pattern: 2
+    capture: 2 - property, start: (1, 0), end: (1, 1), text: `a`
+  pattern: 2
+    capture: 2 - property, start: (2, 0), end: (2, 1), text: `b`
+  pattern: 1
+    capture: 1 - function, start: (4, 0), end: (4, 4), text: `echo`
+  pattern: 7
+    capture: 6 - embedded, start: (4, 5), end: (4, 12), text: `${a[@]}`
+  pattern: 2
+    capture: 2 - property, start: (4, 7), end: (4, 8), text: `a`
+  pattern: 1
+    capture: 1 - function, start: (5, 0), end: (5, 4), text: `echo`
+  pattern: 7
+    capture: 6 - embedded, start: (5, 5), end: (5, 13), text: `${#b[@]}`
+  pattern: 2
+    capture: 2 - property, start: (5, 8), end: (5, 9), text: `b`
+  pattern: 2
+    capture: 2 - property, start: (7, 0), end: (7, 1), text: `a`
+  pattern: 8
+    capture: 7 - operator, start: (7, 2), end: (7, 3), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (7, 3), end: (7, 4), text: `i`
+  pattern: 2
+    capture: 2 - property, start: (8, 0), end: (8, 1), text: `a`
+  pattern: 0
+    capture: 0 - string, start: (8, 8), end: (8, 13), text: `"bar"`
+  pattern: 7
+    capture: 6 - embedded, start: (8, 14), end: (8, 20), text: `$(baz)`
+  pattern: 1
+    capture: 1 - function, start: (8, 16), end: (8, 19), text: `baz`
+  pattern: 1
+    capture: 1 - function, start: (10, 0), end: (10, 6), text: `printf`
+  pattern: 0
+    capture: 0 - string, start: (10, 7), end: (10, 15), text: `"  %-9s"`
+  pattern: 0
+    capture: 0 - string, start: (10, 16), end: (10, 36), text: `"${seq0:-(default)}"`
+  pattern: 7
+    capture: 6 - embedded, start: (10, 17), end: (10, 35), text: `${seq0:-(default)}`
+  pattern: 2
+    capture: 2 - property, start: (10, 19), end: (10, 23), text: `seq0`
+corpus/literals.txt/025
+  pattern: 1
+    capture: 1 - function, start: (1, 0), end: (1, 4), text: `echo`
+  pattern: 9
+    capture: 8 - constant, start: (1, 5), end: (1, 8), text: `-ne`
+  pattern: 0
+    capture: 0 - string, start: (1, 9), end: (1, 24), text: `"\033k$1\033\\"`
+  pattern: 8
+    capture: 7 - operator, start: (1, 15), end: (1, 16), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (1, 16), end: (1, 17), text: `1`
+  pattern: 8
+    capture: 7 - operator, start: (1, 25), end: (1, 26), text: `>`
+corpus/literals.txt/026
+  pattern: 1
+    capture: 1 - function, start: (1, 0), end: (1, 4), text: `curl`
+  pattern: 9
+    capture: 8 - constant, start: (1, 5), end: (1, 7), text: `-#`
+  pattern: 4
+    capture: 4 - comment, start: (1, 18), end: (1, 40), text: `#comment without space`
+  pattern: 1
+    capture: 1 - function, start: (2, 0), end: (2, 3), text: `nix`
+  pattern: 9
+    capture: 8 - constant, start: (2, 24), end: (2, 26), text: `-v`
+  pattern: 4
+    capture: 4 - comment, start: (2, 27), end: (2, 47), text: `# comment with space`
+corpus/literals.txt/027
+  pattern: 1
+    capture: 1 - function, start: (1, 0), end: (1, 4), text: `echo`
+  pattern: 0
+    capture: 0 - string, start: (1, 5), end: (1, 11), text: `'word'`
+  pattern: 4
+    capture: 4 - comment, start: (1, 24), end: (1, 41), text: `# a legit comment`
+  pattern: 1
+    capture: 1 - function, start: (2, 0), end: (2, 4), text: `echo`
+  pattern: 7
+    capture: 6 - embedded, start: (2, 5), end: (2, 16), text: `$(uname -a)`
+  pattern: 1
+    capture: 1 - function, start: (2, 7), end: (2, 12), text: `uname`
+  pattern: 9
+    capture: 8 - constant, start: (2, 13), end: (2, 15), text: `-a`
+  pattern: 4
+    capture: 4 - comment, start: (2, 29), end: (2, 46), text: `# a legit comment`
+  pattern: 1
+    capture: 1 - function, start: (3, 0), end: (3, 4), text: `echo`
+  pattern: 7
+    capture: 6 - embedded, start: (3, 5), end: (3, 15), text: ``uname -a``
+  pattern: 1
+    capture: 1 - function, start: (3, 6), end: (3, 11), text: `uname`
+  pattern: 9
+    capture: 8 - constant, start: (3, 12), end: (3, 14), text: `-a`
+  pattern: 4
+    capture: 4 - comment, start: (3, 28), end: (3, 45), text: `# a legit comment`
+  pattern: 1
+    capture: 1 - function, start: (4, 0), end: (4, 4), text: `echo`
+  pattern: 8
+    capture: 7 - operator, start: (4, 5), end: (4, 6), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (4, 6), end: (4, 9), text: `hey`
+  pattern: 4
+    capture: 4 - comment, start: (4, 22), end: (4, 39), text: `# a legit comment`
+  pattern: 2
+    capture: 2 - property, start: (5, 0), end: (5, 3), text: `var`
+  pattern: 4
+    capture: 4 - comment, start: (5, 17), end: (5, 34), text: `# a legit comment`
+  pattern: 1
+    capture: 1 - function, start: (6, 0), end: (6, 4), text: `echo`
+  pattern: 0
+    capture: 0 - string, start: (6, 5), end: (6, 13), text: `"'$var'"`
+  pattern: 8
+    capture: 7 - operator, start: (6, 7), end: (6, 8), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (6, 8), end: (6, 11), text: `var`
+  pattern: 4
+    capture: 4 - comment, start: (6, 14), end: (6, 33), text: `# -> '#not-comment'`
+corpus/literals.txt/028
+  pattern: 2
+    capture: 2 - property, start: (1, 0), end: (1, 4), text: `loop`
+  pattern: 2
+    capture: 2 - property, start: (1, 7), end: (1, 16), text: `variables`
+  pattern: 2
+    capture: 2 - property, start: (1, 19), end: (1, 23), text: `here`
+corpus/literals.txt/029
+  pattern: 2
+    capture: 2 - property, start: (1, 0), end: (1, 14), text: `component_type`
+  pattern: 0
+    capture: 0 - string, start: (1, 15), end: (1, 21), text: `"${1}"`
+  pattern: 7
+    capture: 6 - embedded, start: (1, 16), end: (1, 20), text: `${1}`
+  pattern: 2
+    capture: 2 - property, start: (1, 18), end: (1, 19), text: `1`
+  pattern: 2
+    capture: 2 - property, start: (1, 22), end: (1, 31), text: `item_name`
+  pattern: 0
+    capture: 0 - string, start: (1, 32), end: (1, 39), text: `"${2?}"`
+  pattern: 7
+    capture: 6 - embedded, start: (1, 33), end: (1, 38), text: `${2?}`
+  pattern: 2
+    capture: 2 - property, start: (1, 35), end: (1, 36), text: `2`
+corpus/literals.txt/030
+  pattern: 1
+    capture: 1 - function, start: (1, 0), end: (1, 4), text: `echo`
+  pattern: 2
+    capture: 2 - property, start: (2, 0), end: (2, 1), text: `a`
+  pattern: 8
+    capture: 7 - operator, start: (2, 21), end: (2, 23), text: `>>`
+  pattern: 8
+    capture: 7 - operator, start: (2, 32), end: (2, 33), text: `|`
+  pattern: 1
+    capture: 1 - function, start: (3, 0), end: (3, 34), text: `$(((${1:-${SECONDS}} % 12) + 144))`
+  pattern: 7
+    capture: 6 - embedded, start: (3, 4), end: (3, 20), text: `${1:-${SECONDS}}`
+  pattern: 2
+    capture: 2 - property, start: (3, 6), end: (3, 7), text: `1`
+  pattern: 7
+    capture: 6 - embedded, start: (3, 9), end: (3, 19), text: `${SECONDS}`
+  pattern: 2
+    capture: 2 - property, start: (3, 11), end: (3, 18), text: `SECONDS`
+  pattern: 2
+    capture: 2 - property, start: (4, 2), end: (4, 5), text: `foo`
+  pattern: 1
+    capture: 1 - function, start: (5, 0), end: (5, 4), text: `echo`
+  pattern: 2
+    capture: 2 - property, start: (5, 8), end: (5, 11), text: `bar`
+  pattern: 1
+    capture: 1 - function, start: (6, 0), end: (6, 4), text: `echo`
+  pattern: 1
+    capture: 1 - function, start: (7, 0), end: (7, 4), text: `echo`
+  pattern: 2
+    capture: 2 - property, start: (7, 11), end: (7, 12), text: `a`
+  pattern: 2
+    capture: 2 - property, start: (7, 19), end: (7, 20), text: `b`
+  pattern: 2
+    capture: 2 - property, start: (7, 26), end: (7, 27), text: `c`
+  pattern: 2
+    capture: 2 - property, start: (7, 33), end: (7, 34), text: `d`
+  pattern: 1
+    capture: 1 - function, start: (8, 0), end: (8, 4), text: `echo`
+  pattern: 2
+    capture: 2 - property, start: (8, 8), end: (8, 11), text: `foo`
+  pattern: 2
+    capture: 2 - property, start: (8, 17), end: (8, 20), text: `bar`
+  pattern: 0
+    capture: 0 - string, start: (9, 2), end: (9, 26), text: `"${MULTIBUILD_VARIANTS}"`
+  pattern: 7
+    capture: 6 - embedded, start: (9, 3), end: (9, 25), text: `${MULTIBUILD_VARIANTS}`
+  pattern: 2
+    capture: 2 - property, start: (9, 5), end: (9, 24), text: `MULTIBUILD_VARIANTS`
+  pattern: 8
+    capture: 7 - operator, start: (9, 27), end: (9, 28), text: `>`
+  pattern: 1
+    capture: 1 - function, start: (10, 0), end: (10, 53), text: `$(("$(stat --printf '%05a' "${save_file}")" & 07177))`
+  pattern: 0
+    capture: 0 - string, start: (10, 3), end: (10, 43), text: `"$(stat --printf '%05a' "${save_file}")"`
+  pattern: 7
+    capture: 6 - embedded, start: (10, 4), end: (10, 42), text: `$(stat --printf '%05a' "${save_file}")`
+  pattern: 1
+    capture: 1 - function, start: (10, 6), end: (10, 10), text: `stat`
+  pattern: 9
+    capture: 8 - constant, start: (10, 11), end: (10, 19), text: `--printf`
+  pattern: 0
+    capture: 0 - string, start: (10, 20), end: (10, 26), text: `'%05a'`
+  pattern: 0
+    capture: 0 - string, start: (10, 27), end: (10, 41), text: `"${save_file}"`
+  pattern: 7
+    capture: 6 - embedded, start: (10, 28), end: (10, 40), text: `${save_file}`
+  pattern: 2
+    capture: 2 - property, start: (10, 30), end: (10, 39), text: `save_file`
+  pattern: 2
+    capture: 2 - property, start: (11, 0), end: (11, 17), text: `soft_errors_count`
+  pattern: 2
+    capture: 2 - property, start: (11, 20), end: (11, 37), text: `soft_errors_count`
+corpus/literals.txt/031
+  pattern: 5
+    capture: 1 - function, start: (1, 0), end: (1, 4), text: `main`
+  pattern: 2
+    capture: 2 - property, start: (2, 10), end: (2, 13), text: `foo`
+  pattern: 0
+    capture: 0 - string, start: (2, 14), end: (2, 19), text: `"asd"`
+  pattern: 0
+    capture: 0 - string, start: (3, 9), end: (3, 14), text: `"fgh"`
+corpus/literals.txt/032
+  pattern: 1
+    capture: 1 - function, start: (1, 0), end: (1, 4), text: `echo`
+  pattern: 1
+    capture: 1 - function, start: (2, 0), end: (2, 4), text: `echo`
+  pattern: 1
+    capture: 1 - function, start: (3, 0), end: (3, 4), text: `echo`
+  pattern: 4
+    capture: 4 - comment, start: (3, 11), end: (3, 35), text: `# not a brace expression`
+  pattern: 1
+    capture: 1 - function, start: (4, 0), end: (4, 4), text: `echo`
+  pattern: 1
+    capture: 1 - function, start: (5, 0), end: (5, 4), text: `echo`
+  pattern: 4
+    capture: 4 - comment, start: (5, 12), end: (5, 36), text: `# not a brace expression`
+  pattern: 1
+    capture: 1 - function, start: (6, 0), end: (6, 4), text: `echo`
+  pattern: 4
+    capture: 4 - comment, start: (6, 15), end: (6, 39), text: `# not a brace expression`
+  pattern: 1
+    capture: 1 - function, start: (7, 0), end: (7, 4), text: `echo`

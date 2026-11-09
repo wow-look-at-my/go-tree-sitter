@@ -1,0 +1,10 @@
+corpus/microsoft.txt/000
+  pattern: 0
+    capture: definition.class, start: (1, 0), end: (3, 1)
+    capture: 0 - name, start: (1, 29), end: (1, 31), text: `s2`
+  pattern: 7
+    capture: definition.class, start: (8, 0), end: (9, 1)
+    capture: 0 - name, start: (8, 23), end: (8, 25), text: `u2`
+  pattern: 2
+    capture: 2 - definition.function, start: (11, 12), end: (11, 16), text: `f2()`
+    capture: 0 - name, start: (11, 12), end: (11, 14), text: `f2`

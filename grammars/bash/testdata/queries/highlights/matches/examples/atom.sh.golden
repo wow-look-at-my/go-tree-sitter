@@ -1,0 +1,769 @@
+examples/atom.sh
+  pattern: 4
+    capture: 4 - comment, start: (0, 0), end: (0, 11), text: `#!/bin/bash`
+  pattern: 3
+    capture: 3 - keyword, start: (2, 0), end: (2, 2), text: `if`
+  pattern: 0
+    capture: 0 - string, start: (2, 5), end: (2, 15), text: `"$(uname)"`
+  pattern: 7
+    capture: 6 - embedded, start: (2, 6), end: (2, 14), text: `$(uname)`
+  pattern: 1
+    capture: 1 - function, start: (2, 8), end: (2, 13), text: `uname`
+  pattern: 0
+    capture: 0 - string, start: (2, 19), end: (2, 27), text: `'Darwin'`
+  pattern: 3
+    capture: 3 - keyword, start: (2, 31), end: (2, 35), text: `then`
+  pattern: 2
+    capture: 2 - property, start: (3, 2), end: (3, 4), text: `OS`
+  pattern: 0
+    capture: 0 - string, start: (3, 5), end: (3, 10), text: `'Mac'`
+  pattern: 3
+    capture: 3 - keyword, start: (4, 0), end: (4, 4), text: `elif`
+  pattern: 0
+    capture: 0 - string, start: (4, 7), end: (4, 39), text: `"$(expr substr $(uname -s) 1 5)"`
+  pattern: 7
+    capture: 6 - embedded, start: (4, 8), end: (4, 38), text: `$(expr substr $(uname -s) 1 5)`
+  pattern: 1
+    capture: 1 - function, start: (4, 10), end: (4, 14), text: `expr`
+  pattern: 7
+    capture: 6 - embedded, start: (4, 22), end: (4, 33), text: `$(uname -s)`
+  pattern: 1
+    capture: 1 - function, start: (4, 24), end: (4, 29), text: `uname`
+  pattern: 9
+    capture: 8 - constant, start: (4, 30), end: (4, 32), text: `-s`
+  pattern: 0
+    capture: 0 - string, start: (4, 43), end: (4, 50), text: `'Linux'`
+  pattern: 3
+    capture: 3 - keyword, start: (4, 54), end: (4, 58), text: `then`
+  pattern: 2
+    capture: 2 - property, start: (5, 2), end: (5, 4), text: `OS`
+  pattern: 0
+    capture: 0 - string, start: (5, 5), end: (5, 12), text: `'Linux'`
+  pattern: 3
+    capture: 3 - keyword, start: (6, 0), end: (6, 4), text: `else`
+  pattern: 1
+    capture: 1 - function, start: (7, 2), end: (7, 6), text: `echo`
+  pattern: 0
+    capture: 0 - string, start: (7, 7), end: (7, 54), text: `"Your platform ($(uname -a)) is not supported."`
+  pattern: 7
+    capture: 6 - embedded, start: (7, 23), end: (7, 34), text: `$(uname -a)`
+  pattern: 1
+    capture: 1 - function, start: (7, 25), end: (7, 30), text: `uname`
+  pattern: 9
+    capture: 8 - constant, start: (7, 31), end: (7, 33), text: `-a`
+  pattern: 1
+    capture: 1 - function, start: (8, 2), end: (8, 6), text: `exit`
+  pattern: 3
+    capture: 3 - keyword, start: (9, 0), end: (9, 2), text: `fi`
+  pattern: 3
+    capture: 3 - keyword, start: (11, 0), end: (11, 2), text: `if`
+  pattern: 0
+    capture: 0 - string, start: (11, 5), end: (11, 21), text: `"$(basename $0)"`
+  pattern: 7
+    capture: 6 - embedded, start: (11, 6), end: (11, 20), text: `$(basename $0)`
+  pattern: 1
+    capture: 1 - function, start: (11, 8), end: (11, 16), text: `basename`
+  pattern: 8
+    capture: 7 - operator, start: (11, 17), end: (11, 18), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (11, 18), end: (11, 19), text: `0`
+  pattern: 0
+    capture: 0 - string, start: (11, 25), end: (11, 36), text: `'atom-beta'`
+  pattern: 3
+    capture: 3 - keyword, start: (11, 40), end: (11, 44), text: `then`
+  pattern: 2
+    capture: 2 - property, start: (12, 2), end: (12, 14), text: `BETA_VERSION`
+  pattern: 3
+    capture: 3 - keyword, start: (13, 0), end: (13, 4), text: `else`
+  pattern: 2
+    capture: 2 - property, start: (14, 2), end: (14, 14), text: `BETA_VERSION`
+  pattern: 3
+    capture: 3 - keyword, start: (15, 0), end: (15, 2), text: `fi`
+  pattern: 3
+    capture: 3 - keyword, start: (17, 0), end: (17, 6), text: `export`
+  pattern: 2
+    capture: 2 - property, start: (17, 7), end: (17, 48), text: `ATOM_DISABLE_SHELLING_OUT_FOR_ENVIRONMENT`
+  pattern: 3
+    capture: 3 - keyword, start: (19, 0), end: (19, 5), text: `while`
+  pattern: 1
+    capture: 1 - function, start: (19, 6), end: (19, 13), text: `getopts`
+  pattern: 0
+    capture: 0 - string, start: (19, 14), end: (19, 24), text: `":wtfvh-:"`
+  pattern: 3
+    capture: 3 - keyword, start: (19, 30), end: (19, 32), text: `do`
+  pattern: 3
+    capture: 3 - keyword, start: (20, 2), end: (20, 6), text: `case`
+  pattern: 0
+    capture: 0 - string, start: (20, 7), end: (20, 13), text: `"$opt"`
+  pattern: 8
+    capture: 7 - operator, start: (20, 8), end: (20, 9), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (20, 9), end: (20, 12), text: `opt`
+  pattern: 3
+    capture: 3 - keyword, start: (20, 14), end: (20, 16), text: `in`
+  pattern: 3
+    capture: 3 - keyword, start: (22, 6), end: (22, 10), text: `case`
+  pattern: 0
+    capture: 0 - string, start: (22, 11), end: (22, 22), text: `"${OPTARG}"`
+  pattern: 7
+    capture: 6 - embedded, start: (22, 12), end: (22, 21), text: `${OPTARG}`
+  pattern: 2
+    capture: 2 - property, start: (22, 14), end: (22, 20), text: `OPTARG`
+  pattern: 3
+    capture: 3 - keyword, start: (22, 23), end: (22, 25), text: `in`
+  pattern: 2
+    capture: 2 - property, start: (24, 10), end: (24, 14), text: `WAIT`
+  pattern: 8
+    capture: 7 - operator, start: (26, 12), end: (26, 13), text: `|`
+  pattern: 2
+    capture: 2 - property, start: (27, 10), end: (27, 25), text: `REDIRECT_STDERR`
+  pattern: 2
+    capture: 2 - property, start: (28, 10), end: (28, 23), text: `EXPECT_OUTPUT`
+  pattern: 8
+    capture: 7 - operator, start: (30, 18), end: (30, 19), text: `|`
+  pattern: 8
+    capture: 7 - operator, start: (30, 28), end: (30, 29), text: `|`
+  pattern: 8
+    capture: 7 - operator, start: (30, 43), end: (30, 44), text: `|`
+  pattern: 2
+    capture: 2 - property, start: (31, 10), end: (31, 23), text: `EXPECT_OUTPUT`
+  pattern: 3
+    capture: 3 - keyword, start: (33, 6), end: (33, 10), text: `esac`
+  pattern: 2
+    capture: 2 - property, start: (36, 6), end: (36, 10), text: `WAIT`
+  pattern: 8
+    capture: 7 - operator, start: (38, 5), end: (38, 6), text: `|`
+  pattern: 2
+    capture: 2 - property, start: (39, 6), end: (39, 21), text: `REDIRECT_STDERR`
+  pattern: 2
+    capture: 2 - property, start: (40, 6), end: (40, 19), text: `EXPECT_OUTPUT`
+  pattern: 8
+    capture: 7 - operator, start: (42, 5), end: (42, 6), text: `|`
+  pattern: 2
+    capture: 2 - property, start: (43, 6), end: (43, 19), text: `EXPECT_OUTPUT`
+  pattern: 3
+    capture: 3 - keyword, start: (45, 2), end: (45, 6), text: `esac`
+  pattern: 3
+    capture: 3 - keyword, start: (46, 0), end: (46, 4), text: `done`
+  pattern: 3
+    capture: 3 - keyword, start: (48, 0), end: (48, 2), text: `if`
+  pattern: 8
+    capture: 7 - operator, start: (48, 5), end: (48, 6), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (48, 6), end: (48, 21), text: `REDIRECT_STDERR`
+  pattern: 3
+    capture: 3 - keyword, start: (48, 25), end: (48, 29), text: `then`
+  pattern: 1
+    capture: 1 - function, start: (49, 2), end: (49, 6), text: `exec`
+  pattern: 6
+    capture: 5 - number, start: (49, 7), end: (49, 8), text: `2`
+  pattern: 8
+    capture: 7 - operator, start: (49, 8), end: (49, 9), text: `>`
+  pattern: 3
+    capture: 3 - keyword, start: (50, 0), end: (50, 2), text: `fi`
+  pattern: 3
+    capture: 3 - keyword, start: (52, 0), end: (52, 2), text: `if`
+  pattern: 8
+    capture: 7 - operator, start: (52, 5), end: (52, 6), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (52, 6), end: (52, 19), text: `EXPECT_OUTPUT`
+  pattern: 3
+    capture: 3 - keyword, start: (52, 23), end: (52, 27), text: `then`
+  pattern: 3
+    capture: 3 - keyword, start: (53, 2), end: (53, 8), text: `export`
+  pattern: 2
+    capture: 2 - property, start: (53, 9), end: (53, 32), text: `ELECTRON_ENABLE_LOGGING`
+  pattern: 3
+    capture: 3 - keyword, start: (54, 0), end: (54, 2), text: `fi`
+  pattern: 3
+    capture: 3 - keyword, start: (56, 0), end: (56, 2), text: `if`
+  pattern: 8
+    capture: 7 - operator, start: (56, 5), end: (56, 6), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (56, 6), end: (56, 8), text: `OS`
+  pattern: 0
+    capture: 0 - string, start: (56, 12), end: (56, 17), text: `'Mac'`
+  pattern: 3
+    capture: 3 - keyword, start: (56, 21), end: (56, 25), text: `then`
+  pattern: 3
+    capture: 3 - keyword, start: (57, 2), end: (57, 4), text: `if`
+  pattern: 0
+    capture: 0 - string, start: (57, 10), end: (57, 14), text: `"$0"`
+  pattern: 8
+    capture: 7 - operator, start: (57, 11), end: (57, 12), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (57, 12), end: (57, 13), text: `0`
+  pattern: 3
+    capture: 3 - keyword, start: (57, 18), end: (57, 22), text: `then`
+  pattern: 2
+    capture: 2 - property, start: (58, 4), end: (58, 10), text: `SCRIPT`
+  pattern: 0
+    capture: 0 - string, start: (58, 11), end: (58, 29), text: `"$(readlink "$0")"`
+  pattern: 7
+    capture: 6 - embedded, start: (58, 12), end: (58, 28), text: `$(readlink "$0")`
+  pattern: 1
+    capture: 1 - function, start: (58, 14), end: (58, 22), text: `readlink`
+  pattern: 0
+    capture: 0 - string, start: (58, 23), end: (58, 27), text: `"$0"`
+  pattern: 8
+    capture: 7 - operator, start: (58, 24), end: (58, 25), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (58, 25), end: (58, 26), text: `0`
+  pattern: 3
+    capture: 3 - keyword, start: (59, 2), end: (59, 6), text: `else`
+  pattern: 2
+    capture: 2 - property, start: (60, 4), end: (60, 10), text: `SCRIPT`
+  pattern: 0
+    capture: 0 - string, start: (60, 11), end: (60, 15), text: `"$0"`
+  pattern: 8
+    capture: 7 - operator, start: (60, 12), end: (60, 13), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (60, 13), end: (60, 14), text: `0`
+  pattern: 3
+    capture: 3 - keyword, start: (61, 2), end: (61, 4), text: `fi`
+  pattern: 2
+    capture: 2 - property, start: (62, 2), end: (62, 10), text: `ATOM_APP`
+  pattern: 0
+    capture: 0 - string, start: (62, 11), end: (62, 72), text: `"$(dirname "$(dirname "$(dirname "$(dirname "$SCRIPT")")")")"`
+  pattern: 7
+    capture: 6 - embedded, start: (62, 12), end: (62, 71), text: `$(dirname "$(dirname "$(dirname "$(dirname "$SCRIPT")")")")`
+  pattern: 1
+    capture: 1 - function, start: (62, 14), end: (62, 21), text: `dirname`
+  pattern: 0
+    capture: 0 - string, start: (62, 22), end: (62, 70), text: `"$(dirname "$(dirname "$(dirname "$SCRIPT")")")"`
+  pattern: 7
+    capture: 6 - embedded, start: (62, 23), end: (62, 69), text: `$(dirname "$(dirname "$(dirname "$SCRIPT")")")`
+  pattern: 1
+    capture: 1 - function, start: (62, 25), end: (62, 32), text: `dirname`
+  pattern: 0
+    capture: 0 - string, start: (62, 33), end: (62, 68), text: `"$(dirname "$(dirname "$SCRIPT")")"`
+  pattern: 7
+    capture: 6 - embedded, start: (62, 34), end: (62, 67), text: `$(dirname "$(dirname "$SCRIPT")")`
+  pattern: 1
+    capture: 1 - function, start: (62, 36), end: (62, 43), text: `dirname`
+  pattern: 0
+    capture: 0 - string, start: (62, 44), end: (62, 66), text: `"$(dirname "$SCRIPT")"`
+  pattern: 7
+    capture: 6 - embedded, start: (62, 45), end: (62, 65), text: `$(dirname "$SCRIPT")`
+  pattern: 1
+    capture: 1 - function, start: (62, 47), end: (62, 54), text: `dirname`
+  pattern: 0
+    capture: 0 - string, start: (62, 55), end: (62, 64), text: `"$SCRIPT"`
+  pattern: 8
+    capture: 7 - operator, start: (62, 56), end: (62, 57), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (62, 57), end: (62, 63), text: `SCRIPT`
+  pattern: 3
+    capture: 3 - keyword, start: (63, 2), end: (63, 4), text: `if`
+  pattern: 0
+    capture: 0 - string, start: (63, 7), end: (63, 18), text: `"$ATOM_APP"`
+  pattern: 8
+    capture: 7 - operator, start: (63, 8), end: (63, 9), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (63, 9), end: (63, 17), text: `ATOM_APP`
+  pattern: 3
+    capture: 3 - keyword, start: (63, 27), end: (63, 31), text: `then`
+  pattern: 3
+    capture: 3 - keyword, start: (64, 4), end: (64, 9), text: `unset`
+  pattern: 2
+    capture: 2 - property, start: (64, 10), end: (64, 18), text: `ATOM_APP`
+  pattern: 3
+    capture: 3 - keyword, start: (65, 2), end: (65, 6), text: `else`
+  pattern: 2
+    capture: 2 - property, start: (66, 4), end: (66, 13), text: `ATOM_PATH`
+  pattern: 0
+    capture: 0 - string, start: (66, 14), end: (66, 38), text: `"$(dirname "$ATOM_APP")"`
+  pattern: 7
+    capture: 6 - embedded, start: (66, 15), end: (66, 37), text: `$(dirname "$ATOM_APP")`
+  pattern: 1
+    capture: 1 - function, start: (66, 17), end: (66, 24), text: `dirname`
+  pattern: 0
+    capture: 0 - string, start: (66, 25), end: (66, 36), text: `"$ATOM_APP"`
+  pattern: 8
+    capture: 7 - operator, start: (66, 26), end: (66, 27), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (66, 27), end: (66, 35), text: `ATOM_APP`
+  pattern: 2
+    capture: 2 - property, start: (67, 4), end: (67, 17), text: `ATOM_APP_NAME`
+  pattern: 0
+    capture: 0 - string, start: (67, 18), end: (67, 43), text: `"$(basename "$ATOM_APP")"`
+  pattern: 7
+    capture: 6 - embedded, start: (67, 19), end: (67, 42), text: `$(basename "$ATOM_APP")`
+  pattern: 1
+    capture: 1 - function, start: (67, 21), end: (67, 29), text: `basename`
+  pattern: 0
+    capture: 0 - string, start: (67, 30), end: (67, 41), text: `"$ATOM_APP"`
+  pattern: 8
+    capture: 7 - operator, start: (67, 31), end: (67, 32), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (67, 32), end: (67, 40), text: `ATOM_APP`
+  pattern: 3
+    capture: 3 - keyword, start: (68, 2), end: (68, 4), text: `fi`
+  pattern: 3
+    capture: 3 - keyword, start: (70, 2), end: (70, 4), text: `if`
+  pattern: 0
+    capture: 0 - string, start: (70, 10), end: (70, 25), text: `"$BETA_VERSION"`
+  pattern: 8
+    capture: 7 - operator, start: (70, 11), end: (70, 12), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (70, 12), end: (70, 24), text: `BETA_VERSION`
+  pattern: 3
+    capture: 3 - keyword, start: (70, 29), end: (70, 33), text: `then`
+  pattern: 2
+    capture: 2 - property, start: (71, 4), end: (71, 24), text: `ATOM_EXECUTABLE_NAME`
+  pattern: 0
+    capture: 0 - string, start: (71, 25), end: (71, 36), text: `"Atom Beta"`
+  pattern: 3
+    capture: 3 - keyword, start: (72, 2), end: (72, 6), text: `else`
+  pattern: 2
+    capture: 2 - property, start: (73, 4), end: (73, 24), text: `ATOM_EXECUTABLE_NAME`
+  pattern: 0
+    capture: 0 - string, start: (73, 25), end: (73, 31), text: `"Atom"`
+  pattern: 3
+    capture: 3 - keyword, start: (74, 2), end: (74, 4), text: `fi`
+  pattern: 3
+    capture: 3 - keyword, start: (76, 2), end: (76, 4), text: `if`
+  pattern: 0
+    capture: 0 - string, start: (76, 10), end: (76, 24), text: `"${ATOM_PATH}"`
+  pattern: 7
+    capture: 6 - embedded, start: (76, 11), end: (76, 23), text: `${ATOM_PATH}`
+  pattern: 2
+    capture: 2 - property, start: (76, 13), end: (76, 22), text: `ATOM_PATH`
+  pattern: 3
+    capture: 3 - keyword, start: (76, 28), end: (76, 32), text: `then`
+  pattern: 4
+    capture: 4 - comment, start: (77, 4), end: (77, 86), text: `# If ATOM_PATH isn't set, check /Applications and then ~/Applications for Atom.app`
+  pattern: 3
+    capture: 3 - keyword, start: (78, 4), end: (78, 6), text: `if`
+  pattern: 0
+    capture: 0 - string, start: (78, 12), end: (78, 42), text: `"/Applications/$ATOM_APP_NAME"`
+  pattern: 8
+    capture: 7 - operator, start: (78, 27), end: (78, 28), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (78, 28), end: (78, 41), text: `ATOM_APP_NAME`
+  pattern: 3
+    capture: 3 - keyword, start: (78, 46), end: (78, 50), text: `then`
+  pattern: 2
+    capture: 2 - property, start: (79, 6), end: (79, 15), text: `ATOM_PATH`
+  pattern: 0
+    capture: 0 - string, start: (79, 16), end: (79, 31), text: `"/Applications"`
+  pattern: 3
+    capture: 3 - keyword, start: (80, 4), end: (80, 8), text: `elif`
+  pattern: 0
+    capture: 0 - string, start: (80, 14), end: (80, 49), text: `"$HOME/Applications/$ATOM_APP_NAME"`
+  pattern: 8
+    capture: 7 - operator, start: (80, 15), end: (80, 16), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (80, 16), end: (80, 20), text: `HOME`
+  pattern: 8
+    capture: 7 - operator, start: (80, 34), end: (80, 35), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (80, 35), end: (80, 48), text: `ATOM_APP_NAME`
+  pattern: 3
+    capture: 3 - keyword, start: (80, 53), end: (80, 57), text: `then`
+  pattern: 2
+    capture: 2 - property, start: (81, 6), end: (81, 15), text: `ATOM_PATH`
+  pattern: 0
+    capture: 0 - string, start: (81, 16), end: (81, 36), text: `"$HOME/Applications"`
+  pattern: 8
+    capture: 7 - operator, start: (81, 17), end: (81, 18), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (81, 18), end: (81, 22), text: `HOME`
+  pattern: 3
+    capture: 3 - keyword, start: (82, 4), end: (82, 8), text: `else`
+  pattern: 4
+    capture: 4 - comment, start: (83, 6), end: (83, 70), text: `# We haven't found an Atom.app, use spotlight to search for Atom`
+  pattern: 2
+    capture: 2 - property, start: (84, 6), end: (84, 15), text: `ATOM_PATH`
+  pattern: 0
+    capture: 0 - string, start: (84, 16), end: (84, 122), text: `"$(mdfind "kMDItemCFBundleIdentifier == 'com.github.atom'" | grep -v ShipIt | head -1 | xargs -0 dirname)"`
+  pattern: 7
+    capture: 6 - embedded, start: (84, 17), end: (84, 121), text: `$(mdfind "kMDItemCFBundleIdentifier == 'com.github.atom'" | grep -v ShipIt | head -1 | xargs -0 dirname)`
+  pattern: 1
+    capture: 1 - function, start: (84, 19), end: (84, 25), text: `mdfind`
+  pattern: 0
+    capture: 0 - string, start: (84, 26), end: (84, 74), text: `"kMDItemCFBundleIdentifier == 'com.github.atom'"`
+  pattern: 8
+    capture: 7 - operator, start: (84, 75), end: (84, 76), text: `|`
+  pattern: 1
+    capture: 1 - function, start: (84, 77), end: (84, 81), text: `grep`
+  pattern: 9
+    capture: 8 - constant, start: (84, 82), end: (84, 84), text: `-v`
+  pattern: 8
+    capture: 7 - operator, start: (84, 92), end: (84, 93), text: `|`
+  pattern: 1
+    capture: 1 - function, start: (84, 94), end: (84, 98), text: `head`
+  pattern: 9
+    capture: 8 - constant, start: (84, 99), end: (84, 101), text: `-1`
+  pattern: 8
+    capture: 7 - operator, start: (84, 102), end: (84, 103), text: `|`
+  pattern: 1
+    capture: 1 - function, start: (84, 104), end: (84, 109), text: `xargs`
+  pattern: 9
+    capture: 8 - constant, start: (84, 110), end: (84, 112), text: `-0`
+  pattern: 4
+    capture: 4 - comment, start: (86, 6), end: (86, 35), text: `# Exit if Atom can't be found`
+  pattern: 3
+    capture: 3 - keyword, start: (87, 6), end: (87, 8), text: `if`
+  pattern: 0
+    capture: 0 - string, start: (87, 16), end: (87, 43), text: `"$ATOM_PATH/$ATOM_APP_NAME"`
+  pattern: 8
+    capture: 7 - operator, start: (87, 17), end: (87, 18), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (87, 18), end: (87, 27), text: `ATOM_PATH`
+  pattern: 8
+    capture: 7 - operator, start: (87, 28), end: (87, 29), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (87, 29), end: (87, 42), text: `ATOM_APP_NAME`
+  pattern: 3
+    capture: 3 - keyword, start: (87, 47), end: (87, 51), text: `then`
+  pattern: 1
+    capture: 1 - function, start: (88, 8), end: (88, 12), text: `echo`
+  pattern: 0
+    capture: 0 - string, start: (88, 13), end: (88, 171), text: `"Cannot locate ${ATOM_APP_NAME}, it is usually located in /Applications. Set the ATOM_PATH environment variable to the directory containing ${ATOM_APP_NAME}."`
+  pattern: 7
+    capture: 6 - embedded, start: (88, 28), end: (88, 44), text: `${ATOM_APP_NAME}`
+  pattern: 2
+    capture: 2 - property, start: (88, 30), end: (88, 43), text: `ATOM_APP_NAME`
+  pattern: 7
+    capture: 6 - embedded, start: (88, 153), end: (88, 169), text: `${ATOM_APP_NAME}`
+  pattern: 2
+    capture: 2 - property, start: (88, 155), end: (88, 168), text: `ATOM_APP_NAME`
+  pattern: 1
+    capture: 1 - function, start: (89, 8), end: (89, 12), text: `exit`
+  pattern: 3
+    capture: 3 - keyword, start: (90, 6), end: (90, 8), text: `fi`
+  pattern: 3
+    capture: 3 - keyword, start: (91, 4), end: (91, 6), text: `fi`
+  pattern: 3
+    capture: 3 - keyword, start: (92, 2), end: (92, 4), text: `fi`
+  pattern: 3
+    capture: 3 - keyword, start: (94, 2), end: (94, 4), text: `if`
+  pattern: 8
+    capture: 7 - operator, start: (94, 7), end: (94, 8), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (94, 8), end: (94, 21), text: `EXPECT_OUTPUT`
+  pattern: 3
+    capture: 3 - keyword, start: (94, 25), end: (94, 29), text: `then`
+  pattern: 1
+    capture: 1 - function, start: (95, 4), end: (95, 68), text: `"$ATOM_PATH/$ATOM_APP_NAME/Contents/MacOS/$ATOM_EXECUTABLE_NAME"`
+  pattern: 0
+    capture: 0 - string, start: (95, 4), end: (95, 68), text: `"$ATOM_PATH/$ATOM_APP_NAME/Contents/MacOS/$ATOM_EXECUTABLE_NAME"`
+  pattern: 8
+    capture: 7 - operator, start: (95, 5), end: (95, 6), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (95, 6), end: (95, 15), text: `ATOM_PATH`
+  pattern: 8
+    capture: 7 - operator, start: (95, 16), end: (95, 17), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (95, 17), end: (95, 30), text: `ATOM_APP_NAME`
+  pattern: 8
+    capture: 7 - operator, start: (95, 46), end: (95, 47), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (95, 47), end: (95, 67), text: `ATOM_EXECUTABLE_NAME`
+  pattern: 9
+    capture: 8 - constant, start: (95, 69), end: (95, 93), text: `--executed-from="$(pwd)"`
+  pattern: 0
+    capture: 0 - string, start: (95, 85), end: (95, 93), text: `"$(pwd)"`
+  pattern: 7
+    capture: 6 - embedded, start: (95, 86), end: (95, 92), text: `$(pwd)`
+  pattern: 1
+    capture: 1 - function, start: (95, 88), end: (95, 91), text: `pwd`
+  pattern: 9
+    capture: 8 - constant, start: (95, 94), end: (95, 102), text: `--pid=$$`
+  pattern: 8
+    capture: 7 - operator, start: (95, 100), end: (95, 102), text: `$$`
+  pattern: 0
+    capture: 0 - string, start: (95, 103), end: (95, 107), text: `"$@"`
+  pattern: 8
+    capture: 7 - operator, start: (95, 104), end: (95, 105), text: `$`
+  pattern: 1
+    capture: 1 - function, start: (96, 4), end: (96, 8), text: `exit`
+  pattern: 8
+    capture: 7 - operator, start: (96, 9), end: (96, 10), text: `$`
+  pattern: 3
+    capture: 3 - keyword, start: (97, 2), end: (97, 6), text: `else`
+  pattern: 1
+    capture: 1 - function, start: (98, 4), end: (98, 8), text: `open`
+  pattern: 9
+    capture: 8 - constant, start: (98, 9), end: (98, 11), text: `-a`
+  pattern: 0
+    capture: 0 - string, start: (98, 12), end: (98, 39), text: `"$ATOM_PATH/$ATOM_APP_NAME"`
+  pattern: 8
+    capture: 7 - operator, start: (98, 13), end: (98, 14), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (98, 14), end: (98, 23), text: `ATOM_PATH`
+  pattern: 8
+    capture: 7 - operator, start: (98, 24), end: (98, 25), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (98, 25), end: (98, 38), text: `ATOM_APP_NAME`
+  pattern: 9
+    capture: 8 - constant, start: (98, 40), end: (98, 42), text: `-n`
+  pattern: 9
+    capture: 8 - constant, start: (98, 43), end: (98, 49), text: `--args`
+  pattern: 9
+    capture: 8 - constant, start: (98, 50), end: (98, 74), text: `--executed-from="$(pwd)"`
+  pattern: 0
+    capture: 0 - string, start: (98, 66), end: (98, 74), text: `"$(pwd)"`
+  pattern: 7
+    capture: 6 - embedded, start: (98, 67), end: (98, 73), text: `$(pwd)`
+  pattern: 1
+    capture: 1 - function, start: (98, 69), end: (98, 72), text: `pwd`
+  pattern: 9
+    capture: 8 - constant, start: (98, 75), end: (98, 83), text: `--pid=$$`
+  pattern: 8
+    capture: 7 - operator, start: (98, 81), end: (98, 83), text: `$$`
+  pattern: 9
+    capture: 8 - constant, start: (98, 84), end: (98, 110), text: `--path-environment="$PATH"`
+  pattern: 0
+    capture: 0 - string, start: (98, 103), end: (98, 110), text: `"$PATH"`
+  pattern: 8
+    capture: 7 - operator, start: (98, 104), end: (98, 105), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (98, 105), end: (98, 109), text: `PATH`
+  pattern: 0
+    capture: 0 - string, start: (98, 111), end: (98, 115), text: `"$@"`
+  pattern: 8
+    capture: 7 - operator, start: (98, 112), end: (98, 113), text: `$`
+  pattern: 3
+    capture: 3 - keyword, start: (99, 2), end: (99, 4), text: `fi`
+  pattern: 3
+    capture: 3 - keyword, start: (100, 0), end: (100, 4), text: `elif`
+  pattern: 8
+    capture: 7 - operator, start: (100, 7), end: (100, 8), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (100, 8), end: (100, 10), text: `OS`
+  pattern: 0
+    capture: 0 - string, start: (100, 14), end: (100, 21), text: `'Linux'`
+  pattern: 3
+    capture: 3 - keyword, start: (100, 25), end: (100, 29), text: `then`
+  pattern: 2
+    capture: 2 - property, start: (101, 2), end: (101, 8), text: `SCRIPT`
+  pattern: 7
+    capture: 6 - embedded, start: (101, 9), end: (101, 28), text: `$(readlink -f "$0")`
+  pattern: 1
+    capture: 1 - function, start: (101, 11), end: (101, 19), text: `readlink`
+  pattern: 9
+    capture: 8 - constant, start: (101, 20), end: (101, 22), text: `-f`
+  pattern: 0
+    capture: 0 - string, start: (101, 23), end: (101, 27), text: `"$0"`
+  pattern: 8
+    capture: 7 - operator, start: (101, 24), end: (101, 25), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (101, 25), end: (101, 26), text: `0`
+  pattern: 2
+    capture: 2 - property, start: (102, 2), end: (102, 15), text: `USR_DIRECTORY`
+  pattern: 7
+    capture: 6 - embedded, start: (102, 16), end: (102, 52), text: `$(readlink -f $(dirname $SCRIPT)/..)`
+  pattern: 1
+    capture: 1 - function, start: (102, 18), end: (102, 26), text: `readlink`
+  pattern: 9
+    capture: 8 - constant, start: (102, 27), end: (102, 29), text: `-f`
+  pattern: 7
+    capture: 6 - embedded, start: (102, 30), end: (102, 48), text: `$(dirname $SCRIPT)`
+  pattern: 1
+    capture: 1 - function, start: (102, 32), end: (102, 39), text: `dirname`
+  pattern: 8
+    capture: 7 - operator, start: (102, 40), end: (102, 41), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (102, 41), end: (102, 47), text: `SCRIPT`
+  pattern: 3
+    capture: 3 - keyword, start: (104, 2), end: (104, 4), text: `if`
+  pattern: 0
+    capture: 0 - string, start: (104, 10), end: (104, 25), text: `"$BETA_VERSION"`
+  pattern: 8
+    capture: 7 - operator, start: (104, 11), end: (104, 12), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (104, 12), end: (104, 24), text: `BETA_VERSION`
+  pattern: 3
+    capture: 3 - keyword, start: (104, 29), end: (104, 33), text: `then`
+  pattern: 2
+    capture: 2 - property, start: (105, 4), end: (105, 13), text: `ATOM_PATH`
+  pattern: 0
+    capture: 0 - string, start: (105, 14), end: (105, 51), text: `"$USR_DIRECTORY/share/atom-beta/atom"`
+  pattern: 8
+    capture: 7 - operator, start: (105, 15), end: (105, 16), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (105, 16), end: (105, 29), text: `USR_DIRECTORY`
+  pattern: 3
+    capture: 3 - keyword, start: (106, 2), end: (106, 6), text: `else`
+  pattern: 2
+    capture: 2 - property, start: (107, 4), end: (107, 13), text: `ATOM_PATH`
+  pattern: 0
+    capture: 0 - string, start: (107, 14), end: (107, 46), text: `"$USR_DIRECTORY/share/atom/atom"`
+  pattern: 8
+    capture: 7 - operator, start: (107, 15), end: (107, 16), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (107, 16), end: (107, 29), text: `USR_DIRECTORY`
+  pattern: 3
+    capture: 3 - keyword, start: (108, 2), end: (108, 4), text: `fi`
+  pattern: 2
+    capture: 2 - property, start: (110, 2), end: (110, 11), text: `ATOM_HOME`
+  pattern: 0
+    capture: 0 - string, start: (110, 12), end: (110, 39), text: `"${ATOM_HOME:-$HOME/.atom}"`
+  pattern: 7
+    capture: 6 - embedded, start: (110, 13), end: (110, 38), text: `${ATOM_HOME:-$HOME/.atom}`
+  pattern: 2
+    capture: 2 - property, start: (110, 15), end: (110, 24), text: `ATOM_HOME`
+  pattern: 8
+    capture: 7 - operator, start: (110, 26), end: (110, 27), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (110, 27), end: (110, 31), text: `HOME`
+  pattern: 1
+    capture: 1 - function, start: (111, 2), end: (111, 7), text: `mkdir`
+  pattern: 9
+    capture: 8 - constant, start: (111, 8), end: (111, 10), text: `-p`
+  pattern: 0
+    capture: 0 - string, start: (111, 11), end: (111, 23), text: `"$ATOM_HOME"`
+  pattern: 8
+    capture: 7 - operator, start: (111, 12), end: (111, 13), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (111, 13), end: (111, 22), text: `ATOM_HOME`
+  pattern: 1
+    capture: 1 - function, start: (113, 2), end: (113, 3), text: `:`
+  pattern: 7
+    capture: 6 - embedded, start: (113, 4), end: (113, 19), text: `${TMPDIR:=/tmp}`
+  pattern: 2
+    capture: 2 - property, start: (113, 6), end: (113, 12), text: `TMPDIR`
+  pattern: 0
+    capture: 0 - string, start: (115, 7), end: (115, 19), text: `"$ATOM_PATH"`
+  pattern: 8
+    capture: 7 - operator, start: (115, 8), end: (115, 9), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (115, 9), end: (115, 18), text: `ATOM_PATH`
+  pattern: 2
+    capture: 2 - property, start: (115, 25), end: (115, 34), text: `ATOM_PATH`
+  pattern: 0
+    capture: 0 - string, start: (115, 35), end: (115, 65), text: `"$TMPDIR/atom-build/Atom/atom"`
+  pattern: 8
+    capture: 7 - operator, start: (115, 36), end: (115, 37), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (115, 37), end: (115, 43), text: `TMPDIR`
+  pattern: 3
+    capture: 3 - keyword, start: (117, 2), end: (117, 4), text: `if`
+  pattern: 8
+    capture: 7 - operator, start: (117, 7), end: (117, 8), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (117, 8), end: (117, 21), text: `EXPECT_OUTPUT`
+  pattern: 3
+    capture: 3 - keyword, start: (117, 25), end: (117, 29), text: `then`
+  pattern: 1
+    capture: 1 - function, start: (118, 4), end: (118, 16), text: `"$ATOM_PATH"`
+  pattern: 0
+    capture: 0 - string, start: (118, 4), end: (118, 16), text: `"$ATOM_PATH"`
+  pattern: 8
+    capture: 7 - operator, start: (118, 5), end: (118, 6), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (118, 6), end: (118, 15), text: `ATOM_PATH`
+  pattern: 9
+    capture: 8 - constant, start: (118, 17), end: (118, 41), text: `--executed-from="$(pwd)"`
+  pattern: 0
+    capture: 0 - string, start: (118, 33), end: (118, 41), text: `"$(pwd)"`
+  pattern: 7
+    capture: 6 - embedded, start: (118, 34), end: (118, 40), text: `$(pwd)`
+  pattern: 1
+    capture: 1 - function, start: (118, 36), end: (118, 39), text: `pwd`
+  pattern: 9
+    capture: 8 - constant, start: (118, 42), end: (118, 50), text: `--pid=$$`
+  pattern: 8
+    capture: 7 - operator, start: (118, 48), end: (118, 50), text: `$$`
+  pattern: 0
+    capture: 0 - string, start: (118, 51), end: (118, 55), text: `"$@"`
+  pattern: 8
+    capture: 7 - operator, start: (118, 52), end: (118, 53), text: `$`
+  pattern: 1
+    capture: 1 - function, start: (119, 4), end: (119, 8), text: `exit`
+  pattern: 8
+    capture: 7 - operator, start: (119, 9), end: (119, 10), text: `$`
+  pattern: 3
+    capture: 3 - keyword, start: (120, 2), end: (120, 6), text: `else`
+  pattern: 1
+    capture: 1 - function, start: (122, 4), end: (122, 9), text: `nohup`
+  pattern: 0
+    capture: 0 - string, start: (122, 10), end: (122, 22), text: `"$ATOM_PATH"`
+  pattern: 8
+    capture: 7 - operator, start: (122, 11), end: (122, 12), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (122, 12), end: (122, 21), text: `ATOM_PATH`
+  pattern: 9
+    capture: 8 - constant, start: (122, 23), end: (122, 47), text: `--executed-from="$(pwd)"`
+  pattern: 0
+    capture: 0 - string, start: (122, 39), end: (122, 47), text: `"$(pwd)"`
+  pattern: 7
+    capture: 6 - embedded, start: (122, 40), end: (122, 46), text: `$(pwd)`
+  pattern: 1
+    capture: 1 - function, start: (122, 42), end: (122, 45), text: `pwd`
+  pattern: 9
+    capture: 8 - constant, start: (122, 48), end: (122, 56), text: `--pid=$$`
+  pattern: 8
+    capture: 7 - operator, start: (122, 54), end: (122, 56), text: `$$`
+  pattern: 0
+    capture: 0 - string, start: (122, 57), end: (122, 61), text: `"$@"`
+  pattern: 8
+    capture: 7 - operator, start: (122, 58), end: (122, 59), text: `$`
+  pattern: 8
+    capture: 7 - operator, start: (122, 62), end: (122, 63), text: `>`
+  pattern: 0
+    capture: 0 - string, start: (122, 64), end: (122, 86), text: `"$ATOM_HOME/nohup.out"`
+  pattern: 8
+    capture: 7 - operator, start: (122, 65), end: (122, 66), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (122, 66), end: (122, 75), text: `ATOM_HOME`
+  pattern: 6
+    capture: 5 - number, start: (122, 87), end: (122, 88), text: `2`
+  pattern: 3
+    capture: 3 - keyword, start: (123, 4), end: (123, 6), text: `if`
+  pattern: 8
+    capture: 7 - operator, start: (123, 9), end: (123, 10), text: `$`
+  pattern: 3
+    capture: 3 - keyword, start: (123, 21), end: (123, 25), text: `then`
+  pattern: 1
+    capture: 1 - function, start: (124, 6), end: (124, 9), text: `cat`
+  pattern: 0
+    capture: 0 - string, start: (124, 10), end: (124, 32), text: `"$ATOM_HOME/nohup.out"`
+  pattern: 8
+    capture: 7 - operator, start: (124, 11), end: (124, 12), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (124, 12), end: (124, 21), text: `ATOM_HOME`
+  pattern: 1
+    capture: 1 - function, start: (125, 6), end: (125, 10), text: `exit`
+  pattern: 8
+    capture: 7 - operator, start: (125, 11), end: (125, 12), text: `$`
+  pattern: 3
+    capture: 3 - keyword, start: (126, 4), end: (126, 6), text: `fi`
+  pattern: 3
+    capture: 3 - keyword, start: (128, 2), end: (128, 4), text: `fi`
+  pattern: 3
+    capture: 3 - keyword, start: (129, 0), end: (129, 2), text: `fi`
+  pattern: 4
+    capture: 4 - comment, start: (131, 0), end: (131, 49), text: `# Exits this process when Atom is used as $EDITOR`
+  pattern: 5
+    capture: 1 - function, start: (132, 0), end: (132, 6), text: `on_die`
+  pattern: 1
+    capture: 1 - function, start: (133, 2), end: (133, 6), text: `exit`
+  pattern: 1
+    capture: 1 - function, start: (135, 0), end: (135, 4), text: `trap`
+  pattern: 0
+    capture: 0 - string, start: (135, 5), end: (135, 13), text: `'on_die'`
+  pattern: 4
+    capture: 4 - comment, start: (137, 0), end: (137, 74), text: `# If the wait flag is set, don't exit this process until Atom tells it to.`
+  pattern: 3
+    capture: 3 - keyword, start: (138, 0), end: (138, 2), text: `if`
+  pattern: 8
+    capture: 7 - operator, start: (138, 5), end: (138, 6), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (138, 6), end: (138, 10), text: `WAIT`
+  pattern: 3
+    capture: 3 - keyword, start: (138, 14), end: (138, 18), text: `then`
+  pattern: 3
+    capture: 3 - keyword, start: (139, 2), end: (139, 7), text: `while`
+  pattern: 1
+    capture: 1 - function, start: (139, 8), end: (139, 12), text: `true`
+  pattern: 3
+    capture: 3 - keyword, start: (139, 14), end: (139, 16), text: `do`
+  pattern: 1
+    capture: 1 - function, start: (140, 4), end: (140, 9), text: `sleep`
+  pattern: 3
+    capture: 3 - keyword, start: (141, 2), end: (141, 6), text: `done`
+  pattern: 3
+    capture: 3 - keyword, start: (142, 0), end: (142, 2), text: `fi`

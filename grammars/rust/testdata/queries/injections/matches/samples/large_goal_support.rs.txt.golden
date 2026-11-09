@@ -1,0 +1,111 @@
+samples/large_goal_support.rs.txt
+  pattern: 0
+    capture: 0 - injection.content, start: (91, 23), end: (91, 88), text: `("update_goal ack receiver dropped before harness could respond")`
+  pattern: 0
+    capture: injection.content, start: (133, 47), end: (142, 13)
+  pattern: 0
+    capture: injection.content, start: (218, 17), end: (223, 5)
+  pattern: 0
+    capture: 0 - injection.content, start: (375, 31), end: (375, 64), text: `("{headline} See {details_path}")`
+  pattern: 0
+    capture: 0 - injection.content, start: (377, 32), end: (377, 83), text: `("{headline}\n{pause_summary}\nSee {details_path}")`
+  pattern: 0
+    capture: 0 - injection.content, start: (378, 33), end: (378, 64), text: `("{headline}\n{pause_summary}")`
+  pattern: 0
+    capture: injection.content, start: (467, 17), end: (471, 5)
+  pattern: 0
+    capture: injection.content, start: (518, 17), end: (522, 5)
+  pattern: 0
+    capture: injection.content, start: (568, 11), end: (572, 5)
+  pattern: 0
+    capture: injection.content, start: (589, 11), end: (597, 5)
+  pattern: 0
+    capture: 0 - injection.content, start: (628, 23), end: (628, 81), text: `("--- STRATEGIST RECOMMENDATION (advisory) [{nonce}] ---")`
+  pattern: 0
+    capture: 0 - injection.content, start: (629, 21), end: (629, 72), text: `("--- END STRATEGIST RECOMMENDATION [{nonce}] ---")`
+  pattern: 0
+    capture: injection.content, start: (646, 26), end: (649, 9)
+  pattern: 0
+    capture: 0 - injection.content, start: (650, 23), end: (650, 71), text: `("RE-READ the strategy note at {strategy_path}")`
+  pattern: 0
+    capture: injection.content, start: (652, 11), end: (662, 5)
+  pattern: 0
+    capture: injection.content, start: (673, 11), end: (677, 5)
+  pattern: 0
+    capture: injection.content, start: (684, 11), end: (688, 5)
+  pattern: 0
+    capture: 0 - injection.content, start: (829, 15), end: (829, 71), text: `(fold_tokens_by_model(&records, "g1", "cur").is_empty())`
+  pattern: 0
+    capture: injection.content, start: (834, 26), end: (838, 9)
+  pattern: 0
+    capture: injection.content, start: (840, 18), end: (843, 9)
+  pattern: 0
+    capture: injection.content, start: (848, 26), end: (851, 9)
+  pattern: 0
+    capture: injection.content, start: (853, 18), end: (856, 9)
+  pattern: 0
+    capture: 0 - injection.content, start: (861, 26), end: (861, 88), text: `[rec(Some("g1"), 0, 100, None), rec(Some("g1"), 0, 200, None)]`
+  pattern: 0
+    capture: 0 - injection.content, start: (863, 18), end: (863, 60), text: `(out, vec![("cur-model".to_owned(), 300)])`
+  pattern: 0
+    capture: injection.content, start: (868, 26), end: (871, 9)
+  pattern: 0
+    capture: 0 - injection.content, start: (873, 18), end: (873, 57), text: `(out, vec![("grok-4".to_owned(), 300)])`
+  pattern: 0
+    capture: injection.content, start: (878, 26), end: (882, 9)
+  pattern: 0
+    capture: 0 - injection.content, start: (884, 18), end: (884, 57), text: `(out, vec![("grok-4".to_owned(), 100)])`
+  pattern: 0
+    capture: 0 - injection.content, start: (889, 26), end: (889, 69), text: `[rec(Some("g1"), 500, 100, Some("grok-4"))]`
+  pattern: 0
+    capture: 0 - injection.content, start: (891, 15), end: (891, 71), text: `(fold_tokens_by_model(&records, "g1", "cur").is_empty())`
+  pattern: 0
+    capture: 0 - injection.content, start: (898, 26), end: (898, 67), text: `[rec(Some("g1"), 0, 100, Some("grok-4"))]`
+  pattern: 0
+    capture: 0 - injection.content, start: (900, 18), end: (900, 57), text: `(out, vec![("grok-4".to_owned(), 100)])`
+  pattern: 0
+    capture: injection.content, start: (907, 26), end: (911, 9)
+  pattern: 0
+    capture: 0 - injection.content, start: (913, 18), end: (913, 60), text: `(out, vec![("cur-model".to_owned(), 350)])`
+  pattern: 0
+    capture: injection.content, start: (920, 26), end: (923, 9)
+  pattern: 0
+    capture: 0 - injection.content, start: (925, 18), end: (925, 57), text: `(out, vec![("grok-4".to_owned(), 300)])`
+  pattern: 0
+    capture: injection.content, start: (1139, 31), end: (1142, 17)
+  pattern: 0
+    capture: 0 - injection.content, start: (1240, 51), end: (1240, 96), text: `("plan-baseline-{}.md", uuid::Uuid::now_v7())`
+  pattern: 0
+    capture: injection.content, start: (1244, 46), end: (1248, 33)
+  pattern: 0
+    capture: injection.content, start: (1267, 54), end: (1272, 29)
+  pattern: 0
+    capture: 0 - injection.content, start: (1375, 27), end: (1375, 94), text: `("goal planner: the planner listed no todo items; nothing to seed")`
+  pattern: 0
+    capture: injection.content, start: (1402, 30), end: (1406, 17)
+  pattern: 0
+    capture: 0 - injection.content, start: (1427, 27), end: (1427, 97), text: `("goal planner: every item the planner listed is already on the list")`
+  pattern: 0
+    capture: 0 - injection.content, start: (1431, 29), end: (1431, 72), text: `("goal-plan-seed-{}", uuid::Uuid::now_v7())`
+  pattern: 0
+    capture: injection.content, start: (1445, 30), end: (1448, 17)
+  pattern: 0
+    capture: 0 - injection.content, start: (1452, 30), end: (1452, 90), text: `(error = %err, "goal planner: seeding the todo list failed")`
+  pattern: 0
+    capture: 0 - injection.content, start: (1477, 27), end: (1477, 86), text: `("goal planner: no subagent coordinator channel; skipping")`
+  pattern: 0
+    capture: 0 - injection.content, start: (1502, 35), end: (1502, 83), text: `("goal planner: plan already present; skipping")`
+  pattern: 0
+    capture: 0 - injection.content, start: (1508, 56), end: (1508, 92), text: `("plan-{}.md", uuid::Uuid::now_v7())`
+  pattern: 0
+    capture: injection.content, start: (1519, 30), end: (1522, 17)
+  pattern: 0
+    capture: 0 - injection.content, start: (1644, 27), end: (1644, 89), text: `("goal strategist: no subagent coordinator channel; skipping")`
+  pattern: 0
+    capture: 0 - injection.content, start: (1770, 27), end: (1770, 89), text: `("goal summarizer: no subagent coordinator channel; skipping")`
+  pattern: 0
+    capture: injection.content, start: (1924, 42), end: (1927, 29)
+  pattern: 0
+    capture: injection.content, start: (2038, 15), end: (2041, 9)
+  pattern: 0
+    capture: 0 - injection.content, start: (2042, 15), end: (2042, 58), text: `(!block.contains("{PLAN_PATH}"), "{block}")`

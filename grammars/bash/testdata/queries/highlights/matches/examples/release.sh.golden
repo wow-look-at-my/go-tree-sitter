@@ -1,0 +1,119 @@
+examples/release.sh
+  pattern: 4
+    capture: 4 - comment, start: (0, 0), end: (0, 11), text: `#!/bin/bash`
+  pattern: 4
+    capture: 4 - comment, start: (2, 0), end: (2, 61), text: `# script for creating a zip and tarball for inclusion in node`
+  pattern: 3
+    capture: 3 - keyword, start: (4, 0), end: (4, 5), text: `unset`
+  pattern: 2
+    capture: 2 - property, start: (4, 6), end: (4, 12), text: `CDPATH`
+  pattern: 1
+    capture: 1 - function, start: (6, 0), end: (6, 3), text: `set`
+  pattern: 9
+    capture: 8 - constant, start: (6, 4), end: (6, 6), text: `-e`
+  pattern: 1
+    capture: 1 - function, start: (8, 0), end: (8, 2), text: `rm`
+  pattern: 9
+    capture: 8 - constant, start: (8, 3), end: (8, 6), text: `-rf`
+  pattern: 1
+    capture: 1 - function, start: (8, 24), end: (8, 28), text: `true`
+  pattern: 1
+    capture: 1 - function, start: (9, 0), end: (9, 5), text: `mkdir`
+  pattern: 1
+    capture: 1 - function, start: (10, 0), end: (10, 4), text: `node`
+  pattern: 9
+    capture: 8 - constant, start: (10, 19), end: (10, 29), text: `--loglevel`
+  pattern: 8
+    capture: 7 - operator, start: (10, 36), end: (10, 37), text: `>`
+  pattern: 1
+    capture: 1 - function, start: (11, 0), end: (11, 2), text: `mv`
+  pattern: 1
+    capture: 1 - function, start: (12, 0), end: (12, 2), text: `cd`
+  pattern: 1
+    capture: 1 - function, start: (13, 0), end: (13, 3), text: `tar`
+  pattern: 1
+    capture: 1 - function, start: (15, 0), end: (15, 5), text: `mkdir`
+  pattern: 1
+    capture: 1 - function, start: (16, 0), end: (16, 2), text: `mv`
+  pattern: 4
+    capture: 4 - comment, start: (18, 0), end: (18, 32), text: `# make the zip for windows users`
+  pattern: 1
+    capture: 1 - function, start: (19, 0), end: (19, 2), text: `cp`
+  pattern: 2
+    capture: 2 - property, start: (20, 0), end: (20, 7), text: `zipname`
+  pattern: 7
+    capture: 6 - embedded, start: (20, 12), end: (20, 32), text: `$(node ../cli.js -v)`
+  pattern: 1
+    capture: 1 - function, start: (20, 14), end: (20, 18), text: `node`
+  pattern: 9
+    capture: 8 - constant, start: (20, 29), end: (20, 31), text: `-v`
+  pattern: 1
+    capture: 1 - function, start: (21, 0), end: (21, 3), text: `zip`
+  pattern: 9
+    capture: 8 - constant, start: (21, 4), end: (21, 6), text: `-q`
+  pattern: 9
+    capture: 8 - constant, start: (21, 7), end: (21, 9), text: `-9`
+  pattern: 9
+    capture: 8 - constant, start: (21, 10), end: (21, 12), text: `-r`
+  pattern: 9
+    capture: 8 - constant, start: (21, 13), end: (21, 15), text: `-X`
+  pattern: 0
+    capture: 0 - string, start: (21, 16), end: (21, 26), text: `"$zipname"`
+  pattern: 8
+    capture: 7 - operator, start: (21, 17), end: (21, 18), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (21, 18), end: (21, 25), text: `zipname`
+  pattern: 4
+    capture: 4 - comment, start: (23, 0), end: (23, 30), text: `# make the tar for node's deps`
+  pattern: 1
+    capture: 1 - function, start: (24, 0), end: (24, 2), text: `cd`
+  pattern: 2
+    capture: 2 - property, start: (25, 0), end: (25, 7), text: `tarname`
+  pattern: 7
+    capture: 6 - embedded, start: (25, 12), end: (25, 35), text: `$(node ../../cli.js -v)`
+  pattern: 1
+    capture: 1 - function, start: (25, 14), end: (25, 18), text: `node`
+  pattern: 9
+    capture: 8 - constant, start: (25, 32), end: (25, 34), text: `-v`
+  pattern: 1
+    capture: 1 - function, start: (26, 0), end: (26, 3), text: `tar`
+  pattern: 0
+    capture: 0 - string, start: (26, 8), end: (26, 18), text: `"$tarname"`
+  pattern: 8
+    capture: 7 - operator, start: (26, 9), end: (26, 10), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (26, 10), end: (26, 17), text: `tarname`
+  pattern: 1
+    capture: 1 - function, start: (28, 0), end: (28, 2), text: `cd`
+  pattern: 1
+    capture: 1 - function, start: (29, 0), end: (29, 2), text: `mv`
+  pattern: 0
+    capture: 0 - string, start: (29, 3), end: (29, 26), text: `"node_modules/$tarname"`
+  pattern: 8
+    capture: 7 - operator, start: (29, 17), end: (29, 18), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (29, 18), end: (29, 25), text: `tarname`
+  pattern: 1
+    capture: 1 - function, start: (31, 0), end: (31, 2), text: `rm`
+  pattern: 9
+    capture: 8 - constant, start: (31, 3), end: (31, 6), text: `-rf`
+  pattern: 1
+    capture: 1 - function, start: (32, 0), end: (32, 2), text: `rm`
+  pattern: 9
+    capture: 8 - constant, start: (32, 3), end: (32, 6), text: `-rf`
+  pattern: 1
+    capture: 1 - function, start: (34, 0), end: (34, 4), text: `echo`
+  pattern: 0
+    capture: 0 - string, start: (34, 5), end: (34, 23), text: `"release/$tarname"`
+  pattern: 8
+    capture: 7 - operator, start: (34, 14), end: (34, 15), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (34, 15), end: (34, 22), text: `tarname`
+  pattern: 1
+    capture: 1 - function, start: (35, 0), end: (35, 4), text: `echo`
+  pattern: 0
+    capture: 0 - string, start: (35, 5), end: (35, 23), text: `"release/$zipname"`
+  pattern: 8
+    capture: 7 - operator, start: (35, 14), end: (35, 15), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (35, 15), end: (35, 22), text: `zipname`

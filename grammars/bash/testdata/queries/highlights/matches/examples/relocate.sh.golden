@@ -1,0 +1,151 @@
+examples/relocate.sh
+  pattern: 4
+    capture: 4 - comment, start: (0, 0), end: (0, 11), text: `#!/bin/bash`
+  pattern: 4
+    capture: 4 - comment, start: (2, 0), end: (2, 55), text: `# Change the cli shebang to point at the specified node`
+  pattern: 4
+    capture: 4 - comment, start: (3, 0), end: (3, 60), text: `# Useful for when the program is moved around after install.`
+  pattern: 4
+    capture: 4 - comment, start: (4, 0), end: (4, 58), text: `# Also used by the default 'make install' in node to point`
+  pattern: 4
+    capture: 4 - comment, start: (5, 0), end: (5, 60), text: `# npm at the newly installed node, rather than the first one`
+  pattern: 4
+    capture: 4 - comment, start: (6, 0), end: (6, 52), text: `# in the PATH, which would be the default otherwise.`
+  pattern: 4
+    capture: 4 - comment, start: (8, 0), end: (8, 49), text: `# bash /path/to/npm/scripts/relocate.sh $nodepath`
+  pattern: 4
+    capture: 4 - comment, start: (9, 0), end: (9, 52), text: `# If $nodepath is blank, then it'll use /usr/bin/env`
+  pattern: 2
+    capture: 2 - property, start: (11, 0), end: (11, 3), text: `dir`
+  pattern: 0
+    capture: 0 - string, start: (11, 4), end: (11, 34), text: `"$(dirname "$(dirname "$0")")"`
+  pattern: 7
+    capture: 6 - embedded, start: (11, 5), end: (11, 33), text: `$(dirname "$(dirname "$0")")`
+  pattern: 1
+    capture: 1 - function, start: (11, 7), end: (11, 14), text: `dirname`
+  pattern: 0
+    capture: 0 - string, start: (11, 15), end: (11, 32), text: `"$(dirname "$0")"`
+  pattern: 7
+    capture: 6 - embedded, start: (11, 16), end: (11, 31), text: `$(dirname "$0")`
+  pattern: 1
+    capture: 1 - function, start: (11, 18), end: (11, 25), text: `dirname`
+  pattern: 0
+    capture: 0 - string, start: (11, 26), end: (11, 30), text: `"$0"`
+  pattern: 8
+    capture: 7 - operator, start: (11, 27), end: (11, 28), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (11, 28), end: (11, 29), text: `0`
+  pattern: 2
+    capture: 2 - property, start: (12, 0), end: (12, 3), text: `cli`
+  pattern: 0
+    capture: 0 - string, start: (12, 4), end: (12, 10), text: `"$dir"`
+  pattern: 8
+    capture: 7 - operator, start: (12, 5), end: (12, 6), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (12, 6), end: (12, 9), text: `dir`
+  pattern: 2
+    capture: 2 - property, start: (13, 0), end: (13, 3), text: `tmp`
+  pattern: 0
+    capture: 0 - string, start: (13, 4), end: (13, 10), text: `"$cli"`
+  pattern: 8
+    capture: 7 - operator, start: (13, 5), end: (13, 6), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (13, 6), end: (13, 9), text: `cli`
+  pattern: 2
+    capture: 2 - property, start: (15, 0), end: (15, 4), text: `node`
+  pattern: 0
+    capture: 0 - string, start: (15, 5), end: (15, 9), text: `"$1"`
+  pattern: 8
+    capture: 7 - operator, start: (15, 6), end: (15, 7), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (15, 7), end: (15, 8), text: `1`
+  pattern: 3
+    capture: 3 - keyword, start: (16, 0), end: (16, 2), text: `if`
+  pattern: 0
+    capture: 0 - string, start: (16, 5), end: (16, 13), text: `"x$node"`
+  pattern: 8
+    capture: 7 - operator, start: (16, 7), end: (16, 8), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (16, 8), end: (16, 12), text: `node`
+  pattern: 0
+    capture: 0 - string, start: (16, 16), end: (16, 19), text: `"x"`
+  pattern: 3
+    capture: 3 - keyword, start: (16, 23), end: (16, 27), text: `then`
+  pattern: 2
+    capture: 2 - property, start: (17, 2), end: (17, 6), text: `node`
+  pattern: 0
+    capture: 0 - string, start: (17, 7), end: (17, 26), text: `"/usr/bin/env node"`
+  pattern: 3
+    capture: 3 - keyword, start: (18, 0), end: (18, 2), text: `fi`
+  pattern: 2
+    capture: 2 - property, start: (19, 0), end: (19, 4), text: `node`
+  pattern: 0
+    capture: 0 - string, start: (19, 5), end: (19, 14), text: `"#!$node"`
+  pattern: 8
+    capture: 7 - operator, start: (19, 8), end: (19, 9), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (19, 9), end: (19, 13), text: `node`
+  pattern: 1
+    capture: 1 - function, start: (21, 0), end: (21, 3), text: `sed`
+  pattern: 9
+    capture: 8 - constant, start: (21, 4), end: (21, 6), text: `-e`
+  pattern: 0
+    capture: 0 - string, start: (21, 10), end: (21, 16), text: `"$cli"`
+  pattern: 8
+    capture: 7 - operator, start: (21, 11), end: (21, 12), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (21, 12), end: (21, 15), text: `cli`
+  pattern: 8
+    capture: 7 - operator, start: (21, 17), end: (21, 18), text: `>`
+  pattern: 0
+    capture: 0 - string, start: (21, 19), end: (21, 25), text: `"$tmp"`
+  pattern: 8
+    capture: 7 - operator, start: (21, 20), end: (21, 21), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (21, 21), end: (21, 24), text: `tmp`
+  pattern: 1
+    capture: 1 - function, start: (22, 0), end: (22, 4), text: `echo`
+  pattern: 0
+    capture: 0 - string, start: (22, 5), end: (22, 12), text: `"$node"`
+  pattern: 8
+    capture: 7 - operator, start: (22, 6), end: (22, 7), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (22, 7), end: (22, 11), text: `node`
+  pattern: 8
+    capture: 7 - operator, start: (22, 13), end: (22, 14), text: `>`
+  pattern: 0
+    capture: 0 - string, start: (22, 15), end: (22, 21), text: `"$cli"`
+  pattern: 8
+    capture: 7 - operator, start: (22, 16), end: (22, 17), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (22, 17), end: (22, 20), text: `cli`
+  pattern: 1
+    capture: 1 - function, start: (23, 0), end: (23, 3), text: `cat`
+  pattern: 0
+    capture: 0 - string, start: (23, 4), end: (23, 10), text: `"$tmp"`
+  pattern: 8
+    capture: 7 - operator, start: (23, 5), end: (23, 6), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (23, 6), end: (23, 9), text: `tmp`
+  pattern: 8
+    capture: 7 - operator, start: (23, 11), end: (23, 13), text: `>>`
+  pattern: 0
+    capture: 0 - string, start: (23, 14), end: (23, 20), text: `"$cli"`
+  pattern: 8
+    capture: 7 - operator, start: (23, 15), end: (23, 16), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (23, 16), end: (23, 19), text: `cli`
+  pattern: 1
+    capture: 1 - function, start: (24, 0), end: (24, 2), text: `rm`
+  pattern: 0
+    capture: 0 - string, start: (24, 3), end: (24, 9), text: `"$tmp"`
+  pattern: 8
+    capture: 7 - operator, start: (24, 4), end: (24, 5), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (24, 5), end: (24, 8), text: `tmp`
+  pattern: 1
+    capture: 1 - function, start: (25, 0), end: (25, 5), text: `chmod`
+  pattern: 8
+    capture: 7 - operator, start: (25, 12), end: (25, 13), text: `$`
+  pattern: 2
+    capture: 2 - property, start: (25, 13), end: (25, 16), text: `cli`

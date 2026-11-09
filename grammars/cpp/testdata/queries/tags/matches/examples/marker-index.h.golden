@@ -1,0 +1,178 @@
+examples/marker-index.h
+  pattern: 7
+    capture: definition.class, start: (9, 0), end: (128, 1)
+    capture: 0 - name, start: (9, 6), end: (9, 17), text: `MarkerIndex`
+  pattern: 0
+    capture: definition.class, start: (14, 2), end: (19, 3)
+    capture: 0 - name, start: (14, 9), end: (14, 21), text: `SpliceResult`
+  pattern: 0
+    capture: definition.class, start: (21, 2), end: (25, 3)
+    capture: 0 - name, start: (21, 9), end: (21, 17), text: `Boundary`
+  pattern: 0
+    capture: definition.class, start: (27, 2), end: (30, 3)
+    capture: 0 - name, start: (27, 9), end: (27, 28), text: `BoundaryQueryResult`
+  pattern: 2
+    capture: 2 - definition.function, start: (32, 2), end: (32, 33), text: `MarkerIndex(unsigned seed = 0u)`
+    capture: 0 - name, start: (32, 2), end: (32, 13), text: `MarkerIndex`
+  pattern: 3
+    capture: 2 - definition.function, start: (34, 6), end: (34, 30), text: `generate_random_number()`
+    capture: 0 - name, start: (34, 6), end: (34, 28), text: `generate_random_number`
+  pattern: 3
+    capture: 2 - definition.function, start: (35, 7), end: (35, 50), text: `insert(MarkerId id, Point start, Point end)`
+    capture: 0 - name, start: (35, 7), end: (35, 13), text: `insert`
+  pattern: 3
+    capture: 2 - definition.function, start: (36, 7), end: (36, 49), text: `set_exclusive(MarkerId id, bool exclusive)`
+    capture: 0 - name, start: (36, 7), end: (36, 20), text: `set_exclusive`
+  pattern: 3
+    capture: 2 - definition.function, start: (37, 7), end: (37, 26), text: `remove(MarkerId id)`
+    capture: 0 - name, start: (37, 7), end: (37, 13), text: `remove`
+  pattern: 3
+    capture: 2 - definition.function, start: (38, 7), end: (38, 23), text: `has(MarkerId id)`
+    capture: 0 - name, start: (38, 7), end: (38, 10), text: `has`
+  pattern: 3
+    capture: 2 - definition.function, start: (39, 15), end: (39, 70), text: `splice(Point start, Point old_extent, Point new_extent)`
+    capture: 0 - name, start: (39, 15), end: (39, 21), text: `splice`
+  pattern: 3
+    capture: 2 - definition.function, start: (40, 8), end: (40, 36), text: `get_start(MarkerId id) const`
+    capture: 0 - name, start: (40, 8), end: (40, 17), text: `get_start`
+  pattern: 3
+    capture: 2 - definition.function, start: (41, 8), end: (41, 34), text: `get_end(MarkerId id) const`
+    capture: 0 - name, start: (41, 8), end: (41, 15), text: `get_end`
+  pattern: 3
+    capture: 2 - definition.function, start: (42, 8), end: (42, 36), text: `get_range(MarkerId id) const`
+    capture: 0 - name, start: (42, 8), end: (42, 17), text: `get_range`
+  pattern: 3
+    capture: 2 - definition.function, start: (44, 6), end: (44, 47), text: `compare(MarkerId id1, MarkerId id2) const`
+    capture: 0 - name, start: (44, 6), end: (44, 13), text: `compare`
+  pattern: 3
+    capture: 2 - definition.function, start: (45, 21), end: (45, 62), text: `find_intersecting(Point start, Point end)`
+    capture: 0 - name, start: (45, 21), end: (45, 38), text: `find_intersecting`
+  pattern: 3
+    capture: 2 - definition.function, start: (46, 21), end: (46, 60), text: `find_containing(Point start, Point end)`
+    capture: 0 - name, start: (46, 21), end: (46, 36), text: `find_containing`
+  pattern: 3
+    capture: 2 - definition.function, start: (47, 21), end: (47, 62), text: `find_contained_in(Point start, Point end)`
+    capture: 0 - name, start: (47, 21), end: (47, 38), text: `find_contained_in`
+  pattern: 3
+    capture: 2 - definition.function, start: (48, 21), end: (48, 61), text: `find_starting_in(Point start, Point end)`
+    capture: 0 - name, start: (48, 21), end: (48, 37), text: `find_starting_in`
+  pattern: 3
+    capture: 2 - definition.function, start: (49, 21), end: (49, 53), text: `find_starting_at(Point position)`
+    capture: 0 - name, start: (49, 21), end: (49, 37), text: `find_starting_at`
+  pattern: 3
+    capture: 2 - definition.function, start: (50, 21), end: (50, 59), text: `find_ending_in(Point start, Point end)`
+    capture: 0 - name, start: (50, 21), end: (50, 35), text: `find_ending_in`
+  pattern: 3
+    capture: 2 - definition.function, start: (51, 21), end: (51, 51), text: `find_ending_at(Point position)`
+    capture: 0 - name, start: (51, 21), end: (51, 35), text: `find_ending_at`
+  pattern: 3
+    capture: 2 - definition.function, start: (52, 22), end: (52, 74), text: `find_boundaries_after(Point start, size_t max_count)`
+    capture: 0 - name, start: (52, 22), end: (52, 43), text: `find_boundaries_after`
+  pattern: 3
+    capture: 2 - definition.function, start: (54, 38), end: (54, 44), text: `dump()`
+    capture: 0 - name, start: (54, 38), end: (54, 42), text: `dump`
+  pattern: 0
+    capture: definition.class, start: (59, 2), end: (72, 3)
+    capture: 0 - name, start: (59, 9), end: (59, 13), text: `Node`
+  pattern: 2
+    capture: 2 - definition.function, start: (70, 4), end: (70, 41), text: `Node(Node *parent, Point left_extent)`
+    capture: 0 - name, start: (70, 4), end: (70, 8), text: `Node`
+  pattern: 3
+    capture: 2 - definition.function, start: (71, 9), end: (71, 29), text: `is_marker_endpoint()`
+    capture: 0 - name, start: (71, 9), end: (71, 27), text: `is_marker_endpoint`
+  pattern: 7
+    capture: definition.class, start: (74, 2), end: (108, 3)
+    capture: 0 - name, start: (74, 8), end: (74, 16), text: `Iterator`
+  pattern: 2
+    capture: 2 - definition.function, start: (76, 4), end: (76, 39), text: `Iterator(MarkerIndex *marker_index)`
+    capture: 0 - name, start: (76, 4), end: (76, 12), text: `Iterator`
+  pattern: 3
+    capture: 2 - definition.function, start: (77, 9), end: (77, 16), text: `reset()`
+    capture: 0 - name, start: (77, 9), end: (77, 14), text: `reset`
+  pattern: 3
+    capture: 2 - definition.function, start: (78, 10), end: (78, 105), text: `insert_marker_start(const MarkerId &id, const Point &start_position, const Point &end_position)`
+    capture: 0 - name, start: (78, 10), end: (78, 29), text: `insert_marker_start`
+  pattern: 3
+    capture: 2 - definition.function, start: (79, 10), end: (79, 103), text: `insert_marker_end(const MarkerId &id, const Point &start_position, const Point &end_position)`
+    capture: 0 - name, start: (79, 10), end: (79, 27), text: `insert_marker_end`
+  pattern: 3
+    capture: 2 - definition.function, start: (80, 10), end: (80, 78), text: `insert_splice_boundary(const Point &position, bool is_insertion_end)`
+    capture: 0 - name, start: (80, 10), end: (80, 32), text: `insert_splice_boundary`
+  pattern: 3
+    capture: 2 - definition.function, start: (81, 9), end: (81, 92), text: `find_intersecting(const Point &start, const Point &end, flat_set<MarkerId> *result)`
+    capture: 0 - name, start: (81, 9), end: (81, 26), text: `find_intersecting`
+  pattern: 3
+    capture: 2 - definition.function, start: (82, 9), end: (82, 92), text: `find_contained_in(const Point &start, const Point &end, flat_set<MarkerId> *result)`
+    capture: 0 - name, start: (82, 9), end: (82, 26), text: `find_contained_in`
+  pattern: 3
+    capture: 2 - definition.function, start: (83, 9), end: (83, 91), text: `find_starting_in(const Point &start, const Point &end, flat_set<MarkerId> *result)`
+    capture: 0 - name, start: (83, 9), end: (83, 25), text: `find_starting_in`
+  pattern: 3
+    capture: 2 - definition.function, start: (84, 9), end: (84, 89), text: `find_ending_in(const Point &start, const Point &end, flat_set<MarkerId> *result)`
+    capture: 0 - name, start: (84, 9), end: (84, 23), text: `find_ending_in`
+  pattern: 3
+    capture: 2 - definition.function, start: (85, 9), end: (85, 90), text: `find_boundaries_after(Point start, size_t max_count, BoundaryQueryResult *result)`
+    capture: 0 - name, start: (85, 9), end: (85, 30), text: `find_boundaries_after`
+  pattern: 3
+    capture: 2 - definition.function, start: (86, 40), end: (86, 46), text: `dump()`
+    capture: 0 - name, start: (86, 40), end: (86, 44), text: `dump`
+  pattern: 3
+    capture: 2 - definition.function, start: (89, 9), end: (89, 17), text: `ascend()`
+    capture: 0 - name, start: (89, 9), end: (89, 15), text: `ascend`
+  pattern: 3
+    capture: 2 - definition.function, start: (90, 9), end: (90, 23), text: `descend_left()`
+    capture: 0 - name, start: (90, 9), end: (90, 21), text: `descend_left`
+  pattern: 3
+    capture: 2 - definition.function, start: (91, 9), end: (91, 24), text: `descend_right()`
+    capture: 0 - name, start: (91, 9), end: (91, 22), text: `descend_right`
+  pattern: 3
+    capture: 2 - definition.function, start: (92, 9), end: (92, 28), text: `move_to_successor()`
+    capture: 0 - name, start: (92, 9), end: (92, 26), text: `move_to_successor`
+  pattern: 3
+    capture: 2 - definition.function, start: (93, 9), end: (93, 75), text: `seek_to_first_node_greater_than_or_equal_to(const Point &position)`
+    capture: 0 - name, start: (93, 9), end: (93, 52), text: `seek_to_first_node_greater_than_or_equal_to`
+  pattern: 3
+    capture: 2 - definition.function, start: (94, 9), end: (94, 95), text: `mark_right(const MarkerId &id, const Point &start_position, const Point &end_position)`
+    capture: 0 - name, start: (94, 9), end: (94, 19), text: `mark_right`
+  pattern: 3
+    capture: 2 - definition.function, start: (95, 9), end: (95, 94), text: `mark_left(const MarkerId &id, const Point &start_position, const Point &end_position)`
+    capture: 0 - name, start: (95, 9), end: (95, 18), text: `mark_left`
+  pattern: 3
+    capture: 2 - definition.function, start: (96, 10), end: (96, 50), text: `insert_left_child(const Point &position)`
+    capture: 0 - name, start: (96, 10), end: (96, 27), text: `insert_left_child`
+  pattern: 3
+    capture: 2 - definition.function, start: (97, 10), end: (97, 51), text: `insert_right_child(const Point &position)`
+    capture: 0 - name, start: (97, 10), end: (97, 28), text: `insert_right_child`
+  pattern: 3
+    capture: 2 - definition.function, start: (98, 9), end: (98, 94), text: `check_intersection(const Point &start, const Point &end, flat_set<MarkerId> *results)`
+    capture: 0 - name, start: (98, 9), end: (98, 27), text: `check_intersection`
+  pattern: 3
+    capture: 2 - definition.function, start: (99, 9), end: (99, 36), text: `cache_node_position() const`
+    capture: 0 - name, start: (99, 9), end: (99, 28), text: `cache_node_position`
+  pattern: 3
+    capture: 2 - definition.function, start: (110, 8), end: (110, 49), text: `get_node_position(const Node *node) const`
+    capture: 0 - name, start: (110, 8), end: (110, 25), text: `get_node_position`
+  pattern: 3
+    capture: 2 - definition.function, start: (111, 7), end: (111, 30), text: `delete_node(Node *node)`
+    capture: 0 - name, start: (111, 7), end: (111, 18), text: `delete_node`
+  pattern: 3
+    capture: 2 - definition.function, start: (112, 7), end: (112, 33), text: `delete_subtree(Node *node)`
+    capture: 0 - name, start: (112, 7), end: (112, 21), text: `delete_subtree`
+  pattern: 3
+    capture: 2 - definition.function, start: (113, 7), end: (113, 33), text: `bubble_node_up(Node *node)`
+    capture: 0 - name, start: (113, 7), end: (113, 21), text: `bubble_node_up`
+  pattern: 3
+    capture: 2 - definition.function, start: (114, 7), end: (114, 35), text: `bubble_node_down(Node *node)`
+    capture: 0 - name, start: (114, 7), end: (114, 23), text: `bubble_node_down`
+  pattern: 3
+    capture: 2 - definition.function, start: (115, 7), end: (115, 36), text: `rotate_node_left(Node *pivot)`
+    capture: 0 - name, start: (115, 7), end: (115, 23), text: `rotate_node_left`
+  pattern: 3
+    capture: 2 - definition.function, start: (116, 7), end: (116, 37), text: `rotate_node_right(Node *pivot)`
+    capture: 0 - name, start: (116, 7), end: (116, 24), text: `rotate_node_right`
+  pattern: 3
+    capture: 2 - definition.function, start: (117, 7), end: (117, 129), text: `get_starting_and_ending_markers_within_subtree(const Node *node, flat_set<MarkerId> *starting, flat_set<MarkerId> *ending)`
+    capture: 0 - name, start: (117, 7), end: (117, 53), text: `get_starting_and_ending_markers_within_subtree`
+  pattern: 3
+    capture: 2 - definition.function, start: (118, 7), end: (118, 211), text: `populate_splice_invalidation_sets(SpliceResult *invalidated, const Node *start_node, const Node *end_node, const flat_set<MarkerId> &starting_inside_splice, const flat_set<MarkerId> &ending_inside_splice)`
+    capture: 0 - name, start: (118, 7), end: (118, 40), text: `populate_splice_invalidation_sets`

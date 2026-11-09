@@ -1,0 +1,17 @@
+examples/update-authors.sh
+    pattern:  4, capture: 4 - comment, start: (0, 0), end: (0, 9), text: `#!/bin/sh`
+    pattern:  1, capture: 1 - function, start: (2, 0), end: (2, 3), text: `git`
+    pattern:  9, capture: 8 - constant, start: (2, 8), end: (2, 17), text: `--reverse`
+    pattern:  9, capture: 8 - constant, start: (2, 18), end: (2, 38), text: `--format='%aN <%aE>'`
+    pattern:  0, capture: 0 - string, start: (2, 27), end: (2, 38), text: `'%aN <%aE>'`
+    pattern:  8, capture: 7 - operator, start: (2, 39), end: (2, 40), text: `|`
+    pattern:  1, capture: 1 - function, start: (2, 41), end: (2, 45), text: `perl`
+    pattern:  9, capture: 8 - constant, start: (2, 46), end: (2, 50), text: `-wnE`
+    pattern:  0, capture: 0 - string, start: (2, 51), end: (8, 1), text: `'
+BEGIN {
+  say "# Authors sorted by whether or not they\x27re me";
+}
+
+print $seen{$_} = $_ unless $seen{$_}
+'`
+    pattern:  8, capture: 7 - operator, start: (8, 2), end: (8, 3), text: `>`

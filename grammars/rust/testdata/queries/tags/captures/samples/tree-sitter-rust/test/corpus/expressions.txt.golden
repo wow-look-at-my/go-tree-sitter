@@ -1,0 +1,3191 @@
+samples/tree-sitter-rust/test/corpus/expressions.txt
+    pattern:  9, capture: 7 - reference.call, start: (4, 3), end: (4, 9), text: `main()`
+    pattern:  9, capture: 0 - name, start: (4, 3), end: (4, 7), text: `main`
+    pattern:  9, capture: 7 - reference.call, start: (10, 1), end: (16, 23), text: `source_file
+  (function_item
+    (identifier)
+    (parameters)
+    (block
+      (expression_statement
+        (identifier))))`
+    pattern:  9, capture: 0 - name, start: (10, 1), end: (10, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (11, 3), end: (12, 16), text: `function_item
+    (identifier)`
+    pattern:  9, capture: 0 - name, start: (11, 3), end: (11, 16), text: `function_item`
+    pattern:  9, capture: 7 - reference.call, start: (14, 5), end: (16, 21), text: `block
+      (expression_statement
+        (identifier))`
+    pattern:  9, capture: 0 - name, start: (14, 5), end: (14, 10), text: `block`
+    pattern:  9, capture: 7 - reference.call, start: (15, 7), end: (16, 20), text: `expression_statement
+        (identifier)`
+    pattern:  9, capture: 0 - name, start: (15, 7), end: (15, 27), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (22, 3), end: (22, 9), text: `main()`
+    pattern:  9, capture: 0 - name, start: (22, 3), end: (22, 7), text: `main`
+    pattern:  9, capture: 7 - reference.call, start: (28, 1), end: (39, 32), text: `source_file
+  (function_item
+    (identifier)
+    (parameters)
+    (block
+      (expression_statement
+        (field_expression
+          (parenthesized_expression
+            (type_cast_expression
+              (identifier)
+              (type_identifier)))
+          (field_identifier)))))`
+    pattern:  9, capture: 0 - name, start: (28, 1), end: (28, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (29, 3), end: (30, 16), text: `function_item
+    (identifier)`
+    pattern:  9, capture: 0 - name, start: (29, 3), end: (29, 16), text: `function_item`
+    pattern:  9, capture: 7 - reference.call, start: (32, 5), end: (39, 30), text: `block
+      (expression_statement
+        (field_expression
+          (parenthesized_expression
+            (type_cast_expression
+              (identifier)
+              (type_identifier)))
+          (field_identifier)))`
+    pattern:  9, capture: 0 - name, start: (32, 5), end: (32, 10), text: `block`
+    pattern:  9, capture: 7 - reference.call, start: (33, 7), end: (39, 29), text: `expression_statement
+        (field_expression
+          (parenthesized_expression
+            (type_cast_expression
+              (identifier)
+              (type_identifier)))
+          (field_identifier))`
+    pattern:  9, capture: 0 - name, start: (33, 7), end: (33, 27), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (34, 9), end: (38, 33), text: `field_expression
+          (parenthesized_expression
+            (type_cast_expression
+              (identifier)
+              (type_identifier)))`
+    pattern:  9, capture: 0 - name, start: (34, 9), end: (34, 25), text: `field_expression`
+    pattern:  9, capture: 7 - reference.call, start: (35, 11), end: (38, 32), text: `parenthesized_expression
+            (type_cast_expression
+              (identifier)
+              (type_identifier))`
+    pattern:  9, capture: 0 - name, start: (35, 11), end: (35, 35), text: `parenthesized_expression`
+    pattern:  9, capture: 7 - reference.call, start: (36, 13), end: (37, 26), text: `type_cast_expression
+              (identifier)`
+    pattern:  9, capture: 0 - name, start: (36, 13), end: (36, 33), text: `type_cast_expression`
+    pattern:  9, capture: 7 - reference.call, start: (51, 1), end: (54, 20), text: `source_file
+  (expression_statement
+    (unary_expression
+      (identifier)))`
+    pattern:  9, capture: 0 - name, start: (51, 1), end: (51, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (52, 3), end: (54, 19), text: `expression_statement
+    (unary_expression
+      (identifier))`
+    pattern:  9, capture: 0 - name, start: (52, 3), end: (52, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (53, 5), end: (54, 18), text: `unary_expression
+      (identifier)`
+    pattern:  9, capture: 0 - name, start: (53, 5), end: (53, 21), text: `unary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (55, 3), end: (57, 19), text: `expression_statement
+    (unary_expression
+      (identifier))`
+    pattern:  9, capture: 0 - name, start: (55, 3), end: (55, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (56, 5), end: (57, 18), text: `unary_expression
+      (identifier)`
+    pattern:  9, capture: 0 - name, start: (56, 5), end: (56, 21), text: `unary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (58, 3), end: (60, 19), text: `expression_statement
+    (unary_expression
+      (identifier))`
+    pattern:  9, capture: 0 - name, start: (58, 3), end: (58, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (59, 5), end: (60, 18), text: `unary_expression
+      (identifier)`
+    pattern:  9, capture: 0 - name, start: (59, 5), end: (59, 21), text: `unary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (73, 1), end: (76, 20), text: `source_file
+  (expression_statement
+    (reference_expression
+      (identifier)))`
+    pattern:  9, capture: 0 - name, start: (73, 1), end: (73, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (74, 3), end: (76, 19), text: `expression_statement
+    (reference_expression
+      (identifier))`
+    pattern:  9, capture: 0 - name, start: (74, 3), end: (74, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (75, 5), end: (76, 18), text: `reference_expression
+      (identifier)`
+    pattern:  9, capture: 0 - name, start: (75, 5), end: (75, 25), text: `reference_expression`
+    pattern:  9, capture: 7 - reference.call, start: (77, 3), end: (82, 28), text: `expression_statement
+    (reference_expression
+      (mutable_specifier)
+      (field_expression
+        (self)
+        (field_identifier)))`
+    pattern:  9, capture: 0 - name, start: (77, 3), end: (77, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (78, 5), end: (79, 25), text: `reference_expression
+      (mutable_specifier)`
+    pattern:  9, capture: 0 - name, start: (78, 5), end: (78, 25), text: `reference_expression`
+    pattern:  9, capture: 7 - reference.call, start: (80, 7), end: (81, 14), text: `field_expression
+        (self)`
+    pattern:  9, capture: 0 - name, start: (80, 7), end: (80, 23), text: `field_expression`
+    pattern:  9, capture: 7 - reference.call, start: (83, 3), end: (85, 19), text: `expression_statement
+    (reference_expression
+      (identifier))`
+    pattern:  9, capture: 0 - name, start: (83, 3), end: (83, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (84, 5), end: (85, 18), text: `reference_expression
+      (identifier)`
+    pattern:  9, capture: 0 - name, start: (84, 5), end: (84, 25), text: `reference_expression`
+    pattern:  9, capture: 7 - reference.call, start: (86, 3), end: (91, 28), text: `expression_statement
+    (reference_expression
+      (mutable_specifier)
+      (field_expression
+        (self)
+        (field_identifier)))`
+    pattern:  9, capture: 0 - name, start: (86, 3), end: (86, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (87, 5), end: (88, 25), text: `reference_expression
+      (mutable_specifier)`
+    pattern:  9, capture: 0 - name, start: (87, 5), end: (87, 25), text: `reference_expression`
+    pattern:  9, capture: 7 - reference.call, start: (89, 7), end: (90, 14), text: `field_expression
+        (self)`
+    pattern:  9, capture: 0 - name, start: (89, 7), end: (89, 23), text: `field_expression`
+    pattern: 10, capture: 7 - reference.call, start: (97, 0), end: (97, 10), text: `a.unwrap()`
+    pattern: 10, capture: 0 - name, start: (97, 2), end: (97, 8), text: `unwrap`
+    pattern:  9, capture: 7 - reference.call, start: (102, 1), end: (109, 22), text: `source_file
+  (expression_statement
+    (try_expression
+      (call_expression
+        (field_expression
+          (identifier)
+          (field_identifier))
+        (arguments))))`
+    pattern:  9, capture: 0 - name, start: (102, 1), end: (102, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (103, 3), end: (109, 21), text: `expression_statement
+    (try_expression
+      (call_expression
+        (field_expression
+          (identifier)
+          (field_identifier))
+        (arguments)))`
+    pattern:  9, capture: 0 - name, start: (103, 3), end: (103, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (104, 5), end: (109, 20), text: `try_expression
+      (call_expression
+        (field_expression
+          (identifier)
+          (field_identifier))
+        (arguments))`
+    pattern:  9, capture: 0 - name, start: (104, 5), end: (104, 19), text: `try_expression`
+    pattern:  9, capture: 7 - reference.call, start: (105, 7), end: (108, 29), text: `call_expression
+        (field_expression
+          (identifier)
+          (field_identifier))`
+    pattern:  9, capture: 0 - name, start: (105, 7), end: (105, 22), text: `call_expression`
+    pattern:  9, capture: 7 - reference.call, start: (106, 9), end: (107, 22), text: `field_expression
+          (identifier)`
+    pattern:  9, capture: 0 - name, start: (106, 9), end: (106, 25), text: `field_expression`
+    pattern:  9, capture: 7 - reference.call, start: (110, 3), end: (113, 22), text: `expression_statement
+    (reference_expression
+      (try_expression
+        (identifier)))`
+    pattern:  9, capture: 0 - name, start: (110, 3), end: (110, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (111, 5), end: (113, 21), text: `reference_expression
+      (try_expression
+        (identifier))`
+    pattern:  9, capture: 0 - name, start: (111, 5), end: (111, 25), text: `reference_expression`
+    pattern:  9, capture: 7 - reference.call, start: (112, 7), end: (113, 20), text: `try_expression
+        (identifier)`
+    pattern:  9, capture: 0 - name, start: (112, 7), end: (112, 21), text: `try_expression`
+    pattern:  9, capture: 7 - reference.call, start: (132, 1), end: (136, 20), text: `source_file
+  (expression_statement
+    (binary_expression
+      (identifier)
+      (identifier)))`
+    pattern:  9, capture: 0 - name, start: (132, 1), end: (132, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (133, 3), end: (136, 19), text: `expression_statement
+    (binary_expression
+      (identifier)
+      (identifier))`
+    pattern:  9, capture: 0 - name, start: (133, 3), end: (133, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (134, 5), end: (135, 18), text: `binary_expression
+      (identifier)`
+    pattern:  9, capture: 0 - name, start: (134, 5), end: (134, 22), text: `binary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (137, 3), end: (140, 19), text: `expression_statement
+    (binary_expression
+      (identifier)
+      (identifier))`
+    pattern:  9, capture: 0 - name, start: (137, 3), end: (137, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (138, 5), end: (139, 18), text: `binary_expression
+      (identifier)`
+    pattern:  9, capture: 0 - name, start: (138, 5), end: (138, 22), text: `binary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (141, 3), end: (144, 19), text: `expression_statement
+    (binary_expression
+      (identifier)
+      (identifier))`
+    pattern:  9, capture: 0 - name, start: (141, 3), end: (141, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (142, 5), end: (143, 18), text: `binary_expression
+      (identifier)`
+    pattern:  9, capture: 0 - name, start: (142, 5), end: (142, 22), text: `binary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (145, 3), end: (148, 19), text: `expression_statement
+    (binary_expression
+      (identifier)
+      (identifier))`
+    pattern:  9, capture: 0 - name, start: (145, 3), end: (145, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (146, 5), end: (147, 18), text: `binary_expression
+      (identifier)`
+    pattern:  9, capture: 0 - name, start: (146, 5), end: (146, 22), text: `binary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (149, 3), end: (152, 19), text: `expression_statement
+    (binary_expression
+      (identifier)
+      (identifier))`
+    pattern:  9, capture: 0 - name, start: (149, 3), end: (149, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (150, 5), end: (151, 18), text: `binary_expression
+      (identifier)`
+    pattern:  9, capture: 0 - name, start: (150, 5), end: (150, 22), text: `binary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (153, 3), end: (156, 19), text: `expression_statement
+    (binary_expression
+      (identifier)
+      (identifier))`
+    pattern:  9, capture: 0 - name, start: (153, 3), end: (153, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (154, 5), end: (155, 18), text: `binary_expression
+      (identifier)`
+    pattern:  9, capture: 0 - name, start: (154, 5), end: (154, 22), text: `binary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (157, 3), end: (160, 19), text: `expression_statement
+    (binary_expression
+      (identifier)
+      (identifier))`
+    pattern:  9, capture: 0 - name, start: (157, 3), end: (157, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (158, 5), end: (159, 18), text: `binary_expression
+      (identifier)`
+    pattern:  9, capture: 0 - name, start: (158, 5), end: (158, 22), text: `binary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (161, 3), end: (164, 19), text: `expression_statement
+    (binary_expression
+      (identifier)
+      (identifier))`
+    pattern:  9, capture: 0 - name, start: (161, 3), end: (161, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (162, 5), end: (163, 18), text: `binary_expression
+      (identifier)`
+    pattern:  9, capture: 0 - name, start: (162, 5), end: (162, 22), text: `binary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (165, 3), end: (168, 19), text: `expression_statement
+    (binary_expression
+      (identifier)
+      (identifier))`
+    pattern:  9, capture: 0 - name, start: (165, 3), end: (165, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (166, 5), end: (167, 18), text: `binary_expression
+      (identifier)`
+    pattern:  9, capture: 0 - name, start: (166, 5), end: (166, 22), text: `binary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (169, 3), end: (172, 19), text: `expression_statement
+    (binary_expression
+      (identifier)
+      (identifier))`
+    pattern:  9, capture: 0 - name, start: (169, 3), end: (169, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (170, 5), end: (171, 18), text: `binary_expression
+      (identifier)`
+    pattern:  9, capture: 0 - name, start: (170, 5), end: (170, 22), text: `binary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (183, 1), end: (186, 25), text: `source_file
+  (expression_statement
+    (parenthesized_expression
+      (integer_literal)))`
+    pattern:  9, capture: 0 - name, start: (183, 1), end: (183, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (184, 3), end: (186, 24), text: `expression_statement
+    (parenthesized_expression
+      (integer_literal))`
+    pattern:  9, capture: 0 - name, start: (184, 3), end: (184, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (185, 5), end: (186, 23), text: `parenthesized_expression
+      (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (185, 5), end: (185, 29), text: `parenthesized_expression`
+    pattern:  9, capture: 7 - reference.call, start: (187, 3), end: (194, 33), text: `expression_statement
+    (parenthesized_expression
+      (binary_expression
+        (integer_literal)
+        (parenthesized_expression
+          (binary_expression
+            (integer_literal)
+            (integer_literal)))))`
+    pattern:  9, capture: 0 - name, start: (187, 3), end: (187, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (188, 5), end: (194, 32), text: `parenthesized_expression
+      (binary_expression
+        (integer_literal)
+        (parenthesized_expression
+          (binary_expression
+            (integer_literal)
+            (integer_literal))))`
+    pattern:  9, capture: 0 - name, start: (188, 5), end: (188, 29), text: `parenthesized_expression`
+    pattern:  9, capture: 7 - reference.call, start: (189, 7), end: (190, 25), text: `binary_expression
+        (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (189, 7), end: (189, 24), text: `binary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (191, 9), end: (194, 30), text: `parenthesized_expression
+          (binary_expression
+            (integer_literal)
+            (integer_literal))`
+    pattern:  9, capture: 0 - name, start: (191, 9), end: (191, 33), text: `parenthesized_expression`
+    pattern:  9, capture: 7 - reference.call, start: (192, 11), end: (193, 29), text: `binary_expression
+            (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (192, 11), end: (192, 28), text: `binary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (215, 1), end: (219, 25), text: `source_file
+  (expression_statement
+    (range_expression
+      (integer_literal)
+      (integer_literal)))`
+    pattern:  9, capture: 0 - name, start: (215, 1), end: (215, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (216, 3), end: (219, 24), text: `expression_statement
+    (range_expression
+      (integer_literal)
+      (integer_literal))`
+    pattern:  9, capture: 0 - name, start: (216, 3), end: (216, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (217, 5), end: (218, 23), text: `range_expression
+      (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (217, 5), end: (217, 21), text: `range_expression`
+    pattern:  9, capture: 7 - reference.call, start: (220, 3), end: (222, 24), text: `expression_statement
+    (range_expression
+      (integer_literal))`
+    pattern:  9, capture: 0 - name, start: (220, 3), end: (220, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (221, 5), end: (222, 23), text: `range_expression
+      (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (221, 5), end: (221, 21), text: `range_expression`
+    pattern:  9, capture: 7 - reference.call, start: (223, 3), end: (225, 24), text: `expression_statement
+    (range_expression
+      (integer_literal))`
+    pattern:  9, capture: 0 - name, start: (223, 3), end: (223, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (224, 5), end: (225, 23), text: `range_expression
+      (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (224, 5), end: (224, 21), text: `range_expression`
+    pattern:  9, capture: 7 - reference.call, start: (226, 3), end: (227, 22), text: `expression_statement
+    (range_expression)`
+    pattern:  9, capture: 0 - name, start: (226, 3), end: (226, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (228, 3), end: (231, 19), text: `expression_statement
+    (range_expression
+      (integer_literal)
+      (identifier))`
+    pattern:  9, capture: 0 - name, start: (228, 3), end: (228, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (229, 5), end: (230, 23), text: `range_expression
+      (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (229, 5), end: (229, 21), text: `range_expression`
+    pattern:  9, capture: 7 - reference.call, start: (232, 3), end: (235, 19), text: `expression_statement
+    (range_expression
+      (identifier)
+      (identifier))`
+    pattern:  9, capture: 0 - name, start: (232, 3), end: (232, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (233, 5), end: (234, 18), text: `range_expression
+      (identifier)`
+    pattern:  9, capture: 0 - name, start: (233, 5), end: (233, 21), text: `range_expression`
+    pattern:  9, capture: 7 - reference.call, start: (236, 3), end: (240, 27), text: `expression_statement
+    (range_expression
+      (integer_literal)
+      (parenthesized_expression
+        (integer_literal)))`
+    pattern:  9, capture: 0 - name, start: (236, 3), end: (236, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (237, 5), end: (238, 23), text: `range_expression
+      (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (237, 5), end: (237, 21), text: `range_expression`
+    pattern:  9, capture: 7 - reference.call, start: (239, 7), end: (240, 25), text: `parenthesized_expression
+        (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (239, 7), end: (239, 31), text: `parenthesized_expression`
+    pattern:  9, capture: 7 - reference.call, start: (241, 3), end: (245, 24), text: `expression_statement
+    (range_expression
+      (parenthesized_expression
+        (integer_literal))
+      (integer_literal))`
+    pattern:  9, capture: 0 - name, start: (241, 3), end: (241, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (242, 5), end: (244, 26), text: `range_expression
+      (parenthesized_expression
+        (integer_literal))`
+    pattern:  9, capture: 0 - name, start: (242, 5), end: (242, 21), text: `range_expression`
+    pattern:  9, capture: 7 - reference.call, start: (243, 7), end: (244, 25), text: `parenthesized_expression
+        (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (243, 7), end: (243, 31), text: `parenthesized_expression`
+    pattern:  9, capture: 7 - reference.call, start: (246, 3), end: (251, 27), text: `expression_statement
+    (range_expression
+      (parenthesized_expression
+        (integer_literal))
+      (parenthesized_expression
+        (integer_literal)))`
+    pattern:  9, capture: 0 - name, start: (246, 3), end: (246, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (247, 5), end: (249, 26), text: `range_expression
+      (parenthesized_expression
+        (integer_literal))`
+    pattern:  9, capture: 0 - name, start: (247, 5), end: (247, 21), text: `range_expression`
+    pattern:  9, capture: 7 - reference.call, start: (248, 7), end: (249, 25), text: `parenthesized_expression
+        (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (248, 7), end: (248, 31), text: `parenthesized_expression`
+    pattern:  9, capture: 7 - reference.call, start: (250, 7), end: (251, 25), text: `parenthesized_expression
+        (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (250, 7), end: (250, 31), text: `parenthesized_expression`
+    pattern:  9, capture: 7 - reference.call, start: (252, 3), end: (256, 27), text: `expression_statement
+    (range_expression
+      (integer_literal)
+      (block
+        (integer_literal)))`
+    pattern:  9, capture: 0 - name, start: (252, 3), end: (252, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (253, 5), end: (254, 23), text: `range_expression
+      (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (253, 5), end: (253, 21), text: `range_expression`
+    pattern:  9, capture: 7 - reference.call, start: (255, 7), end: (256, 25), text: `block
+        (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (255, 7), end: (255, 12), text: `block`
+    pattern:  9, capture: 7 - reference.call, start: (257, 3), end: (262, 14), text: `expression_statement
+    (for_expression
+      (identifier)
+      (range_expression
+        (integer_literal))
+      (block))`
+    pattern:  9, capture: 0 - name, start: (257, 3), end: (257, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (258, 5), end: (259, 18), text: `for_expression
+      (identifier)`
+    pattern:  9, capture: 0 - name, start: (258, 5), end: (258, 19), text: `for_expression`
+    pattern:  9, capture: 7 - reference.call, start: (260, 7), end: (261, 25), text: `range_expression
+        (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (260, 7), end: (260, 23), text: `range_expression`
+    pattern:  9, capture: 7 - reference.call, start: (272, 1), end: (276, 27), text: `source_file
+  (expression_statement
+    (assignment_expression
+      left: (identifier)
+      right: (identifier)))`
+    pattern:  9, capture: 0 - name, start: (272, 1), end: (272, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (273, 3), end: (276, 26), text: `expression_statement
+    (assignment_expression
+      left: (identifier)
+      right: (identifier))`
+    pattern:  9, capture: 0 - name, start: (273, 3), end: (273, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (274, 5), end: (275, 24), text: `assignment_expression
+      left: (identifier)`
+    pattern:  9, capture: 0 - name, start: (274, 5), end: (274, 26), text: `assignment_expression`
+    pattern:  9, capture: 7 - reference.call, start: (287, 1), end: (291, 32), text: `source_file
+  (expression_statement
+    (compound_assignment_expr
+      left: (identifier)
+      right: (integer_literal)))`
+    pattern:  9, capture: 0 - name, start: (287, 1), end: (287, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (288, 3), end: (291, 31), text: `expression_statement
+    (compound_assignment_expr
+      left: (identifier)
+      right: (integer_literal))`
+    pattern:  9, capture: 0 - name, start: (288, 3), end: (288, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (289, 5), end: (290, 24), text: `compound_assignment_expr
+      left: (identifier)`
+    pattern:  9, capture: 0 - name, start: (289, 5), end: (289, 29), text: `compound_assignment_expr`
+    pattern:  9, capture: 7 - reference.call, start: (292, 3), end: (295, 26), text: `expression_statement
+    (compound_assignment_expr
+      left: (identifier)
+      right: (identifier))`
+    pattern:  9, capture: 0 - name, start: (292, 3), end: (292, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (293, 5), end: (294, 24), text: `compound_assignment_expr
+      left: (identifier)`
+    pattern:  9, capture: 0 - name, start: (293, 5), end: (293, 29), text: `compound_assignment_expr`
+    pattern:  9, capture: 7 - reference.call, start: (303, 23), end: (303, 34), text: `len(values)`
+    pattern:  9, capture: 0 - name, start: (303, 23), end: (303, 26), text: `len`
+    pattern:  9, capture: 7 - reference.call, start: (307, 1), end: (311, 30), text: `source_file
+  (expression_statement
+    (type_cast_expression
+      value: (integer_literal)
+      type: (primitive_type)))`
+    pattern:  9, capture: 0 - name, start: (307, 1), end: (307, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (308, 3), end: (311, 29), text: `expression_statement
+    (type_cast_expression
+      value: (integer_literal)
+      type: (primitive_type))`
+    pattern:  9, capture: 0 - name, start: (308, 3), end: (308, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (309, 5), end: (310, 30), text: `type_cast_expression
+      value: (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (309, 5), end: (309, 25), text: `type_cast_expression`
+    pattern:  9, capture: 7 - reference.call, start: (312, 3), end: (313, 25), text: `let_declaration
+    pattern: (identifier)`
+    pattern:  9, capture: 0 - name, start: (312, 3), end: (312, 18), text: `let_declaration`
+    pattern:  9, capture: 7 - reference.call, start: (314, 12), end: (315, 25), text: `type_cast_expression
+      value: (identifier)`
+    pattern:  9, capture: 0 - name, start: (314, 12), end: (314, 32), text: `type_cast_expression`
+    pattern:  9, capture: 7 - reference.call, start: (317, 3), end: (318, 25), text: `let_declaration
+    pattern: (identifier)`
+    pattern:  9, capture: 0 - name, start: (317, 3), end: (317, 18), text: `let_declaration`
+    pattern:  9, capture: 7 - reference.call, start: (320, 12), end: (329, 34), text: `binary_expression
+      left: (binary_expression
+        left: (float_literal)
+        right: (type_cast_expression
+          value: (unary_expression
+            (call_expression
+              function: (identifier)
+              arguments: (arguments
+                (identifier))))
+          type: (primitive_type)))`
+    pattern:  9, capture: 0 - name, start: (320, 12), end: (320, 29), text: `binary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (321, 13), end: (322, 29), text: `binary_expression
+        left: (float_literal)`
+    pattern:  9, capture: 0 - name, start: (321, 13), end: (321, 30), text: `binary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (323, 16), end: (328, 31), text: `type_cast_expression
+          value: (unary_expression
+            (call_expression
+              function: (identifier)
+              arguments: (arguments
+                (identifier))))`
+    pattern:  9, capture: 0 - name, start: (323, 16), end: (323, 36), text: `type_cast_expression`
+    pattern:  9, capture: 7 - reference.call, start: (324, 18), end: (328, 30), text: `unary_expression
+            (call_expression
+              function: (identifier)
+              arguments: (arguments
+                (identifier)))`
+    pattern:  9, capture: 0 - name, start: (324, 18), end: (324, 34), text: `unary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (325, 13), end: (326, 36), text: `call_expression
+              function: (identifier)`
+    pattern:  9, capture: 0 - name, start: (325, 13), end: (325, 28), text: `call_expression`
+    pattern:  9, capture: 7 - reference.call, start: (327, 26), end: (328, 28), text: `arguments
+                (identifier)`
+    pattern:  9, capture: 0 - name, start: (327, 26), end: (327, 35), text: `arguments`
+    pattern:  9, capture: 7 - reference.call, start: (336, 0), end: (336, 5), text: `foo()`
+    pattern:  9, capture: 0 - name, start: (336, 0), end: (336, 3), text: `foo`
+    pattern:  9, capture: 7 - reference.call, start: (337, 0), end: (337, 15), text: `add(1i32, 2i32)`
+    pattern:  9, capture: 0 - name, start: (337, 0), end: (337, 3), text: `add`
+    pattern:  9, capture: 7 - reference.call, start: (338, 0), end: (341, 1), text: `add(
+    1i32,
+    2i32,
+)`
+    pattern:  9, capture: 0 - name, start: (338, 0), end: (338, 3), text: `add`
+    pattern:  9, capture: 7 - reference.call, start: (345, 1), end: (349, 30), text: `source_file
+  (expression_statement
+    (call_expression
+      function: (identifier)
+      arguments: (arguments)))`
+    pattern:  9, capture: 0 - name, start: (345, 1), end: (345, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (346, 3), end: (349, 29), text: `expression_statement
+    (call_expression
+      function: (identifier)
+      arguments: (arguments))`
+    pattern:  9, capture: 0 - name, start: (346, 3), end: (346, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (347, 5), end: (348, 28), text: `call_expression
+      function: (identifier)`
+    pattern:  9, capture: 0 - name, start: (347, 5), end: (347, 20), text: `call_expression`
+    pattern:  9, capture: 7 - reference.call, start: (350, 3), end: (355, 27), text: `expression_statement
+    (call_expression
+      function: (identifier)
+      arguments: (arguments
+        (integer_literal)
+        (integer_literal)))`
+    pattern:  9, capture: 0 - name, start: (350, 3), end: (350, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (351, 5), end: (352, 28), text: `call_expression
+      function: (identifier)`
+    pattern:  9, capture: 0 - name, start: (351, 5), end: (351, 20), text: `call_expression`
+    pattern:  9, capture: 7 - reference.call, start: (353, 18), end: (354, 25), text: `arguments
+        (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (353, 18), end: (353, 27), text: `arguments`
+    pattern:  9, capture: 7 - reference.call, start: (356, 3), end: (361, 27), text: `expression_statement
+    (call_expression
+      function: (identifier)
+      arguments: (arguments
+        (integer_literal)
+        (integer_literal)))`
+    pattern:  9, capture: 0 - name, start: (356, 3), end: (356, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (357, 5), end: (358, 28), text: `call_expression
+      function: (identifier)`
+    pattern:  9, capture: 0 - name, start: (357, 5), end: (357, 20), text: `call_expression`
+    pattern:  9, capture: 7 - reference.call, start: (359, 18), end: (360, 25), text: `arguments
+        (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (359, 18), end: (359, 27), text: `arguments`
+    pattern:  9, capture: 7 - reference.call, start: (380, 1), end: (382, 23), text: `source_file
+  (expression_statement
+    (array_expression))`
+    pattern:  9, capture: 0 - name, start: (380, 1), end: (380, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (381, 3), end: (382, 22), text: `expression_statement
+    (array_expression)`
+    pattern:  9, capture: 0 - name, start: (381, 3), end: (381, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (383, 3), end: (387, 24), text: `expression_statement
+    (array_expression
+      (integer_literal)
+      (integer_literal)
+      (integer_literal))`
+    pattern:  9, capture: 0 - name, start: (383, 3), end: (383, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (384, 5), end: (385, 23), text: `array_expression
+      (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (384, 5), end: (384, 21), text: `array_expression`
+    pattern:  9, capture: 7 - reference.call, start: (388, 3), end: (395, 26), text: `expression_statement
+    (array_expression
+      (string_literal
+        (string_content))
+      (string_literal
+        (string_content))
+      (string_literal
+        (string_content)))`
+    pattern:  9, capture: 0 - name, start: (388, 3), end: (388, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (389, 5), end: (391, 25), text: `array_expression
+      (string_literal
+        (string_content))`
+    pattern:  9, capture: 0 - name, start: (389, 5), end: (389, 21), text: `array_expression`
+    pattern:  9, capture: 7 - reference.call, start: (390, 7), end: (391, 24), text: `string_literal
+        (string_content)`
+    pattern:  9, capture: 0 - name, start: (390, 7), end: (390, 21), text: `string_literal`
+    pattern:  9, capture: 7 - reference.call, start: (392, 7), end: (393, 24), text: `string_literal
+        (string_content)`
+    pattern:  9, capture: 0 - name, start: (392, 7), end: (392, 21), text: `string_literal`
+    pattern:  9, capture: 7 - reference.call, start: (394, 7), end: (395, 24), text: `string_literal
+        (string_content)`
+    pattern:  9, capture: 0 - name, start: (394, 7), end: (394, 21), text: `string_literal`
+    pattern:  9, capture: 7 - reference.call, start: (396, 3), end: (399, 32), text: `expression_statement
+    (array_expression
+      (integer_literal)
+      length: (integer_literal))`
+    pattern:  9, capture: 0 - name, start: (396, 3), end: (396, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (397, 5), end: (398, 23), text: `array_expression
+      (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (397, 5), end: (397, 21), text: `array_expression`
+    pattern:  9, capture: 7 - reference.call, start: (400, 3), end: (415, 26), text: `expression_statement
+    (array_expression
+      (attribute_item
+        (attribute
+          (identifier)
+          arguments: (token_tree
+            (identifier))))
+      (string_literal
+        (string_content))
+      (attribute_item
+        (attribute
+          (identifier)
+          arguments: (token_tree
+            (identifier))))
+      (string_literal
+        (string_content)))`
+    pattern:  9, capture: 0 - name, start: (400, 3), end: (400, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (401, 5), end: (406, 27), text: `array_expression
+      (attribute_item
+        (attribute
+          (identifier)
+          arguments: (token_tree
+            (identifier))))`
+    pattern:  9, capture: 0 - name, start: (401, 5), end: (401, 21), text: `array_expression`
+    pattern:  9, capture: 7 - reference.call, start: (402, 7), end: (406, 26), text: `attribute_item
+        (attribute
+          (identifier)
+          arguments: (token_tree
+            (identifier)))`
+    pattern:  9, capture: 0 - name, start: (402, 7), end: (402, 21), text: `attribute_item`
+    pattern:  9, capture: 7 - reference.call, start: (403, 9), end: (404, 22), text: `attribute
+          (identifier)`
+    pattern:  9, capture: 0 - name, start: (403, 9), end: (403, 18), text: `attribute`
+    pattern:  9, capture: 7 - reference.call, start: (405, 22), end: (406, 24), text: `token_tree
+            (identifier)`
+    pattern:  9, capture: 0 - name, start: (405, 22), end: (405, 32), text: `token_tree`
+    pattern:  9, capture: 7 - reference.call, start: (407, 7), end: (408, 24), text: `string_literal
+        (string_content)`
+    pattern:  9, capture: 0 - name, start: (407, 7), end: (407, 21), text: `string_literal`
+    pattern:  9, capture: 7 - reference.call, start: (409, 7), end: (413, 26), text: `attribute_item
+        (attribute
+          (identifier)
+          arguments: (token_tree
+            (identifier)))`
+    pattern:  9, capture: 0 - name, start: (409, 7), end: (409, 21), text: `attribute_item`
+    pattern:  9, capture: 7 - reference.call, start: (410, 9), end: (411, 22), text: `attribute
+          (identifier)`
+    pattern:  9, capture: 0 - name, start: (410, 9), end: (410, 18), text: `attribute`
+    pattern:  9, capture: 7 - reference.call, start: (412, 22), end: (413, 24), text: `token_tree
+            (identifier)`
+    pattern:  9, capture: 0 - name, start: (412, 22), end: (412, 32), text: `token_tree`
+    pattern:  9, capture: 7 - reference.call, start: (414, 7), end: (415, 24), text: `string_literal
+        (string_content)`
+    pattern:  9, capture: 0 - name, start: (414, 7), end: (414, 21), text: `string_literal`
+    pattern:  9, capture: 7 - reference.call, start: (427, 1), end: (429, 22), text: `source_file
+  (expression_statement
+    (unit_expression))`
+    pattern:  9, capture: 0 - name, start: (427, 1), end: (427, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (428, 3), end: (429, 21), text: `expression_statement
+    (unit_expression)`
+    pattern:  9, capture: 0 - name, start: (428, 3), end: (428, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (430, 3), end: (432, 24), text: `expression_statement
+    (tuple_expression
+      (integer_literal))`
+    pattern:  9, capture: 0 - name, start: (430, 3), end: (430, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (431, 5), end: (432, 23), text: `tuple_expression
+      (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (431, 5), end: (431, 21), text: `tuple_expression`
+    pattern:  9, capture: 7 - reference.call, start: (433, 3), end: (437, 19), text: `let_declaration
+    (tuple_pattern
+      (identifier)
+      (identifier)
+      (identifier))`
+    pattern:  9, capture: 0 - name, start: (433, 3), end: (433, 18), text: `let_declaration`
+    pattern:  9, capture: 7 - reference.call, start: (434, 5), end: (435, 18), text: `tuple_pattern
+      (identifier)`
+    pattern:  9, capture: 0 - name, start: (434, 5), end: (434, 18), text: `tuple_pattern`
+    pattern:  9, capture: 7 - reference.call, start: (438, 5), end: (439, 23), text: `tuple_expression
+      (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (438, 5), end: (438, 21), text: `tuple_expression`
+    pattern:  9, capture: 7 - reference.call, start: (455, 1), end: (459, 32), text: `source_file
+  (expression_statement
+    (struct_expression
+      (type_identifier)
+      (field_initializer_list)))`
+    pattern:  9, capture: 0 - name, start: (455, 1), end: (455, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (456, 3), end: (459, 31), text: `expression_statement
+    (struct_expression
+      (type_identifier)
+      (field_initializer_list))`
+    pattern:  9, capture: 0 - name, start: (456, 3), end: (456, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (457, 5), end: (458, 23), text: `struct_expression
+      (type_identifier)`
+    pattern:  9, capture: 0 - name, start: (457, 5), end: (457, 22), text: `struct_expression`
+    pattern:  9, capture: 7 - reference.call, start: (460, 3), end: (469, 28), text: `expression_statement
+    (struct_expression
+      (type_identifier)
+      (field_initializer_list
+        (field_initializer
+          (field_identifier)
+          (float_literal))
+        (field_initializer
+          (field_identifier)
+          (float_literal))))`
+    pattern:  9, capture: 0 - name, start: (460, 3), end: (460, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (461, 5), end: (462, 23), text: `struct_expression
+      (type_identifier)`
+    pattern:  9, capture: 0 - name, start: (461, 5), end: (461, 22), text: `struct_expression`
+    pattern:  9, capture: 7 - reference.call, start: (463, 7), end: (466, 26), text: `field_initializer_list
+        (field_initializer
+          (field_identifier)
+          (float_literal))`
+    pattern:  9, capture: 0 - name, start: (463, 7), end: (463, 29), text: `field_initializer_list`
+    pattern:  9, capture: 7 - reference.call, start: (464, 9), end: (465, 28), text: `field_initializer
+          (field_identifier)`
+    pattern:  9, capture: 0 - name, start: (464, 9), end: (464, 26), text: `field_initializer`
+    pattern:  9, capture: 7 - reference.call, start: (467, 9), end: (468, 28), text: `field_initializer
+          (field_identifier)`
+    pattern:  9, capture: 0 - name, start: (467, 9), end: (467, 26), text: `field_initializer`
+    pattern:  9, capture: 7 - reference.call, start: (470, 3), end: (471, 16), text: `let_declaration
+    (identifier)`
+    pattern:  9, capture: 0 - name, start: (470, 3), end: (470, 18), text: `let_declaration`
+    pattern:  9, capture: 7 - reference.call, start: (472, 5), end: (473, 23), text: `struct_expression
+      (type_identifier)`
+    pattern:  9, capture: 0 - name, start: (472, 5), end: (472, 22), text: `struct_expression`
+    pattern:  9, capture: 7 - reference.call, start: (474, 7), end: (476, 23), text: `field_initializer_list
+        (shorthand_field_initializer
+          (identifier))`
+    pattern:  9, capture: 0 - name, start: (474, 7), end: (474, 29), text: `field_initializer_list`
+    pattern:  9, capture: 7 - reference.call, start: (475, 9), end: (476, 22), text: `shorthand_field_initializer
+          (identifier)`
+    pattern:  9, capture: 0 - name, start: (475, 9), end: (475, 36), text: `shorthand_field_initializer`
+    pattern:  9, capture: 7 - reference.call, start: (477, 9), end: (478, 28), text: `field_initializer
+          (field_identifier)`
+    pattern:  9, capture: 0 - name, start: (477, 9), end: (477, 26), text: `field_initializer`
+    pattern:  9, capture: 7 - reference.call, start: (480, 9), end: (481, 22), text: `shorthand_field_initializer
+          (identifier)`
+    pattern:  9, capture: 0 - name, start: (480, 9), end: (480, 36), text: `shorthand_field_initializer`
+    pattern:  9, capture: 7 - reference.call, start: (482, 3), end: (483, 16), text: `let_declaration
+    (identifier)`
+    pattern:  9, capture: 0 - name, start: (482, 3), end: (482, 18), text: `let_declaration`
+    pattern:  9, capture: 7 - reference.call, start: (484, 5), end: (487, 26), text: `struct_expression
+      (scoped_type_identifier
+        (identifier)
+        (type_identifier))`
+    pattern:  9, capture: 0 - name, start: (484, 5), end: (484, 22), text: `struct_expression`
+    pattern:  9, capture: 7 - reference.call, start: (485, 7), end: (486, 20), text: `scoped_type_identifier
+        (identifier)`
+    pattern:  9, capture: 0 - name, start: (485, 7), end: (485, 29), text: `scoped_type_identifier`
+    pattern:  9, capture: 7 - reference.call, start: (488, 7), end: (492, 30), text: `field_initializer_list
+        (field_initializer
+          (field_identifier)
+          (string_literal
+            (string_content)))`
+    pattern:  9, capture: 0 - name, start: (488, 7), end: (488, 29), text: `field_initializer_list`
+    pattern:  9, capture: 7 - reference.call, start: (489, 9), end: (490, 28), text: `field_initializer
+          (field_identifier)`
+    pattern:  9, capture: 0 - name, start: (489, 9), end: (489, 26), text: `field_initializer`
+    pattern:  9, capture: 7 - reference.call, start: (491, 11), end: (492, 28), text: `string_literal
+            (string_content)`
+    pattern:  9, capture: 0 - name, start: (491, 11), end: (491, 25), text: `string_literal`
+    pattern:  9, capture: 7 - reference.call, start: (493, 9), end: (494, 28), text: `field_initializer
+          (field_identifier)`
+    pattern:  9, capture: 0 - name, start: (493, 9), end: (493, 26), text: `field_initializer`
+    pattern:  9, capture: 7 - reference.call, start: (496, 9), end: (497, 28), text: `field_initializer
+          (field_identifier)`
+    pattern:  9, capture: 0 - name, start: (496, 9), end: (496, 26), text: `field_initializer`
+    pattern:  9, capture: 7 - reference.call, start: (499, 3), end: (500, 16), text: `let_declaration
+    (identifier)`
+    pattern:  9, capture: 0 - name, start: (499, 3), end: (499, 18), text: `let_declaration`
+    pattern:  9, capture: 7 - reference.call, start: (501, 5), end: (502, 23), text: `struct_expression
+      (type_identifier)`
+    pattern:  9, capture: 0 - name, start: (501, 5), end: (501, 22), text: `struct_expression`
+    pattern:  9, capture: 7 - reference.call, start: (503, 7), end: (511, 34), text: `field_initializer_list
+        (field_initializer
+          (integer_literal)
+          (call_expression
+            (scoped_identifier
+              (identifier)
+              (identifier))
+            (arguments
+              (integer_literal))))`
+    pattern:  9, capture: 0 - name, start: (503, 7), end: (503, 29), text: `field_initializer_list`
+    pattern:  9, capture: 7 - reference.call, start: (504, 9), end: (505, 27), text: `field_initializer
+          (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (504, 9), end: (504, 26), text: `field_initializer`
+    pattern:  9, capture: 7 - reference.call, start: (506, 11), end: (509, 27), text: `call_expression
+            (scoped_identifier
+              (identifier)
+              (identifier))`
+    pattern:  9, capture: 0 - name, start: (506, 11), end: (506, 26), text: `call_expression`
+    pattern:  9, capture: 7 - reference.call, start: (507, 13), end: (508, 26), text: `scoped_identifier
+              (identifier)`
+    pattern:  9, capture: 0 - name, start: (507, 13), end: (507, 30), text: `scoped_identifier`
+    pattern:  9, capture: 7 - reference.call, start: (510, 13), end: (511, 31), text: `arguments
+              (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (510, 13), end: (510, 22), text: `arguments`
+    pattern:  9, capture: 7 - reference.call, start: (517, 21), end: (517, 35), text: `current_user()`
+    pattern:  9, capture: 0 - name, start: (517, 21), end: (517, 33), text: `current_user`
+    pattern:  9, capture: 7 - reference.call, start: (521, 1), end: (532, 28), text: `source_file
+  (let_declaration
+    (identifier)
+    (struct_expression
+      (type_identifier)
+      (field_initializer_list
+        (shorthand_field_initializer
+          (identifier))
+        (base_field_initializer
+          (call_expression
+            (identifier)
+            (arguments))))))`
+    pattern:  9, capture: 0 - name, start: (521, 1), end: (521, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (522, 3), end: (523, 16), text: `let_declaration
+    (identifier)`
+    pattern:  9, capture: 0 - name, start: (522, 3), end: (522, 18), text: `let_declaration`
+    pattern:  9, capture: 7 - reference.call, start: (524, 5), end: (525, 23), text: `struct_expression
+      (type_identifier)`
+    pattern:  9, capture: 0 - name, start: (524, 5), end: (524, 22), text: `struct_expression`
+    pattern:  9, capture: 7 - reference.call, start: (526, 7), end: (528, 23), text: `field_initializer_list
+        (shorthand_field_initializer
+          (identifier))`
+    pattern:  9, capture: 0 - name, start: (526, 7), end: (526, 29), text: `field_initializer_list`
+    pattern:  9, capture: 7 - reference.call, start: (527, 9), end: (528, 22), text: `shorthand_field_initializer
+          (identifier)`
+    pattern:  9, capture: 0 - name, start: (527, 9), end: (527, 36), text: `shorthand_field_initializer`
+    pattern:  9, capture: 7 - reference.call, start: (529, 9), end: (532, 24), text: `base_field_initializer
+          (call_expression
+            (identifier)
+            (arguments))`
+    pattern:  9, capture: 0 - name, start: (529, 9), end: (529, 31), text: `base_field_initializer`
+    pattern:  9, capture: 7 - reference.call, start: (530, 11), end: (531, 24), text: `call_expression
+            (identifier)`
+    pattern:  9, capture: 0 - name, start: (530, 11), end: (530, 26), text: `call_expression`
+    pattern:  9, capture: 7 - reference.call, start: (538, 3), end: (538, 9), text: `main()`
+    pattern:  9, capture: 0 - name, start: (538, 3), end: (538, 7), text: `main`
+    pattern:  9, capture: 7 - reference.call, start: (553, 1), end: (571, 30), text: `source_file
+  (function_item
+    name: (identifier)
+    parameters: (parameters)
+    body: (block
+      (expression_statement
+        (if_expression
+          condition: (binary_expression
+            left: (identifier)
+            right: (integer_literal))
+          consequence: (block)
+          alternative: (else_clause
+            (if_expression
+              condition: (binary_expression
+                left: (identifier)
+                right: (integer_literal))
+              consequence: (block)
+              alternative: (else_clause
+                (block))))))))`
+    pattern:  9, capture: 0 - name, start: (553, 1), end: (553, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (554, 3), end: (555, 22), text: `function_item
+    name: (identifier)`
+    pattern:  9, capture: 0 - name, start: (554, 3), end: (554, 16), text: `function_item`
+    pattern:  9, capture: 7 - reference.call, start: (557, 11), end: (571, 28), text: `block
+      (expression_statement
+        (if_expression
+          condition: (binary_expression
+            left: (identifier)
+            right: (integer_literal))
+          consequence: (block)
+          alternative: (else_clause
+            (if_expression
+              condition: (binary_expression
+                left: (identifier)
+                right: (integer_literal))
+              consequence: (block)
+              alternative: (else_clause
+                (block))))))`
+    pattern:  9, capture: 0 - name, start: (557, 11), end: (557, 16), text: `block`
+    pattern:  9, capture: 7 - reference.call, start: (558, 7), end: (571, 27), text: `expression_statement
+        (if_expression
+          condition: (binary_expression
+            left: (identifier)
+            right: (integer_literal))
+          consequence: (block)
+          alternative: (else_clause
+            (if_expression
+              condition: (binary_expression
+                left: (identifier)
+                right: (integer_literal))
+              consequence: (block)
+              alternative: (else_clause
+                (block)))))`
+    pattern:  9, capture: 0 - name, start: (558, 7), end: (558, 27), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (559, 9), end: (562, 37), text: `if_expression
+          condition: (binary_expression
+            left: (identifier)
+            right: (integer_literal))`
+    pattern:  9, capture: 0 - name, start: (559, 9), end: (559, 22), text: `if_expression`
+    pattern:  9, capture: 7 - reference.call, start: (560, 22), end: (561, 30), text: `binary_expression
+            left: (identifier)`
+    pattern:  9, capture: 0 - name, start: (560, 22), end: (560, 39), text: `binary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (564, 24), end: (571, 25), text: `else_clause
+            (if_expression
+              condition: (binary_expression
+                left: (identifier)
+                right: (integer_literal))
+              consequence: (block)
+              alternative: (else_clause
+                (block)))`
+    pattern:  9, capture: 0 - name, start: (564, 24), end: (564, 35), text: `else_clause`
+    pattern:  9, capture: 7 - reference.call, start: (565, 13), end: (568, 41), text: `if_expression
+              condition: (binary_expression
+                left: (identifier)
+                right: (integer_literal))`
+    pattern:  9, capture: 0 - name, start: (565, 13), end: (565, 26), text: `if_expression`
+    pattern:  9, capture: 7 - reference.call, start: (566, 26), end: (567, 34), text: `binary_expression
+                left: (identifier)`
+    pattern:  9, capture: 0 - name, start: (566, 26), end: (566, 43), text: `binary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (570, 28), end: (571, 23), text: `else_clause
+                (block)`
+    pattern:  9, capture: 0 - name, start: (570, 28), end: (570, 39), text: `else_clause`
+    pattern:  9, capture: 7 - reference.call, start: (572, 3), end: (573, 25), text: `let_declaration
+    pattern: (identifier)`
+    pattern:  9, capture: 0 - name, start: (572, 3), end: (572, 18), text: `let_declaration`
+    pattern:  9, capture: 7 - reference.call, start: (574, 12), end: (577, 33), text: `if_expression
+      condition: (binary_expression
+        left: (identifier)
+        right: (integer_literal))`
+    pattern:  9, capture: 0 - name, start: (574, 12), end: (574, 25), text: `if_expression`
+    pattern:  9, capture: 7 - reference.call, start: (575, 18), end: (576, 26), text: `binary_expression
+        left: (identifier)`
+    pattern:  9, capture: 0 - name, start: (575, 18), end: (575, 35), text: `binary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (578, 20), end: (579, 25), text: `block
+        (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (578, 20), end: (578, 25), text: `block`
+    pattern:  9, capture: 7 - reference.call, start: (580, 20), end: (582, 28), text: `else_clause
+        (block
+          (integer_literal))`
+    pattern:  9, capture: 0 - name, start: (580, 20), end: (580, 31), text: `else_clause`
+    pattern:  9, capture: 7 - reference.call, start: (581, 9), end: (582, 27), text: `block
+          (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (581, 9), end: (581, 14), text: `block`
+    pattern:  9, capture: 7 - reference.call, start: (583, 3), end: (588, 27), text: `expression_statement
+    (if_expression
+      condition: (binary_expression
+        left: (identifier)
+        right: (identifier))
+      consequence: (block))`
+    pattern:  9, capture: 0 - name, start: (583, 3), end: (583, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (584, 5), end: (587, 28), text: `if_expression
+      condition: (binary_expression
+        left: (identifier)
+        right: (identifier))`
+    pattern:  9, capture: 0 - name, start: (584, 5), end: (584, 18), text: `if_expression`
+    pattern:  9, capture: 7 - reference.call, start: (585, 18), end: (586, 26), text: `binary_expression
+        left: (identifier)`
+    pattern:  9, capture: 0 - name, start: (585, 18), end: (585, 35), text: `binary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (589, 3), end: (596, 27), text: `expression_statement
+    (if_expression
+      condition: (binary_expression
+        left: (binary_expression
+          left: (identifier)
+          right: (identifier))
+        right: (identifier))
+      consequence: (block))`
+    pattern:  9, capture: 0 - name, start: (589, 3), end: (589, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (590, 5), end: (595, 28), text: `if_expression
+      condition: (binary_expression
+        left: (binary_expression
+          left: (identifier)
+          right: (identifier))
+        right: (identifier))`
+    pattern:  9, capture: 0 - name, start: (590, 5), end: (590, 18), text: `if_expression`
+    pattern:  9, capture: 7 - reference.call, start: (591, 18), end: (594, 30), text: `binary_expression
+        left: (binary_expression
+          left: (identifier)
+          right: (identifier))`
+    pattern:  9, capture: 0 - name, start: (591, 18), end: (591, 35), text: `binary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (592, 15), end: (593, 28), text: `binary_expression
+          left: (identifier)`
+    pattern:  9, capture: 0 - name, start: (592, 15), end: (592, 32), text: `binary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (611, 1), end: (627, 28), text: `source_file
+  (expression_statement
+    (if_expression
+      condition: (let_chain
+        (let_condition
+          pattern: (tuple_struct_pattern
+            type: (identifier)
+            (identifier))
+          value: (identifier))
+        (identifier)
+        (identifier)
+        (let_condition
+          pattern: (tuple_struct_pattern
+            type: (identifier)
+            (identifier))
+          value: (identifier)))
+      consequence: (block)))`
+    pattern:  9, capture: 0 - name, start: (611, 1), end: (611, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (612, 3), end: (627, 27), text: `expression_statement
+    (if_expression
+      condition: (let_chain
+        (let_condition
+          pattern: (tuple_struct_pattern
+            type: (identifier)
+            (identifier))
+          value: (identifier))
+        (identifier)
+        (identifier)
+        (let_condition
+          pattern: (tuple_struct_pattern
+            type: (identifier)
+            (identifier))
+          value: (identifier)))
+      consequence: (block))`
+    pattern:  9, capture: 0 - name, start: (612, 3), end: (612, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (613, 5), end: (626, 31), text: `if_expression
+      condition: (let_chain
+        (let_condition
+          pattern: (tuple_struct_pattern
+            type: (identifier)
+            (identifier))
+          value: (identifier))
+        (identifier)
+        (identifier)
+        (let_condition
+          pattern: (tuple_struct_pattern
+            type: (identifier)
+            (identifier))
+          value: (identifier)))`
+    pattern:  9, capture: 0 - name, start: (613, 5), end: (613, 18), text: `if_expression`
+    pattern:  9, capture: 7 - reference.call, start: (614, 18), end: (619, 30), text: `let_chain
+        (let_condition
+          pattern: (tuple_struct_pattern
+            type: (identifier)
+            (identifier))
+          value: (identifier))`
+    pattern:  9, capture: 0 - name, start: (614, 18), end: (614, 27), text: `let_chain`
+    pattern:  9, capture: 7 - reference.call, start: (615, 9), end: (618, 25), text: `let_condition
+          pattern: (tuple_struct_pattern
+            type: (identifier)
+            (identifier))`
+    pattern:  9, capture: 0 - name, start: (615, 9), end: (615, 22), text: `let_condition`
+    pattern:  9, capture: 7 - reference.call, start: (616, 20), end: (617, 30), text: `tuple_struct_pattern
+            type: (identifier)`
+    pattern:  9, capture: 0 - name, start: (616, 20), end: (616, 40), text: `tuple_struct_pattern`
+    pattern:  9, capture: 7 - reference.call, start: (622, 9), end: (625, 25), text: `let_condition
+          pattern: (tuple_struct_pattern
+            type: (identifier)
+            (identifier))`
+    pattern:  9, capture: 0 - name, start: (622, 9), end: (622, 22), text: `let_condition`
+    pattern:  9, capture: 7 - reference.call, start: (623, 20), end: (624, 30), text: `tuple_struct_pattern
+            type: (identifier)`
+    pattern:  9, capture: 0 - name, start: (623, 20), end: (623, 40), text: `tuple_struct_pattern`
+    pattern:  9, capture: 7 - reference.call, start: (645, 1), end: (654, 28), text: `source_file
+  (expression_statement
+    (if_expression
+      condition: (let_condition
+        pattern: (tuple_pattern
+          (string_literal
+            (string_content))
+          (identifier))
+        value: (identifier))
+      consequence: (block)))`
+    pattern:  9, capture: 0 - name, start: (645, 1), end: (645, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (646, 3), end: (654, 27), text: `expression_statement
+    (if_expression
+      condition: (let_condition
+        pattern: (tuple_pattern
+          (string_literal
+            (string_content))
+          (identifier))
+        value: (identifier))
+      consequence: (block))`
+    pattern:  9, capture: 0 - name, start: (646, 3), end: (646, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (647, 5), end: (653, 28), text: `if_expression
+      condition: (let_condition
+        pattern: (tuple_pattern
+          (string_literal
+            (string_content))
+          (identifier))
+        value: (identifier))`
+    pattern:  9, capture: 0 - name, start: (647, 5), end: (647, 18), text: `if_expression`
+    pattern:  9, capture: 7 - reference.call, start: (648, 18), end: (652, 23), text: `let_condition
+        pattern: (tuple_pattern
+          (string_literal
+            (string_content))
+          (identifier))`
+    pattern:  9, capture: 0 - name, start: (648, 18), end: (648, 31), text: `let_condition`
+    pattern:  9, capture: 7 - reference.call, start: (649, 18), end: (651, 29), text: `tuple_pattern
+          (string_literal
+            (string_content))`
+    pattern:  9, capture: 0 - name, start: (649, 18), end: (649, 31), text: `tuple_pattern`
+    pattern:  9, capture: 7 - reference.call, start: (650, 11), end: (651, 28), text: `string_literal
+            (string_content)`
+    pattern:  9, capture: 0 - name, start: (650, 11), end: (650, 25), text: `string_literal`
+    pattern:  9, capture: 7 - reference.call, start: (655, 3), end: (670, 27), text: `expression_statement
+    (if_expression
+      condition: (let_chain
+        (let_condition
+          pattern: (tuple_struct_pattern
+            type: (identifier)
+            (string_literal
+              (string_content)))
+          value: (identifier))
+        (identifier)
+        (let_condition
+          pattern: (tuple_pattern
+            (identifier)
+            (identifier))
+          value: (identifier)))
+      consequence: (block))`
+    pattern:  9, capture: 0 - name, start: (655, 3), end: (655, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (656, 5), end: (669, 31), text: `if_expression
+      condition: (let_chain
+        (let_condition
+          pattern: (tuple_struct_pattern
+            type: (identifier)
+            (string_literal
+              (string_content)))
+          value: (identifier))
+        (identifier)
+        (let_condition
+          pattern: (tuple_pattern
+            (identifier)
+            (identifier))
+          value: (identifier)))`
+    pattern:  9, capture: 0 - name, start: (656, 5), end: (656, 18), text: `if_expression`
+    pattern:  9, capture: 7 - reference.call, start: (657, 18), end: (663, 30), text: `let_chain
+        (let_condition
+          pattern: (tuple_struct_pattern
+            type: (identifier)
+            (string_literal
+              (string_content)))
+          value: (identifier))`
+    pattern:  9, capture: 0 - name, start: (657, 18), end: (657, 27), text: `let_chain`
+    pattern:  9, capture: 7 - reference.call, start: (658, 9), end: (662, 32), text: `let_condition
+          pattern: (tuple_struct_pattern
+            type: (identifier)
+            (string_literal
+              (string_content)))`
+    pattern:  9, capture: 0 - name, start: (658, 9), end: (658, 22), text: `let_condition`
+    pattern:  9, capture: 7 - reference.call, start: (659, 20), end: (660, 30), text: `tuple_struct_pattern
+            type: (identifier)`
+    pattern:  9, capture: 0 - name, start: (659, 20), end: (659, 40), text: `tuple_struct_pattern`
+    pattern:  9, capture: 7 - reference.call, start: (661, 13), end: (662, 30), text: `string_literal
+              (string_content)`
+    pattern:  9, capture: 0 - name, start: (661, 13), end: (661, 27), text: `string_literal`
+    pattern:  9, capture: 7 - reference.call, start: (665, 9), end: (668, 25), text: `let_condition
+          pattern: (tuple_pattern
+            (identifier)
+            (identifier))`
+    pattern:  9, capture: 0 - name, start: (665, 9), end: (665, 22), text: `let_condition`
+    pattern:  9, capture: 7 - reference.call, start: (666, 20), end: (667, 24), text: `tuple_pattern
+            (identifier)`
+    pattern:  9, capture: 0 - name, start: (666, 20), end: (666, 33), text: `tuple_pattern`
+    pattern:  9, capture: 7 - reference.call, start: (671, 3), end: (682, 27), text: `expression_statement
+    (if_expression
+      condition: (let_chain
+        (identifier)
+        (let_condition
+          pattern: (identifier)
+          value: (closure_expression
+            parameters: (closure_parameters)
+            body: (binary_expression
+              left: (identifier)
+              right: (identifier)))))
+      consequence: (block))`
+    pattern:  9, capture: 0 - name, start: (671, 3), end: (671, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (672, 5), end: (681, 37), text: `if_expression
+      condition: (let_chain
+        (identifier)
+        (let_condition
+          pattern: (identifier)
+          value: (closure_expression
+            parameters: (closure_parameters)
+            body: (binary_expression
+              left: (identifier)
+              right: (identifier)))))`
+    pattern:  9, capture: 0 - name, start: (672, 5), end: (672, 18), text: `if_expression`
+    pattern:  9, capture: 7 - reference.call, start: (673, 18), end: (674, 20), text: `let_chain
+        (identifier)`
+    pattern:  9, capture: 0 - name, start: (673, 18), end: (673, 27), text: `let_chain`
+    pattern:  9, capture: 7 - reference.call, start: (675, 9), end: (676, 31), text: `let_condition
+          pattern: (identifier)`
+    pattern:  9, capture: 0 - name, start: (675, 9), end: (675, 22), text: `let_condition`
+    pattern:  9, capture: 7 - reference.call, start: (677, 18), end: (678, 44), text: `closure_expression
+            parameters: (closure_parameters)`
+    pattern:  9, capture: 0 - name, start: (677, 18), end: (677, 36), text: `closure_expression`
+    pattern:  9, capture: 7 - reference.call, start: (679, 19), end: (680, 32), text: `binary_expression
+              left: (identifier)`
+    pattern:  9, capture: 0 - name, start: (679, 19), end: (679, 36), text: `binary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (683, 3), end: (696, 27), text: `expression_statement
+    (if_expression
+      condition: (let_chain
+        (identifier)
+        (let_condition
+          pattern: (identifier)
+          value: (closure_expression
+            parameters: (closure_parameters)
+            body: (binary_expression
+              left: (identifier)
+              right: (binary_expression
+                left: (identifier)
+                right: (identifier))))))
+      consequence: (block))`
+    pattern:  9, capture: 0 - name, start: (683, 3), end: (683, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (684, 5), end: (695, 40), text: `if_expression
+      condition: (let_chain
+        (identifier)
+        (let_condition
+          pattern: (identifier)
+          value: (closure_expression
+            parameters: (closure_parameters)
+            body: (binary_expression
+              left: (identifier)
+              right: (binary_expression
+                left: (identifier)
+                right: (identifier))))))`
+    pattern:  9, capture: 0 - name, start: (684, 5), end: (684, 18), text: `if_expression`
+    pattern:  9, capture: 7 - reference.call, start: (685, 18), end: (686, 20), text: `let_chain
+        (identifier)`
+    pattern:  9, capture: 0 - name, start: (685, 18), end: (685, 27), text: `let_chain`
+    pattern:  9, capture: 7 - reference.call, start: (687, 9), end: (688, 31), text: `let_condition
+          pattern: (identifier)`
+    pattern:  9, capture: 0 - name, start: (687, 9), end: (687, 22), text: `let_condition`
+    pattern:  9, capture: 7 - reference.call, start: (689, 18), end: (690, 44), text: `closure_expression
+            parameters: (closure_parameters)`
+    pattern:  9, capture: 0 - name, start: (689, 18), end: (689, 36), text: `closure_expression`
+    pattern:  9, capture: 7 - reference.call, start: (691, 19), end: (692, 32), text: `binary_expression
+              left: (identifier)`
+    pattern:  9, capture: 0 - name, start: (691, 19), end: (691, 36), text: `binary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (693, 22), end: (694, 34), text: `binary_expression
+                left: (identifier)`
+    pattern:  9, capture: 0 - name, start: (693, 22), end: (693, 39), text: `binary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (707, 1), end: (716, 15), text: `source_file
+  (expression_statement
+    (while_expression
+      (let_condition
+        (tuple_pattern
+          (string_literal
+            (string_content))
+          (identifier))
+        (identifier))
+      (block)))`
+    pattern:  9, capture: 0 - name, start: (707, 1), end: (707, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (708, 3), end: (716, 14), text: `expression_statement
+    (while_expression
+      (let_condition
+        (tuple_pattern
+          (string_literal
+            (string_content))
+          (identifier))
+        (identifier))
+      (block))`
+    pattern:  9, capture: 0 - name, start: (708, 3), end: (708, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (709, 5), end: (715, 21), text: `while_expression
+      (let_condition
+        (tuple_pattern
+          (string_literal
+            (string_content))
+          (identifier))
+        (identifier))`
+    pattern:  9, capture: 0 - name, start: (709, 5), end: (709, 21), text: `while_expression`
+    pattern:  9, capture: 7 - reference.call, start: (710, 7), end: (714, 23), text: `let_condition
+        (tuple_pattern
+          (string_literal
+            (string_content))
+          (identifier))`
+    pattern:  9, capture: 0 - name, start: (710, 7), end: (710, 20), text: `let_condition`
+    pattern:  9, capture: 7 - reference.call, start: (711, 9), end: (713, 29), text: `tuple_pattern
+          (string_literal
+            (string_content))`
+    pattern:  9, capture: 0 - name, start: (711, 9), end: (711, 22), text: `tuple_pattern`
+    pattern:  9, capture: 7 - reference.call, start: (712, 11), end: (713, 28), text: `string_literal
+            (string_content)`
+    pattern:  9, capture: 0 - name, start: (712, 11), end: (712, 25), text: `string_literal`
+    pattern: 11, capture: 7 - reference.call, start: (730, 4), end: (730, 13), text: `macro!(4)`
+    pattern: 11, capture: 0 - name, start: (730, 4), end: (730, 9), text: `macro`
+    pattern:  9, capture: 7 - reference.call, start: (747, 1), end: (792, 33), text: `source_file
+  (expression_statement
+    (match_expression
+      value: (identifier)
+      body: (match_block
+        (match_arm
+          pattern: (match_pattern
+            (integer_literal))
+          value: (block
+            (string_literal
+              (string_content))))
+        (match_arm
+          pattern: (match_pattern
+            (integer_literal))
+          value: (string_literal
+            (string_content)))
+        (match_arm
+          pattern: (match_pattern
+            (negative_literal
+              (integer_literal)))
+          value: (integer_literal))
+        (match_arm
+          pattern: (match_pattern
+            (negative_literal
+              (float_literal)))
+          value: (integer_literal))
+        (match_arm
+          (attribute_item
+            (attribute
+              (identifier)))
+          pattern: (match_pattern
+            (integer_literal))
+          value: (string_literal
+            (string_content)))
+        (match_arm
+          pattern: (match_pattern
+            (macro_invocation
+              macro: (identifier)
+              (token_tree
+                (integer_literal))))
+          value: (string_literal
+            (string_content)))
+        (match_arm
+          pattern: (match_pattern)
+          value: (string_literal
+            (string_content))))))`
+    pattern:  9, capture: 0 - name, start: (747, 1), end: (747, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (748, 3), end: (792, 32), text: `expression_statement
+    (match_expression
+      value: (identifier)
+      body: (match_block
+        (match_arm
+          pattern: (match_pattern
+            (integer_literal))
+          value: (block
+            (string_literal
+              (string_content))))
+        (match_arm
+          pattern: (match_pattern
+            (integer_literal))
+          value: (string_literal
+            (string_content)))
+        (match_arm
+          pattern: (match_pattern
+            (negative_literal
+              (integer_literal)))
+          value: (integer_literal))
+        (match_arm
+          pattern: (match_pattern
+            (negative_literal
+              (float_literal)))
+          value: (integer_literal))
+        (match_arm
+          (attribute_item
+            (attribute
+              (identifier)))
+          pattern: (match_pattern
+            (integer_literal))
+          value: (string_literal
+            (string_content)))
+        (match_arm
+          pattern: (match_pattern
+            (macro_invocation
+              macro: (identifier)
+              (token_tree
+                (integer_literal))))
+          value: (string_literal
+            (string_content)))
+        (match_arm
+          pattern: (match_pattern)
+          value: (string_literal
+            (string_content)))))`
+    pattern:  9, capture: 0 - name, start: (748, 3), end: (748, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (749, 5), end: (750, 25), text: `match_expression
+      value: (identifier)`
+    pattern:  9, capture: 0 - name, start: (749, 5), end: (749, 21), text: `match_expression`
+    pattern:  9, capture: 7 - reference.call, start: (751, 13), end: (757, 33), text: `match_block
+        (match_arm
+          pattern: (match_pattern
+            (integer_literal))
+          value: (block
+            (string_literal
+              (string_content))))`
+    pattern:  9, capture: 0 - name, start: (751, 13), end: (751, 24), text: `match_block`
+    pattern:  9, capture: 7 - reference.call, start: (752, 9), end: (754, 30), text: `match_arm
+          pattern: (match_pattern
+            (integer_literal))`
+    pattern:  9, capture: 0 - name, start: (752, 9), end: (752, 18), text: `match_arm`
+    pattern:  9, capture: 7 - reference.call, start: (753, 20), end: (754, 29), text: `match_pattern
+            (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (753, 20), end: (753, 33), text: `match_pattern`
+    pattern:  9, capture: 7 - reference.call, start: (755, 18), end: (757, 31), text: `block
+            (string_literal
+              (string_content))`
+    pattern:  9, capture: 0 - name, start: (755, 18), end: (755, 23), text: `block`
+    pattern:  9, capture: 7 - reference.call, start: (756, 13), end: (757, 30), text: `string_literal
+              (string_content)`
+    pattern:  9, capture: 0 - name, start: (756, 13), end: (756, 27), text: `string_literal`
+    pattern:  9, capture: 7 - reference.call, start: (758, 9), end: (760, 30), text: `match_arm
+          pattern: (match_pattern
+            (integer_literal))`
+    pattern:  9, capture: 0 - name, start: (758, 9), end: (758, 18), text: `match_arm`
+    pattern:  9, capture: 7 - reference.call, start: (759, 20), end: (760, 29), text: `match_pattern
+            (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (759, 20), end: (759, 33), text: `match_pattern`
+    pattern:  9, capture: 7 - reference.call, start: (761, 18), end: (762, 28), text: `string_literal
+            (string_content)`
+    pattern:  9, capture: 0 - name, start: (761, 18), end: (761, 32), text: `string_literal`
+    pattern:  9, capture: 7 - reference.call, start: (763, 9), end: (766, 33), text: `match_arm
+          pattern: (match_pattern
+            (negative_literal
+              (integer_literal)))`
+    pattern:  9, capture: 0 - name, start: (763, 9), end: (763, 18), text: `match_arm`
+    pattern:  9, capture: 7 - reference.call, start: (764, 20), end: (766, 32), text: `match_pattern
+            (negative_literal
+              (integer_literal))`
+    pattern:  9, capture: 0 - name, start: (764, 20), end: (764, 33), text: `match_pattern`
+    pattern:  9, capture: 7 - reference.call, start: (765, 13), end: (766, 31), text: `negative_literal
+              (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (765, 13), end: (765, 29), text: `negative_literal`
+    pattern:  9, capture: 7 - reference.call, start: (768, 9), end: (771, 31), text: `match_arm
+          pattern: (match_pattern
+            (negative_literal
+              (float_literal)))`
+    pattern:  9, capture: 0 - name, start: (768, 9), end: (768, 18), text: `match_arm`
+    pattern:  9, capture: 7 - reference.call, start: (769, 20), end: (771, 30), text: `match_pattern
+            (negative_literal
+              (float_literal))`
+    pattern:  9, capture: 0 - name, start: (769, 20), end: (769, 33), text: `match_pattern`
+    pattern:  9, capture: 7 - reference.call, start: (770, 13), end: (771, 29), text: `negative_literal
+              (float_literal)`
+    pattern:  9, capture: 0 - name, start: (770, 13), end: (770, 29), text: `negative_literal`
+    pattern:  9, capture: 7 - reference.call, start: (773, 9), end: (776, 28), text: `match_arm
+          (attribute_item
+            (attribute
+              (identifier)))`
+    pattern:  9, capture: 0 - name, start: (773, 9), end: (773, 18), text: `match_arm`
+    pattern:  9, capture: 7 - reference.call, start: (774, 11), end: (776, 27), text: `attribute_item
+            (attribute
+              (identifier))`
+    pattern:  9, capture: 0 - name, start: (774, 11), end: (774, 25), text: `attribute_item`
+    pattern:  9, capture: 7 - reference.call, start: (775, 13), end: (776, 26), text: `attribute
+              (identifier)`
+    pattern:  9, capture: 0 - name, start: (775, 13), end: (775, 22), text: `attribute`
+    pattern:  9, capture: 7 - reference.call, start: (777, 20), end: (778, 29), text: `match_pattern
+            (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (777, 20), end: (777, 33), text: `match_pattern`
+    pattern:  9, capture: 7 - reference.call, start: (779, 18), end: (780, 28), text: `string_literal
+            (string_content)`
+    pattern:  9, capture: 0 - name, start: (779, 18), end: (779, 32), text: `string_literal`
+    pattern:  9, capture: 7 - reference.call, start: (781, 9), end: (786, 36), text: `match_arm
+          pattern: (match_pattern
+            (macro_invocation
+              macro: (identifier)
+              (token_tree
+                (integer_literal))))`
+    pattern:  9, capture: 0 - name, start: (781, 9), end: (781, 18), text: `match_arm`
+    pattern:  9, capture: 7 - reference.call, start: (782, 20), end: (786, 35), text: `match_pattern
+            (macro_invocation
+              macro: (identifier)
+              (token_tree
+                (integer_literal)))`
+    pattern:  9, capture: 0 - name, start: (782, 20), end: (782, 33), text: `match_pattern`
+    pattern:  9, capture: 7 - reference.call, start: (783, 13), end: (784, 33), text: `macro_invocation
+              macro: (identifier)`
+    pattern:  9, capture: 0 - name, start: (783, 13), end: (783, 29), text: `macro_invocation`
+    pattern:  9, capture: 7 - reference.call, start: (785, 15), end: (786, 33), text: `token_tree
+                (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (785, 15), end: (785, 25), text: `token_tree`
+    pattern:  9, capture: 7 - reference.call, start: (787, 18), end: (788, 28), text: `string_literal
+            (string_content)`
+    pattern:  9, capture: 0 - name, start: (787, 18), end: (787, 32), text: `string_literal`
+    pattern:  9, capture: 7 - reference.call, start: (789, 9), end: (790, 34), text: `match_arm
+          pattern: (match_pattern)`
+    pattern:  9, capture: 0 - name, start: (789, 9), end: (789, 18), text: `match_arm`
+    pattern:  9, capture: 7 - reference.call, start: (791, 18), end: (792, 28), text: `string_literal
+            (string_content)`
+    pattern:  9, capture: 0 - name, start: (791, 18), end: (791, 32), text: `string_literal`
+    pattern:  9, capture: 7 - reference.call, start: (793, 3), end: (794, 25), text: `let_declaration
+    pattern: (identifier)`
+    pattern:  9, capture: 0 - name, start: (793, 3), end: (793, 18), text: `let_declaration`
+    pattern:  9, capture: 7 - reference.call, start: (795, 12), end: (796, 25), text: `match_expression
+      value: (identifier)`
+    pattern:  9, capture: 0 - name, start: (795, 12), end: (795, 28), text: `match_expression`
+    pattern:  9, capture: 7 - reference.call, start: (797, 13), end: (806, 30), text: `match_block
+        (match_arm
+          pattern: (match_pattern
+            (or_pattern
+              (or_pattern
+                (integer_literal)
+                (integer_literal))
+              (integer_literal)))
+          value: (string_literal
+            (string_content)))`
+    pattern:  9, capture: 0 - name, start: (797, 13), end: (797, 24), text: `match_block`
+    pattern:  9, capture: 7 - reference.call, start: (798, 9), end: (804, 33), text: `match_arm
+          pattern: (match_pattern
+            (or_pattern
+              (or_pattern
+                (integer_literal)
+                (integer_literal))
+              (integer_literal)))`
+    pattern:  9, capture: 0 - name, start: (798, 9), end: (798, 18), text: `match_arm`
+    pattern:  9, capture: 7 - reference.call, start: (799, 20), end: (804, 32), text: `match_pattern
+            (or_pattern
+              (or_pattern
+                (integer_literal)
+                (integer_literal))
+              (integer_literal))`
+    pattern:  9, capture: 0 - name, start: (799, 20), end: (799, 33), text: `match_pattern`
+    pattern:  9, capture: 7 - reference.call, start: (800, 13), end: (803, 34), text: `or_pattern
+              (or_pattern
+                (integer_literal)
+                (integer_literal))`
+    pattern:  9, capture: 0 - name, start: (800, 13), end: (800, 23), text: `or_pattern`
+    pattern:  9, capture: 7 - reference.call, start: (801, 15), end: (802, 33), text: `or_pattern
+                (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (801, 15), end: (801, 25), text: `or_pattern`
+    pattern:  9, capture: 7 - reference.call, start: (805, 18), end: (806, 28), text: `string_literal
+            (string_content)`
+    pattern:  9, capture: 0 - name, start: (805, 18), end: (805, 32), text: `string_literal`
+    pattern:  9, capture: 7 - reference.call, start: (807, 9), end: (812, 40), text: `match_arm
+          pattern: (match_pattern
+            (identifier)
+            condition: (binary_expression
+              left: (identifier)
+              right: (integer_literal)))`
+    pattern:  9, capture: 0 - name, start: (807, 9), end: (807, 18), text: `match_arm`
+    pattern:  9, capture: 7 - reference.call, start: (808, 20), end: (809, 24), text: `match_pattern
+            (identifier)`
+    pattern:  9, capture: 0 - name, start: (808, 20), end: (808, 33), text: `match_pattern`
+    pattern:  9, capture: 7 - reference.call, start: (810, 24), end: (811, 32), text: `binary_expression
+              left: (identifier)`
+    pattern:  9, capture: 0 - name, start: (810, 24), end: (810, 41), text: `binary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (813, 18), end: (814, 28), text: `string_literal
+            (string_content)`
+    pattern:  9, capture: 0 - name, start: (813, 18), end: (813, 32), text: `string_literal`
+    pattern:  9, capture: 7 - reference.call, start: (815, 9), end: (820, 40), text: `match_arm
+          pattern: (match_pattern
+            (identifier)
+            condition: (binary_expression
+              left: (identifier)
+              right: (integer_literal)))`
+    pattern:  9, capture: 0 - name, start: (815, 9), end: (815, 18), text: `match_arm`
+    pattern:  9, capture: 7 - reference.call, start: (816, 20), end: (817, 24), text: `match_pattern
+            (identifier)`
+    pattern:  9, capture: 0 - name, start: (816, 20), end: (816, 33), text: `match_pattern`
+    pattern:  9, capture: 7 - reference.call, start: (818, 24), end: (819, 32), text: `binary_expression
+              left: (identifier)`
+    pattern:  9, capture: 0 - name, start: (818, 24), end: (818, 41), text: `binary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (821, 18), end: (822, 35), text: `if_expression
+            condition: (identifier)`
+    pattern:  9, capture: 0 - name, start: (821, 18), end: (821, 31), text: `if_expression`
+    pattern:  9, capture: 7 - reference.call, start: (823, 26), end: (825, 33), text: `block
+              (string_literal
+                (string_content))`
+    pattern:  9, capture: 0 - name, start: (823, 26), end: (823, 31), text: `block`
+    pattern:  9, capture: 7 - reference.call, start: (824, 15), end: (825, 32), text: `string_literal
+                (string_content)`
+    pattern:  9, capture: 0 - name, start: (824, 15), end: (824, 29), text: `string_literal`
+    pattern:  9, capture: 7 - reference.call, start: (826, 9), end: (840, 38), text: `match_arm
+          pattern: (match_pattern
+            (identifier)
+            condition: (let_chain
+              (let_condition
+                pattern: (tuple_struct_pattern
+                  type: (identifier)
+                  (identifier))
+                value: (identifier))
+              (identifier)
+              (let_condition
+                pattern: (tuple_struct_pattern
+                  type: (identifier)
+                  (identifier))
+                value: (identifier))))`
+    pattern:  9, capture: 0 - name, start: (826, 9), end: (826, 18), text: `match_arm`
+    pattern:  9, capture: 7 - reference.call, start: (827, 20), end: (828, 24), text: `match_pattern
+            (identifier)`
+    pattern:  9, capture: 0 - name, start: (827, 20), end: (827, 33), text: `match_pattern`
+    pattern:  9, capture: 7 - reference.call, start: (829, 24), end: (834, 36), text: `let_chain
+              (let_condition
+                pattern: (tuple_struct_pattern
+                  type: (identifier)
+                  (identifier))
+                value: (identifier))`
+    pattern:  9, capture: 0 - name, start: (829, 24), end: (829, 33), text: `let_chain`
+    pattern:  9, capture: 7 - reference.call, start: (830, 15), end: (833, 31), text: `let_condition
+                pattern: (tuple_struct_pattern
+                  type: (identifier)
+                  (identifier))`
+    pattern:  9, capture: 0 - name, start: (830, 15), end: (830, 28), text: `let_condition`
+    pattern:  9, capture: 7 - reference.call, start: (831, 26), end: (832, 36), text: `tuple_struct_pattern
+                  type: (identifier)`
+    pattern:  9, capture: 0 - name, start: (831, 26), end: (831, 46), text: `tuple_struct_pattern`
+    pattern:  9, capture: 7 - reference.call, start: (836, 15), end: (839, 31), text: `let_condition
+                pattern: (tuple_struct_pattern
+                  type: (identifier)
+                  (identifier))`
+    pattern:  9, capture: 0 - name, start: (836, 15), end: (836, 28), text: `let_condition`
+    pattern:  9, capture: 7 - reference.call, start: (837, 26), end: (838, 36), text: `tuple_struct_pattern
+                  type: (identifier)`
+    pattern:  9, capture: 0 - name, start: (837, 26), end: (837, 46), text: `tuple_struct_pattern`
+    pattern:  9, capture: 7 - reference.call, start: (841, 18), end: (842, 28), text: `string_literal
+            (string_content)`
+    pattern:  9, capture: 0 - name, start: (841, 18), end: (841, 32), text: `string_literal`
+    pattern:  9, capture: 7 - reference.call, start: (843, 9), end: (844, 34), text: `match_arm
+          pattern: (match_pattern)`
+    pattern:  9, capture: 0 - name, start: (843, 9), end: (843, 18), text: `match_arm`
+    pattern:  9, capture: 7 - reference.call, start: (845, 18), end: (846, 28), text: `string_literal
+            (string_content)`
+    pattern:  9, capture: 0 - name, start: (845, 18), end: (845, 32), text: `string_literal`
+    pattern:  9, capture: 7 - reference.call, start: (858, 1), end: (867, 41), text: `source_file
+  (expression_statement
+    (while_expression
+      condition: (unary_expression
+        (identifier))
+      body: (block
+        (expression_statement
+          (assignment_expression
+            left: (identifier)
+            right: (boolean_literal))))))`
+    pattern:  9, capture: 0 - name, start: (858, 1), end: (858, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (859, 3), end: (867, 40), text: `expression_statement
+    (while_expression
+      condition: (unary_expression
+        (identifier))
+      body: (block
+        (expression_statement
+          (assignment_expression
+            left: (identifier)
+            right: (boolean_literal)))))`
+    pattern:  9, capture: 0 - name, start: (859, 3), end: (859, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (860, 5), end: (862, 21), text: `while_expression
+      condition: (unary_expression
+        (identifier))`
+    pattern:  9, capture: 0 - name, start: (860, 5), end: (860, 21), text: `while_expression`
+    pattern:  9, capture: 7 - reference.call, start: (861, 18), end: (862, 20), text: `unary_expression
+        (identifier)`
+    pattern:  9, capture: 0 - name, start: (861, 18), end: (861, 34), text: `unary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (863, 13), end: (867, 38), text: `block
+        (expression_statement
+          (assignment_expression
+            left: (identifier)
+            right: (boolean_literal)))`
+    pattern:  9, capture: 0 - name, start: (863, 13), end: (863, 18), text: `block`
+    pattern:  9, capture: 7 - reference.call, start: (864, 9), end: (867, 37), text: `expression_statement
+          (assignment_expression
+            left: (identifier)
+            right: (boolean_literal))`
+    pattern:  9, capture: 0 - name, start: (864, 9), end: (864, 29), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (865, 11), end: (866, 30), text: `assignment_expression
+            left: (identifier)`
+    pattern:  9, capture: 0 - name, start: (865, 11), end: (865, 32), text: `assignment_expression`
+    pattern:  9, capture: 7 - reference.call, start: (882, 1), end: (899, 43), text: `source_file
+  (expression_statement
+    (loop_expression
+      (label
+        (identifier))
+      (block
+        (expression_statement
+          (loop_expression
+            (label
+              (identifier))
+            (block
+              (expression_statement
+                (break_expression
+                  (label
+                    (identifier))))
+              (expression_statement
+                (break_expression
+                  (boolean_literal)))))))))`
+    pattern:  9, capture: 0 - name, start: (882, 1), end: (882, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (883, 3), end: (899, 42), text: `expression_statement
+    (loop_expression
+      (label
+        (identifier))
+      (block
+        (expression_statement
+          (loop_expression
+            (label
+              (identifier))
+            (block
+              (expression_statement
+                (break_expression
+                  (label
+                    (identifier))))
+              (expression_statement
+                (break_expression
+                  (boolean_literal))))))))`
+    pattern:  9, capture: 0 - name, start: (883, 3), end: (883, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (884, 5), end: (886, 21), text: `loop_expression
+      (label
+        (identifier))`
+    pattern:  9, capture: 0 - name, start: (884, 5), end: (884, 20), text: `loop_expression`
+    pattern:  9, capture: 7 - reference.call, start: (885, 7), end: (886, 20), text: `label
+        (identifier)`
+    pattern:  9, capture: 0 - name, start: (885, 7), end: (885, 12), text: `label`
+    pattern:  9, capture: 7 - reference.call, start: (887, 7), end: (899, 40), text: `block
+        (expression_statement
+          (loop_expression
+            (label
+              (identifier))
+            (block
+              (expression_statement
+                (break_expression
+                  (label
+                    (identifier))))
+              (expression_statement
+                (break_expression
+                  (boolean_literal))))))`
+    pattern:  9, capture: 0 - name, start: (887, 7), end: (887, 12), text: `block`
+    pattern:  9, capture: 7 - reference.call, start: (888, 9), end: (899, 39), text: `expression_statement
+          (loop_expression
+            (label
+              (identifier))
+            (block
+              (expression_statement
+                (break_expression
+                  (label
+                    (identifier))))
+              (expression_statement
+                (break_expression
+                  (boolean_literal)))))`
+    pattern:  9, capture: 0 - name, start: (888, 9), end: (888, 29), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (889, 11), end: (891, 27), text: `loop_expression
+            (label
+              (identifier))`
+    pattern:  9, capture: 0 - name, start: (889, 11), end: (889, 26), text: `loop_expression`
+    pattern:  9, capture: 7 - reference.call, start: (890, 13), end: (891, 26), text: `label
+              (identifier)`
+    pattern:  9, capture: 0 - name, start: (890, 13), end: (890, 18), text: `label`
+    pattern:  9, capture: 7 - reference.call, start: (892, 13), end: (896, 35), text: `block
+              (expression_statement
+                (break_expression
+                  (label
+                    (identifier))))`
+    pattern:  9, capture: 0 - name, start: (892, 13), end: (892, 18), text: `block`
+    pattern:  9, capture: 7 - reference.call, start: (893, 15), end: (896, 34), text: `expression_statement
+                (break_expression
+                  (label
+                    (identifier)))`
+    pattern:  9, capture: 0 - name, start: (893, 15), end: (893, 35), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (894, 17), end: (896, 33), text: `break_expression
+                  (label
+                    (identifier))`
+    pattern:  9, capture: 0 - name, start: (894, 17), end: (894, 33), text: `break_expression`
+    pattern:  9, capture: 7 - reference.call, start: (895, 19), end: (896, 32), text: `label
+                    (identifier)`
+    pattern:  9, capture: 0 - name, start: (895, 19), end: (895, 24), text: `label`
+    pattern:  9, capture: 7 - reference.call, start: (897, 15), end: (899, 36), text: `expression_statement
+                (break_expression
+                  (boolean_literal))`
+    pattern:  9, capture: 0 - name, start: (897, 15), end: (897, 35), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (898, 17), end: (899, 35), text: `break_expression
+                  (boolean_literal)`
+    pattern:  9, capture: 0 - name, start: (898, 17), end: (898, 33), text: `break_expression`
+    pattern:  9, capture: 7 - reference.call, start: (906, 2), end: (906, 8), text: `bar(e)`
+    pattern:  9, capture: 0 - name, start: (906, 2), end: (906, 5), text: `bar`
+    pattern:  9, capture: 7 - reference.call, start: (910, 2), end: (910, 8), text: `bar(i)`
+    pattern:  9, capture: 0 - name, start: (910, 2), end: (910, 5), text: `bar`
+    pattern:  9, capture: 7 - reference.call, start: (922, 1), end: (932, 32), text: `source_file
+  (expression_statement
+    (for_expression
+      (identifier)
+      (identifier)
+      (block
+        (expression_statement
+          (call_expression
+            (identifier)
+            (arguments
+              (identifier)))))))`
+    pattern:  9, capture: 0 - name, start: (922, 1), end: (922, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (923, 3), end: (932, 31), text: `expression_statement
+    (for_expression
+      (identifier)
+      (identifier)
+      (block
+        (expression_statement
+          (call_expression
+            (identifier)
+            (arguments
+              (identifier))))))`
+    pattern:  9, capture: 0 - name, start: (923, 3), end: (923, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (924, 5), end: (925, 18), text: `for_expression
+      (identifier)`
+    pattern:  9, capture: 0 - name, start: (924, 5), end: (924, 19), text: `for_expression`
+    pattern:  9, capture: 7 - reference.call, start: (927, 7), end: (932, 29), text: `block
+        (expression_statement
+          (call_expression
+            (identifier)
+            (arguments
+              (identifier))))`
+    pattern:  9, capture: 0 - name, start: (927, 7), end: (927, 12), text: `block`
+    pattern:  9, capture: 7 - reference.call, start: (928, 9), end: (932, 28), text: `expression_statement
+          (call_expression
+            (identifier)
+            (arguments
+              (identifier)))`
+    pattern:  9, capture: 0 - name, start: (928, 9), end: (928, 29), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (929, 11), end: (930, 24), text: `call_expression
+            (identifier)`
+    pattern:  9, capture: 0 - name, start: (929, 11), end: (929, 26), text: `call_expression`
+    pattern:  9, capture: 7 - reference.call, start: (931, 13), end: (932, 26), text: `arguments
+              (identifier)`
+    pattern:  9, capture: 0 - name, start: (931, 13), end: (931, 22), text: `arguments`
+    pattern:  9, capture: 7 - reference.call, start: (933, 3), end: (944, 31), text: `expression_statement
+    (for_expression
+      (identifier)
+      (range_expression
+        (integer_literal)
+        (integer_literal))
+      (block
+        (expression_statement
+          (call_expression
+            (identifier)
+            (arguments
+              (identifier))))))`
+    pattern:  9, capture: 0 - name, start: (933, 3), end: (933, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (934, 5), end: (935, 18), text: `for_expression
+      (identifier)`
+    pattern:  9, capture: 0 - name, start: (934, 5), end: (934, 19), text: `for_expression`
+    pattern:  9, capture: 7 - reference.call, start: (936, 7), end: (937, 25), text: `range_expression
+        (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (936, 7), end: (936, 23), text: `range_expression`
+    pattern:  9, capture: 7 - reference.call, start: (939, 7), end: (944, 29), text: `block
+        (expression_statement
+          (call_expression
+            (identifier)
+            (arguments
+              (identifier))))`
+    pattern:  9, capture: 0 - name, start: (939, 7), end: (939, 12), text: `block`
+    pattern:  9, capture: 7 - reference.call, start: (940, 9), end: (944, 28), text: `expression_statement
+          (call_expression
+            (identifier)
+            (arguments
+              (identifier)))`
+    pattern:  9, capture: 0 - name, start: (940, 9), end: (940, 29), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (941, 11), end: (942, 24), text: `call_expression
+            (identifier)`
+    pattern:  9, capture: 0 - name, start: (941, 11), end: (941, 26), text: `call_expression`
+    pattern:  9, capture: 7 - reference.call, start: (943, 13), end: (944, 26), text: `arguments
+              (identifier)`
+    pattern:  9, capture: 0 - name, start: (943, 13), end: (943, 22), text: `arguments`
+    pattern:  9, capture: 7 - reference.call, start: (945, 3), end: (986, 49), text: `expression_statement
+    (for_expression
+      (label
+        (identifier))
+      (identifier)
+      (range_expression
+        (integer_literal)
+        (integer_literal))
+      (block
+        (expression_statement
+          (for_expression
+            (label
+              (identifier))
+            (identifier)
+            (range_expression
+              (integer_literal)
+              (integer_literal))
+            (block
+              (expression_statement
+                (if_expression
+                  (binary_expression
+                    (binary_expression
+                      (identifier)
+                      (integer_literal))
+                    (integer_literal))
+                  (block
+                    (expression_statement
+                      (continue_expression
+                        (label
+                          (identifier)))))))
+              (expression_statement
+                (if_expression
+                  (binary_expression
+                    (binary_expression
+                      (identifier)
+                      (integer_literal))
+                    (integer_literal))
+                  (block
+                    (expression_statement
+                      (continue_expression
+                        (label
+                          (identifier))))))))))))`
+    pattern:  9, capture: 0 - name, start: (945, 3), end: (945, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (946, 5), end: (948, 21), text: `for_expression
+      (label
+        (identifier))`
+    pattern:  9, capture: 0 - name, start: (946, 5), end: (946, 19), text: `for_expression`
+    pattern:  9, capture: 7 - reference.call, start: (947, 7), end: (948, 20), text: `label
+        (identifier)`
+    pattern:  9, capture: 0 - name, start: (947, 7), end: (947, 12), text: `label`
+    pattern:  9, capture: 7 - reference.call, start: (950, 7), end: (951, 25), text: `range_expression
+        (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (950, 7), end: (950, 23), text: `range_expression`
+    pattern:  9, capture: 7 - reference.call, start: (953, 7), end: (986, 47), text: `block
+        (expression_statement
+          (for_expression
+            (label
+              (identifier))
+            (identifier)
+            (range_expression
+              (integer_literal)
+              (integer_literal))
+            (block
+              (expression_statement
+                (if_expression
+                  (binary_expression
+                    (binary_expression
+                      (identifier)
+                      (integer_literal))
+                    (integer_literal))
+                  (block
+                    (expression_statement
+                      (continue_expression
+                        (label
+                          (identifier)))))))
+              (expression_statement
+                (if_expression
+                  (binary_expression
+                    (binary_expression
+                      (identifier)
+                      (integer_literal))
+                    (integer_literal))
+                  (block
+                    (expression_statement
+                      (continue_expression
+                        (label
+                          (identifier))))))))))`
+    pattern:  9, capture: 0 - name, start: (953, 7), end: (953, 12), text: `block`
+    pattern:  9, capture: 7 - reference.call, start: (954, 9), end: (986, 46), text: `expression_statement
+          (for_expression
+            (label
+              (identifier))
+            (identifier)
+            (range_expression
+              (integer_literal)
+              (integer_literal))
+            (block
+              (expression_statement
+                (if_expression
+                  (binary_expression
+                    (binary_expression
+                      (identifier)
+                      (integer_literal))
+                    (integer_literal))
+                  (block
+                    (expression_statement
+                      (continue_expression
+                        (label
+                          (identifier)))))))
+              (expression_statement
+                (if_expression
+                  (binary_expression
+                    (binary_expression
+                      (identifier)
+                      (integer_literal))
+                    (integer_literal))
+                  (block
+                    (expression_statement
+                      (continue_expression
+                        (label
+                          (identifier)))))))))`
+    pattern:  9, capture: 0 - name, start: (954, 9), end: (954, 29), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (955, 11), end: (957, 27), text: `for_expression
+            (label
+              (identifier))`
+    pattern:  9, capture: 0 - name, start: (955, 11), end: (955, 25), text: `for_expression`
+    pattern:  9, capture: 7 - reference.call, start: (956, 13), end: (957, 26), text: `label
+              (identifier)`
+    pattern:  9, capture: 0 - name, start: (956, 13), end: (956, 18), text: `label`
+    pattern:  9, capture: 7 - reference.call, start: (959, 13), end: (960, 31), text: `range_expression
+              (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (959, 13), end: (959, 29), text: `range_expression`
+    pattern:  9, capture: 7 - reference.call, start: (962, 13), end: (974, 44), text: `block
+              (expression_statement
+                (if_expression
+                  (binary_expression
+                    (binary_expression
+                      (identifier)
+                      (integer_literal))
+                    (integer_literal))
+                  (block
+                    (expression_statement
+                      (continue_expression
+                        (label
+                          (identifier)))))))`
+    pattern:  9, capture: 0 - name, start: (962, 13), end: (962, 18), text: `block`
+    pattern:  9, capture: 7 - reference.call, start: (963, 15), end: (974, 43), text: `expression_statement
+                (if_expression
+                  (binary_expression
+                    (binary_expression
+                      (identifier)
+                      (integer_literal))
+                    (integer_literal))
+                  (block
+                    (expression_statement
+                      (continue_expression
+                        (label
+                          (identifier))))))`
+    pattern:  9, capture: 0 - name, start: (963, 15), end: (963, 35), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (964, 17), end: (969, 38), text: `if_expression
+                  (binary_expression
+                    (binary_expression
+                      (identifier)
+                      (integer_literal))
+                    (integer_literal))`
+    pattern:  9, capture: 0 - name, start: (964, 17), end: (964, 30), text: `if_expression`
+    pattern:  9, capture: 7 - reference.call, start: (965, 19), end: (968, 40), text: `binary_expression
+                    (binary_expression
+                      (identifier)
+                      (integer_literal))`
+    pattern:  9, capture: 0 - name, start: (965, 19), end: (965, 36), text: `binary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (966, 21), end: (967, 34), text: `binary_expression
+                      (identifier)`
+    pattern:  9, capture: 0 - name, start: (966, 21), end: (966, 38), text: `binary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (970, 19), end: (974, 41), text: `block
+                    (expression_statement
+                      (continue_expression
+                        (label
+                          (identifier))))`
+    pattern:  9, capture: 0 - name, start: (970, 19), end: (970, 24), text: `block`
+    pattern:  9, capture: 7 - reference.call, start: (971, 21), end: (974, 40), text: `expression_statement
+                      (continue_expression
+                        (label
+                          (identifier)))`
+    pattern:  9, capture: 0 - name, start: (971, 21), end: (971, 41), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (972, 23), end: (974, 39), text: `continue_expression
+                        (label
+                          (identifier))`
+    pattern:  9, capture: 0 - name, start: (972, 23), end: (972, 42), text: `continue_expression`
+    pattern:  9, capture: 7 - reference.call, start: (973, 25), end: (974, 38), text: `label
+                          (identifier)`
+    pattern:  9, capture: 0 - name, start: (973, 25), end: (973, 30), text: `label`
+    pattern:  9, capture: 7 - reference.call, start: (975, 15), end: (986, 43), text: `expression_statement
+                (if_expression
+                  (binary_expression
+                    (binary_expression
+                      (identifier)
+                      (integer_literal))
+                    (integer_literal))
+                  (block
+                    (expression_statement
+                      (continue_expression
+                        (label
+                          (identifier))))))`
+    pattern:  9, capture: 0 - name, start: (975, 15), end: (975, 35), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (976, 17), end: (981, 38), text: `if_expression
+                  (binary_expression
+                    (binary_expression
+                      (identifier)
+                      (integer_literal))
+                    (integer_literal))`
+    pattern:  9, capture: 0 - name, start: (976, 17), end: (976, 30), text: `if_expression`
+    pattern:  9, capture: 7 - reference.call, start: (977, 19), end: (980, 40), text: `binary_expression
+                    (binary_expression
+                      (identifier)
+                      (integer_literal))`
+    pattern:  9, capture: 0 - name, start: (977, 19), end: (977, 36), text: `binary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (978, 21), end: (979, 34), text: `binary_expression
+                      (identifier)`
+    pattern:  9, capture: 0 - name, start: (978, 21), end: (978, 38), text: `binary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (982, 19), end: (986, 41), text: `block
+                    (expression_statement
+                      (continue_expression
+                        (label
+                          (identifier))))`
+    pattern:  9, capture: 0 - name, start: (982, 19), end: (982, 24), text: `block`
+    pattern:  9, capture: 7 - reference.call, start: (983, 21), end: (986, 40), text: `expression_statement
+                      (continue_expression
+                        (label
+                          (identifier)))`
+    pattern:  9, capture: 0 - name, start: (983, 21), end: (983, 41), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (984, 23), end: (986, 39), text: `continue_expression
+                        (label
+                          (identifier))`
+    pattern:  9, capture: 0 - name, start: (984, 23), end: (984, 42), text: `continue_expression`
+    pattern:  9, capture: 7 - reference.call, start: (985, 25), end: (986, 38), text: `label
+                          (identifier)`
+    pattern:  9, capture: 0 - name, start: (985, 25), end: (985, 30), text: `label`
+    pattern:  9, capture: 7 - reference.call, start: (993, 0), end: (993, 5), text: `foo()`
+    pattern:  9, capture: 0 - name, start: (993, 0), end: (993, 3), text: `foo`
+    pattern: 10, capture: 7 - reference.call, start: (994, 0), end: (994, 16), text: `value.0.1.iter()`
+    pattern: 10, capture: 0 - name, start: (994, 10), end: (994, 14), text: `iter`
+    pattern: 10, capture: 7 - reference.call, start: (995, 0), end: (995, 8), text: `1.max(2)`
+    pattern: 10, capture: 0 - name, start: (995, 2), end: (995, 5), text: `max`
+    pattern:  9, capture: 7 - reference.call, start: (999, 1), end: (1003, 26), text: `source_file
+  (expression_statement
+    (field_expression
+      (identifier)
+      (field_identifier)))`
+    pattern:  9, capture: 0 - name, start: (999, 1), end: (999, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (1000, 3), end: (1003, 25), text: `expression_statement
+    (field_expression
+      (identifier)
+      (field_identifier))`
+    pattern:  9, capture: 0 - name, start: (1000, 3), end: (1000, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (1001, 5), end: (1002, 18), text: `field_expression
+      (identifier)`
+    pattern:  9, capture: 0 - name, start: (1001, 5), end: (1001, 21), text: `field_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1004, 3), end: (1009, 25), text: `expression_statement
+    (field_expression
+      (call_expression
+        (identifier)
+        (arguments))
+      (field_identifier))`
+    pattern:  9, capture: 0 - name, start: (1004, 3), end: (1004, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (1005, 5), end: (1008, 20), text: `field_expression
+      (call_expression
+        (identifier)
+        (arguments))`
+    pattern:  9, capture: 0 - name, start: (1005, 5), end: (1005, 21), text: `field_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1006, 7), end: (1007, 20), text: `call_expression
+        (identifier)`
+    pattern:  9, capture: 0 - name, start: (1006, 7), end: (1006, 22), text: `call_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1010, 3), end: (1019, 18), text: `expression_statement
+    (call_expression
+      (field_expression
+        (field_expression
+          (field_expression
+            (identifier)
+            (integer_literal))
+          (integer_literal))
+        (field_identifier))
+      (arguments))`
+    pattern:  9, capture: 0 - name, start: (1010, 3), end: (1010, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (1011, 5), end: (1018, 27), text: `call_expression
+      (field_expression
+        (field_expression
+          (field_expression
+            (identifier)
+            (integer_literal))
+          (integer_literal))
+        (field_identifier))`
+    pattern:  9, capture: 0 - name, start: (1011, 5), end: (1011, 20), text: `call_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1012, 7), end: (1017, 28), text: `field_expression
+        (field_expression
+          (field_expression
+            (identifier)
+            (integer_literal))
+          (integer_literal))`
+    pattern:  9, capture: 0 - name, start: (1012, 7), end: (1012, 23), text: `field_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1013, 9), end: (1016, 30), text: `field_expression
+          (field_expression
+            (identifier)
+            (integer_literal))`
+    pattern:  9, capture: 0 - name, start: (1013, 9), end: (1013, 25), text: `field_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1014, 11), end: (1015, 24), text: `field_expression
+            (identifier)`
+    pattern:  9, capture: 0 - name, start: (1014, 11), end: (1014, 27), text: `field_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1020, 3), end: (1026, 27), text: `expression_statement
+    (call_expression
+      (field_expression
+        (integer_literal)
+        (field_identifier))
+      (arguments
+        (integer_literal)))`
+    pattern:  9, capture: 0 - name, start: (1020, 3), end: (1020, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (1021, 5), end: (1024, 27), text: `call_expression
+      (field_expression
+        (integer_literal)
+        (field_identifier))`
+    pattern:  9, capture: 0 - name, start: (1021, 5), end: (1021, 20), text: `call_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1022, 7), end: (1023, 25), text: `field_expression
+        (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (1022, 7), end: (1022, 23), text: `field_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1025, 7), end: (1026, 25), text: `arguments
+        (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (1025, 7), end: (1025, 16), text: `arguments`
+    pattern: 10, capture: 7 - reference.call, start: (1032, 0), end: (1032, 14), text: `mystruct.foo()`
+    pattern: 10, capture: 0 - name, start: (1032, 9), end: (1032, 12), text: `foo`
+    pattern:  9, capture: 7 - reference.call, start: (1036, 1), end: (1042, 19), text: `source_file
+  (expression_statement
+    (call_expression
+      (field_expression
+        (identifier)
+        (field_identifier))
+      (arguments)))`
+    pattern:  9, capture: 0 - name, start: (1036, 1), end: (1036, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (1037, 3), end: (1042, 18), text: `expression_statement
+    (call_expression
+      (field_expression
+        (identifier)
+        (field_identifier))
+      (arguments))`
+    pattern:  9, capture: 0 - name, start: (1037, 3), end: (1037, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (1038, 5), end: (1041, 27), text: `call_expression
+      (field_expression
+        (identifier)
+        (field_identifier))`
+    pattern:  9, capture: 0 - name, start: (1038, 5), end: (1038, 20), text: `call_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1039, 7), end: (1040, 20), text: `field_expression
+        (identifier)`
+    pattern:  9, capture: 0 - name, start: (1039, 7), end: (1039, 23), text: `field_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1054, 1), end: (1063, 25), text: `source_file
+  (expression_statement
+    (index_expression
+      (parenthesized_expression
+        (array_expression
+          (integer_literal)
+          (integer_literal)
+          (integer_literal)
+          (integer_literal)))
+      (integer_literal)))`
+    pattern:  9, capture: 0 - name, start: (1054, 1), end: (1054, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (1055, 3), end: (1063, 24), text: `expression_statement
+    (index_expression
+      (parenthesized_expression
+        (array_expression
+          (integer_literal)
+          (integer_literal)
+          (integer_literal)
+          (integer_literal)))
+      (integer_literal))`
+    pattern:  9, capture: 0 - name, start: (1055, 3), end: (1055, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (1056, 5), end: (1062, 29), text: `index_expression
+      (parenthesized_expression
+        (array_expression
+          (integer_literal)
+          (integer_literal)
+          (integer_literal)
+          (integer_literal)))`
+    pattern:  9, capture: 0 - name, start: (1056, 5), end: (1056, 21), text: `index_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1057, 7), end: (1062, 28), text: `parenthesized_expression
+        (array_expression
+          (integer_literal)
+          (integer_literal)
+          (integer_literal)
+          (integer_literal))`
+    pattern:  9, capture: 0 - name, start: (1057, 7), end: (1057, 31), text: `parenthesized_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1058, 9), end: (1059, 27), text: `array_expression
+          (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (1058, 9), end: (1058, 25), text: `array_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1064, 3), end: (1067, 24), text: `expression_statement
+    (index_expression
+      (identifier)
+      (integer_literal))`
+    pattern:  9, capture: 0 - name, start: (1064, 3), end: (1064, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (1065, 5), end: (1066, 18), text: `index_expression
+      (identifier)`
+    pattern:  9, capture: 0 - name, start: (1065, 5), end: (1065, 21), text: `index_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1068, 3), end: (1071, 19), text: `expression_statement
+    (index_expression
+      (identifier)
+      (identifier))`
+    pattern:  9, capture: 0 - name, start: (1068, 3), end: (1068, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (1069, 5), end: (1070, 18), text: `index_expression
+      (identifier)`
+    pattern:  9, capture: 0 - name, start: (1069, 5), end: (1069, 21), text: `index_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1084, 1), end: (1090, 19), text: `source_file
+  (expression_statement
+    (call_expression
+      (scoped_identifier
+        (identifier)
+        (identifier))
+      (arguments)))`
+    pattern:  9, capture: 0 - name, start: (1084, 1), end: (1084, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (1085, 3), end: (1090, 18), text: `expression_statement
+    (call_expression
+      (scoped_identifier
+        (identifier)
+        (identifier))
+      (arguments))`
+    pattern:  9, capture: 0 - name, start: (1085, 3), end: (1085, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (1086, 5), end: (1089, 21), text: `call_expression
+      (scoped_identifier
+        (identifier)
+        (identifier))`
+    pattern:  9, capture: 0 - name, start: (1086, 5), end: (1086, 20), text: `call_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1087, 7), end: (1088, 20), text: `scoped_identifier
+        (identifier)`
+    pattern:  9, capture: 0 - name, start: (1087, 7), end: (1087, 24), text: `scoped_identifier`
+    pattern:  9, capture: 7 - reference.call, start: (1091, 3), end: (1099, 18), text: `expression_statement
+    (call_expression
+      (scoped_identifier
+        (generic_type
+          (type_identifier)
+          (type_arguments
+            (type_identifier)))
+        (identifier))
+      (arguments))`
+    pattern:  9, capture: 0 - name, start: (1091, 3), end: (1091, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (1092, 5), end: (1098, 21), text: `call_expression
+      (scoped_identifier
+        (generic_type
+          (type_identifier)
+          (type_arguments
+            (type_identifier)))
+        (identifier))`
+    pattern:  9, capture: 0 - name, start: (1092, 5), end: (1092, 20), text: `call_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1093, 7), end: (1097, 31), text: `scoped_identifier
+        (generic_type
+          (type_identifier)
+          (type_arguments
+            (type_identifier)))`
+    pattern:  9, capture: 0 - name, start: (1093, 7), end: (1093, 24), text: `scoped_identifier`
+    pattern:  9, capture: 7 - reference.call, start: (1094, 9), end: (1095, 27), text: `generic_type
+          (type_identifier)`
+    pattern:  9, capture: 0 - name, start: (1094, 9), end: (1094, 21), text: `generic_type`
+    pattern:  9, capture: 7 - reference.call, start: (1096, 11), end: (1097, 29), text: `type_arguments
+            (type_identifier)`
+    pattern:  9, capture: 0 - name, start: (1096, 11), end: (1096, 25), text: `type_arguments`
+    pattern:  9, capture: 7 - reference.call, start: (1100, 3), end: (1104, 18), text: `expression_statement
+    (call_expression
+      (scoped_identifier
+        (identifier))
+      (arguments))`
+    pattern:  9, capture: 0 - name, start: (1100, 3), end: (1100, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (1101, 5), end: (1103, 21), text: `call_expression
+      (scoped_identifier
+        (identifier))`
+    pattern:  9, capture: 0 - name, start: (1101, 5), end: (1101, 20), text: `call_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1102, 7), end: (1103, 20), text: `scoped_identifier
+        (identifier)`
+    pattern:  9, capture: 0 - name, start: (1102, 7), end: (1102, 24), text: `scoped_identifier`
+    pattern:  9, capture: 7 - reference.call, start: (1105, 3), end: (1111, 18), text: `expression_statement
+    (call_expression
+      (scoped_identifier
+        (scoped_identifier
+          (identifier))
+        (identifier))
+      (arguments))`
+    pattern:  9, capture: 0 - name, start: (1105, 3), end: (1105, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (1106, 5), end: (1110, 21), text: `call_expression
+      (scoped_identifier
+        (scoped_identifier
+          (identifier))
+        (identifier))`
+    pattern:  9, capture: 0 - name, start: (1106, 5), end: (1106, 20), text: `call_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1107, 7), end: (1109, 23), text: `scoped_identifier
+        (scoped_identifier
+          (identifier))`
+    pattern:  9, capture: 0 - name, start: (1107, 7), end: (1107, 24), text: `scoped_identifier`
+    pattern:  9, capture: 7 - reference.call, start: (1108, 9), end: (1109, 22), text: `scoped_identifier
+          (identifier)`
+    pattern:  9, capture: 0 - name, start: (1108, 9), end: (1108, 26), text: `scoped_identifier`
+    pattern:  9, capture: 7 - reference.call, start: (1121, 1), end: (1131, 23), text: `source_file
+  (expression_statement
+    (call_expression
+      (scoped_identifier
+        (bracketed_type
+          (qualified_type
+            (type_identifier)
+            (type_identifier)))
+        (identifier))
+      (arguments
+        (identifier))))`
+    pattern:  9, capture: 0 - name, start: (1121, 1), end: (1121, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (1122, 3), end: (1131, 22), text: `expression_statement
+    (call_expression
+      (scoped_identifier
+        (bracketed_type
+          (qualified_type
+            (type_identifier)
+            (type_identifier)))
+        (identifier))
+      (arguments
+        (identifier)))`
+    pattern:  9, capture: 0 - name, start: (1122, 3), end: (1122, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (1123, 5), end: (1129, 21), text: `call_expression
+      (scoped_identifier
+        (bracketed_type
+          (qualified_type
+            (type_identifier)
+            (type_identifier)))
+        (identifier))`
+    pattern:  9, capture: 0 - name, start: (1123, 5), end: (1123, 20), text: `call_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1124, 7), end: (1128, 31), text: `scoped_identifier
+        (bracketed_type
+          (qualified_type
+            (type_identifier)
+            (type_identifier)))`
+    pattern:  9, capture: 0 - name, start: (1124, 7), end: (1124, 24), text: `scoped_identifier`
+    pattern:  9, capture: 7 - reference.call, start: (1125, 9), end: (1128, 30), text: `bracketed_type
+          (qualified_type
+            (type_identifier)
+            (type_identifier))`
+    pattern:  9, capture: 0 - name, start: (1125, 9), end: (1125, 23), text: `bracketed_type`
+    pattern:  9, capture: 7 - reference.call, start: (1126, 11), end: (1127, 29), text: `qualified_type
+            (type_identifier)`
+    pattern:  9, capture: 0 - name, start: (1126, 11), end: (1126, 25), text: `qualified_type`
+    pattern:  9, capture: 7 - reference.call, start: (1130, 7), end: (1131, 20), text: `arguments
+        (identifier)`
+    pattern:  9, capture: 0 - name, start: (1130, 7), end: (1130, 16), text: `arguments`
+    pattern: 11, capture: 7 - reference.call, start: (1137, 1), end: (1137, 9), text: `Token![]`
+    pattern: 11, capture: 0 - name, start: (1137, 1), end: (1137, 6), text: `Token`
+    pattern:  9, capture: 7 - reference.call, start: (1141, 1), end: (1150, 19), text: `source_file
+  (expression_statement
+    (call_expression
+      (scoped_identifier
+        (bracketed_type
+          (macro_invocation
+            (identifier)
+            (token_tree)))
+        (identifier))
+      (arguments)))`
+    pattern:  9, capture: 0 - name, start: (1141, 1), end: (1141, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (1142, 3), end: (1150, 18), text: `expression_statement
+    (call_expression
+      (scoped_identifier
+        (bracketed_type
+          (macro_invocation
+            (identifier)
+            (token_tree)))
+        (identifier))
+      (arguments))`
+    pattern:  9, capture: 0 - name, start: (1142, 3), end: (1142, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (1143, 5), end: (1149, 21), text: `call_expression
+      (scoped_identifier
+        (bracketed_type
+          (macro_invocation
+            (identifier)
+            (token_tree)))
+        (identifier))`
+    pattern:  9, capture: 0 - name, start: (1143, 5), end: (1143, 20), text: `call_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1144, 7), end: (1148, 26), text: `scoped_identifier
+        (bracketed_type
+          (macro_invocation
+            (identifier)
+            (token_tree)))`
+    pattern:  9, capture: 0 - name, start: (1144, 7), end: (1144, 24), text: `scoped_identifier`
+    pattern:  9, capture: 7 - reference.call, start: (1145, 9), end: (1148, 25), text: `bracketed_type
+          (macro_invocation
+            (identifier)
+            (token_tree))`
+    pattern:  9, capture: 0 - name, start: (1145, 9), end: (1145, 23), text: `bracketed_type`
+    pattern:  9, capture: 7 - reference.call, start: (1146, 11), end: (1147, 24), text: `macro_invocation
+            (identifier)`
+    pattern:  9, capture: 0 - name, start: (1146, 11), end: (1146, 27), text: `macro_invocation`
+    pattern:  9, capture: 7 - reference.call, start: (1160, 1), end: (1168, 19), text: `source_file
+  (expression_statement
+    (call_expression
+      (scoped_identifier
+        (scoped_identifier
+          (super)
+          (super))
+        (identifier))
+      (arguments)))`
+    pattern:  9, capture: 0 - name, start: (1160, 1), end: (1160, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (1161, 3), end: (1168, 18), text: `expression_statement
+    (call_expression
+      (scoped_identifier
+        (scoped_identifier
+          (super)
+          (super))
+        (identifier))
+      (arguments))`
+    pattern:  9, capture: 0 - name, start: (1161, 3), end: (1161, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (1162, 5), end: (1167, 21), text: `call_expression
+      (scoped_identifier
+        (scoped_identifier
+          (super)
+          (super))
+        (identifier))`
+    pattern:  9, capture: 0 - name, start: (1162, 5), end: (1162, 20), text: `call_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1163, 7), end: (1166, 18), text: `scoped_identifier
+        (scoped_identifier
+          (super)
+          (super))`
+    pattern:  9, capture: 0 - name, start: (1163, 7), end: (1163, 24), text: `scoped_identifier`
+    pattern:  9, capture: 7 - reference.call, start: (1164, 9), end: (1165, 17), text: `scoped_identifier
+          (super)`
+    pattern:  9, capture: 0 - name, start: (1164, 9), end: (1164, 26), text: `scoped_identifier`
+    pattern:  9, capture: 7 - reference.call, start: (1179, 1), end: (1188, 30), text: `source_file
+  (expression_statement
+    (call_expression
+      function: (generic_function
+        function: (scoped_identifier
+          path: (identifier)
+          name: (identifier))
+        type_arguments: (type_arguments
+          (primitive_type)))
+      arguments: (arguments)))`
+    pattern:  9, capture: 0 - name, start: (1179, 1), end: (1179, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (1180, 3), end: (1188, 29), text: `expression_statement
+    (call_expression
+      function: (generic_function
+        function: (scoped_identifier
+          path: (identifier)
+          name: (identifier))
+        type_arguments: (type_arguments
+          (primitive_type)))
+      arguments: (arguments))`
+    pattern:  9, capture: 0 - name, start: (1180, 3), end: (1180, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (1181, 5), end: (1187, 28), text: `call_expression
+      function: (generic_function
+        function: (scoped_identifier
+          path: (identifier)
+          name: (identifier))
+        type_arguments: (type_arguments
+          (primitive_type)))`
+    pattern:  9, capture: 0 - name, start: (1181, 5), end: (1181, 20), text: `call_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1182, 17), end: (1185, 29), text: `generic_function
+        function: (scoped_identifier
+          path: (identifier)
+          name: (identifier))`
+    pattern:  9, capture: 0 - name, start: (1182, 17), end: (1182, 33), text: `generic_function`
+    pattern:  9, capture: 7 - reference.call, start: (1183, 19), end: (1184, 28), text: `scoped_identifier
+          path: (identifier)`
+    pattern:  9, capture: 0 - name, start: (1183, 19), end: (1183, 36), text: `scoped_identifier`
+    pattern:  9, capture: 7 - reference.call, start: (1186, 25), end: (1187, 26), text: `type_arguments
+          (primitive_type)`
+    pattern:  9, capture: 0 - name, start: (1186, 25), end: (1186, 39), text: `type_arguments`
+    pattern:  9, capture: 7 - reference.call, start: (1189, 3), end: (1195, 29), text: `expression_statement
+    (call_expression
+      function: (generic_function
+        function: (identifier)
+        type_arguments: (type_arguments
+          (integer_literal)))
+      arguments: (arguments))`
+    pattern:  9, capture: 0 - name, start: (1189, 3), end: (1189, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (1190, 5), end: (1194, 29), text: `call_expression
+      function: (generic_function
+        function: (identifier)
+        type_arguments: (type_arguments
+          (integer_literal)))`
+    pattern:  9, capture: 0 - name, start: (1190, 5), end: (1190, 20), text: `call_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1191, 17), end: (1192, 30), text: `generic_function
+        function: (identifier)`
+    pattern:  9, capture: 0 - name, start: (1191, 17), end: (1191, 33), text: `generic_function`
+    pattern:  9, capture: 7 - reference.call, start: (1193, 25), end: (1194, 27), text: `type_arguments
+          (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (1193, 25), end: (1193, 39), text: `type_arguments`
+    pattern: 10, capture: 7 - reference.call, start: (1201, 0), end: (1201, 25), text: `a.map(|(b, c)| b.push(c))`
+    pattern: 10, capture: 0 - name, start: (1201, 2), end: (1201, 5), text: `map`
+    pattern: 10, capture: 7 - reference.call, start: (1201, 15), end: (1201, 24), text: `b.push(c)`
+    pattern: 10, capture: 0 - name, start: (1201, 17), end: (1201, 21), text: `push`
+    pattern: 10, capture: 7 - reference.call, start: (1202, 0), end: (1205, 2), text: `d.map(move |mut e| {
+    f(e);
+    g(e)
+})`
+    pattern: 10, capture: 0 - name, start: (1202, 2), end: (1202, 5), text: `map`
+    pattern:  9, capture: 7 - reference.call, start: (1203, 4), end: (1203, 8), text: `f(e)`
+    pattern:  9, capture: 0 - name, start: (1203, 4), end: (1203, 5), text: `f`
+    pattern:  9, capture: 7 - reference.call, start: (1204, 4), end: (1204, 8), text: `g(e)`
+    pattern:  9, capture: 0 - name, start: (1204, 4), end: (1204, 5), text: `g`
+    pattern:  9, capture: 7 - reference.call, start: (1206, 0), end: (1206, 16), text: `h(|| -> i { j })`
+    pattern:  9, capture: 0 - name, start: (1206, 0), end: (1206, 1), text: `h`
+    pattern:  9, capture: 7 - reference.call, start: (1210, 1), end: (1227, 32), text: `source_file
+  (expression_statement
+    (call_expression
+      (field_expression
+        (identifier)
+        (field_identifier))
+      (arguments
+        (closure_expression
+          (closure_parameters
+            (tuple_pattern
+              (identifier)
+              (identifier)))
+          (call_expression
+            (field_expression
+              (identifier)
+              (field_identifier))
+            (arguments
+              (identifier)))))))`
+    pattern:  9, capture: 0 - name, start: (1210, 1), end: (1210, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (1211, 3), end: (1227, 31), text: `expression_statement
+    (call_expression
+      (field_expression
+        (identifier)
+        (field_identifier))
+      (arguments
+        (closure_expression
+          (closure_parameters
+            (tuple_pattern
+              (identifier)
+              (identifier)))
+          (call_expression
+            (field_expression
+              (identifier)
+              (field_identifier))
+            (arguments
+              (identifier))))))`
+    pattern:  9, capture: 0 - name, start: (1211, 3), end: (1211, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (1212, 5), end: (1215, 27), text: `call_expression
+      (field_expression
+        (identifier)
+        (field_identifier))`
+    pattern:  9, capture: 0 - name, start: (1212, 5), end: (1212, 20), text: `call_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1213, 7), end: (1214, 20), text: `field_expression
+        (identifier)`
+    pattern:  9, capture: 0 - name, start: (1213, 7), end: (1213, 23), text: `field_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1216, 7), end: (1227, 29), text: `arguments
+        (closure_expression
+          (closure_parameters
+            (tuple_pattern
+              (identifier)
+              (identifier)))
+          (call_expression
+            (field_expression
+              (identifier)
+              (field_identifier))
+            (arguments
+              (identifier))))`
+    pattern:  9, capture: 0 - name, start: (1216, 7), end: (1216, 16), text: `arguments`
+    pattern:  9, capture: 7 - reference.call, start: (1217, 9), end: (1221, 28), text: `closure_expression
+          (closure_parameters
+            (tuple_pattern
+              (identifier)
+              (identifier)))`
+    pattern:  9, capture: 0 - name, start: (1217, 9), end: (1217, 27), text: `closure_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1218, 11), end: (1221, 27), text: `closure_parameters
+            (tuple_pattern
+              (identifier)
+              (identifier))`
+    pattern:  9, capture: 0 - name, start: (1218, 11), end: (1218, 29), text: `closure_parameters`
+    pattern:  9, capture: 7 - reference.call, start: (1219, 13), end: (1220, 26), text: `tuple_pattern
+              (identifier)`
+    pattern:  9, capture: 0 - name, start: (1219, 13), end: (1219, 26), text: `tuple_pattern`
+    pattern:  9, capture: 7 - reference.call, start: (1222, 11), end: (1225, 33), text: `call_expression
+            (field_expression
+              (identifier)
+              (field_identifier))`
+    pattern:  9, capture: 0 - name, start: (1222, 11), end: (1222, 26), text: `call_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1223, 13), end: (1224, 26), text: `field_expression
+              (identifier)`
+    pattern:  9, capture: 0 - name, start: (1223, 13), end: (1223, 29), text: `field_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1226, 13), end: (1227, 26), text: `arguments
+              (identifier)`
+    pattern:  9, capture: 0 - name, start: (1226, 13), end: (1226, 22), text: `arguments`
+    pattern:  9, capture: 7 - reference.call, start: (1228, 3), end: (1248, 34), text: `expression_statement
+    (call_expression
+      (field_expression
+        (identifier)
+        (field_identifier))
+      (arguments
+        (closure_expression
+          (closure_parameters
+            (mut_pattern
+              (mutable_specifier)
+              (identifier)))
+          (block
+            (expression_statement
+              (call_expression
+                (identifier)
+                (arguments
+                  (identifier))))
+            (call_expression
+              (identifier)
+              (arguments
+                (identifier)))))))`
+    pattern:  9, capture: 0 - name, start: (1228, 3), end: (1228, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (1229, 5), end: (1232, 27), text: `call_expression
+      (field_expression
+        (identifier)
+        (field_identifier))`
+    pattern:  9, capture: 0 - name, start: (1229, 5), end: (1229, 20), text: `call_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1230, 7), end: (1231, 20), text: `field_expression
+        (identifier)`
+    pattern:  9, capture: 0 - name, start: (1230, 7), end: (1230, 23), text: `field_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1233, 7), end: (1248, 32), text: `arguments
+        (closure_expression
+          (closure_parameters
+            (mut_pattern
+              (mutable_specifier)
+              (identifier)))
+          (block
+            (expression_statement
+              (call_expression
+                (identifier)
+                (arguments
+                  (identifier))))
+            (call_expression
+              (identifier)
+              (arguments
+                (identifier)))))`
+    pattern:  9, capture: 0 - name, start: (1233, 7), end: (1233, 16), text: `arguments`
+    pattern:  9, capture: 7 - reference.call, start: (1234, 9), end: (1238, 28), text: `closure_expression
+          (closure_parameters
+            (mut_pattern
+              (mutable_specifier)
+              (identifier)))`
+    pattern:  9, capture: 0 - name, start: (1234, 9), end: (1234, 27), text: `closure_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1235, 11), end: (1238, 27), text: `closure_parameters
+            (mut_pattern
+              (mutable_specifier)
+              (identifier))`
+    pattern:  9, capture: 0 - name, start: (1235, 11), end: (1235, 29), text: `closure_parameters`
+    pattern:  9, capture: 7 - reference.call, start: (1236, 13), end: (1237, 33), text: `mut_pattern
+              (mutable_specifier)`
+    pattern:  9, capture: 0 - name, start: (1236, 13), end: (1236, 24), text: `mut_pattern`
+    pattern:  9, capture: 7 - reference.call, start: (1239, 11), end: (1244, 33), text: `block
+            (expression_statement
+              (call_expression
+                (identifier)
+                (arguments
+                  (identifier))))`
+    pattern:  9, capture: 0 - name, start: (1239, 11), end: (1239, 16), text: `block`
+    pattern:  9, capture: 7 - reference.call, start: (1240, 13), end: (1244, 32), text: `expression_statement
+              (call_expression
+                (identifier)
+                (arguments
+                  (identifier)))`
+    pattern:  9, capture: 0 - name, start: (1240, 13), end: (1240, 33), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (1241, 15), end: (1242, 28), text: `call_expression
+                (identifier)`
+    pattern:  9, capture: 0 - name, start: (1241, 15), end: (1241, 30), text: `call_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1243, 17), end: (1244, 30), text: `arguments
+                  (identifier)`
+    pattern:  9, capture: 0 - name, start: (1243, 17), end: (1243, 26), text: `arguments`
+    pattern:  9, capture: 7 - reference.call, start: (1245, 13), end: (1246, 26), text: `call_expression
+              (identifier)`
+    pattern:  9, capture: 0 - name, start: (1245, 13), end: (1245, 28), text: `call_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1247, 15), end: (1248, 28), text: `arguments
+                (identifier)`
+    pattern:  9, capture: 0 - name, start: (1247, 15), end: (1247, 24), text: `arguments`
+    pattern:  9, capture: 7 - reference.call, start: (1249, 3), end: (1257, 28), text: `expression_statement
+    (call_expression
+      (identifier)
+      (arguments
+        (closure_expression
+          (closure_parameters)
+          (type_identifier)
+          (block
+            (identifier)))))`
+    pattern:  9, capture: 0 - name, start: (1249, 3), end: (1249, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (1250, 5), end: (1251, 18), text: `call_expression
+      (identifier)`
+    pattern:  9, capture: 0 - name, start: (1250, 5), end: (1250, 20), text: `call_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1252, 7), end: (1257, 26), text: `arguments
+        (closure_expression
+          (closure_parameters)
+          (type_identifier)
+          (block
+            (identifier)))`
+    pattern:  9, capture: 0 - name, start: (1252, 7), end: (1252, 16), text: `arguments`
+    pattern:  9, capture: 7 - reference.call, start: (1253, 9), end: (1254, 30), text: `closure_expression
+          (closure_parameters)`
+    pattern:  9, capture: 0 - name, start: (1253, 9), end: (1253, 27), text: `closure_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1256, 11), end: (1257, 24), text: `block
+            (identifier)`
+    pattern:  9, capture: 0 - name, start: (1256, 11), end: (1256, 16), text: `block`
+    pattern: 10, capture: 7 - reference.call, start: (1263, 0), end: (1263, 27), text: `a.map(|b: usize| b.push(c))`
+    pattern: 10, capture: 0 - name, start: (1263, 2), end: (1263, 5), text: `map`
+    pattern: 10, capture: 7 - reference.call, start: (1263, 17), end: (1263, 26), text: `b.push(c)`
+    pattern: 10, capture: 0 - name, start: (1263, 19), end: (1263, 23), text: `push`
+    pattern:  9, capture: 7 - reference.call, start: (1267, 1), end: (1284, 32), text: `source_file
+  (expression_statement
+    (call_expression
+      (field_expression
+        (identifier)
+        (field_identifier))
+      (arguments
+        (closure_expression
+          (closure_parameters
+            (parameter
+              (identifier)
+              (primitive_type)))
+          (call_expression
+            (field_expression
+              (identifier)
+              (field_identifier))
+            (arguments
+              (identifier)))))))`
+    pattern:  9, capture: 0 - name, start: (1267, 1), end: (1267, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (1268, 3), end: (1284, 31), text: `expression_statement
+    (call_expression
+      (field_expression
+        (identifier)
+        (field_identifier))
+      (arguments
+        (closure_expression
+          (closure_parameters
+            (parameter
+              (identifier)
+              (primitive_type)))
+          (call_expression
+            (field_expression
+              (identifier)
+              (field_identifier))
+            (arguments
+              (identifier))))))`
+    pattern:  9, capture: 0 - name, start: (1268, 3), end: (1268, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (1269, 5), end: (1272, 27), text: `call_expression
+      (field_expression
+        (identifier)
+        (field_identifier))`
+    pattern:  9, capture: 0 - name, start: (1269, 5), end: (1269, 20), text: `call_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1270, 7), end: (1271, 20), text: `field_expression
+        (identifier)`
+    pattern:  9, capture: 0 - name, start: (1270, 7), end: (1270, 23), text: `field_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1273, 7), end: (1284, 29), text: `arguments
+        (closure_expression
+          (closure_parameters
+            (parameter
+              (identifier)
+              (primitive_type)))
+          (call_expression
+            (field_expression
+              (identifier)
+              (field_identifier))
+            (arguments
+              (identifier))))`
+    pattern:  9, capture: 0 - name, start: (1273, 7), end: (1273, 16), text: `arguments`
+    pattern:  9, capture: 7 - reference.call, start: (1274, 9), end: (1278, 32), text: `closure_expression
+          (closure_parameters
+            (parameter
+              (identifier)
+              (primitive_type)))`
+    pattern:  9, capture: 0 - name, start: (1274, 9), end: (1274, 27), text: `closure_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1275, 11), end: (1278, 31), text: `closure_parameters
+            (parameter
+              (identifier)
+              (primitive_type))`
+    pattern:  9, capture: 0 - name, start: (1275, 11), end: (1275, 29), text: `closure_parameters`
+    pattern:  9, capture: 7 - reference.call, start: (1276, 13), end: (1277, 26), text: `parameter
+              (identifier)`
+    pattern:  9, capture: 0 - name, start: (1276, 13), end: (1276, 22), text: `parameter`
+    pattern:  9, capture: 7 - reference.call, start: (1279, 11), end: (1282, 33), text: `call_expression
+            (field_expression
+              (identifier)
+              (field_identifier))`
+    pattern:  9, capture: 0 - name, start: (1279, 11), end: (1279, 26), text: `call_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1280, 13), end: (1281, 26), text: `field_expression
+              (identifier)`
+    pattern:  9, capture: 0 - name, start: (1280, 13), end: (1280, 29), text: `field_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1283, 13), end: (1284, 26), text: `arguments
+              (identifier)`
+    pattern:  9, capture: 0 - name, start: (1283, 13), end: (1283, 22), text: `arguments`
+    pattern:  9, capture: 7 - reference.call, start: (1300, 1), end: (1319, 33), text: `source_file
+  (expression_statement
+    (closure_expression
+      (closure_parameters)
+      (block
+        (expression_statement
+          (while_expression
+            (binary_expression
+              (identifier)
+              (identifier))
+            (block
+              (expression_statement
+                (yield_expression
+                  (identifier)))
+              (expression_statement
+                (compound_assignment_expr
+                  (identifier)
+                  (integer_literal))))))
+        (expression_statement
+          (return_expression)))))`
+    pattern:  9, capture: 0 - name, start: (1300, 1), end: (1300, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (1301, 3), end: (1319, 32), text: `expression_statement
+    (closure_expression
+      (closure_parameters)
+      (block
+        (expression_statement
+          (while_expression
+            (binary_expression
+              (identifier)
+              (identifier))
+            (block
+              (expression_statement
+                (yield_expression
+                  (identifier)))
+              (expression_statement
+                (compound_assignment_expr
+                  (identifier)
+                  (integer_literal))))))
+        (expression_statement
+          (return_expression))))`
+    pattern:  9, capture: 0 - name, start: (1301, 3), end: (1301, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (1302, 5), end: (1303, 26), text: `closure_expression
+      (closure_parameters)`
+    pattern:  9, capture: 0 - name, start: (1302, 5), end: (1302, 23), text: `closure_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1304, 7), end: (1317, 40), text: `block
+        (expression_statement
+          (while_expression
+            (binary_expression
+              (identifier)
+              (identifier))
+            (block
+              (expression_statement
+                (yield_expression
+                  (identifier)))
+              (expression_statement
+                (compound_assignment_expr
+                  (identifier)
+                  (integer_literal))))))`
+    pattern:  9, capture: 0 - name, start: (1304, 7), end: (1304, 12), text: `block`
+    pattern:  9, capture: 7 - reference.call, start: (1305, 9), end: (1317, 39), text: `expression_statement
+          (while_expression
+            (binary_expression
+              (identifier)
+              (identifier))
+            (block
+              (expression_statement
+                (yield_expression
+                  (identifier)))
+              (expression_statement
+                (compound_assignment_expr
+                  (identifier)
+                  (integer_literal)))))`
+    pattern:  9, capture: 0 - name, start: (1305, 9), end: (1305, 29), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (1306, 11), end: (1309, 27), text: `while_expression
+            (binary_expression
+              (identifier)
+              (identifier))`
+    pattern:  9, capture: 0 - name, start: (1306, 11), end: (1306, 27), text: `while_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1307, 13), end: (1308, 26), text: `binary_expression
+              (identifier)`
+    pattern:  9, capture: 0 - name, start: (1307, 13), end: (1307, 30), text: `binary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1310, 13), end: (1313, 32), text: `block
+              (expression_statement
+                (yield_expression
+                  (identifier)))`
+    pattern:  9, capture: 0 - name, start: (1310, 13), end: (1310, 18), text: `block`
+    pattern:  9, capture: 7 - reference.call, start: (1311, 15), end: (1313, 31), text: `expression_statement
+                (yield_expression
+                  (identifier))`
+    pattern:  9, capture: 0 - name, start: (1311, 15), end: (1311, 35), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (1312, 17), end: (1313, 30), text: `yield_expression
+                  (identifier)`
+    pattern:  9, capture: 0 - name, start: (1312, 17), end: (1312, 33), text: `yield_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1314, 15), end: (1317, 36), text: `expression_statement
+                (compound_assignment_expr
+                  (identifier)
+                  (integer_literal))`
+    pattern:  9, capture: 0 - name, start: (1314, 15), end: (1314, 35), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (1315, 17), end: (1316, 30), text: `compound_assignment_expr
+                  (identifier)`
+    pattern:  9, capture: 0 - name, start: (1315, 17), end: (1315, 41), text: `compound_assignment_expr`
+    pattern:  9, capture: 7 - reference.call, start: (1318, 9), end: (1319, 29), text: `expression_statement
+          (return_expression)`
+    pattern:  9, capture: 0 - name, start: (1318, 9), end: (1318, 29), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (1325, 23), end: (1325, 28), text: `foo()`
+    pattern:  9, capture: 0 - name, start: (1325, 23), end: (1325, 26), text: `foo`
+    pattern:  9, capture: 7 - reference.call, start: (1329, 1), end: (1337, 25), text: `source_file
+  (const_item
+    (identifier)
+    (type_identifier)
+    (unsafe_block
+      (block
+        (call_expression
+          (identifier)
+          (arguments)))))`
+    pattern:  9, capture: 0 - name, start: (1329, 1), end: (1329, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (1330, 3), end: (1331, 16), text: `const_item
+    (identifier)`
+    pattern:  9, capture: 0 - name, start: (1330, 3), end: (1330, 13), text: `const_item`
+    pattern:  9, capture: 7 - reference.call, start: (1333, 5), end: (1337, 23), text: `unsafe_block
+      (block
+        (call_expression
+          (identifier)
+          (arguments)))`
+    pattern:  9, capture: 0 - name, start: (1333, 5), end: (1333, 17), text: `unsafe_block`
+    pattern:  9, capture: 7 - reference.call, start: (1334, 7), end: (1337, 22), text: `block
+        (call_expression
+          (identifier)
+          (arguments))`
+    pattern:  9, capture: 0 - name, start: (1334, 7), end: (1334, 12), text: `block`
+    pattern:  9, capture: 7 - reference.call, start: (1335, 9), end: (1336, 22), text: `call_expression
+          (identifier)`
+    pattern:  9, capture: 0 - name, start: (1335, 9), end: (1335, 24), text: `call_expression`
+    pattern: 10, capture: 7 - reference.call, start: (1344, 21), end: (1344, 32), text: `4i32.pow(4)`
+    pattern: 10, capture: 0 - name, start: (1344, 26), end: (1344, 29), text: `pow`
+    pattern: 10, capture: 7 - reference.call, start: (1345, 28), end: (1345, 48), text: `(0..=5).into_inner()`
+    pattern: 10, capture: 0 - name, start: (1345, 36), end: (1345, 46), text: `into_inner`
+    pattern:  9, capture: 7 - reference.call, start: (1349, 1), end: (1355, 38), text: `source_file
+  (expression_statement
+    (const_block
+      body: (block
+        (binary_expression
+          left: (integer_literal)
+          right: (integer_literal)))))`
+    pattern:  9, capture: 0 - name, start: (1349, 1), end: (1349, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (1350, 3), end: (1355, 37), text: `expression_statement
+    (const_block
+      body: (block
+        (binary_expression
+          left: (integer_literal)
+          right: (integer_literal))))`
+    pattern:  9, capture: 0 - name, start: (1350, 3), end: (1350, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (1351, 5), end: (1355, 36), text: `const_block
+      body: (block
+        (binary_expression
+          left: (integer_literal)
+          right: (integer_literal)))`
+    pattern:  9, capture: 0 - name, start: (1351, 5), end: (1351, 16), text: `const_block`
+    pattern:  9, capture: 7 - reference.call, start: (1352, 13), end: (1355, 35), text: `block
+        (binary_expression
+          left: (integer_literal)
+          right: (integer_literal))`
+    pattern:  9, capture: 0 - name, start: (1352, 13), end: (1352, 18), text: `block`
+    pattern:  9, capture: 7 - reference.call, start: (1353, 9), end: (1354, 33), text: `binary_expression
+          left: (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (1353, 9), end: (1353, 26), text: `binary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1357, 3), end: (1376, 25), text: `expression_statement
+    (if_expression
+      condition: (binary_expression
+        left: (unary_expression
+          (identifier))
+        right: (integer_literal))
+      consequence: (block
+        (expression_statement
+          (const_block
+            body: (block
+              (reference_expression
+                value: (call_expression
+                  function: (field_expression
+                    value: (integer_literal)
+                    field: (field_identifier))
+                  arguments: (arguments
+                    (integer_literal))))))))
+      alternative: (else_clause
+        (block
+          (identifier))))`
+    pattern:  9, capture: 0 - name, start: (1357, 3), end: (1357, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (1358, 5), end: (1362, 33), text: `if_expression
+      condition: (binary_expression
+        left: (unary_expression
+          (identifier))
+        right: (integer_literal))`
+    pattern:  9, capture: 0 - name, start: (1358, 5), end: (1358, 18), text: `if_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1359, 18), end: (1361, 23), text: `binary_expression
+        left: (unary_expression
+          (identifier))`
+    pattern:  9, capture: 0 - name, start: (1359, 18), end: (1359, 35), text: `binary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1360, 15), end: (1361, 22), text: `unary_expression
+          (identifier)`
+    pattern:  9, capture: 0 - name, start: (1360, 15), end: (1360, 31), text: `unary_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1363, 20), end: (1373, 43), text: `block
+        (expression_statement
+          (const_block
+            body: (block
+              (reference_expression
+                value: (call_expression
+                  function: (field_expression
+                    value: (integer_literal)
+                    field: (field_identifier))
+                  arguments: (arguments
+                    (integer_literal)))))))`
+    pattern:  9, capture: 0 - name, start: (1363, 20), end: (1363, 25), text: `block`
+    pattern:  9, capture: 7 - reference.call, start: (1364, 9), end: (1373, 42), text: `expression_statement
+          (const_block
+            body: (block
+              (reference_expression
+                value: (call_expression
+                  function: (field_expression
+                    value: (integer_literal)
+                    field: (field_identifier))
+                  arguments: (arguments
+                    (integer_literal))))))`
+    pattern:  9, capture: 0 - name, start: (1364, 9), end: (1364, 29), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (1365, 11), end: (1373, 41), text: `const_block
+            body: (block
+              (reference_expression
+                value: (call_expression
+                  function: (field_expression
+                    value: (integer_literal)
+                    field: (field_identifier))
+                  arguments: (arguments
+                    (integer_literal)))))`
+    pattern:  9, capture: 0 - name, start: (1365, 11), end: (1365, 22), text: `const_block`
+    pattern:  9, capture: 7 - reference.call, start: (1366, 19), end: (1373, 40), text: `block
+              (reference_expression
+                value: (call_expression
+                  function: (field_expression
+                    value: (integer_literal)
+                    field: (field_identifier))
+                  arguments: (arguments
+                    (integer_literal))))`
+    pattern:  9, capture: 0 - name, start: (1366, 19), end: (1366, 24), text: `block`
+    pattern:  9, capture: 7 - reference.call, start: (1367, 15), end: (1373, 39), text: `reference_expression
+                value: (call_expression
+                  function: (field_expression
+                    value: (integer_literal)
+                    field: (field_identifier))
+                  arguments: (arguments
+                    (integer_literal)))`
+    pattern:  9, capture: 0 - name, start: (1367, 15), end: (1367, 35), text: `reference_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1368, 24), end: (1371, 46), text: `call_expression
+                  function: (field_expression
+                    value: (integer_literal)
+                    field: (field_identifier))`
+    pattern:  9, capture: 0 - name, start: (1368, 24), end: (1368, 39), text: `call_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1369, 29), end: (1370, 44), text: `field_expression
+                    value: (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (1369, 29), end: (1369, 45), text: `field_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1372, 30), end: (1373, 37), text: `arguments
+                    (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (1372, 30), end: (1372, 39), text: `arguments`
+    pattern:  9, capture: 7 - reference.call, start: (1374, 20), end: (1376, 23), text: `else_clause
+        (block
+          (identifier))`
+    pattern:  9, capture: 0 - name, start: (1374, 20), end: (1374, 31), text: `else_clause`
+    pattern:  9, capture: 7 - reference.call, start: (1375, 9), end: (1376, 22), text: `block
+          (identifier)`
+    pattern:  9, capture: 0 - name, start: (1375, 9), end: (1375, 14), text: `block`
+    pattern:  9, capture: 7 - reference.call, start: (1377, 3), end: (1378, 25), text: `let_declaration
+    pattern: (identifier)`
+    pattern:  9, capture: 0 - name, start: (1377, 3), end: (1377, 18), text: `let_declaration`
+    pattern:  9, capture: 7 - reference.call, start: (1379, 12), end: (1389, 37), text: `array_expression
+      (const_block
+        body: (block
+          (call_expression
+            function: (field_expression
+              value: (parenthesized_expression
+                (range_expression
+                  (integer_literal)
+                  (integer_literal)))
+              field: (field_identifier))
+            arguments: (arguments))))`
+    pattern:  9, capture: 0 - name, start: (1379, 12), end: (1379, 28), text: `array_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1380, 7), end: (1389, 36), text: `const_block
+        body: (block
+          (call_expression
+            function: (field_expression
+              value: (parenthesized_expression
+                (range_expression
+                  (integer_literal)
+                  (integer_literal)))
+              field: (field_identifier))
+            arguments: (arguments)))`
+    pattern:  9, capture: 0 - name, start: (1380, 7), end: (1380, 18), text: `const_block`
+    pattern:  9, capture: 7 - reference.call, start: (1381, 15), end: (1389, 35), text: `block
+          (call_expression
+            function: (field_expression
+              value: (parenthesized_expression
+                (range_expression
+                  (integer_literal)
+                  (integer_literal)))
+              field: (field_identifier))
+            arguments: (arguments))`
+    pattern:  9, capture: 0 - name, start: (1381, 15), end: (1381, 20), text: `block`
+    pattern:  9, capture: 7 - reference.call, start: (1382, 11), end: (1388, 40), text: `call_expression
+            function: (field_expression
+              value: (parenthesized_expression
+                (range_expression
+                  (integer_literal)
+                  (integer_literal)))
+              field: (field_identifier))`
+    pattern:  9, capture: 0 - name, start: (1382, 11), end: (1382, 26), text: `call_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1383, 23), end: (1387, 37), text: `field_expression
+              value: (parenthesized_expression
+                (range_expression
+                  (integer_literal)
+                  (integer_literal)))`
+    pattern:  9, capture: 0 - name, start: (1383, 23), end: (1383, 39), text: `field_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1384, 22), end: (1387, 36), text: `parenthesized_expression
+                (range_expression
+                  (integer_literal)
+                  (integer_literal))`
+    pattern:  9, capture: 0 - name, start: (1384, 22), end: (1384, 46), text: `parenthesized_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1385, 17), end: (1386, 35), text: `range_expression
+                  (integer_literal)`
+    pattern:  9, capture: 0 - name, start: (1385, 17), end: (1385, 33), text: `range_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1395, 0), end: (1395, 15), text: `some_call(&raw)`
+    pattern:  9, capture: 0 - name, start: (1395, 0), end: (1395, 9), text: `some_call`
+    pattern:  9, capture: 7 - reference.call, start: (1399, 1), end: (1405, 26), text: `source_file
+  (expression_statement
+    (call_expression
+      (identifier)
+      (arguments
+        (reference_expression
+          (identifier)))))`
+    pattern:  9, capture: 0 - name, start: (1399, 1), end: (1399, 12), text: `source_file`
+    pattern:  9, capture: 7 - reference.call, start: (1400, 3), end: (1405, 25), text: `expression_statement
+    (call_expression
+      (identifier)
+      (arguments
+        (reference_expression
+          (identifier))))`
+    pattern:  9, capture: 0 - name, start: (1400, 3), end: (1400, 23), text: `expression_statement`
+    pattern:  9, capture: 7 - reference.call, start: (1401, 5), end: (1402, 18), text: `call_expression
+      (identifier)`
+    pattern:  9, capture: 0 - name, start: (1401, 5), end: (1401, 20), text: `call_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1403, 7), end: (1405, 23), text: `arguments
+        (reference_expression
+          (identifier))`
+    pattern:  9, capture: 0 - name, start: (1403, 7), end: (1403, 16), text: `arguments`
+    pattern:  9, capture: 7 - reference.call, start: (1404, 9), end: (1405, 22), text: `reference_expression
+          (identifier)`
+    pattern:  9, capture: 0 - name, start: (1404, 9), end: (1404, 29), text: `reference_expression`
+    pattern:  9, capture: 7 - reference.call, start: (1406, 3), end: (1407, 16), text: `let_declaration
+    (identifier)`
+    pattern:  9, capture: 0 - name, start: (1406, 3), end: (1406, 18), text: `let_declaration`
+    pattern:  9, capture: 7 - reference.call, start: (1408, 5), end: (1409, 18), text: `reference_expression
+      (identifier)`
+    pattern:  9, capture: 0 - name, start: (1408, 5), end: (1408, 25), text: `reference_expression`

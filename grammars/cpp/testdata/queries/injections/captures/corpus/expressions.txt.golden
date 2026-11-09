@@ -1,0 +1,49 @@
+corpus/expressions.txt/000
+corpus/expressions.txt/001
+corpus/expressions.txt/002
+corpus/expressions.txt/003
+corpus/expressions.txt/004
+corpus/expressions.txt/005
+corpus/expressions.txt/006
+corpus/expressions.txt/007
+corpus/expressions.txt/008
+corpus/expressions.txt/009
+corpus/expressions.txt/010
+    pattern:  0, capture: 0 - injection.language, start: (5, 19), end: (5, 22), text: `FOO`
+    pattern:  0, capture: 1 - injection.content, start: (5, 23), end: (7, 0), text: `
+  This is a string. It ends with ')FOO' and a quote.
+`
+    pattern:  0, capture: 0 - injection.language, start: (9, 20), end: (9, 23), text: `FOO`
+    pattern:  0, capture: 1 - injection.content, start: (9, 24), end: (11, 0), text: `
+  This is a string. It ends with ')FOO' and a quote.
+`
+    pattern:  0, capture: 0 - injection.language, start: (13, 20), end: (13, 23), text: `FOO`
+    pattern:  0, capture: 1 - injection.content, start: (13, 24), end: (15, 0), text: `
+  This is a string. It ends with ')FOO' and a quote.
+`
+    pattern:  0, capture: 0 - injection.language, start: (17, 21), end: (17, 24), text: `FOO`
+    pattern:  0, capture: 1 - injection.content, start: (17, 25), end: (19, 0), text: `
+  This is a string. It ends with ')FOO' and a quote.
+`
+    pattern:  0, capture: 0 - injection.language, start: (21, 20), end: (21, 23), text: `FOO`
+    pattern:  0, capture: 1 - injection.content, start: (21, 24), end: (23, 0), text: `
+  This is a string. It ends with ')FOO' and a quote.
+`
+corpus/expressions.txt/011
+corpus/expressions.txt/012
+corpus/expressions.txt/013
+    pattern:  0, capture: 0 - injection.language, start: (3, 18), end: (3, 21), text: `FOO`
+    pattern:  0, capture: 1 - injection.content, start: (3, 22), end: (3, 23), text: `d`
+corpus/expressions.txt/014
+corpus/expressions.txt/015
+corpus/expressions.txt/016
+corpus/expressions.txt/017
+corpus/expressions.txt/018
+corpus/expressions.txt/019
+corpus/expressions.txt/020
+corpus/expressions.txt/021
+corpus/expressions.txt/022
+corpus/expressions.txt/023
+corpus/expressions.txt/024
+corpus/expressions.txt/025
+corpus/expressions.txt/026

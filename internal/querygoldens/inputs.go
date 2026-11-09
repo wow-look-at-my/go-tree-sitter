@@ -93,16 +93,23 @@ func Inputs(g Grammar, dir string) ([]Input, error) {
 	return append(inputs, cases...), nil
 }
 
-// readFiles reads the files of a directory, one input each.
+// readFiles reads the files of a directory, one input each. A directory with
+// no files is an error. Files that keep rejects are not.
 func readFiles(dir, prefix string, keep func(name string, size int64) bool) ([]Input, error) {
 	var inputs []Input
+	seen := 0
 	err := filepath.WalkDir(dir, func(p string, entry fs.DirEntry, err error) error {
 		if err != nil {
 			return err
 		}
 		if entry.IsDir() {
+			// A samples directory also holds the submodule, so only its top level counts.
+			if prefix == "samples" && p != dir {
+				return filepath.SkipDir
+			}
 			return nil
 		}
+		seen++
 		rel, err := filepath.Rel(dir, p)
 		if err != nil {
 			return err
@@ -126,7 +133,7 @@ func readFiles(dir, prefix string, keep func(name string, size int64) bool) ([]I
 	if err != nil {
 		return nil, fmt.Errorf("reading %s: %w", dir, err)
 	}
-	if len(inputs) == 0 {
+	if seen == 0 {
 		return nil, fmt.Errorf("no source files under %s", dir)
 	}
 	return inputs, nil
