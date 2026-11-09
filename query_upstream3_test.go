@@ -1,7 +1,6 @@
 package treesitter_test
 
 import (
-	"fmt"
 	"strconv"
 	"strings"
 	"testing"
@@ -63,7 +62,7 @@ func init() {
 	upstreamQueryTestsSkipped["test_last_child_anchor_looks_past_hidden_repeat"] = "needs get_test_fixture_language(\"last_child_anchor_past_hidden_repeat\")"
 }
 
-func mustQuery(t testing.TB, language *ts.Language, source string) *ts.Query {
+func p3MustQuery(t testing.TB, language *ts.Language, source string) *ts.Query {
 	t.Helper()
 	query, err := ts.NewQuery(language, source)
 	require.NoError(t, err, "query: %s", source)
@@ -74,7 +73,7 @@ func mustQuery(t testing.TB, language *ts.Language, source string) *ts.Query {
 // reporting the end after it reached the end once.
 func TestQueryCapturesAndMatchesIteratorsAreFused(t *testing.T) {
 	language := queryLanguage(t, "javascript")
-	query := mustQuery(t, language, "\n            (comment) @comment\n            ")
+	query := p3MustQuery(t, language, "\n            (comment) @comment\n            ")
 	source := "\n          // one\n          // two\n          // three\n          /* unfinished\n        "
 	tree := parseSource(t, language, source)
 	cursor := ts.NewQueryCursor()
@@ -105,7 +104,7 @@ func TestQueryCapturesAndMatchesIteratorsAreFused(t *testing.T) {
 // slice, so the provider joins the 3-byte chunks of the node's range.
 func TestQueryTextCallbackReturnsChunks(t *testing.T) {
 	language := queryLanguage(t, "javascript")
-	query := mustQuery(t, language, `
+	query := p3MustQuery(t, language, `
             ((identifier) @leading_upper
              (#match? @leading_upper "^[A-Z][A-Z_]*[a-z]"))
             ((identifier) @all_upper
@@ -170,7 +169,7 @@ func TestQueryStartEndByteForPattern(t *testing.T) {
 	patterns1 := "\"+\" @operator\n\"-\" @operator\n\"*\" @operator\n\"=\" @operator\n\"=>\" @operator\n"
 	patterns2 := "(identifier) @a\n(string) @b\n"
 	patterns3 := "((identifier) @b (#match? @b i))\n(function_declaration name: (identifier) @c)\n(method_definition name: (property_identifier) @d)\n"
-	query := mustQuery(t, language, patterns1+patterns2+patterns3)
+	query := p3MustQuery(t, language, patterns1+patterns2+patterns3)
 
 	require.Equal(t, uint32(0), query.StartByteForPattern(0))
 	require.Equal(t, uint32(len("\"+\" @operator\n")), query.EndByteForPattern(0))
@@ -183,7 +182,7 @@ func TestQueryStartEndByteForPattern(t *testing.T) {
 // test_query_capture_names
 func TestQueryCaptureNames(t *testing.T) {
 	language := queryLanguage(t, "javascript")
-	query := mustQuery(t, language, `
+	query := p3MustQuery(t, language, `
             (if_statement
               condition: (parenthesized_expression (binary_expression
                 left: _ @left-operand
@@ -206,7 +205,7 @@ func TestQueryLifetimeIsSeparateFromNodesLifetime(t *testing.T) {
 	tree := parseSource(t, language, source)
 
 	takeFirstNodeFromMatches := func(node ts.Node) ts.Node {
-		query := mustQuery(t, queryLanguage(t, "javascript"), queryText)
+		query := p3MustQuery(t, queryLanguage(t, "javascript"), queryText)
 		cursor := ts.NewQueryCursor()
 		for match := range cursor.Matches(query, node, []byte(source)) {
 			return match.Captures[0].Node
@@ -217,7 +216,7 @@ func TestQueryLifetimeIsSeparateFromNodesLifetime(t *testing.T) {
 	require.Equal(t, "call_expression", takeFirstNodeFromMatches(tree.RootNode()).Type())
 
 	takeFirstNodeFromCaptures := func(node ts.Node) ts.Node {
-		query := mustQuery(t, queryLanguage(t, "javascript"), queryText)
+		query := p3MustQuery(t, queryLanguage(t, "javascript"), queryText)
 		cursor := ts.NewQueryCursor()
 		for match := range cursor.Captures(query, node, []byte(source)) {
 			return match.Captures[0].Node
@@ -230,7 +229,7 @@ func TestQueryLifetimeIsSeparateFromNodesLifetime(t *testing.T) {
 
 // test_query_with_no_patterns
 func TestQueryWithNoPatterns(t *testing.T) {
-	query := mustQuery(t, queryLanguage(t, "javascript"), "")
+	query := p3MustQuery(t, queryLanguage(t, "javascript"), "")
 	require.Empty(t, query.CaptureNames())
 	require.Equal(t, 0, query.PatternCount())
 }
@@ -238,7 +237,7 @@ func TestQueryWithNoPatterns(t *testing.T) {
 // test_query_comments
 func TestQueryComments(t *testing.T) {
 	language := queryLanguage(t, "javascript")
-	query := mustQuery(t, language, `
+	query := p3MustQuery(t, language, `
                 ; this is my first comment
                 ; i have two comments here
                 (function_declaration
@@ -251,7 +250,7 @@ func TestQueryComments(t *testing.T) {
 // test_query_disable_pattern
 func TestQueryDisablePattern(t *testing.T) {
 	language := queryLanguage(t, "javascript")
-	query := mustQuery(t, language, `
+	query := p3MustQuery(t, language, `
                 (function_declaration
                     name: (identifier) @name)
                 (function_declaration
@@ -272,7 +271,7 @@ func TestQueryDisablePattern(t *testing.T) {
 // test_query_deep_clone. Copy is the deep clone.
 func TestQueryDeepClone(t *testing.T) {
 	language := queryLanguage(t, "javascript")
-	query := mustQuery(t, language, `
+	query := p3MustQuery(t, language, `
                 (function_declaration
                     name: (identifier) @name)
                 (function_declaration
@@ -294,7 +293,7 @@ func TestQueryDeepClone(t *testing.T) {
 // test_query_alternative_predicate_prefix
 func TestQueryAlternativePredicatePrefix(t *testing.T) {
 	language := queryLanguage(t, "c")
-	query := mustQuery(t, language, `
+	query := p3MustQuery(t, language, `
             ((call_expression
               function: (identifier) @keyword
               arguments: (argument_list
@@ -500,7 +499,7 @@ func TestQueryIsPatternGuaranteedAtStep(t *testing.T) {
 		},
 	}
 	for _, row := range rows {
-		query := mustQuery(t, queryLanguage(t, row.language), row.pattern)
+		query := p3MustQuery(t, queryLanguage(t, row.language), row.pattern)
 		for _, r := range row.results {
 			offset := strings.Index(row.pattern, r.substring)
 			require.GreaterOrEqual(t, offset, 0, "%s: no %q in the pattern", row.description, r.substring)
@@ -545,7 +544,7 @@ func TestQueryIsPatternRooted(t *testing.T) {
 	}
 	language := queryLanguage(t, "javascript")
 	for _, row := range rows {
-		query := mustQuery(t, language, row.pattern)
+		query := p3MustQuery(t, language, row.pattern)
 		require.Equal(t, row.isRooted, query.IsPatternRooted(0),
 			"Description: %s, Pattern: %q", row.description, strings.Join(strings.Fields(row.pattern), " "))
 	}
@@ -573,7 +572,7 @@ func TestQueryIsPatternNonLocal(t *testing.T) {
 	}
 	language := queryLanguage(t, "javascript")
 	for _, row := range rows {
-		query := mustQuery(t, language, row.pattern)
+		query := p3MustQuery(t, language, row.pattern)
 		require.Equal(t, row.isNonLocal, query.IsPatternNonLocal(0),
 			"Description: %s, Pattern: %q", row.description, row.pattern)
 	}
@@ -709,7 +708,7 @@ func TestCaptureQuantifiers(t *testing.T) {
 	}
 	language := queryLanguage(t, "javascript")
 	for _, row := range rows {
-		query := mustQuery(t, language, row.pattern)
+		query := p3MustQuery(t, language, row.pattern)
 		for _, e := range row.expected {
 			index, ok := query.CaptureIndexForName(e.capture)
 			require.True(t, ok, "%s: no capture @%s", row.description, e.capture)
@@ -777,7 +776,7 @@ func TestQueryQuantifiedCaptures(t *testing.T) {
 	language := queryLanguage(t, "c")
 	for _, row := range rows {
 		tree := parseSource(t, language, row.code)
-		query := mustQuery(t, language, row.pattern)
+		query := p3MustQuery(t, language, row.pattern)
 		cursor := ts.NewQueryCursor()
 		require.Equal(t, row.captures, collectCaptures(cursor, query, tree.RootNode(), row.code), row.description)
 	}
@@ -826,7 +825,7 @@ func TestQueryMaxStartDepth(t *testing.T) {
 	tree := parseSource(t, language, source)
 	cursor := ts.NewQueryCursor()
 	for _, row := range rows {
-		query := mustQuery(t, language, row.pattern)
+		query := p3MustQuery(t, language, row.pattern)
 		cursor.SetMaxStartDepth(row.depth)
 		require.Equal(t, row.matches, collectMatches(cursor, query, tree.RootNode(), source), row.description)
 	}
@@ -858,7 +857,7 @@ func TestConsecutiveZeroOrModifiers(t *testing.T) {
 		"(comment)*?* @capture",
 		"(comment)?*? @capture",
 	} {
-		query := mustQuery(t, language, test)
+		query := p3MustQuery(t, language, test)
 
 		cursor := ts.NewQueryCursor()
 		found := false
@@ -907,7 +906,7 @@ func TestQueryMaxStartDepthMore(t *testing.T) {
 	language := queryLanguage(t, "c")
 	tree := parseSource(t, language, source)
 	cursor := ts.NewQueryCursor()
-	query := mustQuery(t, language, "(compound_statement) @capture")
+	query := p3MustQuery(t, language, "(compound_statement) @capture")
 
 	var node ts.Node
 	for match := range cursor.Matches(query, tree.RootNode(), []byte(source)) {
@@ -925,7 +924,7 @@ func TestQueryMaxStartDepthMore(t *testing.T) {
 // test_query_with_first_child_in_group_is_anchor
 func TestQueryWithFirstChildInGroupIsAnchor(t *testing.T) {
 	language := queryLanguage(t, "c")
-	query := mustQuery(t, language, `
+	query := p3MustQuery(t, language, `
             (parameter_list
               .
               ((parameter_declaration) @constant
@@ -936,7 +935,7 @@ func TestQueryWithFirstChildInGroupIsAnchor(t *testing.T) {
 // test_query_wildcard_with_immediate_first_child
 func TestQueryWildcardWithImmediateFirstChild(t *testing.T) {
 	language := queryLanguage(t, "javascript")
-	query := mustQuery(t, language, "(_ . (identifier) @firstChild)")
+	query := p3MustQuery(t, language, "(_ . (identifier) @firstChild)")
 	assertQueryMatches(t, language, query, "function name(one, two, three) { }", []matchResult{
 		m(0, "firstChild", "name"),
 		m(0, "firstChild", "one"),
@@ -946,7 +945,7 @@ func TestQueryWildcardWithImmediateFirstChild(t *testing.T) {
 // test_query_on_empty_source_code
 func TestQueryOnEmptySourceCode(t *testing.T) {
 	language := queryLanguage(t, "javascript")
-	query := mustQuery(t, language, "(program) @program")
+	query := p3MustQuery(t, language, "(program) @program")
 	assertQueryMatches(t, language, query, "", []matchResult{m(0, "program", "")})
 }
 
@@ -956,7 +955,7 @@ func TestQueryExecutionWithTimeout(t *testing.T) {
 	count := 10_000
 	source := []byte(strings.Repeat("function foo() { while (true) { } }\n", count))
 	tree := parseSource(t, language, string(source))
-	query := mustQuery(t, language, "(function_declaration) @function")
+	query := p3MustQuery(t, language, "(function_declaration) @function")
 
 	startTime := time.Now()
 	options := &ts.QueryCursorOptions{ProgressCallback: func(*ts.QueryCursorState) bool {
@@ -981,7 +980,7 @@ func TestQueryProgressCallbackLivesAsLongAsMatches(t *testing.T) {
 	language := queryLanguage(t, "javascript")
 	source := []byte(strings.Repeat("function foo() {}\n", 1000))
 	tree := parseSource(t, language, string(source))
-	query := mustQuery(t, language, "(function_declaration) @function")
+	query := p3MustQuery(t, language, "(function_declaration) @function")
 
 	callbackWasCalled := false
 	options := &ts.QueryCursorOptions{ProgressCallback: func(*ts.QueryCursorState) bool {
@@ -1008,7 +1007,7 @@ func TestQueryCapturesProgressCallbackStopsBehindAnOpenMatch(t *testing.T) {
 	tree := parseSource(t, language, string(source))
 
 	// The first pattern stays in progress until the array ends, so every number capture finishes behind it.
-	query := mustQuery(t, language, "(array (number) @first (string)) (number) @number")
+	query := p3MustQuery(t, language, "(array (number) @first (string)) (number) @number")
 
 	calls := 0
 	options := &ts.QueryCursorOptions{ProgressCallback: func(*ts.QueryCursorState) bool {
@@ -1040,7 +1039,7 @@ func TestQueryCapturesProgressCallbackDiscardsInProgressMatches(t *testing.T) {
 	}
 	source := []byte("[" + strings.Join(elements, ",") + "]")
 	tree := parseSource(t, language, string(source))
-	query := mustQuery(t, language, `
+	query := p3MustQuery(t, language, `
         (array (object) @object (string))
         (array (array (number) @number) "]" @close)
         (number) @n
@@ -1068,7 +1067,7 @@ func TestQueryProgressCallbackHaltsForGood(t *testing.T) {
 	language := queryLanguage(t, "javascript")
 	source := strings.Repeat("function foo() {}\n", 1000)
 	tree := parseSource(t, language, source)
-	query := mustQuery(t, language, "(function_declaration) @function")
+	query := p3MustQuery(t, language, "(function_declaration) @function")
 
 	stop := true
 	options := &ts.QueryCursorOptions{ProgressCallback: func(*ts.QueryCursorState) bool {
@@ -1096,7 +1095,7 @@ func TestQueryProgressCallbackKeepsUpWithInProgressStates(t *testing.T) {
 	tree := parseSource(t, language, string(source))
 
 	// No array has a string, so every enclosing array keeps a state in progress.
-	query := mustQuery(t, language, "(array (string) @string)")
+	query := p3MustQuery(t, language, "(array (string) @string)")
 
 	calls := 0
 	options := &ts.QueryCursorOptions{ProgressCallback: func(*ts.QueryCursorState) bool {
@@ -1126,7 +1125,7 @@ func TestQueryExecutionWithPointsCausingUnderflow(t *testing.T) {
 		EndPoint:   ts.Point{Row: 0, Column: 0},
 	}}))
 
-	query := mustQuery(t, language, "(call_expression) @cap")
+	query := p3MustQuery(t, language, "(call_expression) @cap")
 	cursor := ts.NewQueryCursor()
 
 	tree := parser.ParseString(nil, []byte(code))
@@ -1156,14 +1155,14 @@ func TestWildcardBehaviorBeforeAnchor(t *testing.T) {
 	source := "fn f() {\n    (a, b);\n    (c, d,);\n}\n"
 
 	// This query targets any named node right before a closing parenthesis.
-	query := mustQuery(t, language, `(tuple_expression (_) @last . ")" .) @match`)
+	query := p3MustQuery(t, language, `(tuple_expression (_) @last . ")" .) @match`)
 	assertQueryMatches(t, language, query, source, []matchResult{
 		m(0, "match", "(a, b)", "last", "b"),
 		m(0, "match", "(c, d,)", "last", "d"),
 	})
 
 	// This query targets any node right before a closing parenthesis.
-	query = mustQuery(t, language, `(tuple_expression _ @last . ")" .) @match`)
+	query = p3MustQuery(t, language, `(tuple_expression _ @last . ")" .) @match`)
 	assertQueryMatches(t, language, query, source, []matchResult{
 		m(0, "match", "(a, b)", "last", "b"),
 		m(0, "match", "(c, d,)", "last", ","),
@@ -1177,7 +1176,7 @@ func TestPatternAlternativesFollowLastChildConstraint(t *testing.T) {
 	tree := parseSource(t, language, code)
 	cursor := ts.NewQueryCursor()
 
-	query := mustQuery(t, language, `(block
+	query := p3MustQuery(t, language, `(block
         [
             (type_cast_expression)
             (expression_statement)
@@ -1186,7 +1185,7 @@ func TestPatternAlternativesFollowLastChildConstraint(t *testing.T) {
         )`)
 	matches := collectMatches(cursor, query, tree.RootNode(), code)
 
-	flippedQuery := mustQuery(t, language, `(block
+	flippedQuery := p3MustQuery(t, language, `(block
         [
             (expression_statement)
             (type_cast_expression)
@@ -1203,7 +1202,7 @@ func TestPatternAlternativesFollowLastChildConstraint(t *testing.T) {
 func TestWildcardParentAllowsFallibleChildPatterns(t *testing.T) {
 	language := queryLanguage(t, "javascript")
 	source := "\nfunction foo() {\n    \"bar\"\n}\n    "
-	query := mustQuery(t, language, `(function_declaration
+	query := p3MustQuery(t, language, `(function_declaration
           (_
             (expression_statement)
           )
@@ -1218,7 +1217,7 @@ func TestUnfinishedCapturesAreNotDefiniteWithPendingAnchors(t *testing.T) {
 	language := queryLanguage(t, "javascript")
 	source := "\nconst foo = [\n  1, 2, 3\n]\n"
 	tree := parseSource(t, language, source)
-	query := mustQuery(t, language, `(array (_) @foo . "]")`)
+	query := p3MustQuery(t, language, `(array (_) @foo . "]")`)
 
 	captures := collectCaptures(ts.NewQueryCursor(), query, tree.RootNode(), source)
 	matches := collectMatches(ts.NewQueryCursor(), query, tree.RootNode(), source)
@@ -1230,7 +1229,7 @@ func TestUnfinishedCapturesAreNotDefiniteWithPendingAnchors(t *testing.T) {
 
 // test_query_with_predicate_causing_oob_access
 func TestQueryWithPredicateCausingOobAccess(t *testing.T) {
-	mustQuery(t, queryLanguage(t, "rust"), `(call_expression
+	p3MustQuery(t, queryLanguage(t, "rust"), `(call_expression
      function: (scoped_identifier
        path: (scoped_identifier (identifier) @_regex (#any-of? @_regex "Regex" "RegexBuilder") .))
      (#set! injection.language "regex"))`)
@@ -1241,7 +1240,7 @@ func TestQueryAllowsErrorNodesWithChildren(t *testing.T) {
 	language := queryLanguage(t, "cpp")
 	code := "SomeStruct foo{.bar{}};"
 	tree := parseSource(t, language, code)
-	query := mustQuery(t, language, "(initializer_list (ERROR) @error)")
+	query := p3MustQuery(t, language, "(initializer_list (ERROR) @error)")
 	cursor := ts.NewQueryCursor()
 	require.Equal(t, []matchResult{m(0, "error", ".bar")}, collectMatches(cursor, query, tree.RootNode(), code))
 }
@@ -1249,6 +1248,6 @@ func TestQueryAllowsErrorNodesWithChildren(t *testing.T) {
 // test_last_child_anchor_looks_past_hidden_node
 func TestLastChildAnchorLooksPastHiddenNode(t *testing.T) {
 	language := queryLanguage(t, "c")
-	query := mustQuery(t, language, "(translation_unit (_) @last .)")
+	query := p3MustQuery(t, language, "(translation_unit (_) @last .)")
 	assertQueryMatches(t, language, query, "enum E { A };\nint x;\nint y;\n", []matchResult{m(0, "last", "int y;")})
 }
