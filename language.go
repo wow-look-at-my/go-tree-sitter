@@ -1,3 +1,5 @@
+// language.go holds the language code.
+
 package treesitter
 
 // Symbol identifies a terminal or non-terminal in a grammar.

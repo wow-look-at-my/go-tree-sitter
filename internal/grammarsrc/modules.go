@@ -1,3 +1,5 @@
+// modules.go holds the modules code.
+
 package grammarsrc
 
 import (

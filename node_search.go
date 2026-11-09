@@ -1,3 +1,5 @@
+// node_search.go holds the node search code.
+
 package treesitter
 
 func (n Node) descendantForByteRange(rangeStart, rangeEnd uint32, includeAnonymous bool) Node {

@@ -1,3 +1,5 @@
+// tree.go holds the tree code.
+
 package treesitter
 
 // InputEdit describes a change to a document.

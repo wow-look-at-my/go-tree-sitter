@@ -1,3 +1,5 @@
+// walk.go holds the walk code.
+
 package main
 
 type emitter struct {

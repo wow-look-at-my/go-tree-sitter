@@ -1,3 +1,5 @@
+// length.go holds the length code.
+
 package treesitter
 
 // Point is a row/column position in a document.

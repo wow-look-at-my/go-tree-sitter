@@ -1,3 +1,5 @@
+// lexprog.go holds the lexprog code.
+
 package treesitter
 
 // A grammar's lexer is a state machine, and it travels as data in the same blob as the parse tables.

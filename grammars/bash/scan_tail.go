@@ -1,3 +1,5 @@
+// scan_tail.go holds the scan tail code.
+
 package bash
 
 import ts "github.com/wow-look-at-my/go-tree-sitter"

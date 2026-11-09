@@ -1,3 +1,5 @@
+// parser_loop.go holds the parser loop code.
+
 package treesitter
 
 func (p *Parser) advance(version stackVersion, allowNodeReuse bool) bool {
